@@ -1,4 +1,4 @@
-# Pen-and-paper exercises week 1
+# Exercises week 1
 
 
 ## Bla.
@@ -17,7 +17,8 @@ $$
 $$
 ```
 
-```{toggle} Answer
+```{admonition} Answer
+:class: seealso, dropdown
 The answer to this exercise is 3.
 
 $$

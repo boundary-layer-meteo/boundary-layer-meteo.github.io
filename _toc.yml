@@ -5,8 +5,11 @@ format: jb-book
 root: intro
 options:
   numbered: true
-chapters:
-# - file: markdown
-# - file: notebooks
-# - file: markdown-notebooks
-- file: exercises1
+parts:
+  - caption: Theory
+    chapters:
+    - file: basic_concepts 
+  - caption: Pen-and-paper exercises 
+    chapters:
+    - file: exercises1
+
