@@ -3,7 +3,10 @@
 
 format: jb-book
 root: intro
+options:
+  numbered: true
 chapters:
-- file: markdown
-- file: notebooks
-- file: markdown-notebooks
+# - file: markdown
+# - file: notebooks
+# - file: markdown-notebooks
+- file: exercises1
