@@ -3,6 +3,8 @@
 
 format: jb-book
 root: intro
+defaults:
+  numbered: true
 parts:
   - caption: Theory
     chapters:
