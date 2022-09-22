@@ -3,13 +3,11 @@
 
 format: jb-book
 root: intro
-options:
-  numbered: true
 parts:
   - caption: Theory
     chapters:
-    - file: basic_concepts 
-  - caption: Pen-and-paper exercises 
+    - file: basic_concepts
+  - caption: Pen-and-paper exercises
     chapters:
     - file: exercises1
 
