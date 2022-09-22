@@ -2,7 +2,7 @@
 # Learn more at https://jupyterbook.org/customize/config.html
 
 title: Boundary-Layer Meteorology
-author: Chiel van Heerwaarden
+author: Chiel van Heerwaarden and Mirjam Tijhuis
 logo: logo.png
 
 # Force re-execution of notebooks on each build.
