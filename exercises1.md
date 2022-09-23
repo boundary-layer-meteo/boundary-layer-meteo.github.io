@@ -1,5 +1,7 @@
 # Exercises week 1
 
+$\def\pafg#1#2{\frac{\partial #1}{\partial #2}}$
+
 ## 
 Calculate the Reynolds number of the following flows $(\nu_{air}=1.5~10^{-5} m^2/s,
 \nu_{water}=1.~10^{-6} m^2/s, \nu_{blood}=3.8~10^{-6} m^2/s)$. Classify if these flows are laminar or turbulent.
@@ -63,13 +65,28 @@ f) $ \pafg{\tau_{mn}}{x_n} $
 With a frequency of 1 Hz and during 8 seconds we have measured the following values of the
 vertical velocity and specific humidity
 
-\[
-w~(m/s)~~~0~~-2~~-1~~1~~-2~~2~~1~~1
-\]
+```{list-table}
+:header-rows: 0
 
-\[
-q~(g/kg)~~8~~~9~~~9~~6~~10~~3~~5~~6
-\]
+* - w (m/s)
+  - 0
+  - -2
+  - -1
+  - 1
+  - -2
+  - 2
+  - 1
+  - 1
+* - q (m/s)
+  - 8
+  - 9
+  - 9
+  - 6
+  - 10
+  - 3
+  - 5
+  - 6
+```
 
 a) Calculate the time average of $w$ and $q$
 
