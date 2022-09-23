@@ -1,7 +1,7 @@
-## Exercises week 1
+# Exercises week 1
 
 
-### Bla.
+## Bla.
 Solve equation {eq}`ex1` for x.
 
 $$
@@ -27,7 +27,7 @@ $$
 ```
 
 
-### Bla.
+## Bla.
 Why does it always rain on holidays?
 
 $$

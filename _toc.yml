@@ -9,6 +9,7 @@ parts:
   - caption: Theory
     chapters:
     - file: basic_concepts
+    - file: governing_equations
   - caption: Pen-and-paper exercises
     chapters:
     - file: exercises1
