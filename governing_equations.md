@@ -77,7 +77,7 @@ $$
 $$ (pot_temp)
 ```
 
-The last question to answer is what to chose for the value of $p_0$. Generally, we use the $1 \cdot 10^5$ as the value, which means that at sea level pressure the absolute temperature $T$ and potential temperaure $\theta$ are very close together. Following this logics, an intuitive way of defining potential temperature is:
+The last question to answer is what to chose for the value of $p_0$. Generally, we use the $1 \cdot 10^5~\mathrm{Pa}$ as its value, which means that at sea level pressure the absolute temperature $T$ and potential temperaure $\theta$ are very close together. Following this logics, an intuitive way of defining potential temperature is:
 
-> _Potential temperature $\theta$ is the temperature of a parcel of air if it is adiabatically (thus no heat added or removed) transported back to the surface._
+> _Potential temperature $\theta$ is the temperature of an air parcel if it is adiabatically (thus no heat added or removed) transported back to sea level._
 

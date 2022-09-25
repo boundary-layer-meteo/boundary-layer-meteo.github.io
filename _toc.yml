@@ -3,14 +3,14 @@
 
 format: jb-book
 root: intro
-defaults:
-  numbered: true
 parts:
   - caption: Theory
+    numbered: true
     chapters:
     - file: basic_concepts
     - file: governing_equations
   - caption: Pen-and-paper exercises
+    numbered: true
     chapters:
     - file: exercises1
 
