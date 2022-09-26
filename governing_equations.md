@@ -81,3 +81,6 @@ The last question to answer is what to chose for the value of $p_0$. Generally, 
 
 > _Potential temperature $\theta$ is the temperature of an air parcel if it is adiabatically (thus no heat added or removed) transported back to sea level._
 
+### Atmospheric stability
+The atmospheric static stability defines whether the temperature stratification support or suppresses the generation of turbulent motions. If $\dfrac{\partial \theta}{\partial z} \gt 0$, the atmosphere is statically stable, if $\dfrac{\partial \theta}{\partial z} \approx 0$, the atmosphere is neutral, and if $\dfrac{\partial \theta}{\partial z} \lt 0$ the atmosphere is unstable.
+

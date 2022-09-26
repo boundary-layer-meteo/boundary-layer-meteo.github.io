@@ -9,6 +9,7 @@ parts:
     chapters:
     - file: basic_concepts
     - file: governing_equations
+    - file: atmospheric_stability
   - caption: Pen-and-paper exercises
     numbered: true
     chapters:
