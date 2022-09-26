@@ -13,5 +13,5 @@ parts:
   - caption: Pen-and-paper exercises
     numbered: true
     chapters:
-    - file: exercises1
+    - file: exercises/exercises1
 
