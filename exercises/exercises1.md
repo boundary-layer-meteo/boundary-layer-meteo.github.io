@@ -359,8 +359,8 @@ vertical velocity and specific humidity
 
 | t [s] | 0 | 1 | 2|3|4|5|6|7|
 | --- | -- | --- | --- | --- | --- | --- | --- | --- |
-| $w\ \rm(m\ s^{-1})$| 0| -2 | -1 | 1 | -2 | 2 | 1 | 1
-| $q\ \rm(g\ kg^{-1})$| 8 | 9 | 9 | 6 | 10 | 3 | 5 | 6
+| $w\ \rm(m\ s^{-1})$| 0| -2 | -1 | 1 | -2 | 2 | 1 | 1 |
+| $q\ \rm(g\ kg^{-1})$| 8 | 9 | 9 | 6 | 10 | 3 | 5 | 6 |
 
 
 a) Calculate the time average of $w$ and $q$
