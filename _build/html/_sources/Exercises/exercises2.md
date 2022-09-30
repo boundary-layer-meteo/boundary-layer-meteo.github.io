@@ -40,8 +40,8 @@ $$
 This results in
 
 $$
-\frac{\cal U\rm^2}{\cal L} \pafg{u_i^*}{t^*} + \frac{\cal U\rm^2}{\cal L} u_j^* \pafg{u_i^*}{x_j^*} = - \frac{\rho\cal U\rm^2}{\cal L} \frac{1}{\rho} \pafg{p^*}{x_i^*} - \frac{\cal U\rm^2}{\cal L} g^* \delta_{i3} + \frac{\cal U\rm^2}{\cal L} f_c^* \epsilon_{ij3}u_j^* + \frac{\cal U}{\cal L\rm^2} \nu \pafg{u_i^*}{{x_j^*}^2}\\
-\pafg{u_i^*}{t^*} + u_j^* \pafg{u_i^*}{x_j^*} = - \pafg{p^*}{x_i^*} - g^* \delta_{i3} + f_c^* \epsilon_{ij3}u_j^* + \frac{\nu}{\cal U L} \pafg{u_i^*}{{x_j^*}^2}
+\frac{\cal U\rm^2}{\cal L} \pafg{u_i^*}{t^*} + \frac{\cal U\rm^2}{\cal L} u_j^* \pafg{u_i^*}{x_j^*} &= - \frac{\rho\cal U\rm^2}{\cal L} \frac{1}{\rho} \pafg{p^*}{x_i^*} - \frac{\cal U\rm^2}{\cal L} g^* \delta_{i3} + \frac{\cal U\rm^2}{\cal L} f_c^* \epsilon_{ij3}u_j^* + \frac{\cal U}{\cal L\rm^2} \nu \pafg{u_i^*}{{x_j^*}^2}\\
+\pafg{u_i^*}{t^*} + u_j^* \pafg{u_i^*}{x_j^*} &= - \pafg{p^*}{x_i^*} - g^* \delta_{i3} + f_c^* \epsilon_{ij3}u_j^* + \frac{\nu}{\cal U L} \pafg{u_i^*}{{x_j^*}^2}
 $$
 
 This can also be expressed with the Reynold's number, ${\rm Re} = \frac{\cal U L}{\nu}$:
@@ -58,14 +58,14 @@ Are the Coriolis rotational term and the viscous term relevant in the ABL?
 
 ```{admonition} Answer
 :class: important, dropdown
-Contribution of Coriolis force with respect to the other terms: $f_c^* = f_c \frac{\cal L}{\cal U} = 0.1 = 10~\%$. This contribution is weak, but significant. \\
+Contribution of Coriolis force with respect to the other terms: $f_c^* = f_c \frac{\cal L}{\cal U} = 0.1 = 10~\%$. This contribution is weak, but significant. 
 Contribution of viscosity: ${\rm Re} = \frac{\cal U L}{\nu} = 6.7 \cdot 10^7$, so $\frac{1}{\rm Re} \to 0$. This contribution is not significant. Consequently, this term can be neglected.
 ```
 
 ##
 Suppose that $\overline{u'w'}=-(u_*+cz)^2$ and $\overline{v'w'}=0$ for all $z$ and
 the geostrophic velocities for the x- and y-components are 5 $\rm{m\ s^{-1}}$ and 5 $\rm{m\ s^{-1}}$ at all heights, respectively.
-Find the acceleration of air in the x- and y-directions at a height of 100 m in the ABL.
+Find the acceleration of air in the x- and y-directions $\left(\pafg{u}{t}, \pafg{v}{t}\right)$ at a height of 100 m in the ABL.
 The initial velocities at 100 m are $\overline{u}=\ 4\ \rm{m\ s^{-1}}$ and $\overline{v}=\ 2\ \rm{m\ s^{-1}}$.
 
 ($u_* = 0.3\ \rm{m\ s^{-1}}$,
@@ -77,37 +77,52 @@ $f_c = 10^{-4} s^{-1}$ and $c = 10^{-3} s^{-1}$).
 First we derive the general momentum equations.
 
 $$
-\left\{ \begin{tabular}{rcl}
-$\pafg{u}{t} + u_j \pafg{u}{x_j}$ & = & $ f_c v - \frac{1}{\rho}\pafg{p}{x}+ \nu \pafg{^2u}{{x_j}^2} $\\
-$\pafg{v}{t} + u_j \pafg{v}{x_j}$ & = & $ - f_c u - \frac{1}{\rho}\pafg{p}{y}+ \nu \pafg{^2v}{{x_j}^2} $
-\end{tabular}\right.
+\begin{cases}
+    \pafg{u}{t} + u_j \pafg{u}{x_j} = f_c v - \frac{1}{\rho}\pafg{p}{x}+ \nu \pafg{^2u}{{x_j}^2} \\
+    \pafg{v}{t} + u_j \pafg{v}{x_j} = - f_c u - \frac{1}{\rho}\pafg{p}{y}+ \nu \pafg{^2v}{{x_j}^2}
+\end{cases}
 $$
 
 Reynold's averaging results in
 
 $$
-\left\{ \begin{tabular}{rcl}
-$\pafg{\overline{u}}{t} + \overline{u_j} \pafg{\overline{u}}{x_j} + \overline{u_j'\pafg{{u'}}{x_j}}$ & = & $ f_c \overline{v} - \frac{1}{\rho}\pafg{\overline{p}}{x}+ \nu \pafg{^2\overline{u}}{{x_j}^2} $\\
-$\pafg{\overline{v}}{t} + \overline{u_j} \pafg{\overline{v}}{x_j} + \overline{u_j'\pafg{{v'}}{x_j}}$ & = & $ - f_c \overline{u} - \frac{1}{\rho}\pafg{\overline{p}}{y}+ \nu \pafg{^2\overline{v}}{{x_j}^2} $
-\end{tabular}\right. .
+\begin{cases}
+    \pafg{\overline{u}}{t} + \overline{u_j} \pafg{\overline{u}}{x_j} + \overline{u_j'\pafg{{u'}}{x_j}} = 
+        f_c \overline{v} - \frac{1}{\rho}\pafg{\overline{p}}{x}+ \nu \pafg{^2\overline{u}}{{x_j}^2} \\
+    \pafg{\overline{v}}{t} + \overline{u_j} \pafg{\overline{v}}{x_j} + \overline{u_j'\pafg{{v'}}{x_j}} = 
+        - f_c \overline{u} - \frac{1}{\rho}\pafg{\overline{p}}{y}+ \nu \pafg{^2\overline{v}}{{x_j}^2} 
+\end{cases}
 $$
 
-Considering $\overline{w} = 0$, horizontal homogeneity ($\pafg{\chi}{x}=\pafg{\chi}{y}=0$ with $\chi$ as an arbitrary variable), incompressibility ($\pafg{u_i'}{x_i}=0$) and the chain rule ($\pafg{u_i\chi}{x_i}$=$u_i\pafg{\chi}{x_i}+\pafg{u_i}{x_i}\chi$), this results in
+Considering $\overline{w} = 0$, 
+
+horizontal homogeneity ($\pafg{\chi}{x}=\pafg{\chi}{y}=0$ with $\chi$ as an arbitrary variable), 
+
+incompressibility ($\pafg{u_i'}{x_i}=0$), 
+
+and the chain rule ($\pafg{u_i\chi}{x_i}$=$u_i\pafg{\chi}{x_i}+\pafg{u_i}{x_i}\chi$), 
+
+this results in
 
 $$
-\left\{ \begin{tabular}{rcl}
-$\pafg{\overline{u}}{t} + \pafg{\overline{u_j'u'}}{x_j}$ & = & $ f_c \overline{v} - \frac{1}{\rho}\pafg{\overline{p}}{x}+ \nu \pafg{^2\overline{u}}{{x_j}^2} $\\
-$\pafg{\overline{v}}{t} + \pafg{\overline{u_j'v'}}{x_j}$ & = & $ - f_c \overline{u} - \frac{1}{\rho}\pafg{\overline{p}}{y}+ \nu \pafg{^2\overline{v}}{{x_j}^2} $
-\end{tabular}\right. .
+\begin{cases}
+    \pafg{\overline{u}}{t} + \pafg{\overline{u_j'u'}}{x_j} = 
+        f_c \overline{v} - \frac{1}{\rho}\pafg{\overline{p}}{x}+ \nu \pafg{^2\overline{u}}{{x_j}^2} \\
+    \pafg{\overline{v}}{t} + \pafg{\overline{u_j'v'}}{x_j} = 
+        - f_c \overline{u} - \frac{1}{\rho}\pafg{\overline{p}}{y}+ \nu \pafg{^2\overline{v}}{{x_j}^2}
+\end{cases}
 $$
 
-Neglecting the small viscosity term (for high Reynolds numbers) and assuming that at larger scales the Coriolis force and horizontal pressure gradients balance to reach a geostrophic wind, $\frac{1}{\rho}\pafg{\overline{p}}{x} = f_c v_g$ and $\frac{1}{\rho}\pafg{\overline{p}}{y} = -f_c u_g$, the momentum equations are:
+Neglecting the small viscosity term (for high Reynolds numbers) and assuming that at larger scales the Coriolis force 
+and horizontal pressure gradients balance to reach a geostrophic wind, 
+$\frac{1}{\rho}\pafg{\overline{p}}{x} = f_c v_g$ and $\frac{1}{\rho}\pafg{\overline{p}}{y} = -f_c u_g$, the momentum equations are:
 
-$\pafg{\overline{u}}{t} + \pafg{\overline{u'w'}}{z}$ & = & $f_c \left(\overline{v}-v_g\right) $
+> $\pafg{\overline{u}}{t} + \pafg{\overline{u'w'}}{z}$ = $f_c \left(\overline{v}-v_g\right) $
 
-$\pafg{\overline{v}}{t} + \pafg{\overline{v'w'}}{z}$ & = & $-f_c \left(\overline{u}-u_g\right) $
+> $\pafg{\overline{v}}{t} + \pafg{\overline{v'w'}}{z}$ = $-f_c \left(\overline{u}-u_g\right) $
 
-In this representation, $u_g$ and $v_g$ are components of the geostrophic wind, which is the steady state wind considering the horizontal pressure gradients and the Coriolis force. \\
+In this representation, $u_g$ and $v_g$ are components of the geostrophic wind, 
+which is the steady state wind considering the horizontal pressure gradients and the Coriolis force.
 In this specific case, filling up the momentum fluxes, the governing equations for the acceleration are:
 
 $$
@@ -143,11 +158,11 @@ $$
 Because of incompressibility, $\pafg{u_j}{x_j}=0$, and therefore also $\pafg{\overline{u_j}}{x_j}=\pafg{u_j'}{x_j} =0$. Therefore
 
 $$
-u_j'\pafg{\theta'}{x_j} = u_j'\pafg{\theta'}{x_j} + \pafg{u_j'}{x_j} \theta' \\
-   &= \pafg{u_j'\theta'}{x_j}\label{for:23b}
-$$
+u_j'\pafg{\theta'}{x_j} &= u_j'\pafg{\theta'}{x_j} + \pafg{u_j'}{x_j} \theta' \\
+&= \pafg{u_j'\theta'}{x_j}
+$$(for:23b)
 
-This is the flux form; after Reynolds averaging Equation \eqref{for:23b}, the divergence of a turbulent flux is obtained. Using this relation, the total thermodynamic equation reads
+This is the flux form; after Reynolds averaging Equation {eq}`for:23b`, the divergence of a turbulent flux is obtained. Using this relation, the total thermodynamic equation reads
 
 $$
 \pafg{\theta}{t} + \overline{u_j}\pafg{\overline{\theta}}{x_j} + \pafg{\overline{u_j'\theta'}}{x_j} = \nu_{\theta}\pafg{^2\overline{\theta}}{{x_j}^2}-\frac{1}{\rho c_p} \pafg{\overline{Q_j}}{x_j} - \frac{L_v \overline{E}}{\rho c_p}
@@ -205,17 +220,18 @@ $$
 By taking the derivative to $z$ of this equation, we obtain
 
 $$
-\pafg{}{z}\left(\pafg{\overline{\theta}}{t}\right) = - \pafg{^2\overline{w'\theta'}}{z^2} \label{for:23c1}
-$$
+\pafg{}{z}\left(\pafg{\overline{\theta}}{t}\right) = - \pafg{^2\overline{w'\theta'}}{z^2} 
+$$(for:23c1)
 
 The left hand side can be rewritten:
 
 $$
-\pafg{}{z}\left(\pafg{\overline{\theta}}{t}\right) = \pafg{}{t}\left(\pafg{\overline{\theta}}{z}\right) \approx 0 \label{for:23c2}
-$$
+\pafg{}{z}\left(\pafg{\overline{\theta}}{t}\right) = \pafg{}{t}\left(\pafg{\overline{\theta}}{z}\right) \approx 0 
+$$(for:23c2)
 
-This is known as the quasi-steady approximation. It holds true under convective conditions and states that the gradient of potential temperature does not change on time.\\
-Equations \eqref{for:23c1} and \eqref{for:23c2} show that
+This is known as the quasi-steady approximation. It holds true under convective conditions and states that the gradient of potential temperature does not change on time.
+
+Equations {eq}`for:23c1` and {eq}`for:23c2` show that
 
 $$
 \pafg{^2\overline{w'\theta'}}{z^2} &\approx 0\\
@@ -253,7 +269,7 @@ where $S$ is a generic source/sink term.
 Assume $S$ to have the form
 
 $$
-S=ac^2T
+S=acT
 $$
 
 where a is a constant and T the absolute temperature.
@@ -267,32 +283,33 @@ form" (assume horizontal homogeneity and no subsidence).
 $$
 \pafg{c}{t} + u_i \pafg{c}{x_i} &= S \\
 \pafg{\overline{c}}{t} + \overline{u_i \pafg{c}{x_i}} &= \overline{S} \\
-\pafg{\overline{c}}{t} + \overline{u_i} \pafg{\overline{c}}{x_i} + \overline{u_i'\pafg{c'}{x_i}} &= \overline{a c^2 T} 
+\pafg{\overline{c}}{t} + \overline{u_i} \pafg{\overline{c}}{x_i} + \overline{u_i'\pafg{c'}{x_i}} &= \overline{a c T} 
 $$
 
-Now we assume horizontal homogeneity: $\pafg{\overline{\chi}}{x}=\pafg{\overline{\chi}}{y}=0$ for any arbitrary variable $\chi$. In the absence of subsidence, $\overline{w}=0$. This results in
+Now we assume horizontal homogeneity: $\pafg{\overline{\chi}}{x}=\pafg{\overline{\chi}}{y}=0$ for any arbitrary variable $\chi$. 
+In the absence of subsidence, $\overline{w}=0$. This results in
 
 $$
-\pafg{\overline{c}}{t} + \overline{u_i'\pafg{c'}{x_i}} = \overline{a c^2 T}
+\pafg{\overline{c}}{t} + \overline{u_i'\pafg{c'}{x_i}} = \overline{a c T}
 $$
 
 Using incompressibility ($\pafg{u_i'}{x_i}=0$) and the chain rule
 
 $$
-\pafg{\overline{c}}{t} + \pafg{\overline{u_i'c'}}{x_i} = \overline{a c^2 T} \\ 
-\pafg{\overline{c}}{t} + \pafg{\overline{w'c'}}{z} = \overline{a c^2 T} 
+\pafg{\overline{c}}{t} + \pafg{\overline{u_i'c'}}{x_i} = \overline{a c T} \\ 
+\pafg{\overline{c}}{t} + \pafg{\overline{w'c'}}{z} = \overline{a c T} 
 $$
 
 So
 
 $$ 
-\pafg{\overline{c}}{t} = -\pafg{\overline{w'c'}}{z} + \overline{a c^2 T} \\ 
- &= -\pafg{\overline{w'c'}}{z} + a \overline{c^2 T} \\
- &= -\pafg{\overline{w'c'}}{z} + a \overline{\left(\overline{c}+c'\right)^2 \left(\overline{T}+T'\right)} \\
- &= -\pafg{\overline{w'c'}}{z} + a \overline{\left(\overline{c}^2+2c'\overline{c}+{c'}^2\right) \left(\overline{T}+T'\right)} \\
- &= -\pafg{\overline{w'c'}}{z} + a \overline{\overline{c}^2\overline{T}+2c'\overline{c}\overline{T}+{c'}^2\overline{T}+\overline{c}^2 T' + 2 c'\overline{c} T' + {c'}^2 T'} \\
- &= -\pafg{\overline{w'c'}}{z} + a \left(\overline{\overline{c}^2\overline{T}}+\overline{2c'\overline{c}\overline{T}}+\overline{{c'}^2\overline{T}}+\overline{\overline{c}^2 T'} + \overline{2 c'\overline{c} T'} + \overline{{c'}^2 T'} \right)\\
- &= -\pafg{\overline{w'c'}}{z} + a \left(\overline{c}^2\overline{\overline{T}}+2\overline{c}\overline{T}\overline{c'}+\overline{T}\overline{{c'}^2}+\overline{c}^2 \overline{T'} + 2 \overline{c} \overline{c'T'} + \overline{{c'}^2 T'} \right)\\
- \pafg{\overline{c}}{t} = -\pafg{\overline{w'c'}}{z} + a \left(\overline{c}^2\overline{T}+\overline{T}\overline{{c'}^2} + 2 \overline{c} \overline{c'T'} + \overline{{c'}^2 T'} \right)
+\pafg{\overline{c}}{t} &= -\pafg{\overline{w'c'}}{z} + \overline{a c T} \\ 
+ &= -\pafg{\overline{w'c'}}{z} + a \overline{c T} \\
+ &= -\pafg{\overline{w'c'}}{z} + a \overline{\left(\overline{c}+c'\right) \left(\overline{T}+T'\right)} \\
+ &= -\pafg{\overline{w'c'}}{z} + a \overline{\left(\overline{c}{\overline{T}}+{c'}\overline{T}+\overline{c}{T'} + {c'}{T'} \right)}\\
+$$
+
+$$
+\pafg{\overline{c}}{t} = -\pafg{\overline{w'c'}}{z} + a \left(\overline{cT}+\overline{c'T}+\overline{cT'} + \overline{c'T'} \right)\\
 $$
 ```
