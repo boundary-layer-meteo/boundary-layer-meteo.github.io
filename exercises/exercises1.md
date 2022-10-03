@@ -70,20 +70,19 @@ Laminar
 The velocity and the temperature fields of a flow are given by:
 
 $$
-\vec U=(2x^2, xy, \ln(x)+zy)~($\rm{m\ s^{-1}}$) ~~~~~~ T = 4x + zy ~(C)
+\vec U=(2x^2, xy, \ln(x)+zy)~(\rm{m\ s^{-1}}) ~~~~~~ T = 4x + zy ~(C)
 $$
 
 a) Calculate the temperature gradient at the point (0, 1, 1).
 ```{hint}
 :class: tip, dropdown
-Gradient of $T$: $\nabla T = \pafg{}{x_i}T$ 
+Gradient of $T = \pafg{}{x_i}T$ 
 ```
 
 ```{admonition} Answer
 :class: important, dropdown
 $$
-\nabla T\left(0,1,1\right) &= \nabla T \vert_{x=0,y=1,z=1}\\
-&= \left(\pafg{T}{x},\pafg{T}{y},\pafg{T}{z}\right)\vert_{x=0,y=1,z=1}\\
+\pafg{}{x_i}T\vert_{x=0,y=1,z=1} &= \left(\pafg{T}{x},\pafg{T}{y},\pafg{T}{z}\right)\vert_{x=0,y=1,z=1}\\
 &= \left(4,z,y\right) \vert_{x=0,y=1,z=1}\\
 &= \left(4,1,1\right)
 $$
@@ -94,7 +93,7 @@ it a incompressible or compressible flow at this point?
 
 ```{hint}
 :class: tip, dropdown
-Divergence of $\bf U$: $\nabla \cdot {\bf U} = \pafg{U_i}{x_i}$
+Divergence of $\bf U = \pafg{U_i}{x_i}$
 ```
 
 ```{hint}
@@ -105,26 +104,25 @@ The flow is incompressible when the divergence is 0.
 ```{admonition} Answer
 :class: important, dropdown
 $$
-\nabla \cdot {\bf U} &= \pafg{U_x}{x} + \pafg{U_y}{y} + \pafg{U_z}{z}\vert_{x=-1,y=5,z=0} \\
+\pafg{U_i}{x_i}\vert_{x=-1,y=5,z=0} &= \pafg{U_x}{x} + \pafg{U_y}{y} + \pafg{U_z}{z}\vert_{x=-1,y=5,z=0} \\
 &= 4x + x + y\vert_{x=-1,y=5,z=0} \\
 &= 0
 $$
 
-Therefore, the flow could be incompressible at this point. However, the general flow field is compressible, since $\nabla \cdot {\bf U} = 0$ only for $y=-5x$
+Therefore, the flow could be incompressible at this point. However, the general flow field is compressible, since the divergence is only 0 only for $y=-5x$
 ```
 
 c) Calculate the velocity curl at (1, 1, 1). 
 ```{hint}
 :class: tip, dropdown
-Curl of $\bf U$: $\nabla \times {\bf U} = {\bf e}_k \epsilon^{klm} \pafg{}{x_l}{U_m}$
+Curl of $\bf U = {\bf e}_k \epsilon^{klm} \pafg{}{x_l}{U_m}$
 ```
 
 
 ```{admonition} Answer
 :class: important, dropdown
 $$
-\nabla \times {\bf U}\left(1,1,1\right) &= \nabla \times {\bf U} \vert_{x=1,y=1,z=1}\\
-&= \left(\pafg{U_z}{y}-\pafg{U_y}{z},\pafg{U_x}{z}-\pafg{U_z}{x},\pafg{U_y}{x}-\pafg{U_x}{y}\right)\vert_{x=1,y=1,z=1}\\
+{\bf e}_k \epsilon^{klm} \pafg{}{x_l}{U_m}\vert_{x=1,y=1,z=1} &= \left(\pafg{U_z}{y}-\pafg{U_y}{z},\pafg{U_x}{z}-\pafg{U_z}{x},\pafg{U_y}{x}-\pafg{U_x}{y}\right)\vert_{x=1,y=1,z=1}\\
 &= \left(z-0,0-\frac{1}{x},y-0\right) \vert_{x=1,y=1,z=1}\\
 &= \left(1,-1,1\right)
 $$
@@ -235,6 +233,7 @@ $$
 $$
 ```
 
+<!---
 d) $\overline{c \nabla^2 A}$
 ```{admonition} Answer
 :class: important, dropdown
@@ -246,6 +245,7 @@ $$
  &= c \nabla^2 \overline{A}
 $$
 ```
+--> 
 
 ## 
 The following terms are given in summation notation. Expand them (that is, write
@@ -297,6 +297,7 @@ $$
 $$
 ```
 
+<!---
 d) $ \overline{u_i'u_j'} \pafg{\overline{U_k}}{x_j}  $
 ```{admonition} Answer
 :class: important, dropdown
@@ -322,8 +323,9 @@ $$
 \end{matrix}\right]
 $$
 ```
+-->
 
-e) $ \delta_{i3}g $
+d) $ \delta_{i3}g $
 ```{admonition} Answer
 :class: important, dropdown
 
@@ -336,7 +338,7 @@ $$
 This term is present in the Navier-Stokes equation. It tells us that only the 3$^{\rm rd}$ dimension of the vector (usually $w$) is affected by gravity and, consequently, buoyancy. 
 ```
 
-f) $ \pafg{\tau_{mn}}{x_n} $
+e) $ \pafg{\tau_{mn}}{x_n} $
 ```{admonition} Answer
 :class: important, dropdown
 
@@ -357,8 +359,8 @@ vertical velocity and specific humidity
 
 | t [s] | 0 | 1 | 2|3|4|5|6|7|
 | --- | -- | --- | --- | --- | --- | --- | --- | --- |
-| $w\ \rm(m\ s^{-1})$| 0| -2 | -1 | 1 | -2 | 2 | 1 | 1
-| $q\ \rm(g\ kg^{-1})$| 8 | 9 | 9 | 6 | 10 | 3 | 5 | 6
+| $w\ \rm(m\ s^{-1})$| 0| -2 | -1 | 1 | -2 | 2 | 1 | 1 |
+| $q\ \rm(g\ kg^{-1})$| 8 | 9 | 9 | 6 | 10 | 3 | 5 | 6 |
 
 
 a) Calculate the time average of $w$ and $q$

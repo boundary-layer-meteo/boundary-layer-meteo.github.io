@@ -19,4 +19,5 @@ parts:
     chapters:
     - file: exercises/exercises1
     - file: exercises/exercises2
+    - file: exercises/exercises3
 
