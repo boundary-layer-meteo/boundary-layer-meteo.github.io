@@ -2,10 +2,16 @@ $\def\uh{\hat{u}}$
 $\def\xh{\hat{x}}$
 $\def\th{\hat{t}}$
 
-# Wind
+# 2. Wind
 
+```{admonition} Questions to be answered in this chapter
+1. How does wind generate turbulence?
+2. What is the importance of the Reynolds number?
+```
+
+## Conservation of momentum.
 Wind is a key ingredient of boundary layer meteorology.
-The evolution of wind speed is generally covered via the conservation of momentum.
+The evolution of wind speed is generally covered via the conservation of momentum, also known as the Navier-Stokes equations.
 
 $$
 \dfrac{\partial u_i}{\partial t} + \dfrac{\partial u_j u_i}{\partial x_j} = - f_0 \epsilon_{ij3} \left( u_j - u_{g,j} \right) - \delta_{i3} \dfrac{\rho^\prime}{\rho_0} g + \nu \dfrac{\partial^2 u_i}{\partial x_j^2}

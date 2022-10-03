@@ -12,6 +12,8 @@ parts:
     - file: atmospheric_stability
     - file: wind
   - caption: Lectures
+    numbered: true
+    chapters:
     - file: lectures/1_introduction
     - file: lectures/2_wind
   - caption: Pen-and-paper exercises
