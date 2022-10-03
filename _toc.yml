@@ -11,6 +11,9 @@ parts:
     - file: governing_equations
     - file: atmospheric_stability
     - file: wind
+  - caption: Lectures
+    - file: lectures/1_introduction
+    - file: lectures/2_wind
   - caption: Pen-and-paper exercises
     numbered: true
     chapters:
