@@ -54,7 +54,7 @@ $$
 b) Typical length scales in the ABL are $\cal U$= 1 $\rm{m\ s^{-1}}$ and $\cal L$=1000 m.
 Are the Coriolis rotational term and the viscous term relevant in the ABL?
 
-($f_c=10^{-4} s^{-1}$, $\nu_{air}=1.5~10^{-5} \rm{m^2\ s^{-1}}$)
+($f_c=10^{-4} s^{-1}$, $\nu_{air}=1.5 \cdot 10^{-5} \rm{m^2\ s^{-1}}$)
 
 ```{admonition} Answer
 :class: important, dropdown

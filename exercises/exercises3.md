@@ -10,7 +10,7 @@ parameterize the fluxes and assuming that $K_h=K_q$, calculate
 the Bowen ratio from the following measurements at 10 meters
 ($\theta=300\ K$, $q = 10\ \rm{g\ kg^{-1}}$) and at 2 m ($\theta=302\ K$, $q = 12\ \rm{g\ kg^{-1}}$).
 
-($L=2.5~10^{6}\ \rm{J\ kg^{-1}}$ and $c_p=1004\ \rm{J\ kg^{-1}\ K^{-1}}$)
+($L=2.5 \cdot 10^{6}\ \rm{J\ kg^{-1}}$ and $c_p=1004\ \rm{J\ kg^{-1}\ K^{-1}}$)
 
 ```{admonition} Answer
 :class: important, dropdown
@@ -56,7 +56,7 @@ $$
 
 (${\kappa}=0.4$)
 
-with $z_o$= 10 cm, $u_*=0.3\ \rm{m\ s^{-1}}$, $\overline{w'\theta'} = 0.05\ \rm{K\ m\ s^{-1}}$
+with $z_o$= 0.1 m, $u_*=0.3\ \rm{m\ s^{-1}}$, $\overline{w'\theta'} = 0.05\ \rm{K\ m\ s^{-1}}$
 and $\overline{T}=25\ \rm{C}$.
 
 a) Calculate the mechanical production term of the TKE at 2 and 10 meters.
@@ -81,7 +81,7 @@ P &= - \overline{u'w'}\pafg{\overline{u}}{z} \\
   &= \frac{{u_*}^3}{\kappa z}
 $$
 
-Since $\kappa=0.4$ and $u_*=0.3 \rm \, m s^{-1}$, P(2 m) = $3.375\cdot 10^{-2}\rm\,m^2\,s^{-3}$ and P(10 m) = $6.75\cdot 10^{-3}\rm\,m^2\,s^{-3}$. 
+Since $\kappa=0.4$ and $u_*=0.3 \rm \, m\ s^{-1}$, P(2 m) = $3.375\cdot 10^{-2}\rm\,m^2\,s^{-3}$ and P(10 m) = $6.75\cdot 10^{-3}\rm\,m^2\,s^{-3}$. 
 
 There is production! Shear does not destroy turbulence.
 
@@ -94,7 +94,8 @@ b) Calculate the buoyancy term. Under these conditions, is it a production or de
 Buoyancy term: $\frac{g}{\theta_v}\overline{g'\theta_v'}$. 
 
 We assume there's no moist, so $\theta_v=\theta$ and $\theta \approx T + \gamma_d z$. 
-$\gamma_d = \frac{g}{c_p} = 9.8 \cdot 10^{-3}\rm\,K m^{-1}$. Even at 10 $m$ height, $\theta$ and $T$ differ less than $0.1\rm\,K$, so $\theta_v = 298\rm\,K$. 
+$\gamma_d = \frac{g}{c_p} = 9.8 \cdot 10^{-3}\rm\,K\ m^{-1}$. 
+Even at 10 $m$ height, $\theta$ and $T$ differ less than $0.1\rm\,K$, so $\theta_v = 298\rm\,K$. 
 Therefore, the buoyancy term is $1.64 \cdot 10^{-3}\rm\,m^2\,s^{-3}$ at both heights.
 
 Positive buoyancy flux leads to a production term.
@@ -113,8 +114,8 @@ We can express (parameterize) the momentum flux, buoyancy flux (virtual temperat
 the mean gradients of wind and virtual potential temperature as:
 
 $$
-\overline{u_i'u_j'}~=~-K_m \left (\pafg{\overline u_i}{x_j}+\pafg{\overline u_j}{x_i} \right)\\
-\overline{w'\theta_v'}~=~-K_h \pafg{\overline\theta_v}{z},
+\overline{u_i'u_j'}~&=~-K_m \left (\pafg{\overline u_i}{x_j}+\pafg{\overline u_j}{x_i} \right)\\
+\overline{w'\theta_v'}~&=~-K_h \pafg{\overline\theta_v}{z},
 $$
 
 and the dissipation of TKE as
@@ -252,7 +253,7 @@ In this exercise, specific humidity is ignored, so $\theta_v = \theta$.
 Vertical profiles of $\theta$ (a) and $U$ (b) under unstable conditions
 ```
 
-The unstable condition is depicted in Figure {numref}`fig3a`. 
+The unstable condition is depicted in {numref}`fig3a`. 
 It is shown that $\overline{w'\theta'}>0$ and $\overline{u'w'}<0$. 
 Since $\frac{g}{\overline{\theta}} > 0$ and $\gemafg{u}{z} > 0$, this leads to $B>0$ and $S>0$. 
 Both contributions are production terms.
@@ -263,7 +264,7 @@ Both contributions are production terms.
 Vertical profiles of $\theta$ (a) and $U$ (b) under stable conditions
 ```
 
-The stable condition is depicted in Figure {numref}`fig3b`. 
+The stable condition is depicted in {numref}`fig3b`. 
 It is shown that $\overline{w'\theta'}<0$ and $\overline{u'w'}<0$. 
 Since $\frac{g}{\theta} > 0$ and $\gemafg{u}{z} > 0$, this leads to $B<0$ and $S>0$. 
 Shear remains a production terms, but buoyancy leads to destruction of TKE.
@@ -284,7 +285,7 @@ the shear, the buoyancy contribution terms and the flux Richardson number. Discu
 Buoyancy (B), shear (S), and the Richardson number (Ri) as a function of time.
 ```
 
-Figure {numref}`fig5` contains the sketch. 
+{numref}`fig5` contains the sketch. 
 The buoyancy decreases until sunset. 
 After sunset, the earth's surface is still warmed up, but begins to cool, which causes a delay in the moment that buoyancy is zero. 
 After this point, the earth's surface keeps cooling by longwave radiation. 
@@ -344,7 +345,7 @@ e^{-\frac{1}{2}} &= e_0^{-\frac{1}{2}} + \frac{C\,t}{2h}\\
 e^{\frac{1}{2}} &= \frac{1}{e_0^{-\frac{1}{2}} + \frac{C\,t}{2h}}
 $$
 
-This results in $e=\left(\frac{1}{\frac{1}{\sqrt{e_0}}+\frac{C\,t}{2 h}}\right)^2$
+This results in $e=\left(\dfrac{1}{\dfrac{1}{\sqrt{e_0}}+\dfrac{C\,t}{2 h}}\right)^2$
 
 ```
 
