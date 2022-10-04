@@ -4,6 +4,11 @@
 format: jb-book
 root: intro
 parts:
+  - caption: Lectures
+    numbered: true
+    chapters:
+    - file: lectures/introduction
+    - file: lectures/wind
   - caption: Theory
     numbered: true
     chapters:
@@ -11,11 +16,6 @@ parts:
     - file: governing_equations
     - file: atmospheric_stability
     - file: wind
-  - caption: Lectures
-    numbered: true
-    chapters:
-    - file: lectures/1_introduction
-    - file: lectures/2_wind
   - caption: Pen-and-paper exercises
     numbered: true
     chapters:

@@ -1,4 +1,4 @@
-# 1. Introduction
+# Introduction
 
 ```{admonition} Questions to be answered in this chapter
 1. What is the (atmospheric) boundary layer?
