@@ -9,6 +9,7 @@ parts:
     chapters:
     - file: lectures/introduction
     - file: lectures/wind
+    - file: lectures/turbulence
   - caption: Theory
     numbered: true
     chapters:
