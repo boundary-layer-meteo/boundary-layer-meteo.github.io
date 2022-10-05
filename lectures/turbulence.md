@@ -22,23 +22,40 @@ The Kolmogorov time scale $T_\epsilon$ is
 
 $$
 T_\epsilon \equiv \left( \dfrac{\nu}{\epsilon} \right)^\frac{1}{2}
-= \left( \dfrac{\nu L}{U^2} \right)^\frac{1}{2}.
+= \left( \dfrac{\nu L}{U^3} \right)^\frac{1}{2}.
 $$
 ```
 
 ```{admonition} Question
 :class: seealso
-What is the ratio in time and length scales between production and dissipation in a neutral atmospheric surface layer with wind speed $U$ of $\mathrm{10 m s^{-1}}$, a depth $L$ of $100 \mathrm{ m}$, and a kinematic viscosity $\nu$ of $1.5 \cdot 10^{-5} \mathrm{ m}\ \mathrm{s}^{-1}$?
+What is the ratio in length scales, often referred to as scale separation, between production and dissipation in a neutral atmospheric surface layer with wind speed $U$ of $\mathrm{10\ m\ s^{-1}}$, depth $L$ of $100\ \mathrm{m}$, and kinematic viscosity $\nu$ of $1.5 \cdot 10^{-5}\ \mathrm{m\ s^{-1}}$?
 ```
 
 ```{admonition} Answer
 :class: important, dropdown
 
 $$
-\dfrac{\eta}{L} &= \left( \dfrac{\nu^3 L}{U^3} \right)^\frac{1}{4} \left( \dfrac{1}{L} \right) = \left( \dfrac{U^3 L^3}{\nu^3} \right)^\frac{1}{4} \\
-                &= \left( \dfrac{10 \cdot 100}{1.5 \cdot 10^{-5}} \right)^\frac{3}{4} \approx 7.4 \cdot 10^5
+\dfrac{L}{\eta} &= L \left( \dfrac{U^3}{\nu^3 L} \right)^\frac{1}{4} = \left( \dfrac{U L}{\nu} \right)^\frac{3}{4} \\
+                &= \left( \dfrac{10 \cdot 100}{1.5 \cdot 10^{-5}} \right)^\frac{3}{4} \approx 7.38 \cdot 10^{5}
 $$
 
 ```
 
+## The spectral structure of turbulence
+The turbulence kinetic energy $e$ can be constructed from its spectral energy $E$ (energy per wave number $k$) following
 
+$$
+e = \int_0^\infty E\,\mathrm{d}k.
+$$
+
+If we assume a strict separation between production and dissipation in terms of length and time scales, there must exist a region that only transfers energy from the largest to the smallest scales.
+We call this region the intertial subrange, and the only parameter relevant there is $\epsilon$.
+Note that viscosity $\nu$ does not play a role here yet.
+
+Following the same dimensional reasoning as before, and noting that only $\epsilon$ matters, the spectral energy $E$ must be related to wave number $k$ and dissipiation $\epsilon$ as
+
+$$
+E \sim \epsilon^\frac{2}{3} \kappa^{-\frac{5}{3}}.
+$$
+
+This result is one of the most fundamental properties of high-Reynolds number turbulent flows.
