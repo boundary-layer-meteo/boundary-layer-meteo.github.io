@@ -7,8 +7,3 @@
 4. What are the different types of atmospheric boundary layers?
 ```
 
-
-
----
-
-
