@@ -101,6 +101,7 @@ Therefore, the buoyancy term is $1.64 \cdot 10^{-3}\rm\,m^2\,s^{-3}$ at both hei
 Positive buoyancy flux leads to a production term.
 ```
 
+(chapter3-exercise3)=
 ##
 From steady state and in case one can neglect the turbulent transport and advection terms,
 the turbulent kinetic energy (E) equation reduces to
@@ -207,6 +208,7 @@ $$
 Therefore, $Ri_c = \frac{1}{3}$
 ```
 
+(chapter3-exercise4)=
 ##
 From the reduced TKE equation (exercise 3)
 
