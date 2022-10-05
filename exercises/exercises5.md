@@ -1,5 +1,9 @@
 # Exercises chapter 5
 $\def\pafg#1#2{\dfrac{\partial #1}{\partial #2}}$
+$\def\afg#1#2{\dfrac{{\rm d} #1}{{\rm d} #2}}$
+$\def\gemafg#1#2{\pafg{\overline{#1}}{#2}}$
+
+$\def\pafg#1#2{\dfrac{\partial #1}{\partial #2}}$
 
 ##
 Assuming that the potential temperature increases with height,
@@ -80,14 +84,53 @@ assuming that the potential temperature increases with height at
 the constant rate of $6\ \rm{K\ km^{-1}}$,
 
 a) Calculate the bulk Richardson number for each layer (assume $g/\theta_v=0.0333 \rm{m\ s^{-2}\ K^{-1}}$)
+```{hint}
+:class: tip, dropdown
+There are 3 Richardson numbers that are frequently used:
+
+$$
+{\rm Ri}_f &= \frac{\frac{g}{\overline{\theta_v}}\overline{w'\theta_v'}}{\overline{u_i'w'}\gemafg{u_i}{z}}\\
+{\rm Ri}_g &= \frac{\frac{g}{\overline{\theta_v}}\gemafg{\theta_v}{z}}{\left(\gemafg{u_i}{z}\right)^2}\\
+{\rm Ri}_b &= \frac{\frac{g}{\overline{\theta_v}}\Delta \overline{\theta_v} \Delta z}{\left(\Delta\overline{u_i}\right)^2}
+$$
+
+The upper equation is the exact number, the second one is a first approximation and the third one is the most crude approximation.
+In this case, the latter expression should be used.
+```
+
 ```{admonition} Answer
 :class: important, dropdown
 
+| $\Delta z\rm\left(m\right)$                       | 3     | 6     | 10    | 30    | 50    | 200   | 200   | 500   | 1000      |
+| --                                                | --    | --    | --    | --    | --    | --    | --    | --    | --        |
+| $\Delta \overline{\theta_v}\left(K\right)$        | 0.018 | 0.036 | 0.06  | 0.18  | 0.3   | 1.2   | 1.2   | 3     | 6         |
+| $\Delta \overline{u_i}\rm\left(m\,s^{-1}\right)$  | 1.3   | 0.8   | 0.7   | 0.9   | 0.6   | 1.0   | 0.5   | 0.5   | 0         |
+| ${\rm Ri}_b\rm\left(-\right)$               | $1.1\,10^{-3}$ | $1.1\,10^{-2}$  | $4.1\,10^{-2}$ | $0.22$ | $1.4$ | $8.0$ | $32$ | $200$ | $+\infty$|
 ```
 
 b) Indicate the static and dynamic stability of each layer
 ```{admonition} Answer
 :class: important, dropdown
+
+Static stability: 
+$
+\begin{cases}
+\rm{ Unstable : Buoyancy > 0}\\
+\rm{ Stable\ \ \ \ : Buoyancy < 0}
+\end{cases}
+$
+
+Since for all layers $\gemafg{\theta_v}{z} > 0$, the buoyancy flux is negative everywhere and all layers are statically stable.
+
+Dynamic stability: 
+$
+\begin{cases}
+\rm{ Unstable  : Buoyancy + Shear > 0 \Rightarrow Shear > - Buoyancy \Rightarrow Ri < 0} \\
+\rm{ Stable\ \ \ \ : Buoyancy + Shear < 0 \Rightarrow Shear < - Buoyancy \Rightarrow Ri > 0}
+\end{cases}
+$
+
+Therefore, the lowest 4 layers are dynamically unstable. The other layers are dynamically stable. 
 
 ```
 
@@ -95,6 +138,8 @@ c) Indicate which layer is expected to be turbulent in these
 condition.
 ```{admonition} Answer
 :class: important, dropdown
+The turbulent layers are those layers where turbulence is generated more than it is destroyed, so under dynamically unstable conditions (Shear $>$ - Buoyancy). 
+Therefore, the lowest 4 layers are turbulent.
 
 ```
 
