@@ -1,5 +1,12 @@
 # Turbulence
 
+```{admonition} Questions to be answered in this chapter
+1. What are the length and time scales of production and dissipation of turbulence?
+2. What is the spectral structure of turbulence?
+3. What is the explanation for the famous $-5/3$ slope of the turbulence kinetic energy spectra?
+```
+
+
 ## Length and time scales of turbulence
 Production of turbulence happens at large spatial and temporal scales present in the atmospheric boundary layer flow, whereas dissipation of turbulence happens at the smallest scales present.
 
@@ -41,6 +48,7 @@ $$
 
 ```
 
+---
 ## The spectral structure of turbulence
 The turbulence kinetic energy $e$ can be constructed from its spectral energy $E$ (energy per wave number $k$) following
 
@@ -58,4 +66,4 @@ $$
 E \sim \epsilon^\frac{2}{3} \kappa^{-\frac{5}{3}}.
 $$
 
-This result is one of the most fundamental properties of high-Reynolds number turbulent flows.
+The result that the spectral energy $E$ for a certain wave number is proportional to wave number $k$ to the power $-5/3$ is one of the most fundamental properties of high-Reynolds number turbulent flows.

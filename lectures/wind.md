@@ -8,6 +8,7 @@ $\def\th{\hat{t}}$
 1. How does wind generate turbulence?
 2. What is the importance of the Reynolds number?
 3. What is the importance of the Coriolis force for the boundary layer?
+4. Why is the wind profile in the surface layer logarithmic?
 ```
 
 ## Conservation of momentum.
@@ -76,9 +77,8 @@ $$
  = \dfrac{\partial}{\partial z} \left( K \dfrac{\partial \overline{u}_i}{\partial z} \right)
 $$
 
-## The logarithmic wind profile (or law of the wall)
-bla.
-
 ## The Ekman layer
 bla.
 
+## The logarithmic wind profile (or law of the wall)
+bla.
