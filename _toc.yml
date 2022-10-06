@@ -10,13 +10,13 @@ parts:
     - file: lectures/introduction
     - file: lectures/wind
     - file: lectures/turbulence
-  - caption: Theory
-    numbered: true
-    chapters:
-    - file: basic_concepts
-    - file: governing_equations
-    - file: atmospheric_stability
-    - file: wind
+    - file: lectures/temperature
+#   - caption: Theory
+#     numbered: true
+#     chapters:
+#     - file: basic_concepts
+#     - file: governing_equations
+#     - file: atmospheric_stability
   - caption: Pen-and-paper exercises
     numbered: true
     chapters:
