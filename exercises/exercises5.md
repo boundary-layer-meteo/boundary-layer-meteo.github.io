@@ -3,8 +3,6 @@ $\def\pafg#1#2{\dfrac{\partial #1}{\partial #2}}$
 $\def\afg#1#2{\dfrac{{\rm d} #1}{{\rm d} #2}}$
 $\def\gemafg#1#2{\pafg{\overline{#1}}{#2}}$
 
-$\def\pafg#1#2{\dfrac{\partial #1}{\partial #2}}$
-
 ##
 Assuming that the potential temperature increases with height,
 find the potential temperature at the top of a turbulent layer which becomes laminar at a height of 20 m. The wind profile is given by:
