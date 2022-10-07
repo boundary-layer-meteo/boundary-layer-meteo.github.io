@@ -25,4 +25,7 @@ parts:
     - file: exercises/exercises3
     - file: exercises/exercises4
     - file: exercises/exercises5
+    - file: exercises/exercises6
+    - file: exercises/exercises7
+    - file: exercises/exercises8
 
