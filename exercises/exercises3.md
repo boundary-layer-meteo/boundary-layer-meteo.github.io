@@ -8,7 +8,7 @@ The Bowen ratio is defined as the ratio of the heat flux to
 the moisture flux ($B=H/LE$). Using the first-order closure to
 parameterize the fluxes and assuming that $K_h=K_q$, calculate
 the Bowen ratio from the following measurements at 10 meters
-($\theta=300\ K$, $q = 10\ \rm{g\ kg^{-1}}$) and at 2 m ($\theta=302\ K$, $q = 12\ \rm{g\ kg^{-1}}$).
+($\theta=300\ \rm{K}$, $q = 10\ \rm{g\ kg^{-1}}$) and at 2 m ($\theta=302\ \rm{K}$, $q = 12\ \rm{g\ kg^{-1}}$).
 
 ($L=2.5 \cdot 10^{6}\ \rm{J\ kg^{-1}}$ and $c_p=1004\ \rm{J\ kg^{-1}\ K^{-1}}$)
 

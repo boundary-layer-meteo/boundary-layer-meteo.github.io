@@ -3,7 +3,7 @@ $\def\pafg#1#2{\dfrac{\partial #1}{\partial #2}}$
 $\def\afg#1#2{\dfrac{{\rm d} #1}{{\rm d} #2}}$
 
 ##
-The Navier-Stoke equation for the instantaneous velocity is
+The Navier-Stokes equation for the instantaneous velocity is
 
 $$
 \pafg{u_i}{t}+u_j\pafg{u_i}{x_j}~=~-\frac{1}{\rho}\pafg{p}{x_i}
@@ -11,7 +11,7 @@ $$
 $$
 
 a) Using the scales $\cal U$ and $\cal L$, deduce the dimensionless form of the
-Navier Stoke equation.
+Navier Stokes equation.
 
 ```{hint}
 :class: tip, dropdown
@@ -54,7 +54,7 @@ $$
 b) Typical length scales in the ABL are $\cal U$= 1 $\rm{m\ s^{-1}}$ and $\cal L$=1000 m.
 Are the Coriolis rotational term and the viscous term relevant in the ABL?
 
-($f_c=10^{-4} s^{-1}$, $\nu_{air}=1.5 \cdot 10^{-5} \rm{m^2\ s^{-1}}$)
+($f_c=10^{-4}\ \rm{s^{-1}}$, $\nu_{air}=1.5 \cdot 10^{-5}\ \rm{m^2\ s^{-1}}$)
 
 ```{admonition} Answer
 :class: important, dropdown
@@ -69,7 +69,7 @@ Find the acceleration of air in the x- and y-directions $\left(\pafg{u}{t}, \paf
 The initial velocities at 100 m are $\overline{u}=\ 4\ \rm{m\ s^{-1}}$ and $\overline{v}=\ 2\ \rm{m\ s^{-1}}$.
 
 ($u_* = 0.3\ \rm{m\ s^{-1}}$,
-$f_c = 10^{-4} s^{-1}$ and $c = 10^{-3} s^{-1}$).
+$f_c = 10^{-4}\ \rm{s^{-1}}$ and $c = 10^{-3}\ \rm{s^{-1}}$).
 
 ```{admonition} Answer
 :class: important, dropdown
@@ -170,7 +170,7 @@ $$
 ```
 
 
-b) Suppose that $\overline{w'\theta'}~=~a - bz$ where $a=0.3\ K\ m\ s^{-1}$ and $b=3 \cdot 10^{-4} K\ s^{-1}$.
+b) Suppose that $\overline{w'\theta'}~=~a - bz$ where $a=0.3\ \rm{K\ m\ s^{-1}}$ and $b=3 \cdot 10^{-4}\ \rm{K\ s^{-1}}$.
 How long will it take the ABL to warm up 0.54 K?
 
 ```{hint}

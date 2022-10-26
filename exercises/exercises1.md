@@ -3,7 +3,7 @@
 ```{hint} 
 :class: tip
 At some exercises we provide hints. These can contains tips to help you find the answer, but they can also contain additional information. 
-So, if you managed to answer the question with looking at the tip: great! But please also check the tip, because there might still be valuable information there. 
+So, if you managed to answer the question without looking at the tip: great! But please also check the tip, because there might still be valuable information there. 
 ```
 
 $\def\pafg#1#2{\dfrac{\partial #1}{\partial #2}}$
@@ -88,7 +88,7 @@ $$
 $$
 ```
 
-b) Calculate the velocity divergence at the point (-1, 4, 0). Is
+b) Calculate the velocity divergence at the point (-1, 5, 0). Is
 it a incompressible or compressible flow at this point?
 
 ```{hint}
@@ -220,7 +220,7 @@ c) $\overline{\pafg{A}{t}\pafg{B}{t}}$
 ```{admonition} Answer
 :class: important, dropdown
 
-Same strategy as the one in solution {\bf b}, only now also consider $D \equiv \pafg{A}{t}$ with the same rules. ($\overline{D} = \pafg{\overline{A}}{t}$ and $D' = \pafg{A'}{t}$).
+Same strategy as the one in solution **b**, only now also consider $D \equiv \pafg{A}{t}$ with the same rules. ($\overline{D} = \pafg{\overline{A}}{t}$ and $D' = \pafg{A'}{t}$).
 
 $$
 \overline{\pafg{A}{t}\pafg{B}{t}} &= \overline{DC}\\
@@ -456,7 +456,7 @@ $$
 Assuming the following values for the friction velocity (=0.5 $\rm{m\ s^{-1}}$),
 the roughness length (= 0.2 m) and the Von Karman constant (=0.4),
 calculate the wind speed at 9 m.
-````{admonition} Answer
+```{admonition} Answer
 :class: important, dropdown
 
 According to this equation, we get a logarithmic wind profile. This can be used in two ways: starting from $z=z_0$ or from $z=z_1=2\,\rm m$. Both will be explored here.
@@ -465,10 +465,6 @@ $$
 \pafg{U}{z} &= \frac{u_*}{\kappa z} \\
 \partial U &= \frac{u_*}{\kappa} \frac{\partial z}{z}
 $$
-
-```{figure} figures/Exercise16b.png
-:name: fig1.6
-```
 
 This can be integrated:
 
@@ -489,36 +485,40 @@ in which $z'_1$ and $z'_2$ are two arbitrary heights. In both cases $z'_2 = 9\,\
 In the first situation, $z'_1=z_0=0.2\,\rm m$ with the corresponding wind velocity $U(z'_1) = 0\,\rm m\,s^{-1}$. In this case $U(9\,\rm m) = 4.76\,\rm m\,s^{-1}$.
 
 In the second situation,$z'_1=z_1=2\,\rm m$ with the corresponding wind velocity $U(z'_1) = 2.8\,\rm m\,s^{-1}$. In this case $U(9\,\rm m) = 4.68\,\rm m\,s^{-1}$.
-````
+```
 
 
 
-c) Estimate the error associated to the calculation of the wind speed using
-the finite difference method.
-```{admonition} Answer
+c) Estimate the error associated to the calculation of the wind speed using the linear interpolation.
+````{admonition} Answer
 :class: important, dropdown
 
-The estimation by the finite difference method is $U\rm\left(9\, m\right) = 3.95\,m\,s^{-1}$. 
-
-Comparing the finite difference method with the logarithmic profile in the first situation results in an error of $0.81\,\rm m\,s^{-1}$. 
-
-Comparing the finite difference method with the logarithmic profile in the second situation results in an error of $0.73\,\rm m\,s^{-1}$. 
+```{figure} figures/Exercise16b.png
+:name: fig1.6
 ```
+The figure shows the linear approximation from question a in blue and the logarithmic wind profile from question b in red. 
+The error made with the linear interpolation is the difference between these lines. 
+
+At 9 m the estimation with the linear interpolation is $U\rm\left(9\, m\right) = 3.95\,m\,s^{-1}$. 
+
+Comparing the linear interpolation with the logarithmic profile in the first situation results in an error of $0.81\,\rm m\,s^{-1}$. 
+
+Comparing the linear interpolation method with the logarithmic profile in the second situation results in an error of $0.73\,\rm m\,s^{-1}$. 
+````
 
 ## 
 During a measurement campaign the following vertical profile
 of potential temperature was measured at 14 UTC (see {numref}`fig1`).
 
-a) Identify and name each of the layers indicated in the figures
-with the letters A, B, C and D and describe the main
-characteristics of the behavior of the potential temperature.
+a) Name each of the layers indicated in the figures with the letters A, B, C and D
+
 ```{admonition} Answer
 :class: important, dropdown
 
-* A. Surface layer; $\afg{\theta}{z}<0$ , unstable and turbulent
-* B. Mixed layer; $\afg{\theta}{z}=0$, neutral and turbulent
-* C. Entrainment zone/layer; $\afg{\theta}{z} \gg 0$, stable, but turbulent
-* D. Free troposphere; $\afg{\theta}{z} > 0$, stable and laminar
+* A. Surface layer              
+* B. Mixed layer                
+* C. Entrainment zone/layer     
+* D. Free troposphere       
 ```
 
 b) Find the vertical gradient of temperature
@@ -535,15 +535,13 @@ It depends on how you draw the schematic lines.
 * D. $\rm \frac{0.75 K}{400 m} = 1.9 K km^{-1}$
 ```
 
-c) Discuss the conditions of the atmospheric stability for each
-layer (refer to your answer to point b)
+c) Indicate for each layer whether it is stable, neutral or unstable and whether it is turbulent or laminar. 
 ```{admonition} Answer
 :class: important, dropdown
-Based on potential temperature gradients:
-* A. Unstable
-* B. Neutral 
-* C. Very stable
-* D. Stable
+* A. Unstable and turbulent
+* B. Neutral and turbulent
+* C. Stable, but turbulent
+* D. Stable and laminar
 ```
 
 ```{figure} figures/figset11.png

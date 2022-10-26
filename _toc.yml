@@ -20,6 +20,10 @@ parts:
   - caption: Pen-and-paper exercises
     numbered: true
     chapters:
+    - file: exercises/week1
+  - caption: Old exercises
+    numbered: true
+    chapters:
     - file: exercises/exercises1
     - file: exercises/exercises2
     - file: exercises/exercises3
