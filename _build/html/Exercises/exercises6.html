@@ -1,0 +1,613 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Exercises chapter 6 &#8212; Boundary-Layer Meteorology</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Boundary-Layer Meteorology</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Welcome
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Lectures
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/introduction.html">
+   1. Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/wind.html">
+   2. Wind
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/turbulence.html">
+   3. Turbulence
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/temperature.html">
+   4. Temperature and stability
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Pen-and-paper exercises
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="exercises1.html">
+   5. Exercises chapter 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="exercises2.html">
+   6. Exercises chapter 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="exercises3.html">
+   7. Exercises chapter 3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="exercises4.html">
+   8. Exercises chapter 4
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="exercises5.html">
+   9. Exercises chapter 5
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fexercises/exercises6.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/exercises/exercises6.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id5">
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Exercises chapter 6</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id5">
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="exercises-chapter-6">
+<h1>Exercises chapter 6<a class="headerlink" href="#exercises-chapter-6" title="Permalink to this headline">#</a></h1>
+<p><span class="math notranslate nohighlight">\(\def\pafg#1#2{\dfrac{\partial #1}{\partial #2}}\)</span>
+<span class="math notranslate nohighlight">\(\def\afg#1#2{\dfrac{{\rm d} #1}{{\rm d} #2}}\)</span>
+<span class="math notranslate nohighlight">\(\def\gemafg#1#2{\pafg{\overline{#1}}{#2}}\)</span></p>
+<section id="id1">
+<h2><a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
+<p>The one-dimensional conservation equation for heat reads:</p>
+<div class="math notranslate nohighlight">
+\[
+\pafg{\overline{\theta}}{t}~=~-~\pafg{\overline{w'\theta'}}{z}
+\]</div>
+<p>a) Discuss which terms have been neglected from this equation</p>
+<p>b) Explain the mathematical steps and definitions to derive the mixed-layer equation for the bulk potential temperature that reads:</p>
+<div class="math notranslate nohighlight">
+\[
+\pafg{ {&lt;\overline{\theta}}&gt;}{t}~=~\frac{\overline{w'\theta'(0)}-\overline{w'\theta'(h)}}{h}.
+\]</div>
+<p>c) Assuming that we are in an encroachment situation and the sensible heat flux and h are constant on time, find an expression for <span class="math notranslate nohighlight">\(&lt;{\overline{\theta}}&gt;\)</span>
+as a function of time. The assumption of sensible heat flux and h constant on time is reasonable in the afternoon hours
+and during a relative short time. Discuss this assumption.</p>
+<p>d) Derive a similar expression but now assuming that the entrainment flux is 20<span class="math notranslate nohighlight">\(\%\)</span> of the surface flux. Compare
+your formulations and discuss their implications.</p>
+<p>e) Discuss the additional equations that we need to include in order to have a more physical description of the entrainment flux.</p>
+</section>
+<section id="id2">
+<h2><a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h2>
+<p>The atmospheric boundary layer height is 300 m at 0600 UTC, the temperature
+lapse rate is 5 K/km and the initial temperature is <span class="math notranslate nohighlight">\(\theta\)</span> is 285 K . Assuming that the sensible heat flux varies with time over this land
+according to (t is given in hours):</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\overline{w'\theta'(0)}&amp;=c_1 \sin \left( \frac{\pi(t-t_0)}{c_2} \right ) \\ 
+c_1&amp;=0.2\ Km\ s{-1} \\
+c_2&amp;=12\ hours
+\end{split}\]</div>
+<p>a) Under encroachment conditions, find the boundary layer height at 14 UTC, if the entrainment flux and subsidence are neglectable.</p>
+<p>b) Calculate the boundary layer height at 14 UTC assuming that there is a closure assumption between the
+heat flux at the surface and at the entrainment zone:</p>
+<div class="math notranslate nohighlight">
+\[
+\overline{w'\theta'(z_i)}~=~-\beta \overline{w'\theta'(0)},
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(\beta\)</span> is 0.2.</p>
+<p>c) Calculate the mixed-layer potential temperature in the Convective Boundary Layer
+at 14.00 for both cases. Discuss the results.</p>
+</section>
+<section id="id3">
+<h2><a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h2>
+<p>Given an arbitrary mixed layer, we can assume that the mixed layer potential temperature
+(<span class="math notranslate nohighlight">\(\left&lt;\overline{\theta}\right&gt;\)</span> and the potential temperature jump (<span class="math notranslate nohighlight">\(\Delta\theta\)</span>)) evolve with time according to</p>
+<div class="math notranslate nohighlight">
+\[
+\pafg{\left&lt;{\overline{\theta}}\right&gt;}{t} &amp;=\frac{\overline{w'\theta'}(0)-\overline{w'\theta'}(h)}{h} \ \
+        \pafg{\Delta\theta}{t} &amp;= \gamma_\theta\pafg{h}{t} - \pafg{\left&lt;\overline{\theta}\right&gt;}{t}\ \
+        \overline{w'\theta'}(h) &amp;= - \pafg{h}{t}\Delta\theta
+\]</div>
+<p>At 12 UTC, the mixed layer temperature is 290 K. At the top of the mixed layer, there is an inversion
+with an initial temperature above equal to 296 K.
+Above the inversion the temperature increases 0.05 K every 10 m.
+The surface flux <span class="math notranslate nohighlight">\(\overline{w'\theta'}(0)\)</span> is 185 <span class="math notranslate nohighlight">\(W/m^2\)</span>.</p>
+<p>a) Draw the vertical profile of the potential temperature and the heat flux.
+Describe the different regions in the CBL.</p>
+<p>b) Find an expression for the time evolution of <span class="math notranslate nohighlight">\(h\)</span> without evaluating it. Do this</p>
+<ol class="simple">
+<li><p>assuming no entrainment and no potential temperature inversion (encroachment).</p></li>
+<li><p>assuming <span class="math notranslate nohighlight">\(\overline{w'\theta'}(h) = -\beta \,\overline{w'\theta'}(0)\)</span>. In this case, consider a situation in which <span class="math notranslate nohighlight">\(\Delta\theta\)</span> is relatively constant in time <span class="math notranslate nohighlight">\(\left(\pafg{\Delta\theta}t\right)\approx 0\)</span> and unknown (negating the use of eq. 6.45).</p></li>
+<li><p>making no assumptions, except that <span class="math notranslate nohighlight">\(\overline{w'\theta'}(h) = -\beta \,\overline{w'\theta'}(0)\)</span>.
+In this case, can you determine <span class="math notranslate nohighlight">\(\pafg{h}{t}\)</span> without knowing <span class="math notranslate nohighlight">\(\Delta\theta\)</span>?</p></li>
+</ol>
+<p>c) If <span class="math notranslate nohighlight">\(h\)</span> is 1000 m at 12 UTC, what is the boundary layer growth rate and the temperature change per hour in the CBL?</p>
+<p>d) Calculate the convective velocity at the same time and estimate how long it takes a parcel to travel from the
+surface to the top of the atmospheric boundary layer</p>
+</section>
+<section id="id4">
+<h2><a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h2>
+<p><code class="xref std std-numref docutils literal notranslate"><span class="pre">fig:61</span></code>, <code class="xref std std-numref docutils literal notranslate"><span class="pre">fig:62</span></code>, and <code class="xref std std-numref docutils literal notranslate"><span class="pre">fig:63</span></code> show the vertical profiles of the potential temperature measured by radiosondes in the USA at 11, 17 and 23 UTC the 20th June 1997 (local time=UTC-6 hours).</p>
+<figure class="align-default" id="fig-61">
+<img alt="../_images/figset61.png" src="../_images/figset61.png" />
+<figcaption>
+<p><span class="caption-text">Vertical profile of potential temperature and specific humidity measured by radiosondes at 11 UTC</span><a class="headerlink" href="#fig-61" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="fig-62">
+<img alt="../_images/figset62.png" src="../_images/figset62.png" />
+<figcaption>
+<p><span class="caption-text">Vertical profile of potential temperature and specific humidity measured by radiosondes at 17 UTC</span><a class="headerlink" href="#fig-62" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="fig-63">
+<img alt="../_images/figset63.png" src="../_images/figset63.png" />
+<figcaption>
+<p><span class="caption-text">Vertical profile of potential temperature and specific humidity measured by radiosondes at 23 UTC</span><a class="headerlink" href="#fig-63" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>a) Describe the main characteristics of the radiosoundings.</p>
+<p>b) Give the evolution of the boundary layer depth.</p>
+<p>c) Assuming an entrainment velocity equal to 0.01 m/s, find the entrainment
+flux at 17 UTC.</p>
+</section>
+<section id="id5">
+<h2><a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h2>
+<p>During the 27th of July 2002, the vertical profile of potential temperature
+and heat flux (see <code class="xref std std-numref docutils literal notranslate"><span class="pre">fig:64</span></code> and <code class="xref std std-numref docutils literal notranslate"><span class="pre">fig:65</span></code>) were measured by an aircraft above Cabauw. The heat flux measurements were
+taken around 12.45 UTC.</p>
+<p>a) Estimate the boundary layer height at 8.15 UTC and 12.45.
+Calculate the velocity of the growth of the convective boundary
+layer.</p>
+<p>b) Calculate the terms (storage, turbulent flux divergence) of the
+potential temperature equation in the mixed layer.</p>
+<p>c) Was the advection of potential temperature an important term
+during the 27th July 2002?</p>
+<p>d) The heat flux can be related to the gradient of the mean potential
+temperature as follows</p>
+<div class="math notranslate nohighlight">
+\[
+\overline{w'\theta'(z)}=-K_h\pafg{\overline{\theta}}{z}
+\]</div>
+<p>Using the information from the vertical flux of potential temperature
+and heat flux, calculate the exchange coefficient <span class="math notranslate nohighlight">\(K_h\)</span> at z=500 m (time 12.45).
+This coefficient can also be calculated using convective scaling. The expression reads:</p>
+<div class="math notranslate nohighlight">
+\[
+    K_h=\kappa w_*z\left(1-\frac{z}{h}\right )^2
+\]</div>
+<p>Calculate <span class="math notranslate nohighlight">\(K_h\)</span> at 500 m and at 12.45 using this expression and compare it with the previous calculation.</p>
+<figure class="align-default" id="fig-64">
+<img alt="../_images/figset64.png" src="../_images/figset64.png" />
+<figcaption>
+<p><span class="caption-text">Vertical profile of potential temperature measured above Cabauw during the 27th July 2002</span><a class="headerlink" href="#fig-64" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="fig-65">
+<img alt="../_images/figset65.png" src="../_images/figset65.png" />
+<figcaption>
+<p><span class="caption-text">Vertical profile of sensible heat flux measured above Cabauw during the 27th July 2002</span><a class="headerlink" href="#fig-65" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./exercises"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Chiel van Heerwaarden and Mirjam Tijhuis<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
