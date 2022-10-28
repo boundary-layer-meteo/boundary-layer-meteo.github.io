@@ -1,0 +1,553 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>The governing equations &#8212; Boundary-Layer Meteorology</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Boundary-Layer Meteorology</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Lectures
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="lectures/introduction.html">
+   1. Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lectures/wind.html">
+   2. Wind
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lectures/turbulence.html">
+   3. Turbulence
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lectures/temperature.html">
+   4. Temperature and stability
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Pen-and-paper exercises
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="exercises/week1.html">
+   5. Exercises week 1
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fgoverning_equations.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/governing_equations.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-ideal-gas-law">
+   The ideal gas law
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conservation-of-energy">
+   Conservation of energy
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-first-law-of-thermodynamics">
+     The first law of thermodynamics
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#potential-temperature">
+     Potential temperature
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#atmospheric-stability">
+     Atmospheric stability
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>The governing equations</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-ideal-gas-law">
+   The ideal gas law
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conservation-of-energy">
+   Conservation of energy
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-first-law-of-thermodynamics">
+     The first law of thermodynamics
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#potential-temperature">
+     Potential temperature
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#atmospheric-stability">
+     Atmospheric stability
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <p><span class="math notranslate nohighlight">\(\def\cp{c_\textrm{p}}\)</span>
+<span class="math notranslate nohighlight">\(\def\Rd{R_\textrm{d}}\)</span></p>
+<section class="tex2jax_ignore mathjax_ignore" id="the-governing-equations">
+<h1>The governing equations<a class="headerlink" href="#the-governing-equations" title="Permalink to this headline">#</a></h1>
+<section id="the-ideal-gas-law">
+<h2>The ideal gas law<a class="headerlink" href="#the-ideal-gas-law" title="Permalink to this headline">#</a></h2>
+<p>We assume that the air in the atmospheric boundary layer behaves as an ideal gas, in which pressure <span class="math notranslate nohighlight">\(p\)</span>, density <span class="math notranslate nohighlight">\(\rho\)</span> and the gas constant for dry air <span class="math notranslate nohighlight">\(\Rd\)</span> are related as:</p>
+<div class="admonition-ideal-gas-law admonition">
+<p class="admonition-title">Ideal gas law</p>
+<div class="math notranslate nohighlight" id="equation-ideal-gas-law">
+<span class="eqno">()<a class="headerlink" href="#equation-ideal-gas-law" title="Permalink to this equation">#</a></span>\[
+p = \rho \Rd T.
+\]</div>
+</div>
+</section>
+<section id="conservation-of-energy">
+<h2>Conservation of energy<a class="headerlink" href="#conservation-of-energy" title="Permalink to this headline">#</a></h2>
+<section id="the-first-law-of-thermodynamics">
+<h3>The first law of thermodynamics<a class="headerlink" href="#the-first-law-of-thermodynamics" title="Permalink to this headline">#</a></h3>
+<p>As a starting point for conservation of energy, we start with the first law of thermodynamics written in a convenient form to describe atmospheric flow:</p>
+<div class="admonition-conservation-of-energy admonition">
+<p class="admonition-title">Conservation of energy</p>
+<div class="math notranslate nohighlight" id="equation-first-law">
+<span class="eqno">()<a class="headerlink" href="#equation-first-law" title="Permalink to this equation">#</a></span>\[
+\rho \cp \mathrm{d}T - \mathrm{d}p = Q
+\]</div>
+</div>
+<p>This equation relates the change in temperature <span class="math notranslate nohighlight">\(\mathrm{d}T\)</span> of a parcel of air to its pressure change <span class="math notranslate nohighlight">\(\mathrm{d}p\)</span> and the heat <span class="math notranslate nohighlight">\(Q\)</span> added to the parcel. We can now describe for any parcel of air how its temperature will change under expansion and compression if it is displaced in the vertical direction by atmospheric motions, or how temperature will change if we add or remove heat, for instance by heating by solar radiation or cooling by thermal radiation.</p>
+<div class="seealso admonition">
+<p class="admonition-title">Question</p>
+<p>Assume no heat is added (<span class="math notranslate nohighlight">\(Q = 0\)</span>) and use Equation <a class="reference internal" href="lectures/temperature.html#equation-first-law">(4.2)</a> to answer the question. If we move a parcel of air up a mountain, does its temperature increase or decrease?</p>
+</div>
+<div class="important dropdown admonition">
+<p class="admonition-title">Answer</p>
+<p>If <span class="math notranslate nohighlight">\(Q\)</span> equals zero, then <span class="math notranslate nohighlight">\(\rho \cp \mathrm{d}T = \mathrm{d}p\)</span>. Therefore, if we move up a mountain and pressure decreases (<span class="math notranslate nohighlight">\(dp &lt; 0\)</span>), temperature change <span class="math notranslate nohighlight">\(dT\)</span> must be smaller than 0 as well. Temperature thus decreases.</p>
+</div>
+</section>
+<section id="potential-temperature">
+<h3>Potential temperature<a class="headerlink" href="#potential-temperature" title="Permalink to this headline">#</a></h3>
+<p>One of the disadvantages of temperature is that it is influenced by expansion and compression, as well as heat transfer. This means that an air parcel that is vertically displaced by turbulence experiences a temperature change even if no heat is added or removed. In the analysis of turbulent boundary layer flows it is convenient to have a quantity that is conserved under adiabatic dispacement. Before deriving this quantity, we rewrite Equation <a class="reference internal" href="lectures/temperature.html#equation-first-law">(4.2)</a> in units of temperature, and we remove the density from the pressure term with the help of the ideal gas law (Equation <a class="reference internal" href="lectures/temperature.html#equation-ideal-gas-law">(4.1)</a>).</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\cp \mathrm{d}T - \dfrac{1}{\rho} \mathrm{d}p &amp;= \dfrac{Q}{\rho} \\
+\cp \mathrm{d}T - \dfrac{\Rd T}{p} \mathrm{d}p &amp;= \dfrac{Q}{\rho} \\
+\dfrac{1}{T} \mathrm{d}T - \dfrac{\Rd}{\cp}\dfrac{1}{p} \mathrm{d}p &amp;= \frac{Q}{\rho \cp T} \\
+\mathrm{d} \left( \ln T \right) - \dfrac{\Rd}{\cp} \mathrm{d}\left( \ln p \right) &amp;= \frac{Q}{\rho \cp T}
+\end{split}\]</div>
+<p>Now we can introduce our new quantity potential temperature <span class="math notranslate nohighlight">\(\theta\)</span> as follows.</p>
+<div class="math notranslate nohighlight">
+\[
+\mathrm{d} \left( \ln T \right) - \dfrac{\Rd}{\cp} \mathrm{d}\left( \ln p \right) = \mathrm{d} \left( \ln \theta \right).
+\]</div>
+<p>If we look carefully to the equation, we have chosen potential temperature <span class="math notranslate nohighlight">\(\theta\)</span> such that it compensates for changes in pressure <span class="math notranslate nohighlight">\(p\)</span> caused by displacement, which is what we intended. We can now work towards a definition of potential temperature <span class="math notranslate nohighlight">\(\theta\)</span>, where we integrate from some chosen reference pressure <span class="math notranslate nohighlight">\(p_0\)</span> to the actual pressure <span class="math notranslate nohighlight">\(p\)</span> at which we need to know the potential temperature.</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\begin{split}
+\int_{p_0}^p \mathrm{d} \left( \ln T \right) - \dfrac{\Rd}{\cp} \int_{p_0}^p \mathrm{d}\left( \ln p^\prime \right) &amp;= \int_{p_0}^p \mathrm{d} \left( \ln \theta \right) \\\end{split}\\\begin{split}\left[ \ln T \right]_{p_{0}}^p - \dfrac{\Rd}{\cp} \left[ \ln p \right]_{p_{0}}^p &amp;= \left[ \ln \theta \right]_{p_{0}}^p \\
+\ln T - \ln T_0  - \dfrac{\Rd}{\cp} \ln p + \dfrac{\Rd}{\cp} \ln p_0 &amp;= \ln \theta - \ln \theta_0
+\end{split}\end{aligned}\end{align} \]</div>
+<p>To be able to provide an actual value of <span class="math notranslate nohighlight">\(\theta\)</span> we define <span class="math notranslate nohighlight">\(\theta\)</span> to be equal to <span class="math notranslate nohighlight">\(T\)</span> at pressure <span class="math notranslate nohighlight">\(p_0\)</span>, thus mathematically <span class="math notranslate nohighlight">\(\theta_0 = T_0\)</span>. With this choice we can cancel two terms in the equation:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\ln T - \ln T_0  - \dfrac{\Rd}{\cp} \ln p + \dfrac{\Rd}{\cp} \ln p_0 &amp;= \ln \theta - \ln \theta_0 \\
+\ln T - \dfrac{\Rd}{\cp} \ln p + \dfrac{\Rd}{\cp} \ln p_0 &amp;= \ln \theta \\
+\ln T - \ln \left( \dfrac{p}{p_0}\right)^\frac{\Rd}{\cp} &amp;= \ln \theta \\
+\ln T + \ln \left( \dfrac{p_0}{p}\right)^\frac{\Rd}{\cp} &amp;= \ln \theta \\
+\ln \left( T \left( \dfrac{p_0}{p}\right)^\frac{\Rd}{\cp} \right) &amp;= \ln \theta
+\end{split}\]</div>
+<p>This brings us to the definition of the potential temperature:</p>
+<div class="admonition-potential-temperature admonition">
+<p class="admonition-title">Potential temperature</p>
+<div class="math notranslate nohighlight" id="equation-pot-temp">
+<span class="eqno">()<a class="headerlink" href="#equation-pot-temp" title="Permalink to this equation">#</a></span>\[
+\theta \equiv T \left( \dfrac{p_0}{p}\right)^\frac{\Rd}{\cp}
+\]</div>
+</div>
+<p>The last question to answer is what to chose for the value of <span class="math notranslate nohighlight">\(p_0\)</span>. Generally, we use the <span class="math notranslate nohighlight">\(1 \cdot 10^5~\mathrm{Pa}\)</span> as its value, which means that at sea level pressure the absolute temperature <span class="math notranslate nohighlight">\(T\)</span> and potential temperaure <span class="math notranslate nohighlight">\(\theta\)</span> are very close together. Following this logics, an intuitive way of defining potential temperature is:</p>
+<blockquote>
+<div><p><em>Potential temperature <span class="math notranslate nohighlight">\(\theta\)</span> is the temperature of an air parcel if it is adiabatically (thus no heat added or removed) transported back to sea level.</em></p>
+</div></blockquote>
+</section>
+<section id="atmospheric-stability">
+<h3>Atmospheric stability<a class="headerlink" href="#atmospheric-stability" title="Permalink to this headline">#</a></h3>
+<p>The atmospheric static stability defines whether the temperature stratification support or suppresses the generation of turbulent motions. If <span class="math notranslate nohighlight">\(\dfrac{\partial \theta}{\partial z} \gt 0\)</span>, the atmosphere is statically stable, if <span class="math notranslate nohighlight">\(\dfrac{\partial \theta}{\partial z} \approx 0\)</span>, the atmosphere is neutral, and if <span class="math notranslate nohighlight">\(\dfrac{\partial \theta}{\partial z} \lt 0\)</span> the atmosphere is unstable.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Chiel van Heerwaarden and Mirjam Tijhuis<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

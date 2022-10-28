@@ -1,0 +1,885 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Exercises chapter 3 &#8212; Boundary-Layer Meteorology</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Boundary-Layer Meteorology</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Welcome
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Lectures
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/introduction.html">
+   1. Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/wind.html">
+   2. Wind
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/turbulence.html">
+   3. Turbulence
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/temperature.html">
+   4. Temperature and stability
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Pen-and-paper exercises
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="week1.html">
+   5. Exercises week 1
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fexercises/exercises3.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/exercises/exercises3.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#chapter3-exercise3">
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#chapter3-exercise4">
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id5">
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id6">
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Exercises chapter 3</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#chapter3-exercise3">
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#chapter3-exercise4">
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id5">
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id6">
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="exercises-chapter-3">
+<h1>Exercises chapter 3<a class="headerlink" href="#exercises-chapter-3" title="Permalink to this headline">#</a></h1>
+<p><span class="math notranslate nohighlight">\(\def\pafg#1#2{\dfrac{\partial #1}{\partial #2}}\)</span>
+<span class="math notranslate nohighlight">\(\def\afg#1#2{\dfrac{{\rm d} #1}{{\rm d} #2}}\)</span>
+<span class="math notranslate nohighlight">\(\def\gemafg#1#2{\pafg{\overline{#1}}{#2}}\)</span></p>
+<section id="id1">
+<h2><a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
+<p>The Bowen ratio is defined as the ratio of the heat flux to
+the moisture flux (<span class="math notranslate nohighlight">\(B=H/LE\)</span>). Using the first-order closure to
+parameterize the fluxes and assuming that <span class="math notranslate nohighlight">\(K_h=K_q\)</span>, calculate
+the Bowen ratio from the following measurements at 10 meters
+(<span class="math notranslate nohighlight">\(\theta=300\ \rm{K}\)</span>, <span class="math notranslate nohighlight">\(q = 10\ \rm{g\ kg^{-1}}\)</span>) and at 2 m (<span class="math notranslate nohighlight">\(\theta=302\ \rm{K}\)</span>, <span class="math notranslate nohighlight">\(q = 12\ \rm{g\ kg^{-1}}\)</span>).</p>
+<p>(<span class="math notranslate nohighlight">\(L=2.5 \cdot 10^{6}\ \rm{J\ kg^{-1}}\)</span> and <span class="math notranslate nohighlight">\(c_p=1004\ \rm{J\ kg^{-1}\ K^{-1}}\)</span>)</p>
+<div class="important dropdown admonition">
+<p class="admonition-title">Answer</p>
+<div class="math notranslate nohighlight">
+\[
+B=\frac{H}{LE}
+\]</div>
+<p>We know</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+H &amp;= \rho c_p \overline{w'\theta '}\\
+LE &amp;= \rho L \overline{w'q'},
+\end{split}\]</div>
+<p>which can be related to gradients using the first-order closure,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\overline{w'\theta '} &amp;= - K_h \pafg{\overline{\theta}}{z} \\
+\overline{w'q'} &amp;= - K_q \pafg{\overline{q}}{z} .
+\end{split}\]</div>
+<p>Therefore,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+B &amp;= \frac{\rho c_p \overline{w'\theta '}}{\rho L \overline{w'q'}} \\
+  &amp;= \frac{c_p}{L} \frac{K_h}{K_q} \frac{\pafg{\overline{\theta}}{z}}{\pafg{\overline{q}}{z}} .
+\end{split}\]</div>
+<p>All constants are known and from measurements follow <span class="math notranslate nohighlight">\(\pafg{\overline{\theta}}{z} = \frac{-2\,{\rm K}}{8\,{\rm m}}\)</span>
+and <span class="math notranslate nohighlight">\(\pafg{\overline{q}}{z} = \frac{-2\cdot 10^{-3} \,{\rm kg\ kg^{-1}}}{8\,{\rm m}}\)</span>.</p>
+<p>This results in B=0.4.</p>
+</div>
+</section>
+<section id="id2">
+<h2><a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h2>
+<p>The wind profile is given at a measuring site by</p>
+<div class="math notranslate nohighlight">
+\[
+\overline{u}~=~\frac{u_*}{\kappa}ln\frac{z}{z_o}
+\]</div>
+<p>(<span class="math notranslate nohighlight">\({\kappa}=0.4\)</span>)</p>
+<p>with <span class="math notranslate nohighlight">\(z_o\)</span>= 0.1 m, <span class="math notranslate nohighlight">\(u_*=0.3\ \rm{m\ s^{-1}}\)</span>, <span class="math notranslate nohighlight">\(\overline{w'\theta'} = 0.05\ \rm{K\ m\ s^{-1}}\)</span>
+and <span class="math notranslate nohighlight">\(\overline{T}=25\ \rm{C}\)</span>.</p>
+<p>a) Calculate the mechanical production term of the TKE at 2 and 10 meters.
+Discuss the result.</p>
+<div class="important dropdown admonition">
+<p class="admonition-title">Answer</p>
+<p>Mechanical production term: <span class="math notranslate nohighlight">\(-\overline{u'w'}\pafg{\overline{u}}{z}\)</span>; <span class="math notranslate nohighlight">\(\overline{u'w'}\)</span> can be related to <span class="math notranslate nohighlight">\(u_*\)</span> by using first-order closure (<span class="math notranslate nohighlight">\(K\)</span>-theory):</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\overline{u'w'} &amp;= - \kappa z u_* \pafg{\overline{u}}{z} \\
+  &amp;= - \kappa z u_* \pafg{}{z}\left(\frac{u_*}{\kappa}{\rm ln}\frac{z}{z_0}\right)\\
+  &amp;= - \kappa z u_* \frac{u_*}{\kappa} \frac{1}{z}\\
+  &amp;= - {u_*}^2 .
+\end{split}\]</div>
+<p>Therefore, the mechanical production term is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+P &amp;= - \overline{u'w'}\pafg{\overline{u}}{z} \\
+  &amp;= {u_*}^2 \frac{u_*}{\kappa} \frac{1}{z}
+  &amp;= \frac{{u_*}^3}{\kappa z}
+\end{split}\]</div>
+<p>Since <span class="math notranslate nohighlight">\(\kappa=0.4\)</span> and <span class="math notranslate nohighlight">\(u_*=0.3 \rm \, m\ s^{-1}\)</span>, P(2 m) = <span class="math notranslate nohighlight">\(3.375\cdot 10^{-2}\rm\,m^2\,s^{-3}\)</span> and P(10 m) = <span class="math notranslate nohighlight">\(6.75\cdot 10^{-3}\rm\,m^2\,s^{-3}\)</span>.</p>
+<p>There is production! Shear does not destroy turbulence.</p>
+</div>
+<p>b) Calculate the buoyancy term. Under these conditions, is it a production or destruction term?</p>
+<div class="important dropdown admonition">
+<p class="admonition-title">Answer</p>
+<p>Buoyancy term: <span class="math notranslate nohighlight">\(\frac{g}{\theta_v}\overline{g'\theta_v'}\)</span>.</p>
+<p>We assume there’s no moist, so <span class="math notranslate nohighlight">\(\theta_v=\theta\)</span> and <span class="math notranslate nohighlight">\(\theta \approx T + \gamma_d z\)</span>.
+<span class="math notranslate nohighlight">\(\gamma_d = \frac{g}{c_p} = 9.8 \cdot 10^{-3}\rm\,K\ m^{-1}\)</span>.
+Even at 10 <span class="math notranslate nohighlight">\(m\)</span> height, <span class="math notranslate nohighlight">\(\theta\)</span> and <span class="math notranslate nohighlight">\(T\)</span> differ less than <span class="math notranslate nohighlight">\(0.1\rm\,K\)</span>, so <span class="math notranslate nohighlight">\(\theta_v = 298\rm\,K\)</span>.
+Therefore, the buoyancy term is <span class="math notranslate nohighlight">\(1.64 \cdot 10^{-3}\rm\,m^2\,s^{-3}\)</span> at both heights.</p>
+<p>Positive buoyancy flux leads to a production term.</p>
+</div>
+</section>
+<section id="chapter3-exercise3">
+<span id="id3"></span><h2><a class="headerlink" href="#chapter3-exercise3" title="Permalink to this headline">#</a></h2>
+<p>From steady state and in case one can neglect the turbulent transport and advection terms,
+the turbulent kinetic energy (E) equation reduces to</p>
+<div class="math notranslate nohighlight">
+\[
+0~=-\overline{u_i'u_j'}\pafg{\overline{u_i}}{x_j}+
+\frac{g}{\theta_o}\overline{w'\theta_v'}-\epsilon
+\]</div>
+<p>We can express (parameterize) the momentum flux, buoyancy flux (virtual temperature flux) as a function of
+the mean gradients of wind and virtual potential temperature as:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\overline{u_i'u_j'}~&amp;=~-K_m \left (\pafg{\overline u_i}{x_j}+\pafg{\overline u_j}{x_i} \right)\\
+\overline{w'\theta_v'}~&amp;=~-K_h \pafg{\overline\theta_v}{z},
+\end{split}\]</div>
+<p>and the dissipation of TKE as</p>
+<div class="math notranslate nohighlight">
+\[
+\epsilon~=~c_\epsilon E^{3/2} l^{-1},
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(c_\epsilon\)</span> is a constant and <span class="math notranslate nohighlight">\(l\)</span> is a characteristic length scale.</p>
+<div class="tip dropdown admonition hint">
+<p class="admonition-title">Hint</p>
+<p>First, let’s simplify the turbulent kinetic energy equation to the one stated in the exercise.</p>
+<div class="math notranslate nohighlight">
+\[
+\underbrace{\gemafg{e}{t}}_{\rm Tendency} = \underbrace{\delta_{i3} \frac{g}{\overline{\theta_v}} \overline{u_i'\theta_v'}}_{\rm Buoyancy} - \underbrace{\overline{u_i'u_j'}\gemafg{u_i}{x_j}}_{\rm Shear}-\underbrace{\pafg{}{x_i}\overline{u_i'e}}_{\rm Turbulent\ transport} - \underbrace{\frac{1}{\rho}\pafg{}{x_i}\overline{u_i'p'}}_{\rm Pressure\ correlation}-\underbrace{\epsilon}_{\rm Viscous\ dissipation} .
+\]</div>
+<p><span class="math notranslate nohighlight">\(\delta_{i3}\)</span> is 0 for <span class="math notranslate nohighlight">\(i \neq 3\)</span>, so <span class="math notranslate nohighlight">\(\delta_{i3} \overline{u_i'\theta_v'}\)</span> becomes <span class="math notranslate nohighlight">\(\overline{w'\theta_v'}\)</span>.
+Since energy remains conserved by transport, we ignore those terms. Therefore <span class="math notranslate nohighlight">\(\frac{1}{\rho}\pafg{}{x_i}\overline{u_i'p'} \to 0\)</span> and <span class="math notranslate nohighlight">\(\pafg{}{x_i}\overline{u_i'e} \to 0\)</span>. In the steady state <span class="math notranslate nohighlight">\(\gemafg{e}{t} = 0\)</span>, so</p>
+<div class="math notranslate nohighlight">
+\[
+0 = - \overline{u_i'u_j'}\gemafg{u_i}{x_j} + \frac{g}{\overline{\theta_v}} \overline{w'\theta_v'} - \epsilon
+\]</div>
+</div>
+<p>a) If we assume that the exchange coefficient (K) can be written as the product
+of a length and a velocity scale (<span class="math notranslate nohighlight">\(K_{m,h}=c_{m,h}lE^{1/2}\)</span>). Solve the TKE in terms
+of <span class="math notranslate nohighlight">\(l\)</span>, the deformation tensor and the gradient Richardson number.</p>
+<div class="tip dropdown admonition hint">
+<p class="admonition-title">Hint</p>
+<p>In other words, the question is: find turbulent kinetic energy, <span class="math notranslate nohighlight">\(E\)</span>, as a function of constants (<span class="math notranslate nohighlight">\(c_m\)</span>, <span class="math notranslate nohighlight">\(c_h\)</span> and <span class="math notranslate nohighlight">\(c_{\epsilon}\)</span>), the characteristic length scale, <span class="math notranslate nohighlight">\(l\)</span>, the gradient Richardson number, <span class="math notranslate nohighlight">\(Ri_g\)</span>, and the deformation tensor, <span class="math notranslate nohighlight">\(\gemafg{u_i}{x_j}+\gemafg{u_j}{x_i}\)</span>.</p>
+</div>
+<div class="important dropdown admonition">
+<p class="admonition-title">Answer</p>
+<p>To solve, fill up the given relations for <span class="math notranslate nohighlight">\(\overline{u_i'u_j'}\)</span>, <span class="math notranslate nohighlight">\(\overline{w'\theta_v'}\)</span>, <span class="math notranslate nohighlight">\(\epsilon\)</span>, <span class="math notranslate nohighlight">\(K_m\)</span> and <span class="math notranslate nohighlight">\(K_h\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+0 &amp;= \left(c_m l E^{\frac{1}{2}}\right) \left(\gemafg{u_i}{x_j}+\gemafg{u_j}{x_i}\right) \gemafg{u_i}{x_j} - \frac{g}{\theta_v} \left(c_h l E^{\frac{1}{2}}\right) \gemafg{\theta_v}{z} - c_{\epsilon} E^{\frac{3}{2} l^{-1}}\\
+\frac{c_{\epsilon}}{l^2} E &amp;= c_m \left(\gemafg{u_i}{x_j}+\gemafg{u_j}{x_i}\right) \gemafg{u_i}{x_j} - \frac{g}{\theta_v} c_h \gemafg{\theta_v}{z} \\
+&amp;= c_m \left(\gemafg{u_i}{x_j}+\gemafg{u_j}{x_i}\right) \gemafg{u_i}{x_j} \left(1-\frac{\frac{g}{\theta_v}c_h \gemafg{\theta_v}{z}}{c_m \left(\gemafg{u_i}{x_j}+\gemafg{u_j}{x_i}\right) \gemafg{u_i}{x_j}}\right) .
+\end{split}\]</div>
+<p>The gradient Richardson number is given by</p>
+<div class="math notranslate nohighlight">
+\[
+Ri_g = \frac{\frac{g}{\overline{\theta_v}}\gemafg{\theta_v}{z}}{\left(\gemafg{U}{z}\right)^2+\left(\gemafg{V}{z}\right)^2} .
+\]</div>
+<p>Now, we again make the assumption of horizontal homogeneity and absence of subsidence, which means that for every arbitrary scalar, <span class="math notranslate nohighlight">\(\chi\)</span>, it holds that <span class="math notranslate nohighlight">\(\gemafg{\chi}{x} = \gemafg{\chi}{y} = 0\)</span> and <span class="math notranslate nohighlight">\(\overline{w}=0\)</span>.</p>
+<p>Because of the multiplication by <span class="math notranslate nohighlight">\(\gemafg{u_i}{x_j}\)</span>, all terms with <span class="math notranslate nohighlight">\(j=1\)</span> or <span class="math notranslate nohighlight">\(j=2\)</span>, can be ignored. The total TKE equation becomes</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\frac{c_{\epsilon}}{l^2} E &amp;= c_m \left(\gemafg{u_i}{z}+\gemafg{w}{x_i}\right) \gemafg{u_i}{z} \left(1-\frac{\frac{g}{\theta_v}c_h \gemafg{\theta_v}{z}}{c_m \left(\gemafg{u_i}{z}+\gemafg{w}{x_i}\right) \gemafg{u_i}{z}}\right)\\
+ &amp;= c_m \gemafg{u_i}{z} \gemafg{u_i}{z} \left(1-\frac{\frac{g}{\theta_v}c_h \gemafg{\theta_v}{z}}{c_m \gemafg{u_i}{z} \gemafg{u_i}{z}}\right) . 
+\end{split}\]</div>
+<p>So, in the end <span class="math notranslate nohighlight">\(E = \frac{c_m}{c_{\epsilon}} l^2 \left(\gemafg{u_i}{z}\right)^2 \left(1-\frac{c_h}{c_m} Ri_g\right)\)</span>.</p>
+<p>Note that, since <span class="math notranslate nohighlight">\(j=3\)</span> for the whole equation, the corresponding deformation tensor is <span class="math notranslate nohighlight">\(\gemafg{u_i}{z}\)</span>.</p>
+</div>
+<p>b) Find the corresponding expression for <span class="math notranslate nohighlight">\(K_{m,h}\)</span></p>
+<div class="important dropdown admonition">
+<p class="admonition-title">Answer</p>
+<p>Since <span class="math notranslate nohighlight">\(K_{m,h} = c_{m,h} l E^{\frac{1}{2}}\)</span>,</p>
+<p><span class="math notranslate nohighlight">\(K_{m,h} = c_{m,h} l^2 \left|\gemafg{u_i}{z}\right|\sqrt{\frac{c_m}{c_{\epsilon}}\left(1-\frac{c_h}{c_m} Ri_g\right)}\)</span></p>
+</div>
+<p>c) What is the value of the critical Richardson number if <span class="math notranslate nohighlight">\(c_h/c_m \approx 3\)</span>?</p>
+<div class="important dropdown admonition">
+<p class="admonition-title">Answer</p>
+<p>At the critical Richardson number, the generation of TKE by shear is at least equal to destruction by buoyancy. Since there is dissipation, the corresponding steady state TKE is equal to 0.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+ \frac{c_m}{c_{\epsilon}} l^2 \left(\gemafg{u_i}{z}\right)^2 \left(1-\frac{c_h}{c_m} Ri_c\right) &amp;= 0\\
+ 1-\frac{c_h}{c_m} Ri_c &amp;= 0\\
+ Ri_c &amp;= \frac{c_m}{c_h}
+\end{split}\]</div>
+<p>Therefore, <span class="math notranslate nohighlight">\(Ri_c = \frac{1}{3}\)</span></p>
+</div>
+</section>
+<section id="chapter3-exercise4">
+<span id="id4"></span><h2><a class="headerlink" href="#chapter3-exercise4" title="Permalink to this headline">#</a></h2>
+<p>From the reduced TKE equation (exercise 3)</p>
+<div class="math notranslate nohighlight">
+\[
+0~=\underbrace{-\overline{u_i'u_j'}\pafg{\overline{u_i}}{x_j}}_{S}+
+\underbrace{\frac{g}{\theta_o}\overline{w'\theta_v'}}_{B}-\epsilon,
+\]</div>
+<p>and assuming no subsidence and a horizontal wind blowing only in
+the x-direction (<span class="math notranslate nohighlight">\(v = 0\)</span>, assume the vertical profile <span class="math notranslate nohighlight">\(u(z)\)</span>
+similar to that in exercise 2), deduce if the buoyancy (B) and
+shear (S) terms are production or loss terms under the following
+conditions:</p>
+<p>a) unstable condition</p>
+<p>b) stable condition</p>
+<p>Explain your answer.</p>
+<div class="tip dropdown admonition hint">
+<p class="admonition-title">Hint</p>
+<div class="math notranslate nohighlight">
+\[
+0 = \underbrace{- \overline{u_i'u_j'}\gemafg{u_i}{x_j}}_{\rm S} + \underbrace{\frac{g}{\overline{\theta_v}} \overline{w'\theta_v'}}_{\rm B} - \epsilon
+\]</div>
+<p>With horizontal homogeneity and no subsidence, <span class="math notranslate nohighlight">\(\overline{w}=0\)</span>. Also <span class="math notranslate nohighlight">\(\overline v=0\)</span>, so <span class="math notranslate nohighlight">\(i=1\)</span>. Due to horizontal homogeneity <span class="math notranslate nohighlight">\(\gemafg{u}{x}=\gemafg{u}{y}=0\)</span>, so <span class="math notranslate nohighlight">\(j=3\)</span> and</p>
+<div class="math notranslate nohighlight">
+\[
+0 = \underbrace{- \overline{u'w'}\gemafg{u}{z}}_{\rm S} + \underbrace{\frac{g}{\overline{\theta_v}} \overline{w'\theta_v'}}_{\rm B} - \epsilon
+\]</div>
+<p>In this exercise, specific humidity is ignored, so <span class="math notranslate nohighlight">\(\theta_v = \theta\)</span>.</p>
+</div>
+<div class="important dropdown admonition">
+<p class="admonition-title">Answer</p>
+<figure class="align-default" id="fig3a">
+<img alt="../_images/exercise3_4_a.png" src="../_images/exercise3_4_a.png" />
+<figcaption>
+<p><span class="caption-text">Vertical profiles of <span class="math notranslate nohighlight">\(\theta\)</span> (a) and <span class="math notranslate nohighlight">\(U\)</span> (b) under unstable conditions</span><a class="headerlink" href="#fig3a" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The unstable condition is depicted in <code class="xref std std-numref docutils literal notranslate"><span class="pre">fig3a</span></code>.
+It is shown that <span class="math notranslate nohighlight">\(\overline{w'\theta'}&gt;0\)</span> and <span class="math notranslate nohighlight">\(\overline{u'w'}&lt;0\)</span>.
+Since <span class="math notranslate nohighlight">\(\frac{g}{\overline{\theta}} &gt; 0\)</span> and <span class="math notranslate nohighlight">\(\gemafg{u}{z} &gt; 0\)</span>, this leads to <span class="math notranslate nohighlight">\(B&gt;0\)</span> and <span class="math notranslate nohighlight">\(S&gt;0\)</span>.
+Both contributions are production terms.</p>
+<figure class="align-default" id="fig3b">
+<img alt="../_images/exercise3_4_b.png" src="../_images/exercise3_4_b.png" />
+<figcaption>
+<p><span class="caption-text">Vertical profiles of <span class="math notranslate nohighlight">\(\theta\)</span> (a) and <span class="math notranslate nohighlight">\(U\)</span> (b) under stable conditions</span><a class="headerlink" href="#fig3b" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The stable condition is depicted in <code class="xref std std-numref docutils literal notranslate"><span class="pre">fig3b</span></code>.
+It is shown that <span class="math notranslate nohighlight">\(\overline{w'\theta'}&lt;0\)</span> and <span class="math notranslate nohighlight">\(\overline{u'w'}&lt;0\)</span>.
+Since <span class="math notranslate nohighlight">\(\frac{g}{\theta} &gt; 0\)</span> and <span class="math notranslate nohighlight">\(\gemafg{u}{z} &gt; 0\)</span>, this leads to <span class="math notranslate nohighlight">\(B&lt;0\)</span> and <span class="math notranslate nohighlight">\(S&gt;0\)</span>.
+Shear remains a production terms, but buoyancy leads to destruction of TKE.</p>
+</div>
+</section>
+<section id="id5">
+<h2><a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h2>
+<p>During the 20th July, the sun set at Cabauw at 20 UTC. The day
+was clear (cloudless).</p>
+<p>a) Sketch in a plot the evolution on time (between 18 and 22 UTC) of
+the shear, the buoyancy contribution terms and the flux Richardson number. Discuss it.</p>
+<div class="important dropdown admonition">
+<p class="admonition-title">Answer</p>
+<figure class="align-default" id="fig5">
+<img alt="../_images/exercise3_5.png" src="../_images/exercise3_5.png" />
+<figcaption>
+<p><span class="caption-text">Buoyancy (B), shear (S), and the Richardson number (Ri) as a function of time.</span><a class="headerlink" href="#fig5" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p><code class="xref std std-numref docutils literal notranslate"><span class="pre">fig5</span></code> contains the sketch.
+The buoyancy decreases until sunset.
+After sunset, the earth’s surface is still warmed up, but begins to cool, which causes a delay in the moment that buoyancy is zero.
+After this point, the earth’s surface keeps cooling by longwave radiation.
+Consequently, stratification of the flow sets in, <span class="math notranslate nohighlight">\(\gemafg{\theta}{z}&gt;0\)</span>, and the heat flux becomes negative, corresponding to negative buoyancy.</p>
+<p>When the flow becomes more laminar / less turbulent, the shear decreases.</p>
+<p>During day (and the start of the afternoon), the Richardson number is negative, which corresponds to a turbulent flow.
+After sunset, the Richardson number increases. When  <span class="math notranslate nohighlight">\({\rm Ri &gt; Ri}_T\)</span>, the flow becomes laminar.</p>
+</div>
+<p>b) The prognostic equation of the Turbulent Kinetic Energy equation (TKE=<span class="math notranslate nohighlight">\(e\)</span>) reads:</p>
+<div class="math notranslate nohighlight">
+\[
+\pafg{e}{t}=-\overline{u'w'}\pafg{\overline{u}}{z}+
+\frac{g}{\overline{\theta_v}}\overline{w'\theta_v'}- \pafg{\overline{w'e}}{z}-\frac{1}{\overline{\rho}}\pafg{\overline{w'p'}}{z}-\epsilon.
+\]</div>
+<p>At 22 UTC, the only important term in the right hand side of the prognostic Turbulent Kinetic Energy
+equation is the dissipation term.
+The dissipation term is generally parameterized as:</p>
+<div class="math notranslate nohighlight">
+\[
+\epsilon = C \frac{e^{3/2}}{h}
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(C\)</span> is a constant and <span class="math notranslate nohighlight">\(h\)</span> is the boundary layer height.</p>
+<p>Find an expression of the evolution on time of the turbulent kinetic
+energy. Assume that <span class="math notranslate nohighlight">\(h\)</span> does not change on time and the initial condition is
+<span class="math notranslate nohighlight">\(e=e_o\)</span> at <span class="math notranslate nohighlight">\(t=0\)</span>.</p>
+<div class="important dropdown admonition">
+<p class="admonition-title">Answer</p>
+<p>If only dissipation is important, the total equation becomes</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\pafg{e}{t} &amp;= -\epsilon\\
+ &amp;= -C\frac{e^\frac{3}{2}}{h}\\
+e^{-\frac{3}{2}} \partial e &amp;= -\frac{C}{h}\partial t
+\end{split}\]</div>
+<p>Since <span class="math notranslate nohighlight">\(e\)</span> is only dependent on <span class="math notranslate nohighlight">\(t\)</span>, this can be written as</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+e^{-\frac{3}{2}} {\rm d}e &amp;= -\frac{C}{h}{\rm d}t \\
+\int_{e\left(t_1\right)}^{e\left(t_2\right)}{e^{-\frac{3}{2}} {\rm d}e} &amp;= -\int_{t_1}^{t_2}{\frac{C}{h}{\rm d}t} \\
+\left[-2 e^{-\frac{1}{2}}\right]_{e\left(t_1\right)}^{e\left(t_2\right)} &amp;= -\frac{C}{h} \left[t\right]_{t_1}^{t_2}
+\end{split}\]</div>
+<p>Now, substituting <span class="math notranslate nohighlight">\(t_1=0\)</span>, <span class="math notranslate nohighlight">\(t_2=t\)</span>, <span class="math notranslate nohighlight">\(e\left(t_1\right)=e_0\)</span> and <span class="math notranslate nohighlight">\(e\left(t_2\right)=e\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+-2\left(e^{-\frac{1}{2}} - e_0^{-\frac{1}{2}}\right) &amp;= -\frac{C}{h}t\\
+e^{-\frac{1}{2}} &amp;= e_0^{-\frac{1}{2}} + \frac{C\,t}{2h}\\
+e^{\frac{1}{2}} &amp;= \frac{1}{e_0^{-\frac{1}{2}} + \frac{C\,t}{2h}}
+\end{split}\]</div>
+<p>This results in <span class="math notranslate nohighlight">\(e=\left(\dfrac{1}{\dfrac{1}{\sqrt{e_0}}+\dfrac{C\,t}{2 h}}\right)^2\)</span></p>
+</div>
+<p>c) Is the turbulent kinetic energy being produced or destroyed?</p>
+<div class="important dropdown admonition">
+<p class="admonition-title">Answer</p>
+<p>If the only relevant term is dissipation, the turbulent kinetic energy is being destroyed.</p>
+</div>
+</section>
+<section id="id6">
+<h2><a class="headerlink" href="#id6" title="Permalink to this headline">#</a></h2>
+<p>Given the following draw of the evolution of the atmospheric
+Boundary Layer, fill in the table with the most appropriate labels
+(some examples have been already inserted) .</p>
+<figure class="align-default" id="fig31">
+<img alt="../_images/figset31.png" src="../_images/figset31.png" />
+</figure>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Region</strong></p></th>
+<th class="head"><p><strong>Name</strong></p></th>
+<th class="head"><p><strong>Lapse rate</strong></p></th>
+<th class="head"><p><strong>Heat Flux</strong></p></th>
+<th class="head"><p><strong>Static stability</strong></p></th>
+<th class="head"><p><strong>Turbulent?</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>A</p></td>
+<td><p></p></td>
+<td><p>Superadiabatic</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>B</p></td>
+<td><p>Mixed Layer</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>C</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>0</p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>D</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>Sporadic</p></td>
+</tr>
+<tr class="row-even"><td><p>E</p></td>
+<td><p></p></td>
+<td><p>Subadiabatic</p></td>
+<td><p></p></td>
+<td><p>Stable</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>F</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>Unknown</p></td>
+</tr>
+</tbody>
+</table>
+<div class="important dropdown admonition">
+<p class="admonition-title">Answer</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Region</strong></p></th>
+<th class="head"><p><strong>Name</strong></p></th>
+<th class="head"><p><strong>Lapse rate</strong></p></th>
+<th class="head"><p><strong>Heat Flux</strong></p></th>
+<th class="head"><p><strong>Static stability</strong></p></th>
+<th class="head"><p><strong>Turbulent?</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>A</p></td>
+<td><p>Surface Layer</p></td>
+<td><p>Superadiabatic</p></td>
+<td><p>&gt;0</p></td>
+<td><p>Unstable</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="row-odd"><td><p>B</p></td>
+<td><p>Mixed Layer</p></td>
+<td><p>Adiabatic</p></td>
+<td><p><span class="math notranslate nohighlight">\(\begin{cases} &gt;0 \\ &lt;0 \end{cases} \)</span></p></td>
+<td><p>Neutral</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="row-even"><td><p>C</p></td>
+<td><p>Residual layer</p></td>
+<td><p>Adiabatic</p></td>
+<td><p>0</p></td>
+<td><p>Neutral</p></td>
+<td><p>Sporadic</p></td>
+</tr>
+<tr class="row-odd"><td><p>D</p></td>
+<td><p>Nocturnal boundary layer</p></td>
+<td><p>Subadiabatic</p></td>
+<td><p>&lt;0</p></td>
+<td><p>Stable</p></td>
+<td><p>Sporadic</p></td>
+</tr>
+<tr class="row-even"><td><p>E</p></td>
+<td><p>Capping inversion</p></td>
+<td><p>Subadiabatic</p></td>
+<td><p>&lt;0</p></td>
+<td><p>Stable</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="row-odd"><td><p>F</p></td>
+<td><p>Free atmosphere</p></td>
+<td><p>Subadiabatic</p></td>
+<td><p>0</p></td>
+<td><p>Stable</p></td>
+<td><p>Unknown</p></td>
+</tr>
+</tbody>
+</table>
+<p>Superadiabatic: The temperature decreases more with height compared to the case of adiabatic cooling.</p>
+<p>Subadiabatic: The temperature decreases less with height compared to the case of adiabatic cooling.</p>
+<p>In the mixed layer, the heat flux decreases with height.
+It’s positive in the lower <span class="math notranslate nohighlight">\(\frac{5}{6}\)</span> part of the boundary layer and negative in the rest.</p>
+<p>In the residual layer and in the nocturnal boundary layer, turbulence is generated by shear.
+In the free troposphere as well, but less frequent due to the stronger stability.</p>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./exercises"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Chiel van Heerwaarden and Mirjam Tijhuis<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

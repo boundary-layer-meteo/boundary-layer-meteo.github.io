@@ -1,0 +1,980 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Exercises chapter 7 &#8212; Boundary-Layer Meteorology</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Boundary-Layer Meteorology</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Welcome
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Lectures
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/introduction.html">
+   1. Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/wind.html">
+   2. Wind
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/turbulence.html">
+   3. Turbulence
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/temperature.html">
+   4. Temperature and stability
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Pen-and-paper exercises
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="week1.html">
+   5. Exercises week 1
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fexercises/exercises7.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/exercises/exercises7.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id5">
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Exercises chapter 7</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id5">
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="exercises-chapter-7">
+<h1>Exercises chapter 7<a class="headerlink" href="#exercises-chapter-7" title="Permalink to this headline">#</a></h1>
+<p><span class="math notranslate nohighlight">\(\def\pafg#1#2{\dfrac{\partial #1}{\partial #2}}\)</span>
+<span class="math notranslate nohighlight">\(\def\afg#1#2{\dfrac{{\rm d} #1}{{\rm d} #2}}\)</span>
+<span class="math notranslate nohighlight">\(\def\gemafg#1#2{\pafg{\overline{#1}}{#2}}\)</span></p>
+<section id="id1">
+<h2><a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
+<p>The figures below show the vertical profiles of potential temperature and wind speed
+observed at the Southern Great Plains in USA during the night of 20th June 1997. By analyzing them
+we can determine some of the main characteristics of the nocturnal boundary layer.</p>
+<figure class="align-default" id="fig-73">
+<img alt="../_images/figset73.png" src="../_images/figset73.png" />
+</figure>
+<figure class="align-default" id="fig-74">
+<img alt="../_images/figset74.png" src="../_images/figset74.png" />
+</figure>
+<p>a) Describe both vertical profiles.</p>
+<div class="important dropdown admonition">
+<p class="admonition-title">Answer</p>
+<p>Temperature profile: This is a stable boundary layer that has a height of approximately 750 m.
+Above this height, the (slightly less stable) free troposphere is present.</p>
+<p>Wind speed profile: A low level jet is present between 200 and 400 m height.
+Ignoring this jet, the wind speed increases with height until 950 m.
+Above this height, the wind speed decreases with height.</p>
+</div>
+<p>b) Determine the boundary layer height according the potential temperature profile
+and the wind speed. Discuss your criteria and the estimation of the height.</p>
+<div class="important dropdown admonition">
+<p class="admonition-title">Answer</p>
+<p>Using the potential temperature gradient, there are 2 criteria.</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\pafg{\theta}{z}=0\)</span>: This only occurs at the top of the profile</p></li>
+<li><p>A small <span class="math notranslate nohighlight">\(\pafg{\theta}{z}\)</span>: This is valid at <span class="math notranslate nohighlight">\(h=1000\rm\,m\)</span> and above.</p></li>
+</ul>
+<p>For the wind speed, the location of the low level jet is used. The maximum wind speed in this jet is at a height of 250 m.</p>
+</div>
+<p>c) Calculate the Brunt-Väisälä frequency. By inverting
+this frequency, one obtains the period of the oscillation of a parcel in a statically stable
+environment related to the presence of gravity (buoyancy) waves.
+Discuss the dependence of this oscillation period as a function of the potential
+temperature gradient.</p>
+<div class="important dropdown admonition">
+<p class="admonition-title">Answer</p>
+<p>The oscillation of an air parcel in a statically stable environment is like a mass that is attached to a spring.
+In this case, an air parcel that is displaced from its original position experiences a force to return to this position,
+proportional to both the displacement distance and the potential temperature gradient.
+Therefore, in situations characterized by a stronger gradient, the restoring force is larger.
+This leads to higher accelerations and, consequently, higher frequencies.
+Therefore, more stable environments should result in faster oscillations, which are quantified by the Brunt-Väisälä frequencies.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+N &amp;= \sqrt{\frac{g}{\theta_v}\gemafg{\theta_v}{z}}\\
+g&amp;= 9.81\rm\,m\,s^{-2}\\
+\theta_v &amp;\approx 300\rm\,K\\
+\gemafg{\theta_v}{z} &amp;= \frac{20\rm\,K}{1600\rm\,m}=12.5\rm\,K\,km^{-1}
+\end{split}\]</div>
+<p>This results in <span class="math notranslate nohighlight">\(N=2.02\rm\,s^{-1}\)</span></p>
+<p>This frequency corresponds to a period of 49.5 s.</p>
+</div>
+<p>d) During the night, the friction velocity and the sensible heat flux were almost constant on time with
+the values 0.6 <span class="math notranslate nohighlight">\(ms^{-1}\)</span> and -50 <span class="math notranslate nohighlight">\(Wm^{-2}\)</span>, respectively. Calculate the flux Richardson number. Could
+we characterize this nocturnal boundary layer as weakly or strongly stable?
+What is the role of buoyancy and shear in this nocturnal boundary layer?</p>
+<div class="important dropdown admonition">
+<p class="admonition-title">Answer</p>
+<div class="math notranslate nohighlight">
+\[
+{\rm Ri}_f = \frac{\frac{g}{\theta_v}\overline{w'\theta_v'}}{\overline{u'w'}\gemafg{u}{z}}
+\]</div>
+<p>Assuming <span class="math notranslate nohighlight">\(\overline{w'\theta_v'}=\overline{w'\theta'}\)</span> and converting the sensible heat flux to kinematic heat flux,
+results in <span class="math notranslate nohighlight">\(\overline{w'\theta_v'}=-0.0406\rm\,K\,m\,s^{-1}\)</span>.
+Furthermore,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+g&amp;= 9.81\rm\,m\,s^{-2}\\
+\theta_v &amp;\approx 300\rm\,K\\
+\overline{u'w'} &amp;= - u_*^2 = -0.36\rm\,m^2\,s^{-2}\\
+\gemafg{u}{z} &amp;= \frac{15\rm\,m\,s^{-1} - 0\,m\,s^{-1}}{300\rm\,m-0\,m} = 0.05\rm\,s^{-1} 
+\end{split}\]</div>
+<p>Substituting these values results in <span class="math notranslate nohighlight">\({\rm Ri}_f = 0.074\)</span></p>
+<p>This nocturnal boundary layer is weakly stable. The negative buoyancy is not strong enough to fully suppress the turbulence that is generated by shear.</p>
+</div>
+</section>
+<section id="id2">
+<h2><a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h2>
+<p>These vertical profiles for potential temperature were measured in USA
+at 24.07 and 04.02 local time during the field experiment CASES-99.
+Focusing mainly on the sounding observations:</p>
+<figure class="align-default" id="fig-71">
+<img alt="../_images/figset71.png" src="../_images/figset71.png" />
+<figcaption>
+<p><span class="caption-text">Potential temperature profile at 24.07 LT.</span><a class="headerlink" href="#fig-71" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="fig-72">
+<img alt="../_images/figset72.png" src="../_images/figset72.png" />
+<figcaption>
+<p><span class="caption-text">Potential temperature profile at 04.02 LT.</span><a class="headerlink" href="#fig-72" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Describe both profiles of the potential temperature. Estimate the
+evolution of the boundary layer height and the gradient of the potential
+temperature from the surface to the top of the boundary layer.</p>
+<div class="important dropdown admonition">
+<p class="admonition-title">Answer</p>
+<p>Both profiles are stable boundary layers.</p>
+<p><code class="xref std std-numref docutils literal notranslate"><span class="pre">fig:71</span></code> shows a boundary layer with a height of 140 m. In this layer, the potential temperature gradient, <span class="math notranslate nohighlight">\(\gemafg{\theta}{z}\)</span>, is equal to 57 K km<span class="math notranslate nohighlight">\(^{-1}\)</span>.</p>
+<p><code class="xref std std-numref docutils literal notranslate"><span class="pre">fig:72</span></code> shows a boundary layer with a height of 180 m. In this layer, the potential temperature gradient is equal to 45 K km<span class="math notranslate nohighlight">\(^{-1}\)</span>.</p>
+<p>The evolution of the boundary layer height is 40 m over 4 hours, so <span class="math notranslate nohighlight">\(\pafg{h}{t}=10\rm\,m\,hr^{-1}\)</span>.</p>
+<p>The evolution of the gradient of the potential temperature is equal to <span class="math notranslate nohighlight">\(-12\rm\,K\,km^{-1}\)</span> over 4 hours, so <span class="math notranslate nohighlight">\(\pafg{}{t}\gemafg{\theta}{z}=-3\rm\,K\,km^{-1}\,hr^{-1}\)</span></p>
+</div>
+</section>
+<section id="id3">
+<h2><a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h2>
+<p>The one-dimensional equation that governs the heat budget during stable
+conditions reads</p>
+<div class="math notranslate nohighlight">
+\[
+\pafg{\overline{\theta}}{t}~=~-~\pafg{\overline{w'\theta'}}{z}~-~\frac{1}{\rho c_p}\pafg{Q^*}{z}
+\]</div>
+<p>The longwave radiative term <span class="math notranslate nohighlight">\(\frac{1}{\rho c_p}\pafg{Q^*}{z}\)</span> can be calculated using
+a bulk approach. <span class="math notranslate nohighlight">\(Q^*\)</span> is the the new upward longwave radiative flux.
+In short, we can define three layers: surface (s), middle (m) and top (t)
+that are radiatively active according to the Stefan-Boltzmann expression:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+L &amp;= \epsilon_{IR}\sigma_{SB} T^4 \\
+\sigma_{SB}&amp;=5.67~10^{-8}~\frac{W}{m^2K^4},
+\end{split}\]</div>
+<p>where L is the generic expression for the longwave radiative cooling.</p>
+<div class="tip dropdown admonition hint">
+<p class="admonition-title">Hint</p>
+<p>The situation that is described is:</p>
+<figure class="align-default" id="fig-ans-73">
+<img alt="../_images/exercise7_3.png" src="../_images/exercise7_3.png" />
+</figure>
+<p>There is upward longwave radiation from the surface to the middle layer and from the middle layer to the top layer
+and there is downward longwave radiation from the top layer to the middle layer and from the middle layer to the surface.</p>
+</div>
+<p>a) Derive a bulk expression of the longwave radiative divergence for these three layers.</p>
+<div class="important dropdown admonition">
+<p class="admonition-title">Answer</p>
+<p>The radiative divergence is <span class="math notranslate nohighlight">\(\afg{Q^*_{\rm tot}}{z}\)</span>, where <span class="math notranslate nohighlight">\(Q^*_{\rm tot}\)</span> is the net upward longwave radiation.
+In the case of the bulk expression, assuming finite differences, this becomes</p>
+<div class="math notranslate nohighlight">
+\[
+{\rm Radiative\,divergence} = \frac{\Delta Q^*_{\rm tot}}{\Delta z}
+\]</div>
+<p>This is evaluated between the two interfaces (the lower is between the surface and the middle layer and the upper is between the middle layer and the top layer).
+<span class="math notranslate nohighlight">\(\Delta Q^*_{\rm tot}\)</span> is the difference in <span class="math notranslate nohighlight">\(Q^*_{\rm tot}\)</span> between these two interfaces and <span class="math notranslate nohighlight">\(\Delta z\)</span> the height over which this bulk approach is applied.
+Since <span class="math notranslate nohighlight">\(Q^*\)</span> is defined as upward radiation we can evaluate the values of net <span class="math notranslate nohighlight">\(Q^*\)</span> at the interfaces as</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+Q^*_{\rm interface\,1} &amp;= Q_{\rm Surface} - Q_{\rm Middle}\\
+                 &amp;= \epsilon_{\rm IR}\, \sigma_{\rm SB}\,T_{\rm Surface}^4 - \epsilon_{\rm IR}\, \sigma_{\rm SB}\,T_{\rm Middle}^4\\
+Q^*_{\rm interface\,2} &amp;= Q_{\rm Middle} - Q_{\rm Top}\\
+                 &amp;= \epsilon_{\rm IR}\, \sigma_{\rm SB}\,T_{\rm Middle}^4 - \epsilon_{\rm IR}\, \sigma_{\rm SB}\,T_{\rm Top}^4
+\end{split}\]</div>
+<p>Since <span class="math notranslate nohighlight">\(Q^*_{\rm tot} = Q^*_{\rm interface\,2} - Q^*_{\rm interface\,1}\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\Delta Q^*_{\rm tot}}{\Delta z} = \epsilon_{\rm IR}\, \sigma_{\rm SB}\,\frac{2 \,T_{\rm Middle}^4 - T_{\rm Top}^4 - T_{\rm Surface}^4}{\Delta z}
+\]</div>
+</div>
+<p>b) Assuming that the emissivity at these layers is equal (<span class="math notranslate nohighlight">\(\epsilon_{IR}=0.78\)</span>) and neglecting the divergence of the
+turbulent flux term, calculate the tendency term <span class="math notranslate nohighlight">\(\pafg{\overline{\theta}}{t}\)</span>, calculate the long wave
+radiative term if the potential temperature profile is linear and follows:</p>
+<div class="math notranslate nohighlight">
+\[
+\theta (z)~=~\theta (z_o)~+~0.2z.
+\]</div>
+<p>You can consider that the surface layer is at z<span class="math notranslate nohighlight">\(_o\)</span> m and <span class="math notranslate nohighlight">\(\theta (z_o)\)</span> K.
+The other layers middle and top are at 5 and 10 meters respectively. In consequence,
+the interfaces are approximately at 2.55 and 7.5 meters.</p>
+<div class="important dropdown admonition">
+<p class="admonition-title">Answer</p>
+<figure class="align-default" id="fig-ans-73b">
+<img alt="../_images/exercise7_3b.png" src="../_images/exercise7_3b.png" />
+<figcaption>
+<p><span class="caption-text">Vertical profiles of <span class="math notranslate nohighlight">\(\theta\)</span> (solid lines) and <span class="math notranslate nohighlight">\(T\)</span> (dashed lines) in red for exercise b (linear profile)
+and in blue for exercise c (logarithmic profile).</span><a class="headerlink" href="#fig-ans-73b" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>For this exercise, remember that <span class="math notranslate nohighlight">\(T = \theta-{10\rm\,K\,km^{-1}}\,z = T\left(z_0\right) + 0.19\,z\)</span> in SI units. Under these conditions,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\gemafg{\theta}{t} &amp;\approx - \frac{1}{\rho\,c_p} \frac{\Delta Q^*_{\rm tot}}{\Delta z}\\
+&amp;= \frac{\epsilon_{\rm IR}\, \sigma_{\rm SB}}{\rho\,c_p}\,\frac{T_{\rm Top}^4+T_{\rm Surface}^4-2 \,T_{\rm Middle}^4}{\Delta z}
+\end{split}\]</div>
+<p>The interfaces are located at 2.55 m and 7.5 m, so <span class="math notranslate nohighlight">\(\Delta z = 4.95\ \rm{m}\)</span>.</p>
+<div class="math notranslate nohighlight" id="equation-for-73temp1">
+<span class="eqno">()<a class="headerlink" href="#equation-for-73temp1" title="Permalink to this equation">#</a></span>\[
+T_{\rm Surface} \approx 292\rm\,K 
+\]</div>
+<div class="math notranslate nohighlight" id="equation-for-73temp2">
+<span class="eqno">()<a class="headerlink" href="#equation-for-73temp2" title="Permalink to this equation">#</a></span>\[
+T_{\rm Middle}  \approx 292.9\rm\,K 
+\]</div>
+<div class="math notranslate nohighlight" id="equation-for-73temp3">
+<span class="eqno">()<a class="headerlink" href="#equation-for-73temp3" title="Permalink to this equation">#</a></span>\[
+T_{\rm Top}     \approx 293.9\rm\,K 
+\]</div>
+<p><span class="math notranslate nohighlight">\(\rho\,c_p=1231\rm\,\frac{W\,m^{-2}}{K\,m\,s^{-1}}\)</span>, <span class="math notranslate nohighlight">\(\sigma_{\rm SB}=5.67\times 10^{-8}\rm\,W\,m^{-2}\,K^{-4}\)</span> and <span class="math notranslate nohighlight">\(\epsilon_{\rm IR} = 0.78\)</span>,
+so <span class="math notranslate nohighlight">\(\frac{\epsilon_{\rm IR}\, \sigma_{\rm SB}}{\rho\,c_p} = 3.59\times 10^{-11} \rm K^{-3}\,m\,s^{-1}\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[
+\gemafg{\theta}{t} = 8.15\times 10^{-5} \rm\,K\,s^{-1} = 0.29\,K\,hr^{-1}
+\]</div>
+<p>Note that using the rounded temperatures of Equations <a class="reference internal" href="#equation-for-73temp1">()</a>-<a class="reference internal" href="#equation-for-73temp3">()</a> results in wrong answers.
+This is due to the power of 4 of the temperature. In this case, the result would be off by a factor of 4!</p>
+</div>
+<p>c) Repeat now the calculation but assuming a logarithmic profile for the potential temperature that reads:</p>
+<div class="math notranslate nohighlight">
+\[
+\theta (z)~=~\theta (z_o)~+~\frac{\theta_*}{\kappa}ln\left(\frac{z}{z_o}\right).
+\]</div>
+<p>Use the following values to complete the expression: <span class="math notranslate nohighlight">\(\overline{w'\theta'}\)</span> = - 24 Wm<span class="math notranslate nohighlight">\(^{-2}\)</span>,
+u<span class="math notranslate nohighlight">\(_*\)</span>=0.1 m, z<span class="math notranslate nohighlight">\(_o\)</span>=0.1 m and von Karman constant equal to 0.4.
+Similar to (b), assume the surface layer at z<span class="math notranslate nohighlight">\(_o\)</span>=0.1 m and <span class="math notranslate nohighlight">\(\theta (z_o)\)</span>=292 K; and layers middle
+and top at 5 and 10 meters respectively.</p>
+<div class="important dropdown admonition">
+<p class="admonition-title">Answer</p>
+<p>Knowing that according to Monin-Obukhov scaling,</p>
+<div class="math notranslate nohighlight">
+\[
+\theta_* = - \frac{\overline{w'\theta'}}{u_*} = 0.195\rm\,K
+\]</div>
+<p>substituting the variables (and considering that <span class="math notranslate nohighlight">\(T = \theta-{10\rm\,K\,km^{-1}}\,z\)</span>) leads to</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+T_{\rm Surface} &amp;\approx 292\rm\,K\\
+T_{\rm Middle}  &amp;\approx 293.9\rm\,K\\
+T_{\rm Top}     &amp;\approx 294.1\rm\,K
+\end{split}\]</div>
+<p>The constants are equal to exercise b, so</p>
+<div class="math notranslate nohighlight">
+\[
+\gemafg{\theta}{t} = -1.14\times 10^{-3} \rm\,K\,s^{-1} = -4.1\,K\,hr^{-1}
+\]</div>
+</div>
+<p>d) Discuss your results from a perspective of the tendency of the temperature <span class="math notranslate nohighlight">\(\pafg{\overline{\theta}}{t}\)</span>.
+Calculate in K h<span class="math notranslate nohighlight">\(^{-1}\)</span>.
+Based on the results of (b) and (c), discuss the most probable profile observed during stable conditions.</p>
+<div class="important dropdown admonition">
+<p class="admonition-title">Answer</p>
+<p>According to a linear potential temperature profile, the middle layer would actually heat up due to radiation by 0.074 K per hour.
+This is in contradiction with the knowledge that at night radiative cooling takes effect.</p>
+<p>The more realistic logarithmic profile results in a cooling effect due to radiation by 4.1 K per hour. This is more reasonable.</p>
+<p>In conclusion, the nocturnal temperature profile that is most probable to be observed is the logarithmic profile.</p>
+</div>
+</section>
+<section id="id4">
+<h2><a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h2>
+<p>The momentum equation for the <span class="math notranslate nohighlight">\(\overline{U}\)</span> and <span class="math notranslate nohighlight">\(\overline{V}\)</span>-component
+during diurnal and nocturnal conditions reads:</p>
+<div class="math notranslate nohighlight">
+\[
+\pafg{\overline{U}}{t}~=~f \overline{V}- \pafg{\overline{w'u'}}{z}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\pafg{\overline{V}}{t}~=~f (\overline{U_g}-\overline{U})- \pafg{\overline{w'v'}}{z}
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(\overline{U_g}\)</span> is the geostrophic wind in the U direction and f
+is the Coriolis parameter. We assume that <span class="math notranslate nohighlight">\(\overline{V_g}\)</span>=0.</p>
+<p>a) Calculate the <span class="math notranslate nohighlight">\(\overline{U}\)</span> and <span class="math notranslate nohighlight">\(\overline{V}\)</span>-component during day conditions.
+In diurnal conditions, one can assume that the wind is in steady-state.
+Discuss the role of the momentum flux divergence.</p>
+<div class="important dropdown admonition">
+<p class="admonition-title">Answer</p>
+<p>Since we are evaluating (diurnal) stationary conditions,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+0&amp;=f\,\overline{V}-\gemafg{w'u'}{z}\\
+0&amp;=f\,\left(\overline{U_g}-\overline{U}\right)-\gemafg{w'v'}{z}
+\end{split}\]</div>
+<p>Therefore,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\overline{U} &amp;= \overline{U_g}-\frac{1}{f}\gemafg{w'v'}{z} \\
+\overline{V} &amp;= \frac{1}{f}\gemafg{u'w'}{z}
+\end{split}\]</div>
+</div>
+<p>b) Calculate the <span class="math notranslate nohighlight">\(\overline{U}\)</span> and <span class="math notranslate nohighlight">\(\overline{V}\)</span>-components during the night. Under
+nocturnal conditions, the friction suddenly disappears above the surface
+layer. Discuss the validity of this assumption.</p>
+<div class="tip dropdown admonition hint">
+<p class="admonition-title">Hint</p>
+<p>First derive a second-order differential equation for the <span class="math notranslate nohighlight">\(\overline{U}-\overline{U_g}\)</span> component.</p>
+<p>Second, prove that the solution</p>
+<div class="math notranslate nohighlight">
+\[
+\overline{U}-\overline{U_g}=A sin(ft) + B cos (ft)
+\]</div>
+<p>is a correct solution.</p>
+<p>Third, the constants A and B are determined from
+the initial conditions for <span class="math notranslate nohighlight">\(\overline{U}(t=0)\)</span> and <span class="math notranslate nohighlight">\(\overline{V}(t=0)\)</span>-components are:</p>
+<div class="math notranslate nohighlight">
+\[
+\overline{U}(t=0)~=~\overline{U_d}=\overline{U_g}-F_{v}(t=0)
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\overline{V}(t=0)~=~\overline{V_d}=F_{u}(t=0)
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(\pafg{\overline{w'u'}}{z}=fF_{u}(t=0)\)</span> and <span class="math notranslate nohighlight">\(\pafg{\overline{w'v'}}{z}=fF_{v}(t=0)\)</span>.</p>
+</div>
+<div class="important dropdown admonition">
+<p class="admonition-title">Answer</p>
+<p>Under nocturnal conditions, the flow can become laminar.
+As a result, the different layers in the flow can decouple from each other and the surface.
+This lowers friction and, therefore, shear and the momentum flux in the <span class="math notranslate nohighlight">\(z\)</span>-direction.
+In consequence, the wind accelerates.
+Therefore, finally the shear decreases in total a little, but the momentum flux decreases to a very low value.
+Therefore, it can be neglected with respect to the Coriolis and horizontal pressure gradient terms.</p>
+<div class="math notranslate nohighlight" id="equation-for-74b1">
+<span class="eqno">()<a class="headerlink" href="#equation-for-74b1" title="Permalink to this equation">#</a></span>\[
+\gemafg{U}{t} =f\,\overline{V} 
+\]</div>
+<div class="math notranslate nohighlight" id="equation-for-74b2">
+<span class="eqno">()<a class="headerlink" href="#equation-for-74b2" title="Permalink to this equation">#</a></span>\[
+\gemafg{V}{t} =f\,\left(\overline{U_g}-\overline{U}\right) 
+\]</div>
+<p>Considering that <span class="math notranslate nohighlight">\(\overline{U_g}\)</span> is a constant,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\gemafg{U}{t} &amp;= \gemafg{U}{t}-\gemafg{U_g}{t}\\
+ &amp;= \pafg{\left(\overline{U}-\overline{U_g}\right)}{t}
+\end{split}\]</div>
+<p>Combined with Equations <a class="reference internal" href="#equation-for-74b1">()</a> and <a class="reference internal" href="#equation-for-74b2">()</a>, this results in</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+{\pafg{^2\left(\overline{U}-\overline{U_g}\right)}{t^2}} &amp;= \pafg{}{t}\pafg{\overline{U}}{t} \\
+&amp;= \pafg{}{t}\left(f\,\overline{V}\right)\\
+&amp;= f\,\gemafg{V}{t}\\
+&amp;= f^2\,\left(\overline{U_g}-\overline{U}\right)\\
+{\pafg{^2\left(\overline{U}-\overline{U_g}\right)}{t^2}} &amp;= - f^2\,\left(\overline{U}-\overline{U_g}\right)
+\end{split}\]</div>
+<p>This corresponds to a harmonic oscillator equation, <span class="math notranslate nohighlight">\(\pafg{^2 x}{t^2}=-k\,x\)</span>.
+In this case <span class="math notranslate nohighlight">\(x\)</span> is equal to <span class="math notranslate nohighlight">\(\left(\overline{U}-\overline{U_g}\right)\)</span> and <span class="math notranslate nohighlight">\(k=f^2\)</span>.
+A general solution is <span class="math notranslate nohighlight">\(x=A\sin\left(\sqrt{k}t\right)+B\cos\left(\sqrt{k}t\right)\)</span>, since</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\pafg{^2 x}{t^2} &amp;= \pafg{^2}{t^2}\left(A\sin\left(\sqrt{k}t\right)+B\cos\left(\sqrt{k}t\right)\right) \\
+&amp;= \pafg{^2 A\sin\left(\sqrt{k}t\right)}{t^2} + \pafg{^2 B\cos\left(\sqrt{k}t\right)}{t^2}\\
+&amp;= A \pafg{\sqrt{k} \cos\left(\sqrt{k}t\right)}{t} - B \pafg{\sqrt{k} \sin\left(\sqrt{k}t\right)}{t} \\
+&amp;= A \sqrt{k} \left(-\sqrt{k}\sin\left(\sqrt{k}t\right)\right) - B \sqrt{k} \left(\sqrt{k}\cos\left(\sqrt{k}t\right)\right) \\
+&amp;= - k \left(A\sin\left(\sqrt{k}t\right)+B\cos\left(\sqrt{k}t\right)\right)\\
+&amp;= -k \, x
+\end{split}\]</div>
+<p>Therefore, <span class="math notranslate nohighlight">\(\overline{U}-\overline{U_g} = A\sin\left(ft\right)+B\cos\left(ft\right)\)</span>, so</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\overline{U}(0) &amp;= \overline{U_g} + B\\ &amp;= \overline{U_g} - F_v(0)\\
+B &amp;= -F_v(0)\\
+\overline{U} &amp;= \overline{U_g} + A\sin\left(ft\right)- F_v(0) \, \cos\left(ft\right)
+\end{split}\]</div>
+<p>Since <span class="math notranslate nohighlight">\(\overline{V} = \frac{1}{f}\gemafg{U}{t}\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\overline{V} &amp;= \frac{1}{f}\left(A f\cos\left(ft\right) + F_v(0) f \sin\left(ft\right) \right) \\
+ &amp;= A \cos\left(ft\right) + F_v(0) \sin\left(ft\right)
+\end{split}\]</div>
+<p>Using, the second boundary condition,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\overline{V}(0) &amp;= A \\&amp;= F_u(0)\\
+A &amp;= F_u(0)
+\end{split}\]</div>
+<p>All in all, the equations for <span class="math notranslate nohighlight">\(\overline{U}\)</span> and <span class="math notranslate nohighlight">\(\overline{V}\)</span> are</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\overline{U} &amp;= \overline{U_g} + F_u(0) \sin\left(ft\right) - F_v(0) \cos\left(ft\right)\\
+\overline{V} &amp;= F_v(0) \sin\left(ft\right) + F_u(0) \cos\left(ft\right) 
+\end{split}\]</div>
+<p>This can be written as</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\overline{U} &amp;= \overline{U_g} + \frac{1}{f} \gemafg{w'u'}{z} \sin\left(ft\right) - \frac{1}{f} \gemafg{w'v'}{z} \cos\left(ft\right)\\
+\overline{V} &amp;= \frac{1}{f} \gemafg{w'v'}{z} \sin\left(ft\right) + \frac{1}{f} \gemafg{w'u'}{z} \cos\left(ft\right) 
+\end{split}\]</div>
+</div>
+<p>c) Calculate and plot the <span class="math notranslate nohighlight">\(\overline{U}\)</span> and <span class="math notranslate nohighlight">\(\overline{V}\)</span>-components for every hour over a full period
+T=2<span class="math notranslate nohighlight">\(\pi\)</span>/f, using the following values: f=10<span class="math notranslate nohighlight">\(^{-4}\)</span>s<span class="math notranslate nohighlight">\(^{-1}\)</span>, F<span class="math notranslate nohighlight">\(_{u}(t=0)\)</span>=F<span class="math notranslate nohighlight">\(_{v}(t=0)\)</span>=3ms<span class="math notranslate nohighlight">\(^{-1}\)</span> and
+<span class="math notranslate nohighlight">\(\overline{U_g}\)</span>=10 ms<span class="math notranslate nohighlight">\(^{-1}\)</span> and <span class="math notranslate nohighlight">\(\overline{V_g}\)</span>=0.</p>
+<div class="important dropdown admonition">
+<p class="admonition-title">Answer</p>
+<figure class="align-default" id="fig-ans-74">
+<img alt="../_images/exercise7_4.png" src="../_images/exercise7_4.png" />
+<figcaption>
+<p><span class="caption-text">Evolution of wind velocities.</span><a class="headerlink" href="#fig-ans-74" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Realize that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\overline{U}-\overline{U_g} &amp;= F_u(0) \sin\left(ft\right) - F_v(0) \cos\left(ft\right)\\ 
+\overline{V} &amp;= F_v(0) \sin\left(ft\right) + F_u(0) \cos\left(ft\right)
+\end{split}\]</div>
+<p>Therefore,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\left(\overline{U}-\overline{U_g}\right)^2 &amp;= F_u^2(0) \sin^2\left(ft\right) + F_v^2(0) \cos^2\left(ft\right) - 2 F_u(0) F_v(0) \cos\left(ft\right) \sin\left(ft\right) \\
+\overline{V}^2 &amp;= F_u^2(0) \cos^2\left(ft\right) + F_v^2(0) \sin^2\left(ft\right) + 2 F_u(0) F_v(0) \cos\left(ft\right) \sin\left(ft\right) 
+\end{split}\]</div>
+<p>Combining these 2 equations results in</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\left(\overline{U}-\overline{U_g}\right)^2 + \overline{V}^2 &amp;= F_u^2(0) \left(\cos^2\left(ft\right)+\sin^2\left(ft\right)\right) + F_v^2(0) \left(\cos^2\left(ft\right)+\sin^2\left(ft\right)\right) \\
+ &amp;= F_u^2(0) + F_v^2(0)
+\end{split}\]</div>
+<p>Since the right hand side is a constant,
+this equation states that <span class="math notranslate nohighlight">\(\left(\overline{U},\overline{V}\right)\)</span> progresses in time as a circular movement around <span class="math notranslate nohighlight">\(\left(\overline{U_g},0\right)\)</span>
+at a distance of <span class="math notranslate nohighlight">\(\sqrt{F_u^2(0) + F_v^2(0)} = 3\sqrt{2}\rm\,m\,s^{-1}\)</span></p>
+<p>The wind velocities, <span class="math notranslate nohighlight">\(\overline{U}\)</span> and <span class="math notranslate nohighlight">\(\overline{V}\)</span> are plotted in <code class="xref std std-numref docutils literal notranslate"><span class="pre">fig:ans_74</span></code>.</p>
+</div>
+</section>
+<section id="id5">
+<h2><a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h2>
+<p>The conservation equation for the potential temperature in a Stable Boundary Layer reads (neglecting phase changes)</p>
+<div class="math notranslate nohighlight">
+\[
+\pafg{\overline{\theta}}{t}~=~- \pafg{\overline{w'\theta'}}{z}-\frac{1}{\rho c_p}\pafg{Q^*}{z}
+\]</div>
+<p>a)By using a bulk approach, calculate the divergence of the net upward longwave radiation
+(<span class="math notranslate nohighlight">\(Q^*=F_{up}-F_{down}\)</span>). Remember that the longwave radiation follows the
+Stefan-Boltzmann law:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+L&amp;=\epsilon_{IR}\sigma_{SB} T^4 \\
+\sigma_{SB}&amp;=5.67~10^{-8}~\frac{W}{m^2K^4}
+\end{split}\]</div>
+<p>The following values in the three-layer model of the stable
+boundary layer are suggested. At the surface, <span class="math notranslate nohighlight">\(T_s=290~K\)</span> and <span class="math notranslate nohighlight">\(\epsilon_s=0.78\)</span>.</p>
+<p>In the layer that represents the SBL, <span class="math notranslate nohighlight">\(T_m=296~K\)</span> and <span class="math notranslate nohighlight">\(\epsilon_m=0.78\)</span>.</p>
+<p>Finally, at the top of the SBL <span class="math notranslate nohighlight">\(T_t=298~K\)</span> and <span class="math notranslate nohighlight">\(\epsilon_t=0.78\)</span>.</p>
+<p>The boundary layer height is equal to 25 m.
+Additional data to calculate the divergence of
+the net longwave radiation are: <span class="math notranslate nohighlight">\(\rho=1.292 Kg/m^3\)</span>, <span class="math notranslate nohighlight">\(c_p=1004 J/KgK\)</span>.</p>
+<div class="important dropdown admonition">
+<p class="admonition-title">Answer</p>
+<p>The term that is asked for is <span class="math notranslate nohighlight">\(\pafg{Q^*}{z}\)</span>.
+In the bulk approach, this is equal to <span class="math notranslate nohighlight">\(\frac{\Delta Q^*}{\Delta z} = \frac{Q^*_{\rm interface\,2} - Q^*_{\rm interface\,1}}{\Delta z}\)</span>,
+where interface 1 is between the surface and middle layer and interface 2 is between the middle and top layer.
+<span class="math notranslate nohighlight">\(Q^*=I_{\rm up} - I_{\rm down}\)</span>, where <span class="math notranslate nohighlight">\(I=\epsilon_{\rm IR}\sigma_{\rm SB} T^4\)</span>.
+For interface 1, the downward radiation originates from the middle layer and the upward radiation originates from the surface layer.
+For interface 2, the downward radiation originates from the top layer and the upward radiation originates from the middle layer.
+Therefore, in total</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\pafg{Q^*}{z} &amp;\approx \frac{\Delta Q^*}{\Delta z}\\
+&amp;= \frac{\left(\epsilon_{\rm IR}\sigma_{\rm SB} T_m^4-\epsilon_{\rm IR}\sigma_{\rm SB} T_t^4\right)-\left(\epsilon_{\rm IR}\sigma_{\rm SB} T_s^4-\epsilon_{\rm IR}\sigma_{\rm SB} T_m^4\right)}{\Delta z} \\
+&amp;= {\epsilon_{\rm IR}\sigma_{\rm SB}}\,\frac{2 \, T_m^4 - T_t^4 - T_s^4}{\Delta z} \\
+&amp;= 0.697\rm\,W\,m^{-3} 
+\end{split}\]</div>
+</div>
+<p>b) Assuming that the turbulent flux is constant with height, calculate the
+variation of potential temperature per hour.</p>
+<div class="important dropdown admonition">
+<p class="admonition-title">Answer</p>
+<p>If the turbulent heat flux is constant with height, the divergence of the turbulent heat flux is equal to 0.
+Therefore, the variation of the potential temperature per hour is equal to</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\gemafg{\theta}{t} &amp;= -\frac{1}{\rho\,c_p}\pafg{Q^*}{z}\\
+                   &amp;= -\frac{ 0.697 \rm\,W\,m^{-3}}{1.292 \cdot 1004 \rm\,W\,m^{-3}\,K^{-1}\,s}\\
+                   &amp;= -0.538\times 10^{-3}\rm\,K\,s^{-1} \\
+&amp;= -1.94\rm\,K\,hr^{-1}
+\end{split}\]</div>
+</div>
+<p>c) The sensible heat flux has the following vertical profile</p>
+<div class="math notranslate nohighlight">
+\[
+\overline{w'\theta'}(z)~=~\overline{w'\theta'}_o~(1-z/h)~~~~\overline{w'\theta'}_o= -14~W/m^2
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(\overline{w'\theta'}_o\)</span> is the sensible heat flux at
+the surface and <span class="math notranslate nohighlight">\(h=25~m\)</span> is the depth of the SBL.</p>
+<p>Plot this profile. Discuss the role of the turbulent flux under this conditions.</p>
+<div class="important dropdown admonition">
+<p class="admonition-title">Answer</p>
+<figure class="align-default" id="fig-ans-75">
+<img alt="../_images/exercise7_5.png" src="../_images/exercise7_5.png" />
+<figcaption>
+<p><span class="caption-text">Sensible heat flux.</span><a class="headerlink" href="#fig-ans-75" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The profile is shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">fig:ans_75</span></code>.
+The upward turbulent flux is more positive (i.e. less negative) at higher <span class="math notranslate nohighlight">\(z\)</span>.
+Therefore, more heat is transported out of a control volume than inward. This results in cooling.</p>
+<p>The divergence of the vertical heat flux is equal to</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\gemafg{w'\theta'}{z} &amp;= \frac{-\overline{w'\theta'}(0)}{h}\\
+&amp;= \frac{\frac{14}{1231}\rm\,K\,m\,s^{-1}}{25\rm\,m}\\
+&amp;= 0.455\times 10^{-3}\rm\,K\,s^{-1}
+\end{split}\]</div>
+<p>This corresponds to a cooling term in the conservation equation of the boundary layer of 1.64 K hr<span class="math notranslate nohighlight">\(^{-1}\)</span>.</p>
+</div>
+<p>d) By using the values found in a) and taking now into account the turbulent divergence
+term, calculate the temperature change per hour.</p>
+<div class="important dropdown admonition">
+<p class="admonition-title">Answer</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\gemafg{\theta}{t} &amp;= - \gemafg{w'\theta'}{z} - \frac{1}{\rho\,c_p}\pafg{Q^*}{z} \\
+ &amp;= -1.6\rm\,K\,hr^{-1} - 1.9\rm\,K\,hr^{-1}\\
+\gemafg{\theta}{t} &amp;= -3.6\rm\,K\,hr^{-1}
+\end{split}\]</div>
+</div>
+<p>e) If now we consider in the budget equation for the temperature, the
+horizontal advection term <span class="math notranslate nohighlight">\(U~\pafg{\overline{\theta}}{x}\)</span>. If <span class="math notranslate nohighlight">\(U=10~m/s\)</span>, calculate
+the horizontal gradient of temperature (<span class="math notranslate nohighlight">\(\pafg{\overline{\theta}}{x}\)</span>) in order to
+reach a steady-state.</p>
+<div class="important dropdown admonition">
+<p class="admonition-title">Answer</p>
+<p>The horizontal advection has to balance the cooling effects of both the vertical heat flux gradient and the radiation. Therefore,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\overline{U}\gemafg{\theta}{x} &amp;= - 0.455\times 10^{-3}\rm\,K\,s^{-1} - 0.538\times 10^{-3}\rm\,K\,s^{-1} \\
+&amp;= - 0.993\times 10^{-3}\rm\,K\,s^{-1}
+\end{split}\]</div>
+<p>Since <span class="math notranslate nohighlight">\(\overline{U}=10\rm\,m\,s^{-1}\)</span>, <span class="math notranslate nohighlight">\(\gemafg{\theta}{x}=-1\times 10^{-4}\rm\,K\,km^{-1}\)</span>.
+This results in <span class="math notranslate nohighlight">\(\gemafg{\theta}{x}=-0.1\rm\,K\,km^{-1}\)</span></p>
+<p>Since the value is negative, relatively warm air is transported in the positive <span class="math notranslate nohighlight">\(x\)</span> direction and, consequently, advection is a source of heating.</p>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./exercises"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Chiel van Heerwaarden and Mirjam Tijhuis<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
