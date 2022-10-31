@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>2. Wind &#8212; Boundary-Layer Meteorology</title>
+    <title>Wind &#8212; Boundary-Layer Meteorology</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -54,8 +54,6 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="3. Turbulence" href="turbulence.html" />
-    <link rel="prev" title="1. Introduction" href="introduction.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -120,25 +118,10 @@ const thebe_selector_output = ".output, .cell_output"
   Lectures
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="introduction.html">
    1. Introduction
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   2. Wind
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="turbulence.html">
-   3. Turbulence
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="temperature.html">
-   4. Temperature and stability
   </a>
  </li>
 </ul>
@@ -150,7 +133,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../exercises/week1.html">
-   5. Exercises week 1
+   2. Exercises week 1
   </a>
  </li>
 </ul>
@@ -332,27 +315,27 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#conservation-of-momentum">
-   2.1. Conservation of momentum.
+   Conservation of momentum.
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#reynolds-averaging-the-conservation-of-momentum-under-neutral-conditions">
-   2.2. Reynolds averaging the conservation of momentum under neutral conditions
+   Reynolds averaging the conservation of momentum under neutral conditions
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-closure-problem-and-mixing-length-theory">
-   2.3. The closure problem and mixing-length theory
+   The closure problem and mixing-length theory
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-ekman-layer">
-   2.4. The Ekman layer
+   The Ekman layer
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-logarithmic-wind-profile-or-law-of-the-wall">
-   2.5. The logarithmic wind profile (or law of the wall)
+   The logarithmic wind profile (or law of the wall)
   </a>
  </li>
 </ul>
@@ -376,27 +359,27 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#conservation-of-momentum">
-   2.1. Conservation of momentum.
+   Conservation of momentum.
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#reynolds-averaging-the-conservation-of-momentum-under-neutral-conditions">
-   2.2. Reynolds averaging the conservation of momentum under neutral conditions
+   Reynolds averaging the conservation of momentum under neutral conditions
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-closure-problem-and-mixing-length-theory">
-   2.3. The closure problem and mixing-length theory
+   The closure problem and mixing-length theory
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-ekman-layer">
-   2.4. The Ekman layer
+   The Ekman layer
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-logarithmic-wind-profile-or-law-of-the-wall">
-   2.5. The logarithmic wind profile (or law of the wall)
+   The logarithmic wind profile (or law of the wall)
   </a>
  </li>
 </ul>
@@ -413,7 +396,7 @@ title="Print to PDF"
 <span class="math notranslate nohighlight">\(\def\xh{\hat{x}}\)</span>
 <span class="math notranslate nohighlight">\(\def\th{\hat{t}}\)</span></p>
 <section class="tex2jax_ignore mathjax_ignore" id="wind">
-<h1><span class="section-number">2. </span>Wind<a class="headerlink" href="#wind" title="Permalink to this headline">#</a></h1>
+<h1>Wind<a class="headerlink" href="#wind" title="Permalink to this headline">#</a></h1>
 <div class="admonition-questions-to-be-answered-in-this-chapter admonition">
 <p class="admonition-title">Questions to be answered in this chapter</p>
 <ol class="simple">
@@ -424,7 +407,7 @@ title="Print to PDF"
 </ol>
 </div>
 <section id="conservation-of-momentum">
-<h2><span class="section-number">2.1. </span>Conservation of momentum.<a class="headerlink" href="#conservation-of-momentum" title="Permalink to this headline">#</a></h2>
+<h2>Conservation of momentum.<a class="headerlink" href="#conservation-of-momentum" title="Permalink to this headline">#</a></h2>
 <p>Wind is a key ingredient of boundary layer meteorology.
 The evolution of wind speed is generally covered via the conservation of momentum, also known as the Navier-Stokes equations.</p>
 <div class="math notranslate nohighlight">
@@ -470,7 +453,7 @@ Ro \equiv \dfrac{U}{f_0 L}
 </div>
 </section>
 <section id="reynolds-averaging-the-conservation-of-momentum-under-neutral-conditions">
-<h2><span class="section-number">2.2. </span>Reynolds averaging the conservation of momentum under neutral conditions<a class="headerlink" href="#reynolds-averaging-the-conservation-of-momentum-under-neutral-conditions" title="Permalink to this headline">#</a></h2>
+<h2>Reynolds averaging the conservation of momentum under neutral conditions<a class="headerlink" href="#reynolds-averaging-the-conservation-of-momentum-under-neutral-conditions" title="Permalink to this headline">#</a></h2>
 <div class="math notranslate nohighlight">
 \[
 \dfrac{\partial u_i}{\partial t} + \dfrac{\partial u_j u_i}{\partial x_j} = - f_0 \epsilon_{ij3} \left( u_j - u_{g,j} \right)
@@ -484,7 +467,7 @@ Ro \equiv \dfrac{U}{f_0 L}
 </div>
 </section>
 <section id="the-closure-problem-and-mixing-length-theory">
-<h2><span class="section-number">2.3. </span>The closure problem and mixing-length theory<a class="headerlink" href="#the-closure-problem-and-mixing-length-theory" title="Permalink to this headline">#</a></h2>
+<h2>The closure problem and mixing-length theory<a class="headerlink" href="#the-closure-problem-and-mixing-length-theory" title="Permalink to this headline">#</a></h2>
 <div class="math notranslate nohighlight">
 \[
 \overline{w^\prime \phi^\prime} = - K \dfrac{\partial \overline{\phi}}{\partial z}
@@ -496,11 +479,11 @@ Ro \equiv \dfrac{U}{f_0 L}
 \]</div>
 </section>
 <section id="the-ekman-layer">
-<h2><span class="section-number">2.4. </span>The Ekman layer<a class="headerlink" href="#the-ekman-layer" title="Permalink to this headline">#</a></h2>
+<h2>The Ekman layer<a class="headerlink" href="#the-ekman-layer" title="Permalink to this headline">#</a></h2>
 <p>bla.</p>
 </section>
 <section id="the-logarithmic-wind-profile-or-law-of-the-wall">
-<h2><span class="section-number">2.5. </span>The logarithmic wind profile (or law of the wall)<a class="headerlink" href="#the-logarithmic-wind-profile-or-law-of-the-wall" title="Permalink to this headline">#</a></h2>
+<h2>The logarithmic wind profile (or law of the wall)<a class="headerlink" href="#the-logarithmic-wind-profile-or-law-of-the-wall" title="Permalink to this headline">#</a></h2>
 <p>bla.</p>
 </section>
 </section>
@@ -532,20 +515,6 @@ Ro \equiv \dfrac{U}{f_0 L}
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="introduction.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">1. </span>Introduction</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="turbulence.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">3. </span>Turbulence</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
 </div>
             </footer>
         </div>

@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>4. Temperature and stability &#8212; Boundary-Layer Meteorology</title>
+    <title>Temperature and stability &#8212; Boundary-Layer Meteorology</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -54,8 +54,6 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="5. Exercises week 1" href="../exercises/week1.html" />
-    <link rel="prev" title="3. Turbulence" href="turbulence.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -120,25 +118,10 @@ const thebe_selector_output = ".output, .cell_output"
   Lectures
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="introduction.html">
    1. Introduction
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wind.html">
-   2. Wind
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="turbulence.html">
-   3. Turbulence
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   4. Temperature and stability
   </a>
  </li>
 </ul>
@@ -150,7 +133,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../exercises/week1.html">
-   5. Exercises week 1
+   2. Exercises week 1
   </a>
  </li>
 </ul>
@@ -332,27 +315,27 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-ideal-gas-law">
-   4.1. The ideal gas law
+   The ideal gas law
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#conservation-of-energy">
-   4.2. Conservation of energy
+   Conservation of energy
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#the-first-law-of-thermodynamics">
-     4.2.1. The first law of thermodynamics
+     The first law of thermodynamics
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#potential-temperature">
-     4.2.2. Potential temperature
+     Potential temperature
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#atmospheric-stability">
-     4.2.3. Atmospheric stability
+     Atmospheric stability
     </a>
    </li>
   </ul>
@@ -378,27 +361,27 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-ideal-gas-law">
-   4.1. The ideal gas law
+   The ideal gas law
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#conservation-of-energy">
-   4.2. Conservation of energy
+   Conservation of energy
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#the-first-law-of-thermodynamics">
-     4.2.1. The first law of thermodynamics
+     The first law of thermodynamics
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#potential-temperature">
-     4.2.2. Potential temperature
+     Potential temperature
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#atmospheric-stability">
-     4.2.3. Atmospheric stability
+     Atmospheric stability
     </a>
    </li>
   </ul>
@@ -416,7 +399,7 @@ title="Print to PDF"
   <p><span class="math notranslate nohighlight">\(\def\cp{c_\textrm{p}}\)</span>
 <span class="math notranslate nohighlight">\(\def\Rd{R_\textrm{d}}\)</span></p>
 <section class="tex2jax_ignore mathjax_ignore" id="temperature-and-stability">
-<h1><span class="section-number">4. </span>Temperature and stability<a class="headerlink" href="#temperature-and-stability" title="Permalink to this headline">#</a></h1>
+<h1>Temperature and stability<a class="headerlink" href="#temperature-and-stability" title="Permalink to this headline">#</a></h1>
 <div class="admonition-questions-to-be-answered-in-this-chapter admonition">
 <p class="admonition-title">Questions to be answered in this chapter</p>
 <ol class="simple">
@@ -426,32 +409,32 @@ title="Print to PDF"
 </ol>
 </div>
 <section id="the-ideal-gas-law">
-<h2><span class="section-number">4.1. </span>The ideal gas law<a class="headerlink" href="#the-ideal-gas-law" title="Permalink to this headline">#</a></h2>
+<h2>The ideal gas law<a class="headerlink" href="#the-ideal-gas-law" title="Permalink to this headline">#</a></h2>
 <p>We assume that the air in the atmospheric boundary layer behaves as an ideal gas, in which pressure <span class="math notranslate nohighlight">\(p\)</span>, density <span class="math notranslate nohighlight">\(\rho\)</span> and the gas constant for dry air <span class="math notranslate nohighlight">\(\Rd\)</span> are related as:</p>
 <div class="admonition-ideal-gas-law admonition">
 <p class="admonition-title">Ideal gas law</p>
 <div class="math notranslate nohighlight" id="equation-ideal-gas-law">
-<span class="eqno">(4.1)<a class="headerlink" href="#equation-ideal-gas-law" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">()<a class="headerlink" href="#equation-ideal-gas-law" title="Permalink to this equation">#</a></span>\[
 p = \rho \Rd T.
 \]</div>
 </div>
 </section>
 <section id="conservation-of-energy">
-<h2><span class="section-number">4.2. </span>Conservation of energy<a class="headerlink" href="#conservation-of-energy" title="Permalink to this headline">#</a></h2>
+<h2>Conservation of energy<a class="headerlink" href="#conservation-of-energy" title="Permalink to this headline">#</a></h2>
 <section id="the-first-law-of-thermodynamics">
-<h3><span class="section-number">4.2.1. </span>The first law of thermodynamics<a class="headerlink" href="#the-first-law-of-thermodynamics" title="Permalink to this headline">#</a></h3>
+<h3>The first law of thermodynamics<a class="headerlink" href="#the-first-law-of-thermodynamics" title="Permalink to this headline">#</a></h3>
 <p>As a starting point for conservation of energy, we start with the first law of thermodynamics written in a convenient form to describe atmospheric flow:</p>
 <div class="admonition-conservation-of-energy admonition">
 <p class="admonition-title">Conservation of energy</p>
 <div class="math notranslate nohighlight" id="equation-first-law">
-<span class="eqno">(4.2)<a class="headerlink" href="#equation-first-law" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">()<a class="headerlink" href="#equation-first-law" title="Permalink to this equation">#</a></span>\[
 \rho \cp \mathrm{d}T - \mathrm{d}p = Q
 \]</div>
 </div>
 <p>This equation relates the change in temperature <span class="math notranslate nohighlight">\(\mathrm{d}T\)</span> of a parcel of air to its pressure change <span class="math notranslate nohighlight">\(\mathrm{d}p\)</span> and the heat <span class="math notranslate nohighlight">\(Q\)</span> added to the parcel. We can now describe for any parcel of air how its temperature will change under expansion and compression if it is displaced in the vertical direction by atmospheric motions, or how temperature will change if we add or remove heat, for instance by heating by solar radiation or cooling by thermal radiation.</p>
 <div class="seealso admonition">
 <p class="admonition-title">Question</p>
-<p>Assume no heat is added (<span class="math notranslate nohighlight">\(Q = 0\)</span>) and use Equation <a class="reference internal" href="#equation-first-law">(4.2)</a> to answer the question. If we move a parcel of air up a mountain, does its temperature increase or decrease?</p>
+<p>Assume no heat is added (<span class="math notranslate nohighlight">\(Q = 0\)</span>) and use Equation <a class="reference internal" href="#equation-first-law">()</a> to answer the question. If we move a parcel of air up a mountain, does its temperature increase or decrease?</p>
 </div>
 <div class="important dropdown admonition">
 <p class="admonition-title">Answer</p>
@@ -459,8 +442,8 @@ p = \rho \Rd T.
 </div>
 </section>
 <section id="potential-temperature">
-<h3><span class="section-number">4.2.2. </span>Potential temperature<a class="headerlink" href="#potential-temperature" title="Permalink to this headline">#</a></h3>
-<p>One of the disadvantages of temperature is that it is influenced by expansion and compression, as well as heat transfer. This means that an air parcel that is vertically displaced by turbulence experiences a temperature change even if no heat is added or removed. In the analysis of turbulent boundary layer flows it is convenient to have a quantity that is conserved under adiabatic dispacement. Before deriving this quantity, we rewrite Equation <a class="reference internal" href="#equation-first-law">(4.2)</a> in units of temperature, and we remove the density from the pressure term with the help of the ideal gas law (Equation <a class="reference internal" href="#equation-ideal-gas-law">(4.1)</a>).</p>
+<h3>Potential temperature<a class="headerlink" href="#potential-temperature" title="Permalink to this headline">#</a></h3>
+<p>One of the disadvantages of temperature is that it is influenced by expansion and compression, as well as heat transfer. This means that an air parcel that is vertically displaced by turbulence experiences a temperature change even if no heat is added or removed. In the analysis of turbulent boundary layer flows it is convenient to have a quantity that is conserved under adiabatic dispacement. Before deriving this quantity, we rewrite Equation <a class="reference internal" href="#equation-first-law">()</a> in units of temperature, and we remove the density from the pressure term with the help of the ideal gas law (Equation <a class="reference internal" href="#equation-ideal-gas-law">()</a>).</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \cp \mathrm{d}T - \dfrac{1}{\rho} \mathrm{d}p &amp;= \dfrac{Q}{\rho} \\
@@ -492,7 +475,7 @@ p = \rho \Rd T.
 <div class="admonition-potential-temperature admonition">
 <p class="admonition-title">Potential temperature</p>
 <div class="math notranslate nohighlight" id="equation-pot-temp">
-<span class="eqno">(4.3)<a class="headerlink" href="#equation-pot-temp" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">()<a class="headerlink" href="#equation-pot-temp" title="Permalink to this equation">#</a></span>\[
 \theta \equiv T \left( \dfrac{p_0}{p}\right)^\frac{\Rd}{\cp}
 \]</div>
 </div>
@@ -502,7 +485,7 @@ p = \rho \Rd T.
 </div></blockquote>
 </section>
 <section id="atmospheric-stability">
-<h3><span class="section-number">4.2.3. </span>Atmospheric stability<a class="headerlink" href="#atmospheric-stability" title="Permalink to this headline">#</a></h3>
+<h3>Atmospheric stability<a class="headerlink" href="#atmospheric-stability" title="Permalink to this headline">#</a></h3>
 <p>The atmospheric static stability defines whether the temperature stratification support or suppresses the generation of turbulent motions. If <span class="math notranslate nohighlight">\(\dfrac{\partial \theta}{\partial z} \gt 0\)</span>, the atmosphere is statically stable, if <span class="math notranslate nohighlight">\(\dfrac{\partial \theta}{\partial z} \approx 0\)</span>, the atmosphere is neutral, and if <span class="math notranslate nohighlight">\(\dfrac{\partial \theta}{\partial z} \lt 0\)</span> the atmosphere is unstable.</p>
 <p>If a layer of air is vertically well-mixed, then the stratification is neutral and the actual temperature <span class="math notranslate nohighlight">\(T\)</span> follows the <strong>dry adiabatic lapse rate</strong>. This is for instance the case in the daytime convective boundary layer, in which surface driven plumes constantly mix the layer vertically through.</p>
 <div class="seealso admonition">
@@ -568,20 +551,6 @@ T \dfrac{\partial}{\partial z} \left( \left( \dfrac{p_0}{p}\right)^\frac{\Rd}{\c
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="turbulence.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">3. </span>Turbulence</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="../exercises/week1.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">5. </span>Exercises week 1</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
 </div>
             </footer>
         </div>
