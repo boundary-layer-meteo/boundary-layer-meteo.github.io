@@ -33,7 +33,7 @@ a) Atmospheric convective boundary layer (W=1 $\mathrm{m\ s^{-1}}$, L=1000 m)
 
 $$
 \left\lbrace U,L,\nu \right\rbrace &= \left\lbrace 1\,{\rm m\,s^{-1}},1000\,{\rm m},1.5\cdot 10^{-5}\,\rm{m^2\,s^{-1}} \right\rbrace\\
-{\rm Re} &= 6.\overline{6}\cdot 10^7
+{\rm Re} &= 6.67\cdot 10^7
 $$
 Turbulent
 ```
@@ -413,8 +413,8 @@ $$
 This results in:
 
 $$
-\overline{u}|_{\overline{u}\left({z_2}\right)} - \overline{u}|_{\overline{u}\left({z_1}\right)} &= \frac{u_*}{\kappa} \left(\log z|_{z_2} - \log z|_{z_1}\right)\\
-\overline{u}(z'_2) &= \overline{u}(z'_1) + \frac{u_*}{\kappa} \log \left(\frac{z'_2}{z'_1}\right)
+\overline{u}|_{\overline{u}\left({z_2}\right)} - \overline{u}|_{\overline{u}\left({z_1}\right)} &= \frac{u_*}{\kappa} \left(\ln z|_{z_2} - \ln z|_{z_1}\right)\\
+\overline{u}(z'_2) &= \overline{u}(z'_1) + \frac{u_*}{\kappa} \ln \left(\frac{z'_2}{z'_1}\right)
 $$
 
 in which $z'_1$ and $z'_2$ are two arbitrary heights. In both cases $z'_2 = 9\,\rm m$ and also $u_* = 0.5\,\rm m\,s^{-1}$ and $\kappa=0.4$.
@@ -455,7 +455,7 @@ $$
 
 a) Simplify these equations by 
 * applying Reynolds averaging; 
-* considering $\overline{w} = 0$, horizontal homogeneity and incompressibility;
+* considering $\overline{w} = 0$, horizontal homogeneity of the wind and incompressibility;
 * neglecting the small viscosity term;
 * assuming that at larger scales the Coriolis force and horizontal pressure gradients balance to reach a geostrophic wind.
 
@@ -475,7 +475,7 @@ $$
 
 Considering $\overline{w} = 0$, 
 
-horizontal homogeneity ($\pafg{\chi}{x}=\pafg{\chi}{y}=0$ with $\chi$ as an arbitrary variable), 
+horizontal homogeneity of the wind($\pafg{\chi}{x}=\pafg{\chi}{y}=0$ with $\chi$ as u, v), 
 
 incompressibility ($\pafg{u_i'}{x_i}=0$), 
 
@@ -526,9 +526,9 @@ $$
 
 Substituting the values, results in:
 
-$\pafg{\overline{u}}{t}$ = $5 \cdot 10^{-4}\,\rm m\,s^{-1}$
+$\pafg{\overline{u}}{t}$ = $5 \cdot 10^{-4}\,\rm m\,s^{-2}$
 
-$\pafg{\overline{v}}{t}$ = $1 \cdot 10^{-4}\,\rm m\,s^{-1}$
+$\pafg{\overline{v}}{t}$ = $1 \cdot 10^{-4}\,\rm m\,s^{-2}$
 
 ```
 
