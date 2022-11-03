@@ -7,10 +7,10 @@ parts:
   - caption: Lectures
     numbered: true
     chapters:
-    - file: lectures/introduction
-    - file: lectures/wind
-    - file: lectures/turbulence
-    - file: lectures/temperature
+     - file: lectures/1_mass
+#     - file: lectures/wind
+#     - file: lectures/turbulence
+#     - file: lectures/temperature
 #   - caption: Theory
 #     numbered: true
 #     chapters:
@@ -21,15 +21,15 @@ parts:
     numbered: true
     chapters:
     - file: exercises/week1
-  - caption: Old exercises
-    numbered: true
-    chapters:
-    - file: exercises/exercises1
-    - file: exercises/exercises2
-    - file: exercises/exercises3
-    - file: exercises/exercises4
-    - file: exercises/exercises5
-    - file: exercises/exercises6
-    - file: exercises/exercises7
-    - file: exercises/exercises8
+      # - caption: Old exercises
+      #   numbered: true
+      #   chapters:
+      #   - file: exercises/exercises1
+      #   - file: exercises/exercises2
+      #   - file: exercises/exercises3
+      #   - file: exercises/exercises4
+      #   - file: exercises/exercises5
+      #   - file: exercises/exercises6
+      #   - file: exercises/exercises7
+      #   - file: exercises/exercises8
 
