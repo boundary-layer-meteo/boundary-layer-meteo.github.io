@@ -29,9 +29,9 @@ Substitution leads to the following equation, where the $x, y, z, t$ subscript i
 
 $$
 \dfrac{ \partial \rho }{ \partial t } \, \delta x \, \delta y \, \delta z \, \delta t
-= \dfrac{ \partial \rho u }{ \partial x } \, \delta x \, \delta y \, \delta z \, \delta t
-+ \dfrac{ \partial \rho v }{ \partial y } \, \delta x \, \delta y \, \delta z \, \delta t
-+ \dfrac{ \partial \rho w }{ \partial z } \, \delta x \, \delta y \, \delta z \, \delta t
+= - \dfrac{ \partial \rho u }{ \partial x } \, \delta x \, \delta y \, \delta z \, \delta t
+  - \dfrac{ \partial \rho v }{ \partial y } \, \delta x \, \delta y \, \delta z \, \delta t
+  - \dfrac{ \partial \rho w }{ \partial z } \, \delta x \, \delta y \, \delta z \, \delta t
 $$
 
 And after dividing out the volume and time, and moving all terms to the left hand side, we get the conservation of mass equation.
