@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Turbulence &#8212; Boundary-Layer Meteorology</title>
+    <title>Conservation of momentum (i) &#8212; Boundary-Layer Meteorology</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -226,7 +226,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Flectures/turbulence.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Flectures/3_momentum_ii.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -254,7 +254,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/lectures/turbulence.md"
+        <a href="../_sources/lectures/3_momentum_ii.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -314,13 +314,28 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#length-and-time-scales-of-turbulence">
-   Length and time scales of turbulence
+  <a class="reference internal nav-link" href="#the-momentum-equations">
+   The momentum equations
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-spectral-structure-of-the-inertial-subrange-of-turbulence">
-   The spectral structure of the inertial subrange of turbulence
+  <a class="reference internal nav-link" href="#conservation-of-momentum">
+   Conservation of momentum.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reynolds-averaging">
+   Reynolds averaging
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-ekman-spiral">
+   The Ekman spiral
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-logarithmic-wind-profile">
+   The logarithmic wind profile
   </a>
  </li>
 </ul>
@@ -332,7 +347,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Turbulence</h1>
+                <h1>Conservation of momentum (i)</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -343,13 +358,28 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#length-and-time-scales-of-turbulence">
-   Length and time scales of turbulence
+  <a class="reference internal nav-link" href="#the-momentum-equations">
+   The momentum equations
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-spectral-structure-of-the-inertial-subrange-of-turbulence">
-   The spectral structure of the inertial subrange of turbulence
+  <a class="reference internal nav-link" href="#conservation-of-momentum">
+   Conservation of momentum.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reynolds-averaging">
+   Reynolds averaging
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-ekman-spiral">
+   The Ekman spiral
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-logarithmic-wind-profile">
+   The logarithmic wind profile
   </a>
  </li>
 </ul>
@@ -362,72 +392,33 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="turbulence">
-<h1>Turbulence<a class="headerlink" href="#turbulence" title="Permalink to this headline">#</a></h1>
-<div class="admonition-questions-to-be-answered-in-this-chapter admonition">
-<p class="admonition-title">Questions to be answered in this chapter</p>
-<ol class="simple">
-<li><p>What are the length and time scales of production and dissipation of turbulence?</p></li>
-<li><p>How does a turbulence kinetic energy spectra looks?</p></li>
-<li><p>What is the explanation for the famous <span class="math notranslate nohighlight">\(-5/3\)</span> slope of the turbulence kinetic energy spectra?</p></li>
-</ol>
-</div>
-<section id="length-and-time-scales-of-turbulence">
-<h2>Length and time scales of turbulence<a class="headerlink" href="#length-and-time-scales-of-turbulence" title="Permalink to this headline">#</a></h2>
-<p>Production of turbulence happens at large spatial and temporal scales present in the atmospheric boundary layer flow, whereas dissipation of turbulence happens at the smallest scales present.</p>
-<p>Production happens due to shear, or due to buoyancy. Dissipation of turbulence happens to processes happening at the scales where viscosity can act. The strict scale separation between production and dissipation allow for some interesting dimensional analysis.</p>
-<p>Let us take the neutral surface layer as an example. Here, turbulence is generated at the depth of the surface layer <span class="math notranslate nohighlight">\(L\)</span> by a typical wind speed <span class="math notranslate nohighlight">\(U\)</span> and is dissipated at the smallest scale with a viscosity <span class="math notranslate nohighlight">\(\nu\)</span>.
-Since at high Reynolds numbers production does not feel viscosity, the production, with units <span class="math notranslate nohighlight">\(\mathrm{m}^2\ \mathrm{s}^{-3}\)</span>, must be proportional with <span class="math notranslate nohighlight">\(U^3 L^{-1}\)</span>, and the associated length and time scale are <span class="math notranslate nohighlight">\(L\)</span> and <span class="math notranslate nohighlight">\(T \equiv L U^{-1}\)</span>.
-As dissipation is the mechanism to destroy production the amount of dissipation equals the production, but the spatial and temporal scales at which this happen depends strongly on the viscosity <span class="math notranslate nohighlight">\(\nu\)</span>.
-Dimensional reasoning leads us to the Kolomogorov scales: the only length and time scales that we can form from the dissipation and the viscosity</p>
-<div class="admonition-the-kolmogorov-scales admonition">
-<p class="admonition-title">The Kolmogorov scales</p>
-<p>The Kolmogorov length scale <span class="math notranslate nohighlight">\(\eta\)</span> is</p>
-<div class="math notranslate nohighlight">
-\[
-\eta \equiv \left( \dfrac{\nu^3}{\epsilon} \right)^\frac{1}{4}
-= \left( \dfrac{\nu^3 L}{U^3} \right)^\frac{1}{4}.
-\]</div>
-<p>The Kolmogorov time scale <span class="math notranslate nohighlight">\(T_\epsilon\)</span> is</p>
-<div class="math notranslate nohighlight">
-\[
-T_\epsilon \equiv \left( \dfrac{\nu}{\epsilon} \right)^\frac{1}{2}
-= \left( \dfrac{\nu L}{U^3} \right)^\frac{1}{2}.
-\]</div>
-</div>
-<div class="seealso admonition">
-<p class="admonition-title">Question</p>
-<p>What is the ratio in length scales, often referred to as scale separation, between production and dissipation in a neutral atmospheric surface layer with wind speed <span class="math notranslate nohighlight">\(U\)</span> of <span class="math notranslate nohighlight">\(\mathrm{10\ m\ s^{-1}}\)</span>, depth <span class="math notranslate nohighlight">\(L\)</span> of <span class="math notranslate nohighlight">\(100\ \mathrm{m}\)</span>, and kinematic viscosity <span class="math notranslate nohighlight">\(\nu\)</span> of <span class="math notranslate nohighlight">\(1.5 \cdot 10^{-5}\ \mathrm{m\ s^{-1}}\)</span>?</p>
-</div>
-<div class="important dropdown admonition">
-<p class="admonition-title">Answer</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\dfrac{L}{\eta} &amp;= L \left( \dfrac{U^3}{\nu^3 L} \right)^\frac{1}{4} = \left( \dfrac{U L}{\nu} \right)^\frac{3}{4} \\
-                &amp;= \left( \dfrac{10 \cdot 100}{1.5 \cdot 10^{-5}} \right)^\frac{3}{4} \approx 7.38 \cdot 10^{5}
-\end{split}\]</div>
-</div>
+  <section class="tex2jax_ignore mathjax_ignore" id="conservation-of-momentum-i">
+<h1>Conservation of momentum (i)<a class="headerlink" href="#conservation-of-momentum-i" title="Permalink to this headline">#</a></h1>
+<section id="the-momentum-equations">
+<h2>The momentum equations<a class="headerlink" href="#the-momentum-equations" title="Permalink to this headline">#</a></h2>
 </section>
-<hr class="docutils" />
-<section id="the-spectral-structure-of-the-inertial-subrange-of-turbulence">
-<h2>The spectral structure of the inertial subrange of turbulence<a class="headerlink" href="#the-spectral-structure-of-the-inertial-subrange-of-turbulence" title="Permalink to this headline">#</a></h2>
-<p>The turbulence kinetic energy <span class="math notranslate nohighlight">\(e\)</span> can be constructed from its spectral energy <span class="math notranslate nohighlight">\(E\)</span> (energy per wave number <span class="math notranslate nohighlight">\(k\)</span>) following</p>
+<section id="conservation-of-momentum">
+<h2>Conservation of momentum.<a class="headerlink" href="#conservation-of-momentum" title="Permalink to this headline">#</a></h2>
+<p>Wind is a key ingredient of boundary layer meteorology.
+The evolution of wind speed is generally covered via the conservation of momentum, also known as the Navier-Stokes equations.</p>
 <div class="math notranslate nohighlight">
 \[
-e = \int_0^\infty E\,\mathrm{d}k.
+\dfrac{\partial u}{\partial t} + u_j \dfrac{\partial u_i}{\partial x_j}
+= - f_0 \epsilon_{ij3} \left( u_j - u_{g,j} \right) - \delta_{i3} \dfrac{\rho^\prime}{\rho_0} g + \nu \dfrac{\partial^2 u_i}{\partial x_j^2}
 \]</div>
-<p>If we assume a strict separation between production and dissipation in terms of length and time scales, there must exist a region that only transfers energy from the largest to the smallest scales.
-We call this region the <strong>inertial subrange</strong>, and the only parameter relevant there is <span class="math notranslate nohighlight">\(\epsilon\)</span>.
-Note that viscosity <span class="math notranslate nohighlight">\(\nu\)</span> does not play a role here yet.</p>
-<p>Following the same dimensional reasoning as before, and noting that only <span class="math notranslate nohighlight">\(\epsilon\)</span> matters, the spectral energy <span class="math notranslate nohighlight">\(E\)</span> must be related to wave number <span class="math notranslate nohighlight">\(k\)</span> and dissipiation <span class="math notranslate nohighlight">\(\epsilon\)</span> as</p>
-<div class="admonition-kolmogorov-scaling-of-the-intertial-subrange admonition">
-<p class="admonition-title">Kolmogorov scaling of the intertial subrange</p>
 <div class="math notranslate nohighlight">
 \[
-E \sim \epsilon^\frac{2}{3} \kappa^{-\frac{5}{3}}.
+\dfrac{\partial u_i}{\partial t} + \dfrac{\partial u_j u_i}{\partial x_j} = - f_0 \epsilon_{ij3} \left( u_j - u_{g,j} \right) - \delta_{i3} \dfrac{\rho^\prime}{\rho_0} g + \nu \dfrac{\partial^2 u_i}{\partial x_j^2}
 \]</div>
-</div>
-<p>The result that the spectral energy <span class="math notranslate nohighlight">\(E\)</span> for a certain wave number is proportional to wave number <span class="math notranslate nohighlight">\(k\)</span> to the power <span class="math notranslate nohighlight">\(-5/3\)</span> is one of the most fundamental properties of high-Reynolds number turbulent flows.</p>
+</section>
+<section id="reynolds-averaging">
+<h2>Reynolds averaging<a class="headerlink" href="#reynolds-averaging" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="the-ekman-spiral">
+<h2>The Ekman spiral<a class="headerlink" href="#the-ekman-spiral" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="the-logarithmic-wind-profile">
+<h2>The logarithmic wind profile<a class="headerlink" href="#the-logarithmic-wind-profile" title="Permalink to this headline">#</a></h2>
 </section>
 </section>
 

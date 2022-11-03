@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Turbulence &#8212; Boundary-Layer Meteorology</title>
+    <title>1. Conservation of mass &#8212; Boundary-Layer Meteorology</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -54,6 +54,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="2. Exercises week 1" href="../exercises/week1.html" />
+    <link rel="prev" title="Welcome" href="../intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -118,9 +120,9 @@ const thebe_selector_output = ".output, .cell_output"
   Lectures
  </span>
 </p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="1_mass.html">
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    1. Conservation of mass
   </a>
  </li>
@@ -226,7 +228,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Flectures/turbulence.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Flectures/1_mass.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -254,7 +256,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/lectures/turbulence.md"
+        <a href="../_sources/lectures/1_mass.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -314,13 +316,13 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#length-and-time-scales-of-turbulence">
-   Length and time scales of turbulence
+  <a class="reference internal nav-link" href="#derivation">
+   1.1. Derivation
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-spectral-structure-of-the-inertial-subrange-of-turbulence">
-   The spectral structure of the inertial subrange of turbulence
+  <a class="reference internal nav-link" href="#the-boussinesq-approximation">
+   1.2. The Boussinesq approximation
   </a>
  </li>
 </ul>
@@ -332,7 +334,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Turbulence</h1>
+                <h1>Conservation of mass</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -343,13 +345,13 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#length-and-time-scales-of-turbulence">
-   Length and time scales of turbulence
+  <a class="reference internal nav-link" href="#derivation">
+   1.1. Derivation
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-spectral-structure-of-the-inertial-subrange-of-turbulence">
-   The spectral structure of the inertial subrange of turbulence
+  <a class="reference internal nav-link" href="#the-boussinesq-approximation">
+   1.2. The Boussinesq approximation
   </a>
  </li>
 </ul>
@@ -362,72 +364,76 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="turbulence">
-<h1>Turbulence<a class="headerlink" href="#turbulence" title="Permalink to this headline">#</a></h1>
-<div class="admonition-questions-to-be-answered-in-this-chapter admonition">
-<p class="admonition-title">Questions to be answered in this chapter</p>
-<ol class="simple">
-<li><p>What are the length and time scales of production and dissipation of turbulence?</p></li>
-<li><p>How does a turbulence kinetic energy spectra looks?</p></li>
-<li><p>What is the explanation for the famous <span class="math notranslate nohighlight">\(-5/3\)</span> slope of the turbulence kinetic energy spectra?</p></li>
-</ol>
-</div>
-<section id="length-and-time-scales-of-turbulence">
-<h2>Length and time scales of turbulence<a class="headerlink" href="#length-and-time-scales-of-turbulence" title="Permalink to this headline">#</a></h2>
-<p>Production of turbulence happens at large spatial and temporal scales present in the atmospheric boundary layer flow, whereas dissipation of turbulence happens at the smallest scales present.</p>
-<p>Production happens due to shear, or due to buoyancy. Dissipation of turbulence happens to processes happening at the scales where viscosity can act. The strict scale separation between production and dissipation allow for some interesting dimensional analysis.</p>
-<p>Let us take the neutral surface layer as an example. Here, turbulence is generated at the depth of the surface layer <span class="math notranslate nohighlight">\(L\)</span> by a typical wind speed <span class="math notranslate nohighlight">\(U\)</span> and is dissipated at the smallest scale with a viscosity <span class="math notranslate nohighlight">\(\nu\)</span>.
-Since at high Reynolds numbers production does not feel viscosity, the production, with units <span class="math notranslate nohighlight">\(\mathrm{m}^2\ \mathrm{s}^{-3}\)</span>, must be proportional with <span class="math notranslate nohighlight">\(U^3 L^{-1}\)</span>, and the associated length and time scale are <span class="math notranslate nohighlight">\(L\)</span> and <span class="math notranslate nohighlight">\(T \equiv L U^{-1}\)</span>.
-As dissipation is the mechanism to destroy production the amount of dissipation equals the production, but the spatial and temporal scales at which this happen depends strongly on the viscosity <span class="math notranslate nohighlight">\(\nu\)</span>.
-Dimensional reasoning leads us to the Kolomogorov scales: the only length and time scales that we can form from the dissipation and the viscosity</p>
-<div class="admonition-the-kolmogorov-scales admonition">
-<p class="admonition-title">The Kolmogorov scales</p>
-<p>The Kolmogorov length scale <span class="math notranslate nohighlight">\(\eta\)</span> is</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="conservation-of-mass">
+<h1><span class="section-number">1. </span>Conservation of mass<a class="headerlink" href="#conservation-of-mass" title="Permalink to this headline">#</a></h1>
+<section id="derivation">
+<h2><span class="section-number">1.1. </span>Derivation<a class="headerlink" href="#derivation" title="Permalink to this headline">#</a></h2>
+<p>Density <span class="math notranslate nohighlight">\(\rho\)</span> is the variable that captures the mass of the atmosphere.
+For a certain control volume <span class="math notranslate nohighlight">\(\delta x\, \delta y\, \delta z\)</span>, the mass <span class="math notranslate nohighlight">\(M\)</span> is</p>
 <div class="math notranslate nohighlight">
 \[
-\eta \equiv \left( \dfrac{\nu^3}{\epsilon} \right)^\frac{1}{4}
-= \left( \dfrac{\nu^3 L}{U^3} \right)^\frac{1}{4}.
+M = \rho \, \delta x \, \delta y \, \delta z
 \]</div>
-<p>The Kolmogorov time scale <span class="math notranslate nohighlight">\(T_\epsilon\)</span> is</p>
-<div class="math notranslate nohighlight">
-\[
-T_\epsilon \equiv \left( \dfrac{\nu}{\epsilon} \right)^\frac{1}{2}
-= \left( \dfrac{\nu L}{U^3} \right)^\frac{1}{2}.
-\]</div>
-</div>
-<div class="seealso admonition">
-<p class="admonition-title">Question</p>
-<p>What is the ratio in length scales, often referred to as scale separation, between production and dissipation in a neutral atmospheric surface layer with wind speed <span class="math notranslate nohighlight">\(U\)</span> of <span class="math notranslate nohighlight">\(\mathrm{10\ m\ s^{-1}}\)</span>, depth <span class="math notranslate nohighlight">\(L\)</span> of <span class="math notranslate nohighlight">\(100\ \mathrm{m}\)</span>, and kinematic viscosity <span class="math notranslate nohighlight">\(\nu\)</span> of <span class="math notranslate nohighlight">\(1.5 \cdot 10^{-5}\ \mathrm{m\ s^{-1}}\)</span>?</p>
-</div>
-<div class="important dropdown admonition">
-<p class="admonition-title">Answer</p>
+<p>If we want to estimate mass changes within a time period <span class="math notranslate nohighlight">\(\delta t\)</span>, then the change of mass is the balance of all fluxes through the faces of the control volume.
+We can write out the balance:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-\dfrac{L}{\eta} &amp;= L \left( \dfrac{U^3}{\nu^3 L} \right)^\frac{1}{4} = \left( \dfrac{U L}{\nu} \right)^\frac{3}{4} \\
-                &amp;= \left( \dfrac{10 \cdot 100}{1.5 \cdot 10^{-5}} \right)^\frac{3}{4} \approx 7.38 \cdot 10^{5}
+\rho_{x, y, z, t+\delta t} \, \delta x \, \delta y \, \delta z - \rho_{x, y, z, t} \, \delta x \, \delta y \, \delta z
+&amp;= \left( \rho u \right)_{x, y, z, t} \, \delta y \, \delta z \, \delta t &amp;- \left( \rho u \right)_{x + \delta x, y, z, t} \, \delta y \, \delta z \, \delta t \\
+&amp;+ \left( \rho v \right)_{x, y, z, t} \, \delta x \, \delta z \, \delta t &amp;- \left( \rho v \right)_{x, y + \delta y, z, t} \, \delta x \, \delta z \, \delta t \\
+&amp;+ \left( \rho w \right)_{x, y, z, t} \, \delta x \, \delta y \, \delta t &amp;- \left( \rho w \right)_{x, y, z + \delta z, t} \, \delta x \, \delta y \, \delta t
 \end{split}\]</div>
-</div>
+<p>If we assume that the box and the time step are infinitisimal, then we can use a Taylor expansions of the following kind, to substitute in the differences that are calculated in the equation above.</p>
+<div class="math notranslate nohighlight">
+\[
+\left( \rho u \right)_{x + \delta x, y, z, t} = \left( \rho u \right)_{x, y, z, t} + \left( \dfrac{ \partial \rho u }{ \partial x } \right)_{x, y, z, t} \delta x
+\]</div>
+<p>Substitution leads to the following equation, where the <span class="math notranslate nohighlight">\(x, y, z, t\)</span> subscript is omited since it applies to all partial derivatives.</p>
+<div class="math notranslate nohighlight">
+\[
+\dfrac{ \partial \rho }{ \partial t } \, \delta x \, \delta y \, \delta z \, \delta t
+= - \dfrac{ \partial \rho u }{ \partial x } \, \delta x \, \delta y \, \delta z \, \delta t
+  - \dfrac{ \partial \rho v }{ \partial y } \, \delta x \, \delta y \, \delta z \, \delta t
+  - \dfrac{ \partial \rho w }{ \partial z } \, \delta x \, \delta y \, \delta z \, \delta t
+\]</div>
+<p>And after dividing out the volume and time, and moving all terms to the left hand side, we get the conservation of mass equation.</p>
+<div class="math notranslate nohighlight">
+\[
+\dfrac{ \partial \rho }{ \partial t } + \dfrac{\partial \rho u}{\partial x} + \dfrac{\partial \rho v}{\partial y} + \dfrac{\partial \rho w}{\partial z} = 0
+\]</div>
+<p>or in index notation.</p>
+<div class="math notranslate nohighlight">
+\[
+\dfrac{ \partial \rho }{ \partial t } + \dfrac{\partial \rho u_j}{\partial x_j} = 0
+\]</div>
+<p>We can also rewrite this expression into the Lagrangian form of the conservation of mass:</p>
+<div class="math notranslate nohighlight">
+\[
+\dfrac{\partial \rho}{\partial t} + u_j \dfrac{\partial \rho}{\partial x_j} = - \rho \dfrac{\partial u_j}{\partial x_j}
+\]</div>
 </section>
 <hr class="docutils" />
-<section id="the-spectral-structure-of-the-inertial-subrange-of-turbulence">
-<h2>The spectral structure of the inertial subrange of turbulence<a class="headerlink" href="#the-spectral-structure-of-the-inertial-subrange-of-turbulence" title="Permalink to this headline">#</a></h2>
-<p>The turbulence kinetic energy <span class="math notranslate nohighlight">\(e\)</span> can be constructed from its spectral energy <span class="math notranslate nohighlight">\(E\)</span> (energy per wave number <span class="math notranslate nohighlight">\(k\)</span>) following</p>
+<section id="the-boussinesq-approximation">
+<h2><span class="section-number">1.2. </span>The Boussinesq approximation<a class="headerlink" href="#the-boussinesq-approximation" title="Permalink to this headline">#</a></h2>
+<p>We split the density into a slow moving part and a part that contains the fluctuations due to turbulence <span class="math notranslate nohighlight">\(\rho = \overline{\rho} + \rho^\prime\)</span>.
+We can rewrite the conservation of mass as</p>
 <div class="math notranslate nohighlight">
 \[
-e = \int_0^\infty E\,\mathrm{d}k.
+\dfrac{ \partial \overline{\rho} }{ \partial t } + \dfrac{ \partial \rho^\prime }{ \partial t } 
++ u_j \dfrac{\partial \overline{\rho} }{\partial x_j} + u_j \dfrac{\partial \rho^\prime}{\partial x_j}
+= - \left( \overline{\rho} + \rho^\prime \right) \dfrac{\partial u_j}{\partial x_j}
 \]</div>
-<p>If we assume a strict separation between production and dissipation in terms of length and time scales, there must exist a region that only transfers energy from the largest to the smallest scales.
-We call this region the <strong>inertial subrange</strong>, and the only parameter relevant there is <span class="math notranslate nohighlight">\(\epsilon\)</span>.
-Note that viscosity <span class="math notranslate nohighlight">\(\nu\)</span> does not play a role here yet.</p>
-<p>Following the same dimensional reasoning as before, and noting that only <span class="math notranslate nohighlight">\(\epsilon\)</span> matters, the spectral energy <span class="math notranslate nohighlight">\(E\)</span> must be related to wave number <span class="math notranslate nohighlight">\(k\)</span> and dissipiation <span class="math notranslate nohighlight">\(\epsilon\)</span> as</p>
-<div class="admonition-kolmogorov-scaling-of-the-intertial-subrange admonition">
-<p class="admonition-title">Kolmogorov scaling of the intertial subrange</p>
+<p>If we assume that the mean density state is changing so slowly in space and time to the extent that it can be assumed constant, and we further assume that <span class="math notranslate nohighlight">\(\rho^\prime \ll \overline{\rho}\)</span>, then the equation reduces to:</p>
 <div class="math notranslate nohighlight">
 \[
-E \sim \epsilon^\frac{2}{3} \kappa^{-\frac{5}{3}}.
+\overline{\rho} \dfrac{\partial u_j}{\partial x_j} = 0
 \]</div>
-</div>
-<p>The result that the spectral energy <span class="math notranslate nohighlight">\(E\)</span> for a certain wave number is proportional to wave number <span class="math notranslate nohighlight">\(k\)</span> to the power <span class="math notranslate nohighlight">\(-5/3\)</span> is one of the most fundamental properties of high-Reynolds number turbulent flows.</p>
+<p>or</p>
+<div class="math notranslate nohighlight">
+\[
+\dfrac{\partial u_j}{\partial x_j} = 0
+\]</div>
+<p>The latter equation is the conservation of mass we use to study atmospheric boundary layers, and is often called conservation of volume due to the absence of a density term.</p>
 </section>
 </section>
 
@@ -458,6 +464,20 @@ E \sim \epsilon^\frac{2}{3} \kappa^{-\frac{5}{3}}.
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../intro.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Welcome</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../exercises/week1.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">2. </span>Exercises week 1</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             </footer>
         </div>
