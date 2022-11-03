@@ -40,7 +40,7 @@ $$
 \dfrac{ \partial \rho }{ \partial t } + \dfrac{\partial \rho u}{\partial x} + \dfrac{\partial \rho v}{\partial y} + \dfrac{\partial \rho w}{\partial z} = 0
 $$
 
-or in index notation.
+or in index notation. Note that small perturbations also requires that the layer is shallow to the extent that the density change between the surface and the top of the boundary layer is small compared to the mean density $\overline{\rho}$.
 
 
 $$
