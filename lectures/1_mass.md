@@ -46,3 +46,35 @@ or in index notation.
 $$
 \dfrac{ \partial \rho }{ \partial t } + \dfrac{\partial \rho u_j}{\partial x_j} = 0
 $$
+
+We can also rewrite this expression into the Lagrangian form of the conservation of mass:
+
+$$
+\dfrac{\partial \rho}{\partial t} + u_j \dfrac{\partial \rho}{\partial x_j} = - \rho \dfrac{\partial u_j}{\partial x_j}
+$$
+
+---
+
+## The Boussinesq approximation
+We split the density into a slow moving part and a part that contains the fluctuations due to turbulence $\rho = \overline{\rho} + \rho^\prime$.
+We can rewrite the conservation of mass as
+
+$$
+\dfrac{ \partial \overline{\rho} }{ \partial t } + \dfrac{ \partial \rho^\prime }{ \partial t } 
++ u_j \dfrac{\partial \overline{\rho} }{\partial x_j} + u_j \dfrac{\partial \rho^\prime}{\partial x_j}
+= - \left( \overline{\rho} + \rho^\prime \right) \dfrac{\partial u_j}{\partial x_j}
+$$
+
+If we assume that the mean density state is changing so slowly in space and time to the extent that it can be assumed constant, and we further assume that $\rho^\prime \ll \overline{\rho}$, then the equation reduces to:
+
+$$
+\overline{\rho} \dfrac{\partial u_j}{\partial x_j} = 0
+$$
+
+or
+
+$$
+\dfrac{\partial u_j}{\partial x_j} = 0
+$$
+
+The latter equation is the conservation of mass we use to study atmospheric boundary layers, and is often called conservation of volume due to the absence of a density term.
