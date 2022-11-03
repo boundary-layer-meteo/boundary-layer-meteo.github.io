@@ -114,7 +114,6 @@ First, we work out the second term. We replace the partial derivative by hydrost
 
 $$
 T \dfrac{\partial}{\partial z} \left( \left( \dfrac{p_0}{p}\right)^\frac{\Rd}{\cp} \right)
-&= T \dfrac{\Rd}{\cp} \left( \dfrac{\partial}{\partial z}\left( \dfrac{p_0}{p} \right) \right) ^{\frac{\Rd}{\cp} - 1} \\
 &= T \dfrac{\Rd}{\cp} \left( \dfrac{p_0}{p} \right)^{\frac{\Rd}{\cp} - 1} \cdot \dfrac{\partial}{\partial z}\left( \dfrac{p_0}{p} \right) \\
 &= T \dfrac{\Rd}{\cp} \left( \dfrac{p_0}{p} \right)^{\frac{\Rd}{\cp}} \left( \dfrac{p}{p_0} \right) \cdot - \left( \dfrac{p_0}{p^2} \right) \dfrac{\partial p}{\partial z} \\
 &= T \dfrac{\Rd}{\cp} \left( \dfrac{p_0}{p} \right)^{\frac{\Rd}{\cp}} \cdot - \left( \dfrac{1}{p} \right) \dfrac{\partial p}{\partial z} \\
