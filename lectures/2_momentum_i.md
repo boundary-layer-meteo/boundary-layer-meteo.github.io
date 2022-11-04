@@ -1,11 +1,13 @@
 # Conservation of momentum (i)
-
 $$
 \def\pd#1#2{\dfrac{\partial #1}{\partial #2}} \\
 \def\rhobar{\overline{\rho}} \\
-\def\pdd#1#2{\dfrac{\partial^2 #1}{\partial#2^2}}
+\def\pdd#1#2{\dfrac{\partial^2 #1}{\partial#2^2}} \\
+\def\uibar{\overline{u_i}} \\
+\def\uiprime{u_i^\prime} \\
+\def\ujbar{\overline{u_j}} \\
+\def\ujprime{u_j^\prime}
 $$
-
 
 ## Conservation of momentum in an incompressible atmospheric boundary layer.
 Wind is a key ingredient of boundary layer meteorology.
@@ -37,9 +39,82 @@ $$
 \pd{w}{t} + u_j \pd{w}{x_j} = - \dfrac{1}{\rhobar} \pd{p^\prime}{z} - \dfrac{\rho^\prime}{\rhobar} g + \nu \pdd{w}{x_j}
 $$
 
-With index notation, we can combine the momentum equations to get the set that we need before we introduce the Reynolds averaging for the velocity components
+With index notation, we can combine the three momentum equations:
 
 $$
 \pd{u_i}{t} + u_j \pd{u_i}{x_j} = \pd{p^\prime}{x_i} - f \epsilon_{ij3} \left( u_j - u_{g,j} \right) - \delta_{i3} \dfrac{\rho^\prime}{\rhobar} g + \nu \pdd{u_i}{x_j}
 $$
 
+The last step is to put the advection term in the flux form. With the help of the chain rule, we can write:
+
+$$
+\pd{u_i u_j}{x_j} = u_j \pd{u_i}{x_j} + u_i \pd{u_j}{x_j}
+$$
+
+The latter term is zero because of incompressibility, thus we can write our final equation as:
+
+$$
+\pd{u_i}{t} + \pd{u_i u_j}{x_j} = - \dfrac{1}{\rhobar} \pd{p^\prime}{x_i} + f \epsilon_{ij3} \left( u_j - u_{g,j} \right) - \delta_{i3} \dfrac{\rho^\prime}{\rhobar} g + \nu \pdd{u_i}{x_j}
+$$
+
+## Reynolds averaging the velocity components
+We will now introduce the Reynolds averaging of the velocity components, thus we split all velocity instances in a mean and a perturbation.
+
+$$
+\pd{\uibar}{t} + \pd{\uiprime}{t}
++ \pd{\uibar \ujbar}{x_j}
++ \pd{\uiprime \ujbar}{x_j}
++ \pd{\uibar \ujprime}{x_j}
++ \pd{\uiprime \ujprime}{x_j}
+= \\ 
+- \dfrac{1}{\rhobar} \pd{p^\prime}{x_i}
++ f \epsilon_{ij3} \left( \ujbar + \ujprime - u_{g,j} \right)
+- \delta_{i3} \dfrac{\rho^\prime}{\rhobar} g
++ \nu \pdd{\uibar}{x_j}
++ \nu \pdd{\uiprime}{x_j}
+$$
+
+We are interested to retrieve the evolution of the mean velocity $\uibar$, so we take the mean of the entire equation. 
+
+$$
+\overline{ \pd{\uibar}{t}
++ \pd{\uiprime}{t}
++ \pd{\uibar \ujbar}{x_j}
++ \pd{\uiprime \ujbar}{x_j}
++ \pd{\uibar \ujprime}{x_j}
++ \pd{\uiprime \ujprime}{x_j}
+= } \\ 
+\overline {- \dfrac{1}{\rhobar} \pd{p^\prime}{x_i}
++ f \epsilon_{ij3} \left( \ujbar + \ujprime - u_{g,j} \right)
+- \delta_{i3} \dfrac{\rho^\prime}{\rhobar} g
++ \nu \pdd{\uibar}{x_j}
++ \nu \pdd{\uiprime}{x_j}}
+$$
+
+Subsequently, we make use of the rule $\overline{A + B} = \overline{A} + \overline{B}$.
+
+$$
+  \overline{ \pd{\uibar}{t} }
++ \overline{ \pd{\uiprime}{t} }
++ \overline{ \pd{\uibar \ujbar}{x_j} }
++ \overline{ \pd{\uiprime \ujbar}{x_j} }
++ \overline{ \pd{\uibar \ujprime}{x_j} }
++ \overline{ \pd{\uiprime \ujprime}{x_j} }
+= \\
+  \overline{ - \dfrac{1}{\rhobar} \pd{p^\prime}{x_i} }
++ \overline{ f \epsilon_{ij3} \left( \ujbar + \ujprime - u_{g,j} \right) }
+- \overline{ \delta_{i3} \dfrac{\rho^\prime}{\rhobar} g }
++ \overline{ \nu \pdd{\uibar}{x_j} }
++ \overline{ \nu \pdd{\uiprime}{x_j} }
+$$
+
+Subsequently, we make use of the rules $\overline{\pd{A}{t}} = \pd{\overline{A}}{t}$, $\overline{A^\prime} = 0$, $\overline{\overline{A} + B} = \overline{A} + \overline{B}$, and $\overline{cA} = c \overline{A}$ to end at
+
+$$
+  \pd{\uibar}{t}
++ \pd{\uibar \ujbar}{x_j}
+=
+- \pd{\overline{ \uiprime \ujprime }}{x_j}
++ f \epsilon_{ij3} \left( \ujbar - u_{g,j} \right)
++ \nu \pdd{\uibar}{x_j}
+$$
