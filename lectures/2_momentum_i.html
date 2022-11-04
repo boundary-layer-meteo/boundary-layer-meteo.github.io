@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Conservation of momentum (i) &#8212; Boundary-Layer Meteorology</title>
+    <title>2. Conservation of momentum (i) &#8212; Boundary-Layer Meteorology</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -54,6 +54,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="3. Exercises week 1" href="../exercises/week1.html" />
+    <link rel="prev" title="1. Conservation of mass" href="1_mass.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -118,10 +120,15 @@ const thebe_selector_output = ".output, .cell_output"
   Lectures
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="1_mass.html">
    1. Conservation of mass
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   2. Conservation of momentum (i)
   </a>
  </li>
 </ul>
@@ -133,7 +140,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../exercises/week1.html">
-   2. Exercises week 1
+   3. Exercises week 1
   </a>
  </li>
 </ul>
@@ -314,23 +321,8 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-momentum-equations">
-   The momentum equations
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#conservation-of-momentum">
-   Conservation of momentum.
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#reynolds-averaging">
-   Reynolds averaging
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-logarithmic-wind-profile">
-   The logarithmic wind profile
+  <a class="reference internal nav-link" href="#conservation-of-momentum-in-an-incompressible-atmospheric-boundary-layer">
+   2.1. Conservation of momentum in an incompressible atmospheric boundary layer.
   </a>
  </li>
 </ul>
@@ -353,23 +345,8 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-momentum-equations">
-   The momentum equations
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#conservation-of-momentum">
-   Conservation of momentum.
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#reynolds-averaging">
-   Reynolds averaging
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-logarithmic-wind-profile">
-   The logarithmic wind profile
+  <a class="reference internal nav-link" href="#conservation-of-momentum-in-an-incompressible-atmospheric-boundary-layer">
+   2.1. Conservation of momentum in an incompressible atmospheric boundary layer.
   </a>
  </li>
 </ul>
@@ -383,29 +360,44 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="conservation-of-momentum-i">
-<h1>Conservation of momentum (i)<a class="headerlink" href="#conservation-of-momentum-i" title="Permalink to this headline">#</a></h1>
-<section id="the-momentum-equations">
-<h2>The momentum equations<a class="headerlink" href="#the-momentum-equations" title="Permalink to this headline">#</a></h2>
-</section>
-<section id="conservation-of-momentum">
-<h2>Conservation of momentum.<a class="headerlink" href="#conservation-of-momentum" title="Permalink to this headline">#</a></h2>
+<h1><span class="section-number">2. </span>Conservation of momentum (i)<a class="headerlink" href="#conservation-of-momentum-i" title="Permalink to this headline">#</a></h1>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\def\pd#1#2{\dfrac{\partial #1}{\partial #2}} \\
+\def\rhobar{\overline{\rho}} \\
+\def\pdd#1#2{\dfrac{\partial^2 #1}{\partial#2^2}}
+\end{split}\]</div>
+<section id="conservation-of-momentum-in-an-incompressible-atmospheric-boundary-layer">
+<h2><span class="section-number">2.1. </span>Conservation of momentum in an incompressible atmospheric boundary layer.<a class="headerlink" href="#conservation-of-momentum-in-an-incompressible-atmospheric-boundary-layer" title="Permalink to this headline">#</a></h2>
 <p>Wind is a key ingredient of boundary layer meteorology.
 The evolution of wind speed is generally covered via the conservation of momentum, also known as the Navier-Stokes equations.</p>
+<p>First, we introduce the equations for horizontal momentum for an incompressible flow, where we have already introduced the mean density <span class="math notranslate nohighlight">\(\rhobar\)</span>, and we will also split the other thermodynamic variable <span class="math notranslate nohighlight">\(p\)</span> in a mean and a perturbation.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\pd{u}{t} + u_j \pd{u}{x_j} &amp;= - \dfrac{1}{\rhobar} \pd{\overline{p}}{x} - \dfrac{1}{\rhobar} \pd{p^\prime}{x} + f v + \nu \pdd{u}{x_j} \\
+\pd{v}{t} + u_j \pd{v}{x_j} &amp;= - \dfrac{1}{\rhobar} \pd{\overline{p}}{y} - \dfrac{1}{\rhobar} \pd{p^\prime}{y} - f u + \nu \pdd{v}{x_j}
+\end{split}\]</div>
+<p>We can now substitute the mean pressure gradient by the geostrophic wind definitions <span class="math notranslate nohighlight">\(fv_g \equiv \dfrac{1}{\rhobar}\pd{p}{x}\)</span> and <span class="math notranslate nohighlight">\(fu_g \equiv - \dfrac{1}{\rhobar}\pd{p}{y}\)</span> to get:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\pd{u}{t} + u_j \pd{u}{x_j} &amp;= - \dfrac{1}{\rhobar} \pd{p^\prime}{x} + f \left( v - v_g \right) + \nu \pdd{u}{x_j} \\
+\pd{v}{t} + u_j \pd{v}{x_j} &amp;= - \dfrac{1}{\rhobar} \pd{p^\prime}{y} + f \left( u - u_g \right) + \nu \pdd{v}{x_j}
+\end{split}\]</div>
+<p>For the vertical momentum equations, we briefly take a step back and reintroduce the density perturbation and multiply the equation with <span class="math notranslate nohighlight">\(\rho\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[
-\dfrac{\partial u}{\partial t} + u_j \dfrac{\partial u_i}{\partial x_j}
-= - f_0 \epsilon_{ij3} \left( u_j - u_{g,j} \right) - \delta_{i3} \dfrac{\rho^\prime}{\rho_0} g + \nu \dfrac{\partial^2 u_i}{\partial x_j^2}
+\left( \rhobar + \rho^\prime \right) \pd{w}{t} + \left( \rhobar + \rho^\prime \right) u_j \pd{w}{x_j} = - \pd{\overline{p}}{z} - \pd{p^\prime}{z} - \left( \rhobar + \rho^\prime \right) g + \nu \pdd{w}{x_j}
 \]</div>
+<p>We know that in on the larger scales, the flow is in hydrostatic balance <span class="math notranslate nohighlight">\(\pd{\overline{p}}{z} = - \rhobar g\)</span>, and hence we can eliminate these very large terms from the equation. If we divide out <span class="math notranslate nohighlight">\(\rho\)</span> again, and neglect perturbations, we get:</p>
 <div class="math notranslate nohighlight">
 \[
-\dfrac{\partial u_i}{\partial t} + \dfrac{\partial u_j u_i}{\partial x_j} = - f_0 \epsilon_{ij3} \left( u_j - u_{g,j} \right) - \delta_{i3} \dfrac{\rho^\prime}{\rho_0} g + \nu \dfrac{\partial^2 u_i}{\partial x_j^2}
+\pd{w}{t} + u_j \pd{w}{x_j} = - \dfrac{1}{\rhobar} \pd{p^\prime}{z} - \dfrac{\rho^\prime}{\rhobar} g + \nu \pdd{w}{x_j}
 \]</div>
-</section>
-<section id="reynolds-averaging">
-<h2>Reynolds averaging<a class="headerlink" href="#reynolds-averaging" title="Permalink to this headline">#</a></h2>
-</section>
-<section id="the-logarithmic-wind-profile">
-<h2>The logarithmic wind profile<a class="headerlink" href="#the-logarithmic-wind-profile" title="Permalink to this headline">#</a></h2>
+<p>With index notation, we can combine the momentum equations to get the set that we need before we introduce the Reynolds averaging for the velocity components</p>
+<div class="math notranslate nohighlight">
+\[
+\pd{u_i}{t} + u_j \pd{u_i}{x_j} = \pd{p^\prime}{x_i} - f \epsilon_{ij3} \left( u_j - u_{g,j} \right) - \delta_{i3} \dfrac{\rho^\prime}{\rhobar} g + \nu \pdd{u_i}{x_j}
+\]</div>
 </section>
 </section>
 
@@ -436,6 +428,20 @@ The evolution of wind speed is generally covered via the conservation of momentu
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="1_mass.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">1. </span>Conservation of mass</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../exercises/week1.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>Exercises week 1</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             </footer>
         </div>
