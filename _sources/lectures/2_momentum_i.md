@@ -1,5 +1,14 @@
 # Conservation of momentum (i)
 
+```{admonition} Questions to be answered in this chapter
+1. What is the equation for conservation of momentum in the atmospheric boundary layer?
+1. Which assumptions are made to get to this equation?
+1. What is the meaning of the Reynolds and the Rossby number?
+1. What are the values of the Reynolds and the Rossby number and what is the implication thereof?
+<!--- 1. What is the meaning of the Reynolds number? -->
+<!--- 1. What is the value of the Reynolds number and what is the implication thereof? -->
+```
+
 $\def\pd#1#2{\dfrac{\partial #1}{\partial #2}}$
 $\def\rhobar{\overline{\rho}}$
 $\def\pdd#1#2{\dfrac{\partial^2 #1}{\partial#2^2}}$
@@ -45,7 +54,7 @@ $$
 With index notation, we can combine the three momentum equations:
 
 $$
-\pd{u_i}{t} + u_j \pd{u_i}{x_j} = \pd{p^\prime}{x_i} - f \epsilon_{ij3} \left( u_j - u_{g,j} \right) - \delta_{i3} \dfrac{\rho^\prime}{\rhobar} g + \nu \pdd{u_i}{x_j}
+\pd{u_i}{t} + u_j \pd{u_i}{x_j} = \dfrac{1}{\rhobar} \pd{p^\prime}{x_i} - f \epsilon_{ij3} \left( u_j - u_{g,j} \right) - \delta_{i3} \dfrac{\rho^\prime}{\rhobar} g + \nu \pdd{u_i}{x_j}
 $$
 
 The last step is to put the advection term in the flux form. With the help of the chain rule, we can write:

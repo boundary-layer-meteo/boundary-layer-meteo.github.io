@@ -326,13 +326,18 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-closure-problem">
+   3.1. The closure problem
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-ekman-spiral">
-   3.1. The Ekman spiral
+   3.2. The Ekman spiral
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-logarithmic-wind-profile">
-   3.2. The logarithmic wind profile
+   3.3. The logarithmic wind profile
   </a>
  </li>
 </ul>
@@ -355,13 +360,18 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-closure-problem">
+   3.1. The closure problem
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-ekman-spiral">
-   3.1. The Ekman spiral
+   3.2. The Ekman spiral
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-logarithmic-wind-profile">
-   3.2. The logarithmic wind profile
+   3.3. The logarithmic wind profile
   </a>
  </li>
 </ul>
@@ -376,6 +386,15 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="conservation-of-momentum-ii">
 <h1><span class="section-number">3. </span>Conservation of momentum (ii)<a class="headerlink" href="#conservation-of-momentum-ii" title="Permalink to this headline">#</a></h1>
+<div class="admonition-questions-to-be-answered-in-this-chapter admonition">
+<p class="admonition-title">Questions to be answered in this chapter</p>
+<ol class="simple">
+<li><p>What is the closure problem?</p></li>
+<li><p>What is K-theory?</p></li>
+<li><p>What is Ekman spiral and how is it acquired?</p></li>
+<li><p>Why is the wind profile in the atmosphere logarithmic?</p></li>
+</ol>
+</div>
 <p><span class="math notranslate nohighlight">\(\def\pd#1#2{\dfrac{\partial #1}{\partial #2}}\)</span>
 <span class="math notranslate nohighlight">\(\def\rhobar{\overline{\rho}}\)</span>
 <span class="math notranslate nohighlight">\(\def\pdd#1#2{\dfrac{\partial^2 #1}{\partial#2^2}}\)</span>
@@ -385,9 +404,12 @@ title="Print to PDF"
 <span class="math notranslate nohighlight">\(\def\ujprime{u_j^\prime}\)</span>
 <span class="math notranslate nohighlight">\(\def\ubar{\overline{u}}\)</span>
 <span class="math notranslate nohighlight">\(\def\vbar{\overline{v}}\)</span>
-<span class="math notranslate nohighlight">\(\def\wbar{\overline{w}}\)</span></p>
-<section id="the-ekman-spiral">
-<h2><span class="section-number">3.1. </span>The Ekman spiral<a class="headerlink" href="#the-ekman-spiral" title="Permalink to this headline">#</a></h2>
+<span class="math notranslate nohighlight">\(\def\wbar{\overline{w}}\)</span>
+<span class="math notranslate nohighlight">\(\def\uwflux{\overline{u^\prime w^\prime}}\)</span>
+<span class="math notranslate nohighlight">\(\def\vwflux{\overline{v^\prime w^\prime}}\)</span>
+<span class="math notranslate nohighlight">\(\def\zom{z_{\mathrm{0m}}}\)</span></p>
+<section id="the-closure-problem">
+<h2><span class="section-number">3.1. </span>The closure problem<a class="headerlink" href="#the-closure-problem" title="Permalink to this headline">#</a></h2>
 <p>The starting point is the equation as derived in the previous section.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -400,9 +422,57 @@ title="Print to PDF"
 - \pd{\overline{ v^\prime w^\prime }}{z}
 - f \left( \ubar - u_g \right)
 \end{split}\]</div>
+<p>This set cannot be solved, because Reynolds averaging introduced two new variables <span class="math notranslate nohighlight">\(\uwflux\)</span> and <span class="math notranslate nohighlight">\(\vwflux\)</span>.
+This problem is called the <em>closure problem</em>.
+The work of Prandtl brought forward the philosophy of treating turbulent fluxes as diffusive fluxes, which allow the equations to be closed as:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\uwflux &amp;= - K_m \pd{\ubar}{z} \\
+\vwflux &amp;= - K_m \pd{\vbar}{z} \\
+\end{split}\]</div>
+<p>This approach is called <em>K-theory</em>, and variable <span class="math notranslate nohighlight">\(K_m\)</span> is called the <em>eddy diffusivity</em>.</p>
+</section>
+<section id="the-ekman-spiral">
+<h2><span class="section-number">3.2. </span>The Ekman spiral<a class="headerlink" href="#the-ekman-spiral" title="Permalink to this headline">#</a></h2>
+<p>Ekman used the simplest form of K-theory by choosing a constant value for <span class="math notranslate nohighlight">\(K_m\)</span> and in addition he assumed a steady state, and no geostrophic wind in the north-south direction (<span class="math notranslate nohighlight">\(v_g = 0\)</span>). This gives the set:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+0 &amp;= K_m \pdd{\ubar}{z} + f \vbar \\
+0 &amp;= K_m \pdd{\vbar}{z} - f \left( \ubar - u_g \right)
+\end{split}\]</div>
+<p>He solved the set analytically for the following boundary conditions: <span class="math notranslate nohighlight">\(\ubar(z = 0) = 0\)</span>, <span class="math notranslate nohighlight">\(\vbar(z = 0) = 0\)</span> and <span class="math notranslate nohighlight">\(\ubar(z = \infty) = u_g\)</span>, <span class="math notranslate nohighlight">\(\vbar(z = \infty) = 0\)</span>.
+The solution is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\ubar &amp;= u_g \left( 1 - \exp \left( - \gamma z \right) \cos \left( \gamma z \right) \right) \\
+\vbar &amp;= u_g \left(     \exp \left( - \gamma z \right) \sin \left( \gamma z \right) \right) \\
+\gamma &amp;= \left( \dfrac{f}{2 K_m} \right)^\frac{1}{2}
+\end{split}\]</div>
 </section>
 <section id="the-logarithmic-wind-profile">
-<h2><span class="section-number">3.2. </span>The logarithmic wind profile<a class="headerlink" href="#the-logarithmic-wind-profile" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">3.3. </span>The logarithmic wind profile<a class="headerlink" href="#the-logarithmic-wind-profile" title="Permalink to this headline">#</a></h2>
+<p>The lab experiments of Prandtl showed that K-theory with constant values of <span class="math notranslate nohighlight">\(K_m\)</span> does not reproduce the logarithmic profiles that were observed in the lab or in the atmosphere.</p>
+<p>The eddy diffusivity <span class="math notranslate nohighlight">\(K_m\)</span>, with units of <span class="math notranslate nohighlight">\(\mathrm{m^2\ s^{-1}}\)</span> can be seen as a multiplication of a length scale that measures the scale of mixing eddies, and a velocity scale that measures the intensity of mixing.
+Prandtl discovered that the relevant length scale is the distance from the wall, whereas the relevant mixing intensity is the surface friction <span class="math notranslate nohighlight">\(u_*\)</span> which is defined as <span class="math notranslate nohighlight">\(u_*^2 \equiv \left( \uwflux^2_0 + \vwflux^2_0 \right)^\frac{1}{2}\)</span>.</p>
+<p>If we assume that the boundary layer is much deeper than the surface layer, we can assume that the momentum flux is by approximation constant in the surface layer. If we then align our coordinate system with the wind, we can write</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\uwflux \approx \uwflux_0 &amp;= - K_m \pd{\ubar}{z} \\
+                u_*^2     &amp;= \kappa z u_* \pd{\ubar}{z}
+\end{split}\]</div>
+<p>With some reshuffling, we can rewrite the equation and subsequently integrate it from <span class="math notranslate nohighlight">\(z_1\)</span> to <span class="math notranslate nohighlight">\(z_2\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split} 
+\int_{z_1}^{z_2} \pd{\ubar}{z} \textrm{d}z &amp;= \int_{z_1}^{z_2} \dfrac{u_*}{\kappa} \dfrac{1}{z} \textrm{d}z \\
+u(z_2) - u(z_1) &amp;= \dfrac{u_*}{\kappa} \left( \ln(z_2) - \ln(z_1) \right) \\
+u(z_2) - u(z_1) &amp;= \dfrac{u_*}{\kappa} \ln \left( \dfrac{z_2}{z_1} \right)
+\end{split}\]</div>
+<p>If we assume the logarithmic profile to be zero at the roughness length for momentum <span class="math notranslate nohighlight">\(\zom\)</span> then, the wind <span class="math notranslate nohighlight">\(u\)</span> at height <span class="math notranslate nohighlight">\(z\)</span> can be computed following</p>
+<div class="math notranslate nohighlight">
+\[ 
+u(z) = \dfrac{u_*}{\kappa} \ln \left( \dfrac{z}{\zom} \right)
+\]</div>
+<p>This the famous expression for the logarithmic wind profile, also known in fluid dynamics as the <em>law of the wall</em>.</p>
 </section>
 </section>
 
