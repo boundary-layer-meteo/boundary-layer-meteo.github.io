@@ -325,6 +325,11 @@ title="Print to PDF"
    2.1. Conservation of momentum in an incompressible atmospheric boundary layer.
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reynolds-averaging-the-velocity-components">
+   2.2. Reynolds averaging the velocity components
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -349,6 +354,11 @@ title="Print to PDF"
    2.1. Conservation of momentum in an incompressible atmospheric boundary layer.
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reynolds-averaging-the-velocity-components">
+   2.2. Reynolds averaging the velocity components
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -365,7 +375,11 @@ title="Print to PDF"
 \[\begin{split}
 \def\pd#1#2{\dfrac{\partial #1}{\partial #2}} \\
 \def\rhobar{\overline{\rho}} \\
-\def\pdd#1#2{\dfrac{\partial^2 #1}{\partial#2^2}}
+\def\pdd#1#2{\dfrac{\partial^2 #1}{\partial#2^2}} \\
+\def\uibar{\overline{u_i}} \\
+\def\uiprime{u_i^\prime} \\
+\def\ujbar{\overline{u_j}} \\
+\def\ujprime{u_j^\prime}
 \end{split}\]</div>
 <section id="conservation-of-momentum-in-an-incompressible-atmospheric-boundary-layer">
 <h2><span class="section-number">2.1. </span>Conservation of momentum in an incompressible atmospheric boundary layer.<a class="headerlink" href="#conservation-of-momentum-in-an-incompressible-atmospheric-boundary-layer" title="Permalink to this headline">#</a></h2>
@@ -393,10 +407,80 @@ The evolution of wind speed is generally covered via the conservation of momentu
 \[
 \pd{w}{t} + u_j \pd{w}{x_j} = - \dfrac{1}{\rhobar} \pd{p^\prime}{z} - \dfrac{\rho^\prime}{\rhobar} g + \nu \pdd{w}{x_j}
 \]</div>
-<p>With index notation, we can combine the momentum equations to get the set that we need before we introduce the Reynolds averaging for the velocity components</p>
+<p>With index notation, we can combine the three momentum equations:</p>
 <div class="math notranslate nohighlight">
 \[
 \pd{u_i}{t} + u_j \pd{u_i}{x_j} = \pd{p^\prime}{x_i} - f \epsilon_{ij3} \left( u_j - u_{g,j} \right) - \delta_{i3} \dfrac{\rho^\prime}{\rhobar} g + \nu \pdd{u_i}{x_j}
+\]</div>
+<p>The last step is to put the advection term in the flux form. With the help of the chain rule, we can write:</p>
+<div class="math notranslate nohighlight">
+\[
+\pd{u_i u_j}{x_j} = u_j \pd{u_i}{x_j} + u_i \pd{u_j}{x_j}
+\]</div>
+<p>The latter term is zero because of incompressibility, thus we can write our final equation as:</p>
+<div class="math notranslate nohighlight">
+\[
+\pd{u_i}{t} + \pd{u_i u_j}{x_j} = - \dfrac{1}{\rhobar} \pd{p^\prime}{x_i} + f \epsilon_{ij3} \left( u_j - u_{g,j} \right) - \delta_{i3} \dfrac{\rho^\prime}{\rhobar} g + \nu \pdd{u_i}{x_j}
+\]</div>
+</section>
+<section id="reynolds-averaging-the-velocity-components">
+<h2><span class="section-number">2.2. </span>Reynolds averaging the velocity components<a class="headerlink" href="#reynolds-averaging-the-velocity-components" title="Permalink to this headline">#</a></h2>
+<p>We will now introduce the Reynolds averaging of the velocity components, thus we split all velocity instances in a mean and a perturbation.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\pd{\uibar}{t} + \pd{\uiprime}{t}
++ \pd{\uibar \ujbar}{x_j}
++ \pd{\uiprime \ujbar}{x_j}
++ \pd{\uibar \ujprime}{x_j}
++ \pd{\uiprime \ujprime}{x_j}
+= \\ 
+- \dfrac{1}{\rhobar} \pd{p^\prime}{x_i}
++ f \epsilon_{ij3} \left( \ujbar + \ujprime - u_{g,j} \right)
+- \delta_{i3} \dfrac{\rho^\prime}{\rhobar} g
++ \nu \pdd{\uibar}{x_j}
++ \nu \pdd{\uiprime}{x_j}
+\end{split}\]</div>
+<p>We are interested to retrieve the evolution of the mean velocity <span class="math notranslate nohighlight">\(\uibar\)</span>, so we take the mean of the entire equation.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\overline{ \pd{\uibar}{t}
++ \pd{\uiprime}{t}
++ \pd{\uibar \ujbar}{x_j}
++ \pd{\uiprime \ujbar}{x_j}
++ \pd{\uibar \ujprime}{x_j}
++ \pd{\uiprime \ujprime}{x_j}
+= } \\ 
+\overline {- \dfrac{1}{\rhobar} \pd{p^\prime}{x_i}
++ f \epsilon_{ij3} \left( \ujbar + \ujprime - u_{g,j} \right)
+- \delta_{i3} \dfrac{\rho^\prime}{\rhobar} g
++ \nu \pdd{\uibar}{x_j}
++ \nu \pdd{\uiprime}{x_j}}
+\end{split}\]</div>
+<p>Subsequently, we make use of the rule <span class="math notranslate nohighlight">\(\overline{A + B} = \overline{A} + \overline{B}\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+  \overline{ \pd{\uibar}{t} }
++ \overline{ \pd{\uiprime}{t} }
++ \overline{ \pd{\uibar \ujbar}{x_j} }
++ \overline{ \pd{\uiprime \ujbar}{x_j} }
++ \overline{ \pd{\uibar \ujprime}{x_j} }
++ \overline{ \pd{\uiprime \ujprime}{x_j} }
+= \\
+  \overline{ - \dfrac{1}{\rhobar} \pd{p^\prime}{x_i} }
++ \overline{ f \epsilon_{ij3} \left( \ujbar + \ujprime - u_{g,j} \right) }
+- \overline{ \delta_{i3} \dfrac{\rho^\prime}{\rhobar} g }
++ \overline{ \nu \pdd{\uibar}{x_j} }
++ \overline{ \nu \pdd{\uiprime}{x_j} }
+\end{split}\]</div>
+<p>Subsequently, we make use of the rules <span class="math notranslate nohighlight">\(\overline{\pd{A}{t}} = \pd{\overline{A}}{t}\)</span>, <span class="math notranslate nohighlight">\(\overline{A^\prime} = 0\)</span>, <span class="math notranslate nohighlight">\(\overline{\overline{A} + B} = \overline{A} + \overline{B}\)</span>, and <span class="math notranslate nohighlight">\(\overline{cA} = c \overline{A}\)</span> to end at</p>
+<div class="math notranslate nohighlight">
+\[
+  \pd{\uibar}{t}
++ \pd{\uibar \ujbar}{x_j}
+=
+- \pd{\overline{ \uiprime \ujprime }}{x_j}
++ f \epsilon_{ij3} \left( \ujbar - u_{g,j} \right)
++ \nu \pdd{\uibar}{x_j}
 \]</div>
 </section>
 </section>
