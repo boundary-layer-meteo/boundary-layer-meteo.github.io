@@ -1,16 +1,15 @@
 # Conservation of momentum (i)
-$$
-\def\pd#1#2{\dfrac{\partial #1}{\partial #2}} \\
-\def\rhobar{\overline{\rho}} \\
-\def\pdd#1#2{\dfrac{\partial^2 #1}{\partial#2^2}} \\
-\def\uibar{\overline{u_i}} \\
-\def\uiprime{u_i^\prime} \\
-\def\ujbar{\overline{u_j}} \\
-\def\ujprime{u_j^\prime}
-\def\ubar{\overline{u}} \\
-\def\vbar{\overline{v}} \\
-\def\wbar{\overline{w}} \\
-$$
+
+$\def\pd#1#2{\dfrac{\partial #1}{\partial #2}}$
+$\def\rhobar{\overline{\rho}}$
+$\def\pdd#1#2{\dfrac{\partial^2 #1}{\partial#2^2}}$
+$\def\uibar{\overline{u_i}}$
+$\def\uiprime{u_i^\prime}$
+$\def\ujbar{\overline{u_j}}$
+$\def\ujprime{u_j^\prime}$
+$\def\ubar{\overline{u}}$
+$\def\vbar{\overline{v}}$
+$\def\wbar{\overline{w}}$
 
 ## Conservation of momentum in an incompressible atmospheric boundary layer.
 Wind is a key ingredient of boundary layer meteorology.
