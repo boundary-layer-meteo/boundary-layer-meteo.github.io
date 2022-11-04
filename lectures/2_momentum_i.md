@@ -12,6 +12,7 @@ $\def\vbar{\overline{v}}$
 $\def\wbar{\overline{w}}$
 
 ## Conservation of momentum in an incompressible atmospheric boundary layer.
+
 Wind is a key ingredient of boundary layer meteorology.
 The evolution of wind speed is generally covered via the conservation of momentum, also known as the Navier-Stokes equations.
 

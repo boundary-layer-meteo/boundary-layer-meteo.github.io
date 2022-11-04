@@ -9,7 +9,7 @@ parts:
     chapters:
      - file: lectures/1_mass
      - file: lectures/2_momentum_i
-#     - file: lectures/wind
+     - file: lectures/3_momentum_ii
 #     - file: lectures/turbulence
 #     - file: lectures/temperature
 #   - caption: Theory
