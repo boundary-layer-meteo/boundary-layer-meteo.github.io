@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Conservation of momentum (i) &#8212; Boundary-Layer Meteorology</title>
+    <title>3. Conservation of momentum (ii) &#8212; Boundary-Layer Meteorology</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -50,10 +50,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"output": "svg", "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="4. Exercises week 1" href="../exercises/week1.html" />
+    <link rel="prev" title="2. Conservation of momentum (i)" href="2_momentum_i.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -118,7 +120,7 @@ const thebe_selector_output = ".output, .cell_output"
   Lectures
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="1_mass.html">
    1. Conservation of mass
@@ -127,6 +129,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="2_momentum_i.html">
    2. Conservation of momentum (i)
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   3. Conservation of momentum (ii)
   </a>
  </li>
 </ul>
@@ -138,7 +145,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../exercises/week1.html">
-   3. Exercises week 1
+   4. Exercises week 1
   </a>
  </li>
 </ul>
@@ -319,28 +326,13 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-momentum-equations">
-   The momentum equations
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#conservation-of-momentum">
-   Conservation of momentum.
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#reynolds-averaging">
-   Reynolds averaging
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-ekman-spiral">
-   The Ekman spiral
+   3.1. The Ekman spiral
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-logarithmic-wind-profile">
-   The logarithmic wind profile
+   3.2. The logarithmic wind profile
   </a>
  </li>
 </ul>
@@ -352,7 +344,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Conservation of momentum (i)</h1>
+                <h1>Conservation of momentum (ii)</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -363,28 +355,13 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-momentum-equations">
-   The momentum equations
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#conservation-of-momentum">
-   Conservation of momentum.
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#reynolds-averaging">
-   Reynolds averaging
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-ekman-spiral">
-   The Ekman spiral
+   3.1. The Ekman spiral
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-logarithmic-wind-profile">
-   The logarithmic wind profile
+   3.2. The logarithmic wind profile
   </a>
  </li>
 </ul>
@@ -397,33 +374,35 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="conservation-of-momentum-i">
-<h1>Conservation of momentum (i)<a class="headerlink" href="#conservation-of-momentum-i" title="Permalink to this headline">#</a></h1>
-<section id="the-momentum-equations">
-<h2>The momentum equations<a class="headerlink" href="#the-momentum-equations" title="Permalink to this headline">#</a></h2>
-</section>
-<section id="conservation-of-momentum">
-<h2>Conservation of momentum.<a class="headerlink" href="#conservation-of-momentum" title="Permalink to this headline">#</a></h2>
-<p>Wind is a key ingredient of boundary layer meteorology.
-The evolution of wind speed is generally covered via the conservation of momentum, also known as the Navier-Stokes equations.</p>
-<div class="math notranslate nohighlight">
-\[
-\dfrac{\partial u}{\partial t} + u_j \dfrac{\partial u_i}{\partial x_j}
-= - f_0 \epsilon_{ij3} \left( u_j - u_{g,j} \right) - \delta_{i3} \dfrac{\rho^\prime}{\rho_0} g + \nu \dfrac{\partial^2 u_i}{\partial x_j^2}
-\]</div>
-<div class="math notranslate nohighlight">
-\[
-\dfrac{\partial u_i}{\partial t} + \dfrac{\partial u_j u_i}{\partial x_j} = - f_0 \epsilon_{ij3} \left( u_j - u_{g,j} \right) - \delta_{i3} \dfrac{\rho^\prime}{\rho_0} g + \nu \dfrac{\partial^2 u_i}{\partial x_j^2}
-\]</div>
-</section>
-<section id="reynolds-averaging">
-<h2>Reynolds averaging<a class="headerlink" href="#reynolds-averaging" title="Permalink to this headline">#</a></h2>
-</section>
+  <section class="tex2jax_ignore mathjax_ignore" id="conservation-of-momentum-ii">
+<h1><span class="section-number">3. </span>Conservation of momentum (ii)<a class="headerlink" href="#conservation-of-momentum-ii" title="Permalink to this headline">#</a></h1>
+<p><span class="math notranslate nohighlight">\(\def\pd#1#2{\dfrac{\partial #1}{\partial #2}}\)</span>
+<span class="math notranslate nohighlight">\(\def\rhobar{\overline{\rho}}\)</span>
+<span class="math notranslate nohighlight">\(\def\pdd#1#2{\dfrac{\partial^2 #1}{\partial#2^2}}\)</span>
+<span class="math notranslate nohighlight">\(\def\uibar{\overline{u_i}}\)</span>
+<span class="math notranslate nohighlight">\(\def\uiprime{u_i^\prime}\)</span>
+<span class="math notranslate nohighlight">\(\def\ujbar{\overline{u_j}}\)</span>
+<span class="math notranslate nohighlight">\(\def\ujprime{u_j^\prime}\)</span>
+<span class="math notranslate nohighlight">\(\def\ubar{\overline{u}}\)</span>
+<span class="math notranslate nohighlight">\(\def\vbar{\overline{v}}\)</span>
+<span class="math notranslate nohighlight">\(\def\wbar{\overline{w}}\)</span></p>
 <section id="the-ekman-spiral">
-<h2>The Ekman spiral<a class="headerlink" href="#the-ekman-spiral" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">3.1. </span>The Ekman spiral<a class="headerlink" href="#the-ekman-spiral" title="Permalink to this headline">#</a></h2>
+<p>The starting point is the equation as derived in the previous section.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+  \pd{\ubar}{t}
+=
+- \pd{\overline{ u^\prime w^\prime }}{z}
++ f \left( \vbar - v_g \right) \\
+  \pd{\vbar}{t}
+=
+- \pd{\overline{ v^\prime w^\prime }}{z}
+- f \left( \ubar - u_g \right)
+\end{split}\]</div>
 </section>
 <section id="the-logarithmic-wind-profile">
-<h2>The logarithmic wind profile<a class="headerlink" href="#the-logarithmic-wind-profile" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">3.2. </span>The logarithmic wind profile<a class="headerlink" href="#the-logarithmic-wind-profile" title="Permalink to this headline">#</a></h2>
 </section>
 </section>
 
@@ -454,6 +433,20 @@ The evolution of wind speed is generally covered via the conservation of momentu
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="2_momentum_i.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">2. </span>Conservation of momentum (i)</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../exercises/week1.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">4. </span>Exercises week 1</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             </footer>
         </div>

@@ -1,15 +1,18 @@
 # Conservation of momentum (i)
-$$
-\def\pd#1#2{\dfrac{\partial #1}{\partial #2}} \\
-\def\rhobar{\overline{\rho}} \\
-\def\pdd#1#2{\dfrac{\partial^2 #1}{\partial#2^2}} \\
-\def\uibar{\overline{u_i}} \\
-\def\uiprime{u_i^\prime} \\
-\def\ujbar{\overline{u_j}} \\
-\def\ujprime{u_j^\prime}
-$$
+
+$\def\pd#1#2{\dfrac{\partial #1}{\partial #2}}$
+$\def\rhobar{\overline{\rho}}$
+$\def\pdd#1#2{\dfrac{\partial^2 #1}{\partial#2^2}}$
+$\def\uibar{\overline{u_i}}$
+$\def\uiprime{u_i^\prime}$
+$\def\ujbar{\overline{u_j}}$
+$\def\ujprime{u_j^\prime}$
+$\def\ubar{\overline{u}}$
+$\def\vbar{\overline{v}}$
+$\def\wbar{\overline{w}}$
 
 ## Conservation of momentum in an incompressible atmospheric boundary layer.
+
 Wind is a key ingredient of boundary layer meteorology.
 The evolution of wind speed is generally covered via the conservation of momentum, also known as the Navier-Stokes equations.
 
@@ -118,3 +121,45 @@ $$
 + f \epsilon_{ij3} \left( \ujbar - u_{g,j} \right)
 + \nu \pdd{\uibar}{x_j}
 $$
+
+If we define velocity scale $U$, length scale $L$, time scale $L / U$, then we can estimate a typical magnitude of the left-hand side terms and the turbulent flux term as $U^2/L$, $f U$ for the velocity term, and $\nu U / L^2$ for the viscous term.
+We can compute now the dimensionless ratio that compares the magnitude of the advection to the viscous forces as
+
+$$
+\dfrac{U^2}{L} \dfrac{\nu U}{L^2} = \dfrac{U L}{\nu} = Re
+$$
+
+and do the same for the ratio of advection to rotation:
+
+$$
+\dfrac{U^2}{L} \dfrac{1}{f U} = \dfrac{U}{f L} = Ro
+$$
+
+In that way, we have defined the Reynolds number $Re$ and Rossby number $Ro$. Taking $U = 1$, $L = 10^3$, and $f = 10^{-4}$, we find that $Re = 10^8$, and $Ro = 10$. Therefore, the viscous force can be safely neglected, but the Coriolis force cannot.
+
+The final conservation of mass equation is:
+
+$$
+  \pd{\uibar}{t}
++ \pd{\uibar \ujbar}{x_j}
+=
+- \pd{\overline{ \uiprime \ujprime }}{x_j}
++ f \epsilon_{ij3} \left( \ujbar - u_{g,j} \right)
+$$
+
+
+In order to study turbulence, we often simplify this set even further, by assuming horizontal homogeneity (except for the large-scale pressure force) and assuming that $\overline{w} = 0$, thus no subsidence. The set then reduces to
+
+$$
+  \pd{\ubar}{t}
+=
+- \pd{\overline{ u^\prime w^\prime }}{z}
++ f \left( \vbar - v_g \right) \\
+  \pd{\vbar}{t}
+=
+- \pd{\overline{ v^\prime w^\prime }}{z}
+- f \left( \ubar - u_g \right)
+$$
+
+This set of equation has been the starting point of the important work of Ekman.
+

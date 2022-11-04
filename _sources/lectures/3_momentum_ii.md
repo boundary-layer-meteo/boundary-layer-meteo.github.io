@@ -1,23 +1,29 @@
-# Conservation of momentum (i)
+# Conservation of momentum (ii)
 
-## The momentum equations
-## Conservation of momentum.
-Wind is a key ingredient of boundary layer meteorology.
-The evolution of wind speed is generally covered via the conservation of momentum, also known as the Navier-Stokes equations.
-
-$$
-\dfrac{\partial u}{\partial t} + u_j \dfrac{\partial u_i}{\partial x_j}
-= - f_0 \epsilon_{ij3} \left( u_j - u_{g,j} \right) - \delta_{i3} \dfrac{\rho^\prime}{\rho_0} g + \nu \dfrac{\partial^2 u_i}{\partial x_j^2}
-$$
-
-
-$$
-\dfrac{\partial u_i}{\partial t} + \dfrac{\partial u_j u_i}{\partial x_j} = - f_0 \epsilon_{ij3} \left( u_j - u_{g,j} \right) - \delta_{i3} \dfrac{\rho^\prime}{\rho_0} g + \nu \dfrac{\partial^2 u_i}{\partial x_j^2}
-$$
-
-
-## Reynolds averaging
+$\def\pd#1#2{\dfrac{\partial #1}{\partial #2}}$
+$\def\rhobar{\overline{\rho}}$
+$\def\pdd#1#2{\dfrac{\partial^2 #1}{\partial#2^2}}$
+$\def\uibar{\overline{u_i}}$
+$\def\uiprime{u_i^\prime}$
+$\def\ujbar{\overline{u_j}}$
+$\def\ujprime{u_j^\prime}$
+$\def\ubar{\overline{u}}$
+$\def\vbar{\overline{v}}$
+$\def\wbar{\overline{w}}$
 
 ## The Ekman spiral
+
+The starting point is the equation as derived in the previous section.
+
+$$
+  \pd{\ubar}{t}
+=
+- \pd{\overline{ u^\prime w^\prime }}{z}
++ f \left( \vbar - v_g \right) \\
+  \pd{\vbar}{t}
+=
+- \pd{\overline{ v^\prime w^\prime }}{z}
+- f \left( \ubar - u_g \right)
+$$
 
 ## The logarithmic wind profile
