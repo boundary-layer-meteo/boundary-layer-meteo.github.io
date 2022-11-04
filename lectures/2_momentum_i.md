@@ -1,12 +1,10 @@
 # Conservation of momentum (i)
 
-```{admonition} Questions to be answered in this chapter
+```{admonition} Questions to be answered
 1. What is the equation for conservation of momentum in the atmospheric boundary layer?
 1. Which assumptions are made to get to this equation?
 1. What is the meaning of the Reynolds and the Rossby number?
 1. What are the values of the Reynolds and the Rossby number and what is the implication thereof?
-<!--- 1. What is the meaning of the Reynolds number? -->
-<!--- 1. What is the value of the Reynolds number and what is the implication thereof? -->
 ```
 
 $\def\pd#1#2{\dfrac{\partial #1}{\partial #2}}$
