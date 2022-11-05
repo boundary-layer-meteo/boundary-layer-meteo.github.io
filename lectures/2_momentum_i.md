@@ -6,7 +6,6 @@
 1. What is the meaning of the Reynolds and the Rossby number?
 1. What are the values of the Reynolds and the Rossby number and what is the implication thereof?
 ```
-
 $\def\pd#1#2{\dfrac{\partial #1}{\partial #2}}$
 $\def\rhobar{\overline{\rho}}$
 $\def\pdd#1#2{\dfrac{\partial^2 #1}{\partial#2^2}}$
@@ -159,11 +158,11 @@ In order to study turbulence, we often simplify this set even further, by assumi
 
 $$
   \pd{\ubar}{t}
-=
+&=
 - \pd{\overline{ u^\prime w^\prime }}{z}
 + f \left( \vbar - v_g \right) \\
   \pd{\vbar}{t}
-=
+&=
 - \pd{\overline{ v^\prime w^\prime }}{z}
 - f \left( \ubar - u_g \right)
 $$
