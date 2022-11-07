@@ -74,7 +74,8 @@ If we assume that the boundary layer is much deeper than the surface layer, we c
 
 $$
 \uwflux \approx \uwflux_0 &= - K_m \pd{\ubar}{z} \\
-                u_*^2     &= \kappa z u_* \pd{\ubar}{z}
+                  - u_*^2 &= - \kappa z u_* \pd{\ubar}{z} \\
+                    u_*^2 &= \kappa z u_* \pd{\ubar}{z}
 $$
 
 With some reshuffling, we can rewrite the equation and subsequently integrate it from $z_1$ to $z_2$
