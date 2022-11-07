@@ -1,6 +1,6 @@
 # Conservation of mass
 
-```{admonition} Questions to be answered in this chapter
+```{admonition} Questions to be answered
 1. What is the equation for conservation of mass in the atmospheric boundary layer?
 1. Which assumptions are made to get to this equation?
 ```

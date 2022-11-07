@@ -376,23 +376,21 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="conservation-of-momentum-i">
 <h1><span class="section-number">2. </span>Conservation of momentum (i)<a class="headerlink" href="#conservation-of-momentum-i" title="Permalink to this headline">#</a></h1>
-<div class="admonition-questions-to-be-answered-in-this-chapter admonition">
-<p class="admonition-title">Questions to be answered in this chapter</p>
+<div class="admonition-questions-to-be-answered admonition">
+<p class="admonition-title">Questions to be answered</p>
 <ol class="simple">
 <li><p>What is the equation for conservation of momentum in the atmospheric boundary layer?</p></li>
 <li><p>Which assumptions are made to get to this equation?</p></li>
 <li><p>What is the meaning of the Reynolds and the Rossby number?</p></li>
 <li><p>What are the values of the Reynolds and the Rossby number and what is the implication thereof?</p></li>
 </ol>
-<!--- 1. What is the meaning of the Reynolds number? -->
-<!--- 1. What is the value of the Reynolds number and what is the implication thereof? -->
 </div>
 <p><span class="math notranslate nohighlight">\(\def\pd#1#2{\dfrac{\partial #1}{\partial #2}}\)</span>
 <span class="math notranslate nohighlight">\(\def\rhobar{\overline{\rho}}\)</span>
 <span class="math notranslate nohighlight">\(\def\pdd#1#2{\dfrac{\partial^2 #1}{\partial#2^2}}\)</span>
-<span class="math notranslate nohighlight">\(\def\uibar{\overline{u_i}}\)</span>
+<span class="math notranslate nohighlight">\(\def\uibar{\overline{u}_i}\)</span>
+<span class="math notranslate nohighlight">\(\def\ujbar{\overline{u}_j}\)</span>
 <span class="math notranslate nohighlight">\(\def\uiprime{u_i^\prime}\)</span>
-<span class="math notranslate nohighlight">\(\def\ujbar{\overline{u_j}}\)</span>
 <span class="math notranslate nohighlight">\(\def\ujprime{u_j^\prime}\)</span>
 <span class="math notranslate nohighlight">\(\def\ubar{\overline{u}}\)</span>
 <span class="math notranslate nohighlight">\(\def\vbar{\overline{v}}\)</span>
@@ -445,7 +443,7 @@ The evolution of wind speed is generally covered via the conservation of momentu
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \pd{\uibar}{t} + \pd{\uiprime}{t}
-+ \pd{\uibar \ujbar}{x_j}
++ \pd{\uibar\ujbar}{x_j}
 + \pd{\uiprime \ujbar}{x_j}
 + \pd{\uibar \ujprime}{x_j}
 + \pd{\uiprime \ujprime}{x_j}
@@ -523,11 +521,11 @@ We can compute now the dimensionless ratio that compares the magnitude of the ad
 <div class="math notranslate nohighlight">
 \[\begin{split}
   \pd{\ubar}{t}
-=
+&amp;=
 - \pd{\overline{ u^\prime w^\prime }}{z}
 + f \left( \vbar - v_g \right) \\
   \pd{\vbar}{t}
-=
+&amp;=
 - \pd{\overline{ v^\prime w^\prime }}{z}
 - f \left( \ubar - u_g \right)
 \end{split}\]</div>

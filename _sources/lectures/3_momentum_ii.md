@@ -1,9 +1,9 @@
 # Conservation of momentum (ii)
 
-```{admonition} Questions to be answered in this chapter
+```{admonition} Questions to be answered
 1. What is the closure problem?
 1. What is K-theory?
-1. What is Ekman spiral and how is it acquired?
+1. What is the Ekman spiral and how is it derived?
 1. Why is the wind profile in the atmosphere logarithmic?
 ```
 

@@ -1,20 +1,17 @@
 # Conservation of momentum (i)
 
-```{admonition} Questions to be answered in this chapter
+```{admonition} Questions to be answered
 1. What is the equation for conservation of momentum in the atmospheric boundary layer?
 1. Which assumptions are made to get to this equation?
 1. What is the meaning of the Reynolds and the Rossby number?
 1. What are the values of the Reynolds and the Rossby number and what is the implication thereof?
-<!--- 1. What is the meaning of the Reynolds number? -->
-<!--- 1. What is the value of the Reynolds number and what is the implication thereof? -->
 ```
-
 $\def\pd#1#2{\dfrac{\partial #1}{\partial #2}}$
 $\def\rhobar{\overline{\rho}}$
 $\def\pdd#1#2{\dfrac{\partial^2 #1}{\partial#2^2}}$
-$\def\uibar{\overline{u_i}}$
+$\def\uibar{\overline{u}_i}$
+$\def\ujbar{\overline{u}_j}$
 $\def\uiprime{u_i^\prime}$
-$\def\ujbar{\overline{u_j}}$
 $\def\ujprime{u_j^\prime}$
 $\def\ubar{\overline{u}}$
 $\def\vbar{\overline{v}}$
@@ -74,7 +71,7 @@ We will now introduce the Reynolds averaging of the velocity components, thus we
 
 $$
 \pd{\uibar}{t} + \pd{\uiprime}{t}
-+ \pd{\uibar \ujbar}{x_j}
++ \pd{\uibar\ujbar}{x_j}
 + \pd{\uiprime \ujbar}{x_j}
 + \pd{\uibar \ujprime}{x_j}
 + \pd{\uiprime \ujprime}{x_j}
@@ -161,11 +158,11 @@ In order to study turbulence, we often simplify this set even further, by assumi
 
 $$
   \pd{\ubar}{t}
-=
+&=
 - \pd{\overline{ u^\prime w^\prime }}{z}
 + f \left( \vbar - v_g \right) \\
   \pd{\vbar}{t}
-=
+&=
 - \pd{\overline{ v^\prime w^\prime }}{z}
 - f \left( \ubar - u_g \right)
 $$
