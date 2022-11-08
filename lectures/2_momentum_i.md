@@ -9,9 +9,9 @@
 $\def\pd#1#2{\dfrac{\partial #1}{\partial #2}}$
 $\def\rhobar{\overline{\rho}}$
 $\def\pdd#1#2{\dfrac{\partial^2 #1}{\partial#2^2}}$
-$\def\uibar{\overline{u_i}}$
+$\def\uibar{\overline{u}_i}$
+$\def\ujbar{\overline{u}_j}$
 $\def\uiprime{u_i^\prime}$
-$\def\ujbar{\overline{u_j}}$
 $\def\ujprime{u_j^\prime}$
 $\def\ubar{\overline{u}}$
 $\def\vbar{\overline{v}}$
@@ -71,7 +71,7 @@ We will now introduce the Reynolds averaging of the velocity components, thus we
 
 $$
 \pd{\uibar}{t} + \pd{\uiprime}{t}
-+ \pd{\uibar \ujbar}{x_j}
++ \pd{\uibar\ujbar}{x_j}
 + \pd{\uiprime \ujbar}{x_j}
 + \pd{\uibar \ujprime}{x_j}
 + \pd{\uiprime \ujprime}{x_j}
@@ -132,7 +132,7 @@ If we define velocity scale $U$, length scale $L$, time scale $L / U$, then we c
 We can compute now the dimensionless ratio that compares the magnitude of the advection to the viscous forces as
 
 $$
-\dfrac{U^2}{L} \dfrac{\nu U}{L^2} = \dfrac{U L}{\nu} = Re
+\dfrac{U^2}{L} \dfrac{L^2}{\nu U} = \dfrac{U L}{\nu} = Re
 $$
 
 and do the same for the ratio of advection to rotation:
