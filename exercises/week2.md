@@ -94,11 +94,10 @@ radiosonde at 14 UTC.
 ```
 
 ##
-The Navier-Stokes equation for the instantaneous velocity is
+The Navier-Stokes equation for the horizontal, instantaneous velocity is
 
 $$
-\pafg{u_i}{t}+u_j\pafg{u_i}{x_j}~=~-\frac{1}{\rho}\pafg{p}{x_i}
--g\delta_{i3}+f_c\epsilon_{ij3}u_j+\nu\pafg{^2 u_i}{x_j^2}
+\pafg{u_i}{t}+u_j\pafg{u_i}{x_j}~=~-\frac{1}{\rho}\pafg{p}{x_i}+f\epsilon_{ij3}u_j+\nu\pafg{^2 u_i}{x_j^2}
 $$
 
 We can make this equation dimensionless by using the following (variables indicated with a $*$ are dimensionless):
@@ -107,7 +106,7 @@ $u_{i}^*= \dfrac{u_i}{\cal U}$
 
 $x_{j}^*= \dfrac{x_j}{\cal L}$
 
-$p^*= \dfrac{p}{\cal P}$
+$p^*= \dfrac{p}{\rho\, \cal U\rm^2}$
 
 $\cal L$ and $\cal U$ represent respectively the scaling height and scaling velocity.
 
@@ -120,7 +119,7 @@ Therefore $t^*= t\dfrac{\cal U}{\cal L}$
 
 </details>
 
-b) Using the scales $\cal U$, $\cal L$ and $\cal P$, deduce the dimensionless form of the
+b) Using the scales $\cal U$, $\cal L$, deduce the dimensionless form of the
 Navier Stokes equation.
 
 
@@ -131,16 +130,15 @@ $$
 u_i &= u_i^* \, \cal U\\
 t &= t^* \, \frac{\cal L}{\cal U}\\
 x_i &= x_i^* \, \cal L\\
-p &= p^* \, \cal P\\
+p &= p^* \, \rho\, \cal U\rm^2\\
 $$
 
 Substituting this in the Navier Stokes equations results in
 
 $$
 \frac{\cal U\rm^2}{\cal L} \pafg{u_i^*}{t^*} + \frac{\cal U\rm^2}{\cal L} u_j^* \pafg{u_i^*}{x_j^*} 
-= - \frac{\cal P}{\cal L} \frac{1}{\rho} \pafg{p^*}{x_i^*} 
-- g \delta_{i3} 
-+ \cal U f_c \epsilon_{ij3}u_j^* 
+= - \frac{\rho \cal U\rm^2}{\cal L} \frac{1}{\rho} \pafg{p^*}{x_i^*}
++ \cal U f \epsilon_{ij3}u_j^* 
 + \frac{\cal U}{\cal L\rm^2} \nu \pafg{^2 u_i^*}{{x_j^*}^2}\\
 $$
 
@@ -148,9 +146,8 @@ This equation can be multiplied by $\frac{\cal L}{\cal U\rm^2}$ to obtain the di
 
 $$
 \pafg{u_i^*}{t^*} + u_j^* \pafg{u_i^*}{x_j^*} = 
-- \frac{\cal P}{\cal U \rm^2 \rho} \pafg{p^*}{x_i^*} 
-- \frac{\cal L}{\cal U \rm^2} g \delta_{i3} 
-+ \frac{\cal L}{\cal U} f_c \epsilon_{ij3}u_j^* 
+- \pafg{p^*}{x_i^*}
++ \frac{\cal L}{\cal U} f \epsilon_{ij3}u_j^* 
 + \frac{\nu}{\cal U L} \pafg{^2 u_i^*}{{x_j^*}^2}
 $$
 
@@ -159,26 +156,22 @@ Rossby number ${\rm Ro} = \frac{\cal U}{f \cal L}$:
 
 $$
 \pafg{u_i^*}{t^*} + u_j^* \pafg{u_i^*}{x_j^*} = 
-- \frac{\cal P}{\cal U \rm^2 \rho} \pafg{p^*}{x_i^*}
-- \frac{\cal L}{\cal U \rm^2} g \delta_{i3}
+- \pafg{p^*}{x_i^*}
 + \frac{1}{\rm Ro} \epsilon_{ij3}u_j^* 
 + \frac{1}{\rm Re} \pafg{^2 u_i^*}{{x_j^*}^2}
 $$
 
-Note: 
-The pressure term and gravity term can also be rewritten using two dimensionless numbers that we don't cover in the course,
-namely the Euler number and Froude number.
 </details>
 
 c) Typical length scales in the ABL are $\cal U$= 1 $\rm{m\ s^{-1}}$ and $\cal L$=1000 m.
 Are the Coriolis rotational term and the viscous term relevant in the ABL?
 
-($f_c=10^{-4}\ \rm{s^{-1}}$, $\nu_{air}=1.5 \cdot 10^{-5}\ \rm{m^2\ s^{-1}}$)
+($f=10^{-4}\ \rm{s^{-1}}$, $\nu_{air}=1.5 \cdot 10^{-5}\ \rm{m^2\ s^{-1}}$)
 
 <details>
   <summary>Answer</summary>
 
-Contribution of Coriolis force with respect to the other terms: $f_c^* = f_c \frac{\cal L}{\cal U} = 0.1 = 10~\%$. 
+Contribution of Coriolis force with respect to the other terms: $f^* = f \frac{\cal L}{\cal U} = 0.1 = 10~\%$. 
 This contribution is weak, but significant. 
 Contribution of viscosity: ${\rm Re} = \frac{\cal U L}{\nu} = 6.7 \cdot 10^7$, so $\frac{1}{\rm Re} \to 0$. 
 This contribution is not significant. Consequently, this term can be neglected.
@@ -211,7 +204,7 @@ $$(for:23b)
 This is the flux form; after Reynolds averaging Equation {eq}`for:23b`, the divergence of a turbulent flux is obtained. Using this relation, the total thermodynamic equation reads
 
 $$
-\pafg{\theta}{t} + \overline{u_j}\pafg{\overline{\theta}}{x_j} + \pafg{\overline{u_j'\theta'}}{x_j} = \nu_{\theta}\pafg{^2\overline{\theta}}{{x_j}^2}-\frac{1}{\rho c_p} \pafg{\overline{Q_j}}{x_j} - \frac{L_v \overline{E}}{\rho c_p}
+\pafg{\overline{\theta}}{t} + \overline{u_j}\pafg{\overline{\theta}}{x_j} + \pafg{\overline{u_j'\theta'}}{x_j} = \nu_{\theta}\pafg{^2\overline{\theta}}{{x_j}^2}-\frac{1}{\rho c_p} \pafg{\overline{Q_j}}{x_j} - \frac{L_v \overline{E}}{\rho c_p}
 $$
 </details>
 
@@ -307,7 +300,7 @@ In the figure, a visual representation is shown.
 
 ##
 The Bowen ratio is defined as the ratio of the heat flux to
-the moisture flux ($B=H/LE$). Using the first-order closure to
+the moisture flux ($B=H/LE$). Using K-theory to
 parameterize the fluxes and assuming that $K_h=K_q$, calculate
 the Bowen ratio from the following measurements at 10 meters
 ($\theta=300\ \rm{K}$, $q = 10\ \rm{g\ kg^{-1}}$) and at 2 m ($\theta=302\ \rm{K}$, $q = 12\ \rm{g\ kg^{-1}}$).
@@ -365,19 +358,19 @@ Boundary Layer, fill in the table with the most appropriate labels
 | C          |             |                | 0             |                      |                |
 | D          |             |                |               |                      | Sporadic       |
 | E          |             | Subadiabatic   |               | Stable               |                |
-| F          |             |                |               |                      | Unknown        |
+| F          |             |                |               |                      | Sporadic       |
 
 <details>
   <summary>Answer</summary>
 
-| **Region** | **Name**                 | **Lapse rate** | **Heat Flux**                          | **Static stability** | **Turbulent?** |
-|------------|--------------------------|----------------|----------------------------------------|----------------------|----------------| 
-| A          | Surface Layer            | Superadiabatic | >0                                     | Unstable             | Yes            |
+| **Region** | **Name**                 | **Lapse rate** | **Heat Flux**                         | **Static stability** | **Turbulent?** |
+|------------|--------------------------|----------------|---------------------------------------|----------------------|----------------| 
+| A          | Surface Layer            | Superadiabatic | >0                                    | Unstable             | Yes            |
 | B          | Mixed Layer              | Adiabatic      | $\begin{cases} >0 \\ <0 \end{cases} $ | Neutral              | Yes            |
-| C          | Residual layer           | Adiabatic      | 0                                      | Neutral              | Sporadic       |
-| D          | Nocturnal boundary layer | Subadiabatic   | <0                                     | Stable               | Sporadic       |
-| E          | Capping inversion        | Subadiabatic   | <0                                     | Stable               | Yes            |
-| F          | Free atmosphere          | Subadiabatic   | 0                                      | Stable               | Unknown        |
+| C          | Residual layer           | Adiabatic      | 0                                     | Neutral              | Sporadic       |
+| D          | Nocturnal boundary layer | Subadiabatic   | <0                                    | Stable               | Sporadic       |
+| E          | Capping inversion        | Subadiabatic   | 0                                     | Stable               | Sporadic       |
+| F          | Free atmosphere          | Subadiabatic   | 0                                     | Stable               | Sporadic       |
 
 Superadiabatic: The temperature decreases more with height compared to the case of adiabatic cooling.
 
@@ -386,6 +379,6 @@ Subadiabatic: The temperature decreases less with height compared to the case of
 In the mixed layer, the heat flux decreases with height. 
 It's positive in the lower $\frac{5}{6}$ part of the boundary layer and negative in the rest.
 
-In the residual layer and in the nocturnal boundary layer, turbulence is generated by shear. 
+In the residual layer, capping inversion, and in the nocturnal boundary layer, turbulence is generated by shear. 
 In the free troposphere as well, but less frequent due to the stronger stability.
 </details>
