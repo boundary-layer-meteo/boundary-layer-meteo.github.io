@@ -33,7 +33,7 @@ We can now substitute the mean pressure gradient by the geostrophic wind definit
 
 $$
 \pd{u}{t} + u_j \pd{u}{x_j} &= - \dfrac{1}{\rhobar} \pd{p^\prime}{x} + f \left( v - v_g \right) + \nu \pdd{u}{x_j} \\
-\pd{v}{t} + u_j \pd{v}{x_j} &= - \dfrac{1}{\rhobar} \pd{p^\prime}{y} + f \left( u - u_g \right) + \nu \pdd{v}{x_j}
+\pd{v}{t} + u_j \pd{v}{x_j} &= - \dfrac{1}{\rhobar} \pd{p^\prime}{y} - f \left( u - u_g \right) + \nu \pdd{v}{x_j}
 $$
 
 For the vertical momentum equations, we briefly take a step back and reintroduce the density perturbation and multiply the equation with $\rho$:
@@ -51,7 +51,7 @@ $$
 With index notation, we can combine the three momentum equations:
 
 $$
-\pd{u_i}{t} + u_j \pd{u_i}{x_j} = \dfrac{1}{\rhobar} \pd{p^\prime}{x_i} - f \epsilon_{ij3} \left( u_j - u_{g,j} \right) - \delta_{i3} \dfrac{\rho^\prime}{\rhobar} g + \nu \pdd{u_i}{x_j}
+\pd{u_i}{t} + u_j \pd{u_i}{x_j} = - \dfrac{1}{\rhobar} \pd{p^\prime}{x_i} + f \epsilon_{ij3} \left( u_j - u_{g,j} \right) - \delta_{i3} \dfrac{\rho^\prime}{\rhobar} g + \nu \pdd{u_i}{x_j}
 $$
 
 The last step is to put the advection term in the flux form. With the help of the chain rule, we can write:
@@ -143,7 +143,7 @@ $$
 
 In that way, we have defined the Reynolds number $Re$ and Rossby number $Ro$. Taking $U = 1$, $L = 10^3$, and $f = 10^{-4}$, we find that $Re = 10^8$, and $Ro = 10$. Therefore, the viscous force can be safely neglected, but the Coriolis force cannot.
 
-The final conservation of mass equation is:
+The final conservation of momentum equation is:
 
 $$
   \pd{\uibar}{t}
