@@ -148,6 +148,11 @@ const thebe_selector_output = ".output, .cell_output"
    4. Exercises week 1
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../exercises/week2.html">
+   5. Exercises week 2
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -409,7 +414,7 @@ The evolution of wind speed is generally covered via the conservation of momentu
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \pd{u}{t} + u_j \pd{u}{x_j} &amp;= - \dfrac{1}{\rhobar} \pd{p^\prime}{x} + f \left( v - v_g \right) + \nu \pdd{u}{x_j} \\
-\pd{v}{t} + u_j \pd{v}{x_j} &amp;= - \dfrac{1}{\rhobar} \pd{p^\prime}{y} + f \left( u - u_g \right) + \nu \pdd{v}{x_j}
+\pd{v}{t} + u_j \pd{v}{x_j} &amp;= - \dfrac{1}{\rhobar} \pd{p^\prime}{y} - f \left( u - u_g \right) + \nu \pdd{v}{x_j}
 \end{split}\]</div>
 <p>For the vertical momentum equations, we briefly take a step back and reintroduce the density perturbation and multiply the equation with <span class="math notranslate nohighlight">\(\rho\)</span>:</p>
 <div class="math notranslate nohighlight">
@@ -424,7 +429,7 @@ The evolution of wind speed is generally covered via the conservation of momentu
 <p>With index notation, we can combine the three momentum equations:</p>
 <div class="math notranslate nohighlight">
 \[
-\pd{u_i}{t} + u_j \pd{u_i}{x_j} = \dfrac{1}{\rhobar} \pd{p^\prime}{x_i} - f \epsilon_{ij3} \left( u_j - u_{g,j} \right) - \delta_{i3} \dfrac{\rho^\prime}{\rhobar} g + \nu \pdd{u_i}{x_j}
+\pd{u_i}{t} + u_j \pd{u_i}{x_j} = - \dfrac{1}{\rhobar} \pd{p^\prime}{x_i} + f \epsilon_{ij3} \left( u_j - u_{g,j} \right) - \delta_{i3} \dfrac{\rho^\prime}{\rhobar} g + \nu \pdd{u_i}{x_j}
 \]</div>
 <p>The last step is to put the advection term in the flux form. With the help of the chain rule, we can write:</p>
 <div class="math notranslate nohighlight">
@@ -500,7 +505,7 @@ The evolution of wind speed is generally covered via the conservation of momentu
 We can compute now the dimensionless ratio that compares the magnitude of the advection to the viscous forces as</p>
 <div class="math notranslate nohighlight">
 \[
-\dfrac{U^2}{L} \dfrac{\nu U}{L^2} = \dfrac{U L}{\nu} = Re
+\dfrac{U^2}{L} \dfrac{L^2}{\nu U} = \dfrac{U L}{\nu} = Re
 \]</div>
 <p>and do the same for the ratio of advection to rotation:</p>
 <div class="math notranslate nohighlight">
@@ -508,7 +513,7 @@ We can compute now the dimensionless ratio that compares the magnitude of the ad
 \dfrac{U^2}{L} \dfrac{1}{f U} = \dfrac{U}{f L} = Ro
 \]</div>
 <p>In that way, we have defined the Reynolds number <span class="math notranslate nohighlight">\(Re\)</span> and Rossby number <span class="math notranslate nohighlight">\(Ro\)</span>. Taking <span class="math notranslate nohighlight">\(U = 1\)</span>, <span class="math notranslate nohighlight">\(L = 10^3\)</span>, and <span class="math notranslate nohighlight">\(f = 10^{-4}\)</span>, we find that <span class="math notranslate nohighlight">\(Re = 10^8\)</span>, and <span class="math notranslate nohighlight">\(Ro = 10\)</span>. Therefore, the viscous force can be safely neglected, but the Coriolis force cannot.</p>
-<p>The final conservation of mass equation is:</p>
+<p>The final conservation of momentum equation is:</p>
 <div class="math notranslate nohighlight">
 \[
   \pd{\uibar}{t}

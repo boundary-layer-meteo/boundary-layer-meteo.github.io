@@ -70,13 +70,14 @@ The lab experiments of Prandtl showed that K-theory with constant values of $K_m
 The eddy diffusivity $K_m$, with units of $\mathrm{m^2\ s^{-1}}$ can be seen as a multiplication of a length scale that measures the scale of mixing eddies, and a velocity scale that measures the intensity of mixing.
 Prandtl discovered that the relevant length scale is the distance from the wall, whereas the relevant mixing intensity is the surface friction $u_*$ which is defined as $u_*^2 \equiv \left( \uwflux^2_0 + \vwflux^2_0 \right)^\frac{1}{2}$.
 
-If we assume that the boundary layer is much deeper than the surface layer, we can assume that the momentum flux is by approximation constant in the surface layer. If we then align our coordinate system with the wind, we can write
+If we assume that the boundary layer is much deeper than the surface layer, we can assume that the momentum flux is by approximation constant in the surface layer ($\uwflux \approx \uwflux_0$). If we then align our coordinate system with the wind (thus $\partial u/\partial z$ is positive, and the momentum flux $\uwflux$ negative), we can write:
 
 $$
-\uwflux \approx \uwflux_0 &= - K_m \pd{\ubar}{z} \\
-                  - u_*^2 &= - \kappa z u_* \pd{\ubar}{z} \\
-                    u_*^2 &= \kappa z u_* \pd{\ubar}{z}
+\uwflux_0 &= - K_m \pd{\ubar}{z} \\
+  - u_*^2 &= - \kappa z u_* \pd{\ubar}{z} \\
+    u_*^2 &= \kappa z u_* \pd{\ubar}{z}
 $$
+Note that since $u_*$ is postive, we have to add the minus in the second equation to match the direction.
 
 With some reshuffling, we can rewrite the equation and subsequently integrate it from $z_1$ to $z_2$
 
