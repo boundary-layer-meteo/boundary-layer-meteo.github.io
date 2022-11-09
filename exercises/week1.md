@@ -448,8 +448,8 @@ The general momentum equations are:
 
 $$
 \begin{cases}
-\pafg{u}{t} + u_j \pafg{u}{x_j} = f_c v - \frac{1}{\rho}\pafg{p}{x}+ \nu \pafg{^2u}{{x_j}^2} \\
-\pafg{v}{t} + u_j \pafg{v}{x_j} = - f_c u - \frac{1}{\rho}\pafg{p}{y}+ \nu \pafg{^2v}{{x_j}^2}
+\pafg{u}{t} + u_j \pafg{u}{x_j} = f v - \dfrac{1}{\overline{\rho}}\pafg{p}{x}+ \nu \pafg{^2u}{{x_j}^2} \\
+\pafg{v}{t} + u_j \pafg{v}{x_j} = - f u - \dfrac{1}{\overline{\rho}}\pafg{p}{y}+ \nu \pafg{^2v}{{x_j}^2}
 \end{cases}
 $$
 
@@ -467,9 +467,9 @@ Reynold's averaging results in
 $$
 \begin{cases}
     \pafg{\overline{u}}{t} + \overline{u_j} \pafg{\overline{u}}{x_j} + \overline{u_j'\pafg{{u'}}{x_j}} = 
-        f_c \overline{v} - \frac{1}{\rho}\pafg{\overline{p}}{x}+ \nu \pafg{^2\overline{u}}{{x_j}^2} \\
+        f \overline{v} - \dfrac{1}{\overline{\rho}}\pafg{\overline{p}}{x}+ \nu \pafg{^2\overline{u}}{{x_j}^2} \\
     \pafg{\overline{v}}{t} + \overline{u_j} \pafg{\overline{v}}{x_j} + \overline{u_j'\pafg{{v'}}{x_j}} = 
-        - f_c \overline{u} - \frac{1}{\rho}\pafg{\overline{p}}{y}+ \nu \pafg{^2\overline{v}}{{x_j}^2} 
+        - f \overline{u} - \dfrac{1}{\overline{\rho}}\pafg{\overline{p}}{y}+ \nu \pafg{^2\overline{v}}{{x_j}^2} 
 \end{cases}
 $$
 
@@ -486,19 +486,19 @@ this results in
 $$
 \begin{cases}
     \pafg{\overline{u}}{t} + \pafg{\overline{u_j'u'}}{x_j} = 
-        f_c \overline{v} - \frac{1}{\rho}\pafg{\overline{p}}{x}+ \nu \pafg{^2\overline{u}}{{x_j}^2} \\
+        f \overline{v} - \dfrac{1}{\overline{\rho}}\pafg{\overline{p}}{x}+ \nu \pafg{^2\overline{u}}{{x_j}^2} \\
     \pafg{\overline{v}}{t} + \pafg{\overline{u_j'v'}}{x_j} = 
-        - f_c \overline{u} - \frac{1}{\rho}\pafg{\overline{p}}{y}+ \nu \pafg{^2\overline{v}}{{x_j}^2}
+        - f \overline{u} - \dfrac{1}{\overline{\rho}}\pafg{\overline{p}}{y}+ \nu \pafg{^2\overline{v}}{{x_j}^2}
 \end{cases}
 $$
 
 Neglecting the small viscosity term (for high Reynolds numbers) and assuming that at larger scales the Coriolis force 
 and horizontal pressure gradients balance to reach a geostrophic wind, 
-$\frac{1}{\rho}\pafg{\overline{p}}{x} = f_c v_g$ and $\frac{1}{\rho}\pafg{\overline{p}}{y} = -f_c u_g$, the momentum equations are:
+$\dfrac{1}{\overline{\rho}}\pafg{\overline{p}}{x} = f v_g$ and $\dfrac{1}{\overline{\rho}}\pafg{\overline{p}}{y} = -f u_g$, the momentum equations are:
 
-> $\pafg{\overline{u}}{t} + \pafg{\overline{u'w'}}{z}$ = $f_c \left(\overline{v}-v_g\right) $
+> $\pafg{\overline{u}}{t} + \pafg{\overline{u'w'}}{z}$ = $f \left(\overline{v}-v_g\right) $
 
-> $\pafg{\overline{v}}{t} + \pafg{\overline{v'w'}}{z}$ = $-f_c \left(\overline{u}-u_g\right) $
+> $\pafg{\overline{v}}{t} + \pafg{\overline{v'w'}}{z}$ = $-f \left(\overline{u}-u_g\right) $
 
 In this representation, $u_g$ and $v_g$ are components of the geostrophic wind, 
 which is the steady state wind considering the horizontal pressure gradients and the Coriolis force.
@@ -508,11 +508,11 @@ b) Now suppose that $\overline{u'w'}=-(u_*+cz)^2$ and $\overline{v'w'}=0$ for al
 the geostrophic velocities for the x- and y-components are 5 $\rm{m\ s^{-1}}$ and 5 $\rm{m\ s^{-1}}$ at all heights, respectively.
 
 
-Find the acceleration of air in the x- and y-directions $\left(\pafg{u}{t}, \pafg{v}{t}\right)$ at a height of 100 m in the ABL.
+Find the acceleration of air in the x- and y-directions $\left(\pafg{\overline{u}}{t}, \pafg{\overline{v}}{t}\right)$ at a height of 100 m in the ABL.
 The initial velocities at 100 m are $\overline{u}=\ 4\ \rm{m\ s^{-1}}$ and $\overline{v}=\ 2\ \rm{m\ s^{-1}}$.
 
 ($u_* = 0.3\ \rm{m\ s^{-1}}$,
-$f_c = 10^{-4}\ \rm{s^{-1}}$ and $c = 10^{-3}\ \rm{s^{-1}}$).
+$f = 10^{-4}\ \rm{s^{-1}}$ and $c = 10^{-3}\ \rm{s^{-1}}$).
 
 ```{admonition} Answer
 :class: important, dropdown
@@ -520,8 +520,8 @@ $f_c = 10^{-4}\ \rm{s^{-1}}$ and $c = 10^{-3}\ \rm{s^{-1}}$).
 In this specific case, filling up the momentum fluxes, the governing equations for the acceleration are:
 
 $$
-\pafg{\overline{u}}{t} &= 2 c \left(u_*+c z\right) + f_c \left(\overline{v}-v_g\right) \\
-\pafg{\overline{v}}{t} &= -f_c \left(\overline{u}-u_g\right) 
+\pafg{\overline{u}}{t} &= 2 c \left(u_*+c z\right) + f \left(\overline{v}-v_g\right) \\
+\pafg{\overline{v}}{t} &= -f \left(\overline{u}-u_g\right) 
 $$
 
 Substituting the values, results in:
@@ -531,4 +531,3 @@ $\pafg{\overline{u}}{t}$ = $5 \cdot 10^{-4}\,\rm m\,s^{-2}$
 $\pafg{\overline{v}}{t}$ = $1 \cdot 10^{-4}\,\rm m\,s^{-2}$
 
 ```
-
