@@ -51,7 +51,10 @@ and the gas law becomes $p = \rho \Rd \Tv$
 In an intuitive definition, the virtual temperature is temperature that an equivalent dry parcel would need to have in order to have the same density as a moist parcel. The fact that the virtual temperature is larger than the absolute temperature for a moist atmosphere is related to the low weight of water molecules compared to those in a dry atmosphere (primarily $O_2$ and $N_2$).
 
 Similar as the virtual temperature, we can also define the virtual potential temperature
-$\theta_\mathrm{v} \equiv \theta \left( 1 + q \left( \dfrac{\Rv}{\Rd} - 1 \right) \right)
+
+$$
+\theta_\mathrm{v} \equiv \theta \left( 1 + q \left( \dfrac{\Rv}{\Rd} - 1 \right) \right)
+$$
 
 We can assume that in an atmospheric boundary layer $\rhoprime \ll \rhobar$, $\pprime \ll \pbar$, and $\Tvprime \ll Tvbar$. Hence we can rewrite the gas law.
 
