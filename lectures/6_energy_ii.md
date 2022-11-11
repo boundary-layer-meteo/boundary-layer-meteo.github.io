@@ -50,6 +50,9 @@ and the gas law becomes $p = \rho \Rd \Tv$
 
 In an intuitive definition, the virtual temperature is temperature that an equivalent dry parcel would need to have in order to have the same density as a moist parcel. The fact that the virtual temperature is larger than the absolute temperature for a moist atmosphere is related to the low weight of water molecules compared to those in a dry atmosphere (primarily $O_2$ and $N_2$).
 
+Similar as the virtual temperature, we can also define the virtual potential temperature
+$\theta_\mathrm{v} \equiv \theta \left( 1 + q \left( \dfrac{\Rv}{\Rd} - 1 \right) \right)
+
 We can assume that in an atmospheric boundary layer $\rhoprime \ll \rhobar$, $\pprime \ll \pbar$, and $\Tvprime \ll Tvbar$. Hence we can rewrite the gas law.
 
 $$
@@ -77,9 +80,11 @@ $$
 $$ (gas_law)
 ```
 
+We can also assume that $\dfrac{\Tvprime}{\Tvbar} \approx \dfrac{\theta_\mathrm{v}^\prime}{\overline{\theta}_\mathrm{v}}$.
 This we can substitute into the momentum equation and redefine the buoyancy term and get
 
 $$
-\pd{u_i}{t} + \pd{u_i u_j}{x_j} = - \dfrac{1}{\rhobar} \pd{p^\prime}{x_i} + f \epsilon_{ij3} \left( u_j - u_{g,j} \right) + \delta_{i3} \dfrac{\Tv^\prime}{\Tv} g + \nu \pdd{u_i}{x_j}
+\pd{u_i}{t} + \pd{u_i u_j}{x_j} = - \dfrac{1}{\rhobar} \pd{p^\prime}{x_i} + f \epsilon_{ij3} \left( u_j - u_{g,j} \right) + \delta_{i3} \dfrac{\theta_\mathrm{v}^\prime}{\overline{\theta}_\mathrm{v}} g + \nu \pdd{u_i}{x_j}
 $$
 
+In a moist atmosphere, we will now also define stability based on vertical gradient of the virtual potential temperature $\theta_\mathrm{v}$, rather than the potential temperature $\theta$ that does not take into account the effects of moisture.
