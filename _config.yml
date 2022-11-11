@@ -4,6 +4,7 @@
 title: Boundary-Layer Meteorology
 author: Chiel van Heerwaarden and Mirjam Tijhuis
 logo: logo.png
+only_build_toc_files: true
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
@@ -35,3 +36,5 @@ sphinx:
   config:
     # mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
     mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js
+    bibtex_reference_style: author_year
+

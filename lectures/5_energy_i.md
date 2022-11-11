@@ -34,7 +34,7 @@ If $\delta Q$ equals zero, then $\rho \cp \mathrm{d}T = \mathrm{d}p$. Therefore,
 ```
 
 ### Potential temperature
-One of the disadvantages of temperature is that it is influenced by expansion and compression, as well as heat transfer. This means that an air parcel that is vertically displaced by turbulence experiences a temperature change even if no heat is added or removed. In the analysis of turbulent boundary layer flows it is convenient to have a quantity that is conserved under adiabatic dispacement. Before deriving this quantity, we rewrite Equation {eq}`first_law` in units of temperature, and we remove the density from the pressure term with the help of the ideal gas law (Equation {eq}`ideal_gas_law`).
+One of the disadvantages of temperature is that it is influenced by expansion and compression, as well as heat transfer. This means that an air parcel that is vertically displaced by turbulence experiences a temperature change even if no heat is added or removed. In the analysis of turbulent boundary layer flows it is convenient to have a quantity that is conserved under adiabatic dispacement. Before deriving this quantity, we rewrite Equation {eq}`first_law` in units of temperature, and we remove the density from the pressure term with the help of the ideal gas law ($p = \rho \Rd T$)
 
 $$
 \cp \mathrm{d}T - \dfrac{1}{\rho} \mathrm{d}p &= \dfrac{\delta Q}{\rho} \\
