@@ -22,6 +22,7 @@ parts:
     chapters:
     - file: exercises/week1
     - file: exercises/week2
+    - file: exercises/week3
   - caption: Old exercises
     numbered: true
     chapters:
