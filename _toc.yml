@@ -10,8 +10,8 @@ parts:
      - file: lectures/1_mass
      - file: lectures/2_momentum_i
      - file: lectures/3_momentum_ii
-       #- file: lectures/4_turbulent_fluxes
-       #- file: lectures/5_energy
+     - file: lectures/4_turbulent_fluxes
+     - file: lectures/5_energy_i
 #     - file: lectures/turbulence
 #     - file: lectures/temperature
 #   - caption: Theory
