@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Conservation of energy (i) &#8212; Boundary-Layer Meteorology</title>
+    <title>5. Conservation of energy (i) &#8212; Boundary-Layer Meteorology</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -50,8 +50,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="6. Conservation of energy (ii)" href="6_energy_ii.html" />
+    <link rel="prev" title="4. Turbulent fluxes and the atmospheric surface layer" href="4_turbulent_fluxes.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -116,7 +120,7 @@ const thebe_selector_output = ".output, .cell_output"
   Lectures
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="1_mass.html">
    1. Conservation of mass
@@ -132,6 +136,21 @@ const thebe_selector_output = ".output, .cell_output"
    3. Conservation of momentum (ii)
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="4_turbulent_fluxes.html">
+   4. Turbulent fluxes and the atmospheric surface layer
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   5. Conservation of energy (i)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="6_energy_ii.html">
+   6. Conservation of energy (ii)
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -141,12 +160,12 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../exercises/week1.html">
-   4. Exercises week 1
+   7. Exercises week 1
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../exercises/week2.html">
-   5. Exercises week 2
+   8. Exercises week 2
   </a>
  </li>
 </ul>
@@ -304,12 +323,48 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-first-law-of-thermodynamics">
+   5.1. The first law of thermodynamics
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#potential-temperature">
+     5.1.1. Potential temperature
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#atmospheric-stability">
+     5.1.2. Atmospheric stability
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -321,6 +376,31 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-first-law-of-thermodynamics">
+   5.1. The first law of thermodynamics
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#potential-temperature">
+     5.1.1. Potential temperature
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#atmospheric-stability">
+     5.1.2. Atmospheric stability
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -329,7 +409,89 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="conservation-of-energy-i">
-<h1>Conservation of energy (i)<a class="headerlink" href="#conservation-of-energy-i" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">5. </span>Conservation of energy (i)<a class="headerlink" href="#conservation-of-energy-i" title="Permalink to this headline">#</a></h1>
+<div class="admonition-questions-to-be-answered-in-this-lecture admonition">
+<p class="admonition-title">Questions to be answered in this lecture</p>
+<ol class="simple">
+<li><p>What is potential temperature and why do we use it?</p></li>
+<li><p>What is the dry adiabatic lapse rate?</p></li>
+<li><p>What is the importance of atmospheric stability?</p></li>
+<li><p>How do we describe conservation of energy in an atmospheric boundary layer?</p></li>
+</ol>
+</div>
+<div class="math notranslate nohighlight">
+\[
+\def\cp{c_{\mathrm{p}}}
+\def\Rd{R_{\mathrm{d}}}
+\]</div>
+<section id="the-first-law-of-thermodynamics">
+<h2><span class="section-number">5.1. </span>The first law of thermodynamics<a class="headerlink" href="#the-first-law-of-thermodynamics" title="Permalink to this headline">#</a></h2>
+<p>As a starting point for conservation of energy, we start with the first law of thermodynamics written in a convenient form to describe atmospheric flow:</p>
+<div class="admonition-conservation-of-energy admonition">
+<p class="admonition-title">Conservation of energy</p>
+<div class="math notranslate nohighlight" id="equation-first-law">
+<span class="eqno">(5.1)<a class="headerlink" href="#equation-first-law" title="Permalink to this equation">#</a></span>\[
+\rho \cp \mathrm{d}T - \mathrm{d}p = \delta Q
+\]</div>
+</div>
+<p>This equation relates the change in temperature <span class="math notranslate nohighlight">\(\mathrm{d}T\)</span> of a parcel of air to its pressure change <span class="math notranslate nohighlight">\(\mathrm{d}p\)</span> and the heat <span class="math notranslate nohighlight">\(\delta Q\)</span> added to the parcel. We can now describe for any parcel of air how its temperature will change under expansion and compression if it is displaced in the vertical direction by atmospheric motions, or how temperature will change if we add or remove heat, for instance by heating by solar radiation or cooling by thermal radiation.</p>
+<div class="seealso admonition">
+<p class="admonition-title">Question</p>
+<p>Assume no heat is added (<span class="math notranslate nohighlight">\(\delta Q = 0\)</span>) and use Equation <a class="reference internal" href="temperature.html#equation-first-law">()</a> to answer the question. If we move a parcel of air up a mountain, does its temperature increase or decrease?</p>
+</div>
+<div class="important dropdown admonition">
+<p class="admonition-title">Answer</p>
+<p>If <span class="math notranslate nohighlight">\(\delta Q\)</span> equals zero, then <span class="math notranslate nohighlight">\(\rho \cp \mathrm{d}T = \mathrm{d}p\)</span>. Therefore, if we move up a mountain and pressure decreases (<span class="math notranslate nohighlight">\(dp &lt; 0\)</span>), temperature change <span class="math notranslate nohighlight">\(dT\)</span> must be smaller than 0 as well. Temperature thus decreases.</p>
+</div>
+<section id="potential-temperature">
+<h3><span class="section-number">5.1.1. </span>Potential temperature<a class="headerlink" href="#potential-temperature" title="Permalink to this headline">#</a></h3>
+<p>One of the disadvantages of temperature is that it is influenced by expansion and compression, as well as heat transfer. This means that an air parcel that is vertically displaced by turbulence experiences a temperature change even if no heat is added or removed. In the analysis of turbulent boundary layer flows it is convenient to have a quantity that is conserved under adiabatic dispacement. Before deriving this quantity, we rewrite Equation <a class="reference internal" href="temperature.html#equation-first-law">()</a> in units of temperature, and we remove the density from the pressure term with the help of the ideal gas law (Equation <a class="reference internal" href="temperature.html#equation-ideal-gas-law">()</a>).</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\cp \mathrm{d}T - \dfrac{1}{\rho} \mathrm{d}p &amp;= \dfrac{\delta Q}{\rho} \\
+\cp \mathrm{d}T - \dfrac{\Rd T}{p} \mathrm{d}p &amp;= \dfrac{\delta Q}{\rho} \\
+\dfrac{1}{T} \mathrm{d}T - \dfrac{\Rd}{\cp}\dfrac{1}{p} \mathrm{d}p &amp;= \frac{\delta Q}{\rho \cp T} \\
+\mathrm{d} \left( \ln T \right) - \dfrac{\Rd}{\cp} \mathrm{d}\left( \ln p \right) &amp;= \frac{\delta Q}{\rho \cp T}
+\end{split}\]</div>
+<p>Now we can introduce our new quantity potential temperature <span class="math notranslate nohighlight">\(\theta\)</span> as follows.</p>
+<div class="math notranslate nohighlight">
+\[
+\mathrm{d} \left( \ln T \right) - \dfrac{\Rd}{\cp} \mathrm{d}\left( \ln p \right) = \mathrm{d} \left( \ln \theta \right).
+\]</div>
+<p>If we look carefully to the equation, we have chosen potential temperature <span class="math notranslate nohighlight">\(\theta\)</span> such that it compensates for changes in pressure <span class="math notranslate nohighlight">\(p\)</span> caused by displacement, which is what we intended. We can now work towards a definition of potential temperature <span class="math notranslate nohighlight">\(\theta\)</span>, where we integrate from some chosen reference pressure <span class="math notranslate nohighlight">\(p_0\)</span> to the actual pressure <span class="math notranslate nohighlight">\(p\)</span> at which we need to know the potential temperature.</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\begin{split}
+\int_{p_0}^p \mathrm{d} \left( \ln T \right) - \dfrac{\Rd}{\cp} \int_{p_0}^p \mathrm{d}\left( \ln p^\prime \right) &amp;= \int_{p_0}^p \mathrm{d} \left( \ln \theta \right) \\\end{split}\\\begin{split}\left[ \ln T \right]_{p_{0}}^p - \dfrac{\Rd}{\cp} \left[ \ln p \right]_{p_{0}}^p &amp;= \left[ \ln \theta \right]_{p_{0}}^p \\
+\ln T - \ln T_0  - \dfrac{\Rd}{\cp} \ln p + \dfrac{\Rd}{\cp} \ln p_0 &amp;= \ln \theta - \ln \theta_0
+\end{split}\end{aligned}\end{align} \]</div>
+<p>To be able to provide an actual value of <span class="math notranslate nohighlight">\(\theta\)</span> we define <span class="math notranslate nohighlight">\(\theta\)</span> to be equal to <span class="math notranslate nohighlight">\(T\)</span> at pressure <span class="math notranslate nohighlight">\(p_0\)</span>, thus mathematically <span class="math notranslate nohighlight">\(\theta_0 = T_0\)</span>. With this choice we can cancel two terms in the equation:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\ln T - \ln T_0  - \dfrac{\Rd}{\cp} \ln p + \dfrac{\Rd}{\cp} \ln p_0 &amp;= \ln \theta - \ln \theta_0 \\
+\ln T - \dfrac{\Rd}{\cp} \ln p + \dfrac{\Rd}{\cp} \ln p_0 &amp;= \ln \theta \\
+\ln T - \ln \left( \dfrac{p}{p_0}\right)^\frac{\Rd}{\cp} &amp;= \ln \theta \\
+\ln T + \ln \left( \dfrac{p_0}{p}\right)^\frac{\Rd}{\cp} &amp;= \ln \theta \\
+\ln \left( T \left( \dfrac{p_0}{p}\right)^\frac{\Rd}{\cp} \right) &amp;= \ln \theta
+\end{split}\]</div>
+<p>This brings us to the definition of the potential temperature:</p>
+<div class="admonition-potential-temperature admonition">
+<p class="admonition-title">Potential temperature</p>
+<div class="math notranslate nohighlight" id="equation-pot-temp">
+<span class="eqno">(5.2)<a class="headerlink" href="#equation-pot-temp" title="Permalink to this equation">#</a></span>\[
+\theta \equiv T \left( \dfrac{p_0}{p}\right)^\frac{\Rd}{\cp}
+\]</div>
+</div>
+<p>The last question to answer is what to chose for the value of <span class="math notranslate nohighlight">\(p_0\)</span>. Generally, we use the <span class="math notranslate nohighlight">\(1 \cdot 10^5~\mathrm{Pa}\)</span> as its value, which means that at sea level pressure the absolute temperature <span class="math notranslate nohighlight">\(T\)</span> and potential temperaure <span class="math notranslate nohighlight">\(\theta\)</span> are very close together. Following this logics, an intuitive way of defining potential temperature is:</p>
+<blockquote>
+<div><p><em>Potential temperature <span class="math notranslate nohighlight">\(\theta\)</span> is the temperature of an air parcel if it is adiabatically (thus no heat added or removed) transported back to sea level.</em></p>
+</div></blockquote>
+</section>
+<section id="atmospheric-stability">
+<h3><span class="section-number">5.1.2. </span>Atmospheric stability<a class="headerlink" href="#atmospheric-stability" title="Permalink to this headline">#</a></h3>
+<p>The atmospheric static stability defines whether the temperature stratification support or suppresses the generation of turbulent motions. If <span class="math notranslate nohighlight">\(\dfrac{\partial \theta}{\partial z} \gt 0\)</span>, the atmosphere is statically stable, if <span class="math notranslate nohighlight">\(\dfrac{\partial \theta}{\partial z} \approx 0\)</span>, the atmosphere is neutral, and if <span class="math notranslate nohighlight">\(\dfrac{\partial \theta}{\partial z} \lt 0\)</span> the atmosphere is unstable.</p>
+<p>If a layer of air is vertically well-mixed, then the stratification is neutral and the actual temperature <span class="math notranslate nohighlight">\(T\)</span> follows the <strong>dry adiabatic lapse rate</strong>. This is for instance the case in the daytime convective boundary layer, in which surface driven plumes constantly mix the layer vertically through.</p>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -359,6 +521,20 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="4_turbulent_fluxes.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">4. </span>Turbulent fluxes and the atmospheric surface layer</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="6_energy_ii.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">6. </span>Conservation of energy (ii)</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             </footer>
         </div>

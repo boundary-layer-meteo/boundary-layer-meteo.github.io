@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>2. Conservation of momentum (i) &#8212; Boundary-Layer Meteorology</title>
+    <title>6. Conservation of energy (ii) &#8212; Boundary-Layer Meteorology</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -54,8 +54,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="3. Conservation of momentum (ii)" href="3_momentum_ii.html" />
-    <link rel="prev" title="1. Conservation of mass" href="1_mass.html" />
+    <link rel="next" title="7. Exercises week 1" href="../exercises/week1.html" />
+    <link rel="prev" title="5. Conservation of energy (i)" href="5_energy_i.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -126,8 +126,8 @@ const thebe_selector_output = ".output, .cell_output"
    1. Conservation of mass
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="2_momentum_i.html">
    2. Conservation of momentum (i)
   </a>
  </li>
@@ -146,8 +146,8 @@ const thebe_selector_output = ".output, .cell_output"
    5. Conservation of energy (i)
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="6_energy_ii.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    6. Conservation of energy (ii)
   </a>
  </li>
@@ -258,7 +258,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Flectures/2_momentum_i.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Flectures/6_energy_ii.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -286,7 +286,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/lectures/2_momentum_i.md"
+        <a href="../_sources/lectures/6_energy_ii.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -346,13 +346,8 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#conservation-of-momentum-in-an-incompressible-atmospheric-boundary-layer">
-   2.1. Conservation of momentum in an incompressible atmospheric boundary layer.
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#reynolds-averaging-the-velocity-components">
-   2.2. Reynolds averaging the velocity components
+  <a class="reference internal nav-link" href="#the-ideal-gas-law-for-a-moist-atmosphere">
+   6.1. The ideal gas law for a moist atmosphere
   </a>
  </li>
 </ul>
@@ -364,7 +359,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Conservation of momentum (i)</h1>
+                <h1>Conservation of energy (ii)</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -375,13 +370,8 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#conservation-of-momentum-in-an-incompressible-atmospheric-boundary-layer">
-   2.1. Conservation of momentum in an incompressible atmospheric boundary layer.
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#reynolds-averaging-the-velocity-components">
-   2.2. Reynolds averaging the velocity components
+  <a class="reference internal nav-link" href="#the-ideal-gas-law-for-a-moist-atmosphere">
+   6.1. The ideal gas law for a moist atmosphere
   </a>
  </li>
 </ul>
@@ -394,162 +384,87 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="conservation-of-momentum-i">
-<h1><span class="section-number">2. </span>Conservation of momentum (i)<a class="headerlink" href="#conservation-of-momentum-i" title="Permalink to this headline">#</a></h1>
-<div class="admonition-questions-to-be-answered admonition">
-<p class="admonition-title">Questions to be answered</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="conservation-of-energy-ii">
+<h1><span class="section-number">6. </span>Conservation of energy (ii)<a class="headerlink" href="#conservation-of-energy-ii" title="Permalink to this headline">#</a></h1>
+<div class="admonition-questions-to-be-answered-in-this-lecture admonition">
+<p class="admonition-title">Questions to be answered in this lecture</p>
 <ol class="simple">
-<li><p>What is the equation for conservation of momentum in the atmospheric boundary layer?</p></li>
-<li><p>Which assumptions are made to get to this equation?</p></li>
-<li><p>What is the meaning of the Reynolds and the Rossby number?</p></li>
-<li><p>What are the values of the Reynolds and the Rossby number and what is the implication thereof?</p></li>
+<li><p>What is the gas law for an atmosphere with water vapor?</p></li>
+<li><p>What is virtual temperature and why do we use it?</p></li>
+<li><p>What is the gas law under the assumption of small perturbations?</p></li>
+<li><p>What is buoyancy?</p></li>
 </ol>
 </div>
-<p><span class="math notranslate nohighlight">\(\def\pd#1#2{\dfrac{\partial #1}{\partial #2}}\)</span>
-<span class="math notranslate nohighlight">\(\def\rhobar{\overline{\rho}}\)</span>
-<span class="math notranslate nohighlight">\(\def\pdd#1#2{\dfrac{\partial^2 #1}{\partial#2^2}}\)</span>
-<span class="math notranslate nohighlight">\(\def\uibar{\overline{u}_i}\)</span>
-<span class="math notranslate nohighlight">\(\def\ujbar{\overline{u}_j}\)</span>
-<span class="math notranslate nohighlight">\(\def\uiprime{u_i^\prime}\)</span>
-<span class="math notranslate nohighlight">\(\def\ujprime{u_j^\prime}\)</span>
-<span class="math notranslate nohighlight">\(\def\ubar{\overline{u}}\)</span>
-<span class="math notranslate nohighlight">\(\def\vbar{\overline{v}}\)</span>
-<span class="math notranslate nohighlight">\(\def\wbar{\overline{w}}\)</span></p>
-<section id="conservation-of-momentum-in-an-incompressible-atmospheric-boundary-layer">
-<h2><span class="section-number">2.1. </span>Conservation of momentum in an incompressible atmospheric boundary layer.<a class="headerlink" href="#conservation-of-momentum-in-an-incompressible-atmospheric-boundary-layer" title="Permalink to this headline">#</a></h2>
-<p>Wind is a key ingredient of boundary layer meteorology.
-The evolution of wind speed is generally covered via the conservation of momentum, also known as the Navier-Stokes equations.</p>
-<p>First, we introduce the equations for horizontal momentum for an incompressible flow, where we have already introduced the mean density <span class="math notranslate nohighlight">\(\rhobar\)</span>, and we will also split the other thermodynamic variable <span class="math notranslate nohighlight">\(p\)</span> in a mean and a perturbation.</p>
+<div class="math notranslate nohighlight">
+\[
+\def\cp{c_{\mathrm{p}}}
+\def\Rd{R_{\mathrm{d}}}
+\def\Rv{R_{\mathrm{v}}}
+\def\Tv{T_{\mathrm{v}}}
+\def\pbar{\overline{p}}
+\def\pprime{p^\prime}
+\def\rhobar{\overline{\rho}}
+\def\rhoprime{\rho^\prime}
+\def\Tvbar{\overline{\Tv}}
+\def\Tvprime{\Tv^\prime}
+\def\pd#1#2{\dfrac{\partial #1}{\partial #2}}
+\def\pdd#1#2{\dfrac{\partial^2 #1}{\partial#2^2}}
+\def\uibar{\overline{u}_i}
+\def\ujbar{\overline{u}_j}
+\def\uiprime{u_i^\prime}
+\def\ujprime{u_j^\prime}
+\def\ubar{\overline{u}}
+\def\vbar{\overline{v}}
+\def\wbar{\overline{w}}
+\]</div>
+<section id="the-ideal-gas-law-for-a-moist-atmosphere">
+<h2><span class="section-number">6.1. </span>The ideal gas law for a moist atmosphere<a class="headerlink" href="#the-ideal-gas-law-for-a-moist-atmosphere" title="Permalink to this headline">#</a></h2>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-\pd{u}{t} + u_j \pd{u}{x_j} &amp;= - \dfrac{1}{\rhobar} \pd{\overline{p}}{x} - \dfrac{1}{\rhobar} \pd{p^\prime}{x} + f v + \nu \pdd{u}{x_j} \\
-\pd{v}{t} + u_j \pd{v}{x_j} &amp;= - \dfrac{1}{\rhobar} \pd{\overline{p}}{y} - \dfrac{1}{\rhobar} \pd{p^\prime}{y} - f u + \nu \pdd{v}{x_j}
+p &amp;= p_\mathrm{d} + p_\mathrm{v} \\
+p &amp;= \rho_\mathrm{d} \Rd T + \rho_\mathrm{v} \Rv T \\
+p &amp;= \left( 1 - q \right) \rho \Rd T + q \rho \Rv T \\
+p &amp;= \rho \Rd T \left( 1 + q \left( \dfrac{\Rv}{\Rd} - 1 \right) \right)
 \end{split}\]</div>
-<p>We can now substitute the mean pressure gradient by the geostrophic wind definitions <span class="math notranslate nohighlight">\(fv_g \equiv \dfrac{1}{\rhobar}\pd{p}{x}\)</span> and <span class="math notranslate nohighlight">\(fu_g \equiv - \dfrac{1}{\rhobar}\pd{p}{y}\)</span> to get:</p>
+<p>We can now define the virtual temperature <span class="math notranslate nohighlight">\(\Tv\)</span> as</p>
+<div class="admonition-virtual-temperature admonition">
+<p class="admonition-title">Virtual temperature</p>
+<div class="math notranslate nohighlight" id="equation-virtual-temp">
+<span class="eqno">(6.1)<a class="headerlink" href="#equation-virtual-temp" title="Permalink to this equation">#</a></span>\[
+\Tv \equiv T \left( 1 + q \left( \dfrac{\Rv}{\Rd} - 1 \right) \right)
+\]</div>
+</div>
+<p>and the gas law becomes <span class="math notranslate nohighlight">\(p = \rho \Rd \Tv\)</span></p>
+<p>In an intuitive definition, the virtual temperature is temperature that an equivalent dry parcel would need to have in order to have the same density as a moist parcel. The fact that the virtual temperature is larger than the absolute temperature for a moist atmosphere is related to the low weight of water molecules compared to those in a dry atmosphere (primarily <span class="math notranslate nohighlight">\(O_2\)</span> and <span class="math notranslate nohighlight">\(N_2\)</span>).</p>
+<p>We can assume that in an atmospheric boundary layer <span class="math notranslate nohighlight">\(\rhoprime \ll \rhobar\)</span>, <span class="math notranslate nohighlight">\(\pprime \ll \pbar\)</span>, and <span class="math notranslate nohighlight">\(\Tvprime \ll Tvbar\)</span>. Hence we can rewrite the gas law.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-\pd{u}{t} + u_j \pd{u}{x_j} &amp;= - \dfrac{1}{\rhobar} \pd{p^\prime}{x} + f \left( v - v_g \right) + \nu \pdd{u}{x_j} \\
-\pd{v}{t} + u_j \pd{v}{x_j} &amp;= - \dfrac{1}{\rhobar} \pd{p^\prime}{y} - f \left( u - u_g \right) + \nu \pdd{v}{x_j}
+\pbar + \pprime = \left( \rhobar + \rhoprime \right) \Rd \left( \Tvbar + \Tvprime \right) \\
+\pbar + \pprime = \rhobar \Rd \Tvbar + \rhobar \Rd \Tvprime + \rhoprime \Rd \Tvbar + \rhoprime \Rd \Tvprime
 \end{split}\]</div>
-<p>For the vertical momentum equations, we briefly take a step back and reintroduce the density perturbation and multiply the equation with <span class="math notranslate nohighlight">\(\rho\)</span>:</p>
+<p>Given that all perturbations are small, the mean gas law is <span class="math notranslate nohighlight">\(\pbar = \rhobar \Rd \Tvbar\)</span>, and we can neglect all terms that have multiplications of perturbations. This gives:</p>
 <div class="math notranslate nohighlight">
 \[
-\left( \rhobar + \rho^\prime \right) \pd{w}{t} + \left( \rhobar + \rho^\prime \right) u_j \pd{w}{x_j} = - \pd{\overline{p}}{z} - \pd{p^\prime}{z} - \left( \rhobar + \rho^\prime \right) g + \nu \pdd{w}{x_j}
+\pprime = \rhobar \Rd \Tvprime + \rhoprime \Rd \Tvbar
 \]</div>
-<p>We know that in on the larger scales, the flow is in hydrostatic balance <span class="math notranslate nohighlight">\(\pd{\overline{p}}{z} = - \rhobar g\)</span>, and hence we can eliminate these very large terms from the equation. If we divide out <span class="math notranslate nohighlight">\(\rho\)</span> again, and neglect perturbations, we get:</p>
+<p>If we then divide the equation by <span class="math notranslate nohighlight">\(\pbar\)</span> and substitute the gas law for mean quantities we get the gas law for small perturbations</p>
 <div class="math notranslate nohighlight">
 \[
-\pd{w}{t} + u_j \pd{w}{x_j} = - \dfrac{1}{\rhobar} \pd{p^\prime}{z} - \dfrac{\rho^\prime}{\rhobar} g + \nu \pdd{w}{x_j}
+\dfrac{\pprime}{\pbar} = \dfrac{\Tvprime}{\Tvbar} + \dfrac{\rhoprime}{\rhobar}
 \]</div>
-<p>With index notation, we can combine the three momentum equations:</p>
+<p>In the atmospheric boundary layer, we can compare the typical magnitude of pressure perturbations to those of density and virtual temperature and find that those of pressure are (at least) two orders of magnitude smaller. Hence, the gas law that we use in the atmospheric boundary under the Boussinesq approximation simplifies to</p>
+<div class="admonition-ideal-gas-law-under-boussinesq-approximation admonition">
+<p class="admonition-title">Ideal gas law under Boussinesq approximation</p>
+<div class="math notranslate nohighlight" id="equation-gas-law">
+<span class="eqno">(6.2)<a class="headerlink" href="#equation-gas-law" title="Permalink to this equation">#</a></span>\[
+\dfrac{\rhoprime}{\rhobar} = - \dfrac{\Tvprime}{\Tvbar}
+\]</div>
+</div>
+<p>This we can substitute into the momentum equation and redefine the buoyancy term and get</p>
 <div class="math notranslate nohighlight">
 \[
-\pd{u_i}{t} + u_j \pd{u_i}{x_j} = - \dfrac{1}{\rhobar} \pd{p^\prime}{x_i} + f \epsilon_{ij3} \left( u_j - u_{g,j} \right) - \delta_{i3} \dfrac{\rho^\prime}{\rhobar} g + \nu \pdd{u_i}{x_j}
+\pd{u_i}{t} + \pd{u_i u_j}{x_j} = - \dfrac{1}{\rhobar} \pd{p^\prime}{x_i} + f \epsilon_{ij3} \left( u_j - u_{g,j} \right) + \delta_{i3} \dfrac{\Tv^\prime}{\Tv} g + \nu \pdd{u_i}{x_j}
 \]</div>
-<p>The last step is to put the advection term in the flux form. With the help of the chain rule, we can write:</p>
-<div class="math notranslate nohighlight">
-\[
-\pd{u_i u_j}{x_j} = u_j \pd{u_i}{x_j} + u_i \pd{u_j}{x_j}
-\]</div>
-<p>The latter term is zero because of incompressibility, thus we can write our final equation as:</p>
-<div class="math notranslate nohighlight">
-\[
-\pd{u_i}{t} + \pd{u_i u_j}{x_j} = - \dfrac{1}{\rhobar} \pd{p^\prime}{x_i} + f \epsilon_{ij3} \left( u_j - u_{g,j} \right) - \delta_{i3} \dfrac{\rho^\prime}{\rhobar} g + \nu \pdd{u_i}{x_j}
-\]</div>
-</section>
-<section id="reynolds-averaging-the-velocity-components">
-<h2><span class="section-number">2.2. </span>Reynolds averaging the velocity components<a class="headerlink" href="#reynolds-averaging-the-velocity-components" title="Permalink to this headline">#</a></h2>
-<p>We will now introduce the Reynolds averaging of the velocity components, thus we split all velocity instances in a mean and a perturbation.</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\pd{\uibar}{t} + \pd{\uiprime}{t}
-+ \pd{\uibar\ujbar}{x_j}
-+ \pd{\uiprime \ujbar}{x_j}
-+ \pd{\uibar \ujprime}{x_j}
-+ \pd{\uiprime \ujprime}{x_j}
-= \\ 
-- \dfrac{1}{\rhobar} \pd{p^\prime}{x_i}
-+ f \epsilon_{ij3} \left( \ujbar + \ujprime - u_{g,j} \right)
-- \delta_{i3} \dfrac{\rho^\prime}{\rhobar} g
-+ \nu \pdd{\uibar}{x_j}
-+ \nu \pdd{\uiprime}{x_j}
-\end{split}\]</div>
-<p>We are interested to retrieve the evolution of the mean velocity <span class="math notranslate nohighlight">\(\uibar\)</span>, so we take the mean of the entire equation.</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\overline{ \pd{\uibar}{t}
-+ \pd{\uiprime}{t}
-+ \pd{\uibar \ujbar}{x_j}
-+ \pd{\uiprime \ujbar}{x_j}
-+ \pd{\uibar \ujprime}{x_j}
-+ \pd{\uiprime \ujprime}{x_j}
-= } \\ 
-\overline {- \dfrac{1}{\rhobar} \pd{p^\prime}{x_i}
-+ f \epsilon_{ij3} \left( \ujbar + \ujprime - u_{g,j} \right)
-- \delta_{i3} \dfrac{\rho^\prime}{\rhobar} g
-+ \nu \pdd{\uibar}{x_j}
-+ \nu \pdd{\uiprime}{x_j}}
-\end{split}\]</div>
-<p>Subsequently, we make use of the rule <span class="math notranslate nohighlight">\(\overline{A + B} = \overline{A} + \overline{B}\)</span>.</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-  \overline{ \pd{\uibar}{t} }
-+ \overline{ \pd{\uiprime}{t} }
-+ \overline{ \pd{\uibar \ujbar}{x_j} }
-+ \overline{ \pd{\uiprime \ujbar}{x_j} }
-+ \overline{ \pd{\uibar \ujprime}{x_j} }
-+ \overline{ \pd{\uiprime \ujprime}{x_j} }
-= \\
-  \overline{ - \dfrac{1}{\rhobar} \pd{p^\prime}{x_i} }
-+ \overline{ f \epsilon_{ij3} \left( \ujbar + \ujprime - u_{g,j} \right) }
-- \overline{ \delta_{i3} \dfrac{\rho^\prime}{\rhobar} g }
-+ \overline{ \nu \pdd{\uibar}{x_j} }
-+ \overline{ \nu \pdd{\uiprime}{x_j} }
-\end{split}\]</div>
-<p>Subsequently, we make use of the rules <span class="math notranslate nohighlight">\(\overline{\pd{A}{t}} = \pd{\overline{A}}{t}\)</span>, <span class="math notranslate nohighlight">\(\overline{A^\prime} = 0\)</span>, <span class="math notranslate nohighlight">\(\overline{\overline{A} + B} = \overline{A} + \overline{B}\)</span>, and <span class="math notranslate nohighlight">\(\overline{cA} = c \overline{A}\)</span> to end at</p>
-<div class="math notranslate nohighlight">
-\[
-  \pd{\uibar}{t}
-+ \pd{\uibar \ujbar}{x_j}
-=
-- \pd{\overline{ \uiprime \ujprime }}{x_j}
-+ f \epsilon_{ij3} \left( \ujbar - u_{g,j} \right)
-+ \nu \pdd{\uibar}{x_j}
-\]</div>
-<p>If we define velocity scale <span class="math notranslate nohighlight">\(U\)</span>, length scale <span class="math notranslate nohighlight">\(L\)</span>, time scale <span class="math notranslate nohighlight">\(L / U\)</span>, then we can estimate a typical magnitude of the left-hand side terms and the turbulent flux term as <span class="math notranslate nohighlight">\(U^2/L\)</span>, <span class="math notranslate nohighlight">\(f U\)</span> for the velocity term, and <span class="math notranslate nohighlight">\(\nu U / L^2\)</span> for the viscous term.
-We can compute now the dimensionless ratio that compares the magnitude of the advection to the viscous forces as</p>
-<div class="math notranslate nohighlight">
-\[
-\dfrac{U^2}{L} \dfrac{L^2}{\nu U} = \dfrac{U L}{\nu} = Re
-\]</div>
-<p>and do the same for the ratio of advection to rotation:</p>
-<div class="math notranslate nohighlight">
-\[
-\dfrac{U^2}{L} \dfrac{1}{f U} = \dfrac{U}{f L} = Ro
-\]</div>
-<p>In that way, we have defined the Reynolds number <span class="math notranslate nohighlight">\(Re\)</span> and Rossby number <span class="math notranslate nohighlight">\(Ro\)</span>. Taking <span class="math notranslate nohighlight">\(U = 1\)</span>, <span class="math notranslate nohighlight">\(L = 10^3\)</span>, and <span class="math notranslate nohighlight">\(f = 10^{-4}\)</span>, we find that <span class="math notranslate nohighlight">\(Re = 10^8\)</span>, and <span class="math notranslate nohighlight">\(Ro = 10\)</span>. Therefore, the viscous force can be safely neglected, but the Coriolis force cannot.</p>
-<p>The final conservation of momentum equation is:</p>
-<div class="math notranslate nohighlight">
-\[
-  \pd{\uibar}{t}
-+ \pd{\uibar \ujbar}{x_j}
-=
-- \pd{\overline{ \uiprime \ujprime }}{x_j}
-+ f \epsilon_{ij3} \left( \ujbar - u_{g,j} \right)
-\]</div>
-<p>In order to study turbulence, we often simplify this set even further, by assuming horizontal homogeneity (except for the large-scale pressure force) and assuming that <span class="math notranslate nohighlight">\(\overline{w} = 0\)</span>, thus no subsidence. The set then reduces to</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-  \pd{\ubar}{t}
-&amp;=
-- \pd{\overline{ u^\prime w^\prime }}{z}
-+ f \left( \vbar - v_g \right) \\
-  \pd{\vbar}{t}
-&amp;=
-- \pd{\overline{ v^\prime w^\prime }}{z}
-- f \left( \ubar - u_g \right)
-\end{split}\]</div>
-<p>This set of equation has been the starting point of the important work of Ekman.</p>
 </section>
 </section>
 
@@ -580,17 +495,17 @@ We can compute now the dimensionless ratio that compares the magnitude of the ad
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="1_mass.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="5_energy_i.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">1. </span>Conservation of mass</p>
+            <p class="prev-next-title"><span class="section-number">5. </span>Conservation of energy (i)</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="3_momentum_ii.html" title="next page">
+    <a class='right-next' id="next-link" href="../exercises/week1.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">3. </span>Conservation of momentum (ii)</p>
+        <p class="prev-next-title"><span class="section-number">7. </span>Exercises week 1</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
