@@ -12,6 +12,7 @@ parts:
      - file: lectures/3_momentum_ii
      - file: lectures/4_turbulent_fluxes
      - file: lectures/5_energy_i
+     - file: lectures/6_energy_ii
 #     - file: lectures/turbulence
 #     - file: lectures/temperature
 #   - caption: Theory
