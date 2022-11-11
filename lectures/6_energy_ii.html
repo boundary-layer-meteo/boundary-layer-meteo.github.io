@@ -436,6 +436,8 @@ p &amp;= \rho \Rd T \left( 1 + q \left( \dfrac{\Rv}{\Rd} - 1 \right) \right)
 </div>
 <p>and the gas law becomes <span class="math notranslate nohighlight">\(p = \rho \Rd \Tv\)</span></p>
 <p>In an intuitive definition, the virtual temperature is temperature that an equivalent dry parcel would need to have in order to have the same density as a moist parcel. The fact that the virtual temperature is larger than the absolute temperature for a moist atmosphere is related to the low weight of water molecules compared to those in a dry atmosphere (primarily <span class="math notranslate nohighlight">\(O_2\)</span> and <span class="math notranslate nohighlight">\(N_2\)</span>).</p>
+<p>Similar as the virtual temperature, we can also define the virtual potential temperature
+$\theta_\mathrm{v} \equiv \theta \left( 1 + q \left( \dfrac{\Rv}{\Rd} - 1 \right) \right)</p>
 <p>We can assume that in an atmospheric boundary layer <span class="math notranslate nohighlight">\(\rhoprime \ll \rhobar\)</span>, <span class="math notranslate nohighlight">\(\pprime \ll \pbar\)</span>, and <span class="math notranslate nohighlight">\(\Tvprime \ll Tvbar\)</span>. Hence we can rewrite the gas law.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -460,11 +462,13 @@ p &amp;= \rho \Rd T \left( 1 + q \left( \dfrac{\Rv}{\Rd} - 1 \right) \right)
 \dfrac{\rhoprime}{\rhobar} = - \dfrac{\Tvprime}{\Tvbar}
 \]</div>
 </div>
-<p>This we can substitute into the momentum equation and redefine the buoyancy term and get</p>
+<p>We can also assume that <span class="math notranslate nohighlight">\(\dfrac{\Tvprime}{\Tvbar} \approx \dfrac{\theta_\mathrm{v}^\prime}{\overline{\theta}_\mathrm{v}}\)</span>.
+This we can substitute into the momentum equation and redefine the buoyancy term and get</p>
 <div class="math notranslate nohighlight">
 \[
-\pd{u_i}{t} + \pd{u_i u_j}{x_j} = - \dfrac{1}{\rhobar} \pd{p^\prime}{x_i} + f \epsilon_{ij3} \left( u_j - u_{g,j} \right) + \delta_{i3} \dfrac{\Tv^\prime}{\Tv} g + \nu \pdd{u_i}{x_j}
+\pd{u_i}{t} + \pd{u_i u_j}{x_j} = - \dfrac{1}{\rhobar} \pd{p^\prime}{x_i} + f \epsilon_{ij3} \left( u_j - u_{g,j} \right) + \delta_{i3} \dfrac{\theta_\mathrm{v}^\prime}{\overline{\theta}_\mathrm{v}} g + \nu \pdd{u_i}{x_j}
 \]</div>
+<p>In a moist atmosphere, we will now also define stability based on vertical gradient of the virtual potential temperature <span class="math notranslate nohighlight">\(\theta_\mathrm{v}\)</span>, rather than the potential temperature <span class="math notranslate nohighlight">\(\theta\)</span> that does not take into account the effects of moisture.</p>
 </section>
 </section>
 
