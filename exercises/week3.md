@@ -36,7 +36,7 @@ so $\delta_{i3} \overline{u_i'\theta_v'}$ becomes $\overline{w'\theta_v'}$, and 
 
 $$
 0
-= \underbrace{\delta_{i3} \frac{g}{\overline{\theta_v}} \overline{w'\theta_v'}}_{\rm Buoyancy}
+= \underbrace{\frac{g}{\overline{\theta_v}} \overline{w'\theta_v'}}_{\rm Buoyancy}
 -\underbrace{\overline{u_i'u_j'}\gemafg{u_i}{x_j}}_{\rm Shear}
 -\underbrace{\epsilon}_{\rm Viscous\ dissipation}
 $$(for:ex3a)
@@ -72,8 +72,8 @@ Vertical profiles of $\theta$ (a) and $U$ (b) under unstable conditions
 ```
 
 The unstable condition is depicted in {numref}`fig3a`.
-It is shown that $\overline{w'\theta'}>0$ and $\overline{u'w'}<0$.
-Since $\frac{g}{\overline{\theta}} > 0$ and $\gemafg{u}{z} > 0$, this leads to $B>0$ and $S>0$.
+It is shown that $\overline{w'\theta'}>0$, since $\frac{g}{\overline{\theta}} > 0$, this leads to $B>0$.
+It is shown that and $\overline{u'w'}<0$, since $\gemafg{u}{z} > 0$ and the shear term contains a minus sign, $S>0$.
 Both contributions are production terms.
 
 </details>
@@ -89,8 +89,8 @@ Vertical profiles of $\theta$ (a) and $U$ (b) under stable conditions
 ```
 
 The stable condition is depicted in {numref}`fig3b`.
-It is shown that $\overline{w'\theta'}<0$ and $\overline{u'w'}<0$.
-Since $\frac{g}{\theta} > 0$ and $\gemafg{u}{z} > 0$, this leads to $B<0$ and $S>0$.
+It is shown that $\overline{w'\theta'}<0$, since $\frac{g}{\overline{\theta}} > 0$, this leads to $B<0$.
+As under question a, it is shown that and $\overline{u'w'}<0$, since $\gemafg{u}{z} > 0$ and the shear term contains a minus sign, $S>0$.
 Shear remains a production terms, but buoyancy leads to destruction of TKE.
 </details>
 
@@ -302,7 +302,7 @@ $
 \end{cases}
 $
 
-Since for all layers $\gemafg{\theta_v}{z} > 0$, therfore $\overline{w'\theta_v'} < 0$, 
+Since for all layers $\gemafg{\theta_v}{z} > 0$, therefore $\overline{w'\theta_v'} < 0$, 
 the buoyancy flux is negative everywhere and all layers are statically stable.
 
 Dynamic stability: 
@@ -342,7 +342,7 @@ and $z/L$.
 ```{hint}
 :class: tip, dropdown
 - Make use of $u_*^2=-\overline{u'w'}$
-- Assume that qe look at the surface layer 
+- Assume that we look at the surface layer 
 (where turbulent fluxes are relatively constant on height and vary less than 10\%, {cite}`stull1988introduction`), 
 so $\overline{u'w'} \approx \overline{u'w'}_0 = -u_*^2$. Also $\overline{w'\theta_v'} \approx \overline{w'\theta_v'}_0$. 
 
@@ -380,7 +380,10 @@ $$
 0= -\overline{u'w'}\frac{u_*\Phi_m}{\kappa \,z} + \frac{g}{\overline{\theta_v}}\overline{w'\theta_v'} - \frac{u_*^3 \Phi_\epsilon}{\kappa\, z}
 $$
 
-Since the $\Phi_{m,\epsilon}$ is dimensionless, the dimension of the total equation is $\rm L^2\,T^{-3}$. How to make this equation dimensionless? The last term shows, an easy way is to multiply the whole equation by $\frac{\kappa z}{u_*^3}$, which results in
+Since the $\Phi_{m}$ and $\Phi_{\epsilon}$ are dimensionless, 
+the units of the total equation are $\rm m^2\,s^{-3}$. 
+How to make this equation dimensionless? 
+The last term shows, an easy way is to multiply the whole equation by $\frac{\kappa z}{u_*^3}$, which results in
 
 $$
 0= \frac{-\overline{u'w'}}{u_*^2}\Phi_m + \frac{\kappa\,g\,\overline{w'\theta_v'}}{\overline{\theta_v}\,u_*^3}z - \Phi_\epsilon
@@ -398,7 +401,7 @@ the total TKE equation can be rewritten to $0=\Phi_m-\frac{z}{L}-\Phi_\epsilon$
 
 </details>
 
-b) Discuss what occur under neutral stratifying conditions.
+b) Discuss the relative importance of buoyancy, shear and dissipation under neutral conditions.
 
 <details>
   <summary>Answer</summary>
