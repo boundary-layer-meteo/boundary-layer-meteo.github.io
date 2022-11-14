@@ -31,6 +31,8 @@ $$
 
 ## The ideal gas law for a moist atmosphere
 
+The pressure $p$ of the atmosphere can be decomposed into the partial pressure of dry air $p_\mathrm{d}$ and that of vapor $p_\mathrm{v}$. With the help of the gas law, and the specific humidity $q$, we can work this towards a notation that introduces virtual temperature
+
 $$
 p &= p_\mathrm{d} + p_\mathrm{v} \\
 p &= \rho_\mathrm{d} \Rd T + \rho_\mathrm{v} \Rv T \\
@@ -56,7 +58,7 @@ $$
 \theta_\mathrm{v} \equiv \theta \left( 1 + q \left( \dfrac{\Rv}{\Rd} - 1 \right) \right)
 $$
 
-We can assume that in an atmospheric boundary layer $\rhoprime \ll \rhobar$, $\pprime \ll \pbar$, and $\Tvprime \ll Tvbar$. Hence we can rewrite the gas law.
+We can assume that in an atmospheric boundary layer $\rhoprime \ll \rhobar$, $\pprime \ll \pbar$, and $\Tvprime \ll \Tvbar$. Hence we can rewrite the gas law.
 
 $$
 \pbar + \pprime = \left( \rhobar + \rhoprime \right) \Rd \left( \Tvbar + \Tvprime \right) \\
