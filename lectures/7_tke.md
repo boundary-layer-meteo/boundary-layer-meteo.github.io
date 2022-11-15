@@ -4,6 +4,7 @@ $$
 \def\ubar{\overline{u}}
 \def\vbar{\overline{v}}
 \def\wbar{\overline{w}}
+\def\ebar{\overline{e}}
 \def\uprime{u^\prime}
 \def\vprime{v^\prime}
 \def\wprime{w^\prime}
@@ -17,6 +18,7 @@ $$
 \def\ujbar{\overline{u}_j}
 \def\uiprime{u_i^\prime}
 \def\uiprimesq{u_i^{\prime 2}}
+\def\uiprimesqbar{\overline{u_i^{\prime 2}}}
 \def\ujprime{u_j^\prime}
 \def\ubar{\overline{u}}
 \def\vbar{\overline{v}}
@@ -90,14 +92,56 @@ $$
 $$
   \pd{\uiprimesq}{t}
 + \pd{\uiprimesq \ujbar}{x_j}
-+ 2 \uiprime \pd{\uibar \ujprime}{x_j}
++ 2 \uiprime \ujprime \pd{\uibar}{x_j}
 + \pd{\uiprimesq \ujprime}{x_j}
 - 2 \uiprime \pd{\overline{ \uiprime \ujprime }}{x_j}
 =
 - \dfrac{2}{\rhobar} \pd{\uiprime p^\prime}{x_i}
 + p^\prime \dfrac{2}{\rhobar} \pd{\uiprime}{x_i}
 - 2 f \epsilon_{ij3} \uiprime \ujprime
-+ 2 \delta_{i3} \dfrac{\uiprime \theta_\mathrm{v}^\prime}{\overline{\theta}_\mathrm{v}} g
-+ 2 \uiprime \nu \pdd{\uiprime}{x_j}
++ 2 \delta_{i3} \dfrac{g}{\overline{\theta}_\mathrm{v}} \uiprime \theta_\mathrm{v}^\prime
++ \nu \pdd{\uiprimesq}{x_j}
+- 2 \nu \left( \pd{\uiprime}{x_j} \right)^2
 $$
 
+Reshuffling and averaging gives the variance equations
+
+$$
+  \pd{\uiprimesqbar}{t}
++ \pd{\uiprimesqbar \ujbar}{x_j}
+=
+- \pd{\overline{\uiprimesq \ujprime}}{x_j}
+- 2 \overline{\uiprime \ujprime} \pd{\uibar}{x_j}
+- \dfrac{2}{\rhobar} \pd{\overline{\uiprime p^\prime}}{x_i}
++ \dfrac{2}{\rhobar} \overline{ p^\prime \pd{\uiprime}{x_i} }
+- 2 f \epsilon_{ij3} \overline{ \uiprime \ujprime }
++ 2 \delta_{i3} \dfrac{g}{\overline{\theta}_\mathrm{v}} \overline{ \uiprime \theta_\mathrm{v}^\prime}
++ \nu \pdd{\uiprimesqbar}{x_j}
+- 2 \nu \overline{ \left( \pd{\uiprime}{x_j} \right)^2}
+$$
+
+If we define $e \equiv \frac{1}{2} \uiprimesq$, and assume the viscous transport is small, we can write the equation as
+
+$$
+  \pd{\ebar}{t}
++ \pd{\ebar\,\ujbar}{x_j}
+=
+- \pd{\overline{e\ujprime}}{x_j}
+- \overline{\uiprime \ujprime} \pd{\uibar}{x_j}
+- \dfrac{1}{\rhobar} \pd{\overline{\uiprime p^\prime}}{x_i}
++ \delta_{i3} \dfrac{g}{\overline{\theta}_\mathrm{v}} \overline{ \uiprime \theta_\mathrm{v}^\prime}
+- \nu \overline{ \left( \pd{\uiprime}{x_j} \right)^2}
+$$
+
+If we now assume horizontal homogeneity, and define the dissipation as $\epsilon \equiv \nu \overline{ \left( \pd{\uiprime}{x_j} \right)^2}$, we can write
+
+$$
+  \pd{\ebar}{t}
+=
+- \pd{\overline{e  w^\prime}}{z}
+- \overline{u^\prime w^\prime} \pd{\ubar}{z}
+- \overline{v^\prime w^\prime} \pd{\vbar}{z}
+- \dfrac{1}{\rhobar} \pd{\overline{w^\prime p^\prime}}{z}
++ \dfrac{g}{\overline{\theta}_\mathrm{v}} \overline{ w^\prime \theta_\mathrm{v}^\prime}
+- \epsilon
+$$
