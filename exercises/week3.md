@@ -169,9 +169,7 @@ Positive buoyancy flux leads to a production term.
 
 ##
 During the 20th July, the sun set at Cabauw at 20 UTC. The day
-was clear (cloudless).
-
-a) Sketch in a plot the evolution on time (between 18 and 22 UTC) of
+was clear (cloudless). Sketch in a plot the evolution on time (between 18 and 22 UTC) of
 the shear, the buoyancy contribution terms and the flux Richardson number. Discuss it.
 
 <details>
@@ -195,10 +193,21 @@ After sunset, the Richardson number increases. When the Richardson number > 1, t
 
 </details>
 
-b) 
-At 22 UTC, the only important term in the right hand side of the prognostic Turbulent Kinetic Energy
-equation (Equation {eq}`for:ex3`) is the dissipation term. In addition, we will assume no advection. 
+##
+Imagine a summer day with little to no wind, on which a solar eclipse occurs. During the eclipse, the buoyancy becomes zero, 
+thus the only important term in the right hand side of the prognostic Turbulence Kinetic Energy
+equation (Equation {eq}`for:ex3`) is the dissipation term. In addition, we will assume no advection.
 
+a) Is the turbulent kinetic energy being produced or destroyed?
+
+<details>
+  <summary>Answer</summary>
+
+If the only relevant term is dissipation, the turbulent kinetic energy is being destroyed.
+
+</details>
+
+b)
 The dissipation term is generally parameterized as:
 
 $$
@@ -243,14 +252,6 @@ This results in $e=\left(\dfrac{1}{\dfrac{1}{\sqrt{e_0}}+\dfrac{C\,t}{2 h}}\righ
 
 </details>
 
-c) Is the turbulent kinetic energy being produced or destroyed?
-
-<details>
-  <summary>Answer</summary>
-
-If the only relevant term is dissipation, the turbulent kinetic energy is being destroyed.
-
-</details>
 
 ##
 Given the following vertical profile of wind:
@@ -341,9 +342,8 @@ and $z/L$.
 
 ```{hint}
 :class: tip, dropdown
-- Make use of $u_*^2=-\overline{u'w'}$
 - Assume that we look at the surface layer 
-(where turbulent fluxes are relatively constant on height and vary less than 10\%, {cite}`stull1988introduction`), 
+(where turbulent fluxes are relatively constant on height and vary less than 10\%), 
 so $\overline{u'w'} \approx \overline{u'w'}_0 = -u_*^2$. Also $\overline{w'\theta_v'} \approx \overline{w'\theta_v'}_0$. 
 
 - Remember that the Monin-Obukhov length is defined by 
