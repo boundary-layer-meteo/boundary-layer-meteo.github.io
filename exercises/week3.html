@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>9. Exercises week 3 &#8212; Boundary-Layer Meteorology</title>
+    <title>10. Exercises week 3 &#8212; Boundary-Layer Meteorology</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -54,7 +54,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="8. Exercises week 2" href="week2.html" />
+    <link rel="prev" title="9. Exercises week 2" href="week2.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -150,6 +150,11 @@ const thebe_selector_output = ".output, .cell_output"
    6. Conservation of energy (ii)
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/7_tke.html">
+   7. Turbulence Kinetic Energy (TKE)
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -159,17 +164,17 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="week1.html">
-   7. Exercises week 1
+   8. Exercises week 1
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="week2.html">
-   8. Exercises week 2
+   9. Exercises week 2
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   9. Exercises week 3
+   10. Exercises week 3
   </a>
  </li>
 </ul>
@@ -351,27 +356,32 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id1">
-   9.1.
+   10.1.
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id2">
-   9.2.
+   10.2.
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id3">
-   9.3.
+   10.3.
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id4">
-   9.4.
+   10.4.
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id5">
-   9.5.
+   10.5.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id6">
+   10.6.
   </a>
  </li>
 </ul>
@@ -395,27 +405,32 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id1">
-   9.1.
+   10.1.
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id2">
-   9.2.
+   10.2.
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id3">
-   9.3.
+   10.3.
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id4">
-   9.4.
+   10.4.
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id5">
-   9.5.
+   10.5.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id6">
+   10.6.
   </a>
  </li>
 </ul>
@@ -429,13 +444,13 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="exercises-week-3">
-<h1><span class="section-number">9. </span>Exercises week 3<a class="headerlink" href="#exercises-week-3" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">10. </span>Exercises week 3<a class="headerlink" href="#exercises-week-3" title="Permalink to this headline">#</a></h1>
 <p><span class="math notranslate nohighlight">\(\def\pafg#1#2{\dfrac{\partial #1}{\partial #2}}\)</span>
 <span class="math notranslate nohighlight">\(\def\afg#1#2{\dfrac{{\rm d} #1}{{\rm d} #2}}\)</span>
 <span class="math notranslate nohighlight">\(\def\gemafg#1#2{\pafg{\overline{#1}}{#2}}\)</span></p>
 <p>We start with the general TKE equation:</p>
 <div class="math notranslate nohighlight" id="equation-for-ex3">
-<span class="eqno">(9.1)<a class="headerlink" href="#equation-for-ex3" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(10.1)<a class="headerlink" href="#equation-for-ex3" title="Permalink to this equation">#</a></span>\[
 \underbrace{\gemafg{e}{t}}_{\rm Tendency} + \underbrace{\overline{u_j}\gemafg{e}{x_j}}_{\rm Advection}
 = \underbrace{\delta_{i3} \frac{g}{\overline{\theta_v}} \overline{u_i'\theta_v'}}_{\rm Buoyancy}
   -\underbrace{\overline{u_i'u_j'}\gemafg{u_i}{x_j}}_{\rm Shear}
@@ -457,7 +472,7 @@ title="Print to PDF"
 <p>We know that <span class="math notranslate nohighlight">\(\delta_{i3}\)</span> is 0 for <span class="math notranslate nohighlight">\(i \neq 3\)</span>,
 so <span class="math notranslate nohighlight">\(\delta_{i3} \overline{u_i'\theta_v'}\)</span> becomes <span class="math notranslate nohighlight">\(\overline{w'\theta_v'}\)</span>, and the equation reduces to:</p>
 <div class="math notranslate nohighlight" id="equation-for-ex3a">
-<span class="eqno">(9.2)<a class="headerlink" href="#equation-for-ex3a" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(10.2)<a class="headerlink" href="#equation-for-ex3a" title="Permalink to this equation">#</a></span>\[
 0
 = \underbrace{\frac{g}{\overline{\theta_v}} \overline{w'\theta_v'}}_{\rm Buoyancy}
 -\underbrace{\overline{u_i'u_j'}\gemafg{u_i}{x_j}}_{\rm Shear}
@@ -468,14 +483,14 @@ This means that <span class="math notranslate nohighlight">\(\overline{w} = 0\)<
 <p>Due to horizontal homogeneity <span class="math notranslate nohighlight">\(\gemafg{u}{x}=\gemafg{u}{y}=0\)</span>, so <span class="math notranslate nohighlight">\(j=3\)</span>.</p>
 <p>This reduces the equation even further to:</p>
 <div class="math notranslate nohighlight" id="equation-for-ex3b">
-<span class="eqno">(9.3)<a class="headerlink" href="#equation-for-ex3b" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(10.3)<a class="headerlink" href="#equation-for-ex3b" title="Permalink to this equation">#</a></span>\[
 0 = \underbrace{- \overline{u'w'}\gemafg{u}{z}}_{\rm S} + \underbrace{\frac{g}{\overline{\theta_v}} \overline{w'\theta_v'}}_{\rm B} - \epsilon
 \]</div>
 <p>Furthermore, in the exercises, specific humidity is ignored, so <span class="math notranslate nohighlight">\(\theta_v = \theta\)</span>.</p>
-<p>We will use equation <a class="reference internal" href="#equation-for-ex3b">(9.3)</a> in the exercises below.</p>
+<p>We will use equation <a class="reference internal" href="#equation-for-ex3b">(10.3)</a> in the exercises below.</p>
 <section id="id1">
-<h2><span class="section-number">9.1. </span><a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
-<p>From the reduced TKE equation (equation <a class="reference internal" href="#equation-for-ex3b">(9.3)</a>) deduce if the buoyancy (B) and
+<h2><span class="section-number">10.1. </span><a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
+<p>From the reduced TKE equation (equation <a class="reference internal" href="#equation-for-ex3b">(10.3)</a>) deduce if the buoyancy (B) and
 shear (S) terms are production or loss terms under the following conditions:</p>
 <p>a) unstable condition</p>
 <details>
@@ -483,10 +498,10 @@ shear (S) terms are production or loss terms under the following conditions:</p>
 <figure class="align-default" id="fig3a">
 <img alt="../_images/exercise3_4_a.png" src="../_images/exercise3_4_a.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 9.1 </span><span class="caption-text">Vertical profiles of <span class="math notranslate nohighlight">\(\theta\)</span> (a) and <span class="math notranslate nohighlight">\(U\)</span> (b) under unstable conditions</span><a class="headerlink" href="#fig3a" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 10.1 </span><span class="caption-text">Vertical profiles of <span class="math notranslate nohighlight">\(\theta\)</span> (a) and <span class="math notranslate nohighlight">\(U\)</span> (b) under unstable conditions</span><a class="headerlink" href="#fig3a" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>The unstable condition is depicted in <a class="reference internal" href="#fig3a"><span class="std std-numref">Fig. 9.1</span></a>.
+<p>The unstable condition is depicted in <a class="reference internal" href="#fig3a"><span class="std std-numref">Fig. 10.1</span></a>.
 It is shown that <span class="math notranslate nohighlight">\(\overline{w'\theta'}&gt;0\)</span>, since <span class="math notranslate nohighlight">\(\frac{g}{\overline{\theta}} &gt; 0\)</span>, this leads to <span class="math notranslate nohighlight">\(B&gt;0\)</span>.
 It is shown that and <span class="math notranslate nohighlight">\(\overline{u'w'}&lt;0\)</span>, since <span class="math notranslate nohighlight">\(\gemafg{u}{z} &gt; 0\)</span> and the shear term contains a minus sign, <span class="math notranslate nohighlight">\(S&gt;0\)</span>.
 Both contributions are production terms.</p>
@@ -497,10 +512,10 @@ Both contributions are production terms.</p>
 <figure class="align-default" id="fig3b">
 <img alt="../_images/exercise3_4_b.png" src="../_images/exercise3_4_b.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 9.2 </span><span class="caption-text">Vertical profiles of <span class="math notranslate nohighlight">\(\theta\)</span> (a) and <span class="math notranslate nohighlight">\(U\)</span> (b) under stable conditions</span><a class="headerlink" href="#fig3b" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 10.2 </span><span class="caption-text">Vertical profiles of <span class="math notranslate nohighlight">\(\theta\)</span> (a) and <span class="math notranslate nohighlight">\(U\)</span> (b) under stable conditions</span><a class="headerlink" href="#fig3b" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>The stable condition is depicted in <a class="reference internal" href="#fig3b"><span class="std std-numref">Fig. 9.2</span></a>.
+<p>The stable condition is depicted in <a class="reference internal" href="#fig3b"><span class="std std-numref">Fig. 10.2</span></a>.
 It is shown that <span class="math notranslate nohighlight">\(\overline{w'\theta'}&lt;0\)</span>, since <span class="math notranslate nohighlight">\(\frac{g}{\overline{\theta}} &gt; 0\)</span>, this leads to <span class="math notranslate nohighlight">\(B&lt;0\)</span>.
 As under question a, it is shown that and <span class="math notranslate nohighlight">\(\overline{u'w'}&lt;0\)</span>, since <span class="math notranslate nohighlight">\(\gemafg{u}{z} &gt; 0\)</span> and the shear term contains a minus sign, <span class="math notranslate nohighlight">\(S&gt;0\)</span>.
 Shear remains a production terms, but buoyancy leads to destruction of TKE.</p>
@@ -515,7 +530,7 @@ As the buoyancy is 0, all the TKE produced by shear is destroyed by dissipation.
 </details>
 </section>
 <section id="id2">
-<h2><span class="section-number">9.2. </span><a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">10.2. </span><a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h2>
 <p>The wind profile is given at a measuring site by</p>
 <div class="math notranslate nohighlight">
 \[
@@ -528,7 +543,7 @@ and <span class="math notranslate nohighlight">\(\overline{T}=25\ \rm{C}\)</span
 Discuss the result.</p>
 <details>
   <summary>Answer</summary>
-<p>Mechanical production term: <span class="math notranslate nohighlight">\(-\overline{u'w'}\pafg{\overline{u}}{z}\)</span> (see equation <a class="reference internal" href="#equation-for-ex3b">(9.3)</a>).
+<p>Mechanical production term: <span class="math notranslate nohighlight">\(-\overline{u'w'}\pafg{\overline{u}}{z}\)</span> (see equation <a class="reference internal" href="#equation-for-ex3b">(10.3)</a>).
 <span class="math notranslate nohighlight">\(\overline{u'w'}\)</span> can be related to <span class="math notranslate nohighlight">\(u_*\)</span> by using first-order closure (<span class="math notranslate nohighlight">\(K\)</span>-theory):</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -550,7 +565,7 @@ P &amp;= - \overline{u'w'}\pafg{\overline{u}}{z} \\
 <p>b) Calculate the buoyancy term. Under these conditions, is it a production or destruction term?</p>
 <details>
   <summary>Answer</summary>
-<p>Buoyancy term: <span class="math notranslate nohighlight">\(\frac{g}{\theta_v}\overline{w'\theta_v'}\)</span> (see equation <a class="reference internal" href="#equation-for-ex3b">(9.3)</a>).</p>
+<p>Buoyancy term: <span class="math notranslate nohighlight">\(\frac{g}{\theta_v}\overline{w'\theta_v'}\)</span> (see equation <a class="reference internal" href="#equation-for-ex3b">(10.3)</a>).</p>
 <p>We assume there’s no moist, so <span class="math notranslate nohighlight">\(\theta_v=\theta\)</span> and <span class="math notranslate nohighlight">\(\theta \approx T + \gamma_d z\)</span>.
 <span class="math notranslate nohighlight">\(\gamma_d = \frac{g}{c_p} = 9.8 \cdot 10^{-3}\rm\,K\ m^{-1}\)</span>.
 Even at 10 <span class="math notranslate nohighlight">\(m\)</span> height, <span class="math notranslate nohighlight">\(\theta\)</span> and <span class="math notranslate nohighlight">\(T\)</span> differ less than <span class="math notranslate nohighlight">\(0.1\rm\,K\)</span>, so <span class="math notranslate nohighlight">\(\theta_v = 298\rm\,K\)</span>.
@@ -559,20 +574,19 @@ Therefore, the buoyancy term is <span class="math notranslate nohighlight">\(1.6
 </details>
 </section>
 <section id="id3">
-<h2><span class="section-number">9.3. </span><a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">10.3. </span><a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h2>
 <p>During the 20th July, the sun set at Cabauw at 20 UTC. The day
-was clear (cloudless).</p>
-<p>a) Sketch in a plot the evolution on time (between 18 and 22 UTC) of
+was clear (cloudless). Sketch in a plot the evolution on time (between 18 and 22 UTC) of
 the shear, the buoyancy contribution terms and the flux Richardson number. Discuss it.</p>
 <details>
   <summary>Answer</summary>
 <figure class="align-default" id="fig5">
 <img alt="../_images/exercise3_5.png" src="../_images/exercise3_5.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 9.3 </span><span class="caption-text">Buoyancy (B), shear (S), and the Richardson number (Ri) as a function of time.</span><a class="headerlink" href="#fig5" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 10.3 </span><span class="caption-text">Buoyancy (B), shear (S), and the Richardson number (Ri) as a function of time.</span><a class="headerlink" href="#fig5" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p><a class="reference internal" href="#fig5"><span class="std std-numref">Fig. 9.3</span></a> contains the sketch.
+<p><a class="reference internal" href="#fig5"><span class="std std-numref">Fig. 10.3</span></a> contains the sketch.
 The buoyancy decreases until sunset.
 After sunset, the earth’s surface is still warmed up, but begins to cool, which causes a delay in the moment that buoyancy is zero.
 After this point, the earth’s surface keeps cooling by longwave radiation.
@@ -581,10 +595,19 @@ Consequently, stratification of the flow sets in, <span class="math notranslate 
 <p>During day (and the start of the afternoon), the Richardson number is negative, which corresponds to a turbulent flow.
 After sunset, the Richardson number increases. When the Richardson number &gt; 1, the flow becomes laminar.</p>
 </details>
+</section>
+<section id="id4">
+<h2><span class="section-number">10.4. </span><a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h2>
+<p>Imagine a summer day with little to no wind, on which a solar eclipse occurs. During the eclipse, the buoyancy becomes zero,
+thus the only important term in the right hand side of the prognostic Turbulence Kinetic Energy
+equation (Equation <a class="reference internal" href="#equation-for-ex3">(10.1)</a>) is the dissipation term. In addition, we will assume no advection.</p>
+<p>a) Is turbulence kinetic energy being produced or destroyed?</p>
+<details>
+  <summary>Answer</summary>
+<p>If the only relevant term is dissipation, the turbulence kinetic energy is being destroyed.</p>
+</details>
 <p>b)
-At 22 UTC, the only important term in the right hand side of the prognostic Turbulent Kinetic Energy
-equation (Equation <a class="reference internal" href="#equation-for-ex3">(9.1)</a>) is the dissipation term. In addition, we will assume no advection.</p>
-<p>The dissipation term is generally parameterized as:</p>
+The dissipation term is generally parameterized as:</p>
 <div class="math notranslate nohighlight">
 \[
 \epsilon = C \frac{e^{3/2}}{h}
@@ -596,7 +619,7 @@ energy. Assume that <span class="math notranslate nohighlight">\(h\)</span> does
 <details>
   <summary>Answer</summary>
 <p>If only dissipation is important on the right hand side of the equation, and advection can be neglected,
-the total equation (<a class="reference internal" href="#equation-for-ex3">(9.1)</a>) becomes</p>
+the total equation (<a class="reference internal" href="#equation-for-ex3">(10.1)</a>) becomes</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \pafg{e}{t} &amp;= -\epsilon\\
@@ -619,14 +642,9 @@ e^{\frac{1}{2}} &amp;= \frac{1}{e_0^{-\frac{1}{2}} + \frac{C\,t}{2h}}
 \end{split}\]</div>
 <p>This results in <span class="math notranslate nohighlight">\(e=\left(\dfrac{1}{\dfrac{1}{\sqrt{e_0}}+\dfrac{C\,t}{2 h}}\right)^2\)</span></p>
 </details>
-<p>c) Is the turbulent kinetic energy being produced or destroyed?</p>
-<details>
-  <summary>Answer</summary>
-<p>If the only relevant term is dissipation, the turbulent kinetic energy is being destroyed.</p>
-</details>
 </section>
-<section id="id4">
-<h2><span class="section-number">9.4. </span><a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h2>
+<section id="id5">
+<h2><span class="section-number">10.5. </span><a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h2>
 <p>Given the following vertical profile of wind:</p>
 <table class="colwidths-auto table">
 <thead>
@@ -754,9 +772,9 @@ the buoyancy flux is negative everywhere and all layers are statically stable.</
 Therefore, the lowest 4 layers are turbulent.</p>
 </details>
 </section>
-<section id="id5">
-<h2><span class="section-number">9.5. </span><a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h2>
-<p>Starting from Equation <a class="reference internal" href="#equation-for-ex3b">(9.3)</a> and by using the following dimensionless parameters one can derive a dimensionless
+<section id="id6">
+<h2><span class="section-number">10.6. </span><a class="headerlink" href="#id6" title="Permalink to this headline">#</a></h2>
+<p>Starting from Equation <a class="reference internal" href="#equation-for-ex3b">(10.3)</a> and by using the following dimensionless parameters one can derive a dimensionless
 form of the TKE equation</p>
 <div class="math notranslate nohighlight">
 \[
@@ -768,9 +786,8 @@ and <span class="math notranslate nohighlight">\(z/L\)</span>.</p>
 <div class="tip dropdown admonition hint">
 <p class="admonition-title">Hint</p>
 <ul class="simple">
-<li><p>Make use of <span class="math notranslate nohighlight">\(u_*^2=-\overline{u'w'}\)</span></p></li>
 <li><p>Assume that we look at the surface layer
-(where turbulent fluxes are relatively constant on height and vary less than 10%, <span id="id6">[]</span>),
+(where turbulent fluxes are relatively constant on height and vary less than 10%),
 so <span class="math notranslate nohighlight">\(\overline{u'w'} \approx \overline{u'w'}_0 = -u_*^2\)</span>. Also <span class="math notranslate nohighlight">\(\overline{w'\theta_v'} \approx \overline{w'\theta_v'}_0\)</span>.</p></li>
 <li><p>Remember that the Monin-Obukhov length is defined by</p></li>
 </ul>
@@ -789,14 +806,14 @@ L = \frac{-\overline{\theta_v}\,u_*^3}{\kappa\,g\,\overline{w'\theta_v'}_0},
 \end{split}\]</div>
 <p>This can be rewritten to</p>
 <div class="math notranslate nohighlight" id="equation-for-54a1">
-<span class="eqno">(9.4)<a class="headerlink" href="#equation-for-54a1" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(10.4)<a class="headerlink" href="#equation-for-54a1" title="Permalink to this equation">#</a></span>\[
 \gemafg{u}{z} = \Phi_m \frac{u_*}{\kappa\, z}
 \]</div>
 <div class="math notranslate nohighlight" id="equation-for-54a2">
-<span class="eqno">(9.5)<a class="headerlink" href="#equation-for-54a2" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(10.5)<a class="headerlink" href="#equation-for-54a2" title="Permalink to this equation">#</a></span>\[
 \epsilon = \Phi_\epsilon \frac{u_*^3}{\kappa\, z}
 \]</div>
-<p>Substituting Equations <a class="reference internal" href="#equation-for-54a1">(9.4)</a> and <a class="reference internal" href="#equation-for-54a2">(9.5)</a> in Equation <a class="reference internal" href="#equation-for-ex3b">(9.3)</a>, yields</p>
+<p>Substituting Equations <a class="reference internal" href="#equation-for-54a1">(10.4)</a> and <a class="reference internal" href="#equation-for-54a2">(10.5)</a> in Equation <a class="reference internal" href="#equation-for-ex3b">(10.3)</a>, yields</p>
 <div class="math notranslate nohighlight">
 \[
 0= -\overline{u'w'}\frac{u_*\Phi_m}{\kappa \,z} + \frac{g}{\overline{\theta_v}}\overline{w'\theta_v'} - \frac{u_*^3 \Phi_\epsilon}{\kappa\, z}
@@ -859,7 +876,7 @@ All kinetic energy that is generated by shear is directly dissipated.</p>
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">8. </span>Exercises week 2</p>
+            <p class="prev-next-title"><span class="section-number">9. </span>Exercises week 2</p>
         </div>
     </a>
 </div>
