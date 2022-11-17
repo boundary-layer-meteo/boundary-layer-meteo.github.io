@@ -10,6 +10,7 @@
 $$
 \def\cp{c_{\mathrm{p}}}
 \def\Rd{R_{\mathrm{d}}}
+\def\pd#1#2{\dfrac{\partial #1}{\partial #2}}
 $$
 
 ## The first law of thermodynamics
@@ -32,6 +33,15 @@ Assume no heat is added ($\delta Q = 0$) and use Equation {eq}`first_law` to ans
 :class: important, dropdown
 If $\delta Q$ equals zero, then $\rho \cp \mathrm{d}T = \mathrm{d}p$. Therefore, if we move up a mountain and pressure decreases ($dp < 0$), temperature change $dT$ must be smaller than 0 as well. Temperature thus decreases.
 ```
+
+From Equation {eq}`first_law` we can derive the dry adiabatic lapse rate
+
+$$
+\rho \cp \mathrm{d}T &= \mathrm{d}p \\
+\rho \cp \pd{T}{z} &= \pd{p}{z} \\
+\rho \cp \pd{T}{z} &= - \rho g \\
+\pd{T}{z} &= - \dfrac{g}{\cp}
+$$
 
 ### Potential temperature
 One of the disadvantages of temperature is that it is influenced by expansion and compression, as well as heat transfer. This means that an air parcel that is vertically displaced by turbulence experiences a temperature change even if no heat is added or removed. In the analysis of turbulent boundary layer flows it is convenient to have a quantity that is conserved under adiabatic dispacement. Before deriving this quantity, we rewrite Equation {eq}`first_law` in units of temperature, and we remove the density from the pressure term with the help of the ideal gas law ($p = \rho \Rd T$)
