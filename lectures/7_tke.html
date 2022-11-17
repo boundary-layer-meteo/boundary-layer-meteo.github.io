@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>7. Turbulence Kinetic Energy (TKE) &#8212; Boundary-Layer Meteorology</title>
+    <title>7. Turbulence kinetic energy (i) &#8212; Boundary-Layer Meteorology</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -54,7 +54,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="8. Exercises week 1" href="../exercises/week1.html" />
+    <link rel="next" title="8. Turbulence kinetic energy (ii)" href="8_tke_ii.html" />
     <link rel="prev" title="6. Conservation of energy (ii)" href="6_energy_ii.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -153,7 +153,12 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   7. Turbulence Kinetic Energy (TKE)
+   7. Turbulence kinetic energy (i)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="8_tke_ii.html">
+   8. Turbulence kinetic energy (ii)
   </a>
  </li>
 </ul>
@@ -165,17 +170,17 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../exercises/week1.html">
-   8. Exercises week 1
+   9. Exercises week 1
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../exercises/week2.html">
-   9. Exercises week 2
+   10. Exercises week 2
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../exercises/week3.html">
-   10. Exercises week 3
+   11. Exercises week 3
   </a>
  </li>
 </ul>
@@ -369,7 +374,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Turbulence Kinetic Energy (TKE)</h1>
+                <h1>Turbulence kinetic energy (i)</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -394,8 +399,8 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="turbulence-kinetic-energy-tke">
-<h1><span class="section-number">7. </span>Turbulence Kinetic Energy (TKE)<a class="headerlink" href="#turbulence-kinetic-energy-tke" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="turbulence-kinetic-energy-i">
+<h1><span class="section-number">7. </span>Turbulence kinetic energy (i)<a class="headerlink" href="#turbulence-kinetic-energy-i" title="Permalink to this headline">#</a></h1>
 <div class="math notranslate nohighlight">
 \[
 \def\ubar{\overline{u}}
@@ -417,9 +422,6 @@ title="Print to PDF"
 \def\uiprimesq{u_i^{\prime 2}}
 \def\uiprimesqbar{\overline{u_i^{\prime 2}}}
 \def\ujprime{u_j^\prime}
-\def\ubar{\overline{u}}
-\def\vbar{\overline{v}}
-\def\wbar{\overline{w}}
 \]</div>
 <section id="definition">
 <h2><span class="section-number">7.1. </span>Definition<a class="headerlink" href="#definition" title="Permalink to this headline">#</a></h2>
@@ -511,30 +513,6 @@ The starting point is the conservation equation for <span class="math notranslat
 + \nu \pdd{\uiprimesqbar}{x_j}
 - 2 \nu \overline{ \left( \pd{\uiprime}{x_j} \right)^2}
 \]</div>
-<p>If we define <span class="math notranslate nohighlight">\(e \equiv \frac{1}{2} \uiprimesq\)</span>, and assume the viscous transport is small, we can write the equation as</p>
-<div class="math notranslate nohighlight">
-\[
-  \pd{\ebar}{t}
-+ \pd{\ebar\,\ujbar}{x_j}
-=
-- \pd{\overline{e\ujprime}}{x_j}
-- \overline{\uiprime \ujprime} \pd{\uibar}{x_j}
-- \dfrac{1}{\rhobar} \pd{\overline{\uiprime p^\prime}}{x_i}
-+ \delta_{i3} \dfrac{g}{\overline{\theta}_\mathrm{v}} \overline{ \uiprime \theta_\mathrm{v}^\prime}
-- \nu \overline{ \left( \pd{\uiprime}{x_j} \right)^2}
-\]</div>
-<p>If we now assume horizontal homogeneity, and define the dissipation as <span class="math notranslate nohighlight">\(\epsilon \equiv \nu \overline{ \left( \pd{\uiprime}{x_j} \right)^2}\)</span>, we can write</p>
-<div class="math notranslate nohighlight">
-\[
-  \pd{\ebar}{t}
-=
-- \pd{\overline{e  w^\prime}}{z}
-- \overline{u^\prime w^\prime} \pd{\ubar}{z}
-- \overline{v^\prime w^\prime} \pd{\vbar}{z}
-- \dfrac{1}{\rhobar} \pd{\overline{w^\prime p^\prime}}{z}
-+ \dfrac{g}{\overline{\theta}_\mathrm{v}} \overline{ w^\prime \theta_\mathrm{v}^\prime}
-- \epsilon
-\]</div>
 </section>
 </section>
 
@@ -572,10 +550,10 @@ The starting point is the conservation equation for <span class="math notranslat
             <p class="prev-next-title"><span class="section-number">6. </span>Conservation of energy (ii)</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../exercises/week1.html" title="next page">
+    <a class='right-next' id="next-link" href="8_tke_ii.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">8. </span>Exercises week 1</p>
+        <p class="prev-next-title"><span class="section-number">8. </span>Turbulence kinetic energy (ii)</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

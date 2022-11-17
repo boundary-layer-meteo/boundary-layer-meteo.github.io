@@ -1,4 +1,4 @@
-# Turbulence Kinetic Energy (TKE)
+# Turbulence kinetic energy (i)
 
 $$
 \def\ubar{\overline{u}}
@@ -20,9 +20,6 @@ $$
 \def\uiprimesq{u_i^{\prime 2}}
 \def\uiprimesqbar{\overline{u_i^{\prime 2}}}
 \def\ujprime{u_j^\prime}
-\def\ubar{\overline{u}}
-\def\vbar{\overline{v}}
-\def\wbar{\overline{w}}
 $$
 
 ## Definition
@@ -120,28 +117,3 @@ $$
 - 2 \nu \overline{ \left( \pd{\uiprime}{x_j} \right)^2}
 $$
 
-If we define $e \equiv \frac{1}{2} \uiprimesq$, and assume the viscous transport is small, we can write the equation as
-
-$$
-  \pd{\ebar}{t}
-+ \pd{\ebar\,\ujbar}{x_j}
-=
-- \pd{\overline{e\ujprime}}{x_j}
-- \overline{\uiprime \ujprime} \pd{\uibar}{x_j}
-- \dfrac{1}{\rhobar} \pd{\overline{\uiprime p^\prime}}{x_i}
-+ \delta_{i3} \dfrac{g}{\overline{\theta}_\mathrm{v}} \overline{ \uiprime \theta_\mathrm{v}^\prime}
-- \nu \overline{ \left( \pd{\uiprime}{x_j} \right)^2}
-$$
-
-If we now assume horizontal homogeneity, and define the dissipation as $\epsilon \equiv \nu \overline{ \left( \pd{\uiprime}{x_j} \right)^2}$, we can write
-
-$$
-  \pd{\ebar}{t}
-=
-- \pd{\overline{e  w^\prime}}{z}
-- \overline{u^\prime w^\prime} \pd{\ubar}{z}
-- \overline{v^\prime w^\prime} \pd{\vbar}{z}
-- \dfrac{1}{\rhobar} \pd{\overline{w^\prime p^\prime}}{z}
-+ \dfrac{g}{\overline{\theta}_\mathrm{v}} \overline{ w^\prime \theta_\mathrm{v}^\prime}
-- \epsilon
-$$
