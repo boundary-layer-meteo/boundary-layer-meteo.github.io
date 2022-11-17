@@ -53,7 +53,7 @@ $$
 $$
 ```
 
-If we now assume horizontal homogeneity, and define the dissipation as $\epsilon \equiv \nu \overline{ \left( \pd{\uiprime}{x_j} \right)^2}$, we can write
+If we now assume horizontal homogeneity and no subsidence, and define the dissipation as $\epsilon \equiv \nu \overline{ \left( \pd{\uiprime}{x_j} \right)^2}$, we can write
 
 ```{admonition} Conservation of turbulence kinetic energy (TKE) under horizontal homogeneity
 $$
