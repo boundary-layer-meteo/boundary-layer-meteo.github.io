@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>1. Conservation of mass &#8212; Boundary-Layer Meteorology</title>
+    <title>9. Richardson numbers &#8212; Boundary-Layer Meteorology</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -54,8 +54,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="2. Conservation of momentum (i)" href="2_momentum_i.html" />
-    <link rel="prev" title="Welcome" href="../intro.html" />
+    <link rel="next" title="10. Exercises week 1" href="../exercises/week1.html" />
+    <link rel="prev" title="8. Turbulence kinetic energy (ii)" href="8_tke_ii.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -121,8 +121,8 @@ const thebe_selector_output = ".output, .cell_output"
  </span>
 </p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="1_mass.html">
    1. Conservation of mass
   </a>
  </li>
@@ -161,8 +161,8 @@ const thebe_selector_output = ".output, .cell_output"
    8. Turbulence kinetic energy (ii)
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="9_ri.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    9. Richardson numbers
   </a>
  </li>
@@ -278,7 +278,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Flectures/1_mass.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Flectures/9_ri.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -306,7 +306,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/lectures/1_mass.md"
+        <a href="../_sources/lectures/9_ri.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -343,70 +343,23 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
-</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#derivation">
-   1.1. Derivation
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-boussinesq-approximation">
-   1.2. The Boussinesq approximation
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Conservation of mass</h1>
+                <h1>Richardson numbers</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#derivation">
-   1.1. Derivation
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-boussinesq-approximation">
-   1.2. The Boussinesq approximation
-  </a>
- </li>
-</ul>
-
-                        </nav>
                     </div>
                 </div>
             </div>
@@ -414,84 +367,85 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="conservation-of-mass">
-<h1><span class="section-number">1. </span>Conservation of mass<a class="headerlink" href="#conservation-of-mass" title="Permalink to this headline">#</a></h1>
-<div class="admonition-questions-to-be-answered admonition">
-<p class="admonition-title">Questions to be answered</p>
-<ol class="simple">
-<li><p>What is the equation for conservation of mass in the atmospheric boundary layer?</p></li>
-<li><p>Which assumptions are made to get to this equation?</p></li>
-</ol>
+  <section class="tex2jax_ignore mathjax_ignore" id="richardson-numbers">
+<h1><span class="section-number">9. </span>Richardson numbers<a class="headerlink" href="#richardson-numbers" title="Permalink to this headline">#</a></h1>
+<div class="math notranslate nohighlight">
+\[
+\def\ubar{\overline{u}}
+\def\vbar{\overline{v}}
+\def\wbar{\overline{w}}
+\def\ebar{\overline{e}}
+\def\uprime{u^\prime}
+\def\vprime{v^\prime}
+\def\wprime{w^\prime}
+\def\uvar{\overline{u^{\prime 2}}}
+\def\vvar{\overline{v^{\prime 2}}}
+\def\wvar{\overline{w^{\prime 2}}}
+\def\pd#1#2{\dfrac{\partial #1}{\partial #2}}
+\def\fd#1#2{\dfrac{\Delta #1}{\Delta #2}}
+\def\rhobar{\overline{\rho}}
+\def\pdd#1#2{\dfrac{\partial^2 #1}{\partial#2^2}}
+\def\uibar{\overline{u}_i}
+\def\ujbar{\overline{u}_j}
+\def\uiprime{u_i^\prime}
+\def\uiprimesq{u_i^{\prime 2}}
+\def\uiprimesqbar{\overline{u_i^{\prime 2}}}
+\def\ujprime{u_j^\prime}
+  \underbrace{\pd{\ebar}{t}}_\textrm{storage}
+=
+\underbrace{ - \pd{\overline{e  w^\prime}}{z} }_\textrm{turbulent transport}
+\underbrace{ - \overline{u^\prime w^\prime} \pd{\ubar}{z}
+             - \overline{v^\prime w^\prime} \pd{\vbar}{z} }_\textrm{shear}
+\underbrace{ - \dfrac{1}{\rhobar} \pd{\overline{w^\prime p^\prime}}{z}}_\textrm{pressure transport}
+\underbrace{ + \dfrac{g}{\overline{\theta}_\mathrm{v}} \overline{ w^\prime \theta_\mathrm{v}^\prime} }_\textrm{buoyancy}
+\underbrace{ - \epsilon }_\textrm{dissipation}
+\]</div>
+<p>Turbulence generation is done by shear and, depending on its sign, buoyancy, while dissipation destroys turbulence at the smallest scales.
+The Richardson numbers relates the magnitude of buoyancy and shear production to each other.</p>
+<p>The flux-Richardson number is defined as</p>
+<div class="admonition-flux-richardson-number admonition">
+<p class="admonition-title">Flux-Richardson number</p>
+<div class="math notranslate nohighlight">
+\[
+Ri_\mathrm{f} \equiv
+\dfrac{\dfrac{g}{\overline{\theta}_\mathrm{v}} \overline{ w^\prime \theta_\mathrm{v}^\prime}}
+{\overline{u^\prime w^\prime} \pd{\ubar}{z} + \overline{v^\prime w^\prime} \pd{\vbar}{z}}
+\]</div>
 </div>
-<section id="derivation">
-<h2><span class="section-number">1.1. </span>Derivation<a class="headerlink" href="#derivation" title="Permalink to this headline">#</a></h2>
-<p>Density <span class="math notranslate nohighlight">\(\rho\)</span> is the variable that captures the mass of the atmosphere.
-For a certain control volume <span class="math notranslate nohighlight">\(\delta x\, \delta y\, \delta z\)</span>, the mass <span class="math notranslate nohighlight">\(M\)</span> is</p>
+<p>Via K-theory, fluxes can be related to gradients. Consequently, we can rewrite the flux-Richardson number as:</p>
 <div class="math notranslate nohighlight">
 \[
-M = \rho \, \delta x \, \delta y \, \delta z
+Ri_\mathrm{f} =
+\dfrac{  -K_\theta \dfrac{g}{\overline{\theta}_\mathrm{v}} \pd{\overline{\theta}_\mathrm{v}}{z}}
+{ -K_\mathrm{m} \pd{\ubar}{z} \pd{\ubar}{z} - K_\mathrm{m} \pd{\vbar}{z} \pd{\vbar}{z}}
 \]</div>
-<p>If we want to estimate mass changes within a time period <span class="math notranslate nohighlight">\(\delta t\)</span>, then the change of mass is the balance of all fluxes through the faces of the control volume.
-We can write out the balance:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\rho_{x, y, z, t+\delta t} \, \delta x \, \delta y \, \delta z - \rho_{x, y, z, t} \, \delta x \, \delta y \, \delta z
-&amp;= \left( \rho u \right)_{x, y, z, t} \, \delta y \, \delta z \, \delta t &amp;- \left( \rho u \right)_{x + \delta x, y, z, t} \, \delta y \, \delta z \, \delta t \\
-&amp;+ \left( \rho v \right)_{x, y, z, t} \, \delta x \, \delta z \, \delta t &amp;- \left( \rho v \right)_{x, y + \delta y, z, t} \, \delta x \, \delta z \, \delta t \\
-&amp;+ \left( \rho w \right)_{x, y, z, t} \, \delta x \, \delta y \, \delta t &amp;- \left( \rho w \right)_{x, y, z + \delta z, t} \, \delta x \, \delta y \, \delta t
-\end{split}\]</div>
-<p>If we assume that the box and the time step are infinitisimal, then we can use a Taylor expansions of the following kind, to substitute in the differences that are calculated in the equation above.</p>
+<p>If we assume that the turbulent diffusion coefficients <span class="math notranslate nohighlight">\(K_\mathrm{m}\)</span> and <span class="math notranslate nohighlight">\(K_\theta\)</span> are equal, we arrive at the definition of the gradient Richardson number</p>
+<div class="admonition-gradient-richardson-number admonition">
+<p class="admonition-title">Gradient-Richardson number</p>
 <div class="math notranslate nohighlight">
 \[
-\left( \rho u \right)_{x + \delta x, y, z, t} = \left( \rho u \right)_{x, y, z, t} + \left( \dfrac{ \partial \rho u }{ \partial x } \right)_{x, y, z, t} \delta x
+Ri_\mathrm{g} \equiv
+\dfrac{\dfrac{g}{\overline{\theta}_\mathrm{v}} \pd{\overline{\theta}_\mathrm{v}}{z}}
+{\left( \pd{\ubar}{z} \right)^2 + \left( \pd{\vbar}{z} \right)^2}
 \]</div>
-<p>Substitution leads to the following equation, where the <span class="math notranslate nohighlight">\(x, y, z, t\)</span> subscript is omited since it applies to all partial derivatives.</p>
+</div>
+<p>and the finite difference approximation called the Bulk Richardson number</p>
 <div class="math notranslate nohighlight">
 \[
-\dfrac{ \partial \rho }{ \partial t } \, \delta x \, \delta y \, \delta z \, \delta t
-= - \dfrac{ \partial \rho u }{ \partial x } \, \delta x \, \delta y \, \delta z \, \delta t
-  - \dfrac{ \partial \rho v }{ \partial y } \, \delta x \, \delta y \, \delta z \, \delta t
-  - \dfrac{ \partial \rho w }{ \partial z } \, \delta x \, \delta y \, \delta z \, \delta t
+Ri_\mathrm{g} \approx
+\dfrac{\dfrac{g}{\overline{\theta}_\mathrm{v}} \fd{\overline{\theta}_\mathrm{v}}{z}}
+{\left( \fd{\ubar}{z} \right)^2 + \left( \fd{\vbar}{z} \right)^2}
 \]</div>
-<p>And after dividing out the volume and time, and moving all terms to the left hand side, we get the conservation of mass equation.</p>
+<p>which can be simplified to</p>
+<div class="admonition-bulk-richardson-number admonition">
+<p class="admonition-title">Bulk-Richardson number</p>
 <div class="math notranslate nohighlight">
 \[
-\dfrac{ \partial \rho }{ \partial t } + \dfrac{\partial \rho u}{\partial x} + \dfrac{\partial \rho v}{\partial y} + \dfrac{\partial \rho w}{\partial z} = 0
+Ri_\mathrm{B} \equiv
+\dfrac{g \Delta \overline{\theta}_\mathrm{v} \Delta z}
+{\overline{\theta}_\mathrm{v} \left( \left( \Delta \ubar \right)^2 + \left( \Delta \vbar \right)^2 \right)}
 \]</div>
-<p>or in index notation. Note that small perturbations also requires that the layer is shallow to the extent that the density change between the surface and the top of the boundary layer is small compared to the mean density <span class="math notranslate nohighlight">\(\overline{\rho}\)</span>.</p>
-<div class="math notranslate nohighlight">
-\[
-\dfrac{ \partial \rho }{ \partial t } + \dfrac{\partial \rho u_j}{\partial x_j} = 0
-\]</div>
-<p>We can also rewrite this expression into the Lagrangian form of the conservation of mass:</p>
-<div class="math notranslate nohighlight">
-\[
-\dfrac{\partial \rho}{\partial t} + u_j \dfrac{\partial \rho}{\partial x_j} = - \rho \dfrac{\partial u_j}{\partial x_j}
-\]</div>
-</section>
-<hr class="docutils" />
-<section id="the-boussinesq-approximation">
-<h2><span class="section-number">1.2. </span>The Boussinesq approximation<a class="headerlink" href="#the-boussinesq-approximation" title="Permalink to this headline">#</a></h2>
-<p>We split the density into a slow moving part and a part that contains the fluctuations due to turbulence <span class="math notranslate nohighlight">\(\rho = \overline{\rho} + \rho^\prime\)</span>.
-We can rewrite the conservation of mass as</p>
-<div class="math notranslate nohighlight">
-\[
-\dfrac{ \partial \overline{\rho} }{ \partial t } + \dfrac{ \partial \rho^\prime }{ \partial t } 
-+ u_j \dfrac{\partial \overline{\rho} }{\partial x_j} + u_j \dfrac{\partial \rho^\prime}{\partial x_j}
-= - \left( \overline{\rho} + \rho^\prime \right) \dfrac{\partial u_j}{\partial x_j}
-\]</div>
-<p>If we assume that the mean density state is changing so slowly in space and time to the extent that it can be assumed constant, and we further assume that <span class="math notranslate nohighlight">\(\rho^\prime \ll \overline{\rho}\)</span>, then the equation reduces to:</p>
-<div class="math notranslate nohighlight">
-\[
-\overline{\rho} \dfrac{\partial u_j}{\partial x_j} = 0
-\]</div>
-<p>or</p>
-<div class="math notranslate nohighlight">
-\[
-\dfrac{\partial u_j}{\partial x_j} = 0
-\]</div>
-<p>The latter equation is the conservation of mass we use to study atmospheric boundary layers, and is often called conservation of volume due to the absence of a density term.</p>
-</section>
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -521,17 +475,17 @@ We can rewrite the conservation of mass as</p>
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../intro.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="8_tke_ii.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Welcome</p>
+            <p class="prev-next-title"><span class="section-number">8. </span>Turbulence kinetic energy (ii)</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="2_momentum_i.html" title="next page">
+    <a class='right-next' id="next-link" href="../exercises/week1.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">2. </span>Conservation of momentum (i)</p>
+        <p class="prev-next-title"><span class="section-number">10. </span>Exercises week 1</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
