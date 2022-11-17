@@ -15,13 +15,14 @@ parts:
      - file: lectures/6_energy_ii
      - file: lectures/7_tke
      - file: lectures/8_tke_ii
+     - file: lectures/9_ri
+       #- file: atmospheric_stability
 #     - file: lectures/temperature
 #   - caption: Theory
 #     numbered: true
 #     chapters:
 #     - file: basic_concepts
 #     - file: governing_equations
-#     - file: atmospheric_stability
   - caption: Pen-and-paper exercises
     numbered: true
     chapters:
