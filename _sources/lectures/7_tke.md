@@ -74,7 +74,7 @@ $$
 + \nu \pdd{\uiprime}{x_j}
 $$
 
-Multiplication with $\uiprime$ gives
+Multiplication with $2 \uiprime$ gives
 
 $$
   2 \uiprime \pd{\uiprime}{t}
@@ -84,7 +84,7 @@ $$
 - 2 \uiprime \pd{\overline{ \uiprime \ujprime }}{x_j}
 =
 - 2 \uiprime \dfrac{1}{\rhobar} \pd{p^\prime}{x_i}
-- 2 \uiprime f \epsilon_{ij3} \ujprime
++ 2 \uiprime f \epsilon_{ij3} \ujprime
 + 2 \uiprime \delta_{i3} \dfrac{\theta_\mathrm{v}^\prime}{\overline{\theta}_\mathrm{v}} g
 + 2 \uiprime \nu \pdd{\uiprime}{x_j}
 $$
