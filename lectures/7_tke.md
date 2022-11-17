@@ -1,4 +1,4 @@
-# Turbulence Kinetic Energy (TKE)
+# Turbulence kinetic energy (i)
 
 $$
 \def\ubar{\overline{u}}
@@ -20,9 +20,6 @@ $$
 \def\uiprimesq{u_i^{\prime 2}}
 \def\uiprimesqbar{\overline{u_i^{\prime 2}}}
 \def\ujprime{u_j^\prime}
-\def\ubar{\overline{u}}
-\def\vbar{\overline{v}}
-\def\wbar{\overline{w}}
 $$
 
 ## Definition
@@ -69,12 +66,12 @@ $$
 - \pd{\overline{ \uiprime \ujprime }}{x_j}
 =
 - \dfrac{1}{\rhobar} \pd{p^\prime}{x_i}
-- f \epsilon_{ij3} \ujprime
++ f \epsilon_{ij3} \ujprime
 + \delta_{i3} \dfrac{\theta_\mathrm{v}^\prime}{\overline{\theta}_\mathrm{v}} g
 + \nu \pdd{\uiprime}{x_j}
 $$
 
-Multiplication with $\uiprime$ gives
+Multiplication with $2 \uiprime$ gives
 
 $$
   2 \uiprime \pd{\uiprime}{t}
@@ -84,7 +81,7 @@ $$
 - 2 \uiprime \pd{\overline{ \uiprime \ujprime }}{x_j}
 =
 - 2 \uiprime \dfrac{1}{\rhobar} \pd{p^\prime}{x_i}
-- 2 \uiprime f \epsilon_{ij3} \ujprime
++ 2 \uiprime f \epsilon_{ij3} \ujprime
 + 2 \uiprime \delta_{i3} \dfrac{\theta_\mathrm{v}^\prime}{\overline{\theta}_\mathrm{v}} g
 + 2 \uiprime \nu \pdd{\uiprime}{x_j}
 $$
@@ -98,7 +95,7 @@ $$
 =
 - \dfrac{2}{\rhobar} \pd{\uiprime p^\prime}{x_i}
 + p^\prime \dfrac{2}{\rhobar} \pd{\uiprime}{x_i}
-- 2 f \epsilon_{ij3} \uiprime \ujprime
++ 2 f \epsilon_{ij3} \uiprime \ujprime
 + 2 \delta_{i3} \dfrac{g}{\overline{\theta}_\mathrm{v}} \uiprime \theta_\mathrm{v}^\prime
 + \nu \pdd{\uiprimesq}{x_j}
 - 2 \nu \left( \pd{\uiprime}{x_j} \right)^2
@@ -114,34 +111,9 @@ $$
 - 2 \overline{\uiprime \ujprime} \pd{\uibar}{x_j}
 - \dfrac{2}{\rhobar} \pd{\overline{\uiprime p^\prime}}{x_i}
 + \dfrac{2}{\rhobar} \overline{ p^\prime \pd{\uiprime}{x_i} }
-- 2 f \epsilon_{ij3} \overline{ \uiprime \ujprime }
++ 2 f \epsilon_{ij3} \overline{ \uiprime \ujprime }
 + 2 \delta_{i3} \dfrac{g}{\overline{\theta}_\mathrm{v}} \overline{ \uiprime \theta_\mathrm{v}^\prime}
 + \nu \pdd{\uiprimesqbar}{x_j}
 - 2 \nu \overline{ \left( \pd{\uiprime}{x_j} \right)^2}
 $$
 
-If we define $e \equiv \frac{1}{2} \uiprimesq$, and assume the viscous transport is small, we can write the equation as
-
-$$
-  \pd{\ebar}{t}
-+ \pd{\ebar\,\ujbar}{x_j}
-=
-- \pd{\overline{e\ujprime}}{x_j}
-- \overline{\uiprime \ujprime} \pd{\uibar}{x_j}
-- \dfrac{1}{\rhobar} \pd{\overline{\uiprime p^\prime}}{x_i}
-+ \delta_{i3} \dfrac{g}{\overline{\theta}_\mathrm{v}} \overline{ \uiprime \theta_\mathrm{v}^\prime}
-- \nu \overline{ \left( \pd{\uiprime}{x_j} \right)^2}
-$$
-
-If we now assume horizontal homogeneity, and define the dissipation as $\epsilon \equiv \nu \overline{ \left( \pd{\uiprime}{x_j} \right)^2}$, we can write
-
-$$
-  \pd{\ebar}{t}
-=
-- \pd{\overline{e  w^\prime}}{z}
-- \overline{u^\prime w^\prime} \pd{\ubar}{z}
-- \overline{v^\prime w^\prime} \pd{\vbar}{z}
-- \dfrac{1}{\rhobar} \pd{\overline{w^\prime p^\prime}}{z}
-+ \dfrac{g}{\overline{\theta}_\mathrm{v}} \overline{ w^\prime \theta_\mathrm{v}^\prime}
-- \epsilon
-$$

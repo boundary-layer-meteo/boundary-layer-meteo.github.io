@@ -198,12 +198,12 @@ Imagine a summer day with little to no wind, on which a solar eclipse occurs. Du
 thus the only important term in the right hand side of the prognostic Turbulence Kinetic Energy
 equation (Equation {eq}`for:ex3`) is the dissipation term. In addition, we will assume no advection.
 
-a) Is the turbulent kinetic energy being produced or destroyed?
+a) Is turbulence kinetic energy being produced or destroyed?
 
 <details>
   <summary>Answer</summary>
 
-If the only relevant term is dissipation, the turbulent kinetic energy is being destroyed.
+If the only relevant term is dissipation, the turbulence kinetic energy is being destroyed.
 
 </details>
 

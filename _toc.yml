@@ -14,6 +14,7 @@ parts:
      - file: lectures/5_energy_i
      - file: lectures/6_energy_ii
      - file: lectures/7_tke
+     - file: lectures/8_tke_ii
 #     - file: lectures/temperature
 #   - caption: Theory
 #     numbered: true
