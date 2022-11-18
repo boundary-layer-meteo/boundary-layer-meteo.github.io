@@ -158,9 +158,10 @@ b) Calculate the buoyancy term. Under these conditions, is it a production or de
 
 Buoyancy term: $\frac{g}{\theta_v}\overline{w'\theta_v'}$ (see equation {eq}`for:ex3b`). 
 
-We assume there's no moist, so $\theta_v=\theta$ and $\theta \approx T + \gamma_d z$. 
-$\gamma_d = \frac{g}{c_p} = 9.8 \cdot 10^{-3}\rm\,K\ m^{-1}$. 
-Even at 10 $m$ height, $\theta$ and $T$ differ less than $0.1\rm\,K$, so $\theta_v = 298\rm\,K$. 
+We assume there's no moist, so $\theta_v=\theta$. Furthermore, $\theta \approx T + \gamma_d z$, 
+in which the lapse rate $\gamma_d$ is $\frac{g}{c_p} = 9.8 \cdot 10^{-3}\rm\,K\ m^{-1}$. This means that, even at 10 m height, 
+$\theta$ and $T$ differ less than $0.1\rm\,K$, as $\gamma_d z$ is $9.8 \cdot 10^{-3} \cdot 10$. 
+Thus, we can say that $\theta_v = 298\rm\,K$ at both heights. 
 Therefore, the buoyancy term is $1.64 \cdot 10^{-3}\rm\,m^2\,s^{-3}$ at both heights.
 
 Positive buoyancy flux leads to a production term.
