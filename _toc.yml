@@ -23,12 +23,14 @@ parts:
 #     chapters:
 #     - file: basic_concepts
 #     - file: governing_equations
+#     - file: atmospheric_stability
   - caption: Pen-and-paper exercises
     numbered: true
     chapters:
     - file: exercises/week1
     - file: exercises/week2
     - file: exercises/week3
+    - file: exercises/week4
       #   numbered: true
       #   chapters:
       #   - file: exercises/exercises1
