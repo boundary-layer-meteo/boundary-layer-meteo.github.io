@@ -188,6 +188,11 @@ const thebe_selector_output = ".output, .cell_output"
    12. Exercises week 3
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../exercises/week4.html">
+   13. Exercises week 4
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -369,6 +374,17 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="richardson-numbers">
 <h1><span class="section-number">9. </span>Richardson numbers<a class="headerlink" href="#richardson-numbers" title="Permalink to this headline">#</a></h1>
+<div class="admonition-questions-to-be-answered admonition">
+<p class="admonition-title">Questions to be answered</p>
+<ol class="simple">
+<li><p>What does the Richardson number describe?</p></li>
+<li><p>What is the difference between the flux-, gradient- and bulk-Richardson number?</p></li>
+<li><p>At which Richardson numbers is the boundary layer statically unstable?</p></li>
+<li><p>At which Richardson numbers is the boundary layer statically stable?</p></li>
+<li><p>At which Richardson numbers is the boundary layer dynamically unstable?</p></li>
+<li><p>At which Richardson numbers is the boundary layer dynamically stable?</p></li>
+</ol>
+</div>
 <div class="math notranslate nohighlight">
 \[
 \def\ubar{\overline{u}}
@@ -412,6 +428,12 @@ Ri_\mathrm{f} \equiv
 {\overline{u^\prime w^\prime} \pd{\ubar}{z} + \overline{v^\prime w^\prime} \pd{\vbar}{z}}
 \]</div>
 </div>
+<p>The value of <span class="math notranslate nohighlight">\(Ri_\mathrm{f}\)</span> can teach us something about the nature of the flow</p>
+<ul class="simple">
+<li><p>If <span class="math notranslate nohighlight">\(Ri_\mathrm{f} &lt; 0\)</span> the flow is statically and dynamically unstable</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(0 &lt; Ri_\mathrm{f} &lt; 1\)</span> the flow is statically stable and dynamically unstable</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(Ri_\mathrm{f} &gt; 1\)</span> the flow is statically and dynamically stable</p></li>
+</ul>
 <p>Via K-theory, fluxes can be related to gradients. Consequently, we can rewrite the flux-Richardson number as:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -429,7 +451,8 @@ Ri_\mathrm{g} \equiv
 {\left( \pd{\ubar}{z} \right)^2 + \left( \pd{\vbar}{z} \right)^2}
 \]</div>
 </div>
-<p>and the finite difference approximation called the Bulk Richardson number</p>
+<p>Field observations have shown that laminar flow can become turbulent if <span class="math notranslate nohighlight">\(Ri_\mathrm{g}\)</span> is below 0.25.</p>
+<p>We can also define a finite difference approximation of the gradient Richardson number called the Bulk Richardson number</p>
 <div class="math notranslate nohighlight">
 \[
 Ri_\mathrm{g} \approx

@@ -1,0 +1,1151 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>13. Exercises week 4 &#8212; Boundary-Layer Meteorology</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="12. Exercises week 3" href="week3.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Boundary-Layer Meteorology</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Welcome
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Lectures
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/1_mass.html">
+   1. Conservation of mass
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/2_momentum_i.html">
+   2. Conservation of momentum (i)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/3_momentum_ii.html">
+   3. Conservation of momentum (ii)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/4_turbulent_fluxes.html">
+   4. Turbulent fluxes and the atmospheric surface layer
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/5_energy_i.html">
+   5. Conservation of energy (i)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/6_energy_ii.html">
+   6. Conservation of energy (ii)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/7_tke.html">
+   7. Turbulence kinetic energy (i)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/8_tke_ii.html">
+   8. Turbulence kinetic energy (ii)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/9_ri.html">
+   9. Richardson numbers
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Pen-and-paper exercises
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="week1.html">
+   10. Exercises week 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="week2.html">
+   11. Exercises week 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="week3.html">
+   12. Exercises week 3
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   13. Exercises week 4
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fexercises/week4.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/exercises/week4.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   13.1.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   13.2.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   13.3.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   13.4.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id5">
+   13.5.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id6">
+   13.6.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id7">
+   13.7.
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Exercises week 4</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   13.1.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   13.2.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   13.3.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   13.4.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id5">
+   13.5.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id6">
+   13.6.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id7">
+   13.7.
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="exercises-week-4">
+<h1><span class="section-number">13. </span>Exercises week 4<a class="headerlink" href="#exercises-week-4" title="Permalink to this headline">#</a></h1>
+<p><span class="math notranslate nohighlight">\(\def\pafg#1#2{\dfrac{\partial #1}{\partial #2}}\)</span>
+<span class="math notranslate nohighlight">\(\def\afg#1#2{\dfrac{{\rm d} #1}{{\rm d} #2}}\)</span>
+<span class="math notranslate nohighlight">\(\def\gemafg#1#2{\pafg{\overline{#1}}{#2}}\)</span></p>
+<div class="tip admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Pay attention to the units!</p>
+</div>
+<section id="id1">
+<h2><span class="section-number">13.1. </span><a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
+<p>The following figure shows the raw observation of the wind speed.</p>
+<figure class="align-default" id="fig51">
+<img alt="../_images/figset51.png" src="../_images/figset51.png" />
+</figure>
+<p>Sketch your best guess of the spectrum of the wind velocity as
+function of the period (min), the frequency (cycles/min) and the
+wave-number (cycles/m).</p>
+<details>
+  <summary>Answer</summary>
+<p>It should be visible in the figure at which frequencies the eddies contain most energy.
+In this exercise, not the angular frequencies, <span class="math notranslate nohighlight">\(\left(\omega=\frac{2\pi}{T}\right)\)</span>, and wave numbers, <span class="math notranslate nohighlight">\(\left(k=\frac{2\pi}{\lambda}\right)\)</span>, are used, but the ordinary ones: <span class="math notranslate nohighlight">\(f=\frac{1}{T}\)</span> and <span class="math notranslate nohighlight">\(\nu=\frac{1}{\lambda}\)</span>.
+In these equations <span class="math notranslate nohighlight">\(T\)</span> and <span class="math notranslate nohighlight">\(\lambda\)</span> denote the corresponding period and length scale.
+The periods that seem most important are 1 minute and 0.1 minute (6 s).
+The signal with a time scale of 1 minute contains most energy.
+The corresponding sketch is shown in <a class="reference internal" href="#fig411"><span class="std std-numref">Fig. 13.1</span></a>.</p>
+<figure class="align-default" id="fig411">
+<img alt="../_images/exercise4_1_1.png" src="../_images/exercise4_1_1.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 13.1 </span><span class="caption-text">Spectrum of the wind velocity as a function of time.</span><a class="headerlink" href="#fig411" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The conversion from time period to frequency is straight forward.
+However, the dependency on the wave number is a bit harder.</p>
+<div class="math notranslate nohighlight" id="equation-for-41a">
+<span class="eqno">(13.1)<a class="headerlink" href="#equation-for-41a" title="Permalink to this equation">#</a></span>\[\begin{split}
+\overline{v}&amp;=\lambda f\\
+ &amp;= \frac{f}{\nu}\\
+\nu &amp;= \frac{f}{\overline{v}} 
+\end{split}\]</div>
+<p>Since <span class="math notranslate nohighlight">\(\overline{v} = 5\rm\,m\,s^{-1}\)</span> according to the observations, it is known that <span class="math notranslate nohighlight">\(\nu = \frac{f}{\overline{v}} = f \frac{1}{5\rm\,m\,s^{-1}} = f \frac{1}{300} \rm\frac{min}{m}\)</span>.
+According to Taylor’s frozen turbulence assumption, <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(\nu\)</span> are proportional to each other (Equation <a class="reference internal" href="#equation-for-41a">(13.1)</a>).
+Therefore, the sketch for these two variables are combined in <a class="reference internal" href="#fig412"><span class="std std-numref">Fig. 13.2</span></a>.</p>
+<figure class="align-default" id="fig412">
+<img alt="../_images/exercise4_1_2.png" src="../_images/exercise4_1_2.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 13.2 </span><span class="caption-text">Spectrum of the wind velocity as a function of frequency, <span class="math notranslate nohighlight">\(f\)</span>, and wave number, <span class="math notranslate nohighlight">\(\nu\)</span>.</span><a class="headerlink" href="#fig412" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</details>
+</section>
+<section id="id2">
+<h2><span class="section-number">13.2. </span><a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h2>
+<p>The spectra of the vertical velocity was calculated from sonic measurements
+taken under convective conditions
+at Cabauw (23 August 2001 at 12 UTC).</p>
+<figure class="align-default" id="fig52">
+<img alt="../_images/figset52.png" src="../_images/figset52.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 13.3 </span><span class="caption-text">Power spectra of the vertical velocity measured by means of a sonic at 2 m
+at Cabauw during the 23th August 2001</span><a class="headerlink" href="#fig52" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>a) Describe the different regions in this power spectrum of the vertical velocity</p>
+<details>
+  <summary>Answer</summary>
+<ol class="simple">
+<li><p>Energy containing/producing range</p></li>
+<li><p>Inertial subrange: redistribution, transport processes</p></li>
+<li><p>Dissipation range</p></li>
+</ol>
+<p>The border between 1 and 2 lies at the beginning of the relative straight decay of turbulence and the border between 2 and 3 at the end of this straight line.</p>
+</details>
+<p>b) Discuss the validity of the Reynolds decomposition for the vertical velocity <span class="math notranslate nohighlight">\(w=
+\overline{w}~+~w'\)</span></p>
+<div class="tip dropdown admonition hint">
+<p class="admonition-title">Hint</p>
+<p>It’s often stated that <span class="math notranslate nohighlight">\(\overline{w}=0\)</span>, but over how much time should we average, such that this assumption is valid?</p>
+</div>
+<details>
+  <summary>Answer</summary>
+<p>If the spectrum is high, there is still a lot of energy associated with fluctuations of that frequency.
+It is visible that for <span class="math notranslate nohighlight">\(f&gt;0.005\rm\,Hz\)</span>, the energy is still high, so there are many fluctuations of that frequency.
+To be able to average out all fluctuations for <span class="math notranslate nohighlight">\(\overline{w}\)</span>, one should measure long enough.</p>
+<div class="math notranslate nohighlight">
+\[
+T=\frac{1}{f} ,
+\]</div>
+<p>so <span class="math notranslate nohighlight">\(T_{\rm Av.}&gt;200\rm\,s\)</span>.</p>
+</details>
+<p>c) If <span class="math notranslate nohighlight">\(U=5~m/s\)</span>, find the characteristic length scale for this convective boundary layer.</p>
+<details>
+  <summary>Answer</summary>
+<p>The characteristic length scale is the scale that contains most energy.
+From the figure, the corresponding frequency, <span class="math notranslate nohighlight">\(f\)</span>, is 0.05 Hz.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+U &amp;= \lambda f\\
+\lambda_{\rm char.} &amp;= \frac{U}{f_{\rm char.}}
+\end{split}\]</div>
+<p>Therefore, <span class="math notranslate nohighlight">\(\lambda_{\rm char.} = 100\rm\,m\)</span>.</p>
+</details>
+<p>d) What is the frequency response of the sonic anemometer.</p>
+<details>
+  <summary>Answer</summary>
+<p>Frequency response: the frequency with which is measured.
+This frequency corresponds to the highest frequency that’s present in the corresponding Fourier spectrum. However, to prevent aliasing, spectra are evaluated until the Nyquist frequency, <span class="math notranslate nohighlight">\(f_{Nyquist}\)</span>. Since <span class="math notranslate nohighlight">\(f_{Nyquist} = \frac{f_{max}}{2}\)</span> and <span class="math notranslate nohighlight">\(f_{nyquist}=10\rm\,Hz\)</span>, we know that <span class="math notranslate nohighlight">\(f_{max}=20\rm\,Hz\)</span>.</p>
+</details>
+<p>e) In the inertial subrange <span class="math notranslate nohighlight">\(S(k) \cong \alpha \epsilon^{\frac{2}{3}} \kappa^{-\frac{5}{3}}\)</span>. Using Taylor’s hypothesis of frozen turbulence
+that relates frequencies and wave numbers with the mean wind (<span class="math notranslate nohighlight">\(f = U K\)</span>), we can derive that in the inertial subrange, the region which separates the
+energy-containing region from the dissipation region, the density of the energy spectrum follows</p>
+<div class="math notranslate nohighlight">
+\[
+S_w(f)~=~\alpha~U^{5/3}~\epsilon^{2/3}~f^{-5/3}
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(\alpha\)</span> is a constant equal to 0.6; <span class="math notranslate nohighlight">\(\epsilon\)</span> is the dissipation of the turbulent kinetic energy and <span class="math notranslate nohighlight">\(f\)</span> is the frequency.
+Using the values of the figure, calculate the characteristic length scale at the dissipation
+range which is given by</p>
+<div class="math notranslate nohighlight">
+\[
+\eta~=~\left(\frac{\nu^3}{\epsilon}\right)^{1/4}
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(\nu\)</span> is the kinematic viscosity of air (<span class="math notranslate nohighlight">\(1.5~10^{-5} m^2/s)\)</span>.
+(and <span class="math notranslate nohighlight">\(U=5~m/s\)</span> as in question c)</p>
+<details>
+  <summary>Answer</summary>
+<p>Calculate the length scale of dissipation (Kolmogorov length scale): the length scale for which motions are dissipated by molecular processes.
+This is the lower bound of the length scales that can be evaluated using the governing equations without losing their physical meaning.</p>
+<div class="math notranslate nohighlight">
+\[
+\eta = \left(\frac{\nu^3}{\epsilon}\right)^\frac{1}{4}
+\]</div>
+<p><span class="math notranslate nohighlight">\(\nu=1.5\,10^{-5}\rm\,m^2\,s^{-1}\)</span>, but <span class="math notranslate nohighlight">\(\epsilon\)</span> has to be calculated. In the inertial subrange</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+S_w\left(f\right) &amp;= \alpha\ U^\frac{5}{3}\epsilon^\frac{2}{3}f^{-\frac{5}{3}} , \\
+\alpha&amp;=0.6 .
+\end{split}\]</div>
+<p>Since <span class="math notranslate nohighlight">\(f=1\rm\,Hz\)</span> lies in this range, we can evaluate this equation for this value and</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+0.01&amp;=0.6\ 5^\frac{5}{3}\epsilon^\frac{2}{3}1^{-\frac{5}{3}} , \\
+\epsilon^\frac{2}{3} &amp;= \frac{1}{60\cdot 5^\frac{5}{3}} , \\
+\epsilon &amp;= 3.85\cdot10^{-5}.
+\end{split}\]</div>
+<p>This is in SI units (<span class="math notranslate nohighlight">\(\rm\,m^2\,s^{-3}\)</span>). Filling it up results in <span class="math notranslate nohighlight">\(\eta = 3.1\,10^{-3}\rm\,m\)</span>, so <span class="math notranslate nohighlight">\(\eta=3.1\rm\,mm\)</span></p>
+</details>
+<p>f) Calculate the ratio between the characteristic length scale of the
+boundary layer (question c) and the dissipation length scale (question e).
+Discuss the result.</p>
+<details>
+  <summary>Answer</summary>
+<p>This ratio shows how many times the smallest scale involved has to be resolved in order to also resolve the characteristic process for at least one period.
+The ratio is <span class="math notranslate nohighlight">\(R=\frac{100\rm\,m}{3\rm\,mm}\)</span>, so <span class="math notranslate nohighlight">\(R=3 \cdot 10^4\)</span>.
+A normal PC (or even standard super computer) can not perform these calculations within reasonable time.</p>
+</details>
+</section>
+<section id="id3">
+<h2><span class="section-number">13.3. </span><a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h2>
+<p>The one-dimensional conservation equation for heat reads:</p>
+<div class="math notranslate nohighlight">
+\[
+\pafg{\overline{\theta}}{t}~=~-~\pafg{\overline{w'\theta'}}{z}
+\]</div>
+<p>a) Discuss which terms have been neglected from total conservation equation for heat to come to this equation</p>
+<details>
+  <summary>Answer</summary>
+<p>The total conservation equation for heat is</p>
+<div class="math notranslate nohighlight">
+\[
+\underbrace{\gemafg{\theta}{t}}_{\rm Tendency} + \underbrace{\overline{u_j}\gemafg{\theta}{x_j}}_{\rm Advection} + \underbrace{\gemafg{u_j'\theta'}{x_j}}_{\rm Turbulent\ heat\ flux } = \underbrace{\nu_\theta\pafg{^2\overline{\theta}}{x_j^2}}_{\rm Molecular\ diffusion} - \underbrace{\frac{1}{\rho\,c_p}\gemafg{Q_j}{x_j}}_{\rm Radiation} - \underbrace{\frac{{ L_v}\,E}{\rho c_p}}_{\rm Latent\ heat\ release}
+\]</div>
+<p>The neglected terms are:</p>
+<ul class="simple">
+<li><p><strong>advection</strong>: No advection is present. This automatically follows from using the assumption of horizontal homogeneity and the absence of subsidence.</p></li>
+<li><p><strong>horizontal turbulent heat flux</strong>: Due to horizontal homogeneity, it is assumed that the horizontal turbulent heat flux is equal for all <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span>, causing the terms with <span class="math notranslate nohighlight">\(i\)</span> equal to 1 or 2 to vanish.</p></li>
+<li><p><strong>diffusion</strong>: The impact of dissipation is relatively small under daytime (convective) conditions.</p></li>
+<li><p><strong>radiation</strong>: The impact of radiation is relatively small under these conditions as well.</p></li>
+<li><p><strong>latent heat release</strong>: In the case of clear skies, there is no condensation/evaporation.</p></li>
+</ul>
+</details>
+<p>b) Explain the mathematical steps and definitions to derive the mixed-layer equation for the bulk potential temperature that reads:</p>
+<div class="math notranslate nohighlight">
+\[
+\pafg{ {&lt;\overline{\theta}}&gt;}{t}~=~\frac{\overline{w'\theta'(0)}-\overline{w'\theta'(h)}}{h}.
+\]</div>
+<details>
+  <summary>Answer</summary>
+<p>To get to the mixed-layer equations, the conservation equation has to be integrated with height over the whole boundary layer.</p>
+<div class="math notranslate nohighlight" id="equation-eq6-7">
+<span class="eqno">(13.2)<a class="headerlink" href="#equation-eq6-7" title="Permalink to this equation">#</a></span>\[
+\int_{z_0}^h \! \pafg{\overline{\theta}}{t} \, \delta z = - \int_{z_0}^h \! \pafg{}{z}(\overline{w'\theta'}) \delta z
+\]</div>
+<p>Integrating the right-hand-side of equation <a class="reference internal" href="#equation-eq6-7">(13.2)</a>, we find:</p>
+<div class="math notranslate nohighlight" id="equation-eq6-12">
+<span class="eqno">(13.3)<a class="headerlink" href="#equation-eq6-12" title="Permalink to this equation">#</a></span>\[
+- \int_{z_0}^h \! \pafg{}{z}(\overline{w'\theta'}) \delta z = \overline{w'\theta'}(z_0) - \overline{w'\theta'}(h)
+\]</div>
+<p>Since one of the limits of the integration (<span class="math notranslate nohighlight">\(h\)</span>) is changing on time,
+we have to use of the Leibniz rule to solve the left-hand-side of integral <a class="reference internal" href="#equation-eq6-7">(13.2)</a>:</p>
+<p>For an arbitrary scalar, <span class="math notranslate nohighlight">\(\psi\)</span>, and limits a and b, the Leibniz rule is:</p>
+<div class="math notranslate nohighlight" id="equation-eq6-8">
+<span class="eqno">(13.4)<a class="headerlink" href="#equation-eq6-8" title="Permalink to this equation">#</a></span>\[
+\pafg{}{t} \int_a^b \! \psi \, \mathrm{d}z = \int_a^b \! \pafg{\psi}{t} \, \mathrm{d}z - \psi(a) \pafg{a}{t} + \psi(b) \pafg{b}{t}.
+\]</div>
+<p>We substitute <span class="math notranslate nohighlight">\( \psi = \theta \)</span> in Equation <a class="reference internal" href="#equation-eq6-8">(13.4)</a> and use the limits <span class="math notranslate nohighlight">\(z_0\)</span> and h.
+This gives:</p>
+<div class="math notranslate nohighlight">
+\[
+\pafg{}{t} \underbrace{ \int_{z_0}^h \! \overline\theta \, \delta z}_{&lt;\theta&gt; h}  =~ \int_{z_0}^h \!\pafg{\overline\theta }{t} \, \delta z-
+\underbrace{\overline\theta (z_0) \pafg{z_0}{t}}_{=0} + \overline\theta (h) \pafg{h}{t}
+\]</div>
+<p>We reorganise this equation to find:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\int_{z_0}^h \! \pafg{\overline\theta}{t} \, \delta z &amp;= \pafg{}{t}[&lt;\theta&gt; h] - \overline\theta(h) \pafg{h}{t}\\
+&amp;= h \pafg{&lt;\theta&gt;}{t} + &lt;\theta&gt; \pafg{h}{t} - \overline\theta(h) \pafg{h}{t}\\
+&amp;= h \pafg{&lt;\theta&gt;}{t} + \pafg{h}{t} \underbrace{[&lt;\theta&gt;-\overline\theta(h)]}_{0}
+\end{split}\]</div>
+<p>Throughout the mixed layer, <span class="math notranslate nohighlight">\(\theta\)</span> is homogeneous, so the second term cancels, resulting in:</p>
+<div class="math notranslate nohighlight" id="equation-eq6-11">
+<span class="eqno">(13.5)<a class="headerlink" href="#equation-eq6-11" title="Permalink to this equation">#</a></span>\[
+\int_{z_0}^h \! \pafg{\overline{\theta}}{t} \, \delta z = h \pafg{&lt;\theta&gt;}{t}
+\]</div>
+<p>Finally, substitution of <a class="reference internal" href="#equation-eq6-11">(13.5)</a> and <a class="reference internal" href="#equation-eq6-12">(13.3)</a> on the original equation <a class="reference internal" href="#equation-eq6-7">(13.2)</a> results in:</p>
+<div class="math notranslate nohighlight">
+\[
+h \pafg{&lt;\theta&gt;}{t} = \overline{w'\theta'}(z_0) - \overline{w'\theta'}(h)
+\]</div>
+<p>or, alternatively:</p>
+<div class="math notranslate nohighlight" id="equation-for-61b">
+<span class="eqno">(13.6)<a class="headerlink" href="#equation-for-61b" title="Permalink to this equation">#</a></span>\[
+\pafg{&lt;\theta&gt;}{t} = \frac{1}{h}[ \overline{w'\theta'}(z_0) - \overline{w'\theta'}(h)]
+\]</div>
+</details>
+<p>c) Assuming that we are in an encroachment situation and the sensible heat flux and h are constant on time, find an expression for <span class="math notranslate nohighlight">\(&lt;{\overline{\theta}}&gt;\)</span>
+as a function of time. The assumption of sensible heat flux and h constant on time is reasonable in the afternoon hours
+and during a relative short time. Discuss this assumption.</p>
+<details>
+  <summary>Answer</summary>
+<p>In case of encroachment, the vertical turbulent heat flux is 0 near the entrainment zone since there is no inversion, so</p>
+<div class="math notranslate nohighlight">
+\[
+\pafg{\left&lt;\overline{\theta}\right&gt;}{t} = \frac{\overline{w'\theta'}\left(0\right)}{h}
+\]</div>
+<p>This expression shows that if the boundary lower growth has become minimal, the heating of the boundary layer is proportional to the surface heat flux and inversely proportional to the boundary layer height. All energy (in the form of heat) is equally distributed over the mixed layer.</p>
+<p>Near the end of the afternoon, <span class="math notranslate nohighlight">\(h\)</span> is approximately constant. This assumption is therefore valid. However, the sensible heat flux changes rapidly in that period. The derived equation is still valid in those situations if the heat flux is considered as a function of time.</p>
+</details>
+<p>d) Derive a similar expression but now assuming that the entrainment flux is 20<span class="math notranslate nohighlight">\(\%\)</span> of the surface flux. Compare
+your formulations and discuss their implications.</p>
+<details>
+  <summary>Answer</summary>
+<p>In this case <span class="math notranslate nohighlight">\(\overline{w'\theta'}(h) = -\beta \overline{w'\theta'}(0)\)</span> with <span class="math notranslate nohighlight">\(\beta=0.2\)</span>
+(the downward heat flux at the boundary layer top is equal to 20% of the upward heat flux at the surface),
+so Equation <a class="reference internal" href="#equation-for-61b">(13.6)</a> changes into</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\pafg{\left&lt;\overline{\theta}\right&gt;}{t} &amp;= \frac{\overline{w'\theta'}\left(0\right)+ 0.2\,\overline{w'\theta'}\left(0\right)}{h} \\
+\pafg{\left&lt;\overline{\theta}\right&gt;}{t} &amp;= \frac{1.2\,\overline{w'\theta'}\left(0\right)}{h}
+\end{split}\]</div>
+<p>The difference is that the influx of energy (in the form of heat) is enhanced by 20% due to entrainment of warm air that originates from the free troposphere.
+Therefore, for equal boundary layer heights, the boundary layer would heat up 1.2 times as fast for the same surface heat flux.
+However, note that due to entrainment the boundary layer grows faster and therefore, the heat has to be spread over a larger volume.</p>
+</details>
+<p>e) Discuss the additional equations that we need to include in order to have a more physical description of the entrainment flux.</p>
+<details>
+  <summary>Answer</summary>
+<p>The entrainment flux has to be related to the boundary layer growth rate:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\overline{w'\theta'}(h) &amp;= - w_e \,\Delta\theta\\
+ &amp;= - \afg{h}t \,\Delta\theta
+\end{split}\]</div>
+<p>In this equation <span class="math notranslate nohighlight">\(w_e\)</span> is the entrainment velocity in m s<span class="math notranslate nohighlight">\(^{-1}\)</span> and <span class="math notranslate nohighlight">\(\Delta\theta\)</span> is the potential temperature jump at the inversion. In order to evaluate this equation, the time evolution of <span class="math notranslate nohighlight">\(\Delta\theta\)</span> has to be known. This is given by:</p>
+<div class="math notranslate nohighlight">
+\[
+\afg{\Delta\theta}{t} = \gamma_{\theta}\afg{h}{t}- \afg{\left&lt;\overline{\theta}\right&gt;}{t}
+\]</div>
+<p>(<span class="math notranslate nohighlight">\(\partial\)</span> can be replaced by d, since all variables in this equation are only dependent on time.)</p>
+<p>In the end, the system of governing equations is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\pafg{\left&lt;\overline{\theta}\right&gt;}{t} &amp;= \frac{\overline{w'\theta'}\left(z_0\right)-\overline{w'\theta'}\left(h\right)}{h}\\
+\overline{w'\theta'}(h) &amp;= - \afg{h}t \,\Delta\theta = -w_e \Delta\theta \\
+\afg{\Delta\theta}{t} &amp;= \gamma_{\theta}\afg{h}{t}- \afg{\left&lt;\overline{\theta}\right&gt;}{t}
+\end{split}\]</div>
+<p><span class="math notranslate nohighlight">\(w_e\)</span> is the entrainment velocity.</p>
+</details>
+</section>
+<section id="id4">
+<h2><span class="section-number">13.4. </span><a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h2>
+<p>The atmospheric boundary layer height is 300 m at 0600 UTC, the temperature
+lapse rate is 5 K/km and the initial temperature is <span class="math notranslate nohighlight">\(\theta\)</span> is 285 K . Assuming that the sensible heat flux varies with time over this land
+according to (t is given in hours):</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\overline{w'\theta'(0)}&amp;=c_1 \sin \left( \frac{\pi(t-t_0)}{c_2} \right ) \\
+c_1&amp;=0.2\ Km\ s{-1} \\
+c_2&amp;=12\ hours
+\end{split}\]</div>
+<p>a) Under encroachment conditions, find the boundary layer height at 14 UTC, if the entrainment flux and subsidence are neglectable.</p>
+<details>
+  <summary>Answer</summary>
+<p>In case of encroachment:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\afg{\Delta\theta}{t} &amp;= 0 \\
+\gamma_{\theta}\afg{h}{t}- \afg{\left&lt;\overline{\theta}\right&gt;}{t} &amp;= 0\\
+\afg{h}{t} &amp;= \frac{1}{\gamma_{\theta}}\afg{\left&lt;\overline{\theta}\right&gt;}{t}
+\end{split}\]</div>
+<p>Since in the case of encroachment, <span class="math notranslate nohighlight">\(\overline{w'\theta'}(h)=0\)</span>, Equation <a class="reference internal" href="#equation-for-61b">(13.6)</a> becomes</p>
+<div class="math notranslate nohighlight">
+\[
+\afg{\left&lt;\overline{\theta}\right&gt;}{t} = \frac{\overline{w'\theta'}\left(0\right)}{h}
+\]</div>
+<p>Therefore, denoting <span class="math notranslate nohighlight">\(\overline{w'\theta'}\left(0\right)\)</span> as <span class="math notranslate nohighlight">\(\overline{w'\theta'}_S\)</span>,</p>
+<div class="math notranslate nohighlight" id="equation-for-62a">
+<span class="eqno">(13.7)<a class="headerlink" href="#equation-for-62a" title="Permalink to this equation">#</a></span>\[
+\afg{h}{t} = \frac{1}{\gamma_{\theta}}\frac{\overline{w'\theta'}_S}{h} 
+\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+2\,h\,\afg{h}{t} &amp;= 2 \frac{\overline{w'\theta'}_S}{\gamma_{\theta}}\\
+\afg{h^2}{t} &amp;= 2 \frac{\overline{w'\theta'}_S}{\gamma_{\theta}}\\
+\int_{t1}^{t2}{h^2{\rm d}t} &amp;= \int_{t1}^{t2}{2 \frac{\overline{w'\theta'}_S}{\gamma_{\theta}}{\rm d}t}\\
+h_2^2-h_1^2 &amp;=  \frac{2}{\gamma_\theta} \int_{t1}^{t2}{\overline{w'\theta'}_S{\rm\,d}t}
+\end{split}\]</div>
+<p>Finally,</p>
+<div class="math notranslate nohighlight">
+\[
+h_2 = \sqrt{h_1^2 + \frac{2}{\gamma_\theta} \int_{t1}^{t2}{\overline{w'\theta'}_S{\rm\,d}t}}
+\]</div>
+<p>Substituting the heat flux results in</p>
+<div class="math notranslate nohighlight">
+\[
+h_2 = \sqrt{h_1^2 + \frac{2}{\gamma_\theta} \int_{t1}^{t2}{c_1 \sin\left(\frac{\pi\left(t-t_0\right)}{c_2}\right){\rm\,d}t}}
+\]</div>
+<p>In this equation, the integral is given by</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\int_{t1}^{t2}{c_1 \sin\left(\frac{\pi\left(t-t_0\right)}{c_2}\right){\rm\,d}t} &amp;= c_1 \left[{-\frac{c_2}{\pi}\cos\left(\frac{\pi\left(t-t_0\right)}{c_2}\right)}\right]_{t_1}^{t_2}\\
+ &amp;= \frac{c_1\,c_2}{\pi} \left({\cos\left(\frac{\pi\left(t_1-t_0\right)}{c_2}\right)-\cos\left(\frac{\pi\left(t_2-t_0\right)}{c_2}\right)}\right)_{t_1}^{t_2}\\
+ &amp;\approx 4125 {\rm\,K\,m}
+\end{split}\]</div>
+<p>for <span class="math notranslate nohighlight">\(t_1=t_0=0600\rm\,UTC\)</span> and <span class="math notranslate nohighlight">\(t_2=1400\rm\,UTC\)</span>. Substituting this value, <span class="math notranslate nohighlight">\(h_1\)</span>, <span class="math notranslate nohighlight">\(c_1\)</span> and <span class="math notranslate nohighlight">\(c_2\)</span> nets <span class="math notranslate nohighlight">\(h\left(1400\rm\,UTC\right)\approx 1319\rm\,m\)</span></p>
+</details>
+<p>b) Calculate the boundary layer height at 14 UTC assuming that there is a closure assumption between the
+heat flux at the surface and at the entrainment zone:</p>
+<div class="math notranslate nohighlight">
+\[
+\overline{w'\theta'(z_i)}~=~-\beta \overline{w'\theta'(0)},
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(\beta\)</span> is 0.2.</p>
+<details>
+  <summary>Answer</summary>
+<p>This exercise is solved under the assumption that the boundary layer growth is still only due to encroachment, so <span class="math notranslate nohighlight">\(\Delta\theta=0\)</span>. In this case, the boundary layer height development is not related to the entrainment flux. The governing equations are:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\afg{h}{t} &amp;= \frac{1}{\gamma_{\theta}}\afg{\left&lt;\overline{\theta}\right&gt;}{t}\\
+\afg{\left&lt;\overline{\theta}\right&gt;}{t} &amp;= \frac{\overline{w'\theta'}\left(0\right)-\overline{w'\theta'}\left(h\right)}{h} \\
+ &amp;= \left(1+\beta\right) \frac{\overline{w'\theta'}\left(0\right)}{h} \\
+ &amp;= \left(1+\beta\right) \frac{\overline{w'\theta'}_S}{h}
+\end{split}\]</div>
+<p>This results in</p>
+<div class="math notranslate nohighlight">
+\[
+\afg{h}{t} = \frac{1+\beta}{\gamma_{\theta}}\frac{\overline{w'\theta'}_S}{h}
+\]</div>
+<p>Due to the analogy with Equation <a class="reference internal" href="#equation-for-62a">(13.7)</a>, this results in</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+h_2 &amp;= \sqrt{h_1^2 + \frac{2}{\gamma_\theta} \int_{t1}^{t2}{\left(1+\beta\right)\overline{w'\theta'}_S{\rm\,d}t}}\\
+ &amp;= \sqrt{h_1^2 + \frac{2\,\left(1+\beta\right)}{\gamma_\theta} \int_{t1}^{t2}{\overline{w'\theta'}_S{\rm\,d}t}}
+\end{split}\]</div>
+<p>Since the solution to the integral and the values of <span class="math notranslate nohighlight">\(h_1\)</span>, <span class="math notranslate nohighlight">\(\beta\)</span> and <span class="math notranslate nohighlight">\(\gamma_\theta\)</span> are known, the answer can be found: <span class="math notranslate nohighlight">\(h_2 \approx 1439\rm\,m\)</span></p>
+</details>
+<p>c) Calculate the mixed-layer potential temperature in the Convective Boundary Layer
+at 14.00 for both cases. Discuss the results.</p>
+<details>
+  <summary>Answer</summary>
+<p>Due to the relation</p>
+<div class="math notranslate nohighlight">
+\[
+\afg{h}{t} = \frac{1}{\gamma_{\theta}}\afg{\left&lt;\overline{\theta}\right&gt;}{t}
+\]</div>
+<p>It is known that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\afg{\left&lt;\overline{\theta}\right&gt;}{t} &amp;= \gamma_\theta \afg{h}{t}\\
+\Delta{\left&lt;\overline{\theta}\right&gt;} &amp;= \gamma_\theta \Delta{h}\\
+\left&lt;\overline{\theta}\right&gt;_2 &amp;= \left&lt;\overline{\theta}\right&gt;_1 + \gamma_\theta \left(h_2-h_1\right)
+\end{split}\]</div>
+<p>The resulting mixed layer potential temperatures are <span class="math notranslate nohighlight">\(290.1\rm\,K\)</span> in the case of encroachment
+and <span class="math notranslate nohighlight">\(290.7\rm\,K\)</span> in the case of entrainment flux without the associated boundary layer growth.</p>
+<p>Note that the solution presented here is not the complete analytical solution, since we neglected the growth of the boundary layer that is associated to the entrainment flux. In case this is taken into account, a factor 2 appears before <span class="math notranslate nohighlight">\(\beta\)</span> in the final equation for <span class="math notranslate nohighlight">\(h_2\)</span> as well as some extra terms that deal with the initial inversion conditions.</p>
+</details>
+</section>
+<section id="id5">
+<h2><span class="section-number">13.5. </span><a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h2>
+<p>Given an arbitrary mixed layer, we can assume that the mixed layer potential temperature
+(<span class="math notranslate nohighlight">\(\left&lt;\overline{\theta}\right&gt;\)</span>) and the potential temperature jump (<span class="math notranslate nohighlight">\(\Delta\theta\)</span>) evolve with time according to</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\pafg{\left&lt;{\overline{\theta}}\right&gt;}{t} &amp;=\frac{\overline{w'\theta'}(0)-\overline{w'\theta'}(h)}{h} \\
+\pafg{\Delta\theta}{t} &amp;= \gamma_\theta\pafg{h}{t} - \pafg{\left&lt;\overline{\theta}\right&gt;}{t}\\
+\overline{w'\theta'}(h) &amp;= - \pafg{h}{t}\Delta\theta
+\end{split}\]</div>
+<p>At 12 UTC, the mixed layer temperature is 290 K. At the top of the mixed layer, there is an inversion
+with an initial temperature above equal to 296 K.
+Above the inversion the temperature increases 0.05 K every 10 m.
+The surface flux <span class="math notranslate nohighlight">\(\overline{w'\theta'}(0)\)</span> is <span class="math notranslate nohighlight">\(0.15\rm\,K\,m\,s^{-1}\)</span>.</p>
+<p>a) Draw the vertical profile of the potential temperature and the heat flux.
+Describe the different regions in the CBL.</p>
+<details>
+  <summary>Answer</summary>
+<figure class="align-default" id="fig-6">
+<img alt="../_images/exercise6_3.png" src="../_images/exercise6_3.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 13.4 </span><span class="caption-text">Boundary layer profiles of potential temperature <strong>a</strong> and sensible heat flux <strong>b</strong> at 12 UTC. The dashed lines denote the idealized profiles.</span><a class="headerlink" href="#fig-6" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The profiles are drawn in <a class="reference internal" href="#fig-6"><span class="std std-numref">Fig. 13.4</span></a>. From bottom to top, the layers are:</p>
+<ul class="simple">
+<li><p>the surface layer</p></li>
+<li><p>the mixed layer</p></li>
+<li><p>the entrainment zone</p></li>
+<li><p>the free troposphere</p></li>
+</ul>
+</details>
+<p>b) If <span class="math notranslate nohighlight">\(h\)</span> is 1000 m at 12 UTC, what is the boundary layer growth rate and the temperature change per hour in the CBL?</p>
+<div class="tip dropdown admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Assume (like in question 4b) that</p>
+<div class="math notranslate nohighlight">
+\[
+\overline{w'\theta'(h)}~=~-\beta \overline{w'\theta'(0)},
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(\beta\)</span> is 0.2.</p>
+</div>
+<details>
+  <summary>Answer</summary>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\pafg{h}{t} &amp;= 0.2 \frac{\overline{w'\theta'}(0)}{\Delta\theta}\\
+\overline{w'\theta'}(0) &amp;= 0.15\rm\,K\,m\,s^{-1}\\
+\Delta\theta &amp;= 6\rm\,K
+\end{split}\]</div>
+<p>Therefore, <span class="math notranslate nohighlight">\(\pafg{h}{t} = 0.005\rm\,m\,s^{-1} = 18\,m\,hr^{-1}\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\pafg{\left&lt;{\overline{\theta}}\right&gt;}{t} &amp;=\frac{\overline{w'\theta'}(0)-\overline{w'\theta'}(h)}{h} \\
+ &amp;=  \frac{\left(1+\beta\right)\overline{w'\theta'}(0)}{h}\\
+h&amp;= 1000\rm\,m
+\end{split}\]</div>
+<p>Because of this, <span class="math notranslate nohighlight">\(\pafg{\left&lt;{\overline{\theta}}\right&gt;}{t} = 1.8\,10^{-4}\rm\,K\,s^{-1}=0.65\,K\,hr^{-1}\)</span>.</p>
+</details>
+<p>c) Calculate the convective velocity at the same time and estimate how long it takes a parcel to travel from the
+surface to the top of the atmospheric boundary layer</p>
+<details>
+  <summary>Answer</summary>
+<p>The convective velocity is defined by</p>
+<div class="math notranslate nohighlight">
+\[
+w_*=\sqrt[3]{\frac{g}{\theta_v}\,\overline{w'\theta_v'}\,h}
+\]</div>
+<p>In this definition, the buoyancy term of the TKE, <span class="math notranslate nohighlight">\(\frac{g}{\theta_v}\,\overline{w'\theta_v'}\)</span>, is incorporated.
+In this case, no moisture is considered, so <span class="math notranslate nohighlight">\(\overline{w'\theta_v'}=\overline{w'\theta'}\)</span>.
+Substituting the known values results in <span class="math notranslate nohighlight">\(w_* = 1.72\rm\,m\,s^{-1}\)</span>.</p>
+<p>The time it takes for a parcel to travel from the surface to the top of the atmospheric boundary layer due to convection is</p>
+<div class="math notranslate nohighlight">
+\[
+T = \frac{h}{w_*}
+\]</div>
+<p>This results in <span class="math notranslate nohighlight">\(T = 582 s \approx 10\rm\,min\)</span></p>
+</details>
+</section>
+<section id="id6">
+<h2><span class="section-number">13.6. </span><a class="headerlink" href="#id6" title="Permalink to this headline">#</a></h2>
+<p><a class="reference internal" href="#fig-61"><span class="std std-numref">Fig. 13.5</span></a>, <a class="reference internal" href="#fig-62"><span class="std std-numref">Fig. 13.6</span></a>, and <a class="reference internal" href="#fig-63"><span class="std std-numref">Fig. 13.7</span></a> show the vertical profiles of the potential temperature measured by radiosondes in the USA at 11, 17 and 23 UTC the 20th June 1997 (local time=UTC-6 hours).</p>
+<figure class="align-default" id="fig-61">
+<img alt="../_images/figset61.png" src="../_images/figset61.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 13.5 </span><span class="caption-text">Vertical profile of potential temperature measured by radiosondes at 11 UTC</span><a class="headerlink" href="#fig-61" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="fig-62">
+<img alt="../_images/figset62.png" src="../_images/figset62.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 13.6 </span><span class="caption-text">Vertical profile of potential temperature measured by radiosondes at 17 UTC</span><a class="headerlink" href="#fig-62" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="fig-63">
+<img alt="../_images/figset63.png" src="../_images/figset63.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 13.7 </span><span class="caption-text">Vertical profile of potential temperature measured by radiosondes at 23 UTC</span><a class="headerlink" href="#fig-63" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>a) Describe the radiosoundings by giving the boundary layer height, the mixed layer temperature, the temperature inversion and the laspe rate
+(h (m), <span class="math notranslate nohighlight">\(\left&lt;\theta\right&gt;\)</span> (K), <span class="math notranslate nohighlight">\(\Delta\theta\)</span> (K), <span class="math notranslate nohighlight">\(\gamma_\theta\)</span> (K km<span class="math notranslate nohighlight">\(^{-1}\)</span>)).</p>
+<details>
+  <summary>Answer</summary>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Figure</p></th>
+<th class="head"><p><a class="reference internal" href="#fig-61"><span class="std std-numref">Fig. 13.5</span></a></p></th>
+<th class="head"><p><a class="reference internal" href="#fig-62"><span class="std std-numref">Fig. 13.6</span></a></p></th>
+<th class="head"><p><a class="reference internal" href="#fig-63"><span class="std std-numref">Fig. 13.7</span></a></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>h (m)</p></td>
+<td><p>700</p></td>
+<td><p>1400</p></td>
+<td><p>1400</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\left&lt;\theta\right&gt;\)</span> (K)</p></td>
+<td><p>303</p></td>
+<td><p>309.5</p></td>
+<td><p>310</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\Delta\theta\)</span> (K)</p></td>
+<td><p>9</p></td>
+<td><p>5</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\gamma_\theta\)</span> (K km<span class="math notranslate nohighlight">\(^{-1}\)</span>)</p></td>
+<td><p>2.2</p></td>
+<td><p>2.5</p></td>
+<td><p>2.5</p></td>
+</tr>
+</tbody>
+</table>
+<p>Note: The upper profile shows a stable boundary layer, while the other two profiles show well-mixed convective boundary layers.</p>
+</details>
+<p>b) Give the evolution of the boundary layer depth.</p>
+<details>
+  <summary>Answer</summary>
+<p>From 05.30 LT to 11.30 LT: + 700 m, so a growth of approximately 3 <span class="math notranslate nohighlight">\(\rm{cm\ s^{-1}}\)</span>.</p>
+<p>From 11.30 LT to 17.30 LT: the boundary layer height is constant, so a growth of 0 <span class="math notranslate nohighlight">\(\rm{cm\ s^{-1}}\)</span>.</p>
+</details>
+<p>c) Assuming an entrainment velocity equal to 0.01 m/s, find the entrainment
+flux at 17 UTC.</p>
+<details>
+  <summary>Answer</summary>
+<p>At 17 UTC (11 LT), <span class="math notranslate nohighlight">\(\Delta\theta=5\rm\,K\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\overline{w'\theta'(z_i)} &amp;= - w_e\,\Delta\theta \\
+ &amp;= - \pafg{h}{t}\,\Delta\theta
+\end{split}\]</div>
+<p>Substituting the variables results in <span class="math notranslate nohighlight">\(\overline{w'\theta'(z_i)} = -0.05\rm\,K\,m\,s^{-1}\)</span>.</p>
+<p>The flux is negative, since heat is transported downwards.</p>
+</details>
+</section>
+<section id="id7">
+<h2><span class="section-number">13.7. </span><a class="headerlink" href="#id7" title="Permalink to this headline">#</a></h2>
+<p>During the 27th of July 2002, the vertical profile of potential temperature
+and heat flux (see <a class="reference internal" href="#fig-64"><span class="std std-numref">Fig. 13.8</span></a> and <a class="reference internal" href="#fig-65"><span class="std std-numref">Fig. 13.9</span></a>) were measured by an aircraft above Cabauw. The heat flux measurements were
+taken around 12.45 UTC.</p>
+<p>a) Estimate the boundary layer height at 8.15 UTC and 12.45. Calculate the velocity of the growth of the convective boundary layer.</p>
+<details>
+  <summary>Answer</summary>
+<p>Using the location where <span class="math notranslate nohighlight">\(\pafg{\theta}{z}\)</span> has its maximum, the boundary layer heights at 8.15 UTC and 12.45 UTC are 375 m and 1025 m, respectively.
+Therefore, the velocity of growth is <span class="math notranslate nohighlight">\(\dfrac{650\rm\,m}{4.5\cdot 3600\rm\,s} = 0.04\rm\,m\,s^{-1}\)</span>.</p>
+</details>
+<p>b) Calculate the terms (storage, turbulent flux divergence) of the potential temperature equation in the mixed layer.</p>
+<details>
+  <summary>Answer</summary>
+<div class="math notranslate nohighlight">
+\[
+\gemafg{\theta}{t}+\gemafg{w'\theta'}{z} = {\rm Advection} + {\rm Sources/sinks}
+\]</div>
+<p>Sources correspond with warming and sinks with cooling.</p>
+<p>Storage term: <span class="math notranslate nohighlight">\(\gemafg{\theta}{t} = \frac{5\rm\,K}{4.5\rm\,hr}=3.1\times 10^{-4}\rm\,K\,s^{-1}\)</span></p>
+<p>Turbulent flux divergence: <span class="math notranslate nohighlight">\(\gemafg{w'\theta'}{z} = \frac{-0.095\rm\,K\,m\,s^{-1}}{700\rm\,m}= -1.4\times 10^{-4}\rm\,K\,s^{-1}\)</span></p>
+</details>
+<p>c) Was the advection of potential temperature an important term during the 27th July 2002?</p>
+<details>
+  <summary>Answer</summary>
+<p>Since other sources and sinks are negligible during day, advection should account for the difference between storage and the vertical turbulent flux divergence.
+Therefore, advection should account for <span class="math notranslate nohighlight">\(1.7\times 10^{-4}\rm\,K\,s^{-1}\)</span>.
+This is of the same order of magnitude as the temperature tendencies of the terms that are related to storage and transport by turbulent fluxes.
+This shows that advection is important for this case.</p>
+</details>
+<p>d) According to K-theory, the heat flux can be related to the gradient of the mean potential
+temperature as follows</p>
+<div class="math notranslate nohighlight">
+\[
+\overline{w'\theta'(z)}=-K_h\pafg{\overline{\theta}}{z}
+\]</div>
+<p>Using the information from the vertical flux of potential temperature
+and heat flux, determine the exchange coefficient <span class="math notranslate nohighlight">\(K_h\)</span> at z=500 m (time 12.45). Discuss the result.</p>
+<details>
+  <summary>Answer</summary>
+<div class="math notranslate nohighlight">
+\[
+\overline{w'\theta'(z)}=-K_h\pafg{\overline{\theta}}{z}
+\]</div>
+<p>Rewritting this equation gives:</p>
+<div class="math notranslate nohighlight">
+\[
+K_h = - \dfrac{\overline{w'\theta'(z)}}{\pafg{\overline{\theta}}{z}}
+\]</div>
+<p>From the graph, we note that at 500m <span class="math notranslate nohighlight">\(\pafg{\overline{\theta}}{z} \approx 0\)</span>, this would result in <span class="math notranslate nohighlight">\(K_h\ \to\infty\)</span>.
+This shows that local K-theory is not applicable in a well mixed boundary layer.</p>
+</details>
+<figure class="align-default" id="fig-64">
+<img alt="../_images/figset64.png" src="../_images/figset64.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 13.8 </span><span class="caption-text">Vertical profile of potential temperature measured above Cabauw during the 27th July 2002</span><a class="headerlink" href="#fig-64" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="fig-65">
+<img alt="../_images/figset65.png" src="../_images/figset65.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 13.9 </span><span class="caption-text">Vertical profile of sensible heat flux measured above Cabauw during the 27th July 2002</span><a class="headerlink" href="#fig-65" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./exercises"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="week3.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">12. </span>Exercises week 3</p>
+        </div>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Chiel van Heerwaarden and Mirjam Tijhuis<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

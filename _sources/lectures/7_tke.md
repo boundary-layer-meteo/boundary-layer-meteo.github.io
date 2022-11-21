@@ -1,5 +1,11 @@
 # Turbulence kinetic energy (i)
 
+```{admonition} Questions to be answered
+1. What is the difference between mean and turbulence kinetic energy?
+1. What is the physical interpretation of the term $\overline{u_i^{\prime 2}$?
+1. Which steps do we take to derive the conservation equation for turbulence kinetic energy?
+```
+
 $$
 \def\ubar{\overline{u}}
 \def\vbar{\overline{v}}
@@ -18,17 +24,22 @@ $$
 \def\ujbar{\overline{u}_j}
 \def\uiprime{u_i^\prime}
 \def\uiprimesq{u_i^{\prime 2}}
+\def\viprimesq{v_i^{\prime 2}}
+\def\wiprimesq{w_i^{\prime 2}}
 \def\uiprimesqbar{\overline{u_i^{\prime 2}}}
 \def\ujprime{u_j^\prime}
 $$
 
 ## Definition
 
-The kinetic energy is defined as $\frac{1}{2} \left( u^2 + v^2 + w^2 \right)$. If we apply Reynolds decomposition to this and take the mean we find that we can split the kinetic energy into the mean kinetic energy $\frac{1}{2} \left( \ubar^2 + \vbar^2 + \wbar^2 \right)$ and the **turbulence kinetic energy (TKE)** $e$
+The kinetic energy is defined as $\frac{1}{2} \left( u^2 + v^2 + w^2 \right)$. If we apply Reynolds decomposition to this and take the mean we find that we can split the kinetic energy into the mean kinetic energy $\frac{1}{2} \left( \ubar^2 + \vbar^2 + \wbar^2 \right)$ and the mean **turbulence kinetic energy (TKE)** $\overline{e}$
 
+```{admonition} Turbulence kinetic energy
 $$
-e \equiv \frac{1}{2} \left( \uvar + \vvar + \wvar \right)
+e &\equiv \frac{1}{2} \left( \uiprimesq + \viprimesq + \wiprimesq \right) \\
+\overline{e} &= \frac{1}{2} \left( \uvar + \vvar + \wvar \right)
 $$
+```
 
 The TKE $e$ can be interpreted as the mean variations induced by turbulence.
 The evolution of the TKE is essential to understand in the understanding of atmospheric boundary layer turbulence. So our ultimate goals is a conservation equation for $\overline{e}$.
@@ -85,6 +96,8 @@ $$
 + 2 \uiprime \delta_{i3} \dfrac{\theta_\mathrm{v}^\prime}{\overline{\theta}_\mathrm{v}} g
 + 2 \uiprime \nu \pdd{\uiprime}{x_j}
 $$
+
+Each of the terms can be further simplified and manipulated to arrive at
 
 $$
   \pd{\uiprimesq}{t}

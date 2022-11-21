@@ -188,6 +188,11 @@ const thebe_selector_output = ".output, .cell_output"
    12. Exercises week 3
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../exercises/week4.html">
+   13. Exercises week 4
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -406,6 +411,14 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="turbulence-kinetic-energy-i">
 <h1><span class="section-number">7. </span>Turbulence kinetic energy (i)<a class="headerlink" href="#turbulence-kinetic-energy-i" title="Permalink to this headline">#</a></h1>
+<div class="admonition-questions-to-be-answered admonition">
+<p class="admonition-title">Questions to be answered</p>
+<ol class="simple">
+<li><p>What is the difference between mean and turbulence kinetic energy?</p></li>
+<li><p>What is the physical interpretation of the term <span class="math notranslate nohighlight">\(\overline{u_i^{\prime 2}\)</span>?</p></li>
+<li><p>Which steps do we take to derive the conservation equation for turbulence kinetic energy?</p></li>
+</ol>
+</div>
 <div class="math notranslate nohighlight">
 \[
 \def\ubar{\overline{u}}
@@ -425,16 +438,22 @@ title="Print to PDF"
 \def\ujbar{\overline{u}_j}
 \def\uiprime{u_i^\prime}
 \def\uiprimesq{u_i^{\prime 2}}
+\def\viprimesq{v_i^{\prime 2}}
+\def\wiprimesq{w_i^{\prime 2}}
 \def\uiprimesqbar{\overline{u_i^{\prime 2}}}
 \def\ujprime{u_j^\prime}
 \]</div>
 <section id="definition">
 <h2><span class="section-number">7.1. </span>Definition<a class="headerlink" href="#definition" title="Permalink to this headline">#</a></h2>
-<p>The kinetic energy is defined as <span class="math notranslate nohighlight">\(\frac{1}{2} \left( u^2 + v^2 + w^2 \right)\)</span>. If we apply Reynolds decomposition to this and take the mean we find that we can split the kinetic energy into the mean kinetic energy <span class="math notranslate nohighlight">\(\frac{1}{2} \left( \ubar^2 + \vbar^2 + \wbar^2 \right)\)</span> and the <strong>turbulence kinetic energy (TKE)</strong> <span class="math notranslate nohighlight">\(e\)</span></p>
+<p>The kinetic energy is defined as <span class="math notranslate nohighlight">\(\frac{1}{2} \left( u^2 + v^2 + w^2 \right)\)</span>. If we apply Reynolds decomposition to this and take the mean we find that we can split the kinetic energy into the mean kinetic energy <span class="math notranslate nohighlight">\(\frac{1}{2} \left( \ubar^2 + \vbar^2 + \wbar^2 \right)\)</span> and the mean <strong>turbulence kinetic energy (TKE)</strong> <span class="math notranslate nohighlight">\(\overline{e}\)</span></p>
+<div class="admonition-turbulence-kinetic-energy admonition">
+<p class="admonition-title">Turbulence kinetic energy</p>
 <div class="math notranslate nohighlight">
-\[
-e \equiv \frac{1}{2} \left( \uvar + \vvar + \wvar \right)
-\]</div>
+\[\begin{split}
+e &amp;\equiv \frac{1}{2} \left( \uiprimesq + \viprimesq + \wiprimesq \right) \\
+\overline{e} &amp;= \frac{1}{2} \left( \uvar + \vvar + \wvar \right)
+\end{split}\]</div>
+</div>
 <p>The TKE <span class="math notranslate nohighlight">\(e\)</span> can be interpreted as the mean variations induced by turbulence.
 The evolution of the TKE is essential to understand in the understanding of atmospheric boundary layer turbulence. So our ultimate goals is a conservation equation for <span class="math notranslate nohighlight">\(\overline{e}\)</span>.
 The starting point is the conservation equation for <span class="math notranslate nohighlight">\(\uiprime\)</span>, which we can acquire from subtracting the mean conservation of momentum equation from the full equation</p>
@@ -488,6 +507,7 @@ The starting point is the conservation equation for <span class="math notranslat
 + 2 \uiprime \delta_{i3} \dfrac{\theta_\mathrm{v}^\prime}{\overline{\theta}_\mathrm{v}} g
 + 2 \uiprime \nu \pdd{\uiprime}{x_j}
 \]</div>
+<p>Each of the terms can be further simplified and manipulated to arrive at</p>
 <div class="math notranslate nohighlight">
 \[
   \pd{\uiprimesq}{t}

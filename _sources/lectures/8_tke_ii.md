@@ -1,5 +1,14 @@
 # Turbulence kinetic energy (ii)
 
+```{admonition} Questions to be answered
+1. What is the meaning of each of the terms in the conservation equations in this lecture?
+1. Which terms do always produce turbulence?
+1. Which terms do always destroy turbulence?
+1. Which terms can both produce and destroy turbulence?
+1. Which terms only transport turbulence?
+1. Why are there no pressure redistribution term and the Coriolis term in the conservation equation for $\overline{e}$?
+```
+
 ## Definition
 
 In the previous lecture, we derived the equation that describes the conservation of mean turbulence variances.

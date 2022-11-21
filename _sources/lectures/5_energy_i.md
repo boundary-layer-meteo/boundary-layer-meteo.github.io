@@ -34,7 +34,7 @@ Assume no heat is added ($\delta Q = 0$) and use Equation {eq}`first_law` to ans
 If $\delta Q$ equals zero, then $\rho \cp \mathrm{d}T = \mathrm{d}p$. Therefore, if we move up a mountain and pressure decreases ($dp < 0$), temperature change $dT$ must be smaller than 0 as well. Temperature thus decreases.
 ```
 
-From Equation {eq}`first_law` we can derive the adiabatic lapse rate
+From Equation {eq}`first_law` we can derive the dry adiabatic lapse rate
 
 $$
 \rho \cp \mathrm{d}T &= \mathrm{d}p \\

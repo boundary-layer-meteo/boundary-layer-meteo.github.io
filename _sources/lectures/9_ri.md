@@ -1,5 +1,15 @@
 # Richardson numbers
 
+```{admonition} Questions to be answered
+1. What does the Richardson number describe?
+1. What is the difference between the flux-, gradient- and bulk-Richardson number?
+1. At which Richardson numbers is the boundary layer statically unstable?
+1. At which Richardson numbers is the boundary layer statically stable?
+1. At which Richardson numbers is the boundary layer dynamically unstable?
+1. At which Richardson numbers is the boundary layer dynamically stable?
+```
+
+
 $$
 \def\ubar{\overline{u}}
 \def\vbar{\overline{v}}
@@ -44,6 +54,12 @@ Ri_\mathrm{f} \equiv
 $$
 ```
 
+The value of $Ri_\mathrm{f}$ can teach us something about the nature of the flow
+* If $Ri_\mathrm{f} < 0$ the flow is statically and dynamically unstable
+* If $0 < Ri_\mathrm{f} < 1$ the flow is statically stable and dynamically unstable
+* If $Ri_\mathrm{f} > 1$ the flow is statically and dynamically stable
+
+
 Via K-theory, fluxes can be related to gradients. Consequently, we can rewrite the flux-Richardson number as:
 
 $$
@@ -62,7 +78,9 @@ Ri_\mathrm{g} \equiv
 $$
 ```
 
-and the finite difference approximation called the Bulk Richardson number
+Field observations have shown that laminar flow can become turbulent if $Ri_\mathrm{g}$ is below 0.25.
+
+We can also define a finite difference approximation of the gradient Richardson number called the Bulk Richardson number
 
 $$
 Ri_\mathrm{g} \approx
