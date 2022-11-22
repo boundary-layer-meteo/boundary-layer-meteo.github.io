@@ -613,7 +613,12 @@ $$
 {\nu^\frac{3}{4}} \\
 &=
 \dfrac{h^\frac{3}{4} h^\frac{1}{4} \left( \dfrac{g}{\overline{\theta}_{v}} \overline{w^\prime \theta_v^\prime}_0 \right)^\frac{1}{4}}
-{\nu^\frac{3}{4}}
+{\nu^\frac{3}{4}} \\
+&=
+\dfrac{h^\frac{3}{4} w_*^\frac{3}{4}}
+{\nu^\frac{3}{4}} \\
+&=
+Re^\frac{3}{4}
 $$
 
 </details>
