@@ -789,7 +789,8 @@ f) Show that the Reynolds number is proportional to $\left( h / \eta \right)^\fr
   <summary>Answer</summary>
 
 $$
-\left(\dfrac{h}{\eta} \right)^\frac{4}{3} =
+\dfrac{h}{\eta} = 
+\dfrac{h}{\left( \nu^3 / \dfrac{g}{\overline{\theta}_{v}} \overline{w^\prime \theta_v^\prime}_0 \right)^\frac{1}{4}}
 $$
 
 </details>
