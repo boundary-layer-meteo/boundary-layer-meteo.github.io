@@ -206,23 +206,22 @@ $$
 \afg{\left<\overline{\theta}\right>}{t} = \frac{\overline{w'\theta'}\left(0\right)}{h}
 $$
 
-Therefore, denoting $\overline{w'\theta'}\left(0\right)$ as $\overline{w'\theta'}_S$, 
+Therefore, 
 
 $$
-\afg{h}{t} = \frac{1}{\gamma_{\theta}}\frac{\overline{w'\theta'}_S}{h} 
+\afg{h}{t} = \frac{1}{\gamma_{\theta}}\frac{\overline{w'\theta'}_0}{h} 
 $$(for:62a)
 
 $$
-2\,h\,\afg{h}{t} &= 2 \frac{\overline{w'\theta'}_S}{\gamma_{\theta}}\\
-\afg{h^2}{t} &= 2 \frac{\overline{w'\theta'}_S}{\gamma_{\theta}}\\
-\int_{t1}^{t2}{h^2{\rm d}t} &= \int_{t1}^{t2}{2 \frac{\overline{w'\theta'}_S}{\gamma_{\theta}}{\rm d}t}\\
-h_2^2-h_1^2 &=  \frac{2}{\gamma_\theta} \int_{t1}^{t2}{\overline{w'\theta'}_S{\rm\,d}t}
+h\,\rm{d}h &= \frac{\overline{w'\theta'}_0}{\gamma_{\theta}} \rm{d}t\\
+\int_{h_1}^{h_2}{h\ {\rm d}h} &= \int_{t1}^{t2}{\frac{\overline{w'\theta'}_0}{\gamma_{\theta}}{\rm d}t}\\
+\dfrac{1}{2}\ h_2^2-\dfrac{1}{2}\ h_1^2 &=  \frac{1}{\gamma_\theta} \int_{t1}^{t2}{\overline{w'\theta'}_0{\rm\,d}t}
 $$
 
 Finally,
 
 $$
-h_2 = \sqrt{h_1^2 + \frac{2}{\gamma_\theta} \int_{t1}^{t2}{\overline{w'\theta'}_S{\rm\,d}t}}
+h_2 = \sqrt{h_1^2 + \frac{2}{\gamma_\theta} \int_{t1}^{t2}{\overline{w'\theta'}_0{\rm\,d}t}}
 $$
 
 Substituting the heat flux results in
@@ -321,7 +320,7 @@ $$
 At 12 UTC, the mixed layer temperature is 290 K. At the top of the mixed layer, there is an inversion
 with an initial temperature above equal to 296 K.
 Above the inversion the temperature increases 0.05 K every 10 m.
-The surface flux $\overline{w'\theta'}(0)$ is $0.15\rm\,K\,m\,s^{-1}$.
+The surface flux $\overline{w'\theta'}(0)$ is 185 $W/m^2$ (which is $0.15\rm\,K\,m\,s^{-1}$).
 
 a) Draw the vertical profile of the potential temperature and the heat flux.
 Describe the different regions in the CBL.
@@ -346,7 +345,7 @@ b) If $h$ is 1000 m at 12 UTC, what is the boundary layer growth rate and the te
 
 ```{hint}
 :class: tip, dropdown
-Assume (like in question 4b) that 
+Assume (like in question 2b) that 
 
 $$
 \overline{w'\theta'(h)}~=~-\beta \overline{w'\theta'(0)},
@@ -482,7 +481,7 @@ Therefore, the velocity of growth is $\dfrac{650\rm\,m}{4.5\cdot 3600\rm\,s} = 0
 
 </details>
 
-b) Calculate the terms (storage, turbulent flux divergence) of the potential temperature equation in the mixed layer.
+b) Calculate the terms (storage, turbulent flux divergence) of the potential temperature equation.
 
 <details>
   <summary>Answer</summary>
@@ -553,14 +552,14 @@ Vertical profile of sensible heat flux measured above Cabauw during the 27th Jul
 ---
 
 ##
-The strength of turbulent convection in the convective boundary layer is related to the surface flux of virtual potential temperature $\overline{w^\prime \theta^\prime}_0$ and its depth $h$. The kinematic viscosity $\nu$ and thermal diffusivity $\kappa$ are equal with a magnitude of $1 \cdot 10^{-5}$. The boundary layer is in quasi-steady state, which means that production and destruction by approximation balance.
+This exercise is about a convective boundary layer without any background wind. The strength of turbulent convection in such a boundary layer is related to the surface flux of virtual potential temperature $\overline{w^\prime \theta_v^\prime}_0$ and its depth $h$. We assume that the former is 0.1 K m$^{-1}$, and the latter is 1000 m. The kinematic viscosity $\nu$ is $1.5 \cdot 10^{-5}$ m$^2$ s$^{-1}$. The boundary layer is in quasi-steady state, which means that production and destruction by approximation balance.
 
-a) What is the typical velocity $w_*$ of a convective boundary layer, given its surface flux and depth?
+a) What is the typical velocity $w_*$ of a convective boundary layer, given its surface flux and depth and what is its value in this case?
 
 <details>
   <summary>Answer</summary>
 
-The Deardorff velocity scale is constructed from $\overline{w^\prime \theta^\prime}_0$ and $h$. The only way to create a velocity scale is $w_* \equiv \left( \overline{w^\prime \theta^\prime}_0 h \right)^\frac{1}{3}$
+The Deardorff velocity scale is constructed from $\dfrac{g}{\overline{\theta}_v} \overline{w^\prime \theta^\prime}_0$ and $h$. The only way to create a velocity scale is $w_* \equiv \left( \dfrac{g}{\overline{\theta}_v} \overline{w^\prime \theta^\prime}_0 h \right)^\frac{1}{3}$. If we assume $g / \overline{\theta}_v$ is 10 / 300, then the value here is 1.49 m s$^{-1}$.
 
 </details>
 
@@ -569,7 +568,7 @@ b) What is the Reynolds number of this convective boundary layer?
 <details>
   <summary>Answer</summary>
 
-The Reynolds number here is $Re = w_* h / \nu$ and its value ...?
+The Reynolds number here is $Re = w_* h / \nu$  and its value is very close to $1 \cdot 10^8$.
 
 </details>
 
@@ -578,7 +577,7 @@ c) What is the typical magnitude of the production of turbulence in this system?
 <details>
   <summary>Answer</summary>
 
-The production is the buoyancy term from TKE equation: $\dfrac{g}{\overline{\theta}_v} \overline{w^\prime \theta_v^\prime}$. We take the surface value as a reference as this is where the energy enters the system: $\dfrac{g}{\overline{\theta}_v} \overline{w^\prime \theta_v^\prime}_0$
+The production is the buoyancy term from TKE equation: $\dfrac{g}{\overline{\theta}_v} \overline{w^\prime \theta_v^\prime}$. We take the surface value as a reference as this is where the energy enters the system: $\dfrac{g}{\overline{\theta}_v} \overline{w^\prime \theta_v^\prime}_0$. Its value is $3.33 \cdot 10^{-3}$ m$^2$ $s^{-3}$.
 
 </details>
 
@@ -587,7 +586,7 @@ d) What is the magnitude of the dissipation of turbulence in this system?
 <details>
   <summary>Answer</summary>
 
-The dissipation is approximately equal to the buoyancy term from TKE equation as there is almost steady state.
+The dissipation is approximately equal to the buoyancy term from TKE equation as there is almost steady state, hence its value is $3.33 \cdot 10^{-3}$ m$^2$ $s^{-3}$.
 
 </details>
 
@@ -596,7 +595,7 @@ e) What is the Kolmogorov scale of this convective boundary layer?
 <details>
   <summary>Answer</summary>
 
-Dissipation matches the buoyancy flux, thus the Kolmogorov length $\eta = \left( \nu^3 / \epsilon \right)^\frac{1}{4} = \left( \nu^3 / \dfrac{g}{\overline{\theta}_{v}} \overline{w^\prime \theta_v^\prime}_0 \right)^\frac{1}{4}$
+Dissipation matches the buoyancy flux, thus the Kolmogorov length $\eta = \left( \nu^3 / \epsilon \right)^\frac{1}{4} = \left( \nu^3 / \dfrac{g}{\overline{\theta}_{v}} \overline{w^\prime \theta_v^\prime}_0 \right)^\frac{1}{4}$. Its value here is $1.0 \cdot 10^{-3}$ m, thus one millimeter.
 
 </details>
 

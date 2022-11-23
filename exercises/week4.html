@@ -625,22 +625,21 @@ c_2&amp;=12\ hours
 \[
 \afg{\left&lt;\overline{\theta}\right&gt;}{t} = \frac{\overline{w'\theta'}\left(0\right)}{h}
 \]</div>
-<p>Therefore, denoting <span class="math notranslate nohighlight">\(\overline{w'\theta'}\left(0\right)\)</span> as <span class="math notranslate nohighlight">\(\overline{w'\theta'}_S\)</span>,</p>
+<p>Therefore,</p>
 <div class="math notranslate nohighlight" id="equation-for-62a">
 <span class="eqno">(13.6)<a class="headerlink" href="#equation-for-62a" title="Permalink to this equation">#</a></span>\[
-\afg{h}{t} = \frac{1}{\gamma_{\theta}}\frac{\overline{w'\theta'}_S}{h} 
+\afg{h}{t} = \frac{1}{\gamma_{\theta}}\frac{\overline{w'\theta'}_0}{h} 
 \]</div>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-2\,h\,\afg{h}{t} &amp;= 2 \frac{\overline{w'\theta'}_S}{\gamma_{\theta}}\\
-\afg{h^2}{t} &amp;= 2 \frac{\overline{w'\theta'}_S}{\gamma_{\theta}}\\
-\int_{t1}^{t2}{h^2{\rm d}t} &amp;= \int_{t1}^{t2}{2 \frac{\overline{w'\theta'}_S}{\gamma_{\theta}}{\rm d}t}\\
-h_2^2-h_1^2 &amp;=  \frac{2}{\gamma_\theta} \int_{t1}^{t2}{\overline{w'\theta'}_S{\rm\,d}t}
+h\,\rm{d}h &amp;= \frac{\overline{w'\theta'}_0}{\gamma_{\theta}} \rm{d}t\\
+\int_{h_1}^{h_2}{h\ {\rm d}h} &amp;= \int_{t1}^{t2}{\frac{\overline{w'\theta'}_0}{\gamma_{\theta}}{\rm d}t}\\
+\dfrac{1}{2}\ h_2^2-\dfrac{1}{2}\ h_1^2 &amp;=  \frac{1}{\gamma_\theta} \int_{t1}^{t2}{\overline{w'\theta'}_0{\rm\,d}t}
 \end{split}\]</div>
 <p>Finally,</p>
 <div class="math notranslate nohighlight">
 \[
-h_2 = \sqrt{h_1^2 + \frac{2}{\gamma_\theta} \int_{t1}^{t2}{\overline{w'\theta'}_S{\rm\,d}t}}
+h_2 = \sqrt{h_1^2 + \frac{2}{\gamma_\theta} \int_{t1}^{t2}{\overline{w'\theta'}_0{\rm\,d}t}}
 \]</div>
 <p>Substituting the heat flux results in</p>
 <div class="math notranslate nohighlight">
@@ -720,7 +719,7 @@ and <span class="math notranslate nohighlight">\(290.7\rm\,K\)</span> in the cas
 <p>At 12 UTC, the mixed layer temperature is 290 K. At the top of the mixed layer, there is an inversion
 with an initial temperature above equal to 296 K.
 Above the inversion the temperature increases 0.05 K every 10 m.
-The surface flux <span class="math notranslate nohighlight">\(\overline{w'\theta'}(0)\)</span> is <span class="math notranslate nohighlight">\(0.15\rm\,K\,m\,s^{-1}\)</span>.</p>
+The surface flux <span class="math notranslate nohighlight">\(\overline{w'\theta'}(0)\)</span> is 185 <span class="math notranslate nohighlight">\(W/m^2\)</span> (which is <span class="math notranslate nohighlight">\(0.15\rm\,K\,m\,s^{-1}\)</span>).</p>
 <p>a) Draw the vertical profile of the potential temperature and the heat flux.
 Describe the different regions in the CBL.</p>
 <details>
@@ -742,7 +741,7 @@ Describe the different regions in the CBL.</p>
 <p>b) If <span class="math notranslate nohighlight">\(h\)</span> is 1000 m at 12 UTC, what is the boundary layer growth rate and the temperature change per hour in the CBL?</p>
 <div class="tip dropdown admonition hint">
 <p class="admonition-title">Hint</p>
-<p>Assume (like in question 4b) that</p>
+<p>Assume (like in question 2b) that</p>
 <div class="math notranslate nohighlight">
 \[
 \overline{w'\theta'(h)}~=~-\beta \overline{w'\theta'(0)},
@@ -875,7 +874,7 @@ taken around 12.45 UTC.</p>
 <p>Using the location where <span class="math notranslate nohighlight">\(\pafg{\theta}{z}\)</span> has its maximum, the boundary layer heights at 8.15 UTC and 12.45 UTC are 375 m and 1025 m, respectively.
 Therefore, the velocity of growth is <span class="math notranslate nohighlight">\(\dfrac{650\rm\,m}{4.5\cdot 3600\rm\,s} = 0.04\rm\,m\,s^{-1}\)</span>.</p>
 </details>
-<p>b) Calculate the terms (storage, turbulent flux divergence) of the potential temperature equation in the mixed layer.</p>
+<p>b) Calculate the terms (storage, turbulent flux divergence) of the potential temperature equation.</p>
 <details>
   <summary>Answer</summary>
 <div class="math notranslate nohighlight">
@@ -932,31 +931,31 @@ This shows that local K-theory is not applicable in a well mixed boundary layer.
 <hr class="docutils" />
 <section id="id6">
 <h2><span class="section-number">13.6. </span><a class="headerlink" href="#id6" title="Permalink to this headline">#</a></h2>
-<p>The strength of turbulent convection in the convective boundary layer is related to the surface flux of virtual potential temperature <span class="math notranslate nohighlight">\(\overline{w^\prime \theta^\prime}_0\)</span> and its depth <span class="math notranslate nohighlight">\(h\)</span>. The kinematic viscosity <span class="math notranslate nohighlight">\(\nu\)</span> and thermal diffusivity <span class="math notranslate nohighlight">\(\kappa\)</span> are equal with a magnitude of <span class="math notranslate nohighlight">\(1 \cdot 10^{-5}\)</span>. The boundary layer is in quasi-steady state, which means that production and destruction by approximation balance.</p>
-<p>a) What is the typical velocity <span class="math notranslate nohighlight">\(w_*\)</span> of a convective boundary layer, given its surface flux and depth?</p>
+<p>This exercise is about a convective boundary layer without any background wind. The strength of turbulent convection in such a boundary layer is related to the surface flux of virtual potential temperature <span class="math notranslate nohighlight">\(\overline{w^\prime \theta_v^\prime}_0\)</span> and its depth <span class="math notranslate nohighlight">\(h\)</span>. We assume that the former is 0.1 K m<span class="math notranslate nohighlight">\(^{-1}\)</span>, and the latter is 1000 m. The kinematic viscosity <span class="math notranslate nohighlight">\(\nu\)</span> is <span class="math notranslate nohighlight">\(1.5 \cdot 10^{-5}\)</span> m<span class="math notranslate nohighlight">\(^2\)</span> s<span class="math notranslate nohighlight">\(^{-1}\)</span>. The boundary layer is in quasi-steady state, which means that production and destruction by approximation balance.</p>
+<p>a) What is the typical velocity <span class="math notranslate nohighlight">\(w_*\)</span> of a convective boundary layer, given its surface flux and depth and what is its value in this case?</p>
 <details>
   <summary>Answer</summary>
-<p>The Deardorff velocity scale is constructed from <span class="math notranslate nohighlight">\(\overline{w^\prime \theta^\prime}_0\)</span> and <span class="math notranslate nohighlight">\(h\)</span>. The only way to create a velocity scale is <span class="math notranslate nohighlight">\(w_* \equiv \left( \overline{w^\prime \theta^\prime}_0 h \right)^\frac{1}{3}\)</span></p>
+<p>The Deardorff velocity scale is constructed from <span class="math notranslate nohighlight">\(\dfrac{g}{\overline{\theta}_v} \overline{w^\prime \theta^\prime}_0\)</span> and <span class="math notranslate nohighlight">\(h\)</span>. The only way to create a velocity scale is <span class="math notranslate nohighlight">\(w_* \equiv \left( \dfrac{g}{\overline{\theta}_v} \overline{w^\prime \theta^\prime}_0 h \right)^\frac{1}{3}\)</span>. If we assume <span class="math notranslate nohighlight">\(g / \overline{\theta}_v\)</span> is 10 / 300, then the value here is 1.49 m s<span class="math notranslate nohighlight">\(^{-1}\)</span>.</p>
 </details>
 <p>b) What is the Reynolds number of this convective boundary layer?</p>
 <details>
   <summary>Answer</summary>
-<p>The Reynolds number here is <span class="math notranslate nohighlight">\(Re = w_* h / \nu\)</span> and its value …?</p>
+<p>The Reynolds number here is <span class="math notranslate nohighlight">\(Re = w_* h / \nu\)</span>  and its value is very close to <span class="math notranslate nohighlight">\(1 \cdot 10^8\)</span>.</p>
 </details>
 <p>c) What is the typical magnitude of the production of turbulence in this system?</p>
 <details>
   <summary>Answer</summary>
-<p>The production is the buoyancy term from TKE equation: <span class="math notranslate nohighlight">\(\dfrac{g}{\overline{\theta}_v} \overline{w^\prime \theta_v^\prime}\)</span>. We take the surface value as a reference as this is where the energy enters the system: <span class="math notranslate nohighlight">\(\dfrac{g}{\overline{\theta}_v} \overline{w^\prime \theta_v^\prime}_0\)</span></p>
+<p>The production is the buoyancy term from TKE equation: <span class="math notranslate nohighlight">\(\dfrac{g}{\overline{\theta}_v} \overline{w^\prime \theta_v^\prime}\)</span>. We take the surface value as a reference as this is where the energy enters the system: <span class="math notranslate nohighlight">\(\dfrac{g}{\overline{\theta}_v} \overline{w^\prime \theta_v^\prime}_0\)</span>. Its value is <span class="math notranslate nohighlight">\(3.33 \cdot 10^{-3}\)</span> m<span class="math notranslate nohighlight">\(^2\)</span> <span class="math notranslate nohighlight">\(s^{-3}\)</span>.</p>
 </details>
 <p>d) What is the magnitude of the dissipation of turbulence in this system?</p>
 <details>
   <summary>Answer</summary>
-<p>The dissipation is approximately equal to the buoyancy term from TKE equation as there is almost steady state.</p>
+<p>The dissipation is approximately equal to the buoyancy term from TKE equation as there is almost steady state, hence its value is <span class="math notranslate nohighlight">\(3.33 \cdot 10^{-3}\)</span> m<span class="math notranslate nohighlight">\(^2\)</span> <span class="math notranslate nohighlight">\(s^{-3}\)</span>.</p>
 </details>
 <p>e) What is the Kolmogorov scale of this convective boundary layer?</p>
 <details>
   <summary>Answer</summary>
-<p>Dissipation matches the buoyancy flux, thus the Kolmogorov length <span class="math notranslate nohighlight">\(\eta = \left( \nu^3 / \epsilon \right)^\frac{1}{4} = \left( \nu^3 / \dfrac{g}{\overline{\theta}_{v}} \overline{w^\prime \theta_v^\prime}_0 \right)^\frac{1}{4}\)</span></p>
+<p>Dissipation matches the buoyancy flux, thus the Kolmogorov length <span class="math notranslate nohighlight">\(\eta = \left( \nu^3 / \epsilon \right)^\frac{1}{4} = \left( \nu^3 / \dfrac{g}{\overline{\theta}_{v}} \overline{w^\prime \theta_v^\prime}_0 \right)^\frac{1}{4}\)</span>. Its value here is <span class="math notranslate nohighlight">\(1.0 \cdot 10^{-3}\)</span> m, thus one millimeter.</p>
 </details>
 <p>f) Show that the Reynolds number is proportional to <span class="math notranslate nohighlight">\(\left( h / \eta \right)^\frac{4}{3}\)</span>.</p>
 <details>
