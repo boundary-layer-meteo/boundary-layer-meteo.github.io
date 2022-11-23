@@ -206,23 +206,22 @@ $$
 \afg{\left<\overline{\theta}\right>}{t} = \frac{\overline{w'\theta'}\left(0\right)}{h}
 $$
 
-Therefore, denoting $\overline{w'\theta'}\left(0\right)$ as $\overline{w'\theta'}_S$, 
+Therefore, 
 
 $$
-\afg{h}{t} = \frac{1}{\gamma_{\theta}}\frac{\overline{w'\theta'}_S}{h} 
+\afg{h}{t} = \frac{1}{\gamma_{\theta}}\frac{\overline{w'\theta'}_0}{h} 
 $$(for:62a)
 
 $$
-2\,h\,\afg{h}{t} &= 2 \frac{\overline{w'\theta'}_S}{\gamma_{\theta}}\\
-\afg{h^2}{t} &= 2 \frac{\overline{w'\theta'}_S}{\gamma_{\theta}}\\
-\int_{t1}^{t2}{h^2{\rm d}t} &= \int_{t1}^{t2}{2 \frac{\overline{w'\theta'}_S}{\gamma_{\theta}}{\rm d}t}\\
-h_2^2-h_1^2 &=  \frac{2}{\gamma_\theta} \int_{t1}^{t2}{\overline{w'\theta'}_S{\rm\,d}t}
+h\,\rm{d}h &= \frac{\overline{w'\theta'}_0}{\gamma_{\theta}} \rm{d}t\\
+\int_{h_1}^{h_2}{h\ {\rm d}h} &= \int_{t1}^{t2}{\frac{\overline{w'\theta'}_0}{\gamma_{\theta}}{\rm d}t}\\
+\dfrac{1}{2}\ h_2^2-\dfrac{1}{2}\ h_1^2 &=  \frac{1}{\gamma_\theta} \int_{t1}^{t2}{\overline{w'\theta'}_0{\rm\,d}t}
 $$
 
 Finally,
 
 $$
-h_2 = \sqrt{h_1^2 + \frac{2}{\gamma_\theta} \int_{t1}^{t2}{\overline{w'\theta'}_S{\rm\,d}t}}
+h_2 = \sqrt{h_1^2 + \frac{2}{\gamma_\theta} \int_{t1}^{t2}{\overline{w'\theta'}_0{\rm\,d}t}}
 $$
 
 Substituting the heat flux results in
@@ -321,7 +320,7 @@ $$
 At 12 UTC, the mixed layer temperature is 290 K. At the top of the mixed layer, there is an inversion
 with an initial temperature above equal to 296 K.
 Above the inversion the temperature increases 0.05 K every 10 m.
-The surface flux $\overline{w'\theta'}(0)$ is $0.15\rm\,K\,m\,s^{-1}$.
+The surface flux $\overline{w'\theta'}(0)$ is 185 $W/m^2$ (which is $0.15\rm\,K\,m\,s^{-1}$).
 
 a) Draw the vertical profile of the potential temperature and the heat flux.
 Describe the different regions in the CBL.
@@ -346,7 +345,7 @@ b) If $h$ is 1000 m at 12 UTC, what is the boundary layer growth rate and the te
 
 ```{hint}
 :class: tip, dropdown
-Assume (like in question 4b) that 
+Assume (like in question 2b) that 
 
 $$
 \overline{w'\theta'(h)}~=~-\beta \overline{w'\theta'(0)},
@@ -482,7 +481,7 @@ Therefore, the velocity of growth is $\dfrac{650\rm\,m}{4.5\cdot 3600\rm\,s} = 0
 
 </details>
 
-b) Calculate the terms (storage, turbulent flux divergence) of the potential temperature equation in the mixed layer.
+b) Calculate the terms (storage, turbulent flux divergence) of the potential temperature equation.
 
 <details>
   <summary>Answer</summary>
