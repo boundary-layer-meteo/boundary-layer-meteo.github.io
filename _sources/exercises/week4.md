@@ -552,14 +552,14 @@ Vertical profile of sensible heat flux measured above Cabauw during the 27th Jul
 ---
 
 ##
-This exercise is about a convective boundary layer without any background wind. The strength of turbulent convection in such a boundary layer is related to the surface flux of virtual potential temperature $\overline{w^\prime \theta_v^\prime}_0$ and its depth $h$. We assume that the former is 0.1 K m$^{-1}$, and the latter is 1000 m. The kinematic viscosity $\nu$ is $1.5 \cdot 10^{-5}$ m$^2$ s$^{-1}$. The boundary layer is in quasi-steady state, which means that production and destruction by approximation balance.
+This exercise is about a convective boundary layer without any background wind. The strength of turbulent convection in such a boundary layer is related to the surface flux of virtual potential temperature $\overline{w^\prime \theta_v^\prime}_0$ and its depth $h$. We assume that the former is 0.1 K m$^{-1}$, and the latter is 1000 m. The kinematic viscosity $\nu$ is $1.5 \cdot 10^{-5}$ m$^2$ s$^{-1}$. The boundary layer is in quasi-steady state, which means that production and destruction by approximation balance. We assume that $g / \overline{\theta}_v$ is 10 / 300.
 
 a) What is the typical velocity $w_*$ of a convective boundary layer, given its surface flux and depth and what is its value in this case?
 
 <details>
   <summary>Answer</summary>
 
-The Deardorff velocity scale is constructed from $\dfrac{g}{\overline{\theta}_v} \overline{w^\prime \theta^\prime}_0$ and $h$. The only way to create a velocity scale is $w_* \equiv \left( \dfrac{g}{\overline{\theta}_v} \overline{w^\prime \theta^\prime}_0 h \right)^\frac{1}{3}$. If we assume $g / \overline{\theta}_v$ is 10 / 300, then the value here is 1.49 m s$^{-1}$.
+The Deardorff velocity scale is constructed from $\dfrac{g}{\overline{\theta}_v} \overline{w^\prime \theta^\prime}_0$ and $h$. The only way to create a velocity scale is $w_* \equiv \left( \dfrac{g}{\overline{\theta}_v} \overline{w^\prime \theta^\prime}_0 h \right)^\frac{1}{3}$. Its value here is 1.49 m s$^{-1}$.
 
 </details>
 
