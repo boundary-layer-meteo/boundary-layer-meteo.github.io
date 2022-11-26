@@ -38,7 +38,7 @@ The neglected terms are:
 b) Explain the mathematical steps and definitions to derive the mixed-layer equation for the bulk potential temperature that reads:
 
 $$
-\pafg{ {<\overline{\theta}}>}{t}~=~\frac{\overline{w'\theta'(0)}-\overline{w'\theta'(h)}}{h}.
+\pafg{ {\left< \overline{\theta}\right>}}{t}~=~\frac{\overline{w'\theta'(0)}-\overline{w'\theta'(h)}}{h}.
 $$
 
 <details>
@@ -104,7 +104,7 @@ $$(for:61b)
 
 </details>
 
-c) Assuming that we are in an encroachment situation and the sensible heat flux and h are constant on time, find an expression for $<{\overline{\theta}}>$
+c) Assuming that we are in an encroachment situation and the sensible heat flux and h are constant on time, find an expression for $\left< {\overline{\theta}} \right>$
 as a function of time. The assumption of sensible heat flux and h constant on time is reasonable in the afternoon hours
 and during a relative short time. Discuss this assumption.
 
@@ -552,14 +552,14 @@ Vertical profile of sensible heat flux measured above Cabauw during the 27th Jul
 ---
 
 ##
-The strength of turbulent convection in the convective boundary layer is related to the surface flux of virtual potential temperature $\overline{w^\prime \theta^\prime}_0$ and its depth $h$. The kinematic viscosity $\nu$ and thermal diffusivity $\kappa$ are equal with a magnitude of $1 \cdot 10^{-5}$. The boundary layer is in quasi-steady state, which means that production and destruction by approximation balance.
+This exercise is about a convective boundary layer without any background wind. The strength of turbulent convection in such a boundary layer is related to the surface flux of virtual potential temperature $\overline{w^\prime \theta_v^\prime}_0$ and its depth $h$. We assume that the former is 0.1 K m$^{-1}$, and the latter is 1000 m. The kinematic viscosity $\nu$ is $1.5 \cdot 10^{-5}$ m$^2$ s$^{-1}$. The boundary layer is in quasi-steady state, which means that production and destruction by approximation balance. We assume that $g / \overline{\theta}_v$ is 10 / 300.
 
-a) What is the typical velocity $w_*$ of a convective boundary layer, given its surface flux and depth?
+a) What is the typical velocity $w_*$ of a convective boundary layer, given its surface flux and depth and what is its value in this case?
 
 <details>
   <summary>Answer</summary>
 
-The Deardorff velocity scale is constructed from $\overline{w^\prime \theta^\prime}_0$ and $h$. The only way to create a velocity scale is $w_* \equiv \left( \overline{w^\prime \theta^\prime}_0 h \right)^\frac{1}{3}$
+The Deardorff velocity scale is constructed from $\dfrac{g}{\overline{\theta}_v} \overline{w^\prime \theta^\prime}_0$ and $h$. The only way to create a velocity scale is $w_* \equiv \left( \dfrac{g}{\overline{\theta}_v} \overline{w^\prime \theta^\prime}_0 h \right)^\frac{1}{3}$. Its value here is 1.49 m s$^{-1}$.
 
 </details>
 
@@ -568,7 +568,7 @@ b) What is the Reynolds number of this convective boundary layer?
 <details>
   <summary>Answer</summary>
 
-The Reynolds number here is $Re = w_* h / \nu$ and its value ...?
+The Reynolds number here is $Re = w_* h / \nu$  and its value is very close to $1 \cdot 10^8$.
 
 </details>
 
@@ -577,7 +577,7 @@ c) What is the typical magnitude of the production of turbulence in this system?
 <details>
   <summary>Answer</summary>
 
-The production is the buoyancy term from TKE equation: $\dfrac{g}{\overline{\theta}_v} \overline{w^\prime \theta_v^\prime}$. We take the surface value as a reference as this is where the energy enters the system: $\dfrac{g}{\overline{\theta}_v} \overline{w^\prime \theta_v^\prime}_0$
+The production is the buoyancy term from TKE equation: $\dfrac{g}{\overline{\theta}_v} \overline{w^\prime \theta_v^\prime}$. We take the surface value as a reference as this is where the energy enters the system: $\dfrac{g}{\overline{\theta}_v} \overline{w^\prime \theta_v^\prime}_0$. Its value is $3.33 \cdot 10^{-3}$ m$^2$ $s^{-3}$.
 
 </details>
 
@@ -586,7 +586,7 @@ d) What is the magnitude of the dissipation of turbulence in this system?
 <details>
   <summary>Answer</summary>
 
-The dissipation is approximately equal to the buoyancy term from TKE equation as there is almost steady state.
+The dissipation is approximately equal to the buoyancy term from TKE equation as there is almost steady state, hence its value is $3.33 \cdot 10^{-3}$ m$^2$ $s^{-3}$.
 
 </details>
 
@@ -595,7 +595,7 @@ e) What is the Kolmogorov scale of this convective boundary layer?
 <details>
   <summary>Answer</summary>
 
-Dissipation matches the buoyancy flux, thus the Kolmogorov length $\eta = \left( \nu^3 / \epsilon \right)^\frac{1}{4} = \left( \nu^3 / \dfrac{g}{\overline{\theta}_{v}} \overline{w^\prime \theta_v^\prime}_0 \right)^\frac{1}{4}$
+Dissipation matches the buoyancy flux, thus the Kolmogorov length $\eta = \left( \nu^3 / \epsilon \right)^\frac{1}{4} = \left( \nu^3 / \dfrac{g}{\overline{\theta}_{v}} \overline{w^\prime \theta_v^\prime}_0 \right)^\frac{1}{4}$. Its value here is $1.0 \cdot 10^{-3}$ m, thus one millimeter.
 
 </details>
 

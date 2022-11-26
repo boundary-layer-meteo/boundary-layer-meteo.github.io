@@ -16,6 +16,8 @@ parts:
      - file: lectures/7_tke
      - file: lectures/8_tke_ii
      - file: lectures/9_ri
+     - file: lectures/10_kolmogorov
+     - file: lectures/11_cbl
        #- file: atmospheric_stability
 #     - file: lectures/temperature
 #   - caption: Theory
