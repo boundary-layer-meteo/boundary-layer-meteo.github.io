@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>6. Conservation of energy (ii) &#8212; Boundary-Layer Meteorology</title>
+    <title>10. Kolmogorov scaling &#8212; Boundary-Layer Meteorology</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -54,8 +54,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="7. Turbulence kinetic energy (i)" href="7_tke.html" />
-    <link rel="prev" title="5. Conservation of energy (i)" href="5_energy_i.html" />
+    <link rel="next" title="11. Convective boundary layer" href="11_cbl.html" />
+    <link rel="prev" title="9. Richardson numbers" href="9_ri.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -146,8 +146,8 @@ const thebe_selector_output = ".output, .cell_output"
    5. Conservation of energy (i)
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="6_energy_ii.html">
    6. Conservation of energy (ii)
   </a>
  </li>
@@ -166,8 +166,8 @@ const thebe_selector_output = ".output, .cell_output"
    9. Richardson numbers
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="10_kolmogorov.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    10. Kolmogorov scaling
   </a>
  </li>
@@ -293,7 +293,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Flectures/6_energy_ii.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Flectures/10_kolmogorov.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -321,7 +321,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/lectures/6_energy_ii.md"
+        <a href="../_sources/lectures/10_kolmogorov.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -381,8 +381,8 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-ideal-gas-law-for-a-moist-atmosphere">
-   6.1. The ideal gas law for a moist atmosphere
+  <a class="reference internal nav-link" href="#length-and-time-scales-of-turbulence">
+   10.1. Length and time scales of turbulence
   </a>
  </li>
 </ul>
@@ -394,7 +394,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Conservation of energy (ii)</h1>
+                <h1>Kolmogorov scaling</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -405,8 +405,8 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-ideal-gas-law-for-a-moist-atmosphere">
-   6.1. The ideal gas law for a moist atmosphere
+  <a class="reference internal nav-link" href="#length-and-time-scales-of-turbulence">
+   10.1. Length and time scales of turbulence
   </a>
  </li>
 </ul>
@@ -419,95 +419,49 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="conservation-of-energy-ii">
-<h1><span class="section-number">6. </span>Conservation of energy (ii)<a class="headerlink" href="#conservation-of-energy-ii" title="Permalink to this headline">#</a></h1>
-<div class="admonition-questions-to-be-answered-in-this-lecture admonition">
-<p class="admonition-title">Questions to be answered in this lecture</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="kolmogorov-scaling">
+<h1><span class="section-number">10. </span>Kolmogorov scaling<a class="headerlink" href="#kolmogorov-scaling" title="Permalink to this headline">#</a></h1>
+<div class="admonition-questions-to-be-answered-in-this-chapter admonition">
+<p class="admonition-title">Questions to be answered in this chapter</p>
 <ol class="simple">
-<li><p>What is the gas law for an atmosphere with water vapor?</p></li>
-<li><p>What is virtual temperature and why do we use it?</p></li>
-<li><p>What is the gas law under the assumption of small perturbations?</p></li>
-<li><p>What is buoyancy?</p></li>
+<li><p>What are the length and time scales of production and dissipation of turbulence?</p></li>
 </ol>
 </div>
+<section id="length-and-time-scales-of-turbulence">
+<h2><span class="section-number">10.1. </span>Length and time scales of turbulence<a class="headerlink" href="#length-and-time-scales-of-turbulence" title="Permalink to this headline">#</a></h2>
+<p>Production of turbulence happens at large spatial and temporal scales present in the atmospheric boundary layer flow, whereas dissipation of turbulence happens at the smallest scales present.</p>
+<p>Production happens due to shear, or due to buoyancy. Dissipation of turbulence happens to processes happening at the scales where viscosity can act. The strict scale separation between production and dissipation allow for some interesting dimensional analysis.</p>
+<p>Let us take the neutral surface layer as an example. Here, turbulence is generated at the depth of the surface layer <span class="math notranslate nohighlight">\(L\)</span> by a typical wind speed <span class="math notranslate nohighlight">\(U\)</span> and is dissipated at the smallest scale with a viscosity <span class="math notranslate nohighlight">\(\nu\)</span>.
+Since at high Reynolds numbers production does not feel viscosity, the production, with units <span class="math notranslate nohighlight">\(\mathrm{m}^2\ \mathrm{s}^{-3}\)</span>, must be proportional with <span class="math notranslate nohighlight">\(U^3 L^{-1}\)</span>, and the associated length and time scale are <span class="math notranslate nohighlight">\(L\)</span> and <span class="math notranslate nohighlight">\(T \equiv L U^{-1}\)</span>.
+As dissipation is the mechanism to destroy production the amount of dissipation equals the production, but the spatial and temporal scales at which this happen depends strongly on the viscosity <span class="math notranslate nohighlight">\(\nu\)</span>.
+Dimensional reasoning leads us to the Kolomogorov scales: the only length and time scales that we can form from the dissipation and the viscosity</p>
+<div class="admonition-the-kolmogorov-scales admonition">
+<p class="admonition-title">The Kolmogorov scales</p>
+<p>The Kolmogorov length scale <span class="math notranslate nohighlight">\(\eta\)</span> is</p>
 <div class="math notranslate nohighlight">
 \[
-\def\cp{c_{\mathrm{p}}}
-\def\Rd{R_{\mathrm{d}}}
-\def\Rv{R_{\mathrm{v}}}
-\def\Tv{T_{\mathrm{v}}}
-\def\pbar{\overline{p}}
-\def\pprime{p^\prime}
-\def\rhobar{\overline{\rho}}
-\def\rhoprime{\rho^\prime}
-\def\Tvbar{\overline{\Tv}}
-\def\Tvprime{\Tv^\prime}
-\def\pd#1#2{\dfrac{\partial #1}{\partial #2}}
-\def\pdd#1#2{\dfrac{\partial^2 #1}{\partial#2^2}}
-\def\uibar{\overline{u}_i}
-\def\ujbar{\overline{u}_j}
-\def\uiprime{u_i^\prime}
-\def\ujprime{u_j^\prime}
-\def\ubar{\overline{u}}
-\def\vbar{\overline{v}}
-\def\wbar{\overline{w}}
+\eta \equiv \left( \dfrac{\nu^3}{\epsilon} \right)^\frac{1}{4}
+= \left( \dfrac{\nu^3 L}{U^3} \right)^\frac{1}{4}.
 \]</div>
-<section id="the-ideal-gas-law-for-a-moist-atmosphere">
-<h2><span class="section-number">6.1. </span>The ideal gas law for a moist atmosphere<a class="headerlink" href="#the-ideal-gas-law-for-a-moist-atmosphere" title="Permalink to this headline">#</a></h2>
-<p>The pressure <span class="math notranslate nohighlight">\(p\)</span> of the atmosphere can be decomposed into the partial pressure of dry air <span class="math notranslate nohighlight">\(p_\mathrm{d}\)</span> and that of vapor <span class="math notranslate nohighlight">\(p_\mathrm{v}\)</span>. With the help of the gas law, and the specific humidity <span class="math notranslate nohighlight">\(q\)</span>, we can work this towards a notation that introduces virtual temperature</p>
+<p>The Kolmogorov time scale <span class="math notranslate nohighlight">\(T_\epsilon\)</span> is</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}
-p &amp;= p_\mathrm{d} + p_\mathrm{v} \\
-p &amp;= \rho_\mathrm{d} \Rd T + \rho_\mathrm{v} \Rv T \\
-p &amp;= \left( 1 - q \right) \rho \Rd T + q \rho \Rv T \\
-p &amp;= \rho \Rd T \left( 1 + q \left( \dfrac{\Rv}{\Rd} - 1 \right) \right)
-\end{split}\]</div>
-<p>We can now define the virtual temperature <span class="math notranslate nohighlight">\(\Tv\)</span> as</p>
-<div class="admonition-virtual-temperature admonition">
-<p class="admonition-title">Virtual temperature</p>
-<div class="math notranslate nohighlight" id="equation-virtual-temp">
-<span class="eqno">(6.1)<a class="headerlink" href="#equation-virtual-temp" title="Permalink to this equation">#</a></span>\[
-\Tv \equiv T \left( 1 + q \left( \dfrac{\Rv}{\Rd} - 1 \right) \right)
+\[
+T_\epsilon \equiv \left( \dfrac{\nu}{\epsilon} \right)^\frac{1}{2}
+= \left( \dfrac{\nu L}{U^3} \right)^\frac{1}{2}.
 \]</div>
 </div>
-<p>and the gas law becomes <span class="math notranslate nohighlight">\(p = \rho \Rd \Tv\)</span></p>
-<p>In an intuitive definition, the virtual temperature is temperature that an equivalent dry parcel would need to have in order to have the same density as a moist parcel. The fact that the virtual temperature is larger than the absolute temperature for a moist atmosphere is related to the low weight of water molecules compared to those in a dry atmosphere (primarily <span class="math notranslate nohighlight">\(O_2\)</span> and <span class="math notranslate nohighlight">\(N_2\)</span>).</p>
-<p>Similar as the virtual temperature, we can also define the virtual potential temperature</p>
-<div class="math notranslate nohighlight">
-\[
-\theta_\mathrm{v} \equiv \theta \left( 1 + q \left( \dfrac{\Rv}{\Rd} - 1 \right) \right)
-\]</div>
-<p>We can assume that in an atmospheric boundary layer <span class="math notranslate nohighlight">\(\rhoprime \ll \rhobar\)</span>, <span class="math notranslate nohighlight">\(\pprime \ll \pbar\)</span>, and <span class="math notranslate nohighlight">\(\Tvprime \ll \Tvbar\)</span>. Hence we can rewrite the gas law.</p>
+<div class="seealso admonition">
+<p class="admonition-title">Question</p>
+<p>What is the ratio in length scales, often referred to as scale separation, between production and dissipation in a neutral atmospheric surface layer with wind speed <span class="math notranslate nohighlight">\(U\)</span> of <span class="math notranslate nohighlight">\(\mathrm{10\ m\ s^{-1}}\)</span>, depth <span class="math notranslate nohighlight">\(L\)</span> of <span class="math notranslate nohighlight">\(100\ \mathrm{m}\)</span>, and kinematic viscosity <span class="math notranslate nohighlight">\(\nu\)</span> of <span class="math notranslate nohighlight">\(1.5 \cdot 10^{-5}\ \mathrm{m\ s^{-1}}\)</span>?</p>
+</div>
+<div class="important dropdown admonition">
+<p class="admonition-title">Answer</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-\pbar + \pprime = \left( \rhobar + \rhoprime \right) \Rd \left( \Tvbar + \Tvprime \right) \\
-\pbar + \pprime = \rhobar \Rd \Tvbar + \rhobar \Rd \Tvprime + \rhoprime \Rd \Tvbar + \rhoprime \Rd \Tvprime
+\dfrac{L}{\eta} &amp;= L \left( \dfrac{U^3}{\nu^3 L} \right)^\frac{1}{4} = \left( \dfrac{U L}{\nu} \right)^\frac{3}{4} \\
+                &amp;= \left( \dfrac{10 \cdot 100}{1.5 \cdot 10^{-5}} \right)^\frac{3}{4} \approx 7.38 \cdot 10^{5}
 \end{split}\]</div>
-<p>Given that all perturbations are small, the mean gas law is <span class="math notranslate nohighlight">\(\pbar = \rhobar \Rd \Tvbar\)</span>, and we can neglect all terms that have multiplications of perturbations. This gives:</p>
-<div class="math notranslate nohighlight">
-\[
-\pprime = \rhobar \Rd \Tvprime + \rhoprime \Rd \Tvbar
-\]</div>
-<p>If we then divide the equation by <span class="math notranslate nohighlight">\(\pbar\)</span> and substitute the gas law for mean quantities we get the gas law for small perturbations</p>
-<div class="math notranslate nohighlight">
-\[
-\dfrac{\pprime}{\pbar} = \dfrac{\Tvprime}{\Tvbar} + \dfrac{\rhoprime}{\rhobar}
-\]</div>
-<p>In the atmospheric boundary layer, we can compare the typical magnitude of pressure perturbations to those of density and virtual temperature and find that those of pressure are (at least) two orders of magnitude smaller. Hence, the gas law that we use in the atmospheric boundary under the Boussinesq approximation simplifies to</p>
-<div class="admonition-ideal-gas-law-under-boussinesq-approximation admonition">
-<p class="admonition-title">Ideal gas law under Boussinesq approximation</p>
-<div class="math notranslate nohighlight" id="equation-gas-law">
-<span class="eqno">(6.2)<a class="headerlink" href="#equation-gas-law" title="Permalink to this equation">#</a></span>\[
-\dfrac{\rhoprime}{\rhobar} = - \dfrac{\Tvprime}{\Tvbar}
-\]</div>
 </div>
-<p>We can also assume that <span class="math notranslate nohighlight">\(\dfrac{\Tvprime}{\Tvbar} \approx \dfrac{\theta_\mathrm{v}^\prime}{\overline{\theta}_\mathrm{v}}\)</span>.
-This we can substitute into the momentum equation and redefine the buoyancy term and get</p>
-<div class="math notranslate nohighlight">
-\[
-\pd{u_i}{t} + \pd{u_i u_j}{x_j} = - \dfrac{1}{\rhobar} \pd{p^\prime}{x_i} + f \epsilon_{ij3} \left( u_j - u_{g,j} \right) + \delta_{i3} \dfrac{\theta_\mathrm{v}^\prime}{\overline{\theta}_\mathrm{v}} g + \nu \pdd{u_i}{x_j}
-\]</div>
-<p>In a moist atmosphere, we will now also define stability based on vertical gradient of the virtual potential temperature <span class="math notranslate nohighlight">\(\theta_\mathrm{v}\)</span>, rather than the potential temperature <span class="math notranslate nohighlight">\(\theta\)</span> that does not take into account the effects of moisture.</p>
 </section>
 </section>
 
@@ -538,17 +492,17 @@ This we can substitute into the momentum equation and redefine the buoyancy term
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="5_energy_i.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="9_ri.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">5. </span>Conservation of energy (i)</p>
+            <p class="prev-next-title"><span class="section-number">9. </span>Richardson numbers</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="7_tke.html" title="next page">
+    <a class='right-next' id="next-link" href="11_cbl.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">7. </span>Turbulence kinetic energy (i)</p>
+        <p class="prev-next-title"><span class="section-number">11. </span>Convective boundary layer</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

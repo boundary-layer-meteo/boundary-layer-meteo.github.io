@@ -38,7 +38,7 @@ The neglected terms are:
 b) Explain the mathematical steps and definitions to derive the mixed-layer equation for the bulk potential temperature that reads:
 
 $$
-\pafg{ {<\overline{\theta}}>}{t}~=~\frac{\overline{w'\theta'(0)}-\overline{w'\theta'(h)}}{h}.
+\pafg{ {\left< \overline{\theta}\right>}}{t}~=~\frac{\overline{w'\theta'(0)}-\overline{w'\theta'(h)}}{h}.
 $$
 
 <details>
@@ -104,7 +104,7 @@ $$(for:61b)
 
 </details>
 
-c) Assuming that we are in an encroachment situation and the sensible heat flux and h are constant on time, find an expression for $<{\overline{\theta}}>$
+c) Assuming that we are in an encroachment situation and the sensible heat flux and h are constant on time, find an expression for $\left< {\overline{\theta}} \right>$
 as a function of time. The assumption of sensible heat flux and h constant on time is reasonable in the afternoon hours
 and during a relative short time. Discuss this assumption.
 
