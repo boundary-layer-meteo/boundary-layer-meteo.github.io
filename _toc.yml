@@ -33,7 +33,7 @@ parts:
     - file: exercises/week2
     - file: exercises/week3
     - file: exercises/week4
-      #   numbered: true
+    - file: exercises/week5
       #   chapters:
       #   - file: exercises/exercises1
       #   - file: exercises/exercises2
