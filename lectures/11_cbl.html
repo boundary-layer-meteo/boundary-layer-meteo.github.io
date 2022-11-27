@@ -390,7 +390,9 @@ If we assume horizontal homogeneity, no subsidence and high Reynolds numbers, th
 \[
 \def\pd#1#2{\dfrac{\partial #1}{\partial #2}}
 \def\thetabar{\overline{\theta}}
+\def\qbar{\overline{q}}
 \def\thetabulk{\left&lt; \thetabar \right&gt;}
+\def\qbulk{\left&lt; \qbar \right&gt;}
 \pd{\overline{\theta}}{t} = - \pd{\overline{w^\prime \theta^\prime}}{z} 
 \]</div>
 <p>The well-mixed property of this layer allows us to derive a very simple bulk model (thus no spatial derivatives).
@@ -415,13 +417,114 @@ We integrate from surface to the depth of the layer.</p>
 \]</div>
 <p>and substitute the lefthand side of the integrated equation with the help of the Leibniz rule to get</p>
 <div class="math notranslate nohighlight">
-\[
+\[\begin{split}
 \dfrac{\mathrm{d}}{\mathrm{d} t} \left( \thetabulk h \right)
 - \dfrac{\mathrm{d} h}{\mathrm{d} t} \thetabar \left(h\right)
 = 
 - \overline{w^\prime \theta^\prime} \left( h \right)
 + \overline{w^\prime \theta^\prime} \left( 0 \right)
+\\
+  \dfrac{\mathrm{d} \thetabulk}{\mathrm{d} t} h
++ \dfrac{\mathrm{d} h}{\mathrm{d} t} \thetabulk
+- \dfrac{\mathrm{d} h}{\mathrm{d} t} \thetabar \left(h\right)
+= 
+\overline{w^\prime \theta^\prime} \left( 0 \right)
+- \overline{w^\prime \theta^\prime} \left( h \right)
+\end{split}\]</div>
+<p>If we assume that the boundary layer is well-mixed, the bulk temperature <span class="math notranslate nohighlight">\(\thetabulk\)</span> and the boundary-layer top temperature <span class="math notranslate nohighlight">\(\thetabar \left( h \right)\)</span> equal and after division by <span class="math notranslate nohighlight">\(h\)</span> the final equation can be written as</p>
+<div class="math notranslate nohighlight">
+\[
+  \dfrac{\mathrm{d} \thetabulk}{\mathrm{d} t}
+= 
+\dfrac{ \overline{w^\prime \theta^\prime} \left( 0 \right)
+- \overline{w^\prime \theta^\prime} \left( h \right) }{h}
 \]</div>
+<p>Similarly, we can derive a budget around the mixed-layer top</p>
+<div class="math notranslate nohighlight">
+\[
+\int_{h-\epsilon}^{h + \epsilon} \pd{\thetabar}{t} \mathrm{d}z  = - \int_{h-\epsilon}^{h + \epsilon} \pd{\overline{w^\prime \theta^\prime}}{z} \mathrm{d}z
+\]</div>
+<p>Again with application of Leibniz rule, we can write</p>
+<div class="math notranslate nohighlight">
+\[
+\dfrac{\mathrm{d}}{\mathrm{d} t} \int_{h - \epsilon}^{h + \epsilon} \thetabar \, \mathrm{d}z
+- \dfrac{\mathrm{d} \left( h + \epsilon \right) }{\mathrm{d} t} \thetabar \left(h + \epsilon \right)
++ \dfrac{\mathrm{d} \left( h - \epsilon \right) }{\mathrm{d} t} \thetabar \left(h - \epsilon \right)
+= 
+- \overline{w^\prime \theta^\prime} \left( h + \epsilon \right)
++ \overline{w^\prime \theta^\prime} \left( h - \epsilon \right)
+\]</div>
+<p>If we take the limit of <span class="math notranslate nohighlight">\(\epsilon\)</span> going to zero, then the first term goes to zero.
+The second and third term can be combined, taking into account that temperature at <span class="math notranslate nohighlight">\(h\)</span> approached from below is <span class="math notranslate nohighlight">\(\thetabar\)</span>, while from above <span class="math notranslate nohighlight">\(\thetabar + \Delta \theta\)</span>.
+The first term on the righthand side is zero, as the flux at <span class="math notranslate nohighlight">\(h\)</span> approached from above equals zero.
+All these assumptions give</p>
+<div class="math notranslate nohighlight">
+\[
+- \dfrac{\mathrm{d} h}{\mathrm{d} t} \Delta \theta
+= 
+  \overline{w^\prime \theta^\prime} \left( h \right)
+\]</div>
+<p>which can be rewritten into</p>
+<div class="math notranslate nohighlight">
+\[
+\dfrac{\mathrm{d} h}{\mathrm{d} t} = 
+- \dfrac{\overline{w^\prime \theta^\prime} \left( h \right)}{\Delta \theta}
+\]</div>
+<p>As a last step, we need an evolution equation for the jump <span class="math notranslate nohighlight">\(\Delta \theta\)</span>.
+This evolution is a competition of boundary layer growth that makes the jump larger, and boundary-layer heating that makes the jump smaller.</p>
+<div class="math notranslate nohighlight">
+\[
+\dfrac{\mathrm{d} \Delta \theta}{\mathrm{d} t} = 
+  \gamma_{\theta} \dfrac{\mathrm{d} h}{\mathrm{d} t}
+- \dfrac{\mathrm{d} \thetabulk}{\mathrm{d} t}
+\]</div>
+<p>These three equations combined provide the set of mixed-layer equations. We have, however, a new closure problem, because we do not know the entrainment flux.
+Analysis of field measurements have revealed that the total entrainment of virtual potential temperature is a fixed fraction <span class="math notranslate nohighlight">\(\beta\)</span> of its surface flux</p>
+<div class="math notranslate nohighlight">
+\[
+\dfrac{\mathrm{d} h}{\mathrm{d} t} = 
+\beta \dfrac{\overline{w^\prime \theta_v^\prime} \left( 0 \right)}{\Delta \theta_v}
+\]</div>
+<p>The growth rate of the boundary layer due to entrainment is often also called the entrainment velocity <span class="math notranslate nohighlight">\(w_e\)</span>, such that in absense of subsidence <span class="math notranslate nohighlight">\(\mathrm{d}h / \mathrm{d}t = w_e\)</span></p>
+<p>We can now write down the total set</p>
+<div class="admonition-mixed-layer-equations-for-potential-temperature admonition">
+<p class="admonition-title">Mixed-layer equations for potential temperature</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+  \dfrac{\mathrm{d} \thetabulk}{\mathrm{d} t}
+&amp;= 
+\dfrac{ \overline{w^\prime \theta^\prime} \left( 0 \right)
+- \overline{w^\prime \theta^\prime} \left( h \right) }{h}
+\\
+\overline{w^\prime \theta^\prime} \left( h \right) &amp;= - w_e {\Delta \theta}
+\\
+\dfrac{\mathrm{d} \Delta \theta}{\mathrm{d} t}
+&amp;= 
+  \gamma_{\theta} \dfrac{\mathrm{d} h}{\mathrm{d} t}
+- \dfrac{\mathrm{d} \thetabulk}{\mathrm{d} t}
+\\
+w_e &amp;= \beta \dfrac{\overline{w^\prime \theta_v^\prime} \left( 0 \right)}{\Delta \theta_v}
+\end{split}\]</div>
+</div>
+<p>In a similar fashion, we can construct the set for <span class="math notranslate nohighlight">\(q\)</span></p>
+<div class="admonition-mixed-layer-equations-for-specific-humidity admonition">
+<p class="admonition-title">Mixed-layer equations for specific humidity</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+  \dfrac{\mathrm{d} \qbulk}{\mathrm{d} t}
+&amp;= 
+\dfrac{ \overline{w^\prime q^\prime} \left( 0 \right)
+- \overline{w^\prime q^\prime} \left( h \right) }{h}
+\\
+\overline{w^\prime q^\prime} \left( h \right) &amp;= - w_e {\Delta q}
+\\
+\dfrac{\mathrm{d} \Delta q}{\mathrm{d} t}
+&amp;= 
+  \gamma_{q} \dfrac{\mathrm{d} h}{\mathrm{d} t}
+- \dfrac{\mathrm{d} \qbulk}{\mathrm{d} t}
+\end{split}\]</div>
+</div>
+<p>where make use of the same entrainment velocity defined earlier.</p>
 </section>
 
     <script type="text/x-thebe-config">
