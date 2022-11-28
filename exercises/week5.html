@@ -669,7 +669,7 @@ The maximum wind speed in this jet is at a height of 250 m.</p>
 This oscillation can be quantified with the Brunt-Väisälä frequency.
 By inverting this frequency, one obtains the period of the oscillation of a parcel in a statically stable
 environment related to the presence of gravity (buoyancy) waves.</p>
-<p>Calculate the Brunt-Väisälä frequency (<span class="math notranslate nohighlight">\(N &amp;= \sqrt{\frac{g}{\theta_v}\gemafg{\theta_v}{z}}\)</span>) and the oscillation period
+<p>Calculate the Brunt-Väisälä frequency (<span class="math notranslate nohighlight">\(N = \sqrt{\frac{g}{\theta_v}\gemafg{\theta_v}{z}}\)</span>) and the oscillation period
 for an air parcel that is displaced from the surface.
 Discuss the dependence of this oscillation period as a function of the potential temperature gradient.</p>
 <details>
@@ -825,29 +825,29 @@ and in blue for exercise c (logarithmic profile).</span><a class="headerlink" hr
 \end{split}\]</div>
 <p>The interfaces are located at 2.55 m and 7.5 m, so <span class="math notranslate nohighlight">\(\Delta z = 4.95\ \rm{m}\)</span>.</p>
 <p>With the linear temperature profile, we find the following potential temperatures:</p>
-<div class="math notranslate nohighlight" id="equation-for-73temp1">
-<span class="eqno">(16.5)<a class="headerlink" href="#equation-for-73temp1" title="Permalink to this equation">#</a></span>\[
+<div class="math notranslate nohighlight">
+\[
 \theta_{\rm Surface} = 292\rm\,K
 \]</div>
-<div class="math notranslate nohighlight" id="equation-for-73temp2">
-<span class="eqno">(16.6)<a class="headerlink" href="#equation-for-73temp2" title="Permalink to this equation">#</a></span>\[
+<div class="math notranslate nohighlight">
+\[
 \theta_{\rm Middle} = 292.98\rm\,K
 \]</div>
-<div class="math notranslate nohighlight" id="equation-for-73temp3">
-<span class="eqno">(16.7)<a class="headerlink" href="#equation-for-73temp3" title="Permalink to this equation">#</a></span>\[
+<div class="math notranslate nohighlight">
+\[
 \theta_{\rm Top} = 293.98\rm\,K
 \]</div>
 <p>This results in the following absolute temperatures:</p>
 <div class="math notranslate nohighlight" id="equation-for-73temp1">
-<span class="eqno">(16.5)<a class="headerlink" href="#equation-for-73temp1" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(16.2)<a class="headerlink" href="#equation-for-73temp1" title="Permalink to this equation">#</a></span>\[
 T_{\rm Surface} = 291.999\rm\,K 
 \]</div>
 <div class="math notranslate nohighlight" id="equation-for-73temp2">
-<span class="eqno">(16.6)<a class="headerlink" href="#equation-for-73temp2" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(16.3)<a class="headerlink" href="#equation-for-73temp2" title="Permalink to this equation">#</a></span>\[
 T_{\rm Middle} = 292.93\rm\,K 
 \]</div>
 <div class="math notranslate nohighlight" id="equation-for-73temp3">
-<span class="eqno">(16.7)<a class="headerlink" href="#equation-for-73temp3" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(16.4)<a class="headerlink" href="#equation-for-73temp3" title="Permalink to this equation">#</a></span>\[
 T_{\rm Top} = 293.88\rm\,K 
 \]</div>
 <p><span class="math notranslate nohighlight">\(\rho\,c_p=1231\rm\,\frac{W\,m^{-2}}{K\,m\,s^{-1}}\)</span>,
@@ -858,7 +858,7 @@ so <span class="math notranslate nohighlight">\(\frac{\epsilon_{\rm IR}\, \sigma
 \[
 \gemafg{\theta}{t} = 2.05\times 10^{-5} \rm\,K\,s^{-1} = 0.074\,K\,hr^{-1}
 \]</div>
-<p>Note that using rounded temperatures of Equations <a class="reference internal" href="#equation-for-73temp1">(16.5)</a>-<a class="reference internal" href="#equation-for-73temp3">(16.7)</a> results in wrong answers.
+<p>Note that using rounded temperatures of Equations <a class="reference internal" href="#equation-for-73temp1">(16.2)</a>-<a class="reference internal" href="#equation-for-73temp3">(16.4)</a> results in wrong answers.
 This is due to the power of 4 of the temperature.</p>
 </details>
 <p>c) Repeat now the calculation but assuming a logarithmic profile for the potential temperature that reads:</p>
@@ -915,9 +915,8 @@ during diurnal and nocturnal conditions reads:</p>
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(\overline{U_g}\)</span> is the geostrophic wind in the U direction and f
 is the Coriolis parameter. We assume that <span class="math notranslate nohighlight">\(\overline{V_g}\)</span>=0.</p>
-<p>a) Calculate the <span class="math notranslate nohighlight">\(\overline{U}\)</span> and <span class="math notranslate nohighlight">\(\overline{V}\)</span>-component during day conditions.
-In diurnal conditions, one can assume that the wind is in steady-state.
-Discuss the role of the momentum flux divergence.</p>
+<p>a) Derive expressions for <span class="math notranslate nohighlight">\(\overline{U}\)</span> and <span class="math notranslate nohighlight">\(\overline{V}\)</span> during day conditions.
+In diurnal conditions, one can assume that the wind is in steady-state.</p>
 <details>
   <summary>Answer</summary>
 <p>Since we are evaluating (diurnal) stationary conditions,</p>
@@ -933,32 +932,12 @@ Discuss the role of the momentum flux divergence.</p>
 \overline{V} &amp;= \frac{1}{f}\gemafg{u'w'}{z}
 \end{split}\]</div>
 </details>
-<p>b) Calculate the <span class="math notranslate nohighlight">\(\overline{U}\)</span> and <span class="math notranslate nohighlight">\(\overline{V}\)</span>-components during the night. Under
-nocturnal conditions, the friction suddenly disappears above the surface
-layer. Discuss the validity of this assumption.</p>
-<div class="tip dropdown admonition hint">
-<p class="admonition-title">Hint</p>
-<p>First derive a second-order differential equation for the <span class="math notranslate nohighlight">\(\overline{U}-\overline{U_g}\)</span> component.</p>
-<p>Second, prove that the solution</p>
-<div class="math notranslate nohighlight">
-\[
-\overline{U}-\overline{U_g}=A sin(ft) + B cos (ft)
-\]</div>
-<p>is a correct solution.</p>
-<p>Third, the constants A and B are determined from
-the initial conditions for <span class="math notranslate nohighlight">\(\overline{U}(t=0)\)</span> and <span class="math notranslate nohighlight">\(\overline{V}(t=0)\)</span>-components are:</p>
-<div class="math notranslate nohighlight">
-\[
-\overline{U}(t=0)~=~\overline{U_d}=\overline{U_g}-F_{v}(t=0)
-\]</div>
-<div class="math notranslate nohighlight">
-\[
-\overline{V}(t=0)~=~\overline{V_d}=F_{u}(t=0)
-\]</div>
-<p>where <span class="math notranslate nohighlight">\(\pafg{\overline{w'u'}}{z}=fF_{u}(t=0)\)</span> and <span class="math notranslate nohighlight">\(\pafg{\overline{w'v'}}{z}=fF_{v}(t=0)\)</span>.</p>
-</div>
-<details>
-  <summary>Answer</summary>
+<p>b) Calculate the <span class="math notranslate nohighlight">\(\overline{U}\)</span> and <span class="math notranslate nohighlight">\(\overline{V}\)</span>-components during the night. To this end, take the following steps:</p>
+<ol>
+<li><p>Under nocturnal conditions, the friction suddenly disappears above the surface
+layer. Discuss the validity of this assumption. Use this assumption to simplify the momentum equations.</p>
+ <details>
+ <summary>Answer</summary>
 <p>Under nocturnal conditions, the flow can become laminar.
 As a result, the different layers in the flow can decouple from each other and the surface.
 This lowers friction and, therefore, shear and the momentum flux in the <span class="math notranslate nohighlight">\(z\)</span>-direction.
@@ -966,31 +945,46 @@ In consequence, the wind accelerates.
 Therefore, finally the shear decreases in total a little, but the momentum flux decreases to a very low value.
 Therefore, it can be neglected with respect to the Coriolis and horizontal pressure gradient terms.</p>
 <div class="math notranslate nohighlight" id="equation-for-74b1">
-<span class="eqno">(16.8)<a class="headerlink" href="#equation-for-74b1" title="Permalink to this equation">#</a></span>\[
-\gemafg{U}{t} =f\,\overline{V} 
-\]</div>
+<span class="eqno">(16.5)<a class="headerlink" href="#equation-for-74b1" title="Permalink to this equation">#</a></span>\[
+    \gemafg{U}{t} =f\,\overline{V}
+    \]</div>
 <div class="math notranslate nohighlight" id="equation-for-74b2">
-<span class="eqno">(16.9)<a class="headerlink" href="#equation-for-74b2" title="Permalink to this equation">#</a></span>\[
-\gemafg{V}{t} =f\,\left(\overline{U_g}-\overline{U}\right) 
-\]</div>
+<span class="eqno">(16.6)<a class="headerlink" href="#equation-for-74b2" title="Permalink to this equation">#</a></span>\[
+    \gemafg{V}{t} =f\,\left(\overline{U_g}-\overline{U}\right)
+    \]</div>
+ </details>
+</li>
+<li><p>Derive a second-order differential equation for the <span class="math notranslate nohighlight">\(\overline{U}-\overline{U_g}\)</span> component</p>
+<details>
+ <summary>Answer</summary>
 <p>Considering that <span class="math notranslate nohighlight">\(\overline{U_g}\)</span> is a constant,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-\gemafg{U}{t} &amp;= \gemafg{U}{t}-\gemafg{U_g}{t}\\
- &amp;= \pafg{\left(\overline{U}-\overline{U_g}\right)}{t}
-\end{split}\]</div>
-<p>Combined with Equations <a class="reference internal" href="#equation-for-74b1">(16.8)</a> and <a class="reference internal" href="#equation-for-74b2">(16.9)</a>, this results in</p>
+    \gemafg{U}{t} &amp;= \gemafg{U}{t}-\gemafg{U_g}{t}\\
+    &amp;= \pafg{\left(\overline{U}-\overline{U_g}\right)}{t}
+    \end{split}\]</div>
+<p>Combined with Equations <a class="reference internal" href="#equation-for-74b1">(16.5)</a> and <a class="reference internal" href="#equation-for-74b2">(16.6)</a>, this results in</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-{\pafg{^2\left(\overline{U}-\overline{U_g}\right)}{t^2}} &amp;= \pafg{}{t}\pafg{\overline{U}}{t} \\
-&amp;= \pafg{}{t}\left(f\,\overline{V}\right)\\
-&amp;= f\,\gemafg{V}{t}\\
-&amp;= f^2\,\left(\overline{U_g}-\overline{U}\right)\\
-{\pafg{^2\left(\overline{U}-\overline{U_g}\right)}{t^2}} &amp;= - f^2\,\left(\overline{U}-\overline{U_g}\right)
-\end{split}\]</div>
-<p>This corresponds to a harmonic oscillator equation, <span class="math notranslate nohighlight">\(\pafg{^2 x}{t^2}=-k\,x\)</span>.
-In this case <span class="math notranslate nohighlight">\(x\)</span> is equal to <span class="math notranslate nohighlight">\(\left(\overline{U}-\overline{U_g}\right)\)</span> and <span class="math notranslate nohighlight">\(k=f^2\)</span>.
-A general solution is <span class="math notranslate nohighlight">\(x=A\sin\left(\sqrt{k}t\right)+B\cos\left(\sqrt{k}t\right)\)</span>, since</p>
+    {\pafg{^2\left(\overline{U}-\overline{U_g}\right)}{t^2}} &amp;= \pafg{}{t}\pafg{\overline{U}}{t} \\
+    &amp;= \pafg{}{t}\left(f\,\overline{V}\right)\\
+    &amp;= f\,\gemafg{V}{t}\\
+    &amp;= f^2\,\left(\overline{U_g}-\overline{U}\right)\\
+    {\pafg{^2\left(\overline{U}-\overline{U_g}\right)}{t^2}} &amp;= - f^2\,\left(\overline{U}-\overline{U_g}\right)
+    \end{split}\]</div>
+ </details>
+</li>
+<li><p>The expression found for <span class="math notranslate nohighlight">\(\overline{U}-\overline{U_g}\)</span>, corresponds to a harmonic oscillator equation, <span class="math notranslate nohighlight">\(\pafg{^2 x}{t^2}=-k\,x\)</span>.</p>
+<p>In this case <span class="math notranslate nohighlight">\(x\)</span> is equal to <span class="math notranslate nohighlight">\(\left(\overline{U}-\overline{U_g}\right)\)</span> and <span class="math notranslate nohighlight">\(k=f^2\)</span>.</p>
+<p>A general solution is <span class="math notranslate nohighlight">\(x=A\sin\left(\sqrt{k}t\right)+B\cos\left(\sqrt{k}t\right)\)</span>.</p>
+<div class="tip dropdown admonition hint">
+<p class="admonition-title">Hint</p>
+<p>We can prove that the solution</p>
+<div class="math notranslate nohighlight">
+\[
+\overline{U}-\overline{U_g}=A sin(ft) + B cos (ft)
+\]</div>
+<p>is a correct solution:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \pafg{^2 x}{t^2} &amp;= \pafg{^2}{t^2}\left(A\sin\left(\sqrt{k}t\right)+B\cos\left(\sqrt{k}t\right)\right) \\
@@ -1000,49 +994,70 @@ A general solution is <span class="math notranslate nohighlight">\(x=A\sin\left(
 &amp;= - k \left(A\sin\left(\sqrt{k}t\right)+B\cos\left(\sqrt{k}t\right)\right)\\
 &amp;= -k \, x
 \end{split}\]</div>
-<p>Therefore, <span class="math notranslate nohighlight">\(\overline{U}-\overline{U_g} = A\sin\left(ft\right)+B\cos\left(ft\right)\)</span>, so</p>
+</div>
+<p>Now use the general solution for the harmonic oscillator and the following initial conditions to find an expression for <span class="math notranslate nohighlight">\(\overline{U}\)</span> and <span class="math notranslate nohighlight">\(\overline{V}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+   \overline{U}(t=0)~=~\overline{U_d}=\overline{U_g}-F_{v}(t=0)
+   \]</div>
+<div class="math notranslate nohighlight">
+\[
+    \overline{V}(t=0)~=~\overline{V_d}=F_{u}(t=0)
+    \]</div>
+<p>where <span class="math notranslate nohighlight">\(\pafg{\overline{w'u'}}{z}=fF_{u}(t=0)\)</span> and <span class="math notranslate nohighlight">\(\pafg{\overline{w'v'}}{z}=fF_{v}(t=0)\)</span>.</p>
+ <details>
+ <summary>Answer</summary>
+<p><span class="math notranslate nohighlight">\(\overline{U}-\overline{U_g} = A\sin\left(ft\right)+B\cos\left(ft\right)\)</span>, so</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-\overline{U}(0) &amp;= \overline{U_g} + B\\ &amp;= \overline{U_g} - F_v(0)\\
-B &amp;= -F_v(0)\\
-\overline{U} &amp;= \overline{U_g} + A\sin\left(ft\right)- F_v(0) \, \cos\left(ft\right)
-\end{split}\]</div>
+    \overline{U}(0) &amp;= \overline{U_g} + B\\ &amp;= \overline{U_g} - F_v(0)\\
+    B &amp;= -F_v(0)\\
+    \overline{U} &amp;= \overline{U_g} + A\sin\left(ft\right)- F_v(0) \, \cos\left(ft\right)
+    \end{split}\]</div>
 <p>Since <span class="math notranslate nohighlight">\(\overline{V} = \frac{1}{f}\gemafg{U}{t}\)</span>,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-\overline{V} &amp;= \frac{1}{f}\left(A f\cos\left(ft\right) + F_v(0) f \sin\left(ft\right) \right) \\
- &amp;= A \cos\left(ft\right) + F_v(0) \sin\left(ft\right)
-\end{split}\]</div>
+    \overline{V} &amp;= \frac{1}{f}\left(A f\cos\left(ft\right) + F_v(0) f \sin\left(ft\right) \right) \\
+     &amp;= A \cos\left(ft\right) + F_v(0) \sin\left(ft\right)
+    \end{split}\]</div>
 <p>Using, the second boundary condition,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-\overline{V}(0) &amp;= A \\&amp;= F_u(0)\\
-A &amp;= F_u(0)
-\end{split}\]</div>
+    \overline{V}(0) &amp;= A \\&amp;= F_u(0)\\
+    A &amp;= F_u(0)
+    \end{split}\]</div>
 <p>All in all, the equations for <span class="math notranslate nohighlight">\(\overline{U}\)</span> and <span class="math notranslate nohighlight">\(\overline{V}\)</span> are</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-\overline{U} &amp;= \overline{U_g} + F_u(0) \sin\left(ft\right) - F_v(0) \cos\left(ft\right)\\
-\overline{V} &amp;= F_v(0) \sin\left(ft\right) + F_u(0) \cos\left(ft\right) 
-\end{split}\]</div>
+    \overline{U} &amp;= \overline{U_g} + F_u(0) \sin\left(ft\right) - F_v(0) \cos\left(ft\right)\\
+    \overline{V} &amp;= F_v(0) \sin\left(ft\right) + F_u(0) \cos\left(ft\right) 
+    \end{split}\]</div>
 <p>This can be written as</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-\overline{U} &amp;= \overline{U_g} + \frac{1}{f} \gemafg{w'u'}{z} \sin\left(ft\right) - \frac{1}{f} \gemafg{w'v'}{z} \cos\left(ft\right)\\
-\overline{V} &amp;= \frac{1}{f} \gemafg{w'v'}{z} \sin\left(ft\right) + \frac{1}{f} \gemafg{w'u'}{z} \cos\left(ft\right) 
-\end{split}\]</div>
-</details>
-<p>c) Calculate and plot the <span class="math notranslate nohighlight">\(\overline{U}\)</span> and <span class="math notranslate nohighlight">\(\overline{V}\)</span>-components for every hour over a full period
+    \overline{U} &amp;= \overline{U_g} + \frac{1}{f} \gemafg{w'u'}{z} \sin\left(ft\right) - \frac{1}{f} \gemafg{w'v'}{z} \cos\left(ft\right)\\
+    \overline{V} &amp;= \frac{1}{f} \gemafg{w'v'}{z} \sin\left(ft\right) + \frac{1}{f} \gemafg{w'u'}{z} \cos\left(ft\right) 
+    \end{split}\]</div>
+ </details>
+</li>
+</ol>
+<p>c) Plot the <span class="math notranslate nohighlight">\(\overline{U}\)</span> and <span class="math notranslate nohighlight">\(\overline{V}\)</span>-components for a full period
 T=2<span class="math notranslate nohighlight">\(\pi\)</span>/f, using the following values: f=10<span class="math notranslate nohighlight">\(^{-4}\)</span>s<span class="math notranslate nohighlight">\(^{-1}\)</span>, F<span class="math notranslate nohighlight">\(_{u}(t=0)\)</span>=F<span class="math notranslate nohighlight">\(_{v}(t=0)\)</span>=3ms<span class="math notranslate nohighlight">\(^{-1}\)</span> and
 <span class="math notranslate nohighlight">\(\overline{U_g}\)</span>=10 ms<span class="math notranslate nohighlight">\(^{-1}\)</span> and <span class="math notranslate nohighlight">\(\overline{V_g}\)</span>=0.</p>
 <details>
   <summary>Answer</summary>
+<p>The wind velocities, <span class="math notranslate nohighlight">\(\overline{U}\)</span> and <span class="math notranslate nohighlight">\(\overline{V}\)</span> are plotted in <a class="reference internal" href="#fig-ans-74"><span class="std std-numref">Fig. 16.7</span></a>.</p>
 <figure class="align-default" id="fig-ans-74">
 <img alt="../_images/exercise7_4.png" src="../_images/exercise7_4.png" />
 <figcaption>
 <p><span class="caption-number">Fig. 16.7 </span><span class="caption-text">Evolution of wind velocities.</span><a class="headerlink" href="#fig-ans-74" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
+</details>
+<p>d) Derive an expresion for <span class="math notranslate nohighlight">\(\left(\overline{U}-\overline{U_g}\right)^2 + \overline{V}^2\)</span>.
+Use this expression to explain how the wind changes over time.</p>
+<details>
+  <summary>Answer</summary>
 <p>Realize that</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -1061,10 +1076,10 @@ T=2<span class="math notranslate nohighlight">\(\pi\)</span>/f, using the follow
 \left(\overline{U}-\overline{U_g}\right)^2 + \overline{V}^2 &amp;= F_u^2(0) \left(\cos^2\left(ft\right)+\sin^2\left(ft\right)\right) + F_v^2(0) \left(\cos^2\left(ft\right)+\sin^2\left(ft\right)\right) \\
  &amp;= F_u^2(0) + F_v^2(0)
 \end{split}\]</div>
-<p>Since the right hand side is a constant,
+<p>Since the right-hand side is a constant,
 this equation states that <span class="math notranslate nohighlight">\(\left(\overline{U},\overline{V}\right)\)</span> progresses in time as a circular movement around <span class="math notranslate nohighlight">\(\left(\overline{U_g},0\right)\)</span>
 at a distance of <span class="math notranslate nohighlight">\(\sqrt{F_u^2(0) + F_v^2(0)} = 3\sqrt{2}\rm\,m\,s^{-1}\)</span></p>
-<p>The wind velocities, <span class="math notranslate nohighlight">\(\overline{U}\)</span> and <span class="math notranslate nohighlight">\(\overline{V}\)</span> are plotted in <a class="reference internal" href="#fig-ans-74"><span class="std std-numref">Fig. 16.7</span></a>.</p>
+<p>This can also be seen from <a class="reference internal" href="#fig-ans-74"><span class="std std-numref">Fig. 16.7</span></a>.</p>
 </details>
 </section>
 <section id="id7">
