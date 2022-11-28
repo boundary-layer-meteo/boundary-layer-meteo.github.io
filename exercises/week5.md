@@ -232,7 +232,7 @@ This oscillation can be quantified with the Brunt-Väisälä frequency.
 By inverting this frequency, one obtains the period of the oscillation of a parcel in a statically stable
 environment related to the presence of gravity (buoyancy) waves.
 
-Calculate the Brunt-Väisälä frequency ($N &= \sqrt{\frac{g}{\theta_v}\gemafg{\theta_v}{z}}$) and the oscillation period
+Calculate the Brunt-Väisälä frequency ($N = \sqrt{\frac{g}{\theta_v}\gemafg{\theta_v}{z}}$) and the oscillation period
 for an air parcel that is displaced from the surface. 
 Discuss the dependence of this oscillation period as a function of the potential temperature gradient.
 
@@ -425,15 +425,15 @@ With the linear temperature profile, we find the following potential temperature
 
 $$
 \theta_{\rm Surface} = 292\rm\,K
-$$(for:73temp1)
+$$
 
 $$
 \theta_{\rm Middle} = 292.98\rm\,K
-$$(for:73temp2)
+$$
 
 $$
 \theta_{\rm Top} = 293.98\rm\,K
-$$(for:73temp3)
+$$
 
 This results in the following absolute temperatures: 
 
@@ -531,9 +531,8 @@ $$
 where $\overline{U_g}$ is the geostrophic wind in the U direction and f
 is the Coriolis parameter. We assume that $\overline{V_g}$=0.
 
-a) Calculate the $\overline{U}$ and $\overline{V}$-component during day conditions.
+a) Derive expressions for $\overline{U}$ and $\overline{V}$ during day conditions.
 In diurnal conditions, one can assume that the wind is in steady-state.
-Discuss the role of the momentum flux divergence.
 
 <details>
   <summary>Answer</summary>
@@ -554,136 +553,153 @@ $$
 
 </details>
 
-b) Calculate the $\overline{U}$ and $\overline{V}$-components during the night. Under
-nocturnal conditions, the friction suddenly disappears above the surface
-layer. Discuss the validity of this assumption.
+b) Calculate the $\overline{U}$ and $\overline{V}$-components during the night. To this end, take the following steps: 
+1. Under nocturnal conditions, the friction suddenly disappears above the surface
+   layer. Discuss the validity of this assumption. Use this assumption to simplify the momentum equations.
 
-```{hint}
-:class: tip, dropdown
-First derive a second-order differential equation for the $\overline{U}-\overline{U_g}$ component. 
+    <details>
+    <summary>Answer</summary>
 
-Second, prove that the solution
+    Under nocturnal conditions, the flow can become laminar.
+    As a result, the different layers in the flow can decouple from each other and the surface.
+    This lowers friction and, therefore, shear and the momentum flux in the $z$-direction.
+    In consequence, the wind accelerates.
+    Therefore, finally the shear decreases in total a little, but the momentum flux decreases to a very low value.
+    Therefore, it can be neglected with respect to the Coriolis and horizontal pressure gradient terms.
+    
+    $$
+    \gemafg{U}{t} =f\,\overline{V}
+    $$(for:74b1)
+    
+    $$
+    \gemafg{V}{t} =f\,\left(\overline{U_g}-\overline{U}\right)
+    $$(for:74b2)
+    
+    </details>
+2. Derive a second-order differential equation for the $\overline{U}-\overline{U_g}$ component
+   
+   <details>
+    <summary>Answer</summary>
+   
+   Considering that $\overline{U_g}$ is a constant, 
 
-$$
-\overline{U}-\overline{U_g}=A sin(ft) + B cos (ft)
-$$
+    $$
+    \gemafg{U}{t} &= \gemafg{U}{t}-\gemafg{U_g}{t}\\
+    &= \pafg{\left(\overline{U}-\overline{U_g}\right)}{t}
+    $$
+    
+    Combined with Equations {eq}`for:74b1` and {eq}`for:74b2`, this results in
+    
+    $$
+    {\pafg{^2\left(\overline{U}-\overline{U_g}\right)}{t^2}} &= \pafg{}{t}\pafg{\overline{U}}{t} \\
+    &= \pafg{}{t}\left(f\,\overline{V}\right)\\
+    &= f\,\gemafg{V}{t}\\
+    &= f^2\,\left(\overline{U_g}-\overline{U}\right)\\
+    {\pafg{^2\left(\overline{U}-\overline{U_g}\right)}{t^2}} &= - f^2\,\left(\overline{U}-\overline{U_g}\right)
+    $$
 
-is a correct solution.
+    </details>
 
-Third, the constants A and B are determined from
-the initial conditions for $\overline{U}(t=0)$ and $\overline{V}(t=0)$-components are:
+3. The expression found for $\overline{U}-\overline{U_g}$, corresponds to a harmonic oscillator equation, $\pafg{^2 x}{t^2}=-k\,x$.
 
-$$
-\overline{U}(t=0)~=~\overline{U_d}=\overline{U_g}-F_{v}(t=0)
-$$
+   In this case $x$ is equal to $\left(\overline{U}-\overline{U_g}\right)$ and $k=f^2$.
 
-$$
-\overline{V}(t=0)~=~\overline{V_d}=F_{u}(t=0)
-$$
+    A general solution is $x=A\sin\left(\sqrt{k}t\right)+B\cos\left(\sqrt{k}t\right)$. 
 
-where $\pafg{\overline{w'u'}}{z}=fF_{u}(t=0)$ and $\pafg{\overline{w'v'}}{z}=fF_{v}(t=0)$.
+    ```{hint}
+    :class: tip, dropdown
+   We can prove that the solution
 
-```
+    $$
+    \overline{U}-\overline{U_g}=A sin(ft) + B cos (ft)
+    $$
 
-<details>
-  <summary>Answer</summary>
+    is a correct solution:
+   
+   $$
+    \pafg{^2 x}{t^2} &= \pafg{^2}{t^2}\left(A\sin\left(\sqrt{k}t\right)+B\cos\left(\sqrt{k}t\right)\right) \\
+    &= \pafg{^2 A\sin\left(\sqrt{k}t\right)}{t^2} + \pafg{^2 B\cos\left(\sqrt{k}t\right)}{t^2}\\
+    &= A \pafg{\sqrt{k} \cos\left(\sqrt{k}t\right)}{t} - B \pafg{\sqrt{k} \sin\left(\sqrt{k}t\right)}{t} \\
+    &= A \sqrt{k} \left(-\sqrt{k}\sin\left(\sqrt{k}t\right)\right) - B \sqrt{k} \left(\sqrt{k}\cos\left(\sqrt{k}t\right)\right) \\
+    &= - k \left(A\sin\left(\sqrt{k}t\right)+B\cos\left(\sqrt{k}t\right)\right)\\
+    &= -k \, x
+    $$
+    ```
+   
+    Now use the general solution for the harmonic oscillator and the following initial conditions to find an expression for $\overline{U}$ and $\overline{V}$:
+   
+   $$
+   \overline{U}(t=0)~=~\overline{U_d}=\overline{U_g}-F_{v}(t=0)
+   $$
 
-Under nocturnal conditions, the flow can become laminar. 
-As a result, the different layers in the flow can decouple from each other and the surface. 
-This lowers friction and, therefore, shear and the momentum flux in the $z$-direction. 
-In consequence, the wind accelerates. 
-Therefore, finally the shear decreases in total a little, but the momentum flux decreases to a very low value. 
-Therefore, it can be neglected with respect to the Coriolis and horizontal pressure gradient terms.
+    $$
+    \overline{V}(t=0)~=~\overline{V_d}=F_{u}(t=0)
+    $$
 
-$$
-\gemafg{U}{t} =f\,\overline{V} 
-$$(for:74b1)
+   where $\pafg{\overline{w'u'}}{z}=fF_{u}(t=0)$ and $\pafg{\overline{w'v'}}{z}=fF_{v}(t=0)$.
 
-$$
-\gemafg{V}{t} =f\,\left(\overline{U_g}-\overline{U}\right) 
-$$(for:74b2)
+    <details>
+    <summary>Answer</summary>
+    
+    $\overline{U}-\overline{U_g} = A\sin\left(ft\right)+B\cos\left(ft\right)$, so 
+    
+    $$
+    \overline{U}(0) &= \overline{U_g} + B\\ &= \overline{U_g} - F_v(0)\\
+    B &= -F_v(0)\\
+    \overline{U} &= \overline{U_g} + A\sin\left(ft\right)- F_v(0) \, \cos\left(ft\right)
+    $$
+    
+    Since $\overline{V} = \frac{1}{f}\gemafg{U}{t}$, 
+    
+    $$
+    \overline{V} &= \frac{1}{f}\left(A f\cos\left(ft\right) + F_v(0) f \sin\left(ft\right) \right) \\
+     &= A \cos\left(ft\right) + F_v(0) \sin\left(ft\right)
+    $$
+    
+    Using, the second boundary condition, 
+    
+    $$
+    \overline{V}(0) &= A \\&= F_u(0)\\
+    A &= F_u(0)
+    $$
+    
+    All in all, the equations for $\overline{U}$ and $\overline{V}$ are
+    
+    $$
+    \overline{U} &= \overline{U_g} + F_u(0) \sin\left(ft\right) - F_v(0) \cos\left(ft\right)\\
+    \overline{V} &= F_v(0) \sin\left(ft\right) + F_u(0) \cos\left(ft\right) 
+    $$
+    
+    This can be written as 
+    
+    $$
+    \overline{U} &= \overline{U_g} + \frac{1}{f} \gemafg{w'u'}{z} \sin\left(ft\right) - \frac{1}{f} \gemafg{w'v'}{z} \cos\left(ft\right)\\
+    \overline{V} &= \frac{1}{f} \gemafg{w'v'}{z} \sin\left(ft\right) + \frac{1}{f} \gemafg{w'u'}{z} \cos\left(ft\right) 
+    $$
+    
+    </details>
 
-Considering that $\overline{U_g}$ is a constant, 
-
-$$
-\gemafg{U}{t} &= \gemafg{U}{t}-\gemafg{U_g}{t}\\
- &= \pafg{\left(\overline{U}-\overline{U_g}\right)}{t}
-$$
-
-Combined with Equations {eq}`for:74b1` and {eq}`for:74b2`, this results in 
-
-$$
-{\pafg{^2\left(\overline{U}-\overline{U_g}\right)}{t^2}} &= \pafg{}{t}\pafg{\overline{U}}{t} \\
-&= \pafg{}{t}\left(f\,\overline{V}\right)\\
-&= f\,\gemafg{V}{t}\\
-&= f^2\,\left(\overline{U_g}-\overline{U}\right)\\
-{\pafg{^2\left(\overline{U}-\overline{U_g}\right)}{t^2}} &= - f^2\,\left(\overline{U}-\overline{U_g}\right)
-$$
-
-This corresponds to a harmonic oscillator equation, $\pafg{^2 x}{t^2}=-k\,x$. 
-In this case $x$ is equal to $\left(\overline{U}-\overline{U_g}\right)$ and $k=f^2$. 
-A general solution is $x=A\sin\left(\sqrt{k}t\right)+B\cos\left(\sqrt{k}t\right)$, since 
-
-$$
-\pafg{^2 x}{t^2} &= \pafg{^2}{t^2}\left(A\sin\left(\sqrt{k}t\right)+B\cos\left(\sqrt{k}t\right)\right) \\
-&= \pafg{^2 A\sin\left(\sqrt{k}t\right)}{t^2} + \pafg{^2 B\cos\left(\sqrt{k}t\right)}{t^2}\\
-&= A \pafg{\sqrt{k} \cos\left(\sqrt{k}t\right)}{t} - B \pafg{\sqrt{k} \sin\left(\sqrt{k}t\right)}{t} \\
-&= A \sqrt{k} \left(-\sqrt{k}\sin\left(\sqrt{k}t\right)\right) - B \sqrt{k} \left(\sqrt{k}\cos\left(\sqrt{k}t\right)\right) \\
-&= - k \left(A\sin\left(\sqrt{k}t\right)+B\cos\left(\sqrt{k}t\right)\right)\\
-&= -k \, x
-$$
-
-Therefore, $\overline{U}-\overline{U_g} = A\sin\left(ft\right)+B\cos\left(ft\right)$, so 
-
-$$
-\overline{U}(0) &= \overline{U_g} + B\\ &= \overline{U_g} - F_v(0)\\
-B &= -F_v(0)\\
-\overline{U} &= \overline{U_g} + A\sin\left(ft\right)- F_v(0) \, \cos\left(ft\right)
-$$
-
-Since $\overline{V} = \frac{1}{f}\gemafg{U}{t}$, 
-
-$$
-\overline{V} &= \frac{1}{f}\left(A f\cos\left(ft\right) + F_v(0) f \sin\left(ft\right) \right) \\
- &= A \cos\left(ft\right) + F_v(0) \sin\left(ft\right)
-$$
-
-Using, the second boundary condition, 
-
-$$
-\overline{V}(0) &= A \\&= F_u(0)\\
-A &= F_u(0)
-$$
-
-All in all, the equations for $\overline{U}$ and $\overline{V}$ are
-
-$$
-\overline{U} &= \overline{U_g} + F_u(0) \sin\left(ft\right) - F_v(0) \cos\left(ft\right)\\
-\overline{V} &= F_v(0) \sin\left(ft\right) + F_u(0) \cos\left(ft\right) 
-$$
-
-This can be written as 
-
-$$
-\overline{U} &= \overline{U_g} + \frac{1}{f} \gemafg{w'u'}{z} \sin\left(ft\right) - \frac{1}{f} \gemafg{w'v'}{z} \cos\left(ft\right)\\
-\overline{V} &= \frac{1}{f} \gemafg{w'v'}{z} \sin\left(ft\right) + \frac{1}{f} \gemafg{w'u'}{z} \cos\left(ft\right) 
-$$
-
-</details>
-
-c) Calculate and plot the $\overline{U}$ and $\overline{V}$-components for every hour over a full period
+c) Plot the $\overline{U}$ and $\overline{V}$-components for a full period
 T=2$\pi$/f, using the following values: f=10$^{-4}$s$^{-1}$, F$_{u}(t=0)$=F$_{v}(t=0)$=3ms$^{-1}$ and
 $\overline{U_g}$=10 ms$^{-1}$ and $\overline{V_g}$=0.
 
 <details>
   <summary>Answer</summary>
 
-
+The wind velocities, $\overline{U}$ and $\overline{V}$ are plotted in {numref}`fig:ans_74`.
 
 ```{figure} figures/exercise7_4.png
 :name: fig:ans_74
 Evolution of wind velocities.
 ```
+
+</details>
+
+d) Derive an expresion for $\left(\overline{U}-\overline{U_g}\right)^2 + \overline{V}^2$. 
+Use this expression to explain how the wind changes over time. 
+
+<details>
+  <summary>Answer</summary>
 
 Realize that 
 
@@ -706,11 +722,11 @@ $$
  &= F_u^2(0) + F_v^2(0)
 $$
 
-Since the right hand side is a constant, 
+Since the right-hand side is a constant, 
 this equation states that $\left(\overline{U},\overline{V}\right)$ progresses in time as a circular movement around $\left(\overline{U_g},0\right)$ 
 at a distance of $\sqrt{F_u^2(0) + F_v^2(0)} = 3\sqrt{2}\rm\,m\,s^{-1}$
 
-The wind velocities, $\overline{U}$ and $\overline{V}$ are plotted in {numref}`fig:ans_74`.
+This can also be seen from {numref}`fig:ans_74`.
 
 </details>
 
