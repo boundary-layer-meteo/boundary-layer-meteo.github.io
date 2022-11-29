@@ -219,8 +219,9 @@ and the wind speed. Discuss your criteria and the estimation of the height.
 <details>
   <summary>Answer</summary>
 
-Using the potential temperature gradient, the boundary layer top is at the location of the largest potential temperature gradient. 
-$\pafg{\theta}{z}=maximal$: This occurs roughly at 750 m height. 
+Using the potential temperature gradient, there are 2 criteria.
+1. $\pafg{\theta}{z}=0$: This only occurs at the top of the profile
+2. A small $\pafg{\theta}{z}$: This is valid at $h=1000\rm\,m$ and above.
 
 For the wind speed, the location of the low level jet is used. 
 The maximum wind speed in this jet is at a height of 250 m.
@@ -391,7 +392,7 @@ turbulent flux term, calculate the tendency term $\pafg{\overline{\theta}}{t}$.
 Assume that the potential temperature profile is linear and follows:
 
 $$
-\theta (z)~=~\theta (z_o)~+~0.2z.
+\theta (z)~=~\theta (z_o)~+~0.2(z - z_o).
 $$
 
 You can consider that the surface layer is at z$_o$ = 0.1 m and $\theta (z_o)$ = 292 K.
@@ -400,7 +401,12 @@ the interfaces are approximately at 2.55 and 7.5 meters.
 
 ```{hint}
 :class: tip, dropdown
-Use $T = \theta-{10\rm\,K\,km^{-1}}\,z$, and $\rho\,c_p=1231\rm\,\frac{W\,m^{-2}}{K\,m\,s^{-1}}$. 
+Use $\rho\,c_p=1231\rm\,\frac{W\,m^{-2}}{K\,m\,s^{-1}}$. 
+
+We know that $ T = \theta\ \left(\dfrac{P}{P_0}\right)^{\dfrac{R_d}{c_p}} $. 
+From that, it can be derived that by approximation $ \pafg{T}{z} = \pafg{\theta}{z} - \dfrac{g}{c_p} $ and 
+therefore $T = \theta - \dfrac{g}{c_p}z $. Use this to convert the potential temperatures to absolute temperatures. 
+
 ```
 
 <details>
@@ -435,7 +441,7 @@ $$
 \theta_{\rm Top} = 293.98\rm\,K
 $$
 
-This results in the following absolute temperatures: 
+This results in the following absolute temperatures, using $T = \theta - \dfrac{g}{c_p}z = \theta-{10\rm\,K\,km^{-1}}\,z$: 
 
 $$
 T_{\rm Surface} = 291.999\rm\,K 
