@@ -20,6 +20,15 @@ $$
 $$
 
 By doing so, we can write a time or spatial series as a sum of waves with varying phase and amplitude.
+
+```{figure} figs/spectra_waves.png
+---
+width: 500px
+name: spectra_waves
+---
+Potential temperature near the surface of the convective boundary layer captures in waves.
+```
+
 Based on the waves we can calculate its contribution to the variance by taking the square of its absolute value.
 
 $$
@@ -33,6 +42,14 @@ The turbulence kinetic energy $e$ can be constructed from its spectral energy $E
 $$
 e = \int_0^\infty E\,\mathrm{d}k.
 $$
+
+```{figure} figs/spectra_energy.png
+---
+width: 600px
+name: spectra_energy
+---
+Spectral energy of the potential temperature near the surface of the convective boundary layer.
+```
 
 If we assume a strict separation between production and dissipation in terms of length and time scales, there must exist a region that only transfers energy from the largest to the smallest scales.
 We call this region the **inertial subrange**, and the only parameter relevant there is $\epsilon$.

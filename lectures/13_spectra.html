@@ -461,8 +461,14 @@ title="Print to PDF"
 \[
 \hat{f}(k) = \sum_{n = 0}^{N - 1} f(x) \exp \left(-i 2 \pi k \frac{n}{N} \right)\ \ \ \ k = 0, \dots, N-1
 \]</div>
-<p>By doing so, we can write a time or spatial series as a sum of waves with varying phase and amplitude.
-Based on the waves we can calculate its contribution to the variance by taking the square of its absolute value.</p>
+<p>By doing so, we can write a time or spatial series as a sum of waves with varying phase and amplitude.</p>
+<figure class="align-default" id="spectra-waves">
+<a class="reference internal image-reference" href="../_images/spectra_waves.png"><img alt="../_images/spectra_waves.png" src="../_images/spectra_waves.png" style="width: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 12.1 </span><span class="caption-text">Potential temperature near the surface of the convective boundary layer captures in waves.</span><a class="headerlink" href="#spectra-waves" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Based on the waves we can calculate its contribution to the variance by taking the square of its absolute value.</p>
 <div class="math notranslate nohighlight">
 \[
 E \left( k \right) = \left| \hat{f} \right|^2 =  \mathrm{Re} \left( \hat{f} \right)^2 + \mathrm{Im} \left( \hat{f} \right)^2
@@ -475,6 +481,12 @@ E \left( k \right) = \left| \hat{f} \right|^2 =  \mathrm{Re} \left( \hat{f} \rig
 \[
 e = \int_0^\infty E\,\mathrm{d}k.
 \]</div>
+<figure class="align-default" id="spectra-energy">
+<a class="reference internal image-reference" href="../_images/spectra_energy.png"><img alt="../_images/spectra_energy.png" src="../_images/spectra_energy.png" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 12.2 </span><span class="caption-text">Spectral energy of the potential temperature near the surface of the convective boundary layer.</span><a class="headerlink" href="#spectra-energy" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>If we assume a strict separation between production and dissipation in terms of length and time scales, there must exist a region that only transfers energy from the largest to the smallest scales.
 We call this region the <strong>inertial subrange</strong>, and the only parameter relevant there is <span class="math notranslate nohighlight">\(\epsilon\)</span>.
 Note that viscosity <span class="math notranslate nohighlight">\(\nu\)</span> does not play a role here yet.</p>
