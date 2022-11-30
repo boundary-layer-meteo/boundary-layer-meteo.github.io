@@ -290,12 +290,12 @@ ${\rm Ri}_f$ is larger than 0, but smaller than 1, thus shear production is suff
 
 ##
 These vertical profiles for potential temperature were measured in USA
-at 24.07 and 04.02 local time during the field experiment CASES-99.
+at 00.07 and 04.02 local time during the field experiment CASES-99.
 Focusing mainly on the sounding observations:
 
 ```{figure} figures/figset71.png
 :name: fig:71
-Potential temperature profile at 24.07 LT.
+Potential temperature profile at 00.07 LT.
 ```
 
 ```{figure} figures/figset72.png
@@ -478,7 +478,7 @@ $$
 with 
 
 $$
-\theta_* = - \frac{\overline{w'\theta'}}{u_*} = 0.195\rm\,K
+\theta_* = - \frac{\overline{w'\theta'}}{u_*}
 $$
 
 Use the following values to complete the expression: $\overline{w'\theta'}$ = - 24 Wm$^{-2}$,
