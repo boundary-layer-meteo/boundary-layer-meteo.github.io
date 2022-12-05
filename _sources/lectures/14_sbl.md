@@ -66,7 +66,7 @@ If we plot the time evolution of $u$ and $v$ we find that the wind speed is incr
 width: 600px
 name: low_level_jet
 ---
-Time evolution of zonal and meridional wind in a decoupled residual layer. Left plot shows time series, right plot shows wind direction change, where later hours have a darker shade of blue.
+Time evolution of zonal and meridional wind in a decoupled residual layer. Figure a) shows time series, b) shows a scatter plot of the two wind component. Each dot corresponds to an hour with later hours having a darker shade of blue.
 ```
 
 ## Surface-layer similarity under the influence of stability.
