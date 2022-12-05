@@ -1,0 +1,1048 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>19. Exercises week 6 &#8212; Boundary-Layer Meteorology</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="18. Exercises week 5" href="week5.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Boundary-Layer Meteorology</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Welcome
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Lectures
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/1_mass.html">
+   1. Conservation of mass
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/2_momentum_i.html">
+   2. Conservation of momentum (i)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/3_momentum_ii.html">
+   3. Conservation of momentum (ii)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/4_turbulent_fluxes.html">
+   4. Turbulent fluxes and the atmospheric surface layer
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/5_energy_i.html">
+   5. Conservation of energy (i)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/6_energy_ii.html">
+   6. Conservation of energy (ii)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/7_tke.html">
+   7. Turbulence kinetic energy (i)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/8_tke_ii.html">
+   8. Turbulence kinetic energy (ii)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/9_ri.html">
+   9. Richardson numbers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/10_kolmogorov.html">
+   10. Kolmogorov scaling
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/11_cbl.html">
+   11. Convective boundary layer
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/13_spectra.html">
+   12. Turbulence spectra
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/14_sbl.html">
+   13. The stable boundary layer
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Pen-and-paper exercises
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="week1.html">
+   14. Exercises week 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="week2.html">
+   15. Exercises week 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="week3.html">
+   16. Exercises week 3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="week4.html">
+   17. Exercises week 4
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="week5.html">
+   18. Exercises week 5
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   19. Exercises week 6
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fexercises/week6.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/exercises/week6.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   19.1.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   19.2.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   19.3.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id5">
+   19.4.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id6">
+   19.5.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id7">
+   19.6.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id8">
+   19.7.
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Exercises week 6</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   19.1.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   19.2.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   19.3.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id5">
+   19.4.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id6">
+   19.5.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id7">
+   19.6.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id8">
+   19.7.
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="exercises-week-6">
+<h1><span class="section-number">19. </span>Exercises week 6<a class="headerlink" href="#exercises-week-6" title="Permalink to this headline">#</a></h1>
+<p><span class="math notranslate nohighlight">\(\def\pafg#1#2{\dfrac{\partial #1}{\partial #2}}\)</span>
+<span class="math notranslate nohighlight">\(\def\afg#1#2{\dfrac{{\rm d} #1}{{\rm d} #2}}\)</span>
+<span class="math notranslate nohighlight">\(\def\gemafg#1#2{\pafg{\overline{#1}}{#2}}\)</span></p>
+<section id="id1">
+<h2><span class="section-number">19.1. </span><a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
+<p>Assuming that the potential temperature increases with height,
+find the potential temperature at the top of a turbulent layer which becomes laminar at a height of 20 m. The wind profile is given by:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\overline{u}(z) &amp;= \frac{u_*}{k}ln\left (\frac {z}{z_o}\right)\\
+\overline{v}(z) &amp;= 4
+\end{split}\]</div>
+<p>The friction velocity is 0.45 m s<span class="math notranslate nohighlight">\(^{-1}\)</span>,
+the potential temperature at the height of the roughness length z<span class="math notranslate nohighlight">\(_o\)</span> is 290 K
+and assume that the average potential temperature is 295 K.
+(<span class="math notranslate nohighlight">\(\kappa\)</span> = 0.4, g = 9.8 m <span class="math notranslate nohighlight">\(\rm{s^{-2}}\)</span>, z<span class="math notranslate nohighlight">\(_o\)</span> = 1 m).
+For this exercise, use <span class="math notranslate nohighlight">\(Ri_g^{crit} = 0.25\)</span>.</p>
+<details>
+  <summary>Answer</summary>
+<p>At the height of 20 meters the flow becomes laminar, meaning:</p>
+<div class="math notranslate nohighlight">
+\[
+Ri_g (z=20 \ m.)=\frac{\frac{g}{\overline{\theta}}\frac{\partial \overline{\theta}}{\partial z}}{\left(\frac{\partial u}{\partial z}\right) ^2 +\left(\frac{\partial v}{\partial z}\right) ^2} =0.25\equiv Ri_g^{crit}
+\]</div>
+<p>Rearranging the equation above:</p>
+<div class="math notranslate nohighlight" id="equation-ex5-1eq1">
+<span class="eqno">(19.1)<a class="headerlink" href="#equation-ex5-1eq1" title="Permalink to this equation">#</a></span>\[
+\frac{\partial \overline{\theta}}{\partial z}= Ri_g^{crit} \frac{\overline{\theta}}{g} \left[\left(\frac{\partial u}{\partial z}\right) ^2 +\left(\frac{\partial v}{\partial z}\right) ^2 \right]
+\]</div>
+<p>We now calculate <span class="math notranslate nohighlight">\(\frac{\partial u}{\partial z}\)</span> and <span class="math notranslate nohighlight">\(\frac{\partial v}{\partial z}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\frac{\partial u}{\partial z} &amp;= \frac{u_*}{\kappa}\frac{\partial (ln \frac{z}{z_0})}{\partial z}  = \frac{u_*}{\kappa}\frac{1}{z}\\
+\frac{\partial v}{\partial z} &amp;= 0
+\end{split}\]</div>
+<p>Introducing this in Eq. <a class="reference internal" href="#equation-ex5-1eq1">(19.1)</a> we obtain:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\partial \overline{\theta}}{\partial z}= Ri_g^{crit} \frac{\overline{\theta}}{g} \frac{u_*^2}{\kappa^2}\frac{1}{z^2}
+\]</div>
+<p>We now rearrange and integrate on both sides:</p>
+<div class="math notranslate nohighlight">
+\[
+\int_{\theta(z_0)}^{\theta(z)}\partial \overline{\theta}=\int_{z=z_0}^{z}Ri_g^{crit} \frac{\overline{\theta}}{g} \frac{u_*^2}{\kappa^2}\frac{1}{z^2}\partial z
+\]</div>
+<p>Integrating first and then rearranging the terms yields:</p>
+<div class="math notranslate nohighlight">
+\[
+\overline{\theta}(z)=\overline{\theta}(z_0) + Ri_g^{crit} \frac{\overline{\theta}}{g} \frac{u_*^2}{\kappa^2} \left( \frac{1}{z_0}-\frac{1}{z}\right)
+\]</div>
+<p>Substituting
+<span class="math notranslate nohighlight">\(u_*=0.45\)</span>,
+<span class="math notranslate nohighlight">\(\overline{\theta}=295  \ \rm K\)</span>,
+<span class="math notranslate nohighlight">\(\overline{\theta}(z_0)=290 \  \rm K\)</span>,
+<span class="math notranslate nohighlight">\(\kappa=0.4\)</span>,
+<span class="math notranslate nohighlight">\(g=9.8\ \rm{m\ s^{-2}}\)</span>,
+<span class="math notranslate nohighlight">\(z_0=1 \ \rm m\)</span>,
+<span class="math notranslate nohighlight">\(z=20 \ \rm m\)</span>,
+and <span class="math notranslate nohighlight">\(Ri_g^{crit}=0.25\)</span> we obtain</p>
+<div class="math notranslate nohighlight">
+\[
+\overline{\theta}(z=20 m)= 299.05   \ \rm K
+\]</div>
+</details>
+</section>
+<section id="id2">
+<h2><span class="section-number">19.2. </span><a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h2>
+<p>The frequency of vertical oscillations for an atmospheric flow is given by
+the Brunt-Väisälä frequency</p>
+<div class="math notranslate nohighlight">
+\[
+N^2=\left(\frac{g}{\overline{\theta_v}}\right)~\pafg{\overline{\theta_v}}{z}~~~(s^{-2})
+\]</div>
+<p>The Brunt-Väisälä frequency is the frequency with which an air parcel oscillates if it’s displaced in a statically stable environment (<span class="math notranslate nohighlight">\(\gemafg{\theta_v}{z} &gt; 0\)</span>).</p>
+<p>a) Find an expression of the velocity gradient as a function of
+the Richardson Number and the Brunt-Väisälä frequency. Assume that <span class="math notranslate nohighlight">\(\overline{v}(z)=0\)</span>.</p>
+<details>
+  <summary>Answer</summary>
+<p>Rewrite velocity gradient such that you get <span class="math notranslate nohighlight">\(\gemafg{u}{z}\left({Ri},N\right)\)</span>.
+It’s given that</p>
+<div class="math notranslate nohighlight" id="equation-for-53a1">
+<span class="eqno">(19.2)<a class="headerlink" href="#equation-for-53a1" title="Permalink to this equation">#</a></span>\[
+\overline{v}=0
+\]</div>
+<div class="math notranslate nohighlight" id="equation-for-53a2">
+<span class="eqno">(19.3)<a class="headerlink" href="#equation-for-53a2" title="Permalink to this equation">#</a></span>\[
+N^2=\frac{g}{\overline{\theta_v}} \gemafg{\theta_v}{z}
+\]</div>
+<div class="math notranslate nohighlight" id="equation-for-53a3">
+<span class="eqno">(19.4)<a class="headerlink" href="#equation-for-53a3" title="Permalink to this equation">#</a></span>\[
+{\rm Ri}_g = \frac{\frac{g}{\overline{\theta_v}}\gemafg{\theta_v}{z}}{\left(\gemafg{u}{z}\right)^2+\left(\gemafg{v}{z}\right)^2}
+\]</div>
+<p>Substituting equations <a class="reference internal" href="#equation-for-53a1">(19.2)</a> and <a class="reference internal" href="#equation-for-53a2">(19.3)</a> in Equation <a class="reference internal" href="#equation-for-53a3">(19.4)</a>, results in</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+{\rm Ri}_g &amp;= \frac{N^2}{\left(\gemafg{u}{z}\right)^2}\\
+\left|\gemafg{u}{z}\right| &amp;= \sqrt{\frac{N^2}{{\rm Ri}_g}}
+\end{split}\]</div>
+<p>As depicted in <a class="reference internal" href="week3.html#fig3b"><span class="std std-numref">Fig. 16.2</span></a>, <span class="math notranslate nohighlight">\(\gemafg{u}{z} &gt; 0\)</span>.
+Since <span class="math notranslate nohighlight">\(N\)</span> is real number, <span class="math notranslate nohighlight">\(N^2 &gt;0\)</span>. Also <span class="math notranslate nohighlight">\({\rm Ri}_g &gt; 0\)</span>, since we are in a situation with a statically stable atmosphere, which is where <span class="math notranslate nohighlight">\(\gemafg{\theta_v}{z} &gt; 0\)</span>.
+Taking these signs into account, results in: <span class="math notranslate nohighlight">\(\gemafg{u}{z} = \frac{N}{\sqrt{{\rm Ri}_g}}\)</span></p>
+</details>
+<p>b) Find the velocity at z=30 m for <span class="math notranslate nohighlight">\(N=0.05~s^{-1}\)</span> and Ri=0.2. The surface velocity is 0.</p>
+<details>
+  <summary>Answer</summary>
+<p>Since <span class="math notranslate nohighlight">\(N\)</span> and <span class="math notranslate nohighlight">\({\rm Ri}_g\)</span> are given as constants, also <span class="math notranslate nohighlight">\(\gemafg{u}{z}\)</span> is constant. Therefore,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\overline{u}\left({z}\right)&amp;=\overline{u}\left({\rm 0\, m}\right)+ z \gemafg{u}{z} ,\\
+\overline{u}\left({z}\right)&amp;=0+ z \frac{N}{\sqrt{{\rm Ri}_g}} .
+\end{split}\]</div>
+<p>So, <span class="math notranslate nohighlight">\(\overline{u}\left(30\rm\,m\right)=3.35\rm\,m\,s^{-1}\)</span>.</p>
+</details>
+</section>
+<section id="id3">
+<h2><span class="section-number">19.3. </span><a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h2>
+<p>Using the following definitions of <span class="math notranslate nohighlight">\(\Phi_M\)</span> and the temperature scaling parameters</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\Phi_M~=~\frac{\kappa z}{u_*}\pafg{\overline{u}}{z} \\
+\theta_*~=~-~\frac{\overline{w'\theta'}}{u_*} \\
+\Phi_H~=~\frac{\kappa z}{\theta_*}\pafg{\overline{\theta}}{z}
+\end{split}\]</div>
+<p>a) and assuming that <span class="math notranslate nohighlight">\(\overline{V(z)}=0\)</span>, find a relation between the gradient Richardson number and <span class="math notranslate nohighlight">\(z/L\)</span>, <span class="math notranslate nohighlight">\(\Phi_M\)</span> and <span class="math notranslate nohighlight">\(\Phi_H\)</span>.</p>
+<div class="tip dropdown admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Remember that the Monin-Obukhov length (L) = <span class="math notranslate nohighlight">\(- \frac{u_*^3\,\overline{\theta_v}}{\kappa\,g\,\overline{w'\theta_v'}_0}\)</span></p>
+</div>
+<details>
+  <summary>Answer</summary>
+<p>Find <span class="math notranslate nohighlight">\({\rm Ri}_g\left(\frac{z}{L},\Phi_m,\Phi_h\right)\)</span>.</p>
+<p>We know</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\theta_* &amp;= -\frac{\overline{w'\theta'}_0}{u_*} \\
+\Phi_h &amp;= \frac{\kappa\,z}{\theta_*}\gemafg{\theta}{z} \\
+\Phi_m &amp;= \frac{\kappa \, z}{u_*} \gemafg{u}{z}\\
+{\rm Ri}_g &amp;= \frac{\frac{g}{\theta_v}\gemafg{\theta_v}{z}}{\left(\gemafg{u}z\right)^2+\left(\gemafg vz\right)^2}
+\end{split}\]</div>
+<p>Using <span class="math notranslate nohighlight">\(\overline{v}=0\)</span>, it holds that</p>
+<div class="math notranslate nohighlight">
+\[
+{\rm Ri}_g = \frac{\frac{g}{\theta_v}\gemafg{\theta_v}{z}}{\left(\gemafg{u}z\right)^2} 
+\]</div>
+<p><span class="math notranslate nohighlight">\(\gemafg{\theta_v}z\)</span> can be rewritten to <span class="math notranslate nohighlight">\(\gemafg{\theta_v}z = \Phi_h \frac{\theta_*}{\kappa\,z} = \Phi_h \frac{-\overline{w'\theta_v'}_0}{\kappa\,z\,u_*}\)</span> and <span class="math notranslate nohighlight">\(\gemafg uz = \Phi_m\frac{u_*}{\kappa\,z}\)</span>. This results in</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+{\rm Ri}_g &amp;= \frac{\frac{g}{\theta_v}\Phi_h \frac{-\overline{w'\theta_v'}_0}{\kappa\,z\,u_*}}{\left(\Phi_m\frac{u_*}{\kappa\,z}\right)^2} \\
+ &amp;= - \frac{\Phi_h}{\Phi_m^2} \frac{g\,\overline{w'\theta_v'}_0\,\kappa\,z}{\overline{\theta_v}\,u_*^3} \\
+ &amp;= - \frac{\Phi_h}{\Phi_m^2} \frac{\kappa\,g\,\overline{w'\theta_v'}_0}{u_*^3\,\overline{\theta_v}} z
+\end{split}\]</div>
+<p>Since</p>
+<div class="math notranslate nohighlight">
+\[
+L = - \frac{u_*^3\,\overline{\theta_v}}{\kappa\,g\,\overline{w'\theta_v'}_0}
+\]</div>
+<p>the final result is <span class="math notranslate nohighlight">\({\rm Ri}_g=\frac{\Phi_h}{\Phi_m^2}\frac{z}{L}\)</span></p>
+</details>
+<p>b) Under very stable conditions <span class="math notranslate nohighlight">\(\Phi_M~=~ \alpha_M\frac{z}{L}\)</span> and <span class="math notranslate nohighlight">\(\Phi_H~=~ \alpha_H\frac{z}{L}\)</span> where (<span class="math notranslate nohighlight">\(\alpha_M=\alpha_H \approx 5\)</span>).
+Discuss the value of the Richardson number under this condition.</p>
+<details>
+  <summary>Answer</summary>
+<p>Typical stability functions, as given by <span id="id4">[]</span> are</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\Phi_m &amp;= 1 +\left(\frac{4.7z}{L}\right)\\
+\Phi_h &amp;= \frac{K_M}{K_H} +\left(\frac{4.7z}{L}\right)
+\end{split}\]</div>
+<p>For very stable conditions, <span class="math notranslate nohighlight">\(\frac{z}{L}\gg 1\)</span>, so <span class="math notranslate nohighlight">\(\Phi_m \approx \Phi_h\)</span> with a value of <span class="math notranslate nohighlight">\(4.7\frac{z}{L}\)</span>.</p>
+<p>Under these very stable conditions, substituting the <span class="math notranslate nohighlight">\(\Phi\)</span>-functions,
+it can be seen that
+<span class="math notranslate nohighlight">\({\rm Ri}_g = \frac{\alpha_h\frac{z}{L}}{\left(\alpha_m\frac{z}{L}\right)^2}\frac{z}{L} = \frac{\alpha_h}{\alpha_m^2}\approx \frac{1}{5}=0.2\)</span>.</p>
+<p>This Richardson gradient number is independent on height.
+However, note that for this Richardson number, the flow should become turbulent.
+The problem in the assumed limit is that the <span class="math notranslate nohighlight">\(\Phi\)</span>-functions are usually evaluated in a range of about <span class="math notranslate nohighlight">\(-2&lt;\frac{z}{L}&lt;2\)</span>.
+When taking the limit to very high or very low <span class="math notranslate nohighlight">\(\frac{z}{L}\)</span>, the functions are not valid anymore.</p>
+</details>
+</section>
+<section id="id5">
+<h2><span class="section-number">19.4. </span><a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h2>
+<p>The flux-gradient relationships for momentum and heat (<span class="math notranslate nohighlight">\(\Phi_M\)</span> and <span class="math notranslate nohighlight">\(\Phi_H\)</span>)
+are related to the exchange coefficients (<span class="math notranslate nohighlight">\(K_M\)</span> and <span class="math notranslate nohighlight">\(K_H\)</span>).</p>
+<p>a) Using the first-order closure assumption to parameterize the
+fluxes and surface layer similarity, find the relationship between
+<span class="math notranslate nohighlight">\(\Phi_M\)</span>,  <span class="math notranslate nohighlight">\(\Phi_H\)</span> and <span class="math notranslate nohighlight">\(K_M\)</span>, <span class="math notranslate nohighlight">\(K_H\)</span>.</p>
+<details>
+  <summary>Answer</summary>
+<div class="math notranslate nohighlight">
+\[
+\overline{w'\theta'} = -K_H \gemafg{\theta}{z}
+\]</div>
+<p>but also</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\Phi_H &amp;= \frac{\kappa\,z}{\theta_*}\gemafg{\theta}{z} \\
+\theta_* &amp;= - \frac{\overline{w'\theta'}}{u_*}\\
+\Phi_H &amp;= - \frac{\kappa\,z\,u_*}{\overline{w'\theta'}}\gemafg{\theta}{z} \\
+\overline{w'\theta'} &amp;= - \frac{\kappa\,z\,u_*}{\Phi_H \left(\frac{z}{L}\right)}\gemafg{\theta}{z}
+\end{split}\]</div>
+<p>Therefore,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+-K_H \gemafg{\theta}{z} &amp;= - \frac{\kappa\,z\,u_*}{\Phi_H \left(\frac{z}{L}\right)}\gemafg{\theta}{z} \\
+K_H &amp;= \frac{\kappa\,z\,u_*}{\Phi_H \left(\frac{z}{L}\right)}
+\end{split}\]</div>
+<p>Likewise, <span class="math notranslate nohighlight">\(K_M = \frac{\kappa\,z\,u_*}{\Phi_M \left(\frac{z}{L}\right)}\)</span>.</p>
+<p><span class="math notranslate nohighlight">\(\Phi_{H,M}\)</span> are basically functions that are devised to introduce the effect of buoyancy on the exchange coefficient.
+The relationships between <span class="math notranslate nohighlight">\(K_{H,M}\)</span> and <span class="math notranslate nohighlight">\(\Phi_{H,M}\)</span> result in <span class="math notranslate nohighlight">\(\frac{K_M}{K_H}=\frac{\Phi_H\left(\frac{z}{L}\right)}{\Phi_M\left(\frac{z}{L}\right)}\)</span></p>
+</details>
+<p>b)  The moisture flux can be written as</p>
+<div class="math notranslate nohighlight">
+\[
+\overline{w'q'}~=~-K_q \pafg{\overline{q}}{z}
+\]</div>
+<p>Knowing that
+<span class="math notranslate nohighlight">\(\Phi_Q~=~\frac{\kappa z}{q_*} \pafg{\overline{q}}{z}\)</span>,
+find a relation between the exchange coefficient and
+the flux-gradient relationship for moisture.</p>
+<details>
+  <summary>Answer</summary>
+<p>Similar to (a),</p>
+<div class="math notranslate nohighlight">
+\[
+\overline{w'q'} = -K_Q \gemafg{q}{z}
+\]</div>
+<p>but also</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\Phi_Q &amp;= \frac{\kappa\,z}{q_*}\gemafg{q}{z} \\
+q_* &amp;= - \frac{\overline{w'q'}}{u_*}\\
+\Phi_Q &amp;= - \frac{\kappa\,z\,u_*}{\overline{w'q'}}\gemafg{q}{z} \\
+\overline{w'q'} &amp;= - \frac{\kappa\,z\,u_*}{\Phi_Q \left(\frac{z}{L}\right)}\gemafg{q}{z}
+\end{split}\]</div>
+<p>Therefore,</p>
+<div class="math notranslate nohighlight">
+\[
+-K_Q \gemafg{q}{z} = - \frac{\kappa\,z\,u_*}{\Phi_Q \left(\frac{z}{L}\right)}\gemafg{q}{z} 
+\]</div>
+<p><span class="math notranslate nohighlight">\(K_Q = \frac{\kappa\,z\,u_*}{\Phi_Q \left(\frac{z}{L}\right)}\)</span></p>
+</details>
+<p>c) For an unstable surface layer, the flux-gradient relationship for <span class="math notranslate nohighlight">\(q\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[
+\Phi_Q~=~\left (1-16\frac{z}{L}\right)^{-\frac{1}{2}}
+\]</div>
+<p>Calculate the exchange coefficient at z=300 cm and for a Monin-Obukhov length scale
+equal to -1.5 m. Calculate the exchange coefficient at the same height but now under neutral
+conditions. Discuss the results in terms of mixing-length theory.</p>
+<p>(<span class="math notranslate nohighlight">\(u_*=0.3~m/s,\kappa=0.4\)</span>)</p>
+<details>
+  <summary>Answer</summary>
+<p>For this value of <span class="math notranslate nohighlight">\(\frac{z}{L}\)</span> (-1.5), <span class="math notranslate nohighlight">\(\Phi_Q =0.2\)</span>, so <span class="math notranslate nohighlight">\(K_Q=1.8\rm\,m^2\,s^{-1}\)</span>.</p>
+<p>In case of neutral conditions, <span class="math notranslate nohighlight">\(\Phi_Q=1\)</span>, so <span class="math notranslate nohighlight">\(K_Q=0.36\rm\,m^2\,s^{-1}\)</span>.</p>
+<p>In case of a neutral flow, the eddies are smaller.
+Since the exchange coefficient is a measure of the length scale times a velocity scale (<span class="math notranslate nohighlight">\(K = \cal L \cdot U\)</span>),
+the exchange coefficient becomes less as well and surface exchange is limited.</p>
+</details>
+</section>
+<section id="id6">
+<h2><span class="section-number">19.5. </span><a class="headerlink" href="#id6" title="Permalink to this headline">#</a></h2>
+<p>In a fertilized field a constant flux of nitric oxide (<span class="math notranslate nohighlight">\(NO\)</span>) has been measured
+(<span class="math notranslate nohighlight">\(\overline{w'NO'}=0.1~ppb~m/s\)</span>) with a concentration of NO at ground level equal to 5 ppb.
+Additional measurements showed that <span class="math notranslate nohighlight">\((z/L) \approx 0\)</span> and the friction velocity was 0.3 m/s.
+(<span class="math notranslate nohighlight">\(z_o=10~cm\)</span>)</p>
+<p>a) Find the concentration of NO at 10 m. Plot the profile of NO(z).</p>
+<details>
+ <summary>Answer</summary>
+<p>Find <span class="math notranslate nohighlight">\({\rm NO}\left(z\right)\)</span> and plot it.</p>
+<p>Known:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\overline{w'{\rm NO}'} &amp;= 0.1\rm\,ppb\,m\,s^{-1}\\
+{\rm NO}\left(0\rm\,m\right) &amp;= 5\rm\,ppb\\
+\frac{z}{L} &amp;\approx 0 \\
+u_* &amp;= 0.3\rm\,m\,s^{-1}\\
+z_0 &amp;= 0.1 \rm\,m
+\end{split}\]</div>
+<p>Since <span class="math notranslate nohighlight">\(\frac{z}{L}\approx 0\)</span>, we know that <span class="math notranslate nohighlight">\(\Phi_{\rm NO} \approx 1\)</span>, so</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\Phi_{\rm NO} &amp;= \frac{\kappa\,z}{{\rm NO}_*} \gemafg{{\rm NO}}{z}\\
+1 &amp;= \frac{\kappa\,z}{{\rm NO}_*} \gemafg{{\rm NO}}{z}
+\end{split}\]</div>
+<p>Since the definition of <span class="math notranslate nohighlight">\({\rm NO}_*\)</span> (using Monin-Obukhov scaling) is given by</p>
+<div class="math notranslate nohighlight">
+\[
+{\rm NO}_* = -\frac{\overline{w'{\rm NO}'}}{u_*}
+\]</div>
+<p>the flux gradient relationship can be rewritten to</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+1 &amp;= - \frac{\kappa\,z\,u_*}{\overline{w'{\rm NO}'}} \gemafg{{\rm NO}}{z}\\
+\gemafg{{\rm NO}}{z} &amp;= -\frac{\overline{w'{\rm NO}'}}{\kappa\,z\,u_*} \\
+\int_{z_1}^{z_2}{\gemafg{{\rm NO}}{z}{\rm d}z} &amp;= -\int_{z_1}^{z_2}{\frac{\overline{w'{\rm NO}'}}{\kappa\,z\,u_*}{\rm d}z}\\
+\overline{{\rm NO}}\left(z_2\right) -\overline{{\rm NO}}\left(z_1\right) &amp;= -\frac{\overline{w'{\rm NO}'}}{\kappa\,u_*} \int_{z_1}^{z_2}{\frac{1}{z}{\rm d}z}
+\end{split}\]</div>
+<p>considering a constant NO-flux near the surface. Therefore,</p>
+<div class="math notranslate nohighlight" id="equation-for-57">
+<span class="eqno">(19.5)<a class="headerlink" href="#equation-for-57" title="Permalink to this equation">#</a></span>\[
+\overline{{\rm NO}}\left(z_2\right) = \overline{{\rm NO}}\left(z_1\right) - \frac{\overline{w'{\rm NO}'}}{\kappa\,u_*} {\rm ln}\frac{z_2}{z_1} 
+\]</div>
+<p>In this case, <span class="math notranslate nohighlight">\(z_1=z_0=0.1\rm\,m\)</span>, <span class="math notranslate nohighlight">\({\rm NO}\left(z_1\right)=5\rm\,ppb\)</span> and <span class="math notranslate nohighlight">\(z_2=z\)</span>.
+Therefore, substituting the known variables, <span class="math notranslate nohighlight">\(\overline{\rm NO}\left(z\right)= 5 - \frac{5}{6}{\rm ln}\frac{z}{0.1\rm\,m}\quad\left(\rm ppb\right)\)</span>.</p>
+<p>The plot of this equation is shown in <a class="reference internal" href="#fig-57"><span class="std std-numref">Fig. 19.1</span></a>. The concentration at 10 m height is 1.16~ppb.</p>
+<figure class="align-default" id="fig-57">
+<img alt="../_images/exercise5_7.png" src="../_images/exercise5_7.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 19.1 </span><span class="caption-text">Vertical profile of NO in ppb</span><a class="headerlink" href="#fig-57" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</details>
+<p>b) At which height the NO concentration is lower than <span class="math notranslate nohighlight">\(70\%\)</span> with respect the ground value.</p>
+<details>
+  <summary>Answer</summary>
+<p>For which <span class="math notranslate nohighlight">\(z\)</span> is <span class="math notranslate nohighlight">\(\overline{\rm NO}\left(z\right)=0.7\cdot\overline{\rm NO}\left(0\rm\,m\right)\)</span>?</p>
+<p>Equation <a class="reference internal" href="#equation-for-57">(19.5)</a> shows that in that case</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\overline{{\rm NO}}\left(z\right) &amp;= \overline{{\rm NO}}\left(z_0\right) - \frac{\overline{w'{\rm NO}'}}{\kappa\,u_*} {\rm ln}\frac{z}{z_0}\\
+0.7\,\overline{{\rm NO}}\left(z_0\right) &amp;= \overline{{\rm NO}}\left(z_0\right) - \frac{\overline{w'{\rm NO}'}}{\kappa\,u_*} {\rm ln}\frac{z}{z_0}
+\end{split}\]</div>
+<p>This results in</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\frac{\overline{w'{\rm NO}'}}{\kappa\,u_*} {\rm ln}\frac{z}{z_0} &amp;= 0.3\,\overline{{\rm NO}}\left(z_0\right)\\
+{\rm ln}\frac{z}{z_0} &amp;= \frac{0.3\,\kappa\,u_*\,\overline{{\rm NO}}\left(z_0\right)}{\overline{w'{\rm NO}'}}\\
+z &amp;= z_0\,{\rm e}^\frac{0.3\,\kappa\,u_*\,\overline{{\rm NO}}\left(z_0\right)}{\overline{w'{\rm NO}'}}
+\end{split}\]</div>
+<p>Substituting the values that are given results in <span class="math notranslate nohighlight">\(z=60.5\rm\,cm\)</span></p>
+</details>
+</section>
+<section id="id7">
+<h2><span class="section-number">19.6. </span><a class="headerlink" href="#id7" title="Permalink to this headline">#</a></h2>
+<p>Assuming that the radiative divergence and the phase changes are neglectable, the equation
+for temperature reads</p>
+<div class="math notranslate nohighlight">
+\[
+\pafg{\theta}{t}+{u_j}\pafg{\theta}{x_j}~=~\nu_{\theta}\pafg{^2\theta}{x_j^2}
+\]</div>
+<p>a) Derive from this equation the governing equation of the temperature fluctuations <span class="math notranslate nohighlight">\(\overline{\theta'^{~2}}\)</span>.</p>
+<div class="tip dropdown admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Please note the similarity between this derivation and the derivation of the equation for <span class="math notranslate nohighlight">\(\gemafg{u'^2}{t}\)</span>, which gave us the tke equation.</p>
+</div>
+<details>
+  <summary>Answer</summary>
+<p>Question: Governing equation for the potential temperature variance, <span class="math notranslate nohighlight">\(\gemafg{\theta'^2}{t}\)</span></p>
+<p>Known: <span class="math notranslate nohighlight">\(\pafg{\theta}{t}+u_j\pafg{\theta}{x_j}=\nu_\theta \pafg{^2 \theta}{x_j^2}\)</span></p>
+<div class="math notranslate nohighlight" id="equation-for-58a">
+<span class="eqno">(19.6)<a class="headerlink" href="#equation-for-58a" title="Permalink to this equation">#</a></span>\[
+\gemafg\theta t + \pafg{\theta'}{t}+\overline{u_j}\gemafg{\theta}{x_j} + \overline{u_j}\pafg{\theta'}{x_j}+{u_j'}\gemafg{\theta}{x_j} + {u_j'}\pafg{\theta'}{x_j} = \nu_\theta \pafg{^2 \overline{\theta}}{x_j^2} + \nu_\theta \pafg{^2 \theta'}{x_j^2} 
+\]</div>
+<p>Reynolds averaging Equation <a class="reference internal" href="#equation-for-58a">(19.6)</a> leads to</p>
+<div class="math notranslate nohighlight" id="equation-for-58b">
+<span class="eqno">(19.7)<a class="headerlink" href="#equation-for-58b" title="Permalink to this equation">#</a></span>\[
+\gemafg\theta t +\overline{u_j}\gemafg{\theta}{x_j} + \overline{{u_j'}\pafg{\theta'}{x_j}} = \nu_\theta \pafg{^2 \overline{\theta}}{x_j^2} 
+\]</div>
+<p>Subtracting Equation <a class="reference internal" href="#equation-for-58b">(19.7)</a> from Equation <a class="reference internal" href="#equation-for-58a">(19.6)</a> yields</p>
+<div class="math notranslate nohighlight">
+\[
+\pafg{\theta'}{t}+ \overline{u_j}\pafg{\theta'}{x_j}+{u_j'}\gemafg{\theta}{x_j} + {u_j'}\pafg{\theta'}{x_j} - \overline{{u_j'}\pafg{\theta'}{x_j}} = \nu_\theta \pafg{^2 \theta'}{x_j^2}
+\]</div>
+<p>This is multiplied by <span class="math notranslate nohighlight">\(2\theta'\)</span>. Combined with the knowledge that <span class="math notranslate nohighlight">\(2x{\rm d}x={\rm d}x^2\)</span>, the resulting equation is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\pafg{\theta'^2}{t}+ \overline{u_j}\pafg{\theta'^2}{x_j}+2{u_j'\theta'}\gemafg{\theta}{x_j} + {u_j'}\pafg{\theta'^2}{x_j} - 2\theta'\overline{{u_j'}\pafg{\theta'}{x_j}} &amp;= 2\theta'\nu_\theta \pafg{^2 \theta'}{x_j^2} \\
+\overline{\pafg{\theta'^2}{t}+ \overline{u_j}\pafg{\theta'^2}{x_j}+2{u_j'\theta'}\gemafg{\theta}{x_j} + {u_j'}\pafg{\theta'^2}{x_j} - 2\theta'\overline{{u_j'}\pafg{\theta'}{x_j}}} &amp;= \overline{2\theta'\nu_\theta \pafg{^2 \theta'}{x_j^2}} 
+\end{split}\]</div>
+<div class="math notranslate nohighlight" id="equation-for-58tosubs">
+<span class="eqno">(19.8)<a class="headerlink" href="#equation-for-58tosubs" title="Permalink to this equation">#</a></span>\[
+\gemafg{\theta'^2}{t}+ \overline{u_j}\gemafg{\theta'^2}{x_j}+2\overline{u_j'\theta'}\gemafg{\theta}{x_j} + \overline{{u_j'}\pafg{\theta'^2}{x_j}} = 2\nu_\theta \overline{\theta' \pafg{^2 \theta'}{x_j^2} } 
+\]</div>
+<p>The last term, <span class="math notranslate nohighlight">\(2\nu_\theta \overline{\theta' \pafg{^2 \theta'}{x_j^2} }\)</span>, can be rewritten,
+similar to the equations of <span class="math notranslate nohighlight">\(u'^2\)</span>.
+To do this, it should be expressed as a function of <span class="math notranslate nohighlight">\(\pafg{\theta'}{x_j}\)</span> and <span class="math notranslate nohighlight">\(\pafg{^2\theta'^2}{x_j^2}\)</span>.
+To tackle this, take a look at the <span class="math notranslate nohighlight">\(2^{\rm nd}\)</span> derivative of <span class="math notranslate nohighlight">\(\theta'^2\)</span>. This results in</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\pafg{^2\theta'^2}{x_j^2} &amp;= \pafg{}{x_j}\pafg{\theta'^2}{x_j}\\
+  &amp;= \pafg{}{x_j}\left(2\theta'\pafg{\theta'}{x_j}\right) \\
+  &amp;= 2 \left(\pafg{\theta'}{x_j}\right)^2 + 2 \theta' \pafg{^2\theta'}{x_j^2}
+\end{split}\]</div>
+<p>Rearranging shows that</p>
+<div class="math notranslate nohighlight">
+\[
+2 \theta' \pafg{^2\theta'}{x_j'^2} = \pafg{^2\theta'^2}{x_j^2} - 2 \left(\pafg{\theta'}{x_j}\right)^2
+\]</div>
+<p>Since <span class="math notranslate nohighlight">\(\left|\pafg{^2\theta'^2}{x_j^2}\right|\ll \left|2 \theta' \pafg{^2\theta'}{x_j^2}\right|\)</span> and <span class="math notranslate nohighlight">\(\epsilon_\theta =\nu_\theta\left(\pafg{\theta'}{x_j'}\right)^2\)</span>, this shows that</p>
+<div class="math notranslate nohighlight" id="equation-for-58subs1">
+<span class="eqno">(19.9)<a class="headerlink" href="#equation-for-58subs1" title="Permalink to this equation">#</a></span>\[
+2 \nu_\theta \theta' \pafg{^2\theta'}{x_j^2} = - 2 \epsilon_\theta 
+\]</div>
+<p>Another term of Equation <a class="reference internal" href="#equation-for-58tosubs">(19.8)</a> that can be rewritten is <span class="math notranslate nohighlight">\({u_j'}\pafg{\theta'^2}{x_j}\)</span>.
+Since <span class="math notranslate nohighlight">\(\pafg{u_j'}{x_j}=0\)</span> due to incompressibility of the flow,</p>
+<div class="math notranslate nohighlight" id="equation-for-58subs2">
+<span class="eqno">(19.10)<a class="headerlink" href="#equation-for-58subs2" title="Permalink to this equation">#</a></span>\[\begin{split}
+{u_j'}\pafg{\theta'^2}{x_j} &amp;= \pafg{u_j'\theta'^2}{x_j} - \theta'^2 \pafg{u_j'}{x_j}\\ 
+{u_j'}\pafg{\theta'^2}{x_j} &amp;= \pafg{u_j'\theta'^2}{x_j} 
+\end{split}\]</div>
+<p>Combining Equations <a class="reference internal" href="#equation-for-58tosubs">(19.8)</a>, <a class="reference internal" href="#equation-for-58subs1">(19.9)</a> and <a class="reference internal" href="#equation-for-58subs2">(19.10)</a> yields</p>
+<div class="math notranslate nohighlight" id="equation-for-58afinal">
+<span class="eqno">(19.11)<a class="headerlink" href="#equation-for-58afinal" title="Permalink to this equation">#</a></span>\[
+\underbrace{\gemafg{\theta'^2}{t}}_{\rm Tendency}+ \underbrace{\overline{u_j}\gemafg{\theta'^2}{x_j}}_{\rm Advection}+\underbrace{2\overline{u_j'\theta'}\gemafg{\theta}{x_j}}_{\rm Production} + \underbrace{\gemafg{{u_j'}\theta'^2}{x_j}}_{Turbulent\ transport} = \underbrace{- 2 \epsilon_\theta}_{\rm Dissipation} 
+\]</div>
+</details>
+<p>b) From the general expression, write the simplify equation if one assumes: steady-state, no advection, horizontal
+homogeneity and the turbulent transport of <span class="math notranslate nohighlight">\(\overline{\theta'^{~2}}\)</span> is neglectable.</p>
+<details>
+  <summary>Answer</summary>
+<p>In the case of steady state, the derivatives to <span class="math notranslate nohighlight">\(t\)</span> become zero.
+If a horizontal homogeneous situation is studied, the derivatives to <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> of Reynolds averaged quantities vanish as well.
+Therefore, Equation <a class="reference internal" href="#equation-for-58afinal">(19.11)</a> turns in</p>
+<div class="math notranslate nohighlight">
+\[
+\overline{w}\gemafg{\theta'^2}{z}+2\overline{w'\theta'}\gemafg{\theta}{z} + {\gemafg{{w'}\theta'^2}{z}} = - 2 \epsilon_\theta
+\]</div>
+<p>In case of no subsidence, <span class="math notranslate nohighlight">\(\overline{w}=0\)</span>.
+This eliminates the only form of transport by advection, since the case under study is horizontally homogeneous. Therefore,</p>
+<div class="math notranslate nohighlight">
+\[
+2\overline{w'\theta'}\gemafg{\theta}{z} + {\gemafg{{w'}\theta'^2}{z}} = - 2 \epsilon_\theta
+\]</div>
+<p>Generally, <span class="math notranslate nohighlight">\(3^{\rm rd}\)</span>-order moments are small compared to the other terms in the atmospheric boundary layer. This also holds true for the turbulent transport of potential temperature variance, <span class="math notranslate nohighlight">\(\overline{{w'}\theta'^2}\)</span>. Using this assumption, the final equation is</p>
+<div class="math notranslate nohighlight" id="equation-for-58breal">
+<span class="eqno">(19.12)<a class="headerlink" href="#equation-for-58breal" title="Permalink to this equation">#</a></span>\[
+\overline{w'\theta'}\gemafg{\theta}{z} = - \epsilon_\theta 
+\]</div>
+</details>
+<p>c) By using the similarity theory scaling functions</p>
+<div class="math notranslate nohighlight">
+\[
+\Phi_H~=~\frac{\kappa z}{\theta_*} \pafg{\overline{\theta}}{z}~~~~~~~~
+\Phi_{\epsilon\theta}~=~\frac{\kappa z}{u_*\theta_*^2} \epsilon_{\theta},
+\]</div>
+<p>find the dimensionless equation for <span class="math notranslate nohighlight">\(\overline{\theta'^{~2}}\)</span>. Discuss the result. What is the
+value of <span class="math notranslate nohighlight">\(\Phi_{\epsilon\theta}\)</span> under neutral conditions?</p>
+<details>
+  <summary>Answer</summary>
+<p>The scaling functions can be used by relating the heat flux and potential temperature gradient to the dimensionless quantities <span class="math notranslate nohighlight">\(u_*\)</span> and <span class="math notranslate nohighlight">\(\theta_*\)</span> (according to atmospheric surface layer scaling).</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\theta_* &amp;= - \frac{\overline{w'\theta'}}{u_*}\\
+\Phi_H &amp;= \frac{\kappa\,z}{\theta_*}\gemafg{\theta}{z}
+\end{split}\]</div>
+<p>Rewriting results in</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\overline{w'\theta'} &amp;= - u_* \theta_*\\
+\gemafg{\theta}{z} &amp;= \frac{\Phi_H\,\theta_*}{\kappa\,z}
+\end{split}\]</div>
+<p>Substituting these relations into Equation <a class="reference internal" href="#equation-for-58breal">(19.12)</a> results in</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+- u_* \theta_* \frac{\Phi_H\,\theta_*}{\kappa\,z} &amp;= - \epsilon_\theta\\
+\Phi_H &amp;= \frac{\kappa\,z}{u_*\theta_*^2}\epsilon_\theta
+\end{split}\]</div>
+<p>In the end, <span class="math notranslate nohighlight">\(\Phi_H=\Phi_{\epsilon\theta}\)</span>.</p>
+<p>The result shows that, under the conditions that are assumed, all heat that is gained by turbulent transport is dissipated by diffusion.</p>
+<p>Under neutral conditions, all flux-gradient relationships are equal to 1.</p>
+</details>
+</section>
+<section id="id8">
+<h2><span class="section-number">19.7. </span><a class="headerlink" href="#id8" title="Permalink to this headline">#</a></h2>
+<p>The following picture shows some examples of characteristic shapes of plumes dispersing in various atmospheric regimes.</p>
+<p>Link each of the plume shapes with the corresponding name and with the most adequate temperature profile
+(where the dashed line is
+the adiabatic lapse rate and the continuous line is the ambient temperature).</p>
+<div class="tip dropdown admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Please focus on matching the plumes (1 to 5) with the profiles (A to E). The names are included for completeness.</p>
+</div>
+<figure class="align-default" id="fig-81">
+<img alt="../_images/figset81.png" src="../_images/figset81.png" />
+</figure>
+<details>
+    <summary>Answer</summary>
+<figure class="align-default" id="fig-ans81">
+<img alt="../_images/exercise8_1.png" src="../_images/exercise8_1.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 19.2 </span><span class="caption-text">Relation between atmospheric stability and plume dispersion</span><a class="headerlink" href="#fig-ans81" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</details>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./exercises"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="week5.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">18. </span>Exercises week 5</p>
+        </div>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Chiel van Heerwaarden and Mirjam Tijhuis<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

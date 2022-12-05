@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>9. Richardson numbers &#8212; Boundary-Layer Meteorology</title>
+    <title>13. The stable boundary layer &#8212; Boundary-Layer Meteorology</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -54,8 +54,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="10. Kolmogorov scaling" href="10_kolmogorov.html" />
-    <link rel="prev" title="8. Turbulence kinetic energy (ii)" href="8_tke_ii.html" />
+    <link rel="next" title="14. Exercises week 1" href="../exercises/week1.html" />
+    <link rel="prev" title="12. Turbulence spectra" href="13_spectra.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -161,8 +161,8 @@ const thebe_selector_output = ".output, .cell_output"
    8. Turbulence kinetic energy (ii)
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="9_ri.html">
    9. Richardson numbers
   </a>
  </li>
@@ -181,8 +181,8 @@ const thebe_selector_output = ".output, .cell_output"
    12. Turbulence spectra
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="14_sbl.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    13. The stable boundary layer
   </a>
  </li>
@@ -313,7 +313,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Flectures/9_ri.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Flectures/14_sbl.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -341,7 +341,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/lectures/9_ri.md"
+        <a href="../_sources/lectures/14_sbl.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -378,23 +378,60 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-low-level-jet">
+   13.1. The low-level jet
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Richardson numbers</h1>
+                <h1>The stable boundary layer</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-low-level-jet">
+   13.1. The low-level jet
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -402,103 +439,49 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="richardson-numbers">
-<h1><span class="section-number">9. </span>Richardson numbers<a class="headerlink" href="#richardson-numbers" title="Permalink to this headline">#</a></h1>
-<div class="admonition-questions-to-be-answered admonition">
-<p class="admonition-title">Questions to be answered</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="the-stable-boundary-layer">
+<h1><span class="section-number">13. </span>The stable boundary layer<a class="headerlink" href="#the-stable-boundary-layer" title="Permalink to this headline">#</a></h1>
+<div class="admonition-questions-to-be-answered-in-this-chapter admonition">
+<p class="admonition-title">Questions to be answered in this chapter</p>
 <ol class="simple">
-<li><p>What does the Richardson number describe?</p></li>
-<li><p>What is the difference between the flux-, gradient- and bulk-Richardson number?</p></li>
-<li><p>At which Richardson numbers is the boundary layer statically unstable?</p></li>
-<li><p>At which Richardson numbers is the boundary layer statically stable?</p></li>
-<li><p>At which Richardson numbers is the boundary layer dynamically unstable?</p></li>
-<li><p>At which Richardson numbers is the boundary layer dynamically stable?</p></li>
+<li><p>What is a stable boundary layer?</p></li>
+<li><p>What is the low level jet and how does it originate?</p></li>
+<li><p>What happens to the logarithmic profile in the surface layer as an effect of stability?</p></li>
 </ol>
 </div>
+<p>A <em>stable boundary layer</em> occurs when the atmosphere is statically stable (<span class="math notranslate nohighlight">\(\partial \overline{\theta}_v / \partial z &gt; 0\)</span>).
+In such a boundary layer, if we study TKE evolution we find that buoyancy is suppressing the generation of turbulence by shear, and if the Richardson number exceeds 1, then turbulence will collapse.</p>
+<p>Since stable boundary layers are shear-driven with buoyancy working against turbulence generation, its depth is far less than that of a convective boundary layer, generally (at most) a few 100 meter. Above the stable boundary layer, we find the <em>residual layer</em> which is the well-mixed region that remained of the convective boundary layer from daytime.</p>
+<section id="the-low-level-jet">
+<h2><span class="section-number">13.1. </span>The low-level jet<a class="headerlink" href="#the-low-level-jet" title="Permalink to this headline">#</a></h2>
+<p>One of the unique features of the stable boundary layer is the low-level jet, a peak in wind speed at the top of the stable boundary layer. This peak can exceed geostrophic wind. We repeat here the governing equations for the conservation of momentum, under the assumption of high Reynolds numbers, horizontal homogeneity, and no subsidence.</p>
 <div class="math notranslate nohighlight">
-\[
+\[\begin{split}
 \def\ubar{\overline{u}}
 \def\vbar{\overline{v}}
-\def\wbar{\overline{w}}
-\def\ebar{\overline{e}}
-\def\uprime{u^\prime}
-\def\vprime{v^\prime}
-\def\wprime{w^\prime}
-\def\uvar{\overline{u^{\prime 2}}}
-\def\vvar{\overline{v^{\prime 2}}}
-\def\wvar{\overline{w^{\prime 2}}}
+\def\uwflux{\overline{u^\prime w^\prime}}
+\def\vwflux{\overline{v^\prime w^\prime}}
 \def\pd#1#2{\dfrac{\partial #1}{\partial #2}}
-\def\fd#1#2{\dfrac{\Delta #1}{\Delta #2}}
-\def\rhobar{\overline{\rho}}
-\def\pdd#1#2{\dfrac{\partial^2 #1}{\partial#2^2}}
-\def\uibar{\overline{u}_i}
-\def\ujbar{\overline{u}_j}
-\def\uiprime{u_i^\prime}
-\def\uiprimesq{u_i^{\prime 2}}
-\def\uiprimesqbar{\overline{u_i^{\prime 2}}}
-\def\ujprime{u_j^\prime}
-  \underbrace{\pd{\ebar}{t}}_\textrm{storage}
-=
-\underbrace{ - \pd{\overline{e  w^\prime}}{z} }_\textrm{turbulent transport}
-\underbrace{ - \overline{u^\prime w^\prime} \pd{\ubar}{z}
-             - \overline{v^\prime w^\prime} \pd{\vbar}{z} }_\textrm{shear}
-\underbrace{ - \dfrac{1}{\rhobar} \pd{\overline{w^\prime p^\prime}}{z}}_\textrm{pressure transport}
-\underbrace{ + \dfrac{g}{\overline{\theta}_\mathrm{v}} \overline{ w^\prime \theta_\mathrm{v}^\prime} }_\textrm{buoyancy}
-\underbrace{ - \epsilon }_\textrm{dissipation}
-\]</div>
-<p>Turbulence generation is done by shear and, depending on its sign, buoyancy, while dissipation destroys turbulence at the smallest scales.
-The Richardson numbers relates the magnitude of buoyancy and shear production to each other.</p>
-<p>The flux-Richardson number is defined as</p>
-<div class="admonition-flux-richardson-number admonition">
-<p class="admonition-title">Flux-Richardson number</p>
+\pd{\ubar}{t} &amp;= - \pd{\uwflux}{z} + f \left( \vbar - v_g \right) \\
+\pd{\vbar}{t} &amp;= - \pd{\vwflux}{z} - f \left( \ubar - u_g \right)
+\end{split}\]</div>
+<p>In a convective boundary layer, there is often an approximate balance between the coriolis force and the flux divergence. If we assume the geostropic wind to be only in the <span class="math notranslate nohighlight">\(u\)</span>-direction, thus <span class="math notranslate nohighlight">\(v_g = 0\)</span>, then the following balance holds</p>
 <div class="math notranslate nohighlight">
-\[
-Ri_\mathrm{f} \equiv
-\dfrac{\dfrac{g}{\overline{\theta}_\mathrm{v}} \overline{ w^\prime \theta_\mathrm{v}^\prime}}
-{\overline{u^\prime w^\prime} \pd{\ubar}{z} + \overline{v^\prime w^\prime} \pd{\vbar}{z}}
-\]</div>
-</div>
-<p>The value of <span class="math notranslate nohighlight">\(Ri_\mathrm{f}\)</span> can teach us something about the nature of the flow</p>
-<ul class="simple">
-<li><p>If <span class="math notranslate nohighlight">\(Ri_\mathrm{f} &lt; 0\)</span> the flow is statically and dynamically unstable</p></li>
-<li><p>If <span class="math notranslate nohighlight">\(0 &lt; Ri_\mathrm{f} &lt; 1\)</span> the flow is statically stable and dynamically unstable</p></li>
-<li><p>If <span class="math notranslate nohighlight">\(Ri_\mathrm{f} &gt; 1\)</span> the flow is statically and dynamically stable</p></li>
-</ul>
-<p>Via K-theory, fluxes can be related to gradients. Consequently, we can rewrite the flux-Richardson number as:</p>
+\[\begin{split}
+0 &amp;\approx - \pd{\uwflux}{z} + f \vbar \\
+0 &amp;\approx - \pd{\vwflux}{z} - f \left( \ubar - u_g \right)
+\end{split}\]</div>
+<p>In this balance, the mixed-layer value of the wind is subgeostrophic.
+If then at sunset convection stops and the convective boundary layer splits in a stable boundary layer close to the surface, and a residual layer above.
+The residual layer is no longer turbulent and no longer connected to the surface.
+Therefore, the wind just above the stable boundary layer starts evolving following</p>
 <div class="math notranslate nohighlight">
-\[
-Ri_\mathrm{f} =
-\dfrac{  -K_\theta \dfrac{g}{\overline{\theta}_\mathrm{v}} \pd{\overline{\theta}_\mathrm{v}}{z}}
-{ -K_\mathrm{m} \pd{\ubar}{z} \pd{\ubar}{z} - K_\mathrm{m} \pd{\vbar}{z} \pd{\vbar}{z}}
-\]</div>
-<p>If we assume that the turbulent diffusion coefficients <span class="math notranslate nohighlight">\(K_\mathrm{m}\)</span> and <span class="math notranslate nohighlight">\(K_\theta\)</span> are equal, we arrive at the definition of the gradient Richardson number</p>
-<div class="admonition-gradient-richardson-number admonition">
-<p class="admonition-title">Gradient-Richardson number</p>
-<div class="math notranslate nohighlight">
-\[
-Ri_\mathrm{g} \equiv
-\dfrac{\dfrac{g}{\overline{\theta}_\mathrm{v}} \pd{\overline{\theta}_\mathrm{v}}{z}}
-{\left( \pd{\ubar}{z} \right)^2 + \left( \pd{\vbar}{z} \right)^2}
-\]</div>
-</div>
-<p>Field observations have shown that laminar flow can become turbulent if <span class="math notranslate nohighlight">\(Ri_\mathrm{g}\)</span> is below 0.25.</p>
-<p>We can also define a finite difference approximation of the gradient Richardson number called the Bulk Richardson number</p>
-<div class="math notranslate nohighlight">
-\[
-Ri_\mathrm{g} \approx
-\dfrac{\dfrac{g}{\overline{\theta}_\mathrm{v}} \fd{\overline{\theta}_\mathrm{v}}{z}}
-{\left( \fd{\ubar}{z} \right)^2 + \left( \fd{\vbar}{z} \right)^2}
-\]</div>
-<p>which can be simplified to</p>
-<div class="admonition-bulk-richardson-number admonition">
-<p class="admonition-title">Bulk-Richardson number</p>
-<div class="math notranslate nohighlight">
-\[
-Ri_\mathrm{B} \equiv
-\dfrac{g \Delta \overline{\theta}_\mathrm{v} \Delta z}
-{\overline{\theta}_\mathrm{v} \left( \left( \Delta \ubar \right)^2 + \left( \Delta \vbar \right)^2 \right)}
-\]</div>
-</div>
+\[\begin{split}
+\pd{\ubar}{t} &amp;=   f \vbar \\
+\pd{\vbar}{t} &amp;= - f \left( \ubar - u_g \right)
+\end{split}\]</div>
+<p><em>…more to come…</em></p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -528,17 +511,17 @@ Ri_\mathrm{B} \equiv
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="8_tke_ii.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="13_spectra.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">8. </span>Turbulence kinetic energy (ii)</p>
+            <p class="prev-next-title"><span class="section-number">12. </span>Turbulence spectra</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="10_kolmogorov.html" title="next page">
+    <a class='right-next' id="next-link" href="../exercises/week1.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">10. </span>Kolmogorov scaling</p>
+        <p class="prev-next-title"><span class="section-number">14. </span>Exercises week 1</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
