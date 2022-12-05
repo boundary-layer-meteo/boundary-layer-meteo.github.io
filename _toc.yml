@@ -36,7 +36,7 @@ parts:
     - file: exercises/week3
     - file: exercises/week4
     - file: exercises/week5
-      #   chapters:
+    - file: exercises/week6
       #   - file: exercises/exercises1
       #   - file: exercises/exercises2
       #   - file: exercises/exercises3
