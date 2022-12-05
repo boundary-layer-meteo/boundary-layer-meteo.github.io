@@ -45,7 +45,7 @@ $$
 
 ```{figure} figs/spectra_energy.png
 ---
-width: 600px
+width: 500px
 name: spectra_energy
 ---
 Spectral energy of the potential temperature near the surface of the convective boundary layer.

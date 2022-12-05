@@ -19,6 +19,7 @@ parts:
      - file: lectures/10_kolmogorov
      - file: lectures/11_cbl
      - file: lectures/13_spectra
+     - file: lectures/14_sbl
        #- file: atmospheric_stability
 #     - file: lectures/temperature
 #   - caption: Theory
