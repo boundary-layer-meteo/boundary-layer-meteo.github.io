@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>12. Turbulence spectra &#8212; Boundary-Layer Meteorology</title>
+    <title>13. Turbulence spectra &#8212; Boundary-Layer Meteorology</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -54,8 +54,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="13. The stable boundary layer" href="14_sbl.html" />
-    <link rel="prev" title="11. Convective boundary layer" href="11_cbl.html" />
+    <link rel="next" title="14. The stable boundary layer" href="14_sbl.html" />
+    <link rel="prev" title="12. Recap lecture" href="12_dummy.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -176,14 +176,19 @@ const thebe_selector_output = ".output, .cell_output"
    11. Convective boundary layer
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="12_dummy.html">
+   12. Recap lecture
+  </a>
+ </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   12. Turbulence spectra
+   13. Turbulence spectra
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="14_sbl.html">
-   13. The stable boundary layer
+   14. The stable boundary layer
   </a>
  </li>
 </ul>
@@ -195,32 +200,32 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../exercises/week1.html">
-   14. Exercises week 1
+   15. Exercises week 1
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../exercises/week2.html">
-   15. Exercises week 2
+   16. Exercises week 2
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../exercises/week3.html">
-   16. Exercises week 3
+   17. Exercises week 3
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../exercises/week4.html">
-   17. Exercises week 4
+   18. Exercises week 4
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../exercises/week5.html">
-   18. Exercises week 5
+   19. Exercises week 5
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../exercises/week6.html">
-   19. Exercises week 6
+   20. Exercises week 6
   </a>
  </li>
 </ul>
@@ -402,12 +407,12 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#fourier-transform-and-energy-spectrum">
-   12.1. Fourier transform and energy spectrum
+   13.1. Fourier transform and energy spectrum
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-spectral-structure-of-the-inertial-subrange-of-turbulence">
-   12.2. The spectral structure of the inertial subrange of turbulence
+   13.2. The spectral structure of the inertial subrange of turbulence
   </a>
  </li>
 </ul>
@@ -431,12 +436,12 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#fourier-transform-and-energy-spectrum">
-   12.1. Fourier transform and energy spectrum
+   13.1. Fourier transform and energy spectrum
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-spectral-structure-of-the-inertial-subrange-of-turbulence">
-   12.2. The spectral structure of the inertial subrange of turbulence
+   13.2. The spectral structure of the inertial subrange of turbulence
   </a>
  </li>
 </ul>
@@ -450,7 +455,7 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="turbulence-spectra">
-<h1><span class="section-number">12. </span>Turbulence spectra<a class="headerlink" href="#turbulence-spectra" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">13. </span>Turbulence spectra<a class="headerlink" href="#turbulence-spectra" title="Permalink to this headline">#</a></h1>
 <div class="admonition-questions-to-be-answered-in-this-chapter admonition">
 <p class="admonition-title">Questions to be answered in this chapter</p>
 <ol class="simple">
@@ -460,7 +465,7 @@ title="Print to PDF"
 </ol>
 </div>
 <section id="fourier-transform-and-energy-spectrum">
-<h2><span class="section-number">12.1. </span>Fourier transform and energy spectrum<a class="headerlink" href="#fourier-transform-and-energy-spectrum" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">13.1. </span>Fourier transform and energy spectrum<a class="headerlink" href="#fourier-transform-and-energy-spectrum" title="Permalink to this headline">#</a></h2>
 <p>Fourier transforming data allows us to transform data from physical to spectral space. Fourier transformation goes as following</p>
 <div class="math notranslate nohighlight">
 \[
@@ -475,7 +480,7 @@ title="Print to PDF"
 <figure class="align-default" id="spectra-waves">
 <a class="reference internal image-reference" href="../_images/spectra_waves.png"><img alt="../_images/spectra_waves.png" src="../_images/spectra_waves.png" style="width: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 12.1 </span><span class="caption-text">Potential temperature near the surface of the convective boundary layer captures in waves.</span><a class="headerlink" href="#spectra-waves" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 13.1 </span><span class="caption-text">Potential temperature near the surface of the convective boundary layer captures in waves.</span><a class="headerlink" href="#spectra-waves" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Based on the waves we can calculate its contribution to the variance by taking the square of its absolute value.</p>
@@ -485,7 +490,7 @@ E \left( k \right) = \left| \hat{f} \right|^2 =  \mathrm{Re} \left( \hat{f} \rig
 \]</div>
 </section>
 <section id="the-spectral-structure-of-the-inertial-subrange-of-turbulence">
-<h2><span class="section-number">12.2. </span>The spectral structure of the inertial subrange of turbulence<a class="headerlink" href="#the-spectral-structure-of-the-inertial-subrange-of-turbulence" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">13.2. </span>The spectral structure of the inertial subrange of turbulence<a class="headerlink" href="#the-spectral-structure-of-the-inertial-subrange-of-turbulence" title="Permalink to this headline">#</a></h2>
 <p>The turbulence kinetic energy <span class="math notranslate nohighlight">\(e\)</span> can be constructed from its spectral energy <span class="math notranslate nohighlight">\(E(k)\)</span> (energy per wave number <span class="math notranslate nohighlight">\(k\)</span>) following</p>
 <div class="math notranslate nohighlight">
 \[
@@ -494,7 +499,7 @@ e = \int_0^\infty E\,\mathrm{d}k.
 <figure class="align-default" id="spectra-energy">
 <a class="reference internal image-reference" href="../_images/spectra_energy.png"><img alt="../_images/spectra_energy.png" src="../_images/spectra_energy.png" style="width: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 12.2 </span><span class="caption-text">Spectral energy of the potential temperature near the surface of the convective boundary layer.</span><a class="headerlink" href="#spectra-energy" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 13.2 </span><span class="caption-text">Spectral energy of the potential temperature near the surface of the convective boundary layer.</span><a class="headerlink" href="#spectra-energy" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>If we assume a strict separation between production and dissipation in terms of length and time scales, there must exist a region that only transfers energy from the largest to the smallest scales.
@@ -539,17 +544,17 @@ E \sim \epsilon^\frac{2}{3} \kappa^{-\frac{5}{3}}.
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="11_cbl.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="12_dummy.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">11. </span>Convective boundary layer</p>
+            <p class="prev-next-title"><span class="section-number">12. </span>Recap lecture</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="14_sbl.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">13. </span>The stable boundary layer</p>
+        <p class="prev-next-title"><span class="section-number">14. </span>The stable boundary layer</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
