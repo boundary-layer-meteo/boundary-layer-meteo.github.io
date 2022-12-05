@@ -20,6 +20,7 @@ $$
 \def\uwflux{\overline{u^\prime w^\prime}}
 \def\vwflux{\overline{v^\prime w^\prime}}
 \def\pd#1#2{\dfrac{\partial #1}{\partial #2}}
+\def\pdd#1#2{\dfrac{\partial^2 #1}{\partial#2^2}}
 \pd{\ubar}{t} &= - \pd{\uwflux}{z} + f \left( \vbar - v_g \right) \\
 \pd{\vbar}{t} &= - \pd{\vwflux}{z} - f \left( \ubar - u_g \right)
 $$
@@ -41,4 +42,32 @@ $$
 \pd{\vbar}{t} &= - f \left( \ubar - u_g \right)
 $$
 
+This set of equations can be reduced by taking an additional derivative to $t$ of the first equation and then substitute the second equation
+
+$$
+\pdd{\ubar}{t} + f^2 \ubar = f^2 u_g
+$$
+
+This has the analytical solution
+
+$$
+u(t) &= u_g + c_1 \sin(f t) + c_2 \cos(f t) \\
+v(t) &=       c_1 \cos(f t) - c_2 \sin(f t)
+$$
+
+where for the latter equation we have taken the derivative of the former to $t$ and used the evolution equation of $\ubar$ to acquire the equation for $v$.
+The values of the constants $c_1$ and $c_2$ are respectivily $v(0)$ and $u(0) - u_g$.
+
+We can now analyse a case study for which $u_g = 5$, and $u(0)$ and $v(0)$ are respectivily 3 and 2 m s$^{-1}$.
+If we plot the time evolution of $u$ and $v$ we find that the wind speed is increasing as time progresses, with supergeostrophic velocities after approximately 1.5 h until 12 h after sunset. In practise this means that throughout the entire night the low level jet exceeds geostrophic wind speed.
+
+```{figure} figs/llj.png
+---
+width: 600px
+name: low_level_jet
+---
+Time evolution of zonal and meridional wind in a decoupled residual layer. Left plot shows time series, right plot shows wind direction change, where later hours have a darker shade of blue.
+```
+
+## Surface-layer similarity under the influence of stability.
 *...more to come...*

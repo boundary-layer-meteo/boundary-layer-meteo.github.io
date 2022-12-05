@@ -405,6 +405,11 @@ title="Print to PDF"
    13.1. The low-level jet
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#surface-layer-similarity-under-the-influence-of-stability">
+   13.2. Surface-layer similarity under the influence of stability.
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -427,6 +432,11 @@ title="Print to PDF"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-low-level-jet">
    13.1. The low-level jet
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#surface-layer-similarity-under-the-influence-of-stability">
+   13.2. Surface-layer similarity under the influence of stability.
   </a>
  </li>
 </ul>
@@ -462,6 +472,7 @@ In such a boundary layer, if we study TKE evolution we find that buoyancy is sup
 \def\uwflux{\overline{u^\prime w^\prime}}
 \def\vwflux{\overline{v^\prime w^\prime}}
 \def\pd#1#2{\dfrac{\partial #1}{\partial #2}}
+\def\pdd#1#2{\dfrac{\partial^2 #1}{\partial#2^2}}
 \pd{\ubar}{t} &amp;= - \pd{\uwflux}{z} + f \left( \vbar - v_g \right) \\
 \pd{\vbar}{t} &amp;= - \pd{\vwflux}{z} - f \left( \ubar - u_g \right)
 \end{split}\]</div>
@@ -480,6 +491,30 @@ Therefore, the wind just above the stable boundary layer starts evolving followi
 \pd{\ubar}{t} &amp;=   f \vbar \\
 \pd{\vbar}{t} &amp;= - f \left( \ubar - u_g \right)
 \end{split}\]</div>
+<p>This set of equations can be reduced by taking an additional derivative to <span class="math notranslate nohighlight">\(t\)</span> of the first equation and then substitute the second equation</p>
+<div class="math notranslate nohighlight">
+\[
+\pdd{\ubar}{t} + f^2 \ubar = f^2 u_g
+\]</div>
+<p>This has the analytical solution</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+u(t) &amp;= u_g + c_1 \sin(f t) + c_2 \cos(f t) \\
+v(t) &amp;=       c_1 \cos(f t) - c_2 \sin(f t)
+\end{split}\]</div>
+<p>where for the latter equation we have taken the derivative of the former to <span class="math notranslate nohighlight">\(t\)</span> and used the evolution equation of <span class="math notranslate nohighlight">\(\ubar\)</span> to acquire the equation for <span class="math notranslate nohighlight">\(v\)</span>.
+The values of the constants <span class="math notranslate nohighlight">\(c_1\)</span> and <span class="math notranslate nohighlight">\(c_2\)</span> are respectivily <span class="math notranslate nohighlight">\(v(0)\)</span> and <span class="math notranslate nohighlight">\(u(0) - u_g\)</span>.</p>
+<p>We can now analyse a case study for which <span class="math notranslate nohighlight">\(u_g = 5\)</span>, and <span class="math notranslate nohighlight">\(u(0)\)</span> and <span class="math notranslate nohighlight">\(v(0)\)</span> are respectivily 3 and 2 m s<span class="math notranslate nohighlight">\(^{-1}\)</span>.
+If we plot the time evolution of <span class="math notranslate nohighlight">\(u\)</span> and <span class="math notranslate nohighlight">\(v\)</span> we find that the wind speed is increasing as time progresses, with supergeostrophic velocities after approximately 1.5 h until 12 h after sunset. In practise this means that throughout the entire night the low level jet exceeds geostrophic wind speed.</p>
+<figure class="align-default" id="low-level-jet">
+<a class="reference internal image-reference" href="../_images/llj.png"><img alt="../_images/llj.png" src="../_images/llj.png" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 13.1 </span><span class="caption-text">Time evolution of zonal and meridional wind in a decoupled residual layer. Left plot shows time series, right plot shows wind direction change, where later hours have a darker shade of blue.</span><a class="headerlink" href="#low-level-jet" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="surface-layer-similarity-under-the-influence-of-stability">
+<h2><span class="section-number">13.2. </span>Surface-layer similarity under the influence of stability.<a class="headerlink" href="#surface-layer-similarity-under-the-influence-of-stability" title="Permalink to this headline">#</a></h2>
 <p><em>…more to come…</em></p>
 </section>
 </section>
