@@ -109,11 +109,18 @@ $$
 $$
 
 There are many emperical studies around where the functions $\phi_m$ and $\phi_h$ are fitted to data.
-Some examples for $\phi_m$ are 
+Some examples fitted functions for $\phi_m$ are 
 
 $$
-\phi_m \left( \dfrac{z}{L} \right) &= 1 + 4.8 \dfrac{z}{L} \\
+\phi_m \left( \dfrac{z}{L} \right) &= 1 + 4.8 \dfrac{z}{L}
+$$
+
+for stable conditions, and
+
+$$
 \phi_m \left( \dfrac{z}{L} \right) &= \left( 1 - 19.3 \dfrac{z}{L} \right)^{-\frac{1}{4}}
 $$
+
+for unstable conditions.
 
 *...more to come...*
