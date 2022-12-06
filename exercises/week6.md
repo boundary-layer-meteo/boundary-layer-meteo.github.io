@@ -145,11 +145,6 @@ $$
 
 a) and assuming that $\overline{V(z)}=0$, find a relation between the gradient Richardson number and $z/L$, $\Phi_M$ and $\Phi_H$.
 
-```{hint}
-:class: tip, dropdown
-Remember that the Monin-Obukhov length (L) = $- \frac{u_*^3\,\overline{\theta_v}}{\kappa\,g\,\overline{w'\theta_v'}_0}$
-```
-
 <details>
   <summary>Answer</summary>
 
@@ -537,7 +532,7 @@ value of $\Phi_{\epsilon\theta}$ under neutral conditions?
 <details>
   <summary>Answer</summary>
 
-The scaling functions can be used by relating the heat flux and potential temperature gradient to the dimensionless quantities $u_*$ and $\theta_*$ (according to atmospheric surface layer scaling).
+The scaling functions can be used by relating the heat flux and potential temperature gradient to the quantities $u_*$ and $\theta_*$ (according to atmospheric surface layer scaling).
 
 $$
 \theta_* &= - \frac{\overline{w'\theta'}}{u_*}\\

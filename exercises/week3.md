@@ -140,7 +140,7 @@ Therefore, the mechanical production term is
 
 $$
 P &= - \overline{u'w'}\pafg{\overline{u}}{z} \\
-  &= {u_*}^2 \frac{u_*}{\kappa} \frac{1}{z}
+  &= {u_*}^2 \frac{u_*}{\kappa} \frac{1}{z} \\
   &= \frac{{u_*}^3}{\kappa z}
 $$
 
