@@ -4,6 +4,295 @@ $\def\afg#1#2{\dfrac{{\rm d} #1}{{\rm d} #2}}$
 $\def\gemafg#1#2{\pafg{\overline{#1}}{#2}}$
 
 ##
+The flux-gradient relationships for momentum and heat ($\Phi_M$ and $\Phi_H$)
+are related to the exchange coefficients ($K_M$ and $K_H$).
+
+a) Using the first-order closure assumption to parameterize the
+fluxes and surface layer similarity, find the relationship between
+$\Phi_M$,  $\Phi_H$ and $K_M$, $K_H$.
+
+<details>
+  <summary>Answer</summary>
+
+$$
+\overline{w'\theta'} = -K_H \gemafg{\theta}{z}
+$$
+
+but also
+
+$$
+\Phi_H &= \frac{\kappa\,z}{\theta_*}\gemafg{\theta}{z} \\
+\theta_* &= - \frac{\overline{w'\theta'}}{u_*}\\
+\Phi_H &= - \frac{\kappa\,z\,u_*}{\overline{w'\theta'}}\gemafg{\theta}{z} \\
+\overline{w'\theta'} &= - \frac{\kappa\,z\,u_*}{\Phi_H \left(\frac{z}{L}\right)}\gemafg{\theta}{z}
+$$
+
+Therefore,
+
+$$
+-K_H \gemafg{\theta}{z} &= - \frac{\kappa\,z\,u_*}{\Phi_H \left(\frac{z}{L}\right)}\gemafg{\theta}{z} \\
+K_H &= \frac{\kappa\,z\,u_*}{\Phi_H \left(\frac{z}{L}\right)}
+$$
+
+Likewise, $K_M = \frac{\kappa\,z\,u_*}{\Phi_M \left(\frac{z}{L}\right)}$.
+
+$\Phi_{H,M}$ are basically functions that are devised to introduce the effect of buoyancy on the exchange coefficient.
+The relationships between $K_{H,M}$ and $\Phi_{H,M}$ result in $\frac{K_M}{K_H}=\frac{\Phi_H\left(\frac{z}{L}\right)}{\Phi_M\left(\frac{z}{L}\right)}$
+
+</details>
+
+b)  The moisture flux can be written as
+
+$$
+\overline{w'q'}~=~-K_q \pafg{\overline{q}}{z}
+$$
+
+Knowing that
+$\Phi_Q~=~\frac{\kappa z}{q_*} \pafg{\overline{q}}{z}$,
+find a relation between the exchange coefficient and
+the flux-gradient relationship for moisture.
+
+<details>
+  <summary>Answer</summary>
+
+Similar to (a),
+
+$$
+\overline{w'q'} = -K_Q \gemafg{q}{z}
+$$
+
+but also
+
+$$
+\Phi_Q &= \frac{\kappa\,z}{q_*}\gemafg{q}{z} \\
+q_* &= - \frac{\overline{w'q'}}{u_*}\\
+\Phi_Q &= - \frac{\kappa\,z\,u_*}{\overline{w'q'}}\gemafg{q}{z} \\
+\overline{w'q'} &= - \frac{\kappa\,z\,u_*}{\Phi_Q \left(\frac{z}{L}\right)}\gemafg{q}{z}
+$$
+
+Therefore,
+
+$$
+-K_Q \gemafg{q}{z} = - \frac{\kappa\,z\,u_*}{\Phi_Q \left(\frac{z}{L}\right)}\gemafg{q}{z}
+$$
+
+$K_Q = \frac{\kappa\,z\,u_*}{\Phi_Q \left(\frac{z}{L}\right)}$
+
+</details>
+
+c) For an unstable surface layer, the flux-gradient relationship for $q$ is
+
+$$
+\Phi_Q~=~\left (1-16\frac{z}{L}\right)^{-\frac{1}{2}}
+$$
+
+Calculate the exchange coefficient at z=300 cm and for a Monin-Obukhov length scale
+equal to -1.5 m. Calculate the exchange coefficient at the same height but now under neutral
+conditions. Discuss the results in terms of mixing-length theory.
+
+($u_*=0.3~m/s,\kappa=0.4$)
+
+<details>
+  <summary>Answer</summary>
+
+For this value of $\frac{z}{L}$ (-1.5), $\Phi_Q =0.2$, so $K_Q=1.8\rm\,m^2\,s^{-1}$.
+
+In case of neutral conditions, $\Phi_Q=1$, so $K_Q=0.36\rm\,m^2\,s^{-1}$.
+
+In case of a neutral flow, the eddies are smaller.
+Since the exchange coefficient is a measure of the length scale times a velocity scale ($K = \cal L \cdot U$),
+the exchange coefficient becomes less as well and surface exchange is limited.
+
+</details>
+
+##
+
+The following picture shows some examples of characteristic shapes of plumes dispersing in various atmospheric regimes.
+
+Link each of the plume shapes with the corresponding name and with the most adequate temperature profile
+(where the dashed line is
+the adiabatic lapse rate and the continuous line is the ambient temperature).
+
+```{hint}
+:class: tip, dropdown
+Please focus on matching the plumes (1 to 5) with the profiles (A to E). The names are included for completeness. 
+```
+
+```{figure} figures/figset81.png
+:name: fig:81
+```
+
+<details>
+    <summary>Answer</summary>
+
+```{figure} figures/exercise8_1.png
+:name: fig:ans81
+Relation between atmospheric stability and plume dispersion
+```
+
+</details>
+
+##
+Assuming that the radiative divergence and the phase changes are neglectable, the equation
+for potential temperature reads
+
+$$
+\pafg{\theta}{t}+{u_j}\pafg{\theta}{x_j}~=~\nu_{\theta}\pafg{^2\theta}{x_j^2}
+$$
+
+a) Derive from this equation the governing equation of the potential temperature fluctuations $\overline{\theta'^{~2}}$.
+
+```{hint}
+:class: tip, dropdown
+
+Please note the similarity between this derivation and the derivation of the equation for $\gemafg{u'^2}{t}$, which gave us the tke equation. 
+```
+
+<details>
+  <summary>Answer</summary>
+
+Question: Governing equation for the potential temperature variance, $\gemafg{\theta'^2}{t}$
+
+Known: $\pafg{\theta}{t}+u_j\pafg{\theta}{x_j}=\nu_\theta \pafg{^2 \theta}{x_j^2}$
+
+$$
+\gemafg\theta t + \pafg{\theta'}{t}+\overline{u_j}\gemafg{\theta}{x_j} + \overline{u_j}\pafg{\theta'}{x_j}+{u_j'}\gemafg{\theta}{x_j} + {u_j'}\pafg{\theta'}{x_j} = \nu_\theta \pafg{^2 \overline{\theta}}{x_j^2} + \nu_\theta \pafg{^2 \theta'}{x_j^2}
+$$(for:58a)
+
+Reynolds averaging Equation {eq}`for:58a` leads to
+
+$$
+\gemafg\theta t +\overline{u_j}\gemafg{\theta}{x_j} + \overline{{u_j'}\pafg{\theta'}{x_j}} = \nu_\theta \pafg{^2 \overline{\theta}}{x_j^2}
+$$(for:58b)
+
+Subtracting Equation {eq}`for:58b` from Equation {eq}`for:58a` yields
+
+$$
+\pafg{\theta'}{t}+ \overline{u_j}\pafg{\theta'}{x_j}+{u_j'}\gemafg{\theta}{x_j} + {u_j'}\pafg{\theta'}{x_j} - \overline{{u_j'}\pafg{\theta'}{x_j}} = \nu_\theta \pafg{^2 \theta'}{x_j^2}
+$$
+
+This is multiplied by $2\theta'$. Combined with the knowledge that $2x{\rm d}x={\rm d}x^2$, the resulting equation is
+
+$$
+\pafg{\theta'^2}{t}+ \overline{u_j}\pafg{\theta'^2}{x_j}+2{u_j'\theta'}\gemafg{\theta}{x_j} + {u_j'}\pafg{\theta'^2}{x_j} - 2\theta'\overline{{u_j'}\pafg{\theta'}{x_j}} &= 2\theta'\nu_\theta \pafg{^2 \theta'}{x_j^2} \\
+\overline{\pafg{\theta'^2}{t}+ \overline{u_j}\pafg{\theta'^2}{x_j}+2{u_j'\theta'}\gemafg{\theta}{x_j} + {u_j'}\pafg{\theta'^2}{x_j} - 2\theta'\overline{{u_j'}\pafg{\theta'}{x_j}}} &= \overline{2\theta'\nu_\theta \pafg{^2 \theta'}{x_j^2}}
+$$
+
+$$
+\gemafg{\theta'^2}{t}+ \overline{u_j}\gemafg{\theta'^2}{x_j}+2\overline{u_j'\theta'}\gemafg{\theta}{x_j} + \overline{{u_j'}\pafg{\theta'^2}{x_j}} = 2\nu_\theta \overline{\theta' \pafg{^2 \theta'}{x_j^2} }
+$$(for:58tosubs)
+
+The last term, $2\nu_\theta \overline{\theta' \pafg{^2 \theta'}{x_j^2} }$, can be rewritten,
+similar to the equations of $u'^2$.
+To do this, it should be expressed as a function of $\pafg{\theta'}{x_j}$ and $\pafg{^2\theta'^2}{x_j^2}$.
+To tackle this, take a look at the $2^{\rm nd}$ derivative of $\theta'^2$. This results in
+
+$$
+\pafg{^2\theta'^2}{x_j^2} &= \pafg{}{x_j}\pafg{\theta'^2}{x_j}\\
+&= \pafg{}{x_j}\left(2\theta'\pafg{\theta'}{x_j}\right) \\
+&= 2 \left(\pafg{\theta'}{x_j}\right)^2 + 2 \theta' \pafg{^2\theta'}{x_j^2}
+$$
+
+Rearranging shows that
+
+$$
+2 \theta' \pafg{^2\theta'}{x_j'^2} = \pafg{^2\theta'^2}{x_j^2} - 2 \left(\pafg{\theta'}{x_j}\right)^2
+$$
+
+Since $\left|\pafg{^2\theta'^2}{x_j^2}\right|\ll \left|2 \theta' \pafg{^2\theta'}{x_j^2}\right|$ and $\epsilon_\theta =\nu_\theta\left(\pafg{\theta'}{x_j}\right)^2$, this shows that
+
+$$
+2 \nu_\theta \theta' \pafg{^2\theta'}{x_j^2} = - 2 \epsilon_\theta
+$$(for:58subs1)
+
+Another term of Equation {eq}`for:58tosubs` that can be rewritten is ${u_j'}\pafg{\theta'^2}{x_j}$.
+Since $\pafg{u_j'}{x_j}=0$ due to incompressibility of the flow,
+
+$$
+{u_j'}\pafg{\theta'^2}{x_j} &= \pafg{u_j'\theta'^2}{x_j} - \theta'^2 \pafg{u_j'}{x_j}\\
+{u_j'}\pafg{\theta'^2}{x_j} &= \pafg{u_j'\theta'^2}{x_j}
+$$(for:58subs2)
+
+Combining Equations {eq}`for:58tosubs`, {eq}`for:58subs1` and {eq}`for:58subs2` yields
+
+$$
+\underbrace{\gemafg{\theta'^2}{t}}_{\rm Tendency}+ \underbrace{\overline{u_j}\gemafg{\theta'^2}{x_j}}_{\rm Advection}+\underbrace{2\overline{u_j'\theta'}\gemafg{\theta}{x_j}}_{\rm Production} + \underbrace{\gemafg{{u_j'}\theta'^2}{x_j}}_{Turbulent\ transport} = \underbrace{- 2 \epsilon_\theta}_{\rm Dissipation}
+$$(for:58afinal)
+
+</details>
+
+b) From the general expression, write the simplify equation if one assumes: steady-state, no advection, horizontal
+homogeneity and the turbulent transport of $\overline{\theta'^{~2}}$ is neglectable.
+
+<details>
+  <summary>Answer</summary>
+
+In the case of steady state, the derivatives to $t$ become zero.
+If a horizontal homogeneous situation is studied, the derivatives to $x$ and $y$ of Reynolds averaged quantities vanish as well.
+Therefore, Equation {eq}`for:58afinal` turns in
+
+$$
+\overline{w}\gemafg{\theta'^2}{z}+2\overline{w'\theta'}\gemafg{\theta}{z} + {\gemafg{{w'}\theta'^2}{z}} = - 2 \epsilon_\theta
+$$
+
+In case of no subsidence, $\overline{w}=0$.
+This eliminates the only form of transport by advection, since the case under study is horizontally homogeneous. Therefore,
+
+$$
+2\overline{w'\theta'}\gemafg{\theta}{z} + {\gemafg{{w'}\theta'^2}{z}} = - 2 \epsilon_\theta
+$$
+
+Generally, $3^{\rm rd}$-order moments are small compared to the other terms in the atmospheric boundary layer. This also holds true for the turbulent transport of potential temperature variance, $\overline{{w'}\theta'^2}$. Using this assumption, the final equation is
+
+$$
+\overline{w'\theta'}\gemafg{\theta}{z} = - \epsilon_\theta
+$$(for:58breal)
+
+</details>
+
+c) By using the similarity theory scaling functions
+
+$$
+\Phi_H~=~\frac{\kappa z}{\theta_*} \pafg{\overline{\theta}}{z}~~~~~~~~
+\Phi_{\epsilon\theta}~=~\frac{\kappa z}{u_*\theta_*^2} \epsilon_{\theta},
+$$
+
+find the dimensionless form of the equation derived in question b. Discuss the result. What is the
+value of $\Phi_{\epsilon\theta}$ under neutral conditions?
+
+<details>
+  <summary>Answer</summary>
+
+The scaling functions can be used by relating the heat flux and potential temperature gradient to the quantities $u_*$ and $\theta_*$ (according to atmospheric surface layer scaling).
+
+$$
+\theta_* &= - \frac{\overline{w'\theta'}}{u_*}\\
+\Phi_H &= \frac{\kappa\,z}{\theta_*}\gemafg{\theta}{z}
+$$
+
+Rewriting results in
+
+$$
+\overline{w'\theta'} &= - u_* \theta_*\\
+\gemafg{\theta}{z} &= \frac{\Phi_H\,\theta_*}{\kappa\,z}
+$$
+
+Substituting these relations into Equation {eq}`for:58breal` results in
+
+$$
+- u_* \theta_* \frac{\Phi_H\,\theta_*}{\kappa\,z} &= - \epsilon_\theta\\
+  \Phi_H &= \frac{\kappa\,z}{u_*\theta_*^2}\epsilon_\theta
+  $$
+
+In the end, $\Phi_H=\Phi_{\epsilon\theta}$.
+
+The result shows that, under the conditions that are assumed, all heat that is gained by turbulent transport is dissipated by diffusion.
+
+Under neutral conditions, all flux-gradient relationships are equal to 1.
+
+</details>
+
+##
 Assuming that the potential temperature increases with height,
 find the potential temperature at the top of a turbulent layer which becomes laminar at a height of 20 m. The wind profile is given by:
 
@@ -186,10 +475,10 @@ the final result is ${\rm Ri}_g=\frac{\Phi_h}{\Phi_m^2}\frac{z}{L}$
 b) Under very stable conditions $\Phi_M~=~ \alpha_M\frac{z}{L}$ and $\Phi_H~=~ \alpha_H\frac{z}{L}$ where ($\alpha_M=\alpha_H \approx 5$).
 Discuss the value of the Richardson number under this condition.
 
-<details>
-  <summary>Answer</summary>
+```{hint}
+:class: tip, dropdown
 
-Typical stability functions, as given by {cite}`stull1988introduction` are
+Typical stability functions are
 
 $$
 \Phi_m &= 1 +\left(\frac{4.7z}{L}\right)\\
@@ -197,6 +486,11 @@ $$
 $$
 
 For very stable conditions, $\frac{z}{L}\gg 1$, so $\Phi_m \approx \Phi_h$ with a value of $4.7\frac{z}{L}$.
+
+```
+
+<details>
+  <summary>Answer</summary>
 
 Under these very stable conditions, substituting the $\Phi$-functions, 
 it can be seen that 
@@ -209,108 +503,6 @@ When taking the limit to very high or very low $\frac{z}{L}$, the functions are 
 
 </details>
 
-
-##
-The flux-gradient relationships for momentum and heat ($\Phi_M$ and $\Phi_H$)
-are related to the exchange coefficients ($K_M$ and $K_H$).
-
-a) Using the first-order closure assumption to parameterize the
-fluxes and surface layer similarity, find the relationship between
-$\Phi_M$,  $\Phi_H$ and $K_M$, $K_H$.
-
-<details>
-  <summary>Answer</summary>
-
-$$
-\overline{w'\theta'} = -K_H \gemafg{\theta}{z}
-$$
-
-but also
-
-$$
-\Phi_H &= \frac{\kappa\,z}{\theta_*}\gemafg{\theta}{z} \\
-\theta_* &= - \frac{\overline{w'\theta'}}{u_*}\\
-\Phi_H &= - \frac{\kappa\,z\,u_*}{\overline{w'\theta'}}\gemafg{\theta}{z} \\
-\overline{w'\theta'} &= - \frac{\kappa\,z\,u_*}{\Phi_H \left(\frac{z}{L}\right)}\gemafg{\theta}{z}
-$$
-
-Therefore, 
-
-$$
--K_H \gemafg{\theta}{z} &= - \frac{\kappa\,z\,u_*}{\Phi_H \left(\frac{z}{L}\right)}\gemafg{\theta}{z} \\
-K_H &= \frac{\kappa\,z\,u_*}{\Phi_H \left(\frac{z}{L}\right)}
-$$
-
-Likewise, $K_M = \frac{\kappa\,z\,u_*}{\Phi_M \left(\frac{z}{L}\right)}$.
-
-$\Phi_{H,M}$ are basically functions that are devised to introduce the effect of buoyancy on the exchange coefficient. 
-The relationships between $K_{H,M}$ and $\Phi_{H,M}$ result in $\frac{K_M}{K_H}=\frac{\Phi_H\left(\frac{z}{L}\right)}{\Phi_M\left(\frac{z}{L}\right)}$
-
-</details>
-
-b)  The moisture flux can be written as
-
-$$
-\overline{w'q'}~=~-K_q \pafg{\overline{q}}{z}
-$$
-
-Knowing that
-$\Phi_Q~=~\frac{\kappa z}{q_*} \pafg{\overline{q}}{z}$,
-find a relation between the exchange coefficient and
-the flux-gradient relationship for moisture.
-
-<details>
-  <summary>Answer</summary>
-
-Similar to (a),
-
-$$
-\overline{w'q'} = -K_Q \gemafg{q}{z}
-$$
-
-but also
-
-$$
-\Phi_Q &= \frac{\kappa\,z}{q_*}\gemafg{q}{z} \\
-q_* &= - \frac{\overline{w'q'}}{u_*}\\
-\Phi_Q &= - \frac{\kappa\,z\,u_*}{\overline{w'q'}}\gemafg{q}{z} \\
-\overline{w'q'} &= - \frac{\kappa\,z\,u_*}{\Phi_Q \left(\frac{z}{L}\right)}\gemafg{q}{z}
-$$
-
-Therefore, 
-
-$$
--K_Q \gemafg{q}{z} = - \frac{\kappa\,z\,u_*}{\Phi_Q \left(\frac{z}{L}\right)}\gemafg{q}{z} 
-$$
-
-$K_Q = \frac{\kappa\,z\,u_*}{\Phi_Q \left(\frac{z}{L}\right)}$
-
-</details>
-
-c) For an unstable surface layer, the flux-gradient relationship for $q$ is
-
-$$
-\Phi_Q~=~\left (1-16\frac{z}{L}\right)^{-\frac{1}{2}}
-$$
-
-Calculate the exchange coefficient at z=300 cm and for a Monin-Obukhov length scale
-equal to -1.5 m. Calculate the exchange coefficient at the same height but now under neutral
-conditions. Discuss the results in terms of mixing-length theory.
-
-($u_*=0.3~m/s,\kappa=0.4$)
-
-<details>
-  <summary>Answer</summary>
-
-For this value of $\frac{z}{L}$ (-1.5), $\Phi_Q =0.2$, so $K_Q=1.8\rm\,m^2\,s^{-1}$.
-
-In case of neutral conditions, $\Phi_Q=1$, so $K_Q=0.36\rm\,m^2\,s^{-1}$.
-
-In case of a neutral flow, the eddies are smaller. 
-Since the exchange coefficient is a measure of the length scale times a velocity scale ($K = \cal L \cdot U$), 
-the exchange coefficient becomes less as well and surface exchange is limited.
-
-</details>
 
 ##
 In a fertilized field a constant flux of nitric oxide ($NO$) has been measured
@@ -401,189 +593,3 @@ Substituting the values that are given results in $z=60.5\rm\,cm$
 
 </details>
 
-##
-Assuming that the radiative divergence and the phase changes are neglectable, the equation
-for temperature reads
-
-$$
-\pafg{\theta}{t}+{u_j}\pafg{\theta}{x_j}~=~\nu_{\theta}\pafg{^2\theta}{x_j^2}
-$$
-
-a) Derive from this equation the governing equation of the temperature fluctuations $\overline{\theta'^{~2}}$.
-
-```{hint}
-:class: tip, dropdown
-
-Please note the similarity between this derivation and the derivation of the equation for $\gemafg{u'^2}{t}$, which gave us the tke equation. 
-```
-
-<details>
-  <summary>Answer</summary>
-
-Question: Governing equation for the potential temperature variance, $\gemafg{\theta'^2}{t}$
-
-Known: $\pafg{\theta}{t}+u_j\pafg{\theta}{x_j}=\nu_\theta \pafg{^2 \theta}{x_j^2}$
-
-$$
-\gemafg\theta t + \pafg{\theta'}{t}+\overline{u_j}\gemafg{\theta}{x_j} + \overline{u_j}\pafg{\theta'}{x_j}+{u_j'}\gemafg{\theta}{x_j} + {u_j'}\pafg{\theta'}{x_j} = \nu_\theta \pafg{^2 \overline{\theta}}{x_j^2} + \nu_\theta \pafg{^2 \theta'}{x_j^2} 
-$$(for:58a)
-
-Reynolds averaging Equation {eq}`for:58a` leads to
-
-$$
-\gemafg\theta t +\overline{u_j}\gemafg{\theta}{x_j} + \overline{{u_j'}\pafg{\theta'}{x_j}} = \nu_\theta \pafg{^2 \overline{\theta}}{x_j^2} 
-$$(for:58b)
-
-Subtracting Equation {eq}`for:58b` from Equation {eq}`for:58a` yields
-
-$$
-\pafg{\theta'}{t}+ \overline{u_j}\pafg{\theta'}{x_j}+{u_j'}\gemafg{\theta}{x_j} + {u_j'}\pafg{\theta'}{x_j} - \overline{{u_j'}\pafg{\theta'}{x_j}} = \nu_\theta \pafg{^2 \theta'}{x_j^2}
-$$
-
-This is multiplied by $2\theta'$. Combined with the knowledge that $2x{\rm d}x={\rm d}x^2$, the resulting equation is 
-
-$$
-\pafg{\theta'^2}{t}+ \overline{u_j}\pafg{\theta'^2}{x_j}+2{u_j'\theta'}\gemafg{\theta}{x_j} + {u_j'}\pafg{\theta'^2}{x_j} - 2\theta'\overline{{u_j'}\pafg{\theta'}{x_j}} &= 2\theta'\nu_\theta \pafg{^2 \theta'}{x_j^2} \\
-\overline{\pafg{\theta'^2}{t}+ \overline{u_j}\pafg{\theta'^2}{x_j}+2{u_j'\theta'}\gemafg{\theta}{x_j} + {u_j'}\pafg{\theta'^2}{x_j} - 2\theta'\overline{{u_j'}\pafg{\theta'}{x_j}}} &= \overline{2\theta'\nu_\theta \pafg{^2 \theta'}{x_j^2}} 
-$$
-
-$$
-\gemafg{\theta'^2}{t}+ \overline{u_j}\gemafg{\theta'^2}{x_j}+2\overline{u_j'\theta'}\gemafg{\theta}{x_j} + \overline{{u_j'}\pafg{\theta'^2}{x_j}} = 2\nu_\theta \overline{\theta' \pafg{^2 \theta'}{x_j^2} } 
-$$(for:58tosubs)
-
-The last term, $2\nu_\theta \overline{\theta' \pafg{^2 \theta'}{x_j^2} }$, can be rewritten, 
-similar to the equations of $u'^2$. 
-To do this, it should be expressed as a function of $\pafg{\theta'}{x_j}$ and $\pafg{^2\theta'^2}{x_j^2}$. 
-To tackle this, take a look at the $2^{\rm nd}$ derivative of $\theta'^2$. This results in 
-
-$$
-\pafg{^2\theta'^2}{x_j^2} &= \pafg{}{x_j}\pafg{\theta'^2}{x_j}\\
-  &= \pafg{}{x_j}\left(2\theta'\pafg{\theta'}{x_j}\right) \\
-  &= 2 \left(\pafg{\theta'}{x_j}\right)^2 + 2 \theta' \pafg{^2\theta'}{x_j^2}
-$$
-
-Rearranging shows that
-
-$$
-2 \theta' \pafg{^2\theta'}{x_j'^2} = \pafg{^2\theta'^2}{x_j^2} - 2 \left(\pafg{\theta'}{x_j}\right)^2
-$$
-
-Since $\left|\pafg{^2\theta'^2}{x_j^2}\right|\ll \left|2 \theta' \pafg{^2\theta'}{x_j^2}\right|$ and $\epsilon_\theta =\nu_\theta\left(\pafg{\theta'}{x_j'}\right)^2$, this shows that
-
-$$
-2 \nu_\theta \theta' \pafg{^2\theta'}{x_j^2} = - 2 \epsilon_\theta 
-$$(for:58subs1)
-
-Another term of Equation {eq}`for:58tosubs` that can be rewritten is ${u_j'}\pafg{\theta'^2}{x_j}$. 
-Since $\pafg{u_j'}{x_j}=0$ due to incompressibility of the flow,
-
-$$
-{u_j'}\pafg{\theta'^2}{x_j} &= \pafg{u_j'\theta'^2}{x_j} - \theta'^2 \pafg{u_j'}{x_j}\\ 
-{u_j'}\pafg{\theta'^2}{x_j} &= \pafg{u_j'\theta'^2}{x_j} 
-$$(for:58subs2)
-
-Combining Equations {eq}`for:58tosubs`, {eq}`for:58subs1` and {eq}`for:58subs2` yields
-
-$$
-\underbrace{\gemafg{\theta'^2}{t}}_{\rm Tendency}+ \underbrace{\overline{u_j}\gemafg{\theta'^2}{x_j}}_{\rm Advection}+\underbrace{2\overline{u_j'\theta'}\gemafg{\theta}{x_j}}_{\rm Production} + \underbrace{\gemafg{{u_j'}\theta'^2}{x_j}}_{Turbulent\ transport} = \underbrace{- 2 \epsilon_\theta}_{\rm Dissipation} 
-$$(for:58afinal)
-
-</details>
-
-b) From the general expression, write the simplify equation if one assumes: steady-state, no advection, horizontal
-homogeneity and the turbulent transport of $\overline{\theta'^{~2}}$ is neglectable.
-
-<details>
-  <summary>Answer</summary>
-
-In the case of steady state, the derivatives to $t$ become zero. 
-If a horizontal homogeneous situation is studied, the derivatives to $x$ and $y$ of Reynolds averaged quantities vanish as well. 
-Therefore, Equation {eq}`for:58afinal` turns in 
-
-$$
-\overline{w}\gemafg{\theta'^2}{z}+2\overline{w'\theta'}\gemafg{\theta}{z} + {\gemafg{{w'}\theta'^2}{z}} = - 2 \epsilon_\theta
-$$
-
-In case of no subsidence, $\overline{w}=0$. 
-This eliminates the only form of transport by advection, since the case under study is horizontally homogeneous. Therefore,
-
-$$
-2\overline{w'\theta'}\gemafg{\theta}{z} + {\gemafg{{w'}\theta'^2}{z}} = - 2 \epsilon_\theta
-$$
-
-Generally, $3^{\rm rd}$-order moments are small compared to the other terms in the atmospheric boundary layer. This also holds true for the turbulent transport of potential temperature variance, $\overline{{w'}\theta'^2}$. Using this assumption, the final equation is
-
-$$
-\overline{w'\theta'}\gemafg{\theta}{z} = - \epsilon_\theta 
-$$(for:58breal)
-
-</details>
-
-c) By using the similarity theory scaling functions
-
-$$
-\Phi_H~=~\frac{\kappa z}{\theta_*} \pafg{\overline{\theta}}{z}~~~~~~~~
-\Phi_{\epsilon\theta}~=~\frac{\kappa z}{u_*\theta_*^2} \epsilon_{\theta},
-$$
-
-find the dimensionless equation for $\overline{\theta'^{~2}}$. Discuss the result. What is the
-value of $\Phi_{\epsilon\theta}$ under neutral conditions?
-
-<details>
-  <summary>Answer</summary>
-
-The scaling functions can be used by relating the heat flux and potential temperature gradient to the quantities $u_*$ and $\theta_*$ (according to atmospheric surface layer scaling).
-
-$$
-\theta_* &= - \frac{\overline{w'\theta'}}{u_*}\\
-\Phi_H &= \frac{\kappa\,z}{\theta_*}\gemafg{\theta}{z}
-$$
-
-Rewriting results in
-
-$$
-\overline{w'\theta'} &= - u_* \theta_*\\
-\gemafg{\theta}{z} &= \frac{\Phi_H\,\theta_*}{\kappa\,z}
-$$
-
-Substituting these relations into Equation {eq}`for:58breal` results in
-
-$$
-- u_* \theta_* \frac{\Phi_H\,\theta_*}{\kappa\,z} &= - \epsilon_\theta\\
-\Phi_H &= \frac{\kappa\,z}{u_*\theta_*^2}\epsilon_\theta
-$$
-
-In the end, $\Phi_H=\Phi_{\epsilon\theta}$.
-
-The result shows that, under the conditions that are assumed, all heat that is gained by turbulent transport is dissipated by diffusion.
-
-Under neutral conditions, all flux-gradient relationships are equal to 1.
-
-</details>
-
-##
-
-The following picture shows some examples of characteristic shapes of plumes dispersing in various atmospheric regimes.
-
-Link each of the plume shapes with the corresponding name and with the most adequate temperature profile 
-(where the dashed line is
-the adiabatic lapse rate and the continuous line is the ambient temperature).
-
-```{hint}
-:class: tip, dropdown
-Please focus on matching the plumes (1 to 5) with the profiles (A to E). The names are included for completeness. 
-```
-
-```{figure} figures/figset81.png
-:name: fig:81
-```
-
-<details>
-    <summary>Answer</summary>
-
-```{figure} figures/exercise8_1.png
-:name: fig:ans81
-Relation between atmospheric stability and plume dispersion
-```
-
-</details>
