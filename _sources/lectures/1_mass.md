@@ -18,9 +18,9 @@ We can write out the balance:
 
 $$
 \rho_{x, y, z, t+\delta t} \, \delta x \, \delta y \, \delta z - \rho_{x, y, z, t} \, \delta x \, \delta y \, \delta z
-&= \left( \rho u \right)_{x, y, z, t} \, \delta y \, \delta z \, \delta t &- \left( \rho u \right)_{x + \delta x, y, z, t} \, \delta y \, \delta z \, \delta t \\
-&+ \left( \rho v \right)_{x, y, z, t} \, \delta x \, \delta z \, \delta t &- \left( \rho v \right)_{x, y + \delta y, z, t} \, \delta x \, \delta z \, \delta t \\
-&+ \left( \rho w \right)_{x, y, z, t} \, \delta x \, \delta y \, \delta t &- \left( \rho w \right)_{x, y, z + \delta z, t} \, \delta x \, \delta y \, \delta t
+&= \left( \rho u \right)_{x, y, z, t} \, \delta y \, \delta z \, \delta t - \left( \rho u \right)_{x + \delta x, y, z, t} \, \delta y \, \delta z \, \delta t \\
+&+ \left( \rho v \right)_{x, y, z, t} \, \delta x \, \delta z \, \delta t - \left( \rho v \right)_{x, y + \delta y, z, t} \, \delta x \, \delta z \, \delta t \\
+&+ \left( \rho w \right)_{x, y, z, t} \, \delta x \, \delta y \, \delta t - \left( \rho w \right)_{x, y, z + \delta z, t} \, \delta x \, \delta y \, \delta t
 $$
 
 If we assume that the box and the time step are infinitisimal, then we can use a Taylor expansions of the following kind, to substitute in the differences that are calculated in the equation above.

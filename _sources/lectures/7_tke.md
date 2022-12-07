@@ -2,7 +2,7 @@
 
 ```{admonition} Questions to be answered
 1. What is the difference between mean and turbulence kinetic energy?
-1. What is the physical interpretation of the term $\overline{u_i^{\prime 2}$?
+1. What is the physical interpretation of the term $\overline{u_i^{\prime 2}}$?
 1. Which steps do we take to derive the conservation equation for turbulence kinetic energy?
 ```
 
