@@ -21,6 +21,8 @@ parts:
      - file: lectures/12_dummy
      - file: lectures/13_spectra
      - file: lectures/14_sbl
+     - file: lectures/15_sbl_ii
+     - file: lectures/16_dummy
        #- file: atmospheric_stability
 #     - file: lectures/temperature
 #   - caption: Theory

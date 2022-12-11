@@ -1,4 +1,4 @@
-# The stable boundary layer
+# The stable boundary layer (i)
 
 ```{admonition} Questions to be answered in this chapter
 1. What is a stable boundary layer?
@@ -70,4 +70,65 @@ Time evolution of zonal and meridional wind in a decoupled residual layer. Figur
 ```
 
 ## Surface-layer similarity under the influence of stability.
-*...more to come...*
+Although we learned about surface layer similarity for a neutral surface layer, in reality, the surface layer is mostly non neutral. We can define a special form of the Richardson number that assumes that fluxes are approximately constant in the surface layer. Note that in this form, we assume that the wind is aligned such that there is only a $u$-component and no $v$.
+
+$$
+Ri_\mathrm{f} =
+\dfrac{\dfrac{g}{\overline{\theta}_\mathrm{v}} \overline{ w^\prime \theta_\mathrm{v}^\prime}}
+{\overline{u^\prime w^\prime} \pd{\ubar}{z}}
+=
+\dfrac{\dfrac{g}{\overline{\theta}_\mathrm{v}} \overline{ w^\prime \theta_\mathrm{v}^\prime}}
+{- u_*^2 \dfrac{u_*}{\kappa z}}
+=
+- \dfrac{ \kappa z \dfrac{g}{\overline{\theta}_\mathrm{v}} \overline{ w^\prime \theta_\mathrm{v}^\prime}}
+{u_*^3}
+= \dfrac{z}{L}
+$$
+
+where $L$ is the famous Obukhov length
+
+```{admonition} Obukhov length
+$$
+L \equiv - \dfrac{u_*^3}{\kappa \dfrac{g}{\overline{\theta}_\mathrm{v}} \overline{ w^\prime \theta_\mathrm{v}^\prime}}
+$$
+
+The Obukhov length $L$ is the height above the surface where the buoyancy and shear contribution to the TKE evolution are equal in magnitude.
+```
+
+Obukhov discovered that one can write the dimensionless wind gradient $\phi_m$ as
+
+$$
+\dfrac{\kappa z}{u_*} \pd{\ubar}{z} = \phi_m \left( \dfrac{z}{L} \right)
+$$
+
+and that the value of $\phi_m$ under neutral conditions is unity. Similarly, we can compute the dimensionless gradient $\phi_h$ of potential temperature, where we use $\theta_* = \overline{w^\prime \theta^\prime} / u_*$, and for which the value is also unity under neutral conditions.
+
+$$
+\dfrac{\kappa z}{\theta_*} \pd{\overline{\theta}}{z} &= \phi_h \left( \dfrac{z}{L} \right) \\
+\dfrac{\kappa z u_*}{\overline{w^\prime \theta^\prime}} \pd{\overline{\theta}}{z} &= \phi_h \left( \dfrac{z}{L} \right)
+$$
+
+There are many empirical studies around where the functions $\phi_m$ and $\phi_h$ are fitted to data.
+Some examples fitted functions for $\phi_m$ are 
+
+$$
+\phi_m \left( \dfrac{z}{L} \right) = 1 + 4.8 \dfrac{z}{L}
+$$
+
+for stable conditions, and
+
+$$
+\phi_m \left( \dfrac{z}{L} \right) = \left( 1 - 19.3 \dfrac{z}{L} \right)^{-\frac{1}{4}}
+$$
+
+for unstable conditions.
+
+The figure below from Wallace and Hobbs shows how the logarithmic profile is altered by stability.
+
+```{figure} figs/wind_profile.png
+---
+width: 400px
+name: The logarithmic wind profile.
+---
+```
+
