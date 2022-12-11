@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>19. Exercises week 5 &#8212; Boundary-Layer Meteorology</title>
+    <title>21. Exercises week 5 &#8212; Boundary-Layer Meteorology</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -54,8 +54,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="20. Exercises week 6" href="week6.html" />
-    <link rel="prev" title="18. Exercises week 4" href="week4.html" />
+    <link rel="next" title="22. Exercises week 6" href="week6.html" />
+    <link rel="prev" title="20. Exercises week 4" href="week4.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -188,7 +188,17 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../lectures/14_sbl.html">
-   14. The stable boundary layer
+   14. The stable boundary layer (i)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/15_sbl_ii.html">
+   15. The stable boundary layer (ii)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/16_dummy.html">
+   16. Recap lecture
   </a>
  </li>
 </ul>
@@ -200,32 +210,32 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="week1.html">
-   15. Exercises week 1
+   17. Exercises week 1
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="week2.html">
-   16. Exercises week 2
+   18. Exercises week 2
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="week3.html">
-   17. Exercises week 3
+   19. Exercises week 3
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="week4.html">
-   18. Exercises week 4
+   20. Exercises week 4
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   19. Exercises week 5
+   21. Exercises week 5
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="week6.html">
-   20. Exercises week 6
+   22. Exercises week 6
   </a>
  </li>
 </ul>
@@ -407,37 +417,37 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id1">
-   19.1.
+   21.1.
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id2">
-   19.2.
+   21.2.
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id3">
-   19.3.
+   21.3.
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id4">
-   19.4.
+   21.4.
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id5">
-   19.5.
+   21.5.
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id6">
-   19.6.
+   21.6.
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id7">
-   19.7.
+   21.7.
   </a>
  </li>
 </ul>
@@ -461,37 +471,37 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id1">
-   19.1.
+   21.1.
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id2">
-   19.2.
+   21.2.
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id3">
-   19.3.
+   21.3.
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id4">
-   19.4.
+   21.4.
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id5">
-   19.5.
+   21.5.
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id6">
-   19.6.
+   21.6.
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id7">
-   19.7.
+   21.7.
   </a>
  </li>
 </ul>
@@ -505,12 +515,12 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="exercises-week-5">
-<h1><span class="section-number">19. </span>Exercises week 5<a class="headerlink" href="#exercises-week-5" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">21. </span>Exercises week 5<a class="headerlink" href="#exercises-week-5" title="Permalink to this headline">#</a></h1>
 <p><span class="math notranslate nohighlight">\(\def\pafg#1#2{\dfrac{\partial #1}{\partial #2}}\)</span>
 <span class="math notranslate nohighlight">\(\def\afg#1#2{\dfrac{{\rm d} #1}{{\rm d} #2}}\)</span>
 <span class="math notranslate nohighlight">\(\def\gemafg#1#2{\pafg{\overline{#1}}{#2}}\)</span></p>
 <section id="id1">
-<h2><span class="section-number">19.1. </span><a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">21.1. </span><a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
 <p>The following figure shows the raw observation of the wind speed.</p>
 <figure class="align-default" id="fig51">
 <img alt="../_images/figset51.png" src="../_images/figset51.png" />
@@ -525,41 +535,41 @@ In this exercise, not the angular frequencies, <span class="math notranslate noh
 In these equations <span class="math notranslate nohighlight">\(T\)</span> and <span class="math notranslate nohighlight">\(\lambda\)</span> denote the corresponding period and length scale.
 The periods that seem most important are 1 minute and 0.1 minute (6 s).
 The signal with a time scale of 1 minute contains most energy.
-The corresponding sketch is shown in <a class="reference internal" href="#fig411"><span class="std std-numref">Fig. 19.1</span></a>.</p>
+The corresponding sketch is shown in <a class="reference internal" href="#fig411"><span class="std std-numref">Fig. 21.1</span></a>.</p>
 <figure class="align-default" id="fig411">
 <img alt="../_images/exercise4_1_1.png" src="../_images/exercise4_1_1.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 19.1 </span><span class="caption-text">Spectrum of the wind velocity as a function of time.</span><a class="headerlink" href="#fig411" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 21.1 </span><span class="caption-text">Spectrum of the wind velocity as a function of time.</span><a class="headerlink" href="#fig411" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>The conversion from time period to frequency is straight forward.
 However, the dependency on the wave number is a bit harder.</p>
 <div class="math notranslate nohighlight" id="equation-for-41a">
-<span class="eqno">(19.1)<a class="headerlink" href="#equation-for-41a" title="Permalink to this equation">#</a></span>\[\begin{split}
+<span class="eqno">(21.1)<a class="headerlink" href="#equation-for-41a" title="Permalink to this equation">#</a></span>\[\begin{split}
 \overline{v}&amp;=\lambda f\\
 &amp;= \frac{f}{\nu}\\
 \nu &amp;= \frac{f}{\overline{v}}
 \end{split}\]</div>
 <p>Since <span class="math notranslate nohighlight">\(\overline{v} = 5\rm\,m\,s^{-1}\)</span> according to the observations, it is known that <span class="math notranslate nohighlight">\(\nu = \frac{f}{\overline{v}} = f \frac{1}{5\rm\,m\,s^{-1}} = f \frac{1}{300} \rm\frac{min}{m}\)</span>.
-According to Taylor’s frozen turbulence assumption, <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(\nu\)</span> are proportional to each other (Equation <a class="reference internal" href="#equation-for-41a">(19.1)</a>).
-Therefore, the sketch for these two variables are combined in <a class="reference internal" href="#fig412"><span class="std std-numref">Fig. 19.2</span></a>.</p>
+According to Taylor’s frozen turbulence assumption, <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(\nu\)</span> are proportional to each other (Equation <a class="reference internal" href="#equation-for-41a">(21.1)</a>).
+Therefore, the sketch for these two variables are combined in <a class="reference internal" href="#fig412"><span class="std std-numref">Fig. 21.2</span></a>.</p>
 <figure class="align-default" id="fig412">
 <img alt="../_images/exercise4_1_2.png" src="../_images/exercise4_1_2.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 19.2 </span><span class="caption-text">Spectrum of the wind velocity as a function of frequency, <span class="math notranslate nohighlight">\(f\)</span>, and wave number, <span class="math notranslate nohighlight">\(\nu\)</span>.</span><a class="headerlink" href="#fig412" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 21.2 </span><span class="caption-text">Spectrum of the wind velocity as a function of frequency, <span class="math notranslate nohighlight">\(f\)</span>, and wave number, <span class="math notranslate nohighlight">\(\nu\)</span>.</span><a class="headerlink" href="#fig412" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </details>
 </section>
 <section id="id2">
-<h2><span class="section-number">19.2. </span><a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">21.2. </span><a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h2>
 <p>The spectra of the vertical velocity was calculated from sonic measurements
 taken under convective conditions
 at Cabauw (23 August 2001 at 12 UTC).</p>
 <figure class="align-default" id="fig52">
 <img alt="../_images/figset52.png" src="../_images/figset52.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 19.3 </span><span class="caption-text">Power spectra of the vertical velocity measured by means of a sonic at 2 m
+<p><span class="caption-number">Fig. 21.3 </span><span class="caption-text">Power spectra of the vertical velocity measured by means of a sonic at 2 m
 at Cabauw during the 23th August 2001</span><a class="headerlink" href="#fig52" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
@@ -658,7 +668,7 @@ A normal PC (or even standard super computer) can not perform these calculations
 </details>
 </section>
 <section id="id3">
-<h2><span class="section-number">19.3. </span><a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">21.3. </span><a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h2>
 <p>The figures below show the vertical profiles of potential temperature and wind speed
 observed at the Southern Great Plains in USA during the night of 20th June 1997. By analyzing them
 we can determine some of the main characteristics of the nocturnal boundary layer.</p>
@@ -738,20 +748,20 @@ g&amp;= 9.81\rm\,m\,s^{-2}\\
 </details>
 </section>
 <section id="id4">
-<h2><span class="section-number">19.4. </span><a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">21.4. </span><a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h2>
 <p>These vertical profiles for potential temperature were measured in USA
 at 00.07 and 04.02 local time during the field experiment CASES-99.
 Focusing mainly on the sounding observations:</p>
 <figure class="align-default" id="fig-71">
 <img alt="../_images/figset71.png" src="../_images/figset71.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 19.4 </span><span class="caption-text">Potential temperature profile at 00.07 LT.</span><a class="headerlink" href="#fig-71" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 21.4 </span><span class="caption-text">Potential temperature profile at 00.07 LT.</span><a class="headerlink" href="#fig-71" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="fig-72">
 <img alt="../_images/figset72.png" src="../_images/figset72.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 19.5 </span><span class="caption-text">Potential temperature profile at 04.02 LT.</span><a class="headerlink" href="#fig-72" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 21.5 </span><span class="caption-text">Potential temperature profile at 04.02 LT.</span><a class="headerlink" href="#fig-72" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Describe both profiles of the potential temperature. Estimate the
@@ -760,14 +770,14 @@ temperature from the surface to the top of the boundary layer.</p>
 <details>
   <summary>Answer</summary>
 <p>Both profiles are stable boundary layers.</p>
-<p><a class="reference internal" href="#fig-71"><span class="std std-numref">Fig. 19.4</span></a> shows a boundary layer with a height of 140 m. In this layer, the potential temperature gradient, <span class="math notranslate nohighlight">\(\gemafg{\theta}{z}\)</span>, is equal to 57 K km<span class="math notranslate nohighlight">\(^{-1}\)</span>.</p>
-<p><a class="reference internal" href="#fig-72"><span class="std std-numref">Fig. 19.5</span></a> shows a boundary layer with a height of 180 m. In this layer, the potential temperature gradient is equal to 45 K km<span class="math notranslate nohighlight">\(^{-1}\)</span>.</p>
+<p><a class="reference internal" href="#fig-71"><span class="std std-numref">Fig. 21.4</span></a> shows a boundary layer with a height of 140 m. In this layer, the potential temperature gradient, <span class="math notranslate nohighlight">\(\gemafg{\theta}{z}\)</span>, is equal to 57 K km<span class="math notranslate nohighlight">\(^{-1}\)</span>.</p>
+<p><a class="reference internal" href="#fig-72"><span class="std std-numref">Fig. 21.5</span></a> shows a boundary layer with a height of 180 m. In this layer, the potential temperature gradient is equal to 45 K km<span class="math notranslate nohighlight">\(^{-1}\)</span>.</p>
 <p>The evolution of the boundary layer height is 40 m over 4 hours, so <span class="math notranslate nohighlight">\(\pafg{h}{t}=10\rm\,m\,hr^{-1}\)</span>.</p>
 <p>The evolution of the gradient of the potential temperature is equal to <span class="math notranslate nohighlight">\(-12\rm\,K\,km^{-1}\)</span> over 4 hours, so <span class="math notranslate nohighlight">\(\pafg{}{t}\gemafg{\theta}{z}=-3\rm\,K\,km^{-1}\,hr^{-1}\)</span></p>
 </details>
 </section>
 <section id="id5">
-<h2><span class="section-number">19.5. </span><a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">21.5. </span><a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h2>
 <p>The one-dimensional equation that governs the heat budget during stable
 conditions reads</p>
 <div class="math notranslate nohighlight">
@@ -840,7 +850,7 @@ therefore <span class="math notranslate nohighlight">\(T = \theta - \dfrac{g}{c_
 <figure class="align-default" id="fig-ans-73b">
 <img alt="../_images/exercise7_3b.png" src="../_images/exercise7_3b.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 19.6 </span><span class="caption-text">Vertical profiles of <span class="math notranslate nohighlight">\(\theta\)</span> (solid lines) and <span class="math notranslate nohighlight">\(T\)</span> (dashed lines) in red for exercise b (linear profile)
+<p><span class="caption-number">Fig. 21.6 </span><span class="caption-text">Vertical profiles of <span class="math notranslate nohighlight">\(\theta\)</span> (solid lines) and <span class="math notranslate nohighlight">\(T\)</span> (dashed lines) in red for exercise b (linear profile)
 and in blue for exercise c (logarithmic profile).</span><a class="headerlink" href="#fig-ans-73b" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
@@ -866,15 +876,15 @@ and in blue for exercise c (logarithmic profile).</span><a class="headerlink" hr
 \]</div>
 <p>This results in the following absolute temperatures, using <span class="math notranslate nohighlight">\(T = \theta - \dfrac{g}{c_p}z = \theta-{10\rm\,K\,km^{-1}}\,z\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-for-73temp1">
-<span class="eqno">(19.2)<a class="headerlink" href="#equation-for-73temp1" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(21.2)<a class="headerlink" href="#equation-for-73temp1" title="Permalink to this equation">#</a></span>\[
 T_{\rm Surface} = 291.999\rm\,K 
 \]</div>
 <div class="math notranslate nohighlight" id="equation-for-73temp2">
-<span class="eqno">(19.3)<a class="headerlink" href="#equation-for-73temp2" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(21.3)<a class="headerlink" href="#equation-for-73temp2" title="Permalink to this equation">#</a></span>\[
 T_{\rm Middle} = 292.93\rm\,K 
 \]</div>
 <div class="math notranslate nohighlight" id="equation-for-73temp3">
-<span class="eqno">(19.4)<a class="headerlink" href="#equation-for-73temp3" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(21.4)<a class="headerlink" href="#equation-for-73temp3" title="Permalink to this equation">#</a></span>\[
 T_{\rm Top} = 293.88\rm\,K 
 \]</div>
 <p><span class="math notranslate nohighlight">\(\rho\,c_p=1231\rm\,\frac{W\,m^{-2}}{K\,m\,s^{-1}}\)</span>,
@@ -885,7 +895,7 @@ so <span class="math notranslate nohighlight">\(\frac{\epsilon_{\rm IR}\, \sigma
 \[
 \gemafg{\theta}{t} = 2.05\times 10^{-5} \rm\,K\,s^{-1} = 0.074\,K\,hr^{-1}
 \]</div>
-<p>Note that using rounded temperatures of Equations <a class="reference internal" href="#equation-for-73temp1">(19.2)</a>-<a class="reference internal" href="#equation-for-73temp3">(19.4)</a> results in wrong answers.
+<p>Note that using rounded temperatures of Equations <a class="reference internal" href="#equation-for-73temp1">(21.2)</a>-<a class="reference internal" href="#equation-for-73temp3">(21.4)</a> results in wrong answers.
 This is due to the power of 4 of the temperature.</p>
 </details>
 <p>c) Repeat now the calculation but assuming a logarithmic profile for the potential temperature that reads:</p>
@@ -929,7 +939,7 @@ This is in contradiction with the knowledge that at night radiative cooling take
 </details>
 </section>
 <section id="id6">
-<h2><span class="section-number">19.6. </span><a class="headerlink" href="#id6" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">21.6. </span><a class="headerlink" href="#id6" title="Permalink to this headline">#</a></h2>
 <p>The momentum equation for the <span class="math notranslate nohighlight">\(\overline{U}\)</span> and <span class="math notranslate nohighlight">\(\overline{V}\)</span>-component
 during diurnal and nocturnal conditions reads:</p>
 <div class="math notranslate nohighlight">
@@ -972,11 +982,11 @@ In consequence, the wind accelerates.
 Therefore, finally the shear decreases in total a little, but the momentum flux decreases to a very low value.
 Therefore, it can be neglected with respect to the Coriolis and horizontal pressure gradient terms.</p>
 <div class="math notranslate nohighlight" id="equation-for-74b1">
-<span class="eqno">(19.5)<a class="headerlink" href="#equation-for-74b1" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(21.5)<a class="headerlink" href="#equation-for-74b1" title="Permalink to this equation">#</a></span>\[
     \gemafg{U}{t} =f\,\overline{V}
     \]</div>
 <div class="math notranslate nohighlight" id="equation-for-74b2">
-<span class="eqno">(19.6)<a class="headerlink" href="#equation-for-74b2" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(21.6)<a class="headerlink" href="#equation-for-74b2" title="Permalink to this equation">#</a></span>\[
     \gemafg{V}{t} =f\,\left(\overline{U_g}-\overline{U}\right)
     \]</div>
  </details>
@@ -990,7 +1000,7 @@ Therefore, it can be neglected with respect to the Coriolis and horizontal press
     \gemafg{U}{t} &amp;= \gemafg{U}{t}-\gemafg{U_g}{t}\\
     &amp;= \pafg{\left(\overline{U}-\overline{U_g}\right)}{t}
     \end{split}\]</div>
-<p>Combined with Equations <a class="reference internal" href="#equation-for-74b1">(19.5)</a> and <a class="reference internal" href="#equation-for-74b2">(19.6)</a>, this results in</p>
+<p>Combined with Equations <a class="reference internal" href="#equation-for-74b1">(21.5)</a> and <a class="reference internal" href="#equation-for-74b2">(21.6)</a>, this results in</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
     {\pafg{^2\left(\overline{U}-\overline{U_g}\right)}{t^2}} &amp;= \pafg{}{t}\pafg{\overline{U}}{t} \\
@@ -1073,11 +1083,11 @@ T=2<span class="math notranslate nohighlight">\(\pi\)</span>/f, using the follow
 <span class="math notranslate nohighlight">\(\overline{U_g}\)</span>=10 ms<span class="math notranslate nohighlight">\(^{-1}\)</span> and <span class="math notranslate nohighlight">\(\overline{V_g}\)</span>=0.</p>
 <details>
   <summary>Answer</summary>
-<p>The wind velocities, <span class="math notranslate nohighlight">\(\overline{U}\)</span> and <span class="math notranslate nohighlight">\(\overline{V}\)</span> are plotted in <a class="reference internal" href="#fig-ans-74"><span class="std std-numref">Fig. 19.7</span></a>.</p>
+<p>The wind velocities, <span class="math notranslate nohighlight">\(\overline{U}\)</span> and <span class="math notranslate nohighlight">\(\overline{V}\)</span> are plotted in <a class="reference internal" href="#fig-ans-74"><span class="std std-numref">Fig. 21.7</span></a>.</p>
 <figure class="align-default" id="fig-ans-74">
 <img alt="../_images/exercise7_4.png" src="../_images/exercise7_4.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 19.7 </span><span class="caption-text">Evolution of wind velocities.</span><a class="headerlink" href="#fig-ans-74" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 21.7 </span><span class="caption-text">Evolution of wind velocities.</span><a class="headerlink" href="#fig-ans-74" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </details>
@@ -1106,11 +1116,11 @@ Use this expression to explain how the wind changes over time.</p>
 <p>Since the right-hand side is a constant,
 this equation states that <span class="math notranslate nohighlight">\(\left(\overline{U},\overline{V}\right)\)</span> progresses in time as a circular movement around <span class="math notranslate nohighlight">\(\left(\overline{U_g},0\right)\)</span>
 at a distance of <span class="math notranslate nohighlight">\(\sqrt{F_u^2(0) + F_v^2(0)} = 3\sqrt{2}\rm\,m\,s^{-1}\)</span></p>
-<p>This can also be seen from <a class="reference internal" href="#fig-ans-74"><span class="std std-numref">Fig. 19.7</span></a>.</p>
+<p>This can also be seen from <a class="reference internal" href="#fig-ans-74"><span class="std std-numref">Fig. 21.7</span></a>.</p>
 </details>
 </section>
 <section id="id7">
-<h2><span class="section-number">19.7. </span><a class="headerlink" href="#id7" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">21.7. </span><a class="headerlink" href="#id7" title="Permalink to this headline">#</a></h2>
 <p>The conservation equation for the potential temperature in a Stable Boundary Layer reads (neglecting phase changes)</p>
 <div class="math notranslate nohighlight">
 \[
@@ -1175,10 +1185,10 @@ the surface and <span class="math notranslate nohighlight">\(h=25~m\)</span> is 
 <figure class="align-default" id="fig-ans-75">
 <img alt="../_images/exercise7_5.png" src="../_images/exercise7_5.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 19.8 </span><span class="caption-text">Sensible heat flux.</span><a class="headerlink" href="#fig-ans-75" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 21.8 </span><span class="caption-text">Sensible heat flux.</span><a class="headerlink" href="#fig-ans-75" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>The profile is shown in <a class="reference internal" href="#fig-ans-75"><span class="std std-numref">Fig. 19.8</span></a>.
+<p>The profile is shown in <a class="reference internal" href="#fig-ans-75"><span class="std std-numref">Fig. 21.8</span></a>.
 The upward turbulent flux is more positive (i.e. less negative) at higher <span class="math notranslate nohighlight">\(z\)</span>.
 Therefore, more heat is transported out of a control volume than inward. This results in cooling.</p>
 <p>The divergence of the vertical heat flux is equal to</p>
@@ -1251,13 +1261,13 @@ This results in <span class="math notranslate nohighlight">\(\gemafg{\theta}{x}=
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">18. </span>Exercises week 4</p>
+            <p class="prev-next-title"><span class="section-number">20. </span>Exercises week 4</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="week6.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">20. </span>Exercises week 6</p>
+        <p class="prev-next-title"><span class="section-number">22. </span>Exercises week 6</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

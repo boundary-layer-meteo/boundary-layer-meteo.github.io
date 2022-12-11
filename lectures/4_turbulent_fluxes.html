@@ -50,6 +50,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="5. Conservation of energy (i)" href="5_energy_i.html" />
@@ -186,7 +188,17 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="14_sbl.html">
-   14. The stable boundary layer
+   14. The stable boundary layer (i)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="15_sbl_ii.html">
+   15. The stable boundary layer (ii)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="16_dummy.html">
+   16. Recap lecture
   </a>
  </li>
 </ul>
@@ -198,32 +210,32 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../exercises/week1.html">
-   15. Exercises week 1
+   17. Exercises week 1
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../exercises/week2.html">
-   16. Exercises week 2
+   18. Exercises week 2
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../exercises/week3.html">
-   17. Exercises week 3
+   19. Exercises week 3
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../exercises/week4.html">
-   18. Exercises week 4
+   20. Exercises week 4
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../exercises/week5.html">
-   19. Exercises week 5
+   21. Exercises week 5
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../exercises/week6.html">
-   20. Exercises week 6
+   22. Exercises week 6
   </a>
  </li>
 </ul>
@@ -407,6 +419,20 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="turbulent-fluxes-and-the-atmospheric-surface-layer">
 <h1><span class="section-number">4. </span>Turbulent fluxes and the atmospheric surface layer<a class="headerlink" href="#turbulent-fluxes-and-the-atmospheric-surface-layer" title="Permalink to this headline">#</a></h1>
+<div class="admonition-questions-to-be-answered admonition">
+<p class="admonition-title">Questions to be answered</p>
+<ol class="simple">
+<li><p>How do we compute the vertical turbulent flux from time or space series of <span class="math notranslate nohighlight">\(u\)</span> and <span class="math notranslate nohighlight">\(w\)</span>?</p></li>
+</ol>
+</div>
+<p>This lecture did not introduce new concepts, but explained the concept of turbulent fluxes from animations and data (so study the slides carefully!).</p>
+<p>In short, we have shown that a time- or spatial series of <span class="math notranslate nohighlight">\(u\)</span> and <span class="math notranslate nohighlight">\(w\)</span> allows for the computation of the turbulent flux <span class="math notranslate nohighlight">\(\overline{u^\prime w^\prime}\)</span> in the following steps</p>
+<ol class="simple">
+<li><p>Compute the means <span class="math notranslate nohighlight">\(\overline{u}\)</span> and <span class="math notranslate nohighlight">\(\overline{w}\)</span>.</p></li>
+<li><p>Subtract the means from the series to obtain <span class="math notranslate nohighlight">\(u^\prime\)</span> and <span class="math notranslate nohighlight">\(w^\prime\)</span>.</p></li>
+<li><p>Multiply the perturbations to obtain a series <span class="math notranslate nohighlight">\(u^\prime w^\prime\)</span>.</p></li>
+<li><p>Take the mean the series <span class="math notranslate nohighlight">\(u^\prime w^\prime\)</span> and obtain the flux <span class="math notranslate nohighlight">\(\overline{u^\prime w^\prime}\)</span>.</p></li>
+</ol>
 </section>
 
     <script type="text/x-thebe-config">

@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>14. The stable boundary layer &#8212; Boundary-Layer Meteorology</title>
+    <title>14. The stable boundary layer (i) &#8212; Boundary-Layer Meteorology</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -54,7 +54,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="15. Exercises week 1" href="../exercises/week1.html" />
+    <link rel="next" title="15. The stable boundary layer (ii)" href="15_sbl_ii.html" />
     <link rel="prev" title="13. Turbulence spectra" href="13_spectra.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -188,7 +188,17 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   14. The stable boundary layer
+   14. The stable boundary layer (i)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="15_sbl_ii.html">
+   15. The stable boundary layer (ii)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="16_dummy.html">
+   16. Recap lecture
   </a>
  </li>
 </ul>
@@ -200,32 +210,32 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../exercises/week1.html">
-   15. Exercises week 1
+   17. Exercises week 1
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../exercises/week2.html">
-   16. Exercises week 2
+   18. Exercises week 2
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../exercises/week3.html">
-   17. Exercises week 3
+   19. Exercises week 3
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../exercises/week4.html">
-   18. Exercises week 4
+   20. Exercises week 4
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../exercises/week5.html">
-   19. Exercises week 5
+   21. Exercises week 5
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../exercises/week6.html">
-   20. Exercises week 6
+   22. Exercises week 6
   </a>
  </li>
 </ul>
@@ -424,7 +434,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>The stable boundary layer</h1>
+                <h1>The stable boundary layer (i)</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -454,8 +464,8 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="the-stable-boundary-layer">
-<h1><span class="section-number">14. </span>The stable boundary layer<a class="headerlink" href="#the-stable-boundary-layer" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="the-stable-boundary-layer-i">
+<h1><span class="section-number">14. </span>The stable boundary layer (i)<a class="headerlink" href="#the-stable-boundary-layer-i" title="Permalink to this headline">#</a></h1>
 <div class="admonition-questions-to-be-answered-in-this-chapter admonition">
 <p class="admonition-title">Questions to be answered in this chapter</p>
 <ol class="simple">
@@ -554,7 +564,7 @@ L \equiv - \dfrac{u_*^3}{\kappa \dfrac{g}{\overline{\theta}_\mathrm{v}} \overlin
 \dfrac{\kappa z}{\theta_*} \pd{\overline{\theta}}{z} &amp;= \phi_h \left( \dfrac{z}{L} \right) \\
 \dfrac{\kappa z u_*}{\overline{w^\prime \theta^\prime}} \pd{\overline{\theta}}{z} &amp;= \phi_h \left( \dfrac{z}{L} \right)
 \end{split}\]</div>
-<p>There are many emperical studies around where the functions <span class="math notranslate nohighlight">\(\phi_m\)</span> and <span class="math notranslate nohighlight">\(\phi_h\)</span> are fitted to data.
+<p>There are many empirical studies around where the functions <span class="math notranslate nohighlight">\(\phi_m\)</span> and <span class="math notranslate nohighlight">\(\phi_h\)</span> are fitted to data.
 Some examples fitted functions for <span class="math notranslate nohighlight">\(\phi_m\)</span> are</p>
 <div class="math notranslate nohighlight">
 \[
@@ -566,7 +576,10 @@ Some examples fitted functions for <span class="math notranslate nohighlight">\(
 \phi_m \left( \dfrac{z}{L} \right) = \left( 1 - 19.3 \dfrac{z}{L} \right)^{-\frac{1}{4}}
 \]</div>
 <p>for unstable conditions.</p>
-<p><em>…more to come…</em></p>
+<p>The figure below from Wallace and Hobbs shows how the logarithmic profile is altered by stability.</p>
+<figure class="align-default" id="the-logarithmic-wind-profile">
+<a class="reference internal image-reference" href="../_images/wind_profile.png"><img alt="../_images/wind_profile.png" src="../_images/wind_profile.png" style="width: 400px;" /></a>
+</figure>
 </section>
 </section>
 
@@ -604,10 +617,10 @@ Some examples fitted functions for <span class="math notranslate nohighlight">\(
             <p class="prev-next-title"><span class="section-number">13. </span>Turbulence spectra</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../exercises/week1.html" title="next page">
+    <a class='right-next' id="next-link" href="15_sbl_ii.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">15. </span>Exercises week 1</p>
+        <p class="prev-next-title"><span class="section-number">15. </span>The stable boundary layer (ii)</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

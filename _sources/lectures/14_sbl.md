@@ -1,4 +1,4 @@
-# The stable boundary layer
+# The stable boundary layer (i)
 
 ```{admonition} Questions to be answered in this chapter
 1. What is a stable boundary layer?
@@ -108,7 +108,7 @@ $$
 \dfrac{\kappa z u_*}{\overline{w^\prime \theta^\prime}} \pd{\overline{\theta}}{z} &= \phi_h \left( \dfrac{z}{L} \right)
 $$
 
-There are many emperical studies around where the functions $\phi_m$ and $\phi_h$ are fitted to data.
+There are many empirical studies around where the functions $\phi_m$ and $\phi_h$ are fitted to data.
 Some examples fitted functions for $\phi_m$ are 
 
 $$
@@ -123,4 +123,12 @@ $$
 
 for unstable conditions.
 
-*...more to come...*
+The figure below from Wallace and Hobbs shows how the logarithmic profile is altered by stability.
+
+```{figure} figs/wind_profile.png
+---
+width: 400px
+name: The logarithmic wind profile.
+---
+```
+
