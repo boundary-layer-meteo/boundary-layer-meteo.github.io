@@ -10,7 +10,7 @@
 Fourier transforming data allows us to transform data from physical to spectral space. Fourier transformation goes as following
 
 $$
-\hat{f}(k) = -\int_\infty^\infty f(x) \exp \left( - i 2 \pi k x \right)\,\mathrm{d} x
+\hat{f}(k) = \int_{-\infty}^\infty f(x) \exp \left( - i 2 \pi k x \right)\,\mathrm{d} x
 $$
 
 although since we generally work with time series of spatial series with equal sampling interval we use the discrete Fourier transform

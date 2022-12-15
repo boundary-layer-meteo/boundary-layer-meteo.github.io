@@ -24,8 +24,9 @@ $$
 \def\ujbar{\overline{u}_j}
 \def\uiprime{u_i^\prime}
 \def\uiprimesq{u_i^{\prime 2}}
-\def\viprimesq{v_i^{\prime 2}}
-\def\wiprimesq{w_i^{\prime 2}}
+\def\uprimesq{u^{\prime 2}}
+\def\vprimesq{v^{\prime 2}}
+\def\wprimesq{w^{\prime 2}}
 \def\uiprimesqbar{\overline{u_i^{\prime 2}}}
 \def\ujprime{u_j^\prime}
 $$
@@ -36,7 +37,7 @@ The kinetic energy is defined as $\frac{1}{2} \left( u^2 + v^2 + w^2 \right)$. I
 
 ```{admonition} Turbulence kinetic energy
 $$
-e &\equiv \frac{1}{2} \left( \uiprimesq + \viprimesq + \wiprimesq \right) \\
+e &\equiv \frac{1}{2} \left( \uprimesq + \vprimesq + \wprimesq \right) \\
 \overline{e} &= \frac{1}{2} \left( \uvar + \vvar + \wvar \right)
 $$
 ```
