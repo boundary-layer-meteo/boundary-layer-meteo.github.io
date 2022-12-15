@@ -44,7 +44,8 @@ We can now define the virtual temperature $\Tv$ as
 
 ```{admonition} Virtual temperature
 $$
-\Tv \equiv T \left( 1 + q \left( \dfrac{\Rv}{\Rd} - 1 \right) \right)
+\Tv &\equiv T \left( 1 + q \left( \dfrac{\Rv}{\Rd} - 1 \right) \right) \\
+    &\approx T \left( 1 + 0.61 q \right)
 $$ (virtual_temp)
 ```
 
