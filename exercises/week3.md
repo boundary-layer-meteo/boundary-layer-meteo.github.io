@@ -390,7 +390,7 @@ $$
 0= \frac{-\overline{u'w'}}{u_*^2}\Phi_m + \frac{\kappa\,g\,\overline{w'\theta_v'}}{\overline{\theta_v}\,u_*^3}z - \Phi_\epsilon
 $$
 
-We look at the surface layer (where turbulent fluxes are relatively constant on height and vary less than 10\%, {cite}`stull1988introduction`), so $\overline{u'w'} \approx \overline{u'w'}_0 = -u_*^2$. Also $\overline{w'\theta_v'} \approx \overline{w'\theta_v'}_0$. 
+We look at the surface layer, so $\overline{u'w'} \approx \overline{u'w'}_0 = -u_*^2$. Also $\overline{w'\theta_v'} \approx \overline{w'\theta_v'}_0$. 
 
 Considering that the Monin-Obukhov length is defined by 
 
