@@ -69,10 +69,10 @@ for each of the layers above mentioned.
   <summary>Answer</summary>
 It depends on how you draw the schematic lines. 
 
-* A. $\rm \frac{-1.5 K}{300 m} = -5 K km^{-1}$
-* B. $\rm \frac{0 K}{1100 m} = 0 K km^{-1}$ 
-* C. $\rm \frac{8 K}{350 m} = 23 K km^{-1}$
-* D. $\rm \frac{0.75 K}{400 m} = 1.9 K km^{-1}$
+* A. $\rm \frac{-1.5 K}{300 m} = -5\ K\ km^{-1}$
+* B. $\rm \frac{0 K}{1100 m} = 0\ K\ km^{-1}$ 
+* C. $\rm \frac{8 K}{350 m} = 23\ K\ km^{-1}$
+* D. $\rm \frac{0.75 K}{400 m} = 1.9\ K\ km^{-1}$
 
 </details>
 
