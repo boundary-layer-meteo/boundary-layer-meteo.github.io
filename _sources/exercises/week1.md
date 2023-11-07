@@ -108,7 +108,7 @@ Reynolds rules to simplify the expressions as much as possible.
 ```{hint} 
 :class: tip, dropdown
 
-From {cite}`stull1988introduction` the averaging rules are known. For arbitrary variables, $A$ and $B$, and constants, $c$, it holds that
+For arbitrary variables, $A$ and $B$, and constants, $c$, it holds that
 
 $$
 \overline{c} &= c \\

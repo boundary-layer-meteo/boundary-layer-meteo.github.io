@@ -4,7 +4,7 @@ $\def\pafg#1#2{\dfrac{\partial #1}{\partial #2}}$
 $\def\afg#1#2{\dfrac{{\rm d} #1}{{\rm d} #2}}$
 
 ## 
-Given a surface mixing ratio of 15 g/kg, a surface pressure of 1003 hPa and a temperature described by $ T = 4x + zy ~(C) $
+Given a surface specific humidity of 15 g/kg, a surface pressure of 1003 hPa and a temperature described by $ T = 4x + zy ~(C) $
 calculate the potential temperature and the virtual potential temperature at the point
 (5, 1, 2) and at the pressure 850 hPa ($R_d=287\ J\ Kg^{-1}\ K^{-1}, c_p=1004\ J\ Kg^{-1}\ K^{-1}$).
 
@@ -69,10 +69,10 @@ for each of the layers above mentioned.
   <summary>Answer</summary>
 It depends on how you draw the schematic lines. 
 
-* A. $\rm \frac{-1.5 K}{300 m} = -5 K km^{-1}$
-* B. $\rm \frac{0 K}{1100 m} = 0 K km^{-1}$ 
-* C. $\rm \frac{8 K}{350 m} = 23 K km^{-1}$
-* D. $\rm \frac{0.75 K}{400 m} = 1.9 K km^{-1}$
+* A. $\rm \frac{-1.5 K}{300 m} = -5\ K\ km^{-1}$
+* B. $\rm \frac{0 K}{1100 m} = 0\ K\ km^{-1}$ 
+* C. $\rm \frac{8 K}{350 m} = 23\ K\ km^{-1}$
+* D. $\rm \frac{0.75 K}{400 m} = 1.9\ K\ km^{-1}$
 
 </details>
 
