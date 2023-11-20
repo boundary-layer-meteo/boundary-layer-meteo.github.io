@@ -568,52 +568,7 @@ $$(for:61b)
 
 </details>
 
-c) Assuming that we are in an encroachment situation and the sensible heat flux and h are constant on time, find an expression for $\left< {\overline{\theta}} \right>$
-as a function of time. The assumption of sensible heat flux and h constant on time is reasonable in the afternoon hours
-and during a relative short time. Discuss this assumption.
-
-<details>
-  <summary>Answer</summary>
-
-In case of encroachment, the vertical turbulent heat flux is 0 near the entrainment zone since there is no inversion, so
-
-$$
-\afg{\left<\overline{\theta}\right>}{t} = \frac{\overline{w'\theta'}\left(0\right)}{h}
-$$
-
-This expression shows that if the boundary lower growth has become minimal, 
-the heating of the boundary layer is proportional to the surface heat flux and inversely proportional to the boundary layer height. 
-All energy (in the form of heat) is equally distributed over the mixed layer.
-
-Near the end of the afternoon, $h$ is approximately constant. 
-This assumption is therefore valid. 
-However, the sensible heat flux changes rapidly in that period. 
-The derived equation is still valid in those situations if the heat flux is considered as a function of time.
-
-</details>
-
-d) Derive a similar expression but now assuming that the entrainment flux is 20$\%$ of the surface flux. Compare
-your formulations and discuss their implications.
-
-<details>
-  <summary>Answer</summary>
-
-In this case $\overline{w'\theta'}(h) = -\beta \overline{w'\theta'}(0)$ with $\beta=0.2$
-(the downward heat flux at the boundary layer top is equal to 20% of the upward heat flux at the surface),
-so Equation {eq}`for:61b` changes into
-
-$$
-\afg{\left<\overline{\theta}\right>}{t} &= \frac{\overline{w'\theta'}\left(0\right)+ 0.2\,\overline{w'\theta'}\left(0\right)}{h} \\
-\afg{\left<\overline{\theta}\right>}{t} &= \frac{1.2\,\overline{w'\theta'}\left(0\right)}{h}
-$$
-
-The difference is that the influx of energy (in the form of heat) is enhanced by 20% due to entrainment of warm air that originates from the free troposphere.
-Therefore, for equal boundary layer heights, the boundary layer would heat up 1.2 times as fast for the same surface heat flux.
-However, note that due to entrainment the boundary layer grows faster and therefore, the heat has to be spread over a larger volume.
-
-</details>
-
-e) Discuss the additional equations that we need to include in order to have a more physical description of the entrainment flux.
+c) Discuss the additional equations that we need to include the impact of the entrainment flux on the boundary layer growth. 
 
 <details>
   <summary>Answer</summary>
