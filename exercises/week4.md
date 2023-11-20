@@ -63,7 +63,7 @@ flux at 17 UTC.
 At 17 UTC (11 LT), $\Delta\theta=5\rm\,K$.
 
 $$
-\overline{w'\theta'(z_i)} &= - w_e\,\Delta\theta 
+\overline{w'\theta'(z_i)} = - w_e\,\Delta\theta 
 $$
 
 Substituting the variables results in $\overline{w'\theta'(z_i)} = -0.05\rm\,K\,m\,s^{-1}$.
@@ -367,15 +367,15 @@ Given an arbitrary mixed layer, we can assume that the mixed layer potential tem
 ($\left<\overline{\theta}\right>$) and the potential temperature jump ($\Delta\theta$) evolve with time according to
 
 $$
-\pafg{\left<{\overline{\theta}}\right>}{t} &=\frac{\overline{w'\theta'}(0)-\overline{w'\theta'}(h)}{h} \\
-\pafg{\Delta\theta}{t} &= \gamma_\theta\pafg{h}{t} - \pafg{\left<\overline{\theta}\right>}{t}\\
-\overline{w'\theta'}(h) &= - \pafg{h}{t}\Delta\theta
+\afg{\left<{\overline{\theta}}\right>}{t} &=\frac{\overline{w'\theta'}(0)-\overline{w'\theta'}(h)}{h} \\
+\afg{\Delta\theta}{t} &= \gamma_\theta\afg{h}{t} - \afg{\left<\overline{\theta}\right>}{t}\\
+\overline{w'\theta'}(h) &= - \afg{h}{t}\Delta\theta
 $$
 
 At 12 UTC, the mixed layer temperature is 290 K. At the top of the mixed layer, there is an inversion
-with an initial temperature above equal to 296 K.
+with an initial temperature above equal to 296 K. 
 Above the inversion the temperature increases 0.05 K every 10 m.
-The surface flux H is 185 $W/m^2$ (thus $\overline{w'\theta'}(0)$ is $0.15\rm\,K\,m\,s^{-1}$).
+The surface flux H is 185 $W/m^2$ (thus $\overline{w'\theta'}(0)$ is $0.15\rm\,K\,m\,s^{-1}$) and $h$ is 1000 m.
 
 a) Draw the vertical profile of the potential temperature and the heat flux.
 Describe the different regions in the CBL.
@@ -414,20 +414,20 @@ where $\beta$ is 0.2.
   <summary>Answer</summary>
 
 $$
-\pafg{h}{t} &= 0.2 \frac{\overline{w'\theta'}(0)}{\Delta\theta}\\
+\afg{h}{t} &= 0.2 \frac{\overline{w'\theta'}(0)}{\Delta\theta}\\
 \overline{w'\theta'}(0) &= 0.15\rm\,K\,m\,s^{-1}\\
 \Delta\theta &= 6\rm\,K
 $$
 
-Therefore, $\pafg{h}{t} = 0.005\rm\,m\,s^{-1} = 18\,m\,hr^{-1}$
+Therefore, $\afg{h}{t} = 0.005\rm\,m\,s^{-1} = 18\,m\,hr^{-1}$
 
 $$
-\pafg{\left<{\overline{\theta}}\right>}{t} &=\frac{\overline{w'\theta'}(0)-\overline{w'\theta'}(h)}{h} \\
+\afg{\left<{\overline{\theta}}\right>}{t} &=\frac{\overline{w'\theta'}(0)-\overline{w'\theta'}(h)}{h} \\
  &=  \frac{\left(1+\beta\right)\overline{w'\theta'}(0)}{h}\\
 h&= 1000\rm\,m
 $$
 
-Because of this, $\pafg{\left<{\overline{\theta}}\right>}{t} = 1.8\,10^{-4}\rm\,K\,s^{-1}=0.65\,K\,hr^{-1}$.
+Because of this, $\afg{\left<{\overline{\theta}}\right>}{t} = 1.8\ \cdot 10^{-4}\rm\,K\,s^{-1}=0.65\,K\,hr^{-1}$.
 </details>
 
 c) Calculate the convective velocity at the same time and estimate how long it takes a parcel to travel from the
@@ -502,7 +502,7 @@ The neglected terms are:
 b) Explain the mathematical steps and definitions to derive the mixed-layer equation for the bulk potential temperature that reads:
 
 $$
-\pafg{ {\left< \overline{\theta}\right>}}{t}~=~\frac{\overline{w'\theta'(0)}-\overline{w'\theta'(h)}}{h}.
+\afg{ {\left< \overline{\theta}\right>}}{t}~=~\frac{\overline{w'\theta'(0)}-\overline{w'\theta'(h)}}{h}.
 $$
 
 <details>
@@ -511,13 +511,13 @@ $$
 To get to the mixed-layer equations, the conservation equation has to be integrated with height over the whole boundary layer.
 
 $$
-\int_{z_0}^h \! \pafg{\overline{\theta}}{t} \, \delta z = - \int_{z_0}^h \! \pafg{}{z}(\overline{w'\theta'}) \delta z
+\int_{z_0}^h \! \pafg{\overline{\theta}}{t} \, dz = - \int_{z_0}^h \! \pafg{}{z}(\overline{w'\theta'}) dz
 $$(eq6.7)
 
 Integrating the right-hand-side of equation {eq}`eq6.7`, we find:
 
 $$
-- \int_{z_0}^h \! \pafg{}{z}(\overline{w'\theta'}) \delta z = \overline{w'\theta'}(z_0) - \overline{w'\theta'}(h)
+- \int_{z_0}^h \! \pafg{}{z}(\overline{w'\theta'}) dz = \overline{w'\theta'}(z_0) - \overline{w'\theta'}(h)
   $$(eq6.12)
 
 Since one of the limits of the integration ($h$) is changing on time,
@@ -526,7 +526,7 @@ we have to use of the Leibniz rule to solve the left-hand-side of integral {eq}`
 For an arbitrary scalar, $\psi$, and limits a and b, the Leibniz rule is:
 
 $$
-\pafg{}{t} \int_a^b \! \psi \, \mathrm{d}z = \int_a^b \! \pafg{\psi}{t} \, \mathrm{d}z - \psi(a) \pafg{a}{t} + \psi(b) \pafg{b}{t}.
+\afg{}{t} \int_a^b \! \psi \, \mathrm{d}z = \int_a^b \! \pafg{\psi}{t} \, \mathrm{d}z - \psi(a) \afg{a}{t} + \psi(b) \afg{b}{t}.
 $$(eq6.8)
 
 
@@ -534,36 +534,36 @@ We substitute $ \psi = \theta $ in Equation {eq}`eq6.8` and use the limits $z_0$
 This gives:
 
 $$
-\pafg{}{t} \underbrace{ \int_{z_0}^h \! \overline\theta \, \delta z}_{<\theta> h}  =~ \int_{z_0}^h \!\pafg{\overline\theta }{t} \, \delta z-
+\afg{}{t} \underbrace{ \int_{z_0}^h \! \overline\theta \, dz}_{\left< \theta \right> h}  =~ \int_{z_0}^h \!\pafg{\overline\theta }{t} \, dz-
 \underbrace{\overline\theta (z_0) \pafg{z_0}{t}}_{=0} + \overline\theta (h) \pafg{h}{t}
 $$
 
 We reorganise this equation to find:
 
 $$
-\int_{z_0}^h \! \pafg{\overline\theta}{t} \, \delta z &= \pafg{}{t}[<\theta> h] - \overline\theta(h) \pafg{h}{t}\\
-&= h \pafg{<\theta>}{t} + <\theta> \pafg{h}{t} - \overline\theta(h) \pafg{h}{t}\\
-&= h \pafg{<\theta>}{t} + \pafg{h}{t} \underbrace{[<\theta>-\overline\theta(h)]}_{0}
+\int_{z_0}^h \! \pafg{\overline\theta}{t} \, dz &= \afg{}{t}[\left< \theta \right> h] - \overline\theta(h) \afg{h}{t}\\
+&= h \afg{\left< \theta \right>}{t} + \left< \theta \right> \afg{h}{t} - \overline\theta(h) \afg{h}{t}\\
+&= h \afg{\left< \theta \right>}{t} + \afg{h}{t} \underbrace{[\left< \theta \right>-\overline\theta(h)]}_{0}
 $$
 
 
 Throughout the mixed layer, $\theta$ is homogeneous, so the second term cancels, resulting in:
 
 $$
-\int_{z_0}^h \! \pafg{\overline{\theta}}{t} \, \delta z = h \pafg{<\theta>}{t}
+\int_{z_0}^h \! \pafg{\overline{\theta}}{t} \, dz = h \afg{\left< \theta \right>}{t}
 $$(eq6.11)
 
 
 Finally, substitution of {eq}`eq6.11` and {eq}`eq6.12` on the original equation {eq}`eq6.7` results in:
 
 $$
-h \pafg{<\theta>}{t} = \overline{w'\theta'}(z_0) - \overline{w'\theta'}(h)
+h \afg{\left< \theta \right>}{t} = \overline{w'\theta'}(z_0) - \overline{w'\theta'}(h)
 $$
 
 or, alternatively:
 
 $$
-\pafg{<\theta>}{t} = \frac{1}{h}[ \overline{w'\theta'}(z_0) - \overline{w'\theta'}(h)]
+\afg{\left< \theta \right>}{t} = \frac{1}{h}[ \overline{w'\theta'}(z_0) - \overline{w'\theta'}(h)]
 $$(for:61b)
 
 </details>
@@ -578,12 +578,17 @@ and during a relative short time. Discuss this assumption.
 In case of encroachment, the vertical turbulent heat flux is 0 near the entrainment zone since there is no inversion, so
 
 $$
-\pafg{\left<\overline{\theta}\right>}{t} = \frac{\overline{w'\theta'}\left(0\right)}{h}
+\afg{\left<\overline{\theta}\right>}{t} = \frac{\overline{w'\theta'}\left(0\right)}{h}
 $$
 
-This expression shows that if the boundary lower growth has become minimal, the heating of the boundary layer is proportional to the surface heat flux and inversely proportional to the boundary layer height. All energy (in the form of heat) is equally distributed over the mixed layer.
+This expression shows that if the boundary lower growth has become minimal, 
+the heating of the boundary layer is proportional to the surface heat flux and inversely proportional to the boundary layer height. 
+All energy (in the form of heat) is equally distributed over the mixed layer.
 
-Near the end of the afternoon, $h$ is approximately constant. This assumption is therefore valid. However, the sensible heat flux changes rapidly in that period. The derived equation is still valid in those situations if the heat flux is considered as a function of time.
+Near the end of the afternoon, $h$ is approximately constant. 
+This assumption is therefore valid. 
+However, the sensible heat flux changes rapidly in that period. 
+The derived equation is still valid in those situations if the heat flux is considered as a function of time.
 
 </details>
 
@@ -598,8 +603,8 @@ In this case $\overline{w'\theta'}(h) = -\beta \overline{w'\theta'}(0)$ with $\b
 so Equation {eq}`for:61b` changes into
 
 $$
-\pafg{\left<\overline{\theta}\right>}{t} &= \frac{\overline{w'\theta'}\left(0\right)+ 0.2\,\overline{w'\theta'}\left(0\right)}{h} \\
-\pafg{\left<\overline{\theta}\right>}{t} &= \frac{1.2\,\overline{w'\theta'}\left(0\right)}{h}
+\afg{\left<\overline{\theta}\right>}{t} &= \frac{\overline{w'\theta'}\left(0\right)+ 0.2\,\overline{w'\theta'}\left(0\right)}{h} \\
+\afg{\left<\overline{\theta}\right>}{t} &= \frac{1.2\,\overline{w'\theta'}\left(0\right)}{h}
 $$
 
 The difference is that the influx of energy (in the form of heat) is enhanced by 20% due to entrainment of warm air that originates from the free troposphere.
@@ -626,12 +631,10 @@ $$
 \afg{\Delta\theta}{t} = \gamma_{\theta}\afg{h}{t}- \afg{\left<\overline{\theta}\right>}{t}
 $$
 
-($\partial$ can be replaced by d, since all variables in this equation are only dependent on time.)
-
 In the end, the system of governing equations is
 
 $$
-\pafg{\left<\overline{\theta}\right>}{t} &= \frac{\overline{w'\theta'}\left(z_0\right)-\overline{w'\theta'}\left(h\right)}{h}\\
+\afg{\left<\overline{\theta}\right>}{t} &= \frac{\overline{w'\theta'}\left(z_0\right)-\overline{w'\theta'}\left(h\right)}{h}\\
 \overline{w'\theta'}(h) &= - \afg{h}t \,\Delta\theta = -w_e \Delta\theta \\
 \afg{\Delta\theta}{t} &= \gamma_{\theta}\afg{h}{t}- \afg{\left<\overline{\theta}\right>}{t}
 $$
