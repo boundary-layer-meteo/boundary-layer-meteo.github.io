@@ -417,341 +417,23 @@ document.write(`
 </div>
 <section id="id1">
 <h2><span class="section-number">20.1. </span><a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
-<p>The one-dimensional conservation equation for heat reads:</p>
-<div class="math notranslate nohighlight">
-\[
-\pafg{\overline{\theta}}{t}~=~-~\pafg{\overline{w'\theta'}}{z}
-\]</div>
-<p>a) Discuss which terms have been neglected from total conservation equation for heat to come to this equation</p>
-<details>
-  <summary>Answer</summary>
-<p>The total conservation equation for heat is</p>
-<div class="math notranslate nohighlight">
-\[
-\underbrace{\gemafg{\theta}{t}}_{\rm Tendency} + \underbrace{\overline{u_j}\gemafg{\theta}{x_j}}_{\rm Advection} + \underbrace{\gemafg{u_j'\theta'}{x_j}}_{\rm Turbulent\ heat\ flux } = \underbrace{\nu_\theta\pafg{^2\overline{\theta}}{x_j^2}}_{\rm Molecular\ diffusion} - \underbrace{\frac{1}{\rho\,c_p}\gemafg{Q_j}{x_j}}_{\rm Radiation} - \underbrace{\frac{{ L_v}\,E}{\rho c_p}}_{\rm Latent\ heat\ release}
-\]</div>
-<p>The neglected terms are:</p>
-<ul class="simple">
-<li><p><strong>advection</strong>: No advection is present. This automatically follows from using the assumption of horizontal homogeneity and the absence of subsidence.</p></li>
-<li><p><strong>horizontal turbulent heat flux</strong>: Due to horizontal homogeneity, it is assumed that the horizontal turbulent heat flux is equal for all <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span>, causing the terms with <span class="math notranslate nohighlight">\(i\)</span> equal to 1 or 2 to vanish.</p></li>
-<li><p><strong>diffusion</strong>: The impact of dissipation is relatively small under daytime (convective) conditions.</p></li>
-<li><p><strong>radiation</strong>: The impact of radiation is relatively small under these conditions as well.</p></li>
-<li><p><strong>latent heat release</strong>: In the case of clear skies, there is no condensation/evaporation.</p></li>
-</ul>
-</details>
-<p>b) Explain the mathematical steps and definitions to derive the mixed-layer equation for the bulk potential temperature that reads:</p>
-<div class="math notranslate nohighlight">
-\[
-\pafg{ {\left&lt; \overline{\theta}\right&gt;}}{t}~=~\frac{\overline{w'\theta'(0)}-\overline{w'\theta'(h)}}{h}.
-\]</div>
-<details>
-  <summary>Answer</summary>
-<p>To get to the mixed-layer equations, the conservation equation has to be integrated with height over the whole boundary layer.</p>
-<div class="math notranslate nohighlight" id="equation-eq6-7">
-<span class="eqno">(20.1)<a class="headerlink" href="#equation-eq6-7" title="Permalink to this equation">#</a></span>\[
-\int_{z_0}^h \! \pafg{\overline{\theta}}{t} \, \delta z = - \int_{z_0}^h \! \pafg{}{z}(\overline{w'\theta'}) \delta z
-\]</div>
-<p>Integrating the right-hand-side of equation <a class="reference internal" href="#equation-eq6-7">(20.1)</a>, we find:</p>
-<div class="math notranslate nohighlight" id="equation-eq6-12">
-<span class="eqno">(20.2)<a class="headerlink" href="#equation-eq6-12" title="Permalink to this equation">#</a></span>\[
-- \int_{z_0}^h \! \pafg{}{z}(\overline{w'\theta'}) \delta z = \overline{w'\theta'}(z_0) - \overline{w'\theta'}(h)
-\]</div>
-<p>Since one of the limits of the integration (<span class="math notranslate nohighlight">\(h\)</span>) is changing on time,
-we have to use of the Leibniz rule to solve the left-hand-side of integral <a class="reference internal" href="#equation-eq6-7">(20.1)</a>:</p>
-<p>For an arbitrary scalar, <span class="math notranslate nohighlight">\(\psi\)</span>, and limits a and b, the Leibniz rule is:</p>
-<div class="math notranslate nohighlight" id="equation-eq6-8">
-<span class="eqno">(20.3)<a class="headerlink" href="#equation-eq6-8" title="Permalink to this equation">#</a></span>\[
-\pafg{}{t} \int_a^b \! \psi \, \mathrm{d}z = \int_a^b \! \pafg{\psi}{t} \, \mathrm{d}z - \psi(a) \pafg{a}{t} + \psi(b) \pafg{b}{t}.
-\]</div>
-<p>We substitute <span class="math notranslate nohighlight">\( \psi = \theta \)</span> in Equation <a class="reference internal" href="#equation-eq6-8">(20.3)</a> and use the limits <span class="math notranslate nohighlight">\(z_0\)</span> and h.
-This gives:</p>
-<div class="math notranslate nohighlight">
-\[
-\pafg{}{t} \underbrace{ \int_{z_0}^h \! \overline\theta \, \delta z}_{&lt;\theta&gt; h}  =~ \int_{z_0}^h \!\pafg{\overline\theta }{t} \, \delta z-
-\underbrace{\overline\theta (z_0) \pafg{z_0}{t}}_{=0} + \overline\theta (h) \pafg{h}{t}
-\]</div>
-<p>We reorganise this equation to find:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\int_{z_0}^h \! \pafg{\overline\theta}{t} \, \delta z &amp;= \pafg{}{t}[&lt;\theta&gt; h] - \overline\theta(h) \pafg{h}{t}\\
-&amp;= h \pafg{&lt;\theta&gt;}{t} + &lt;\theta&gt; \pafg{h}{t} - \overline\theta(h) \pafg{h}{t}\\
-&amp;= h \pafg{&lt;\theta&gt;}{t} + \pafg{h}{t} \underbrace{[&lt;\theta&gt;-\overline\theta(h)]}_{0}
-\end{split}\]</div>
-<p>Throughout the mixed layer, <span class="math notranslate nohighlight">\(\theta\)</span> is homogeneous, so the second term cancels, resulting in:</p>
-<div class="math notranslate nohighlight" id="equation-eq6-11">
-<span class="eqno">(20.4)<a class="headerlink" href="#equation-eq6-11" title="Permalink to this equation">#</a></span>\[
-\int_{z_0}^h \! \pafg{\overline{\theta}}{t} \, \delta z = h \pafg{&lt;\theta&gt;}{t}
-\]</div>
-<p>Finally, substitution of <a class="reference internal" href="#equation-eq6-11">(20.4)</a> and <a class="reference internal" href="#equation-eq6-12">(20.2)</a> on the original equation <a class="reference internal" href="#equation-eq6-7">(20.1)</a> results in:</p>
-<div class="math notranslate nohighlight">
-\[
-h \pafg{&lt;\theta&gt;}{t} = \overline{w'\theta'}(z_0) - \overline{w'\theta'}(h)
-\]</div>
-<p>or, alternatively:</p>
-<div class="math notranslate nohighlight" id="equation-for-61b">
-<span class="eqno">(20.5)<a class="headerlink" href="#equation-for-61b" title="Permalink to this equation">#</a></span>\[
-\pafg{&lt;\theta&gt;}{t} = \frac{1}{h}[ \overline{w'\theta'}(z_0) - \overline{w'\theta'}(h)]
-\]</div>
-</details>
-<p>c) Assuming that we are in an encroachment situation and the sensible heat flux and h are constant on time, find an expression for <span class="math notranslate nohighlight">\(\left&lt; {\overline{\theta}} \right&gt;\)</span>
-as a function of time. The assumption of sensible heat flux and h constant on time is reasonable in the afternoon hours
-and during a relative short time. Discuss this assumption.</p>
-<details>
-  <summary>Answer</summary>
-<p>In case of encroachment, the vertical turbulent heat flux is 0 near the entrainment zone since there is no inversion, so</p>
-<div class="math notranslate nohighlight">
-\[
-\pafg{\left&lt;\overline{\theta}\right&gt;}{t} = \frac{\overline{w'\theta'}\left(0\right)}{h}
-\]</div>
-<p>This expression shows that if the boundary lower growth has become minimal, the heating of the boundary layer is proportional to the surface heat flux and inversely proportional to the boundary layer height. All energy (in the form of heat) is equally distributed over the mixed layer.</p>
-<p>Near the end of the afternoon, <span class="math notranslate nohighlight">\(h\)</span> is approximately constant. This assumption is therefore valid. However, the sensible heat flux changes rapidly in that period. The derived equation is still valid in those situations if the heat flux is considered as a function of time.</p>
-</details>
-<p>d) Derive a similar expression but now assuming that the entrainment flux is 20<span class="math notranslate nohighlight">\(\%\)</span> of the surface flux. Compare
-your formulations and discuss their implications.</p>
-<details>
-  <summary>Answer</summary>
-<p>In this case <span class="math notranslate nohighlight">\(\overline{w'\theta'}(h) = -\beta \overline{w'\theta'}(0)\)</span> with <span class="math notranslate nohighlight">\(\beta=0.2\)</span>
-(the downward heat flux at the boundary layer top is equal to 20% of the upward heat flux at the surface),
-so Equation <a class="reference internal" href="#equation-for-61b">(20.5)</a> changes into</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\pafg{\left&lt;\overline{\theta}\right&gt;}{t} &amp;= \frac{\overline{w'\theta'}\left(0\right)+ 0.2\,\overline{w'\theta'}\left(0\right)}{h} \\
-\pafg{\left&lt;\overline{\theta}\right&gt;}{t} &amp;= \frac{1.2\,\overline{w'\theta'}\left(0\right)}{h}
-\end{split}\]</div>
-<p>The difference is that the influx of energy (in the form of heat) is enhanced by 20% due to entrainment of warm air that originates from the free troposphere.
-Therefore, for equal boundary layer heights, the boundary layer would heat up 1.2 times as fast for the same surface heat flux.
-However, note that due to entrainment the boundary layer grows faster and therefore, the heat has to be spread over a larger volume.</p>
-</details>
-<p>e) Discuss the additional equations that we need to include in order to have a more physical description of the entrainment flux.</p>
-<details>
-  <summary>Answer</summary>
-<p>The entrainment flux has to be related to the boundary layer growth rate:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\overline{w'\theta'}(h) &amp;= - w_e \,\Delta\theta\\
- &amp;= - \afg{h}t \,\Delta\theta
-\end{split}\]</div>
-<p>In this equation <span class="math notranslate nohighlight">\(w_e\)</span> is the entrainment velocity in m s<span class="math notranslate nohighlight">\(^{-1}\)</span> and <span class="math notranslate nohighlight">\(\Delta\theta\)</span> is the potential temperature jump at the inversion. In order to evaluate this equation, the time evolution of <span class="math notranslate nohighlight">\(\Delta\theta\)</span> has to be known. This is given by:</p>
-<div class="math notranslate nohighlight">
-\[
-\afg{\Delta\theta}{t} = \gamma_{\theta}\afg{h}{t}- \afg{\left&lt;\overline{\theta}\right&gt;}{t}
-\]</div>
-<p>(<span class="math notranslate nohighlight">\(\partial\)</span> can be replaced by d, since all variables in this equation are only dependent on time.)</p>
-<p>In the end, the system of governing equations is</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\pafg{\left&lt;\overline{\theta}\right&gt;}{t} &amp;= \frac{\overline{w'\theta'}\left(z_0\right)-\overline{w'\theta'}\left(h\right)}{h}\\
-\overline{w'\theta'}(h) &amp;= - \afg{h}t \,\Delta\theta = -w_e \Delta\theta \\
-\afg{\Delta\theta}{t} &amp;= \gamma_{\theta}\afg{h}{t}- \afg{\left&lt;\overline{\theta}\right&gt;}{t}
-\end{split}\]</div>
-<p><span class="math notranslate nohighlight">\(w_e\)</span> is the entrainment velocity.</p>
-</details>
-</section>
-<section id="id2">
-<h2><span class="section-number">20.2. </span><a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
-<p>The atmospheric boundary layer height is 300 m at 0600 UTC, the temperature
-lapse rate is 5 K/km and the initial temperature is <span class="math notranslate nohighlight">\(\theta\)</span> is 285 K . Assuming that the sensible heat flux varies with time over this land
-according to (t is given in hours):</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\overline{w'\theta'(0)}&amp;=c_1 \sin \left( \frac{\pi(t-t_0)}{c_2} \right ) \\
-c_1&amp;=0.2\ Km\ s{-1} \\
-c_2&amp;=12\ hours
-\end{split}\]</div>
-<p>a) Under encroachment conditions, find the boundary layer height at 14 UTC, if the entrainment flux and subsidence are neglectable.</p>
-<details>
-  <summary>Answer</summary>
-<p>In case of encroachment:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\afg{\Delta\theta}{t} &amp;= 0 \\
-\gamma_{\theta}\afg{h}{t}- \afg{\left&lt;\overline{\theta}\right&gt;}{t} &amp;= 0\\
-\afg{h}{t} &amp;= \frac{1}{\gamma_{\theta}}\afg{\left&lt;\overline{\theta}\right&gt;}{t}
-\end{split}\]</div>
-<p>Since in the case of encroachment, <span class="math notranslate nohighlight">\(\overline{w'\theta'}(h)=0\)</span>, Equation <a class="reference internal" href="#equation-for-61b">(20.5)</a> becomes</p>
-<div class="math notranslate nohighlight">
-\[
-\afg{\left&lt;\overline{\theta}\right&gt;}{t} = \frac{\overline{w'\theta'}\left(0\right)}{h}
-\]</div>
-<p>Therefore,</p>
-<div class="math notranslate nohighlight" id="equation-for-62a">
-<span class="eqno">(20.6)<a class="headerlink" href="#equation-for-62a" title="Permalink to this equation">#</a></span>\[
-\afg{h}{t} = \frac{1}{\gamma_{\theta}}\frac{\overline{w'\theta'}_0}{h} 
-\]</div>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-h\,\rm{d}h &amp;= \frac{\overline{w'\theta'}_0}{\gamma_{\theta}} \rm{d}t\\
-\int_{h_1}^{h_2}{h\ {\rm d}h} &amp;= \int_{t1}^{t2}{\frac{\overline{w'\theta'}_0}{\gamma_{\theta}}{\rm d}t}\\
-\dfrac{1}{2}\ h_2^2-\dfrac{1}{2}\ h_1^2 &amp;=  \frac{1}{\gamma_\theta} \int_{t1}^{t2}{\overline{w'\theta'}_0{\rm\,d}t}
-\end{split}\]</div>
-<p>Finally,</p>
-<div class="math notranslate nohighlight">
-\[
-h_2 = \sqrt{h_1^2 + \frac{2}{\gamma_\theta} \int_{t1}^{t2}{\overline{w'\theta'}_0{\rm\,d}t}}
-\]</div>
-<p>Substituting the heat flux results in</p>
-<div class="math notranslate nohighlight">
-\[
-h_2 = \sqrt{h_1^2 + \frac{2}{\gamma_\theta} \int_{t1}^{t2}{c_1 \sin\left(\frac{\pi\left(t-t_0\right)}{c_2}\right){\rm\,d}t}}
-\]</div>
-<p>In this equation, the integral is given by</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\int_{t1}^{t2}{c_1 \sin\left(\frac{\pi\left(t-t_0\right)}{c_2}\right){\rm\,d}t} &amp;= c_1 \left[{-\frac{c_2}{\pi}\cos\left(\frac{\pi\left(t-t_0\right)}{c_2}\right)}\right]_{t_1}^{t_2}\\
- &amp;= \frac{c_1\,c_2}{\pi} \left({\cos\left(\frac{\pi\left(t_1-t_0\right)}{c_2}\right)-\cos\left(\frac{\pi\left(t_2-t_0\right)}{c_2}\right)}\right)_{t_1}^{t_2}\\
- &amp;\approx 4125 {\rm\,K\,m}
-\end{split}\]</div>
-<p>for <span class="math notranslate nohighlight">\(t_1=t_0=0600\rm\,UTC\)</span> and <span class="math notranslate nohighlight">\(t_2=1400\rm\,UTC\)</span>. Substituting this value, <span class="math notranslate nohighlight">\(h_1\)</span>, <span class="math notranslate nohighlight">\(c_1\)</span> and <span class="math notranslate nohighlight">\(c_2\)</span> nets <span class="math notranslate nohighlight">\(h\left(1400\rm\,UTC\right)\approx 1319\rm\,m\)</span></p>
-</details>
-<p>b) Calculate the boundary layer height at 14 UTC assuming that there is a closure assumption between the
-heat flux at the surface and at the entrainment zone:</p>
-<div class="math notranslate nohighlight">
-\[
-\overline{w'\theta'(z_i)}~=~-\beta \overline{w'\theta'(0)},
-\]</div>
-<p>where <span class="math notranslate nohighlight">\(\beta\)</span> is 0.2.</p>
-<details>
-  <summary>Answer</summary>
-<p>This exercise is solved under the assumption that the boundary layer growth is still only due to encroachment, so <span class="math notranslate nohighlight">\(\Delta\theta=0\)</span>. In this case, the boundary layer height development is not related to the entrainment flux. The governing equations are:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\afg{h}{t} &amp;= \frac{1}{\gamma_{\theta}}\afg{\left&lt;\overline{\theta}\right&gt;}{t}\\
-\afg{\left&lt;\overline{\theta}\right&gt;}{t} &amp;= \frac{\overline{w'\theta'}\left(0\right)-\overline{w'\theta'}\left(h\right)}{h} \\
- &amp;= \left(1+\beta\right) \frac{\overline{w'\theta'}\left(0\right)}{h} \\
- &amp;= \left(1+\beta\right) \frac{\overline{w'\theta'}_S}{h}
-\end{split}\]</div>
-<p>This results in</p>
-<div class="math notranslate nohighlight">
-\[
-\afg{h}{t} = \frac{1+\beta}{\gamma_{\theta}}\frac{\overline{w'\theta'}_S}{h}
-\]</div>
-<p>Due to the analogy with Equation <a class="reference internal" href="#equation-for-62a">(20.6)</a>, this results in</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-h_2 &amp;= \sqrt{h_1^2 + \frac{2}{\gamma_\theta} \int_{t1}^{t2}{\left(1+\beta\right)\overline{w'\theta'}_S{\rm\,d}t}}\\
- &amp;= \sqrt{h_1^2 + \frac{2\,\left(1+\beta\right)}{\gamma_\theta} \int_{t1}^{t2}{\overline{w'\theta'}_S{\rm\,d}t}}
-\end{split}\]</div>
-<p>Since the solution to the integral and the values of <span class="math notranslate nohighlight">\(h_1\)</span>, <span class="math notranslate nohighlight">\(\beta\)</span> and <span class="math notranslate nohighlight">\(\gamma_\theta\)</span> are known, the answer can be found: <span class="math notranslate nohighlight">\(h_2 \approx 1439\rm\,m\)</span></p>
-</details>
-<p>c) Calculate the mixed-layer potential temperature in the Convective Boundary Layer
-at 14.00 for both cases. Discuss the results.</p>
-<details>
-  <summary>Answer</summary>
-<p>Due to the relation</p>
-<div class="math notranslate nohighlight">
-\[
-\afg{h}{t} = \frac{1}{\gamma_{\theta}}\afg{\left&lt;\overline{\theta}\right&gt;}{t}
-\]</div>
-<p>It is known that</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\afg{\left&lt;\overline{\theta}\right&gt;}{t} &amp;= \gamma_\theta \afg{h}{t}\\
-\Delta{\left&lt;\overline{\theta}\right&gt;} &amp;= \gamma_\theta \Delta{h}\\
-\left&lt;\overline{\theta}\right&gt;_2 &amp;= \left&lt;\overline{\theta}\right&gt;_1 + \gamma_\theta \left(h_2-h_1\right)
-\end{split}\]</div>
-<p>The resulting mixed layer potential temperatures are <span class="math notranslate nohighlight">\(290.1\rm\,K\)</span> in the case of encroachment
-and <span class="math notranslate nohighlight">\(290.7\rm\,K\)</span> in the case of entrainment flux without the associated boundary layer growth.</p>
-<p>Note that the solution presented here is not the complete analytical solution, since we neglected the growth of the boundary layer that is associated to the entrainment flux. In case this is taken into account, a factor 2 appears before <span class="math notranslate nohighlight">\(\beta\)</span> in the final equation for <span class="math notranslate nohighlight">\(h_2\)</span> as well as some extra terms that deal with the initial inversion conditions.</p>
-</details>
-</section>
-<section id="id3">
-<h2><span class="section-number">20.3. </span><a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h2>
-<p>Given an arbitrary mixed layer, we can assume that the mixed layer potential temperature
-(<span class="math notranslate nohighlight">\(\left&lt;\overline{\theta}\right&gt;\)</span>) and the potential temperature jump (<span class="math notranslate nohighlight">\(\Delta\theta\)</span>) evolve with time according to</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\pafg{\left&lt;{\overline{\theta}}\right&gt;}{t} &amp;=\frac{\overline{w'\theta'}(0)-\overline{w'\theta'}(h)}{h} \\
-\pafg{\Delta\theta}{t} &amp;= \gamma_\theta\pafg{h}{t} - \pafg{\left&lt;\overline{\theta}\right&gt;}{t}\\
-\overline{w'\theta'}(h) &amp;= - \pafg{h}{t}\Delta\theta
-\end{split}\]</div>
-<p>At 12 UTC, the mixed layer temperature is 290 K. At the top of the mixed layer, there is an inversion
-with an initial temperature above equal to 296 K.
-Above the inversion the temperature increases 0.05 K every 10 m.
-The surface flux <span class="math notranslate nohighlight">\(\overline{w'\theta'}(0)\)</span> is 185 <span class="math notranslate nohighlight">\(W/m^2\)</span> (which is <span class="math notranslate nohighlight">\(0.15\rm\,K\,m\,s^{-1}\)</span>).</p>
-<p>a) Draw the vertical profile of the potential temperature and the heat flux.
-Describe the different regions in the CBL.</p>
-<details>
-  <summary>Answer</summary>
-<figure class="align-default" id="fig-6">
-<img alt="../_images/exercise6_3.png" src="../_images/exercise6_3.png" />
-<figcaption>
-<p><span class="caption-number">Fig. 20.1 </span><span class="caption-text">Boundary layer profiles of potential temperature <strong>a</strong> and sensible heat flux <strong>b</strong> at 12 UTC. The dashed lines denote the idealized profiles.</span><a class="headerlink" href="#fig-6" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<p>The profiles are drawn in <a class="reference internal" href="#fig-6"><span class="std std-numref">Fig. 20.1</span></a>. From bottom to top, the layers are:</p>
-<ul class="simple">
-<li><p>the surface layer</p></li>
-<li><p>the mixed layer</p></li>
-<li><p>the entrainment zone</p></li>
-<li><p>the free troposphere</p></li>
-</ul>
-</details>
-<p>b) If <span class="math notranslate nohighlight">\(h\)</span> is 1000 m at 12 UTC, what is the boundary layer growth rate and the temperature change per hour in the CBL?</p>
-<div class="tip dropdown admonition hint">
-<p class="admonition-title">Hint</p>
-<p>Assume (like in question 2b) that</p>
-<div class="math notranslate nohighlight">
-\[
-\overline{w'\theta'(h)}~=~-\beta \overline{w'\theta'(0)},
-\]</div>
-<p>where <span class="math notranslate nohighlight">\(\beta\)</span> is 0.2.</p>
-</div>
-<details>
-  <summary>Answer</summary>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\pafg{h}{t} &amp;= 0.2 \frac{\overline{w'\theta'}(0)}{\Delta\theta}\\
-\overline{w'\theta'}(0) &amp;= 0.15\rm\,K\,m\,s^{-1}\\
-\Delta\theta &amp;= 6\rm\,K
-\end{split}\]</div>
-<p>Therefore, <span class="math notranslate nohighlight">\(\pafg{h}{t} = 0.005\rm\,m\,s^{-1} = 18\,m\,hr^{-1}\)</span></p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\pafg{\left&lt;{\overline{\theta}}\right&gt;}{t} &amp;=\frac{\overline{w'\theta'}(0)-\overline{w'\theta'}(h)}{h} \\
- &amp;=  \frac{\left(1+\beta\right)\overline{w'\theta'}(0)}{h}\\
-h&amp;= 1000\rm\,m
-\end{split}\]</div>
-<p>Because of this, <span class="math notranslate nohighlight">\(\pafg{\left&lt;{\overline{\theta}}\right&gt;}{t} = 1.8\,10^{-4}\rm\,K\,s^{-1}=0.65\,K\,hr^{-1}\)</span>.</p>
-</details>
-<p>c) Calculate the convective velocity at the same time and estimate how long it takes a parcel to travel from the
-surface to the top of the atmospheric boundary layer</p>
-<details>
-  <summary>Answer</summary>
-<p>The convective velocity is defined by</p>
-<div class="math notranslate nohighlight">
-\[
-w_*=\sqrt[3]{\frac{g}{\theta_v}\,\overline{w'\theta_v'}\,h}
-\]</div>
-<p>In this definition, the buoyancy term of the TKE, <span class="math notranslate nohighlight">\(\frac{g}{\theta_v}\,\overline{w'\theta_v'}\)</span>, is incorporated.
-In this case, no moisture is considered, so <span class="math notranslate nohighlight">\(\overline{w'\theta_v'}=\overline{w'\theta'}\)</span>.
-Substituting the known values results in <span class="math notranslate nohighlight">\(w_* = 1.72\rm\,m\,s^{-1}\)</span>.</p>
-<p>The time it takes for a parcel to travel from the surface to the top of the atmospheric boundary layer due to convection is</p>
-<div class="math notranslate nohighlight">
-\[
-T = \frac{h}{w_*}
-\]</div>
-<p>This results in <span class="math notranslate nohighlight">\(T = 582 s \approx 10\rm\,min\)</span></p>
-</details>
-</section>
-<section id="id4">
-<h2><span class="section-number">20.4. </span><a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h2>
-<p><a class="reference internal" href="#fig-61"><span class="std std-numref">Fig. 20.2</span></a>, <a class="reference internal" href="#fig-62"><span class="std std-numref">Fig. 20.3</span></a>, and <a class="reference internal" href="#fig-63"><span class="std std-numref">Fig. 20.4</span></a> show the vertical profiles of the potential temperature measured by radiosondes in the USA at 11, 17 and 23 UTC the 20th June 1997 (local time=UTC-6 hours).</p>
+<p><a class="reference internal" href="#fig-61"><span class="std std-numref">Fig. 20.1</span></a>, <a class="reference internal" href="#fig-62"><span class="std std-numref">Fig. 20.2</span></a>, and <a class="reference internal" href="#fig-63"><span class="std std-numref">Fig. 20.3</span></a> show the vertical profiles of the potential temperature measured by radiosondes in the USA at 11, 17 and 23 UTC the 20th June 1997 (local time=UTC-6 hours).</p>
 <figure class="align-default" id="fig-61">
 <img alt="../_images/figset61.png" src="../_images/figset61.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 20.2 </span><span class="caption-text">Vertical profile of potential temperature measured by radiosondes at 11 UTC</span><a class="headerlink" href="#fig-61" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 20.1 </span><span class="caption-text">Vertical profile of potential temperature measured by radiosondes at 11 UTC</span><a class="headerlink" href="#fig-61" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="fig-62">
 <img alt="../_images/figset62.png" src="../_images/figset62.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 20.3 </span><span class="caption-text">Vertical profile of potential temperature measured by radiosondes at 17 UTC</span><a class="headerlink" href="#fig-62" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 20.2 </span><span class="caption-text">Vertical profile of potential temperature measured by radiosondes at 17 UTC</span><a class="headerlink" href="#fig-62" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="fig-63">
 <img alt="../_images/figset63.png" src="../_images/figset63.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 20.4 </span><span class="caption-text">Vertical profile of potential temperature measured by radiosondes at 23 UTC</span><a class="headerlink" href="#fig-63" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 20.3 </span><span class="caption-text">Vertical profile of potential temperature measured by radiosondes at 23 UTC</span><a class="headerlink" href="#fig-63" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>a) Describe the radiosoundings by giving the boundary layer height, the mixed layer temperature, the temperature inversion and the laspe rate
@@ -761,9 +443,9 @@ T = \frac{h}{w_*}
 <table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Figure</p></th>
-<th class="head"><p><a class="reference internal" href="#fig-61"><span class="std std-numref">Fig. 20.2</span></a></p></th>
-<th class="head"><p><a class="reference internal" href="#fig-62"><span class="std std-numref">Fig. 20.3</span></a></p></th>
-<th class="head"><p><a class="reference internal" href="#fig-63"><span class="std std-numref">Fig. 20.4</span></a></p></th>
+<th class="head"><p><a class="reference internal" href="#fig-61"><span class="std std-numref">Fig. 20.1</span></a></p></th>
+<th class="head"><p><a class="reference internal" href="#fig-62"><span class="std std-numref">Fig. 20.2</span></a></p></th>
+<th class="head"><p><a class="reference internal" href="#fig-63"><span class="std std-numref">Fig. 20.3</span></a></p></th>
 </tr>
 </thead>
 <tbody>
@@ -803,18 +485,17 @@ flux at 17 UTC.</p>
   <summary>Answer</summary>
 <p>At 17 UTC (11 LT), <span class="math notranslate nohighlight">\(\Delta\theta=5\rm\,K\)</span>.</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}
-\overline{w'\theta'(z_i)} &amp;= - w_e\,\Delta\theta \\
- &amp;= - \pafg{h}{t}\,\Delta\theta
-\end{split}\]</div>
+\[
+\overline{w'\theta'(z_i)} = - w_e\,\Delta\theta 
+\]</div>
 <p>Substituting the variables results in <span class="math notranslate nohighlight">\(\overline{w'\theta'(z_i)} = -0.05\rm\,K\,m\,s^{-1}\)</span>.</p>
 <p>The flux is negative, since heat is transported downwards.</p>
 </details>
 </section>
-<section id="id5">
-<h2><span class="section-number">20.5. </span><a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h2>
+<section id="id2">
+<h2><span class="section-number">20.2. </span><a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
 <p>During the 27th of July 2002, the vertical profile of potential temperature
-and heat flux (see <a class="reference internal" href="#fig-64"><span class="std std-numref">Fig. 20.5</span></a> and <a class="reference internal" href="#fig-65"><span class="std std-numref">Fig. 20.6</span></a>) were measured by an aircraft above Cabauw. The heat flux measurements were
+and heat flux (see <a class="reference internal" href="#fig-64"><span class="std std-numref">Fig. 20.4</span></a> and <a class="reference internal" href="#fig-65"><span class="std std-numref">Fig. 20.5</span></a>) were measured by an aircraft above Cabauw. The heat flux measurements were
 taken around 12.45 UTC.</p>
 <p>a) Estimate the boundary layer height at 8.15 UTC and 12.45. Calculate the velocity of the growth of the convective boundary layer.</p>
 <details>
@@ -866,20 +547,23 @@ This shows that local K-theory is not applicable in a well mixed boundary layer.
 <figure class="align-default" id="fig-64">
 <img alt="../_images/figset64.png" src="../_images/figset64.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 20.5 </span><span class="caption-text">Vertical profile of potential temperature measured above Cabauw during the 27th July 2002</span><a class="headerlink" href="#fig-64" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 20.4 </span><span class="caption-text">Vertical profile of potential temperature measured above Cabauw during the 27th July 2002</span><a class="headerlink" href="#fig-64" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="fig-65">
 <img alt="../_images/figset65.png" src="../_images/figset65.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 20.6 </span><span class="caption-text">Vertical profile of sensible heat flux measured above Cabauw during the 27th July 2002</span><a class="headerlink" href="#fig-65" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 20.5 </span><span class="caption-text">Vertical profile of sensible heat flux measured above Cabauw during the 27th July 2002</span><a class="headerlink" href="#fig-65" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
-<hr class="docutils" />
-<section id="id6">
-<h2><span class="section-number">20.6. </span><a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h2>
-<p>This exercise is about a convective boundary layer without any background wind. The strength of turbulent convection in such a boundary layer is related to the surface flux of virtual potential temperature <span class="math notranslate nohighlight">\(\overline{w^\prime \theta_v^\prime}_0\)</span> and its depth <span class="math notranslate nohighlight">\(h\)</span>. We assume that the former is 0.1 K m<span class="math notranslate nohighlight">\(^{-1}\)</span>, and the latter is 1000 m. The kinematic viscosity <span class="math notranslate nohighlight">\(\nu\)</span> is <span class="math notranslate nohighlight">\(1.5 \cdot 10^{-5}\)</span> m<span class="math notranslate nohighlight">\(^2\)</span> s<span class="math notranslate nohighlight">\(^{-1}\)</span>. The boundary layer is in quasi-steady state, which means that production and destruction by approximation balance. We assume that <span class="math notranslate nohighlight">\(g / \overline{\theta}_v\)</span> is 10 / 300.</p>
+<section id="id3">
+<h2><span class="section-number">20.3. </span><a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h2>
+<p>This exercise is about a convective boundary layer without any background wind.
+The strength of turbulent convection in such a boundary layer is related to the surface flux of virtual potential temperature <span class="math notranslate nohighlight">\(\overline{w^\prime \theta_v^\prime}_0\)</span> and its depth <span class="math notranslate nohighlight">\(h\)</span>.
+We assume that the former is 0.1 K m s<span class="math notranslate nohighlight">\(^{-1}\)</span>, and the latter is 1000 m. The kinematic viscosity <span class="math notranslate nohighlight">\(\nu\)</span> is <span class="math notranslate nohighlight">\(1.5 \cdot 10^{-5}\)</span> m<span class="math notranslate nohighlight">\(^2\)</span> s<span class="math notranslate nohighlight">\(^{-1}\)</span>.
+The boundary layer is in quasi-steady state, which means that production and destruction by approximation balance.
+We assume that <span class="math notranslate nohighlight">\(g / \overline{\theta}_v\)</span> is 10 / 300.</p>
 <p>a) What is the typical velocity <span class="math notranslate nohighlight">\(w_*\)</span> of a convective boundary layer, given its surface flux and depth and what is its value in this case?</p>
 <details>
   <summary>Answer</summary>
@@ -910,7 +594,7 @@ This shows that local K-theory is not applicable in a well mixed boundary layer.
   <summary>Answer</summary>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-\dfrac{h}{\eta} &amp;= 
+\dfrac{h}{\eta} &amp;=
 \dfrac{h}{\left( \nu^3 / \dfrac{g}{\overline{\theta}_{v}} \overline{w^\prime \theta_v^\prime}_0 \right)^\frac{1}{4}} \\
 &amp;=
 \dfrac{h \left( \dfrac{g}{\overline{\theta}_{v}} \overline{w^\prime \theta_v^\prime}_0 \right)^\frac{1}{4}}
@@ -924,6 +608,306 @@ This shows that local K-theory is not applicable in a well mixed boundary layer.
 &amp;=
 Re^\frac{3}{4}
 \end{split}\]</div>
+</details>
+</section>
+<section id="id4">
+<h2><span class="section-number">20.4. </span><a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h2>
+<p>The atmospheric boundary layer height is 300 m at 0600 UTC, the temperature
+lapse rate is 5 K/km and the initial temperature is <span class="math notranslate nohighlight">\(\theta\)</span> is 285 K . Assuming that the sensible heat flux varies with time over this land
+according to (t is given in hours):</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\overline{w'\theta'(0)}&amp;=c_1 \sin \left( \frac{\pi(t-t_0)}{c_2} \right ) \\
+c_1&amp;=0.2\ Km\ s{-1} \\
+c_2&amp;=12\ hours
+\end{split}\]</div>
+<p>a) Under encroachment conditions, find the boundary layer height at 14 UTC, if the entrainment flux and subsidence are neglectable.</p>
+<details>
+  <summary>Answer</summary>
+<p>In case of encroachment:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\afg{\Delta\theta}{t} &amp;= 0 \\
+\gamma_{\theta}\afg{h}{t}- \afg{\left&lt;\overline{\theta}\right&gt;}{t} &amp;= 0\\
+\afg{h}{t} &amp;= \frac{1}{\gamma_{\theta}}\afg{\left&lt;\overline{\theta}\right&gt;}{t}
+\end{split}\]</div>
+<p>Since in the case of encroachment, <span class="math notranslate nohighlight">\(\overline{w'\theta'}(h)=0\)</span>, Equation <a class="reference internal" href="#equation-for-61b">(20.6)</a> becomes</p>
+<div class="math notranslate nohighlight">
+\[
+\afg{\left&lt;\overline{\theta}\right&gt;}{t} = \frac{\overline{w'\theta'}\left(0\right)}{h}
+\]</div>
+<p>Therefore,</p>
+<div class="math notranslate nohighlight" id="equation-for-62a">
+<span class="eqno">(20.1)<a class="headerlink" href="#equation-for-62a" title="Permalink to this equation">#</a></span>\[
+\afg{h}{t} = \frac{1}{\gamma_{\theta}}\frac{\overline{w'\theta'}_0}{h} 
+\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+h\,\rm{d}h &amp;= \frac{\overline{w'\theta'}_0}{\gamma_{\theta}} \rm{d}t\\
+\int_{h_1}^{h_2}{h\ {\rm d}h} &amp;= \int_{t1}^{t2}{\frac{\overline{w'\theta'}_0}{\gamma_{\theta}}{\rm d}t}\\
+\dfrac{1}{2}\ h_2^2-\dfrac{1}{2}\ h_1^2 &amp;=  \frac{1}{\gamma_\theta} \int_{t1}^{t2}{\overline{w'\theta'}_0{\rm\,d}t}
+\end{split}\]</div>
+<p>Finally,</p>
+<div class="math notranslate nohighlight">
+\[
+h_2 = \sqrt{h_1^2 + \frac{2}{\gamma_\theta} \int_{t1}^{t2}{\overline{w'\theta'}_0{\rm\,d}t}}
+\]</div>
+<p>Substituting the heat flux results in</p>
+<div class="math notranslate nohighlight">
+\[
+h_2 = \sqrt{h_1^2 + \frac{2}{\gamma_\theta} \int_{t1}^{t2}{c_1 \sin\left(\frac{\pi\left(t-t_0\right)}{c_2}\right){\rm\,d}t}}
+\]</div>
+<p>In this equation, the integral is given by</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\int_{t1}^{t2}{c_1 \sin\left(\frac{\pi\left(t-t_0\right)}{c_2}\right){\rm\,d}t} &amp;= c_1 \left[{-\frac{c_2}{\pi}\cos\left(\frac{\pi\left(t-t_0\right)}{c_2}\right)}\right]_{t_1}^{t_2}\\
+ &amp;= \frac{c_1\,c_2}{\pi} \left({\cos\left(\frac{\pi\left(t_1-t_0\right)}{c_2}\right)-\cos\left(\frac{\pi\left(t_2-t_0\right)}{c_2}\right)}\right)_{t_1}^{t_2}\\
+ &amp;\approx 4125 {\rm\,K\,m}
+\end{split}\]</div>
+<p>for <span class="math notranslate nohighlight">\(t_1=t_0=0600\rm\,UTC\)</span> and <span class="math notranslate nohighlight">\(t_2=1400\rm\,UTC\)</span>. Substituting this value, <span class="math notranslate nohighlight">\(h_1\)</span>, <span class="math notranslate nohighlight">\(c_1\)</span> and <span class="math notranslate nohighlight">\(c_2\)</span> nets <span class="math notranslate nohighlight">\(h\left(1400\rm\,UTC\right)\approx 1319\rm\,m\)</span></p>
+</details>
+<p>b) Calculate the boundary layer height at 14 UTC assuming that there is a closure assumption between the
+heat flux at the surface and at the entrainment zone:</p>
+<div class="math notranslate nohighlight">
+\[
+\overline{w'\theta'(z_i)}~=~-\beta \overline{w'\theta'(0)},
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(\beta\)</span> is 0.2.</p>
+<details>
+  <summary>Answer</summary>
+<p>This exercise is solved under the assumption that the boundary layer growth is still only due to encroachment, so <span class="math notranslate nohighlight">\(\Delta\theta=0\)</span>. In this case, the boundary layer height development is not related to the entrainment flux. The governing equations are:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\afg{h}{t} &amp;= \frac{1}{\gamma_{\theta}}\afg{\left&lt;\overline{\theta}\right&gt;}{t}\\
+\afg{\left&lt;\overline{\theta}\right&gt;}{t} &amp;= \frac{\overline{w'\theta'}\left(0\right)-\overline{w'\theta'}\left(h\right)}{h} \\
+ &amp;= \left(1+\beta\right) \frac{\overline{w'\theta'}\left(0\right)}{h} \\
+ &amp;= \left(1+\beta\right) \frac{\overline{w'\theta'}_S}{h}
+\end{split}\]</div>
+<p>This results in</p>
+<div class="math notranslate nohighlight">
+\[
+\afg{h}{t} = \frac{1+\beta}{\gamma_{\theta}}\frac{\overline{w'\theta'}_S}{h}
+\]</div>
+<p>Due to the analogy with Equation <a class="reference internal" href="#equation-for-62a">(20.1)</a>, this results in</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+h_2 &amp;= \sqrt{h_1^2 + \frac{2}{\gamma_\theta} \int_{t1}^{t2}{\left(1+\beta\right)\overline{w'\theta'}_S{\rm\,d}t}}\\
+ &amp;= \sqrt{h_1^2 + \frac{2\,\left(1+\beta\right)}{\gamma_\theta} \int_{t1}^{t2}{\overline{w'\theta'}_S{\rm\,d}t}}
+\end{split}\]</div>
+<p>Since the solution to the integral and the values of <span class="math notranslate nohighlight">\(h_1\)</span>, <span class="math notranslate nohighlight">\(\beta\)</span> and <span class="math notranslate nohighlight">\(\gamma_\theta\)</span> are known, the answer can be found: <span class="math notranslate nohighlight">\(h_2 \approx 1439\rm\,m\)</span></p>
+</details>
+<p>c) Calculate the mixed-layer potential temperature in the Convective Boundary Layer
+at 14.00 for both cases. Discuss the results.</p>
+<details>
+  <summary>Answer</summary>
+<p>Due to the relation</p>
+<div class="math notranslate nohighlight">
+\[
+\afg{h}{t} = \frac{1}{\gamma_{\theta}}\afg{\left&lt;\overline{\theta}\right&gt;}{t}
+\]</div>
+<p>It is known that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\afg{\left&lt;\overline{\theta}\right&gt;}{t} &amp;= \gamma_\theta \afg{h}{t}\\
+\Delta{\left&lt;\overline{\theta}\right&gt;} &amp;= \gamma_\theta \Delta{h}\\
+\left&lt;\overline{\theta}\right&gt;_2 &amp;= \left&lt;\overline{\theta}\right&gt;_1 + \gamma_\theta \left(h_2-h_1\right)
+\end{split}\]</div>
+<p>The resulting mixed layer potential temperatures are <span class="math notranslate nohighlight">\(290.1\rm\,K\)</span> in the case of encroachment
+and <span class="math notranslate nohighlight">\(290.7\rm\,K\)</span> in the case of entrainment flux without the associated boundary layer growth.</p>
+<p>Note that the solution presented here is not the complete analytical solution, since we neglected the growth of the boundary layer that is associated to the entrainment flux. In case this is taken into account, a factor 2 appears before <span class="math notranslate nohighlight">\(\beta\)</span> in the final equation for <span class="math notranslate nohighlight">\(h_2\)</span> as well as some extra terms that deal with the initial inversion conditions.</p>
+</details>
+</section>
+<section id="id5">
+<h2><span class="section-number">20.5. </span><a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h2>
+<p>Given an arbitrary mixed layer, we can assume that the mixed layer potential temperature
+(<span class="math notranslate nohighlight">\(\left&lt;\overline{\theta}\right&gt;\)</span>) and the potential temperature jump (<span class="math notranslate nohighlight">\(\Delta\theta\)</span>) evolve with time according to</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\afg{\left&lt;{\overline{\theta}}\right&gt;}{t} &amp;=\frac{\overline{w'\theta'}(0)-\overline{w'\theta'}(h)}{h} \\
+\afg{\Delta\theta}{t} &amp;= \gamma_\theta\afg{h}{t} - \afg{\left&lt;\overline{\theta}\right&gt;}{t}\\
+\overline{w'\theta'}(h) &amp;= - \afg{h}{t}\Delta\theta
+\end{split}\]</div>
+<p>At 12 UTC, the mixed layer temperature is 290 K. At the top of the mixed layer, there is an inversion
+with an initial temperature above equal to 296 K.
+Above the inversion the temperature increases 0.05 K every 10 m.
+The surface flux H is 185 <span class="math notranslate nohighlight">\(W/m^2\)</span> (thus <span class="math notranslate nohighlight">\(\overline{w'\theta'}(0)\)</span> is <span class="math notranslate nohighlight">\(0.15\rm\,K\,m\,s^{-1}\)</span>) and <span class="math notranslate nohighlight">\(h\)</span> is 1000 m.</p>
+<p>a) Draw the vertical profile of the potential temperature and the heat flux.
+Describe the different regions in the CBL.</p>
+<details>
+  <summary>Answer</summary>
+<figure class="align-default" id="fig-6">
+<img alt="../_images/exercise6_3.png" src="../_images/exercise6_3.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 20.6 </span><span class="caption-text">Boundary layer profiles of potential temperature <strong>a</strong> and sensible heat flux <strong>b</strong> at 12 UTC. The dashed lines denote the idealized profiles.</span><a class="headerlink" href="#fig-6" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The profiles are drawn in <a class="reference internal" href="#fig-6"><span class="std std-numref">Fig. 20.6</span></a>. From bottom to top, the layers are:</p>
+<ul class="simple">
+<li><p>the surface layer</p></li>
+<li><p>the mixed layer</p></li>
+<li><p>the entrainment zone</p></li>
+<li><p>the free troposphere</p></li>
+</ul>
+</details>
+<p>b) If <span class="math notranslate nohighlight">\(h\)</span> is 1000 m at 12 UTC, what is the boundary layer growth rate and the temperature change per hour in the CBL?</p>
+<div class="tip dropdown admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Assume (like in question 4b) that</p>
+<div class="math notranslate nohighlight">
+\[
+\overline{w'\theta'(h)}~=~-\beta \overline{w'\theta'(0)},
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(\beta\)</span> is 0.2.</p>
+</div>
+<details>
+  <summary>Answer</summary>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\afg{h}{t} &amp;= 0.2 \frac{\overline{w'\theta'}(0)}{\Delta\theta}\\
+\overline{w'\theta'}(0) &amp;= 0.15\rm\,K\,m\,s^{-1}\\
+\Delta\theta &amp;= 6\rm\,K
+\end{split}\]</div>
+<p>Therefore, <span class="math notranslate nohighlight">\(\afg{h}{t} = 0.005\rm\,m\,s^{-1} = 18\,m\,hr^{-1}\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\afg{\left&lt;{\overline{\theta}}\right&gt;}{t} &amp;=\frac{\overline{w'\theta'}(0)-\overline{w'\theta'}(h)}{h} \\
+ &amp;=  \frac{\left(1+\beta\right)\overline{w'\theta'}(0)}{h}\\
+h&amp;= 1000\rm\,m
+\end{split}\]</div>
+<p>Because of this, <span class="math notranslate nohighlight">\(\afg{\left&lt;{\overline{\theta}}\right&gt;}{t} = 1.8\ \cdot 10^{-4}\rm\,K\,s^{-1}=0.65\,K\,hr^{-1}\)</span>.</p>
+</details>
+<p>c) Calculate the convective velocity at the same time and estimate how long it takes a parcel to travel from the
+surface to the top of the atmospheric boundary layer</p>
+<div class="tip dropdown admonition hint">
+<p class="admonition-title">Hint</p>
+<p>The convective velocity is w*, which you derived in question 3a</p>
+</div>
+<details>
+  <summary>Answer</summary>
+<p>The convective velocity is defined by</p>
+<div class="math notranslate nohighlight">
+\[
+w_*=\sqrt[3]{\frac{g}{\theta_v}\,\overline{w'\theta_v'}\,h}
+\]</div>
+<p>In this definition, the buoyancy term of the TKE, <span class="math notranslate nohighlight">\(\frac{g}{\theta_v}\,\overline{w'\theta_v'}\)</span>, is incorporated.
+In this case, no moisture is considered, so <span class="math notranslate nohighlight">\(\overline{w'\theta_v'}=\overline{w'\theta'}\)</span>.
+Substituting the known values results in <span class="math notranslate nohighlight">\(w_* = 1.72\rm\,m\,s^{-1}\)</span>.</p>
+<p>The time it takes for a parcel to travel from the surface to the top of the atmospheric boundary layer due to convection is</p>
+<div class="math notranslate nohighlight">
+\[
+T = \frac{h}{w_*}
+\]</div>
+<p>This results in <span class="math notranslate nohighlight">\(T = 582 s \approx 10\rm\,min\)</span></p>
+</details>
+</section>
+<section id="id6">
+<h2><span class="section-number">20.6. </span><a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h2>
+<p>The one-dimensional conservation equation for heat reads:</p>
+<div class="math notranslate nohighlight">
+\[
+\pafg{\overline{\theta}}{t}~=~-~\pafg{\overline{w'\theta'}}{z}
+\]</div>
+<p>a) Discuss which terms have been neglected from total conservation equation for heat to come to this equation</p>
+<div class="tip dropdown admonition hint">
+<p class="admonition-title">Hint</p>
+<p>We derived the equation for the averaged potential temperature in week 2, exercise 4a.</p>
+<div class="math notranslate nohighlight">
+\[
+\underbrace{\gemafg{\theta}{t}}_{\rm Tendency} + \underbrace{\overline{u_j}\gemafg{\theta}{x_j}}_{\rm Advection} + \underbrace{\gemafg{u_j'\theta'}{x_j}}_{\rm Turbulent\ heat\ flux } = \underbrace{\nu_\theta\pafg{^2\overline{\theta}}{x_j^2}}_{\rm Molecular\ diffusion} - \underbrace{\frac{1}{\rho\,c_p}\gemafg{Q_j}{x_j}}_{\rm Radiation} - \underbrace{\frac{{ L_v}\,E}{\rho c_p}}_{\rm Latent\ heat\ release}
+\]</div>
+</div>
+<details>
+  <summary>Answer</summary>
+<p>The total conservation equation for heat is</p>
+<div class="math notranslate nohighlight">
+\[
+\underbrace{\gemafg{\theta}{t}}_{\rm Tendency} + \underbrace{\overline{u_j}\gemafg{\theta}{x_j}}_{\rm Advection} + \underbrace{\gemafg{u_j'\theta'}{x_j}}_{\rm Turbulent\ heat\ flux } = \underbrace{\nu_\theta\pafg{^2\overline{\theta}}{x_j^2}}_{\rm Molecular\ diffusion} - \underbrace{\frac{1}{\rho\,c_p}\gemafg{Q_j}{x_j}}_{\rm Radiation} - \underbrace{\frac{{ L_v}\,E}{\rho c_p}}_{\rm Latent\ heat\ release}
+\]</div>
+<p>The neglected terms are:</p>
+<ul class="simple">
+<li><p><strong>advection</strong>: No advection is present. This automatically follows from using the assumption of horizontal homogeneity and the absence of subsidence.</p></li>
+<li><p><strong>horizontal turbulent heat flux</strong>: Due to horizontal homogeneity, it is assumed that the horizontal turbulent heat flux is equal for all <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span>, causing the terms with <span class="math notranslate nohighlight">\(i\)</span> equal to 1 or 2 to vanish.</p></li>
+<li><p><strong>diffusion</strong>: The impact of dissipation is relatively small under daytime (convective) conditions.</p></li>
+<li><p><strong>radiation</strong>: The impact of radiation is relatively small under these conditions as well.</p></li>
+<li><p><strong>latent heat release</strong>: In the case of clear skies, there is no condensation/evaporation.</p></li>
+</ul>
+</details>
+<p>b) Explain the mathematical steps and definitions to derive the mixed-layer equation for the bulk potential temperature that reads:</p>
+<div class="math notranslate nohighlight">
+\[
+\afg{ {\left&lt; \overline{\theta}\right&gt;}}{t}~=~\frac{\overline{w'\theta'(0)}-\overline{w'\theta'(h)}}{h}.
+\]</div>
+<details>
+  <summary>Answer</summary>
+<p>To get to the mixed-layer equations, the conservation equation has to be integrated with height over the whole boundary layer.</p>
+<div class="math notranslate nohighlight" id="equation-eq6-7">
+<span class="eqno">(20.2)<a class="headerlink" href="#equation-eq6-7" title="Permalink to this equation">#</a></span>\[
+\int_{z_0}^h \! \pafg{\overline{\theta}}{t} \, dz = - \int_{z_0}^h \! \pafg{}{z}(\overline{w'\theta'}) dz
+\]</div>
+<p>Integrating the right-hand-side of equation <a class="reference internal" href="#equation-eq6-7">(20.2)</a>, we find:</p>
+<div class="math notranslate nohighlight" id="equation-eq6-12">
+<span class="eqno">(20.3)<a class="headerlink" href="#equation-eq6-12" title="Permalink to this equation">#</a></span>\[
+- \int_{z_0}^h \! \pafg{}{z}(\overline{w'\theta'}) dz = \overline{w'\theta'}(z_0) - \overline{w'\theta'}(h)
+  \]</div>
+<p>Since one of the limits of the integration (<span class="math notranslate nohighlight">\(h\)</span>) is changing on time,
+we have to use of the Leibniz rule to solve the left-hand-side of integral <a class="reference internal" href="#equation-eq6-7">(20.2)</a>:</p>
+<p>For an arbitrary scalar, <span class="math notranslate nohighlight">\(\psi\)</span>, and limits a and b, the Leibniz rule is:</p>
+<div class="math notranslate nohighlight" id="equation-eq6-8">
+<span class="eqno">(20.4)<a class="headerlink" href="#equation-eq6-8" title="Permalink to this equation">#</a></span>\[
+\afg{}{t} \int_a^b \! \psi \, \mathrm{d}z = \int_a^b \! \pafg{\psi}{t} \, \mathrm{d}z - \psi(a) \afg{a}{t} + \psi(b) \afg{b}{t}.
+\]</div>
+<p>We substitute <span class="math notranslate nohighlight">\( \psi = \theta \)</span> in Equation <a class="reference internal" href="#equation-eq6-8">(20.4)</a> and use the limits <span class="math notranslate nohighlight">\(z_0\)</span> and h.
+This gives:</p>
+<div class="math notranslate nohighlight">
+\[
+\afg{}{t} \underbrace{ \int_{z_0}^h \! \overline\theta \, dz}_{\left&lt; \theta \right&gt; h}  =~ \int_{z_0}^h \!\pafg{\overline\theta }{t} \, dz-
+\underbrace{\overline\theta (z_0) \pafg{z_0}{t}}_{=0} + \overline\theta (h) \pafg{h}{t}
+\]</div>
+<p>We reorganise this equation to find:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\int_{z_0}^h \! \pafg{\overline\theta}{t} \, dz &amp;= \afg{}{t}[\left&lt; \theta \right&gt; h] - \overline\theta(h) \afg{h}{t}\\
+&amp;= h \afg{\left&lt; \theta \right&gt;}{t} + \left&lt; \theta \right&gt; \afg{h}{t} - \overline\theta(h) \afg{h}{t}\\
+&amp;= h \afg{\left&lt; \theta \right&gt;}{t} + \afg{h}{t} \underbrace{[\left&lt; \theta \right&gt;-\overline\theta(h)]}_{0}
+\end{split}\]</div>
+<p>Throughout the mixed layer, <span class="math notranslate nohighlight">\(\theta\)</span> is homogeneous, so the second term cancels, resulting in:</p>
+<div class="math notranslate nohighlight" id="equation-eq6-11">
+<span class="eqno">(20.5)<a class="headerlink" href="#equation-eq6-11" title="Permalink to this equation">#</a></span>\[
+\int_{z_0}^h \! \pafg{\overline{\theta}}{t} \, dz = h \afg{\left&lt; \theta \right&gt;}{t}
+\]</div>
+<p>Finally, substitution of <a class="reference internal" href="#equation-eq6-11">(20.5)</a> and <a class="reference internal" href="#equation-eq6-12">(20.3)</a> on the original equation <a class="reference internal" href="#equation-eq6-7">(20.2)</a> results in:</p>
+<div class="math notranslate nohighlight">
+\[
+h \afg{\left&lt; \theta \right&gt;}{t} = \overline{w'\theta'}(z_0) - \overline{w'\theta'}(h)
+\]</div>
+<p>or, alternatively:</p>
+<div class="math notranslate nohighlight" id="equation-for-61b">
+<span class="eqno">(20.6)<a class="headerlink" href="#equation-for-61b" title="Permalink to this equation">#</a></span>\[
+\afg{\left&lt; \theta \right&gt;}{t} = \frac{1}{h}[ \overline{w'\theta'}(z_0) - \overline{w'\theta'}(h)]
+\]</div>
+</details>
+<p>c) Discuss the additional equations that we need to include the impact of the entrainment flux on the boundary layer growth.</p>
+<details>
+  <summary>Answer</summary>
+<p>The entrainment flux has to be related to the boundary layer growth rate:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\overline{w'\theta'}(h) &amp;= - w_e \,\Delta\theta\\
+&amp;= - \afg{h}t \,\Delta\theta
+\end{split}\]</div>
+<p>In this equation <span class="math notranslate nohighlight">\(w_e\)</span> is the entrainment velocity in m s<span class="math notranslate nohighlight">\(^{-1}\)</span> and <span class="math notranslate nohighlight">\(\Delta\theta\)</span> is the potential temperature jump at the inversion. In order to evaluate this equation, the time evolution of <span class="math notranslate nohighlight">\(\Delta\theta\)</span> has to be known. This is given by:</p>
+<div class="math notranslate nohighlight">
+\[
+\afg{\Delta\theta}{t} = \gamma_{\theta}\afg{h}{t}- \afg{\left&lt;\overline{\theta}\right&gt;}{t}
+\]</div>
+<p>In the end, the system of governing equations is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\afg{\left&lt;\overline{\theta}\right&gt;}{t} &amp;= \frac{\overline{w'\theta'}\left(z_0\right)-\overline{w'\theta'}\left(h\right)}{h}\\
+\overline{w'\theta'}(h) &amp;= - \afg{h}t \,\Delta\theta = -w_e \Delta\theta \\
+\afg{\Delta\theta}{t} &amp;= \gamma_{\theta}\afg{h}{t}- \afg{\left&lt;\overline{\theta}\right&gt;}{t}
+\end{split}\]</div>
+<p><span class="math notranslate nohighlight">\(w_e\)</span> is the entrainment velocity.</p>
 </details>
 </section>
 </section>
