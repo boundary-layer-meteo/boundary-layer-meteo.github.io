@@ -33,12 +33,12 @@ The conversion from time period to frequency is straight forward.
 However, the dependency on the wave number is a bit harder.
 
 $$
-\overline{v}&=\lambda f\\
+\overline{u}&=\lambda f\\
 &= \frac{f}{\nu}\\
-\nu &= \frac{f}{\overline{v}}
+\nu &= \frac{f}{\overline{u}}
 $$(for:41a)
 
-Since $\overline{v} = 5\rm\,m\,s^{-1}$ according to the observations, it is known that $\nu = \frac{f}{\overline{v}} = f \frac{1}{5\rm\,m\,s^{-1}} = f \frac{1}{300} \rm\frac{min}{m}$.
+Since $\overline{u} = 5\rm\,m\,s^{-1}$ according to the observations, it is known that $\nu = \frac{f}{\overline{u}} = f \frac{1}{5\rm\,m\,s^{-1}} = f \frac{1}{300} \rm\frac{min}{m}$.
 According to Taylor's frozen turbulence assumption, $f$ and $\nu$ are proportional to each other (Equation {eq}`for:41a`).
 Therefore, the sketch for these two variables are combined in {numref}`fig412`.
 
@@ -167,7 +167,7 @@ $$
 \epsilon &= 3.85\cdot10^{-5}.
 $$
 
-This is in SI units ($\rm\,m^2\,s^{-3}$). Filling it up results in $\eta = 3.1\,10^{-3}\rm\,m$, so $\eta=3.1\rm\,mm$
+This is in SI units ($\rm\,m^2\,s^{-3}$). Filling it up results in $\eta = 3.1\cdot\,10^{-3}\rm\,m$, so $\eta=3.1\rm\,mm$
 
 </details>
 
@@ -181,7 +181,6 @@ Discuss the result.
 
 This ratio shows how many times the smallest scale involved has to be resolved in order to also resolve the characteristic process for at least one period.
 The ratio is $R=\frac{100\rm\,m}{3\rm\,mm}$, so $R=3 \cdot 10^4$.
-A normal PC (or even standard super computer) can not perform these calculations within reasonable time.
 
 </details>
 
