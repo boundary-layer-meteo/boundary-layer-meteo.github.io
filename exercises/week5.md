@@ -400,11 +400,9 @@ the interfaces are approximately at 2.55 and 7.5 meters.
 
 ```{hint}
 :class: tip, dropdown
-Use $\rho\,c_p=1231\rm\,\frac{W\,m^{-2}}{K\,m\,s^{-1}}$. 
+Use $\rho\,c_p=1231\rm\, J\,m^{-3}\ K{-1}$. 
 
-We know that $ T = \theta\ \left(\dfrac{P}{P_0}\right)^{\dfrac{R_d}{c_p}} $. 
-From that, it can be derived that by approximation $ \pafg{T}{z} = \pafg{\theta}{z} - \dfrac{g}{c_p} $ and 
-therefore $T = \theta - \dfrac{g}{c_p}z $. Use this to convert the potential temperatures to absolute temperatures. 
+Assume (since we are close to the surface) that $ T = \theta $.
 
 ```
 
@@ -413,7 +411,7 @@ therefore $T = \theta - \dfrac{g}{c_p}z $. Use this to convert the potential tem
 
 ```{figure} figures/exercise7_3b.png
 :name: fig:ans_73b
-Vertical profiles of $\theta$ (solid lines) and $T$ (dashed lines) in red for exercise b (linear profile) 
+Vertical profiles of $\theta$ in red for exercise b (linear profile) 
 and in blue for exercise c (logarithmic profile). 
 ```
 
@@ -426,32 +424,18 @@ $$
 
 The interfaces are located at 2.55 m and 7.5 m, so $\Delta z = 4.95\ \rm{m}$.
 
-With the linear temperature profile, we find the following potential temperatures:
+With the linear temperature profile, we find the following temperatures:
 
 $$
-\theta_{\rm Surface} = 292\rm\,K
-$$
-
-$$
-\theta_{\rm Middle} = 292.98\rm\,K
-$$
-
-$$
-\theta_{\rm Top} = 293.98\rm\,K
-$$
-
-This results in the following absolute temperatures, using $T = \theta - \dfrac{g}{c_p}z = \theta-{10\rm\,K\,km^{-1}}\,z$: 
-
-$$
-T_{\rm Surface} = 291.999\rm\,K 
+T_{\rm Surface} = \theta_{\rm Surface} = 292 \rm\,K 
 $$(for:73temp1)
 
 $$
-T_{\rm Middle} = 292.93\rm\,K 
+T_{\rm Middle} = \theta_{\rm Middle} = 292.98\rm\,K
 $$(for:73temp2)
 
 $$
-T_{\rm Top} = 293.88\rm\,K 
+T_{\rm Top} = \theta_{\rm Top} = 293.98\rm\,K
 $$(for:73temp3)
 
 $\rho\,c_p=1231\rm\,\frac{W\,m^{-2}}{K\,m\,s^{-1}}$, 
@@ -460,11 +444,8 @@ $\epsilon_{\rm IR} = 0.78$,
 so $\frac{\epsilon_{\rm IR}\, \sigma_{\rm SB}}{\rho\,c_p} = 3.59\times 10^{-11} \rm K^{-3}\,m\,s^{-1}$.
 
 $$
-\gemafg{\theta}{t} = 2.05\times 10^{-5} \rm\,K\,s^{-1} = 0.074\,K\,hr^{-1}
+\gemafg{\theta}{t} = 2.2\times 10^{-5} \rm\,K\,s^{-1} = 0.079\,K\,hr^{-1}
 $$
-
-Note that using rounded temperatures of Equations {eq}`for:73temp1`-{eq}`for:73temp3` results in wrong answers. 
-This is due to the power of 4 of the temperature. 
 
 </details>
 
@@ -480,7 +461,7 @@ $$
 \theta_* = - \frac{\overline{w'\theta'}}{u_*}
 $$
 
-Use the following values to complete the expression: $\overline{w'\theta'}$ = - 24 Wm$^{-2}$,
+Use the following values to complete the expression: $\overline{w'\theta'}$ = - 0.0195 K m s$^{-1}$,
 u$_*$=0.1 m, z$_o$=0.1 m and von Karman constant equal to 0.4.
 Similar to (b), assume the surface layer at z$_o$=0.1 m and $\theta (z_o)$=292 K; and layers middle
 and top at 5 and 10 meters respectively.
@@ -488,12 +469,12 @@ and top at 5 and 10 meters respectively.
 <details>
   <summary>Answer</summary>
 
-Substituting the variables (and considering that $T = \theta-{10\rm\,K\,km^{-1}}\,z$) leads to 
+Substituting the variables leads to 
 
 $$
-T_{\rm Surface} &\approx 292\rm\,K\\
+T_{\rm Surface} &= 292\rm\,K\\
 T_{\rm Middle}  &\approx 293.9\rm\,K\\
-T_{\rm Top}     &\approx 294.1\rm\,K
+T_{\rm Top}     &\approx 294.2\rm\,K
 $$
 
 The constants are equal to exercise b, so
@@ -502,16 +483,17 @@ $$
 \gemafg{\theta}{t} = -1.14\times 10^{-3} \rm\,K\,s^{-1} = -4.1\,K\,hr^{-1}
 $$
 
+Note that using the rounded temperatures results in wrong answers. This is due to the power of 4 of the temperature.
+
 </details>
 
 d) Discuss your results from a perspective of the tendency of the temperature $\pafg{\overline{\theta}}{t}$.
-Calculate in K h$^{-1}$.
 Based on the results of (b) and (c), discuss the most probable profile observed during stable conditions.
 
 <details>
   <summary>Answer</summary>
 
-According to a linear potential temperature profile, the middle layer would actually heat up due to radiation by 0.074 K per hour. 
+According to a linear potential temperature profile, the middle layer would actually heat up due to radiation by 0.079 K per hour. 
 This is in contradiction with the knowledge that at night radiative cooling takes effect.  
 
 The more realistic logarithmic profile results in a cooling effect due to radiation by 4.1 K per hour. This is more reasonable.
