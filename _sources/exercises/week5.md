@@ -3,6 +3,11 @@ $\def\pafg#1#2{\dfrac{\partial #1}{\partial #2}}$
 $\def\afg#1#2{\dfrac{{\rm d} #1}{{\rm d} #2}}$
 $\def\gemafg#1#2{\pafg{\overline{#1}}{#2}}$
 
+```{hint}
+:class: tip
+Remember that $H\ =\ \rho\ c_p\ \overline{w'\theta'}$. If no values are given, use $\rho\ c_p\ = 1231\ J\ K^{-1}\ m^{-3}$.  
+```
+
 ##
 The following figure shows the raw observation of the wind speed.
 
@@ -33,12 +38,12 @@ The conversion from time period to frequency is straight forward.
 However, the dependency on the wave number is a bit harder.
 
 $$
-\overline{v}&=\lambda f\\
+\overline{u}&=\lambda f\\
 &= \frac{f}{\nu}\\
-\nu &= \frac{f}{\overline{v}}
+\nu &= \frac{f}{\overline{u}}
 $$(for:41a)
 
-Since $\overline{v} = 5\rm\,m\,s^{-1}$ according to the observations, it is known that $\nu = \frac{f}{\overline{v}} = f \frac{1}{5\rm\,m\,s^{-1}} = f \frac{1}{300} \rm\frac{min}{m}$.
+Since $\overline{u} = 5\rm\,m\,s^{-1}$ according to the observations, it is known that $\nu = \frac{f}{\overline{u}} = f \frac{1}{5\rm\,m\,s^{-1}} = f \frac{1}{300} \rm\frac{min}{m}$.
 According to Taylor's frozen turbulence assumption, $f$ and $\nu$ are proportional to each other (Equation {eq}`for:41a`).
 Therefore, the sketch for these two variables are combined in {numref}`fig412`.
 
@@ -167,7 +172,7 @@ $$
 \epsilon &= 3.85\cdot10^{-5}.
 $$
 
-This is in SI units ($\rm\,m^2\,s^{-3}$). Filling it up results in $\eta = 3.1\,10^{-3}\rm\,m$, so $\eta=3.1\rm\,mm$
+This is in SI units ($\rm\,m^2\,s^{-3}$). Filling it up results in $\eta = 3.1\cdot\,10^{-3}\rm\,m$, so $\eta=3.1\rm\,mm$
 
 </details>
 
@@ -181,7 +186,6 @@ Discuss the result.
 
 This ratio shows how many times the smallest scale involved has to be resolved in order to also resolve the characteristic process for at least one period.
 The ratio is $R=\frac{100\rm\,m}{3\rm\,mm}$, so $R=3 \cdot 10^4$.
-A normal PC (or even standard super computer) can not perform these calculations within reasonable time.
 
 </details>
 
@@ -219,9 +223,10 @@ and the wind speed. Discuss your criteria and the estimation of the height.
 <details>
   <summary>Answer</summary>
 
-Using the potential temperature gradient, there are 2 criteria.
-1. $\pafg{\theta}{z}=0$: This only occurs at the top of the profile
-2. A small $\pafg{\theta}{z}$: This is valid at $h=1000\rm\,m$ and above.
+Using the potential temperature gradient, there are multiple criteria possible, resulting in different heights.
+1. In the residual layer $\pafg{\theta}{z}=0$: This only occurs at the top of the profile
+2. In the residual layer $\pafg{\theta}{z}$ is small: This is valid at $h=1000\rm\,m$ and above.
+3. Above the residual layer, there is an inversion where $\pafg{\theta}{z}$ is large: this occurs around 750m.
 
 For the wind speed, the location of the low level jet is used. 
 The maximum wind speed in this jet is at a height of 250 m.
@@ -401,11 +406,9 @@ the interfaces are approximately at 2.55 and 7.5 meters.
 
 ```{hint}
 :class: tip, dropdown
-Use $\rho\,c_p=1231\rm\,\frac{W\,m^{-2}}{K\,m\,s^{-1}}$. 
+Use $\rho\,c_p=1231\rm\, J\,m^{-3}\ K{-1}$. 
 
-We know that $ T = \theta\ \left(\dfrac{P}{P_0}\right)^{\dfrac{R_d}{c_p}} $. 
-From that, it can be derived that by approximation $ \pafg{T}{z} = \pafg{\theta}{z} - \dfrac{g}{c_p} $ and 
-therefore $T = \theta - \dfrac{g}{c_p}z $. Use this to convert the potential temperatures to absolute temperatures. 
+Assume (since we are close to the surface) that $ T = \theta $.
 
 ```
 
@@ -414,7 +417,7 @@ therefore $T = \theta - \dfrac{g}{c_p}z $. Use this to convert the potential tem
 
 ```{figure} figures/exercise7_3b.png
 :name: fig:ans_73b
-Vertical profiles of $\theta$ (solid lines) and $T$ (dashed lines) in red for exercise b (linear profile) 
+Vertical profiles of $\theta$ in red for exercise b (linear profile) 
 and in blue for exercise c (logarithmic profile). 
 ```
 
@@ -427,45 +430,28 @@ $$
 
 The interfaces are located at 2.55 m and 7.5 m, so $\Delta z = 4.95\ \rm{m}$.
 
-With the linear temperature profile, we find the following potential temperatures:
+With the linear temperature profile, we find the following temperatures:
 
 $$
-\theta_{\rm Surface} = 292\rm\,K
-$$
-
-$$
-\theta_{\rm Middle} = 292.98\rm\,K
-$$
-
-$$
-\theta_{\rm Top} = 293.98\rm\,K
-$$
-
-This results in the following absolute temperatures, using $T = \theta - \dfrac{g}{c_p}z = \theta-{10\rm\,K\,km^{-1}}\,z$: 
-
-$$
-T_{\rm Surface} = 291.999\rm\,K 
+T_{\rm Surface} = \theta_{\rm Surface} = 292 \rm\,K 
 $$(for:73temp1)
 
 $$
-T_{\rm Middle} = 292.93\rm\,K 
+T_{\rm Middle} = \theta_{\rm Middle} = 292.98\rm\,K
 $$(for:73temp2)
 
 $$
-T_{\rm Top} = 293.88\rm\,K 
+T_{\rm Top} = \theta_{\rm Top} = 293.98\rm\,K
 $$(for:73temp3)
 
 $\rho\,c_p=1231\rm\,\frac{W\,m^{-2}}{K\,m\,s^{-1}}$, 
-$\sigma_{\rm SB}=5.67\times 10^{-8}\rm\,W\,m^{-2}\,K^{-4}$ and 
+$\sigma_{\rm SB}=5.67\cdot 10^{-8}\rm\,W\,m^{-2}\,K^{-4}$ and 
 $\epsilon_{\rm IR} = 0.78$, 
-so $\frac{\epsilon_{\rm IR}\, \sigma_{\rm SB}}{\rho\,c_p} = 3.59\times 10^{-11} \rm K^{-3}\,m\,s^{-1}$.
+so $\frac{\epsilon_{\rm IR}\, \sigma_{\rm SB}}{\rho\,c_p} = 3.59\cdot 10^{-11} \rm K^{-3}\,m\,s^{-1}$.
 
 $$
-\gemafg{\theta}{t} = 2.05\times 10^{-5} \rm\,K\,s^{-1} = 0.074\,K\,hr^{-1}
+\gemafg{\theta}{t} = 2.2\cdot 10^{-5} \rm\,K\,s^{-1} = 0.079\,K\,hr^{-1}
 $$
-
-Note that using rounded temperatures of Equations {eq}`for:73temp1`-{eq}`for:73temp3` results in wrong answers. 
-This is due to the power of 4 of the temperature. 
 
 </details>
 
@@ -481,7 +467,7 @@ $$
 \theta_* = - \frac{\overline{w'\theta'}}{u_*}
 $$
 
-Use the following values to complete the expression: $\overline{w'\theta'}$ = - 24 Wm$^{-2}$,
+Use the following values to complete the expression: $\overline{w'\theta'}$ = - 0.0195 K m s$^{-1}$,
 u$_*$=0.1 m, z$_o$=0.1 m and von Karman constant equal to 0.4.
 Similar to (b), assume the surface layer at z$_o$=0.1 m and $\theta (z_o)$=292 K; and layers middle
 and top at 5 and 10 meters respectively.
@@ -489,30 +475,31 @@ and top at 5 and 10 meters respectively.
 <details>
   <summary>Answer</summary>
 
-Substituting the variables (and considering that $T = \theta-{10\rm\,K\,km^{-1}}\,z$) leads to 
+Substituting the variables leads to 
 
 $$
-T_{\rm Surface} &\approx 292\rm\,K\\
+T_{\rm Surface} &= 292\rm\,K\\
 T_{\rm Middle}  &\approx 293.9\rm\,K\\
-T_{\rm Top}     &\approx 294.1\rm\,K
+T_{\rm Top}     &\approx 294.2\rm\,K
 $$
 
 The constants are equal to exercise b, so
 
 $$
-\gemafg{\theta}{t} = -1.14\times 10^{-3} \rm\,K\,s^{-1} = -4.1\,K\,hr^{-1}
+\gemafg{\theta}{t} = -1.14\cdot 10^{-3} \rm\,K\,s^{-1} = -4.1\,K\,hr^{-1}
 $$
+
+Note that using the rounded temperatures results in wrong answers. This is due to the power of 4 of the temperature.
 
 </details>
 
 d) Discuss your results from a perspective of the tendency of the temperature $\pafg{\overline{\theta}}{t}$.
-Calculate in K h$^{-1}$.
 Based on the results of (b) and (c), discuss the most probable profile observed during stable conditions.
 
 <details>
   <summary>Answer</summary>
 
-According to a linear potential temperature profile, the middle layer would actually heat up due to radiation by 0.074 K per hour. 
+According to a linear potential temperature profile, the middle layer would actually heat up due to radiation by 0.079 K per hour. 
 This is in contradiction with the knowledge that at night radiative cooling takes effect.  
 
 The more realistic logarithmic profile results in a cooling effect due to radiation by 4.1 K per hour. This is more reasonable.
@@ -523,21 +510,21 @@ In conclusion, the nocturnal temperature profile that is most probable to be obs
 
 
 ##
-The momentum equation for the $\overline{U}$ and $\overline{V}$-component
+The momentum equation for the $\overline{u}$ and $\overline{v}$-component
 during diurnal and nocturnal conditions reads:
 
 $$
-\pafg{\overline{U}}{t}~=~f \overline{V}- \pafg{\overline{w'u'}}{z}
+\pafg{\overline{u}}{t}~=~f \overline{v}- \pafg{\overline{w'u'}}{z}
 $$
 
 $$
-\pafg{\overline{V}}{t}~=~f (\overline{U_g}-\overline{U})- \pafg{\overline{w'v'}}{z}
+\pafg{\overline{v}}{t}~=~f (u_g-\overline{u})- \pafg{\overline{w'v'}}{z}
 $$
 
-where $\overline{U_g}$ is the geostrophic wind in the U direction and f
-is the Coriolis parameter. We assume that $\overline{V_g}$=0.
+where $u_g$ is the geostrophic wind in the u direction and f
+is the Coriolis parameter. We assume that $v_g$=0.
 
-a) Derive expressions for $\overline{U}$ and $\overline{V}$ during day conditions.
+a) Derive expressions for $\overline{u}$ and $\overline{v}$ during day conditions.
 In diurnal conditions, one can assume that the wind is in steady-state.
 
 <details>
@@ -546,20 +533,20 @@ In diurnal conditions, one can assume that the wind is in steady-state.
 Since we are evaluating (diurnal) stationary conditions, 
 
 $$
-0&=f\,\overline{V}-\gemafg{w'u'}{z}\\
-0&=f\,\left(\overline{U_g}-\overline{U}\right)-\gemafg{w'v'}{z}
+0&=f\,\overline{v}-\gemafg{w'u'}{z}\\
+0&=f\,\left(u_g-\overline{u}\right)-\gemafg{w'v'}{z}
 $$
 
 Therefore, 
 
 $$
-\overline{U} &= \overline{U_g}-\frac{1}{f}\gemafg{w'v'}{z} \\
-\overline{V} &= \frac{1}{f}\gemafg{u'w'}{z}
+\overline{u} &= u_g-\frac{1}{f}\gemafg{w'v'}{z} \\
+\overline{v} &= \frac{1}{f}\gemafg{u'w'}{z}
 $$
 
 </details>
 
-b) Calculate the $\overline{U}$ and $\overline{V}$-components during the night. To this end, take the following steps: 
+b) Calculate the $\overline{u}$ and $\overline{v}$-components during the night. To this end, take the following steps: 
 1. Under nocturnal conditions, the friction suddenly disappears above the surface
    layer. Discuss the validity of this assumption. Use this assumption to simplify the momentum equations.
 
@@ -574,41 +561,41 @@ b) Calculate the $\overline{U}$ and $\overline{V}$-components during the night. 
     Therefore, it can be neglected with respect to the Coriolis and horizontal pressure gradient terms.
     
     $$
-    \gemafg{U}{t} =f\,\overline{V}
+    \gemafg{u}{t} =f\,\overline{v}
     $$(for:74b1)
     
     $$
-    \gemafg{V}{t} =f\,\left(\overline{U_g}-\overline{U}\right)
+    \gemafg{v}{t} =f\,\left(u_g-\overline{u}\right)
     $$(for:74b2)
     
     </details>
-2. Derive a second-order differential equation for the $\overline{U}-\overline{U_g}$ component
+2. Derive a second-order differential equation for the $\overline{u}-u_g$ component
    
    <details>
     <summary>Answer</summary>
    
-   Considering that $\overline{U_g}$ is a constant, 
+   Considering that $u_g$ is a constant, 
 
     $$
-    \gemafg{U}{t} &= \gemafg{U}{t}-\gemafg{U_g}{t}\\
-    &= \pafg{\left(\overline{U}-\overline{U_g}\right)}{t}
+    \gemafg{u}{t} &= \gemafg{u}{t}-\gemafg{u_g}{t}\\
+    &= \pafg{\left(\overline{u}-u_g\right)}{t}
     $$
     
     Combined with Equations {eq}`for:74b1` and {eq}`for:74b2`, this results in
     
     $$
-    {\pafg{^2\left(\overline{U}-\overline{U_g}\right)}{t^2}} &= \pafg{}{t}\pafg{\overline{U}}{t} \\
-    &= \pafg{}{t}\left(f\,\overline{V}\right)\\
-    &= f\,\gemafg{V}{t}\\
-    &= f^2\,\left(\overline{U_g}-\overline{U}\right)\\
-    {\pafg{^2\left(\overline{U}-\overline{U_g}\right)}{t^2}} &= - f^2\,\left(\overline{U}-\overline{U_g}\right)
+    {\pafg{^2\left(\overline{u}-u_g\right)}{t^2}} &= \pafg{}{t}\pafg{\overline{u}}{t} \\
+    &= \pafg{}{t}\left(f\,\overline{v}\right)\\
+    &= f\,\gemafg{v}{t}\\
+    &= f^2\,\left(u_g-\overline{u}\right)\\
+    {\pafg{^2\left(\overline{u}-u_g\right)}{t^2}} &= - f^2\,\left(\overline{u}-u_g\right)
     $$
 
     </details>
 
-3. The expression found for $\overline{U}-\overline{U_g}$, corresponds to a harmonic oscillator equation, $\pafg{^2 x}{t^2}=-k\,x$.
+3. The expression found for $\overline{u}-u_g$, corresponds to a harmonic oscillator equation, $\pafg{^2 x}{t^2}=-k\,x$.
 
-   In this case $x$ is equal to $\left(\overline{U}-\overline{U_g}\right)$ and $k=f^2$.
+   In this case $x$ is equal to $\left(\overline{u}-u_g\right)$ and $k=f^2$.
 
     A general solution is $x=A\sin\left(\sqrt{k}t\right)+B\cos\left(\sqrt{k}t\right)$. 
 
@@ -617,7 +604,7 @@ b) Calculate the $\overline{U}$ and $\overline{V}$-components during the night. 
    We can prove that the solution
 
     $$
-    \overline{U}-\overline{U_g}=A sin(ft) + B cos (ft)
+    \overline{u}-u_g=A sin(ft) + B cos (ft)
     $$
 
     is a correct solution:
@@ -632,67 +619,70 @@ b) Calculate the $\overline{U}$ and $\overline{V}$-components during the night. 
     $$
     ```
    
-    Now use the general solution for the harmonic oscillator and the following initial conditions to find an expression for $\overline{U}$ and $\overline{V}$:
+    Now use the general solution for the harmonic oscillator and the following initial conditions to find an expression for $\overline{u}$ and $\overline{v}$:
    
-   $$
-   \overline{U}(t=0)~=~\overline{U_d}=\overline{U_g}-F_{v}(t=0)
-   $$
-
     $$
-    \overline{V}(t=0)~=~\overline{V_d}=F_{u}(t=0)
+    \overline{u}(t=0) = u_g-F_{v}(t=0)
     $$
 
-   where $\pafg{\overline{w'u'}}{z}=fF_{u}(t=0)$ and $\pafg{\overline{w'v'}}{z}=fF_{v}(t=0)$.
+    $$
+    \overline{v}(t=0) = F_{u}(t=0)
+    $$
+
+    where $F_{u}(t=0) = \frac{1}{f} \pafg{\overline{w'u'}}{z}$ and $F_{v}(t=0) = \frac{1}{f}\pafg{\overline{w'v'}}{z}$.
+
+    Note that these initial conditions are the daytime steady-state conditions that were derived in question a. 
 
     <details>
     <summary>Answer</summary>
     
-    $\overline{U}-\overline{U_g} = A\sin\left(ft\right)+B\cos\left(ft\right)$, so 
+    $\overline{u}-u_g = A\sin\left(ft\right)+B\cos\left(ft\right)$, so 
     
     $$
-    \overline{U}(0) &= \overline{U_g} + B\\ &= \overline{U_g} - F_v(0)\\
+    \overline{u}(0) &= u_g + B\\ &= u_g - F_v(0)\\
     B &= -F_v(0)\\
-    \overline{U} &= \overline{U_g} + A\sin\left(ft\right)- F_v(0) \, \cos\left(ft\right)
+    \overline{u} &= u_g + A\sin\left(ft\right)- F_v(0) \, \cos\left(ft\right)
     $$
     
-    Since $\overline{V} = \frac{1}{f}\gemafg{U}{t}$, 
+    Since $\overline{v} = \frac{1}{f}\gemafg{u}{t}$, 
     
     $$
-    \overline{V} &= \frac{1}{f}\left(A f\cos\left(ft\right) + F_v(0) f \sin\left(ft\right) \right) \\
+    \overline{v} &= \frac{1}{f}\left(A f\cos\left(ft\right) + F_v(0) f \sin\left(ft\right) \right) \\
      &= A \cos\left(ft\right) + F_v(0) \sin\left(ft\right)
     $$
     
     Using, the second boundary condition, 
     
     $$
-    \overline{V}(0) &= A \\&= F_u(0)\\
+    \overline{v}(0) &= A \\&= F_u(0)\\
     A &= F_u(0)
     $$
     
-    All in all, the equations for $\overline{U}$ and $\overline{V}$ are
+    All in all, the equations for $\overline{u}$ and $\overline{v}$ are
     
     $$
-    \overline{U} &= \overline{U_g} + F_u(0) \sin\left(ft\right) - F_v(0) \cos\left(ft\right)\\
-    \overline{V} &= F_v(0) \sin\left(ft\right) + F_u(0) \cos\left(ft\right) 
+    \overline{u} &= u_g + F_u(0) \sin\left(ft\right) - F_v(0) \cos\left(ft\right)\\
+    \overline{v} &= F_v(0) \sin\left(ft\right) + F_u(0) \cos\left(ft\right) 
     $$
     
     This can be written as 
     
     $$
-    \overline{U} &= \overline{U_g} + \frac{1}{f} \gemafg{w'u'}{z} \sin\left(ft\right) - \frac{1}{f} \gemafg{w'v'}{z} \cos\left(ft\right)\\
-    \overline{V} &= \frac{1}{f} \gemafg{w'v'}{z} \sin\left(ft\right) + \frac{1}{f} \gemafg{w'u'}{z} \cos\left(ft\right) 
+    \overline{u} &= u_g + \frac{1}{f} \gemafg{w'u'}{z} \sin\left(ft\right) - \frac{1}{f} \gemafg{w'v'}{z} \cos\left(ft\right)\\
+    \overline{v} &= \frac{1}{f} \gemafg{w'v'}{z} \sin\left(ft\right) + \frac{1}{f} \gemafg{w'u'}{z} \cos\left(ft\right) 
     $$
     
     </details>
 
-c) Plot the $\overline{U}$ and $\overline{V}$-components for a full period
-T=2$\pi$/f, using the following values: f=10$^{-4}$s$^{-1}$, F$_{u}(t=0)$=F$_{v}(t=0)$=3ms$^{-1}$ and
-$\overline{U_g}$=10 ms$^{-1}$ and $\overline{V_g}$=0.
+c) Plot the $\overline{u}$ and $\overline{v}$-components for a full period
+T=2$\pi$/f, using the following values: 
+
+f = 10$^{-4}$ s$^{-1}$, F$_{u}(t=0)$ = F$_{v}(t=0)$ = 3 m s$^{-1}$, $u_g$ = 10 m s$^{-1}$, and $v_g$ = 0 m s$^{-1}$.
 
 <details>
   <summary>Answer</summary>
 
-The wind velocities, $\overline{U}$ and $\overline{V}$ are plotted in {numref}`fig:ans_74`.
+The wind velocities, $\overline{u}$ and $\overline{v}$ are plotted in {numref}`fig:ans_74`.
 
 ```{figure} figures/exercise7_4.png
 :name: fig:ans_74
@@ -701,7 +691,7 @@ Evolution of wind velocities.
 
 </details>
 
-d) Derive an expresion for $\left(\overline{U}-\overline{U_g}\right)^2 + \overline{V}^2$. 
+d) Derive an expresion for $\left(\overline{u}-u_g\right)^2 + \overline{v}^2$. 
 Use this expression to explain how the wind changes over time. 
 
 <details>
@@ -710,26 +700,26 @@ Use this expression to explain how the wind changes over time.
 Realize that 
 
 $$
-\overline{U}-\overline{U_g} &= F_u(0) \sin\left(ft\right) - F_v(0) \cos\left(ft\right)\\ 
-\overline{V} &= F_v(0) \sin\left(ft\right) + F_u(0) \cos\left(ft\right)
+\overline{u}-u_g &= F_u(0) \sin\left(ft\right) - F_v(0) \cos\left(ft\right)\\ 
+\overline{v} &= F_v(0) \sin\left(ft\right) + F_u(0) \cos\left(ft\right)
 $$
 
 Therefore, 
 
 $$
-\left(\overline{U}-\overline{U_g}\right)^2 &= F_u^2(0) \sin^2\left(ft\right) + F_v^2(0) \cos^2\left(ft\right) - 2 F_u(0) F_v(0) \cos\left(ft\right) \sin\left(ft\right) \\
-\overline{V}^2 &= F_u^2(0) \cos^2\left(ft\right) + F_v^2(0) \sin^2\left(ft\right) + 2 F_u(0) F_v(0) \cos\left(ft\right) \sin\left(ft\right) 
+\left(\overline{u}-u_g\right)^2 &= F_u^2(0) \sin^2\left(ft\right) + F_v^2(0) \cos^2\left(ft\right) - 2 F_u(0) F_v(0) \cos\left(ft\right) \sin\left(ft\right) \\
+\overline{v}^2 &= F_u^2(0) \cos^2\left(ft\right) + F_v^2(0) \sin^2\left(ft\right) + 2 F_u(0) F_v(0) \cos\left(ft\right) \sin\left(ft\right) 
 $$
 
 Combining these 2 equations results in 
 
 $$
-\left(\overline{U}-\overline{U_g}\right)^2 + \overline{V}^2 &= F_u^2(0) \left(\cos^2\left(ft\right)+\sin^2\left(ft\right)\right) + F_v^2(0) \left(\cos^2\left(ft\right)+\sin^2\left(ft\right)\right) \\
+\left(\overline{u}-u_g\right)^2 + \overline{v}^2 &= F_u^2(0) \left(\cos^2\left(ft\right)+\sin^2\left(ft\right)\right) + F_v^2(0) \left(\cos^2\left(ft\right)+\sin^2\left(ft\right)\right) \\
  &= F_u^2(0) + F_v^2(0)
 $$
 
 Since the right-hand side is a constant, 
-this equation states that $\left(\overline{U},\overline{V}\right)$ progresses in time as a circular movement around $\left(\overline{U_g},0\right)$ 
+this equation states that $\left(\overline{u},\overline{v}\right)$ progresses in time as a circular movement around $\left(u_g,0\right)$ 
 at a distance of $\sqrt{F_u^2(0) + F_v^2(0)} = 3\sqrt{2}\rm\,m\,s^{-1}$
 
 This can also be seen from {numref}`fig:ans_74`.
@@ -749,7 +739,7 @@ Stefan-Boltzmann law:
 
 $$
 L&=\epsilon_{IR}\sigma_{SB} T^4 \\
-\sigma_{SB}&=5.67~10^{-8}~\frac{W}{m^2K^4}
+\sigma_{SB}&=5.67~10^{-8}\ W\ m^{-1}\ K^{-4}
 $$
 
 The following values in the three-layer model of the stable
@@ -761,7 +751,7 @@ Finally, at the top of the SBL $T_t=298~K$ and $\epsilon_t=0.78$.
 
 The boundary layer height is equal to 25 m.
 Additional data to calculate the divergence of
-the net longwave radiation are: $\rho=1.2261 Kg/m^3$, $c_p=1004 J/KgK$.
+the net longwave radiation are: $\rho\ =\ 1.2261\ Kg\ m^{-3}$, $c_p\ =\ 1004\ J\ Kg^{-1}\ K^{-1}$.
 
 <details>
   <summary>Answer</summary>
@@ -794,8 +784,8 @@ Therefore, the variation of the potential temperature per hour is equal to
 
 $$
 \gemafg{\theta}{t} &= -\frac{1}{\rho\,c_p}\pafg{Q^*}{z}\\
-                   &= -\frac{ 0.697 \rm\,W\,m^{-3}}{1.2261 \cdot 1004 \rm\,W\,m^{-3}\,K^{-1}\,s}\\
-                   &= -0.566\times 10^{-3}\rm\,K\,s^{-1} \\
+                   &= -\frac{ 0.697 \rm\,W\,m^{-3}}{1.2261 \cdot 1004 \rm\ J\ K^{-1}\ m^{-3}}\\
+                   &= -0.566 \cdot 10^{-3}\rm\,K\,s^{-1} \\
 &= -2.03 \rm\,K\,hr^{-1}
 $$
 
@@ -804,10 +794,12 @@ $$
 c) The sensible heat flux has the following vertical profile
 
 $$
-\overline{w'\theta'}(z)~=~\overline{w'\theta'}_o~(1-z/h)~~~~\overline{w'\theta'}_o= -14~W/m^2
+\overline{w'\theta'}(z)~=~\overline{w'\theta'}_o~(1-z/h)
 $$
 
-where $\overline{w'\theta'}_o$ is the sensible heat flux at
+$ \overline{w'\theta'}_o= -0.0114~ K\ m\ s^{-1}$ (or H = -14 $W\ m^{-2}$)
+
+where $\overline{w'\theta'}_o$ is the potential temperature flux at
 the surface and $h=25~m$ is the depth of the SBL.
 
 Plot this profile. Discuss and quantify the role of the turbulent flux under these conditions.
@@ -829,14 +821,14 @@ The divergence of the vertical heat flux is equal to
 $$
 \gemafg{w'\theta'}{z} &= \frac{-\overline{w'\theta'}(0)}{h}\\
 &= \frac{\frac{14}{1231}\rm\,K\,m\,s^{-1}}{25\rm\,m}\\
-&= 0.455\times 10^{-3}\rm\,K\,s^{-1}
+&= 0.455\cdot 10^{-3}\rm\,K\,s^{-1}
 $$
 
 This corresponds to a cooling term in the conservation equation of the boundary layer of 1.64 K hr$^{-1}$.
 
 </details>
 
-d) By using the values found in a) and taking now into account the turbulent divergence
+d) By using the value found in b) and taking now into account the turbulent divergence
 term, calculate the temperature change per hour.
 
 <details>
@@ -861,11 +853,11 @@ reach a steady-state.
 The horizontal advection has to balance the cooling effects of both the vertical heat flux gradient and the radiation. Therefore, 
 
 $$
-\overline{U}\gemafg{\theta}{x} &= - 0.455\times 10^{-3}\rm\,K\,s^{-1} - 0.566\times 10^{-3}\rm\,K\,s^{-1} \\
-&= - 1.021\times 10^{-3}\rm\,K\,s^{-1}
+\overline{U}\gemafg{\theta}{x} &= - 0.455\cdot 10^{-3}\rm\,K\,s^{-1} - 0.566\cdot 10^{-3}\rm\,K\,s^{-1} \\
+&= - 1.021\cdot 10^{-3}\rm\,K\,s^{-1}
 $$
 
-Since $\overline{U}=10\rm\,m\,s^{-1}$, $\gemafg{\theta}{x} \approx -1\times 10^{-4}\rm\,K\,m^{-1}$. 
+Since $\overline{U}=10\rm\,m\,s^{-1}$, $\gemafg{\theta}{x} \approx -1\cdot 10^{-4}\rm\,K\,m^{-1}$. 
 This results in $\gemafg{\theta}{x}=-0.1\rm\,K\,km^{-1}$
 
 Since the value is negative, relatively warm air is transported in the positive $x$ direction and, consequently, advection is a source of heating.

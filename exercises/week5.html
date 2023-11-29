@@ -412,6 +412,10 @@ document.write(`
 <p><span class="math notranslate nohighlight">\(\def\pafg#1#2{\dfrac{\partial #1}{\partial #2}}\)</span>
 <span class="math notranslate nohighlight">\(\def\afg#1#2{\dfrac{{\rm d} #1}{{\rm d} #2}}\)</span>
 <span class="math notranslate nohighlight">\(\def\gemafg#1#2{\pafg{\overline{#1}}{#2}}\)</span></p>
+<div class="tip admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Remember that <span class="math notranslate nohighlight">\(H\ =\ \rho\ c_p\ \overline{w'\theta'}\)</span>. If no values are given, use <span class="math notranslate nohighlight">\(\rho\ c_p\ = 1231\ J\ K^{-1}\ m^{-3}\)</span>.</p>
+</div>
 <section id="id1">
 <h2><span class="section-number">21.1. </span><a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
 <p>The following figure shows the raw observation of the wind speed.</p>
@@ -439,11 +443,11 @@ The corresponding sketch is shown in <a class="reference internal" href="#fig411
 However, the dependency on the wave number is a bit harder.</p>
 <div class="math notranslate nohighlight" id="equation-for-41a">
 <span class="eqno">(21.1)<a class="headerlink" href="#equation-for-41a" title="Permalink to this equation">#</a></span>\[\begin{split}
-\overline{v}&amp;=\lambda f\\
+\overline{u}&amp;=\lambda f\\
 &amp;= \frac{f}{\nu}\\
-\nu &amp;= \frac{f}{\overline{v}}
+\nu &amp;= \frac{f}{\overline{u}}
 \end{split}\]</div>
-<p>Since <span class="math notranslate nohighlight">\(\overline{v} = 5\rm\,m\,s^{-1}\)</span> according to the observations, it is known that <span class="math notranslate nohighlight">\(\nu = \frac{f}{\overline{v}} = f \frac{1}{5\rm\,m\,s^{-1}} = f \frac{1}{300} \rm\frac{min}{m}\)</span>.
+<p>Since <span class="math notranslate nohighlight">\(\overline{u} = 5\rm\,m\,s^{-1}\)</span> according to the observations, it is known that <span class="math notranslate nohighlight">\(\nu = \frac{f}{\overline{u}} = f \frac{1}{5\rm\,m\,s^{-1}} = f \frac{1}{300} \rm\frac{min}{m}\)</span>.
 According to Taylor’s frozen turbulence assumption, <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(\nu\)</span> are proportional to each other (Equation <a class="reference internal" href="#equation-for-41a">(21.1)</a>).
 Therefore, the sketch for these two variables are combined in <a class="reference internal" href="#fig412"><span class="std std-numref">Fig. 21.2</span></a>.</p>
 <figure class="align-default" id="fig412">
@@ -548,7 +552,7 @@ S_w\left(f\right) &amp;= \alpha\ U^\frac{5}{3}\epsilon^\frac{2}{3}f^{-\frac{5}{3
 \epsilon^\frac{2}{3} &amp;= \frac{1}{60\cdot 5^\frac{5}{3}} , \\
 \epsilon &amp;= 3.85\cdot10^{-5}.
 \end{split}\]</div>
-<p>This is in SI units (<span class="math notranslate nohighlight">\(\rm\,m^2\,s^{-3}\)</span>). Filling it up results in <span class="math notranslate nohighlight">\(\eta = 3.1\,10^{-3}\rm\,m\)</span>, so <span class="math notranslate nohighlight">\(\eta=3.1\rm\,mm\)</span></p>
+<p>This is in SI units (<span class="math notranslate nohighlight">\(\rm\,m^2\,s^{-3}\)</span>). Filling it up results in <span class="math notranslate nohighlight">\(\eta = 3.1\cdot\,10^{-3}\rm\,m\)</span>, so <span class="math notranslate nohighlight">\(\eta=3.1\rm\,mm\)</span></p>
 </details>
 <p>f) Calculate the ratio between the characteristic length scale of the
 boundary layer (question c) and the dissipation length scale (question e).
@@ -556,8 +560,7 @@ Discuss the result.</p>
 <details>
   <summary>Answer</summary>
 <p>This ratio shows how many times the smallest scale involved has to be resolved in order to also resolve the characteristic process for at least one period.
-The ratio is <span class="math notranslate nohighlight">\(R=\frac{100\rm\,m}{3\rm\,mm}\)</span>, so <span class="math notranslate nohighlight">\(R=3 \cdot 10^4\)</span>.
-A normal PC (or even standard super computer) can not perform these calculations within reasonable time.</p>
+The ratio is <span class="math notranslate nohighlight">\(R=\frac{100\rm\,m}{3\rm\,mm}\)</span>, so <span class="math notranslate nohighlight">\(R=3 \cdot 10^4\)</span>.</p>
 </details>
 </section>
 <section id="id3">
@@ -584,10 +587,11 @@ Above this height, the wind speed decreases with height.</p>
 and the wind speed. Discuss your criteria and the estimation of the height.</p>
 <details>
   <summary>Answer</summary>
-<p>Using the potential temperature gradient, there are 2 criteria.</p>
+<p>Using the potential temperature gradient, there are multiple criteria possible, resulting in different heights.</p>
 <ol class="arabic simple">
-<li><p><span class="math notranslate nohighlight">\(\pafg{\theta}{z}=0\)</span>: This only occurs at the top of the profile</p></li>
-<li><p>A small <span class="math notranslate nohighlight">\(\pafg{\theta}{z}\)</span>: This is valid at <span class="math notranslate nohighlight">\(h=1000\rm\,m\)</span> and above.</p></li>
+<li><p>In the residual layer <span class="math notranslate nohighlight">\(\pafg{\theta}{z}=0\)</span>: This only occurs at the top of the profile</p></li>
+<li><p>In the residual layer <span class="math notranslate nohighlight">\(\pafg{\theta}{z}\)</span> is small: This is valid at <span class="math notranslate nohighlight">\(h=1000\rm\,m\)</span> and above.</p></li>
+<li><p>Above the residual layer, there is an inversion where <span class="math notranslate nohighlight">\(\pafg{\theta}{z}\)</span> is large: this occurs around 750m.</p></li>
 </ol>
 <p>For the wind speed, the location of the low level jet is used.
 The maximum wind speed in this jet is at a height of 250 m.</p>
@@ -733,17 +737,15 @@ The other layers middle and top are at 5 and 10 meters respectively. In conseque
 the interfaces are approximately at 2.55 and 7.5 meters.</p>
 <div class="tip dropdown admonition hint">
 <p class="admonition-title">Hint</p>
-<p>Use <span class="math notranslate nohighlight">\(\rho\,c_p=1231\rm\,\frac{W\,m^{-2}}{K\,m\,s^{-1}}\)</span>.</p>
-<p>We know that <span class="math notranslate nohighlight">\( T = \theta\ \left(\dfrac{P}{P_0}\right)^{\dfrac{R_d}{c_p}} \)</span>.
-From that, it can be derived that by approximation <span class="math notranslate nohighlight">\( \pafg{T}{z} = \pafg{\theta}{z} - \dfrac{g}{c_p} \)</span> and
-therefore <span class="math notranslate nohighlight">\(T = \theta - \dfrac{g}{c_p}z \)</span>. Use this to convert the potential temperatures to absolute temperatures.</p>
+<p>Use <span class="math notranslate nohighlight">\(\rho\,c_p=1231\rm\, J\,m^{-3}\ K{-1}\)</span>.</p>
+<p>Assume (since we are close to the surface) that <span class="math notranslate nohighlight">\( T = \theta \)</span>.</p>
 </div>
 <details>
   <summary>Answer</summary>
 <figure class="align-default" id="fig-ans-73b">
 <img alt="../_images/exercise7_3b.png" src="../_images/exercise7_3b.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 21.6 </span><span class="caption-text">Vertical profiles of <span class="math notranslate nohighlight">\(\theta\)</span> (solid lines) and <span class="math notranslate nohighlight">\(T\)</span> (dashed lines) in red for exercise b (linear profile)
+<p><span class="caption-number">Fig. 21.6 </span><span class="caption-text">Vertical profiles of <span class="math notranslate nohighlight">\(\theta\)</span> in red for exercise b (linear profile)
 and in blue for exercise c (logarithmic profile).</span><a class="headerlink" href="#fig-ans-73b" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
@@ -754,42 +756,27 @@ and in blue for exercise c (logarithmic profile).</span><a class="headerlink" hr
 &amp;= \frac{\epsilon_{\rm IR}\, \sigma_{\rm SB}}{\rho\,c_p}\,\frac{T_{\rm Top}^4+T_{\rm Surface}^4-2 \,T_{\rm Middle}^4}{\Delta z}
 \end{split}\]</div>
 <p>The interfaces are located at 2.55 m and 7.5 m, so <span class="math notranslate nohighlight">\(\Delta z = 4.95\ \rm{m}\)</span>.</p>
-<p>With the linear temperature profile, we find the following potential temperatures:</p>
-<div class="math notranslate nohighlight">
-\[
-\theta_{\rm Surface} = 292\rm\,K
-\]</div>
-<div class="math notranslate nohighlight">
-\[
-\theta_{\rm Middle} = 292.98\rm\,K
-\]</div>
-<div class="math notranslate nohighlight">
-\[
-\theta_{\rm Top} = 293.98\rm\,K
-\]</div>
-<p>This results in the following absolute temperatures, using <span class="math notranslate nohighlight">\(T = \theta - \dfrac{g}{c_p}z = \theta-{10\rm\,K\,km^{-1}}\,z\)</span>:</p>
+<p>With the linear temperature profile, we find the following temperatures:</p>
 <div class="math notranslate nohighlight" id="equation-for-73temp1">
 <span class="eqno">(21.2)<a class="headerlink" href="#equation-for-73temp1" title="Permalink to this equation">#</a></span>\[
-T_{\rm Surface} = 291.999\rm\,K 
+T_{\rm Surface} = \theta_{\rm Surface} = 292 \rm\,K 
 \]</div>
 <div class="math notranslate nohighlight" id="equation-for-73temp2">
 <span class="eqno">(21.3)<a class="headerlink" href="#equation-for-73temp2" title="Permalink to this equation">#</a></span>\[
-T_{\rm Middle} = 292.93\rm\,K 
+T_{\rm Middle} = \theta_{\rm Middle} = 292.98\rm\,K
 \]</div>
 <div class="math notranslate nohighlight" id="equation-for-73temp3">
 <span class="eqno">(21.4)<a class="headerlink" href="#equation-for-73temp3" title="Permalink to this equation">#</a></span>\[
-T_{\rm Top} = 293.88\rm\,K 
+T_{\rm Top} = \theta_{\rm Top} = 293.98\rm\,K
 \]</div>
 <p><span class="math notranslate nohighlight">\(\rho\,c_p=1231\rm\,\frac{W\,m^{-2}}{K\,m\,s^{-1}}\)</span>,
-<span class="math notranslate nohighlight">\(\sigma_{\rm SB}=5.67\times 10^{-8}\rm\,W\,m^{-2}\,K^{-4}\)</span> and
+<span class="math notranslate nohighlight">\(\sigma_{\rm SB}=5.67\cdot 10^{-8}\rm\,W\,m^{-2}\,K^{-4}\)</span> and
 <span class="math notranslate nohighlight">\(\epsilon_{\rm IR} = 0.78\)</span>,
-so <span class="math notranslate nohighlight">\(\frac{\epsilon_{\rm IR}\, \sigma_{\rm SB}}{\rho\,c_p} = 3.59\times 10^{-11} \rm K^{-3}\,m\,s^{-1}\)</span>.</p>
+so <span class="math notranslate nohighlight">\(\frac{\epsilon_{\rm IR}\, \sigma_{\rm SB}}{\rho\,c_p} = 3.59\cdot 10^{-11} \rm K^{-3}\,m\,s^{-1}\)</span>.</p>
 <div class="math notranslate nohighlight">
 \[
-\gemafg{\theta}{t} = 2.05\times 10^{-5} \rm\,K\,s^{-1} = 0.074\,K\,hr^{-1}
+\gemafg{\theta}{t} = 2.2\cdot 10^{-5} \rm\,K\,s^{-1} = 0.079\,K\,hr^{-1}
 \]</div>
-<p>Note that using rounded temperatures of Equations <a class="reference internal" href="#equation-for-73temp1">(21.2)</a>-<a class="reference internal" href="#equation-for-73temp3">(21.4)</a> results in wrong answers.
-This is due to the power of 4 of the temperature.</p>
 </details>
 <p>c) Repeat now the calculation but assuming a logarithmic profile for the potential temperature that reads:</p>
 <div class="math notranslate nohighlight">
@@ -801,31 +788,31 @@ This is due to the power of 4 of the temperature.</p>
 \[
 \theta_* = - \frac{\overline{w'\theta'}}{u_*}
 \]</div>
-<p>Use the following values to complete the expression: <span class="math notranslate nohighlight">\(\overline{w'\theta'}\)</span> = - 24 Wm<span class="math notranslate nohighlight">\(^{-2}\)</span>,
+<p>Use the following values to complete the expression: <span class="math notranslate nohighlight">\(\overline{w'\theta'}\)</span> = - 0.0195 K m s<span class="math notranslate nohighlight">\(^{-1}\)</span>,
 u<span class="math notranslate nohighlight">\(_*\)</span>=0.1 m, z<span class="math notranslate nohighlight">\(_o\)</span>=0.1 m and von Karman constant equal to 0.4.
 Similar to (b), assume the surface layer at z<span class="math notranslate nohighlight">\(_o\)</span>=0.1 m and <span class="math notranslate nohighlight">\(\theta (z_o)\)</span>=292 K; and layers middle
 and top at 5 and 10 meters respectively.</p>
 <details>
   <summary>Answer</summary>
-<p>Substituting the variables (and considering that <span class="math notranslate nohighlight">\(T = \theta-{10\rm\,K\,km^{-1}}\,z\)</span>) leads to</p>
+<p>Substituting the variables leads to</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-T_{\rm Surface} &amp;\approx 292\rm\,K\\
+T_{\rm Surface} &amp;= 292\rm\,K\\
 T_{\rm Middle}  &amp;\approx 293.9\rm\,K\\
-T_{\rm Top}     &amp;\approx 294.1\rm\,K
+T_{\rm Top}     &amp;\approx 294.2\rm\,K
 \end{split}\]</div>
 <p>The constants are equal to exercise b, so</p>
 <div class="math notranslate nohighlight">
 \[
-\gemafg{\theta}{t} = -1.14\times 10^{-3} \rm\,K\,s^{-1} = -4.1\,K\,hr^{-1}
+\gemafg{\theta}{t} = -1.14\cdot 10^{-3} \rm\,K\,s^{-1} = -4.1\,K\,hr^{-1}
 \]</div>
+<p>Note that using the rounded temperatures results in wrong answers. This is due to the power of 4 of the temperature.</p>
 </details>
 <p>d) Discuss your results from a perspective of the tendency of the temperature <span class="math notranslate nohighlight">\(\pafg{\overline{\theta}}{t}\)</span>.
-Calculate in K h<span class="math notranslate nohighlight">\(^{-1}\)</span>.
 Based on the results of (b) and (c), discuss the most probable profile observed during stable conditions.</p>
 <details>
   <summary>Answer</summary>
-<p>According to a linear potential temperature profile, the middle layer would actually heat up due to radiation by 0.074 K per hour.
+<p>According to a linear potential temperature profile, the middle layer would actually heat up due to radiation by 0.079 K per hour.
 This is in contradiction with the knowledge that at night radiative cooling takes effect.</p>
 <p>The more realistic logarithmic profile results in a cooling effect due to radiation by 4.1 K per hour. This is more reasonable.</p>
 <p>In conclusion, the nocturnal temperature profile that is most probable to be observed is the logarithmic profile.</p>
@@ -833,36 +820,36 @@ This is in contradiction with the knowledge that at night radiative cooling take
 </section>
 <section id="id6">
 <h2><span class="section-number">21.6. </span><a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h2>
-<p>The momentum equation for the <span class="math notranslate nohighlight">\(\overline{U}\)</span> and <span class="math notranslate nohighlight">\(\overline{V}\)</span>-component
+<p>The momentum equation for the <span class="math notranslate nohighlight">\(\overline{u}\)</span> and <span class="math notranslate nohighlight">\(\overline{v}\)</span>-component
 during diurnal and nocturnal conditions reads:</p>
 <div class="math notranslate nohighlight">
 \[
-\pafg{\overline{U}}{t}~=~f \overline{V}- \pafg{\overline{w'u'}}{z}
+\pafg{\overline{u}}{t}~=~f \overline{v}- \pafg{\overline{w'u'}}{z}
 \]</div>
 <div class="math notranslate nohighlight">
 \[
-\pafg{\overline{V}}{t}~=~f (\overline{U_g}-\overline{U})- \pafg{\overline{w'v'}}{z}
+\pafg{\overline{v}}{t}~=~f (u_g-\overline{u})- \pafg{\overline{w'v'}}{z}
 \]</div>
-<p>where <span class="math notranslate nohighlight">\(\overline{U_g}\)</span> is the geostrophic wind in the U direction and f
-is the Coriolis parameter. We assume that <span class="math notranslate nohighlight">\(\overline{V_g}\)</span>=0.</p>
-<p>a) Derive expressions for <span class="math notranslate nohighlight">\(\overline{U}\)</span> and <span class="math notranslate nohighlight">\(\overline{V}\)</span> during day conditions.
+<p>where <span class="math notranslate nohighlight">\(u_g\)</span> is the geostrophic wind in the u direction and f
+is the Coriolis parameter. We assume that <span class="math notranslate nohighlight">\(v_g\)</span>=0.</p>
+<p>a) Derive expressions for <span class="math notranslate nohighlight">\(\overline{u}\)</span> and <span class="math notranslate nohighlight">\(\overline{v}\)</span> during day conditions.
 In diurnal conditions, one can assume that the wind is in steady-state.</p>
 <details>
   <summary>Answer</summary>
 <p>Since we are evaluating (diurnal) stationary conditions,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-0&amp;=f\,\overline{V}-\gemafg{w'u'}{z}\\
-0&amp;=f\,\left(\overline{U_g}-\overline{U}\right)-\gemafg{w'v'}{z}
+0&amp;=f\,\overline{v}-\gemafg{w'u'}{z}\\
+0&amp;=f\,\left(u_g-\overline{u}\right)-\gemafg{w'v'}{z}
 \end{split}\]</div>
 <p>Therefore,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-\overline{U} &amp;= \overline{U_g}-\frac{1}{f}\gemafg{w'v'}{z} \\
-\overline{V} &amp;= \frac{1}{f}\gemafg{u'w'}{z}
+\overline{u} &amp;= u_g-\frac{1}{f}\gemafg{w'v'}{z} \\
+\overline{v} &amp;= \frac{1}{f}\gemafg{u'w'}{z}
 \end{split}\]</div>
 </details>
-<p>b) Calculate the <span class="math notranslate nohighlight">\(\overline{U}\)</span> and <span class="math notranslate nohighlight">\(\overline{V}\)</span>-components during the night. To this end, take the following steps:</p>
+<p>b) Calculate the <span class="math notranslate nohighlight">\(\overline{u}\)</span> and <span class="math notranslate nohighlight">\(\overline{v}\)</span>-components during the night. To this end, take the following steps:</p>
 <ol class="arabic">
 <li><p>Under nocturnal conditions, the friction suddenly disappears above the surface
 layer. Discuss the validity of this assumption. Use this assumption to simplify the momentum equations.</p>
@@ -876,43 +863,43 @@ Therefore, finally the shear decreases in total a little, but the momentum flux 
 Therefore, it can be neglected with respect to the Coriolis and horizontal pressure gradient terms.</p>
 <div class="math notranslate nohighlight" id="equation-for-74b1">
 <span class="eqno">(21.5)<a class="headerlink" href="#equation-for-74b1" title="Permalink to this equation">#</a></span>\[
-    \gemafg{U}{t} =f\,\overline{V}
+    \gemafg{u}{t} =f\,\overline{v}
     \]</div>
 <div class="math notranslate nohighlight" id="equation-for-74b2">
 <span class="eqno">(21.6)<a class="headerlink" href="#equation-for-74b2" title="Permalink to this equation">#</a></span>\[
-    \gemafg{V}{t} =f\,\left(\overline{U_g}-\overline{U}\right)
+    \gemafg{v}{t} =f\,\left(u_g-\overline{u}\right)
     \]</div>
  </details>
 </li>
-<li><p>Derive a second-order differential equation for the <span class="math notranslate nohighlight">\(\overline{U}-\overline{U_g}\)</span> component</p>
+<li><p>Derive a second-order differential equation for the <span class="math notranslate nohighlight">\(\overline{u}-u_g\)</span> component</p>
 <details>
  <summary>Answer</summary>
-<p>Considering that <span class="math notranslate nohighlight">\(\overline{U_g}\)</span> is a constant,</p>
+<p>Considering that <span class="math notranslate nohighlight">\(u_g\)</span> is a constant,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-    \gemafg{U}{t} &amp;= \gemafg{U}{t}-\gemafg{U_g}{t}\\
-    &amp;= \pafg{\left(\overline{U}-\overline{U_g}\right)}{t}
+    \gemafg{u}{t} &amp;= \gemafg{u}{t}-\gemafg{u_g}{t}\\
+    &amp;= \pafg{\left(\overline{u}-u_g\right)}{t}
     \end{split}\]</div>
 <p>Combined with Equations <a class="reference internal" href="#equation-for-74b1">(21.5)</a> and <a class="reference internal" href="#equation-for-74b2">(21.6)</a>, this results in</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-    {\pafg{^2\left(\overline{U}-\overline{U_g}\right)}{t^2}} &amp;= \pafg{}{t}\pafg{\overline{U}}{t} \\
-    &amp;= \pafg{}{t}\left(f\,\overline{V}\right)\\
-    &amp;= f\,\gemafg{V}{t}\\
-    &amp;= f^2\,\left(\overline{U_g}-\overline{U}\right)\\
-    {\pafg{^2\left(\overline{U}-\overline{U_g}\right)}{t^2}} &amp;= - f^2\,\left(\overline{U}-\overline{U_g}\right)
+    {\pafg{^2\left(\overline{u}-u_g\right)}{t^2}} &amp;= \pafg{}{t}\pafg{\overline{u}}{t} \\
+    &amp;= \pafg{}{t}\left(f\,\overline{v}\right)\\
+    &amp;= f\,\gemafg{v}{t}\\
+    &amp;= f^2\,\left(u_g-\overline{u}\right)\\
+    {\pafg{^2\left(\overline{u}-u_g\right)}{t^2}} &amp;= - f^2\,\left(\overline{u}-u_g\right)
     \end{split}\]</div>
  </details>
 </li>
-<li><p>The expression found for <span class="math notranslate nohighlight">\(\overline{U}-\overline{U_g}\)</span>, corresponds to a harmonic oscillator equation, <span class="math notranslate nohighlight">\(\pafg{^2 x}{t^2}=-k\,x\)</span>.</p>
-<p>In this case <span class="math notranslate nohighlight">\(x\)</span> is equal to <span class="math notranslate nohighlight">\(\left(\overline{U}-\overline{U_g}\right)\)</span> and <span class="math notranslate nohighlight">\(k=f^2\)</span>.</p>
+<li><p>The expression found for <span class="math notranslate nohighlight">\(\overline{u}-u_g\)</span>, corresponds to a harmonic oscillator equation, <span class="math notranslate nohighlight">\(\pafg{^2 x}{t^2}=-k\,x\)</span>.</p>
+<p>In this case <span class="math notranslate nohighlight">\(x\)</span> is equal to <span class="math notranslate nohighlight">\(\left(\overline{u}-u_g\right)\)</span> and <span class="math notranslate nohighlight">\(k=f^2\)</span>.</p>
 <p>A general solution is <span class="math notranslate nohighlight">\(x=A\sin\left(\sqrt{k}t\right)+B\cos\left(\sqrt{k}t\right)\)</span>.</p>
 <div class="tip dropdown admonition hint">
 <p class="admonition-title">Hint</p>
 <p>We can prove that the solution</p>
 <div class="math notranslate nohighlight">
 \[
-\overline{U}-\overline{U_g}=A sin(ft) + B cos (ft)
+\overline{u}-u_g=A sin(ft) + B cos (ft)
 \]</div>
 <p>is a correct solution:</p>
 <div class="math notranslate nohighlight">
@@ -925,58 +912,59 @@ Therefore, it can be neglected with respect to the Coriolis and horizontal press
 &amp;= -k \, x
 \end{split}\]</div>
 </div>
-<p>Now use the general solution for the harmonic oscillator and the following initial conditions to find an expression for <span class="math notranslate nohighlight">\(\overline{U}\)</span> and <span class="math notranslate nohighlight">\(\overline{V}\)</span>:</p>
+<p>Now use the general solution for the harmonic oscillator and the following initial conditions to find an expression for <span class="math notranslate nohighlight">\(\overline{u}\)</span> and <span class="math notranslate nohighlight">\(\overline{v}\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[
-   \overline{U}(t=0)~=~\overline{U_d}=\overline{U_g}-F_{v}(t=0)
-   \]</div>
-<div class="math notranslate nohighlight">
-\[
-    \overline{V}(t=0)~=~\overline{V_d}=F_{u}(t=0)
+    \overline{u}(t=0) = u_g-F_{v}(t=0)
     \]</div>
-<p>where <span class="math notranslate nohighlight">\(\pafg{\overline{w'u'}}{z}=fF_{u}(t=0)\)</span> and <span class="math notranslate nohighlight">\(\pafg{\overline{w'v'}}{z}=fF_{v}(t=0)\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[
+    \overline{v}(t=0) = F_{u}(t=0)
+    \]</div>
+<p>where <span class="math notranslate nohighlight">\(F_{u}(t=0) = \frac{1}{f} \pafg{\overline{w'u'}}{z}\)</span> and <span class="math notranslate nohighlight">\(F_{v}(t=0) = \frac{1}{f}\pafg{\overline{w'v'}}{z}\)</span>.</p>
+<p>Note that these initial conditions are the daytime steady-state conditions that were derived in question a.</p>
  <details>
  <summary>Answer</summary>
-<p><span class="math notranslate nohighlight">\(\overline{U}-\overline{U_g} = A\sin\left(ft\right)+B\cos\left(ft\right)\)</span>, so</p>
+<p><span class="math notranslate nohighlight">\(\overline{u}-u_g = A\sin\left(ft\right)+B\cos\left(ft\right)\)</span>, so</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-    \overline{U}(0) &amp;= \overline{U_g} + B\\ &amp;= \overline{U_g} - F_v(0)\\
+    \overline{u}(0) &amp;= u_g + B\\ &amp;= u_g - F_v(0)\\
     B &amp;= -F_v(0)\\
-    \overline{U} &amp;= \overline{U_g} + A\sin\left(ft\right)- F_v(0) \, \cos\left(ft\right)
+    \overline{u} &amp;= u_g + A\sin\left(ft\right)- F_v(0) \, \cos\left(ft\right)
     \end{split}\]</div>
-<p>Since <span class="math notranslate nohighlight">\(\overline{V} = \frac{1}{f}\gemafg{U}{t}\)</span>,</p>
+<p>Since <span class="math notranslate nohighlight">\(\overline{v} = \frac{1}{f}\gemafg{u}{t}\)</span>,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-    \overline{V} &amp;= \frac{1}{f}\left(A f\cos\left(ft\right) + F_v(0) f \sin\left(ft\right) \right) \\
+    \overline{v} &amp;= \frac{1}{f}\left(A f\cos\left(ft\right) + F_v(0) f \sin\left(ft\right) \right) \\
      &amp;= A \cos\left(ft\right) + F_v(0) \sin\left(ft\right)
     \end{split}\]</div>
 <p>Using, the second boundary condition,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-    \overline{V}(0) &amp;= A \\&amp;= F_u(0)\\
+    \overline{v}(0) &amp;= A \\&amp;= F_u(0)\\
     A &amp;= F_u(0)
     \end{split}\]</div>
-<p>All in all, the equations for <span class="math notranslate nohighlight">\(\overline{U}\)</span> and <span class="math notranslate nohighlight">\(\overline{V}\)</span> are</p>
+<p>All in all, the equations for <span class="math notranslate nohighlight">\(\overline{u}\)</span> and <span class="math notranslate nohighlight">\(\overline{v}\)</span> are</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-    \overline{U} &amp;= \overline{U_g} + F_u(0) \sin\left(ft\right) - F_v(0) \cos\left(ft\right)\\
-    \overline{V} &amp;= F_v(0) \sin\left(ft\right) + F_u(0) \cos\left(ft\right) 
+    \overline{u} &amp;= u_g + F_u(0) \sin\left(ft\right) - F_v(0) \cos\left(ft\right)\\
+    \overline{v} &amp;= F_v(0) \sin\left(ft\right) + F_u(0) \cos\left(ft\right) 
     \end{split}\]</div>
 <p>This can be written as</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-    \overline{U} &amp;= \overline{U_g} + \frac{1}{f} \gemafg{w'u'}{z} \sin\left(ft\right) - \frac{1}{f} \gemafg{w'v'}{z} \cos\left(ft\right)\\
-    \overline{V} &amp;= \frac{1}{f} \gemafg{w'v'}{z} \sin\left(ft\right) + \frac{1}{f} \gemafg{w'u'}{z} \cos\left(ft\right) 
+    \overline{u} &amp;= u_g + \frac{1}{f} \gemafg{w'u'}{z} \sin\left(ft\right) - \frac{1}{f} \gemafg{w'v'}{z} \cos\left(ft\right)\\
+    \overline{v} &amp;= \frac{1}{f} \gemafg{w'v'}{z} \sin\left(ft\right) + \frac{1}{f} \gemafg{w'u'}{z} \cos\left(ft\right) 
     \end{split}\]</div>
  </details>
 </li>
 </ol>
-<p>c) Plot the <span class="math notranslate nohighlight">\(\overline{U}\)</span> and <span class="math notranslate nohighlight">\(\overline{V}\)</span>-components for a full period
-T=2<span class="math notranslate nohighlight">\(\pi\)</span>/f, using the following values: f=10<span class="math notranslate nohighlight">\(^{-4}\)</span>s<span class="math notranslate nohighlight">\(^{-1}\)</span>, F<span class="math notranslate nohighlight">\(_{u}(t=0)\)</span>=F<span class="math notranslate nohighlight">\(_{v}(t=0)\)</span>=3ms<span class="math notranslate nohighlight">\(^{-1}\)</span> and
-<span class="math notranslate nohighlight">\(\overline{U_g}\)</span>=10 ms<span class="math notranslate nohighlight">\(^{-1}\)</span> and <span class="math notranslate nohighlight">\(\overline{V_g}\)</span>=0.</p>
+<p>c) Plot the <span class="math notranslate nohighlight">\(\overline{u}\)</span> and <span class="math notranslate nohighlight">\(\overline{v}\)</span>-components for a full period
+T=2<span class="math notranslate nohighlight">\(\pi\)</span>/f, using the following values:</p>
+<p>f = 10<span class="math notranslate nohighlight">\(^{-4}\)</span> s<span class="math notranslate nohighlight">\(^{-1}\)</span>, F<span class="math notranslate nohighlight">\(_{u}(t=0)\)</span> = F<span class="math notranslate nohighlight">\(_{v}(t=0)\)</span> = 3 m s<span class="math notranslate nohighlight">\(^{-1}\)</span>, <span class="math notranslate nohighlight">\(u_g\)</span> = 10 m s<span class="math notranslate nohighlight">\(^{-1}\)</span>, and <span class="math notranslate nohighlight">\(v_g\)</span> = 0 m s<span class="math notranslate nohighlight">\(^{-1}\)</span>.</p>
 <details>
   <summary>Answer</summary>
-<p>The wind velocities, <span class="math notranslate nohighlight">\(\overline{U}\)</span> and <span class="math notranslate nohighlight">\(\overline{V}\)</span> are plotted in <a class="reference internal" href="#fig-ans-74"><span class="std std-numref">Fig. 21.7</span></a>.</p>
+<p>The wind velocities, <span class="math notranslate nohighlight">\(\overline{u}\)</span> and <span class="math notranslate nohighlight">\(\overline{v}\)</span> are plotted in <a class="reference internal" href="#fig-ans-74"><span class="std std-numref">Fig. 21.7</span></a>.</p>
 <figure class="align-default" id="fig-ans-74">
 <img alt="../_images/exercise7_4.png" src="../_images/exercise7_4.png" />
 <figcaption>
@@ -984,30 +972,30 @@ T=2<span class="math notranslate nohighlight">\(\pi\)</span>/f, using the follow
 </figcaption>
 </figure>
 </details>
-<p>d) Derive an expresion for <span class="math notranslate nohighlight">\(\left(\overline{U}-\overline{U_g}\right)^2 + \overline{V}^2\)</span>.
+<p>d) Derive an expresion for <span class="math notranslate nohighlight">\(\left(\overline{u}-u_g\right)^2 + \overline{v}^2\)</span>.
 Use this expression to explain how the wind changes over time.</p>
 <details>
   <summary>Answer</summary>
 <p>Realize that</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-\overline{U}-\overline{U_g} &amp;= F_u(0) \sin\left(ft\right) - F_v(0) \cos\left(ft\right)\\ 
-\overline{V} &amp;= F_v(0) \sin\left(ft\right) + F_u(0) \cos\left(ft\right)
+\overline{u}-u_g &amp;= F_u(0) \sin\left(ft\right) - F_v(0) \cos\left(ft\right)\\ 
+\overline{v} &amp;= F_v(0) \sin\left(ft\right) + F_u(0) \cos\left(ft\right)
 \end{split}\]</div>
 <p>Therefore,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-\left(\overline{U}-\overline{U_g}\right)^2 &amp;= F_u^2(0) \sin^2\left(ft\right) + F_v^2(0) \cos^2\left(ft\right) - 2 F_u(0) F_v(0) \cos\left(ft\right) \sin\left(ft\right) \\
-\overline{V}^2 &amp;= F_u^2(0) \cos^2\left(ft\right) + F_v^2(0) \sin^2\left(ft\right) + 2 F_u(0) F_v(0) \cos\left(ft\right) \sin\left(ft\right) 
+\left(\overline{u}-u_g\right)^2 &amp;= F_u^2(0) \sin^2\left(ft\right) + F_v^2(0) \cos^2\left(ft\right) - 2 F_u(0) F_v(0) \cos\left(ft\right) \sin\left(ft\right) \\
+\overline{v}^2 &amp;= F_u^2(0) \cos^2\left(ft\right) + F_v^2(0) \sin^2\left(ft\right) + 2 F_u(0) F_v(0) \cos\left(ft\right) \sin\left(ft\right) 
 \end{split}\]</div>
 <p>Combining these 2 equations results in</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-\left(\overline{U}-\overline{U_g}\right)^2 + \overline{V}^2 &amp;= F_u^2(0) \left(\cos^2\left(ft\right)+\sin^2\left(ft\right)\right) + F_v^2(0) \left(\cos^2\left(ft\right)+\sin^2\left(ft\right)\right) \\
+\left(\overline{u}-u_g\right)^2 + \overline{v}^2 &amp;= F_u^2(0) \left(\cos^2\left(ft\right)+\sin^2\left(ft\right)\right) + F_v^2(0) \left(\cos^2\left(ft\right)+\sin^2\left(ft\right)\right) \\
  &amp;= F_u^2(0) + F_v^2(0)
 \end{split}\]</div>
 <p>Since the right-hand side is a constant,
-this equation states that <span class="math notranslate nohighlight">\(\left(\overline{U},\overline{V}\right)\)</span> progresses in time as a circular movement around <span class="math notranslate nohighlight">\(\left(\overline{U_g},0\right)\)</span>
+this equation states that <span class="math notranslate nohighlight">\(\left(\overline{u},\overline{v}\right)\)</span> progresses in time as a circular movement around <span class="math notranslate nohighlight">\(\left(u_g,0\right)\)</span>
 at a distance of <span class="math notranslate nohighlight">\(\sqrt{F_u^2(0) + F_v^2(0)} = 3\sqrt{2}\rm\,m\,s^{-1}\)</span></p>
 <p>This can also be seen from <a class="reference internal" href="#fig-ans-74"><span class="std std-numref">Fig. 21.7</span></a>.</p>
 </details>
@@ -1025,7 +1013,7 @@ Stefan-Boltzmann law:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 L&amp;=\epsilon_{IR}\sigma_{SB} T^4 \\
-\sigma_{SB}&amp;=5.67~10^{-8}~\frac{W}{m^2K^4}
+\sigma_{SB}&amp;=5.67~10^{-8}\ W\ m^{-1}\ K^{-4}
 \end{split}\]</div>
 <p>The following values in the three-layer model of the stable
 boundary layer are suggested. At the surface, <span class="math notranslate nohighlight">\(T_s=290~K\)</span> and <span class="math notranslate nohighlight">\(\epsilon_s=0.78\)</span>.</p>
@@ -1033,7 +1021,7 @@ boundary layer are suggested. At the surface, <span class="math notranslate nohi
 <p>Finally, at the top of the SBL <span class="math notranslate nohighlight">\(T_t=298~K\)</span> and <span class="math notranslate nohighlight">\(\epsilon_t=0.78\)</span>.</p>
 <p>The boundary layer height is equal to 25 m.
 Additional data to calculate the divergence of
-the net longwave radiation are: <span class="math notranslate nohighlight">\(\rho=1.2261 Kg/m^3\)</span>, <span class="math notranslate nohighlight">\(c_p=1004 J/KgK\)</span>.</p>
+the net longwave radiation are: <span class="math notranslate nohighlight">\(\rho\ =\ 1.2261\ Kg\ m^{-3}\)</span>, <span class="math notranslate nohighlight">\(c_p\ =\ 1004\ J\ Kg^{-1}\ K^{-1}\)</span>.</p>
 <details>
   <summary>Answer</summary>
 <p>The term that is asked for is <span class="math notranslate nohighlight">\(\pafg{Q^*}{z}\)</span>.
@@ -1060,17 +1048,18 @@ Therefore, the variation of the potential temperature per hour is equal to</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \gemafg{\theta}{t} &amp;= -\frac{1}{\rho\,c_p}\pafg{Q^*}{z}\\
-                   &amp;= -\frac{ 0.697 \rm\,W\,m^{-3}}{1.2261 \cdot 1004 \rm\,W\,m^{-3}\,K^{-1}\,s}\\
-                   &amp;= -0.566\times 10^{-3}\rm\,K\,s^{-1} \\
+                   &amp;= -\frac{ 0.697 \rm\,W\,m^{-3}}{1.2261 \cdot 1004 \rm\ J\ K^{-1}\ m^{-3}}\\
+                   &amp;= -0.566 \cdot 10^{-3}\rm\,K\,s^{-1} \\
 &amp;= -2.03 \rm\,K\,hr^{-1}
 \end{split}\]</div>
 </details>
 <p>c) The sensible heat flux has the following vertical profile</p>
 <div class="math notranslate nohighlight">
 \[
-\overline{w'\theta'}(z)~=~\overline{w'\theta'}_o~(1-z/h)~~~~\overline{w'\theta'}_o= -14~W/m^2
+\overline{w'\theta'}(z)~=~\overline{w'\theta'}_o~(1-z/h)
 \]</div>
-<p>where <span class="math notranslate nohighlight">\(\overline{w'\theta'}_o\)</span> is the sensible heat flux at
+<p><span class="math notranslate nohighlight">\( \overline{w'\theta'}_o= -0.0114~ K\ m\ s^{-1}\)</span> (or H = -14 <span class="math notranslate nohighlight">\(W\ m^{-2}\)</span>)</p>
+<p>where <span class="math notranslate nohighlight">\(\overline{w'\theta'}_o\)</span> is the potential temperature flux at
 the surface and <span class="math notranslate nohighlight">\(h=25~m\)</span> is the depth of the SBL.</p>
 <p>Plot this profile. Discuss and quantify the role of the turbulent flux under these conditions.</p>
 <details>
@@ -1089,11 +1078,11 @@ Therefore, more heat is transported out of a control volume than inward. This re
 \[\begin{split}
 \gemafg{w'\theta'}{z} &amp;= \frac{-\overline{w'\theta'}(0)}{h}\\
 &amp;= \frac{\frac{14}{1231}\rm\,K\,m\,s^{-1}}{25\rm\,m}\\
-&amp;= 0.455\times 10^{-3}\rm\,K\,s^{-1}
+&amp;= 0.455\cdot 10^{-3}\rm\,K\,s^{-1}
 \end{split}\]</div>
 <p>This corresponds to a cooling term in the conservation equation of the boundary layer of 1.64 K hr<span class="math notranslate nohighlight">\(^{-1}\)</span>.</p>
 </details>
-<p>d) By using the values found in a) and taking now into account the turbulent divergence
+<p>d) By using the value found in b) and taking now into account the turbulent divergence
 term, calculate the temperature change per hour.</p>
 <details>
   <summary>Answer</summary>
@@ -1113,10 +1102,10 @@ reach a steady-state.</p>
 <p>The horizontal advection has to balance the cooling effects of both the vertical heat flux gradient and the radiation. Therefore,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-\overline{U}\gemafg{\theta}{x} &amp;= - 0.455\times 10^{-3}\rm\,K\,s^{-1} - 0.566\times 10^{-3}\rm\,K\,s^{-1} \\
-&amp;= - 1.021\times 10^{-3}\rm\,K\,s^{-1}
+\overline{U}\gemafg{\theta}{x} &amp;= - 0.455\cdot 10^{-3}\rm\,K\,s^{-1} - 0.566\cdot 10^{-3}\rm\,K\,s^{-1} \\
+&amp;= - 1.021\cdot 10^{-3}\rm\,K\,s^{-1}
 \end{split}\]</div>
-<p>Since <span class="math notranslate nohighlight">\(\overline{U}=10\rm\,m\,s^{-1}\)</span>, <span class="math notranslate nohighlight">\(\gemafg{\theta}{x} \approx -1\times 10^{-4}\rm\,K\,m^{-1}\)</span>.
+<p>Since <span class="math notranslate nohighlight">\(\overline{U}=10\rm\,m\,s^{-1}\)</span>, <span class="math notranslate nohighlight">\(\gemafg{\theta}{x} \approx -1\cdot 10^{-4}\rm\,K\,m^{-1}\)</span>.
 This results in <span class="math notranslate nohighlight">\(\gemafg{\theta}{x}=-0.1\rm\,K\,km^{-1}\)</span></p>
 <p>Since the value is negative, relatively warm air is transported in the positive <span class="math notranslate nohighlight">\(x\)</span> direction and, consequently, advection is a source of heating.</p>
 </details>
