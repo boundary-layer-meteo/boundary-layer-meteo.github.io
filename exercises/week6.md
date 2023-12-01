@@ -8,8 +8,8 @@ The flux-gradient relationships for momentum and heat ($\Phi_M$ and $\Phi_H$)
 are related to the exchange coefficients ($K_M$ and $K_H$).
 
 a) Using the first-order closure assumption to parameterize the
-fluxes and surface layer similarity, find the relationship between
-$\Phi_M$,  $\Phi_H$ and $K_M$, $K_H$.
+fluxes and surface layer similarity, show that  $\frac{K_M}{K_H}=\frac{\Phi_H\left(\frac{z}{L}\right)}{\Phi_M\left(\frac{z}{L}\right)}$ 
+
 
 <details>
   <summary>Answer</summary>
@@ -48,9 +48,7 @@ $$
 $$
 
 Knowing that
-$\Phi_Q~=~\frac{\kappa z}{q_*} \pafg{\overline{q}}{z}$,
-find a relation between the exchange coefficient and
-the flux-gradient relationship for moisture.
+$\Phi_Q~=~\frac{\kappa z}{q_*} \pafg{\overline{q}}{z}$, show that $K_Q = \frac{\kappa\,z\,u_*}{\Phi_Q \left(\frac{z}{L}\right)}$
 
 <details>
   <summary>Answer</summary>
@@ -140,7 +138,11 @@ $$
 \pafg{\theta}{t}+{u_j}\pafg{\theta}{x_j}~=~\nu_{\theta}\pafg{^2\theta}{x_j^2}
 $$
 
-a) Derive from this equation the governing equation of the potential temperature fluctuations $\overline{\theta'^{~2}}$.
+a) Derive from this equation that governing equation of the potential temperature fluctuations $\overline{\theta'^{~2}}$ is
+
+$$
+\underbrace{\gemafg{\theta'^2}{t}}_{\rm Tendency}+ \underbrace{\overline{u_j}\gemafg{\theta'^2}{x_j}}_{\rm Advection}+\underbrace{2\overline{u_j'\theta'}\gemafg{\theta}{x_j}}_{\rm Production} + \underbrace{\gemafg{{u_j'}\theta'^2}{x_j}}_{Turbulent\ transport} = \underbrace{- 2 \epsilon_\theta}_{\rm Dissipation}
+$$(for:58afinal)
 
 ```{hint}
 :class: tip, dropdown
@@ -196,7 +198,7 @@ $$
 Rearranging shows that
 
 $$
-2 \theta' \pafg{^2\theta'}{x_j'^2} = \pafg{^2\theta'^2}{x_j^2} - 2 \left(\pafg{\theta'}{x_j}\right)^2
+2 \theta' \pafg{^2\theta'}{x_j^2} = \pafg{^2\theta'^2}{x_j^2} - 2 \left(\pafg{\theta'}{x_j}\right)^2
 $$
 
 Since $\left|\pafg{^2\theta'^2}{x_j^2}\right|\ll \left|2 \theta' \pafg{^2\theta'}{x_j^2}\right|$ and $\epsilon_\theta =\nu_\theta\left(\pafg{\theta'}{x_j}\right)^2$, this shows that
@@ -221,7 +223,7 @@ $$(for:58afinal)
 
 </details>
 
-b) From the general expression, write the simplify equation if one assumes: steady-state, no advection, horizontal
+b) From the general expression, write the simplified equation if one assumes: steady-state, no advection, horizontal
 homogeneity and the turbulent transport of $\overline{\theta'^{~2}}$ is neglectable.
 
 <details>
@@ -368,13 +370,13 @@ The frequency of vertical oscillations for an atmospheric flow is given by
 the Brunt-Väisälä frequency
 
 $$
-N^2=\left(\frac{g}{\overline{\theta_v}}\right)~\pafg{\overline{\theta_v}}{z}~~~(s^{-2})
+N^2=\frac{g}{\overline{\theta_v}} \pafg{\overline{\theta_v}}{z}~~~(s^{-2})
 $$
 
 The Brunt-Väisälä frequency is the frequency with which an air parcel oscillates if it's displaced in a statically stable environment ($\gemafg{\theta_v}{z} > 0$).
 
-a) Find an expression of the velocity gradient as a function of
-the Richardson Number and the Brunt-Väisälä frequency. Assume that $\overline{v}(z)=0$.
+a) Show that the velocity gradient can be expressed as a function of the gradient Richardson Number and the Brunt-Väisälä frequency as
+$\gemafg{u}{z} = \frac{N}{\sqrt{{\rm Ri}_g}}$. Assume that $\overline{v}(z)=0$.
 
 <details>
   <summary>Answer</summary>
@@ -558,7 +560,7 @@ $$(for:57)
 In this case, $z_1=z_0=0.1\rm\,m$, ${\rm NO}\left(z_1\right)=5\rm\,ppb$ and $z_2=z$. 
 Therefore, substituting the known variables, $\overline{\rm NO}\left(z\right)= 5 - \frac{5}{6}{\rm ln}\frac{z}{0.1\rm\,m}\quad\left(\rm ppb\right)$.
  
-The plot of this equation is shown in {numref}`fig:57`. The concentration at 10 m height is 1.16~ppb.
+The plot of this equation is shown in {numref}`fig:57`. The concentration at 10 m height is 1.16 ppb.
 
 ```{figure} figures/exercise5_7.png
 :name: fig:57

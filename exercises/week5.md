@@ -384,7 +384,7 @@ Q^*_{\rm interface\,2} &= Q_{\rm Middle} - Q_{\rm Top}\\
                  &= \epsilon_{\rm IR}\, \sigma_{\rm SB}\,T_{\rm Middle}^4 - \epsilon_{\rm IR}\, \sigma_{\rm SB}\,T_{\rm Top}^4
 $$
 
-Since $Q^*_{\rm tot} = Q^*_{\rm interface\,2} - Q^*_{\rm interface\,1}$, 
+Since $\Delta\ Q^*_{\rm tot} = Q^*_{\rm interface\,2} - Q^*_{\rm interface\,1}$, 
 
 $$
 \frac{\Delta Q^*_{\rm tot}}{\Delta z} = \epsilon_{\rm IR}\, \sigma_{\rm SB}\,\frac{2 \,T_{\rm Middle}^4 - T_{\rm Top}^4 - T_{\rm Surface}^4}{\Delta z}
