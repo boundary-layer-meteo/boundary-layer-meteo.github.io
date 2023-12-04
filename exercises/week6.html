@@ -416,8 +416,7 @@ document.write(`
 <p>The flux-gradient relationships for momentum and heat (<span class="math notranslate nohighlight">\(\Phi_M\)</span> and <span class="math notranslate nohighlight">\(\Phi_H\)</span>)
 are related to the exchange coefficients (<span class="math notranslate nohighlight">\(K_M\)</span> and <span class="math notranslate nohighlight">\(K_H\)</span>).</p>
 <p>a) Using the first-order closure assumption to parameterize the
-fluxes and surface layer similarity, find the relationship between
-<span class="math notranslate nohighlight">\(\Phi_M\)</span>,  <span class="math notranslate nohighlight">\(\Phi_H\)</span> and <span class="math notranslate nohighlight">\(K_M\)</span>, <span class="math notranslate nohighlight">\(K_H\)</span>.</p>
+fluxes and surface layer similarity, show that  <span class="math notranslate nohighlight">\(\frac{K_M}{K_H}=\frac{\Phi_H\left(\frac{z}{L}\right)}{\Phi_M\left(\frac{z}{L}\right)}\)</span></p>
 <details>
   <summary>Answer</summary>
 <div class="math notranslate nohighlight">
@@ -448,9 +447,7 @@ The relationships between <span class="math notranslate nohighlight">\(K_{H,M}\)
 \overline{w'q'}~=~-K_q \pafg{\overline{q}}{z}
 \]</div>
 <p>Knowing that
-<span class="math notranslate nohighlight">\(\Phi_Q~=~\frac{\kappa z}{q_*} \pafg{\overline{q}}{z}\)</span>,
-find a relation between the exchange coefficient and
-the flux-gradient relationship for moisture.</p>
+<span class="math notranslate nohighlight">\(\Phi_Q~=~\frac{\kappa z}{q_*} \pafg{\overline{q}}{z}\)</span>, show that <span class="math notranslate nohighlight">\(K_Q = \frac{\kappa\,z\,u_*}{\Phi_Q \left(\frac{z}{L}\right)}\)</span></p>
 <details>
   <summary>Answer</summary>
 <p>Similar to (a),</p>
@@ -522,7 +519,11 @@ for potential temperature reads</p>
 \[
 \pafg{\theta}{t}+{u_j}\pafg{\theta}{x_j}~=~\nu_{\theta}\pafg{^2\theta}{x_j^2}
 \]</div>
-<p>a) Derive from this equation the governing equation of the potential temperature fluctuations <span class="math notranslate nohighlight">\(\overline{\theta'^{~2}}\)</span>.</p>
+<p>a) Derive from this equation that governing equation of the potential temperature fluctuations <span class="math notranslate nohighlight">\(\overline{\theta'^{~2}}\)</span> is</p>
+<div class="math notranslate nohighlight" id="equation-for-58afinal">
+<span class="eqno">(22.7)<a class="headerlink" href="#equation-for-58afinal" title="Permalink to this equation">#</a></span>\[
+\underbrace{\gemafg{\theta'^2}{t}}_{\rm Tendency}+ \underbrace{\overline{u_j}\gemafg{\theta'^2}{x_j}}_{\rm Advection}+\underbrace{2\overline{u_j'\theta'}\gemafg{\theta}{x_j}}_{\rm Production} + \underbrace{\gemafg{{u_j'}\theta'^2}{x_j}}_{Turbulent\ transport} = \underbrace{- 2 \epsilon_\theta}_{\rm Dissipation}
+\]</div>
 <div class="tip dropdown admonition hint">
 <p class="admonition-title">Hint</p>
 <p>Please note the similarity between this derivation and the derivation of the equation for <span class="math notranslate nohighlight">\(\gemafg{u'^2}{t}\)</span>, which gave us the tke equation.</p>
@@ -532,15 +533,15 @@ for potential temperature reads</p>
 <p>Question: Governing equation for the potential temperature variance, <span class="math notranslate nohighlight">\(\gemafg{\theta'^2}{t}\)</span></p>
 <p>Known: <span class="math notranslate nohighlight">\(\pafg{\theta}{t}+u_j\pafg{\theta}{x_j}=\nu_\theta \pafg{^2 \theta}{x_j^2}\)</span></p>
 <div class="math notranslate nohighlight" id="equation-for-58a">
-<span class="eqno">(22.1)<a class="headerlink" href="#equation-for-58a" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(22.2)<a class="headerlink" href="#equation-for-58a" title="Permalink to this equation">#</a></span>\[
 \gemafg\theta t + \pafg{\theta'}{t}+\overline{u_j}\gemafg{\theta}{x_j} + \overline{u_j}\pafg{\theta'}{x_j}+{u_j'}\gemafg{\theta}{x_j} + {u_j'}\pafg{\theta'}{x_j} = \nu_\theta \pafg{^2 \overline{\theta}}{x_j^2} + \nu_\theta \pafg{^2 \theta'}{x_j^2}
 \]</div>
-<p>Reynolds averaging Equation <a class="reference internal" href="#equation-for-58a">(22.1)</a> leads to</p>
+<p>Reynolds averaging Equation <a class="reference internal" href="#equation-for-58a">(22.2)</a> leads to</p>
 <div class="math notranslate nohighlight" id="equation-for-58b">
-<span class="eqno">(22.2)<a class="headerlink" href="#equation-for-58b" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(22.3)<a class="headerlink" href="#equation-for-58b" title="Permalink to this equation">#</a></span>\[
 \gemafg\theta t +\overline{u_j}\gemafg{\theta}{x_j} + \overline{{u_j'}\pafg{\theta'}{x_j}} = \nu_\theta \pafg{^2 \overline{\theta}}{x_j^2}
 \]</div>
-<p>Subtracting Equation <a class="reference internal" href="#equation-for-58b">(22.2)</a> from Equation <a class="reference internal" href="#equation-for-58a">(22.1)</a> yields</p>
+<p>Subtracting Equation <a class="reference internal" href="#equation-for-58b">(22.3)</a> from Equation <a class="reference internal" href="#equation-for-58a">(22.2)</a> yields</p>
 <div class="math notranslate nohighlight">
 \[
 \pafg{\theta'}{t}+ \overline{u_j}\pafg{\theta'}{x_j}+{u_j'}\gemafg{\theta}{x_j} + {u_j'}\pafg{\theta'}{x_j} - \overline{{u_j'}\pafg{\theta'}{x_j}} = \nu_\theta \pafg{^2 \theta'}{x_j^2}
@@ -552,7 +553,7 @@ for potential temperature reads</p>
 \overline{\pafg{\theta'^2}{t}+ \overline{u_j}\pafg{\theta'^2}{x_j}+2{u_j'\theta'}\gemafg{\theta}{x_j} + {u_j'}\pafg{\theta'^2}{x_j} - 2\theta'\overline{{u_j'}\pafg{\theta'}{x_j}}} &amp;= \overline{2\theta'\nu_\theta \pafg{^2 \theta'}{x_j^2}}
 \end{split}\]</div>
 <div class="math notranslate nohighlight" id="equation-for-58tosubs">
-<span class="eqno">(22.3)<a class="headerlink" href="#equation-for-58tosubs" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(22.4)<a class="headerlink" href="#equation-for-58tosubs" title="Permalink to this equation">#</a></span>\[
 \gemafg{\theta'^2}{t}+ \overline{u_j}\gemafg{\theta'^2}{x_j}+2\overline{u_j'\theta'}\gemafg{\theta}{x_j} + \overline{{u_j'}\pafg{\theta'^2}{x_j}} = 2\nu_\theta \overline{\theta' \pafg{^2 \theta'}{x_j^2} }
 \]</div>
 <p>The last term, <span class="math notranslate nohighlight">\(2\nu_\theta \overline{\theta' \pafg{^2 \theta'}{x_j^2} }\)</span>, can be rewritten,
@@ -568,33 +569,33 @@ To tackle this, take a look at the <span class="math notranslate nohighlight">\(
 <p>Rearranging shows that</p>
 <div class="math notranslate nohighlight">
 \[
-2 \theta' \pafg{^2\theta'}{x_j'^2} = \pafg{^2\theta'^2}{x_j^2} - 2 \left(\pafg{\theta'}{x_j}\right)^2
+2 \theta' \pafg{^2\theta'}{x_j^2} = \pafg{^2\theta'^2}{x_j^2} - 2 \left(\pafg{\theta'}{x_j}\right)^2
 \]</div>
 <p>Since <span class="math notranslate nohighlight">\(\left|\pafg{^2\theta'^2}{x_j^2}\right|\ll \left|2 \theta' \pafg{^2\theta'}{x_j^2}\right|\)</span> and <span class="math notranslate nohighlight">\(\epsilon_\theta =\nu_\theta\left(\pafg{\theta'}{x_j}\right)^2\)</span>, this shows that</p>
 <div class="math notranslate nohighlight" id="equation-for-58subs1">
-<span class="eqno">(22.4)<a class="headerlink" href="#equation-for-58subs1" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(22.5)<a class="headerlink" href="#equation-for-58subs1" title="Permalink to this equation">#</a></span>\[
 2 \nu_\theta \theta' \pafg{^2\theta'}{x_j^2} = - 2 \epsilon_\theta
 \]</div>
-<p>Another term of Equation <a class="reference internal" href="#equation-for-58tosubs">(22.3)</a> that can be rewritten is <span class="math notranslate nohighlight">\({u_j'}\pafg{\theta'^2}{x_j}\)</span>.
+<p>Another term of Equation <a class="reference internal" href="#equation-for-58tosubs">(22.4)</a> that can be rewritten is <span class="math notranslate nohighlight">\({u_j'}\pafg{\theta'^2}{x_j}\)</span>.
 Since <span class="math notranslate nohighlight">\(\pafg{u_j'}{x_j}=0\)</span> due to incompressibility of the flow,</p>
 <div class="math notranslate nohighlight" id="equation-for-58subs2">
-<span class="eqno">(22.5)<a class="headerlink" href="#equation-for-58subs2" title="Permalink to this equation">#</a></span>\[\begin{split}
+<span class="eqno">(22.6)<a class="headerlink" href="#equation-for-58subs2" title="Permalink to this equation">#</a></span>\[\begin{split}
 {u_j'}\pafg{\theta'^2}{x_j} &amp;= \pafg{u_j'\theta'^2}{x_j} - \theta'^2 \pafg{u_j'}{x_j}\\
 {u_j'}\pafg{\theta'^2}{x_j} &amp;= \pafg{u_j'\theta'^2}{x_j}
 \end{split}\]</div>
-<p>Combining Equations <a class="reference internal" href="#equation-for-58tosubs">(22.3)</a>, <a class="reference internal" href="#equation-for-58subs1">(22.4)</a> and <a class="reference internal" href="#equation-for-58subs2">(22.5)</a> yields</p>
+<p>Combining Equations <a class="reference internal" href="#equation-for-58tosubs">(22.4)</a>, <a class="reference internal" href="#equation-for-58subs1">(22.5)</a> and <a class="reference internal" href="#equation-for-58subs2">(22.6)</a> yields</p>
 <div class="math notranslate nohighlight" id="equation-for-58afinal">
-<span class="eqno">(22.6)<a class="headerlink" href="#equation-for-58afinal" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(22.7)<a class="headerlink" href="#equation-for-58afinal" title="Permalink to this equation">#</a></span>\[
 \underbrace{\gemafg{\theta'^2}{t}}_{\rm Tendency}+ \underbrace{\overline{u_j}\gemafg{\theta'^2}{x_j}}_{\rm Advection}+\underbrace{2\overline{u_j'\theta'}\gemafg{\theta}{x_j}}_{\rm Production} + \underbrace{\gemafg{{u_j'}\theta'^2}{x_j}}_{Turbulent\ transport} = \underbrace{- 2 \epsilon_\theta}_{\rm Dissipation}
 \]</div>
 </details>
-<p>b) From the general expression, write the simplify equation if one assumes: steady-state, no advection, horizontal
+<p>b) From the general expression, write the simplified equation if one assumes: steady-state, no advection, horizontal
 homogeneity and the turbulent transport of <span class="math notranslate nohighlight">\(\overline{\theta'^{~2}}\)</span> is neglectable.</p>
 <details>
   <summary>Answer</summary>
 <p>In the case of steady state, the derivatives to <span class="math notranslate nohighlight">\(t\)</span> become zero.
 If a horizontal homogeneous situation is studied, the derivatives to <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> of Reynolds averaged quantities vanish as well.
-Therefore, Equation <a class="reference internal" href="#equation-for-58afinal">(22.6)</a> turns in</p>
+Therefore, Equation <a class="reference internal" href="#equation-for-58afinal">(22.7)</a> turns in</p>
 <div class="math notranslate nohighlight">
 \[
 \overline{w}\gemafg{\theta'^2}{z}+2\overline{w'\theta'}\gemafg{\theta}{z} + {\gemafg{{w'}\theta'^2}{z}} = - 2 \epsilon_\theta
@@ -607,7 +608,7 @@ This eliminates the only form of transport by advection, since the case under st
 \]</div>
 <p>Generally, <span class="math notranslate nohighlight">\(3^{\rm rd}\)</span>-order moments are small compared to the other terms in the atmospheric boundary layer. This also holds true for the turbulent transport of potential temperature variance, <span class="math notranslate nohighlight">\(\overline{{w'}\theta'^2}\)</span>. Using this assumption, the final equation is</p>
 <div class="math notranslate nohighlight" id="equation-for-58breal">
-<span class="eqno">(22.7)<a class="headerlink" href="#equation-for-58breal" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(22.8)<a class="headerlink" href="#equation-for-58breal" title="Permalink to this equation">#</a></span>\[
 \overline{w'\theta'}\gemafg{\theta}{z} = - \epsilon_\theta
 \]</div>
 </details>
@@ -633,7 +634,7 @@ value of <span class="math notranslate nohighlight">\(\Phi_{\epsilon\theta}\)</s
 \overline{w'\theta'} &amp;= - u_* \theta_*\\
 \gemafg{\theta}{z} &amp;= \frac{\Phi_H\,\theta_*}{\kappa\,z}
 \end{split}\]</div>
-<p>Substituting these relations into Equation <a class="reference internal" href="#equation-for-58breal">(22.7)</a> results in</p>
+<p>Substituting these relations into Equation <a class="reference internal" href="#equation-for-58breal">(22.8)</a> results in</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 - u_* \theta_* \frac{\Phi_H\,\theta_*}{\kappa\,z} &amp;= - \epsilon_\theta\\
@@ -667,7 +668,7 @@ Ri_g (z=20 \ m.)=\frac{\frac{g}{\overline{\theta}}\frac{\partial \overline{\thet
 \]</div>
 <p>Rearranging the equation above:</p>
 <div class="math notranslate nohighlight" id="equation-ex5-1eq1">
-<span class="eqno">(22.8)<a class="headerlink" href="#equation-ex5-1eq1" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(22.9)<a class="headerlink" href="#equation-ex5-1eq1" title="Permalink to this equation">#</a></span>\[
 \frac{\partial \overline{\theta}}{\partial z}= Ri_g^{crit} \frac{\overline{\theta}}{g} \left[\left(\frac{\partial u}{\partial z}\right) ^2 +\left(\frac{\partial v}{\partial z}\right) ^2 \right]
 \]</div>
 <p>We now calculate <span class="math notranslate nohighlight">\(\frac{\partial u}{\partial z}\)</span> and <span class="math notranslate nohighlight">\(\frac{\partial v}{\partial z}\)</span>:</p>
@@ -676,7 +677,7 @@ Ri_g (z=20 \ m.)=\frac{\frac{g}{\overline{\theta}}\frac{\partial \overline{\thet
 \frac{\partial u}{\partial z} &amp;= \frac{u_*}{\kappa}\frac{\partial (ln \frac{z}{z_0})}{\partial z}  = \frac{u_*}{\kappa}\frac{1}{z}\\
 \frac{\partial v}{\partial z} &amp;= 0
 \end{split}\]</div>
-<p>Introducing this in Eq. <a class="reference internal" href="#equation-ex5-1eq1">(22.8)</a> we obtain:</p>
+<p>Introducing this in Eq. <a class="reference internal" href="#equation-ex5-1eq1">(22.9)</a> we obtain:</p>
 <div class="math notranslate nohighlight">
 \[
 \frac{\partial \overline{\theta}}{\partial z}= Ri_g^{crit} \frac{\overline{\theta}}{g} \frac{u_*^2}{\kappa^2}\frac{1}{z^2}
@@ -712,28 +713,28 @@ and <span class="math notranslate nohighlight">\(Ri_g^{crit}=0.25\)</span> we ob
 the Brunt-Väisälä frequency</p>
 <div class="math notranslate nohighlight">
 \[
-N^2=\left(\frac{g}{\overline{\theta_v}}\right)~\pafg{\overline{\theta_v}}{z}~~~(s^{-2})
+N^2=\frac{g}{\overline{\theta_v}} \pafg{\overline{\theta_v}}{z}~~~(s^{-2})
 \]</div>
 <p>The Brunt-Väisälä frequency is the frequency with which an air parcel oscillates if it’s displaced in a statically stable environment (<span class="math notranslate nohighlight">\(\gemafg{\theta_v}{z} &gt; 0\)</span>).</p>
-<p>a) Find an expression of the velocity gradient as a function of
-the Richardson Number and the Brunt-Väisälä frequency. Assume that <span class="math notranslate nohighlight">\(\overline{v}(z)=0\)</span>.</p>
+<p>a) Show that the velocity gradient can be expressed as a function of the gradient Richardson Number and the Brunt-Väisälä frequency as
+<span class="math notranslate nohighlight">\(\gemafg{u}{z} = \frac{N}{\sqrt{{\rm Ri}_g}}\)</span>. Assume that <span class="math notranslate nohighlight">\(\overline{v}(z)=0\)</span>.</p>
 <details>
   <summary>Answer</summary>
 <p>Rewrite velocity gradient such that you get <span class="math notranslate nohighlight">\(\gemafg{u}{z}\left({Ri},N\right)\)</span>.
 It’s given that</p>
 <div class="math notranslate nohighlight" id="equation-for-53a1">
-<span class="eqno">(22.9)<a class="headerlink" href="#equation-for-53a1" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(22.10)<a class="headerlink" href="#equation-for-53a1" title="Permalink to this equation">#</a></span>\[
 \overline{v}=0
 \]</div>
 <div class="math notranslate nohighlight" id="equation-for-53a2">
-<span class="eqno">(22.10)<a class="headerlink" href="#equation-for-53a2" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(22.11)<a class="headerlink" href="#equation-for-53a2" title="Permalink to this equation">#</a></span>\[
 N^2=\frac{g}{\overline{\theta_v}} \gemafg{\theta_v}{z}
 \]</div>
 <div class="math notranslate nohighlight" id="equation-for-53a3">
-<span class="eqno">(22.11)<a class="headerlink" href="#equation-for-53a3" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(22.12)<a class="headerlink" href="#equation-for-53a3" title="Permalink to this equation">#</a></span>\[
 {\rm Ri}_g = \frac{\frac{g}{\overline{\theta_v}}\gemafg{\theta_v}{z}}{\left(\gemafg{u}{z}\right)^2+\left(\gemafg{v}{z}\right)^2}
 \]</div>
-<p>Substituting equations <a class="reference internal" href="#equation-for-53a1">(22.9)</a> and <a class="reference internal" href="#equation-for-53a2">(22.10)</a> in Equation <a class="reference internal" href="#equation-for-53a3">(22.11)</a>, results in</p>
+<p>Substituting equations <a class="reference internal" href="#equation-for-53a1">(22.10)</a> and <a class="reference internal" href="#equation-for-53a2">(22.11)</a> in Equation <a class="reference internal" href="#equation-for-53a3">(22.12)</a>, results in</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 {\rm Ri}_g &amp;= \frac{N^2}{\left(\gemafg{u}{z}\right)^2}\\
@@ -858,12 +859,12 @@ z_0 &amp;= 0.1 \rm\,m
 \end{split}\]</div>
 <p>considering a constant NO-flux near the surface. Therefore,</p>
 <div class="math notranslate nohighlight" id="equation-for-57">
-<span class="eqno">(22.12)<a class="headerlink" href="#equation-for-57" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(22.13)<a class="headerlink" href="#equation-for-57" title="Permalink to this equation">#</a></span>\[
 \overline{{\rm NO}}\left(z_2\right) = \overline{{\rm NO}}\left(z_1\right) - \frac{\overline{w'{\rm NO}'}}{\kappa\,u_*} {\rm ln}\frac{z_2}{z_1} 
 \]</div>
 <p>In this case, <span class="math notranslate nohighlight">\(z_1=z_0=0.1\rm\,m\)</span>, <span class="math notranslate nohighlight">\({\rm NO}\left(z_1\right)=5\rm\,ppb\)</span> and <span class="math notranslate nohighlight">\(z_2=z\)</span>.
 Therefore, substituting the known variables, <span class="math notranslate nohighlight">\(\overline{\rm NO}\left(z\right)= 5 - \frac{5}{6}{\rm ln}\frac{z}{0.1\rm\,m}\quad\left(\rm ppb\right)\)</span>.</p>
-<p>The plot of this equation is shown in <a class="reference internal" href="#fig-57"><span class="std std-numref">Fig. 22.2</span></a>. The concentration at 10 m height is 1.16~ppb.</p>
+<p>The plot of this equation is shown in <a class="reference internal" href="#fig-57"><span class="std std-numref">Fig. 22.2</span></a>. The concentration at 10 m height is 1.16 ppb.</p>
 <figure class="align-default" id="fig-57">
 <img alt="../_images/exercise5_7.png" src="../_images/exercise5_7.png" />
 <figcaption>
@@ -875,7 +876,7 @@ Therefore, substituting the known variables, <span class="math notranslate nohig
 <details>
   <summary>Answer</summary>
 <p>For which <span class="math notranslate nohighlight">\(z\)</span> is <span class="math notranslate nohighlight">\(\overline{\rm NO}\left(z\right)=0.7\cdot\overline{\rm NO}\left(0\rm\,m\right)\)</span>?</p>
-<p>Equation <a class="reference internal" href="#equation-for-57">(22.12)</a> shows that in that case</p>
+<p>Equation <a class="reference internal" href="#equation-for-57">(22.13)</a> shows that in that case</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \overline{{\rm NO}}\left(z\right) &amp;= \overline{{\rm NO}}\left(z_0\right) - \frac{\overline{w'{\rm NO}'}}{\kappa\,u_*} {\rm ln}\frac{z}{z_0}\\
