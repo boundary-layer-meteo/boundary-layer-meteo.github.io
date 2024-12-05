@@ -101,11 +101,11 @@ $$
 \dfrac{\kappa z}{u_*} \pd{\ubar}{z} = \phi_m \left( \dfrac{z}{L} \right)
 $$
 
-and that the value of $\phi_m$ under neutral conditions is unity. Similarly, we can compute the dimensionless gradient $\phi_h$ of potential temperature, where we use $\theta_* = \overline{w^\prime \theta^\prime} / u_*$, and for which the value is also unity under neutral conditions.
+and that the value of $\phi_m$ under neutral conditions is unity. Similarly, we can compute the dimensionless gradient $\phi_h$ of potential temperature, where we use $\theta_* = - \overline{w^\prime \theta^\prime} / u_*$, and for which the value is also unity under neutral conditions.
 
 $$
 \dfrac{\kappa z}{\theta_*} \pd{\overline{\theta}}{z} &= \phi_h \left( \dfrac{z}{L} \right) \\
-\dfrac{\kappa z u_*}{\overline{w^\prime \theta^\prime}} \pd{\overline{\theta}}{z} &= \phi_h \left( \dfrac{z}{L} \right)
+- \dfrac{\kappa z u_*}{\overline{w^\prime \theta^\prime}} \pd{\overline{\theta}}{z} &= \phi_h \left( \dfrac{z}{L} \right)
 $$
 
 There are many empirical studies around where the functions $\phi_m$ and $\phi_h$ are fitted to data.
