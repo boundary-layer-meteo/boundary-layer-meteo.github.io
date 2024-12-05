@@ -571,6 +571,11 @@ b) Calculate the $\overline{u}$ and $\overline{v}$-components during the night. 
     </details>
 2. Derive a second-order differential equation for the $\overline{u}-u_g$ component
    
+     ```{hint}
+    :class: tip, dropdown
+    Start from equation {eq}`for:74b1`
+    ```
+
    <details>
     <summary>Answer</summary>
    
