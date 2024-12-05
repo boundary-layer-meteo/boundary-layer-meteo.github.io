@@ -1,5 +1,7 @@
 # Convective boundary layer
 
+## Derivation of the mixed-layer model
+
 During daytime, there is a well-mixed convective boundary layer of approximately 1 km in depth.
 If we assume horizontal homogeneity, no subsidence and high Reynolds numbers, the conservation of energy in this layer can be described as
 
@@ -157,3 +159,15 @@ $$
 ```
 
 where make use of the same entrainment velocity defined earlier.
+
+
+## The Deardorff velocity scale
+The velocities in the convective boundary layer in its most basic form are governed by two variables: the surface buoyancy flux $\dfrac{g}{\overline{\theta}_\mathrm{v}} \overline{ w^\prime \theta_\mathrm{v}^\prime}_0$ and the boundary layer depth $h$. From these two variables a velocity scale $w_*$ can be derived.
+
+```{admonition} The Deardorff velocity scale
+$$
+w_* \equiv \left( \dfrac{g}{\overline{\theta}_\mathrm{v}} \overline{ w^\prime \theta_\mathrm{v}^\prime}_0 h \right)^\frac{1}{3}
+$$
+```
+
+The Deardorff velocity scale $w_*$ is an estimate of the velocity of a typical plume in the convective boundary layer, and can be used to normalize the velocity variances to universal profiles, as shown in the lecture. A typical value for $w_*$ in a daytime boundary layer is ~1 m s$^{-1}$
