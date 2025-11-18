@@ -1,5 +1,6 @@
 # Convective boundary layer
 
+In a Convective Boundary Layer (CBL) the turbulence is driven by buoyancy. 
 ## Derivation of the mixed-layer model
 
 During daytime, there is a well-mixed convective boundary layer of approximately 1 km in depth.
