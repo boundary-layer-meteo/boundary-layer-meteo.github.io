@@ -404,13 +404,19 @@ You can consider that the surface layer is at z$_o$ = 0.1 m and $\theta (z_o)$ =
 The other layers middle and top are at 5 and 10 meters respectively. In consequence,
 the interfaces are approximately at 2.55 and 7.5 meters.
 
-```{hint}
+````{hint}
 :class: tip, dropdown
 Use $\rho\,c_p=1231\rm\, J\,m^{-3}\ K{-1}$. 
 
 Assume (since we are close to the surface) that $ T = \theta $.
 
+The heights that are described are:
+
+```{figure} figures/exercise7_3_z.png
+:name: fig:ans_73_z
 ```
+
+````
 
 <details>
   <summary>Answer</summary>
@@ -571,6 +577,11 @@ b) Calculate the $\overline{u}$ and $\overline{v}$-components during the night. 
     </details>
 2. Derive a second-order differential equation for the $\overline{u}-u_g$ component
    
+     ```{hint}
+    :class: tip, dropdown
+    Start from equation {eq}`for:74b1`
+    ```
+
    <details>
     <summary>Answer</summary>
    
