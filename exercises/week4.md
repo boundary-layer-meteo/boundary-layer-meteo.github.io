@@ -87,7 +87,7 @@ Therefore, the velocity of growth is $\dfrac{650\rm\,m}{4.5\cdot 3600\rm\,s} = 0
 
 </details>
 
-b) Calculate the terms (tendency term, turbulent term) of the potential temperature equation.
+b) Calculate the terms (storage, turbulent flux divergence) of the potential temperature equation.
 
 <details>
   <summary>Answer</summary>
@@ -98,9 +98,9 @@ $$
 
 Sources correspond with warming and sinks with cooling.
 
-Tendency term: $\gemafg{\theta}{t} = \frac{5\rm\,K}{4.5\rm\,hr}=3.1\times 10^{-4}\rm\,K\,s^{-1}$
+Storage term: $\gemafg{\theta}{t} = \frac{5\rm\,K}{4.5\rm\,hr}=3.1\times 10^{-4}\rm\,K\,s^{-1}$
 
-Turbulent term: $\gemafg{w'\theta'}{z} = \frac{-0.095\rm\,K\,m\,s^{-1}}{700\rm\,m}= -1.4\times 10^{-4}\rm\,K\,s^{-1}$
+Turbulent flux divergence: $\gemafg{w'\theta'}{z} = \frac{-0.095\rm\,K\,m\,s^{-1}}{700\rm\,m}= -1.4\times 10^{-4}\rm\,K\,s^{-1}$
 
 </details>
 

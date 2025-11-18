@@ -308,7 +308,7 @@ $\overline{w} = 0\rm\,m\,s^{-1}$ and $\overline{q} = 7 \rm\,g\,kg^{-1}$.
 
 ```
 
-b) Calculate the turbulent moisture flux. What is the direction of the flux?
+b) Calculate the moisture flux. What is the direction of the flux?
 ````{admonition} Answer
 :class: important, dropdown
 
@@ -352,7 +352,7 @@ b) Calculate the turbulent moisture flux. What is the direction of the flux?
   - -1 
 ```
 
-Therefore, $\overline{w'q'} = -3 \rm \,g\,kg^{-1}\,m\,s^{-1}$. The turbulent moisture flux is directed downward.
+Therefore, $\overline{w'q'} = -3 \rm \,g\,kg^{-1}\,m\,s^{-1}$. The moisture flux is directed downward.
 ````
 
 c) Calculate the vertical velocity and specific humidity variances

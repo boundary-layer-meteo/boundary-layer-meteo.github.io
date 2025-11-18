@@ -142,7 +142,7 @@ a) Derive from this equation that governing equation of the potential temperatur
 
 $$
 \underbrace{\gemafg{\theta'^2}{t}}_{\rm Tendency}+ \underbrace{\overline{u_j}\gemafg{\theta'^2}{x_j}}_{\rm Advection}+\underbrace{2\overline{u_j'\theta'}\gemafg{\theta}{x_j}}_{\rm Production} + \underbrace{\gemafg{{u_j'}\theta'^2}{x_j}}_{Turbulent\ transport} = \underbrace{- 2 \epsilon_\theta}_{\rm Dissipation}
-$$
+$$(for:58afinal)
 
 ```{hint}
 :class: tip, dropdown
