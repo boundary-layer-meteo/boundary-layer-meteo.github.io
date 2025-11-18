@@ -10,7 +10,7 @@ Production of turbulence happens at large spatial and temporal scales present in
 
 Production happens due to shear, or due to buoyancy. Dissipation of turbulence happens to processes happening at the scales where viscosity can act. The strict scale separation between production and dissipation allow for some interesting dimensional analysis.
 
-Let us take the neutral surface layer as an example. Here, turbulence is generated only by shear and not by turbulence. The turbulence is dissipated due to friction, this friction works at smaller scales and converts the turbulence kinetic energy to thermal energy. Turbulence is generated at the depth of the surface layer $L$ by a typical wind speed $U$ and is dissipated at the smallest scale with a viscosity $\nu$.
+Let us take the neutral surface layer as an example. Here, turbulence is generated at the depth of the surface layer $L$ by a typical wind speed $U$ and is dissipated at the smallest scale with a viscosity $\nu$.
 Since at high Reynolds numbers production does not feel viscosity, the production, with units $\mathrm{m}^2\ \mathrm{s}^{-3}$, must be proportional with $U^3 L^{-1}$, and the associated length and time scale are $L$ and $T \equiv L U^{-1}$.
 As dissipation is the mechanism to destroy production the amount of dissipation equals the production, but the spatial and temporal scales at which this happen depends strongly on the viscosity $\nu$.
 Dimensional reasoning leads us to the Kolomogorov scales: the only length and time scales that we can form from the dissipation and the viscosity
@@ -29,17 +29,11 @@ $$
 T_\epsilon \equiv \left( \dfrac{\nu}{\epsilon} \right)^\frac{1}{2}
 = \left( \dfrac{\nu L}{U^3} \right)^\frac{1}{2}.
 $$
-
-The Kolmogorov velocity scale $U_\epsilon$ is 
-
-$$
-U_\epsilon \equiv \left( \nu \epsilon \right)^\frac{1}{4}
-= \left( \dfrac{\nu U^3}{L} \right)^\frac{1}{4}.
 ```
 
 ```{admonition} Question
 :class: seealso
-What is the ratio in length scales, often referred to as scale separation, between production and dissipation in a neutral atmospheric surface layer with wind speed $U$ of $\mathrm{10\ m\ s^{-1}}$, depth $L$ of $100\ \mathrm{m}$, and kinematic viscosity $\nu$ of $1.5 \cdot 10^{-5}\ \mathrm{m^2\ s^{-1}}$?
+What is the ratio in length scales, often referred to as scale separation, between production and dissipation in a neutral atmospheric surface layer with wind speed $U$ of $\mathrm{10\ m\ s^{-1}}$, depth $L$ of $100\ \mathrm{m}$, and kinematic viscosity $\nu$ of $1.5 \cdot 10^{-5}\ \mathrm{m\ s^{-1}}$?
 ```
 
 ```{admonition} Answer
