@@ -3,11 +3,6 @@
 $\def\pafg#1#2{\dfrac{\partial #1}{\partial #2}}$
 $\def\afg#1#2{\dfrac{{\rm d} #1}{{\rm d} #2}}$
 
-```{hint}
-:class: tip
-Remember that $H\ =\ \rho\ c_p\ \overline{w'\theta'}$. If no values are given, use $\rho\ c_p\ = 1231\ J\ K^{-1}\ m^{-3}$.  
-```
-
 ## 
 Given a surface specific humidity of 15 g/kg, a surface pressure of 1003 hPa and a temperature described by $ T = 4x + zy ~(C) $
 calculate the potential temperature and the virtual potential temperature at the point
@@ -186,17 +181,18 @@ This contribution is not significant. Consequently, this term can be neglected.
 The thermodynamic equation reads
 
 $$
-\underbrace{\pafg{\theta}{t}}_{\rm Tendency} + \underbrace{u_j \pafg{\theta}{x_j}}_{\rm Advection\ and\ turbulence} = \underbrace{\nu_{\theta}\pafg{^2\theta}{{x_j}^2}}_{\rm Viscosity} - \underbrace{\frac{1}{\overline{\rho} c_p} \pafg{Q_j}{x_j}}_{\rm Radiation} - \underbrace{\frac{L_v E}{\overline{\rho} c_p}}_{\rm Phase\,changes} \\
+\pafg{\theta}{t}+u_j\pafg{\theta}{x_j} = \nu_{\theta}\pafg{^2\theta}{x_j^2}
+-\frac{1}{\rho c_p}\pafg{Q_j}{x_j}-\frac{L_vE}{\rho c_p}
 $$
 
-a) Find the equation for the averaged potential temperature ($\overline{\pafg{\theta}{t}}$).
+a) Find the equation for the averaged potential temperature $\overline{\theta}$.
 <details>
   <summary>Answer</summary>
 
 $$
-\underbrace{\pafg{\theta}{t}}_{\rm Tendency} + \underbrace{u_j \pafg{\theta}{x_j}}_{\rm Advection\ and\ turbulence} = \underbrace{\nu_{\theta}\pafg{^2\theta}{{x_j}^2}}_{\rm Viscosity} - \underbrace{\frac{1}{\overline{\rho} c_p} \pafg{Q_j}{x_j}}_{\rm Radiation} - \underbrace{\frac{L_v E}{\overline{\rho} c_p}}_{\rm Phase\,changes} \\
-\overline{\pafg{\theta}{t}} + \overline{u_j \pafg{\theta}{x_j}} = \overline{\nu_{\theta}\pafg{^2\theta}{{x_j}^2}} - \overline{\frac{1}{\overline{\rho} c_p} \pafg{Q_j}{x_j}} - \overline{\frac{L_v E}{\overline{\rho} c_p}} \\
-\pafg{\overline{\theta}}{t} + \overline{u_j}\,\overline{\pafg{\theta}{x_j}} + \overline{u_j' \pafg{\theta'}{x_j}} = \nu_{\theta}\pafg{^2\overline{\theta}}{{x_j}^2} - \frac{1}{\overline{\rho} c_p} \pafg{\overline{Q_j}}{x_j} - \frac{L_v \overline{E}}{\overline{\rho} c_p}
+\underbrace{\pafg{\theta}{t}}_{\rm Tendency} + \underbrace{u_j \pafg{\theta}{x_j}}_{\rm Advection} = \underbrace{\nu_{\theta}\pafg{^2\theta}{{x_j}^2}}_{\rm Viscosity} - \underbrace{\frac{1}{\rho c_p} \pafg{Q_j}{x_j}}_{\rm Radiation} - \underbrace{\frac{L_v E}{\rho c_p}}_{\rm Phase\,changes} \\
+\pafg{\overline{\theta}}{t} + \overline{u_j \pafg{\theta}{x_j}} = \overline{\nu_{\theta}\pafg{^2\theta}{{x_j}^2}} - \overline{\frac{1}{\rho c_p} \pafg{Q_j}{x_j}} - \overline{\frac{L_v E}{\rho c_p}} \\
+\pafg{\overline{\theta}}{t} + \overline{u_j}\,\overline{\pafg{\theta}{x_j}} + \overline{u_j' \pafg{\theta'}{x_j}} = \nu_{\theta}\pafg{^2\overline{\theta}}{{x_j}^2} - \frac{1}{\rho c_p} \pafg{\overline{Q_j}}{x_j} - \frac{L_v \overline{E}}{\rho c_p}
 $$
 Because of incompressibility, $\pafg{u_j}{x_j}=0$, and therefore also $\pafg{\overline{u_j}}{x_j}=\pafg{u_j'}{x_j} =0$. Therefore
 
@@ -208,7 +204,7 @@ $$(for:23b)
 This is the flux form; after Reynolds averaging Equation {eq}`for:23b`, the divergence of a turbulent flux is obtained. Using this relation, the total thermodynamic equation reads
 
 $$
-\pafg{\overline{\theta}}{t} + \overline{u_j}\pafg{\overline{\theta}}{x_j} + \pafg{\overline{u_j'\theta'}}{x_j} = \nu_{\theta}\pafg{^2\overline{\theta}}{{x_j}^2}-\frac{1}{\overline{\rho} c_p} \pafg{\overline{Q_j}}{x_j} - \frac{L_v \overline{E}}{\overline{\rho} c_p}
+\pafg{\overline{\theta}}{t} + \overline{u_j}\pafg{\overline{\theta}}{x_j} + \pafg{\overline{u_j'\theta'}}{x_j} = \nu_{\theta}\pafg{^2\overline{\theta}}{{x_j}^2}-\frac{1}{\rho c_p} \pafg{\overline{Q_j}}{x_j} - \frac{L_v \overline{E}}{\rho c_p}
 $$
 </details>
 
@@ -218,8 +214,8 @@ How long will it take the ABL to warm up 0.54 K?
 
 ```{hint}
 :class: tip, dropdown
-From the $\overline{\theta}$ equation neglect radiation
-and latent heat releases and assume horizontal homogeneity and no mean vertical wind.
+From the $\overline{\theta}$ equation neglect subsidence, radiation
+and latent heat releases and assume horizontal homogeneity.
 ```
 
 <details>
@@ -227,13 +223,13 @@ and latent heat releases and assume horizontal homogeneity and no mean vertical 
 
 Since there are no clouds, **no latent heat release** is present: $\overline{E}=0$.
 
-The impact of **radiation** is relatively **small** during day: $\frac{1}{\overline{\rho} c_p} \pafg{\overline{Q_j}}{x_j} \approx 0$.
+The impact of **radiation** is relatively **small** during day: $\frac{1}{\rho c_p} \pafg{\overline{Q_j}}{x_j} \approx 0$.
 
 Due to the **high turbulent nature** of the atmospheric boundary layer, the viscous term can be neglected as well: $\nu_{\theta}\pafg{^2\overline{\theta}}{{x_j}^2} \approx 0$.
 
 We assume **horizontal homogeneity**, so $x$ and $y$ derivatives of Reynold's averaged variables are equal to 0. 
 
-We assume that the mean vertical wind velocity, $\overline{w}$, is equal to 0 as well.
+Without subsidence, the mean vertical wind velocity, $\overline{w}$, is equal to 0 as well.
 
 Finally, the equation results in
 
