@@ -94,3 +94,9 @@ u(z) = \dfrac{u_*}{\kappa} \ln \left( \dfrac{z}{\zom} \right)
 $$
 
 This the famous expression for the logarithmic wind profile, also known in fluid dynamics as the *law of the wall*.
+
+The dimensionless wind gradient $\phi_m$ is unity under neutral conditions:
+
+$$
+\phi_m(z) = \dfrac{\kappa z}{u_*} \pd{\ubar}{z}
+$$
