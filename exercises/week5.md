@@ -225,7 +225,7 @@ and the wind speed. Discuss your criteria and the estimation of the height.
 
 Using the potential temperature gradient, there are multiple criteria possible, resulting in different heights.
 1. In the residual layer $\pafg{\theta}{z}=0$: This only occurs at the top of the profile
-2. In the residual layer $\pafg{\theta}{z}$ is small: This is valid at $h=1000\rm\,m$ and above.
+2. In the residual layer $\pafg{\theta}{z}$ is small: This is valid at $h=1000\rm\,m$ and above or at $h=250\rm\,m$.
 3. Above the residual layer, there is an inversion where $\pafg{\theta}{z}$ is large: this occurs around 750m.
 
 For the wind speed, the location of the low level jet is used. 
