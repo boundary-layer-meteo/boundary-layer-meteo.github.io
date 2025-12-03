@@ -337,7 +337,7 @@ $$
 \frac{\partial \overline{\theta}}{\partial z}= Ri_g^{crit} \frac{\overline{\theta}}{g} \frac{u_*^2}{\kappa^2}\frac{1}{z^2}
 $$
 
-We now rearrange and integrate on both sides:
+We now rearrange and integrate on both sides (where we assume $\overline{\theta}$ to be a constant value):
 
 $$
 \int_{\theta(z_0)}^{\theta(z)}\partial \overline{\theta}=\int_{z=z_0}^{z}Ri_g^{crit} \frac{\overline{\theta}}{g} \frac{u_*^2}{\kappa^2}\frac{1}{z^2}\partial z
@@ -430,7 +430,7 @@ Using the following definitions of $\Phi_M$ and the temperature scaling paramete
 
 $$
 \Phi_M~=~\frac{\kappa z}{u_*}\pafg{\overline{u}}{z} \\
-\theta_*~=~-~\frac{\overline{w'\theta'}}{u_*} \\
+\theta_*~=~-~\frac{\overline{w'\theta'_0}}{u_*} \\
 \Phi_H~=~\frac{\kappa z}{\theta_*}\pafg{\overline{\theta}}{z}
 $$
 
@@ -510,7 +510,7 @@ When taking the limit to very high or very low $\frac{z}{L}$, the functions are 
 In a fertilized field a constant flux of nitric oxide ($NO$) has been measured
 ($\overline{w'NO'}=0.1~ppb~m/s$) with a concentration of NO at ground level equal to 5 ppb.
 Additional measurements showed that $(z/L) \approx 0$ and the friction velocity was 0.3 m/s.
-($z_o=10~cm$)
+($z_o=10~cm$, $\kappa$ = 0.4)
 
 a) Find the concentration of NO at 10 m. Plot the profile of NO(z).
 
