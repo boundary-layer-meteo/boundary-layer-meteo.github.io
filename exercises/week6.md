@@ -44,7 +44,7 @@ The relationships between $K_{H,M}$ and $\Phi_{H,M}$ result in $\frac{K_M}{K_H}=
 b)  The moisture flux can be written as
 
 $$
-\overline{w'q'}~=~-K_q \pafg{\overline{q}}{z}
+\overline{w'q'}~=~-K_Q \pafg{\overline{q}}{z}
 $$
 
 Knowing that
@@ -288,7 +288,7 @@ $$
 
 In the end, $\Phi_H=\Phi_{\epsilon\theta}$.
 
-The result shows that, under the conditions that are assumed, all heat that is gained by turbulent transport is dissipated by diffusion.
+The result shows that, under the conditions that are assumed, all heat that is gained by turbulent transport is dissipated by diffusion. If there are other heat sources or sinks $\Phi_H \neq \Phi_{\epsilon\theta}$
 
 Under neutral conditions, all flux-gradient relationships are equal to 1.
 
@@ -426,15 +426,15 @@ So, $\overline{u}\left(30\rm\,m\right)=3.35\rm\,m\,s^{-1}$.
 </details>
 
 ##
-Using the following definitions of $\Phi_M$ and the temperature scaling parameters
+Using the following definitions of $\Phi_m$ and the temperature scaling parameters
 
 $$
-\Phi_M~=~\frac{\kappa z}{u_*}\pafg{\overline{u}}{z} \\
+\Phi_m~=~\frac{\kappa z}{u_*}\pafg{\overline{u}}{z} \\
 \theta_*~=~-~\frac{\overline{w'\theta'_0}}{u_*} \\
-\Phi_H~=~\frac{\kappa z}{\theta_*}\pafg{\overline{\theta}}{z}
+\Phi_h~=~\frac{\kappa z}{\theta_*}\pafg{\overline{\theta}}{z}
 $$
 
-a) and assuming that $\overline{V(z)}=0$, find a relation between the gradient Richardson number and $z/L$, $\Phi_M$ and $\Phi_H$.
+a) and assuming that $\overline{V(z)}=0$, find a relation between the gradient Richardson number and $z/L$, $\Phi_m$ and $\Phi_h$.
 
 <details>
   <summary>Answer</summary>
@@ -474,7 +474,7 @@ the final result is ${\rm Ri}_g=\frac{\Phi_h}{\Phi_m^2}\frac{z}{L}$
 
 </details>
 
-b) Under very stable conditions $\Phi_M~=~ \alpha_M\frac{z}{L}$ and $\Phi_H~=~ \alpha_H\frac{z}{L}$ where ($\alpha_M=\alpha_H \approx 5$).
+b) Under very stable conditions $\Phi_m~=~ \alpha_m\frac{z}{L}$ and $\Phi_h~=~ \alpha_h\frac{z}{L}$ where ($\alpha_m=\alpha_h \approx 5$).
 Discuss the value of the Richardson number under this condition.
 
 ```{hint}
