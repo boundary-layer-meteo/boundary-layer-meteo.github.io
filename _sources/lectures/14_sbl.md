@@ -92,7 +92,7 @@ $$
 L \equiv - \dfrac{u_*^3}{\kappa \dfrac{g}{\overline{\theta}_\mathrm{v}} \overline{ w^\prime \theta_\mathrm{v}^\prime}}
 $$
 
-The Obukhov length $L$ is the height above the surface where the buoyancy and shear contribution to the TKE evolution are equal in magnitude.
+The Obukhov length $L$ is the height above the surface where the buoyancy and shear contribution to the TKE evolution are equal in magnitude. Below L the shear is more important and above L the buoyancy is more important.
 ```
 
 Obukhov discovered that one can write the dimensionless wind gradient $\phi_m$ as

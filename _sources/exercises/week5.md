@@ -225,7 +225,7 @@ and the wind speed. Discuss your criteria and the estimation of the height.
 
 Using the potential temperature gradient, there are multiple criteria possible, resulting in different heights.
 1. In the residual layer $\pafg{\theta}{z}=0$: This only occurs at the top of the profile
-2. In the residual layer $\pafg{\theta}{z}$ is small: This is valid at $h=1000\rm\,m$ and above.
+2. In the residual layer $\pafg{\theta}{z}$ is small: This is valid at $h=1000\rm\,m$ and above or at $h=250\rm\,m$.
 3. Above the residual layer, there is an inversion where $\pafg{\theta}{z}$ is large: this occurs around 750m.
 
 For the wind speed, the location of the low level jet is used. 
@@ -245,16 +245,18 @@ Discuss the dependence of this oscillation period as a function of the potential
 <details>
   <summary>Answer</summary>
 
+As the stability ($\gemafg{\theta_v}{z}$) changes over height the initial displacement affects the oscillation. If the parcel is displaced 500 meters: 
+
 $$
 N &= \sqrt{\frac{g}{\theta_v}\gemafg{\theta_v}{z}}\\
 g&= 9.81\rm\,m\,s^{-2}\\
 \theta_v &\approx 300\rm\,K\\
-\gemafg{\theta_v}{z} &= \frac{20\rm\,K}{1600\rm\,m}=12.5\rm\,K\,km^{-1}
+\gemafg{\theta_v}{z} &= \frac{5\rm\,K}{500\rm\,m}=0.01\rm\,K\,m^{-1} ( = 10\rm\,K\,km^{-1})
 $$
 
-This results in $N=2.02 \cdot 10^{-2}\rm\,s^{-1}$
+This results in $N=1.81 \cdot 10^{-2}\rm\,s^{-1}$
 
-This frequency corresponds to a period of 49.5 s.
+This frequency corresponds to a period of 45.3 s.
 
 The oscillation of an air parcel in a statically stable environment is like a mass that is attached to a spring.
 In this case, an air parcel that is displaced from its original position experiences a force to return to this position,
@@ -262,6 +264,8 @@ proportional to the potential temperature gradient.
 Therefore, in situations characterized by a stronger gradient, the restoring force is larger.
 This leads to higher accelerations and, consequently, higher frequencies.
 Therefore, more stable environments should result in faster oscillations, which are quantified by the Brunt-Väisälä frequencies.
+
+(If the parcel is initially displaced over a height of 100 meters: $\gemafg{\theta_v}{z} &= \frac{1.8\rm\,K}{100\rm\,m}=0.018\rm\,K\,m^{-1}$, the frequency becomes $N=2.43 \cdot 10^{-2}\rm\,s^{-1}$ and the period 41.2 s. The gradient is stronger and thus the restoring force is stronger and therefore the oscillations are faster)
 
 </details>
 
@@ -404,13 +408,19 @@ You can consider that the surface layer is at z$_o$ = 0.1 m and $\theta (z_o)$ =
 The other layers middle and top are at 5 and 10 meters respectively. In consequence,
 the interfaces are approximately at 2.55 and 7.5 meters.
 
-```{hint}
+````{hint}
 :class: tip, dropdown
 Use $\rho\,c_p=1231\rm\, J\,m^{-3}\ K{-1}$. 
 
 Assume (since we are close to the surface) that $ T = \theta $.
 
+The heights that are described are:
+
+```{figure} figures/exercise7_3_z.png
+:name: fig:ans_73_z
 ```
+
+````
 
 <details>
   <summary>Answer</summary>
@@ -571,6 +581,11 @@ b) Calculate the $\overline{u}$ and $\overline{v}$-components during the night. 
     </details>
 2. Derive a second-order differential equation for the $\overline{u}-u_g$ component
    
+     ```{hint}
+    :class: tip, dropdown
+    Start from equation {eq}`for:74b1`
+    ```
+
    <details>
     <summary>Answer</summary>
    

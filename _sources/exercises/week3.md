@@ -119,14 +119,14 @@ $$
 with $z_o$= 0.1 m, $u_*=0.3\ \rm{m\ s^{-1}}$, $\overline{w'\theta'} = 0.05\ \rm{K\ m\ s^{-1}}$
 and $\overline{T}=25\ \rm{C}$.
 
-a) Calculate the mechanical production term of the TKE at 2 and 10 meters.
+a) Calculate the shear term of the TKE at 2 and 10 meters.
 Discuss the result.
 
 <details>
   <summary>Answer</summary>
 
 
-Mechanical production term: $-\overline{u'w'}\pafg{\overline{u}}{z}$ (see equation {eq}`for:ex3b`). 
+Shear term: $-\overline{u'w'}\pafg{\overline{u}}{z}$ (see equation {eq}`for:ex3b`). 
 $\overline{u'w'}$ can be related to $u_*$ by using first-order closure ($K$-theory):
 
 $$
@@ -136,7 +136,7 @@ $$
   &= - {u_*}^2 .
 $$
 
-Therefore, the mechanical production term is
+Therefore, the shear term is
 
 $$
 P &= - \overline{u'w'}\pafg{\overline{u}}{z} \\
@@ -218,7 +218,7 @@ $$
 where $C$ is a constant and $h$ is the boundary layer height.
 
 Find an expression of the evolution on time of the turbulent kinetic
-energy. Assume that $h$ does not change on time and the initial condition is
+energy (e(t)). Assume that $h$ does not change on time and the initial condition is
 $e=e_o$ at $t=0$.
 
 <details>

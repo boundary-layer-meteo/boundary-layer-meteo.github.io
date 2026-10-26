@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>21. Exercises week 5 &#8212; Boundary-Layer Meteorology</title>
   
@@ -15,95 +14,86 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
 
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
-  
+  <!-- So that users can add custom icons -->
+  <script defer src="../_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
-  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb" />
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=b8b12719"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'exercises/week5';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="22. Exercises week 6" href="week6.html" />
     <link rel="prev" title="20. Exercises week 4" href="week4.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="../_static/searchtools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../searchindex.js"></script>
+  
   </head>
+  <body data-default-mode="">
   
   
-  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
 
-  
-  
-  <a class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
-
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
   
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -111,7 +101,6 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -119,16 +108,69 @@ const thebe_selector_output = ".output, .cell_output"
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+    </div>
+    
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
   
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -141,6 +183,9 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
+  
+    
   
 
 <a class="navbar-brand logo" href="../intro.html">
@@ -155,11 +200,18 @@ const thebe_selector_output = ".output, .cell_output"
     
     
     <img src="../_static/logo.png" class="logo__image only-light" alt="Boundary-Layer Meteorology - Home"/>
-    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Boundary-Layer Meteorology - Home"/>`);</script>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="Boundary-Layer Meteorology - Home"/>
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -204,14 +256,19 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -220,14 +277,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -336,7 +393,7 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 <button onclick="toggleFullScreen()"
-  class="btn btn-sm btn-fullscreen-button"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
   title="Fullscreen mode"
   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
@@ -349,26 +406,20 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
-  </button>
-`);
-</script>
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -388,7 +439,7 @@ document.write(`
                 <h2> Contents </h2>
             </div>
             <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">21.1. </a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">21.2. </a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">21.3. </a></li>
@@ -405,10 +456,10 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="exercises-week-5">
-<h1><span class="section-number">21. </span>Exercises week 5<a class="headerlink" href="#exercises-week-5" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">21. </span>Exercises week 5<a class="headerlink" href="#exercises-week-5" title="Link to this heading">#</a></h1>
 <p><span class="math notranslate nohighlight">\(\def\pafg#1#2{\dfrac{\partial #1}{\partial #2}}\)</span>
 <span class="math notranslate nohighlight">\(\def\afg#1#2{\dfrac{{\rm d} #1}{{\rm d} #2}}\)</span>
 <span class="math notranslate nohighlight">\(\def\gemafg#1#2{\pafg{\overline{#1}}{#2}}\)</span></p>
@@ -417,7 +468,7 @@ document.write(`
 <p>Remember that <span class="math notranslate nohighlight">\(H\ =\ \rho\ c_p\ \overline{w'\theta'}\)</span>. If no values are given, use <span class="math notranslate nohighlight">\(\rho\ c_p\ = 1231\ J\ K^{-1}\ m^{-3}\)</span>.</p>
 </div>
 <section id="id1">
-<h2><span class="section-number">21.1. </span><a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">21.1. </span><a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
 <p>The following figure shows the raw observation of the wind speed.</p>
 <figure class="align-default" id="fig51">
 <img alt="../_images/figset51.png" src="../_images/figset51.png" />
@@ -432,17 +483,17 @@ In this exercise, not the angular frequencies, <span class="math notranslate noh
 In these equations <span class="math notranslate nohighlight">\(T\)</span> and <span class="math notranslate nohighlight">\(\lambda\)</span> denote the corresponding period and length scale.
 The periods that seem most important are 1 minute and 0.1 minute (6 s).
 The signal with a time scale of 1 minute contains most energy.
-The corresponding sketch is shown in <a class="reference internal" href="#fig411"><span class="std std-numref">Fig. 21.1</span></a>.</p>
+The corresponding sketch is shown in <a class="reference internal" href="../lectures/13_spectra.html#fig411"><span class="std std-numref">Fig. 13.3</span></a>.</p>
 <figure class="align-default" id="fig411">
 <img alt="../_images/exercise4_1_1.png" src="../_images/exercise4_1_1.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 21.1 </span><span class="caption-text">Spectrum of the wind velocity as a function of time.</span><a class="headerlink" href="#fig411" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 21.1 </span><span class="caption-text">Spectrum of the wind velocity as a function of time.</span><a class="headerlink" href="#fig411" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>The conversion from time period to frequency is straight forward.
 However, the dependency on the wave number is a bit harder.</p>
 <div class="math notranslate nohighlight" id="equation-for-41a">
-<span class="eqno">(21.1)<a class="headerlink" href="#equation-for-41a" title="Permalink to this equation">#</a></span>\[\begin{split}
+<span class="eqno">(21.1)<a class="headerlink" href="#equation-for-41a" title="Link to this equation">#</a></span>\[\begin{split}
 \overline{u}&amp;=\lambda f\\
 &amp;= \frac{f}{\nu}\\
 \nu &amp;= \frac{f}{\overline{u}}
@@ -453,13 +504,13 @@ Therefore, the sketch for these two variables are combined in <a class="referenc
 <figure class="align-default" id="fig412">
 <img alt="../_images/exercise4_1_2.png" src="../_images/exercise4_1_2.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 21.2 </span><span class="caption-text">Spectrum of the wind velocity as a function of frequency, <span class="math notranslate nohighlight">\(f\)</span>, and wave number, <span class="math notranslate nohighlight">\(\nu\)</span>.</span><a class="headerlink" href="#fig412" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 21.2 </span><span class="caption-text">Spectrum of the wind velocity as a function of frequency, <span class="math notranslate nohighlight">\(f\)</span>, and wave number, <span class="math notranslate nohighlight">\(\nu\)</span>.</span><a class="headerlink" href="#fig412" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </details>
 </section>
 <section id="id2">
-<h2><span class="section-number">21.2. </span><a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">21.2. </span><a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
 <p>The spectra of the vertical velocity was calculated from sonic measurements
 taken under convective conditions
 at Cabauw (23 August 2001 at 12 UTC).</p>
@@ -467,7 +518,7 @@ at Cabauw (23 August 2001 at 12 UTC).</p>
 <img alt="../_images/figset52.png" src="../_images/figset52.png" />
 <figcaption>
 <p><span class="caption-number">Fig. 21.3 </span><span class="caption-text">Power spectra of the vertical velocity measured by means of a sonic at 2 m
-at Cabauw during the 23th August 2001</span><a class="headerlink" href="#fig52" title="Permalink to this image">#</a></p>
+at Cabauw during the 23th August 2001</span><a class="headerlink" href="#fig52" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>a) Describe the different regions in this power spectrum of the vertical velocity</p>
@@ -564,7 +615,7 @@ The ratio is <span class="math notranslate nohighlight">\(R=\frac{100\rm\,m}{3\r
 </details>
 </section>
 <section id="id3">
-<h2><span class="section-number">21.3. </span><a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">21.3. </span><a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
 <p>The figures below show the vertical profiles of potential temperature and wind speed
 observed at the Southern Great Plains in USA during the night of 20th June 1997. By analyzing them
 we can determine some of the main characteristics of the nocturnal boundary layer.</p>
@@ -590,7 +641,7 @@ and the wind speed. Discuss your criteria and the estimation of the height.</p>
 <p>Using the potential temperature gradient, there are multiple criteria possible, resulting in different heights.</p>
 <ol class="arabic simple">
 <li><p>In the residual layer <span class="math notranslate nohighlight">\(\pafg{\theta}{z}=0\)</span>: This only occurs at the top of the profile</p></li>
-<li><p>In the residual layer <span class="math notranslate nohighlight">\(\pafg{\theta}{z}\)</span> is small: This is valid at <span class="math notranslate nohighlight">\(h=1000\rm\,m\)</span> and above.</p></li>
+<li><p>In the residual layer <span class="math notranslate nohighlight">\(\pafg{\theta}{z}\)</span> is small: This is valid at <span class="math notranslate nohighlight">\(h=1000\rm\,m\)</span> and above or at <span class="math notranslate nohighlight">\(h=250\rm\,m\)</span>.</p></li>
 <li><p>Above the residual layer, there is an inversion where <span class="math notranslate nohighlight">\(\pafg{\theta}{z}\)</span> is large: this occurs around 750m.</p></li>
 </ol>
 <p>For the wind speed, the location of the low level jet is used.
@@ -605,21 +656,23 @@ for an air parcel that is displaced from the surface.
 Discuss the dependence of this oscillation period as a function of the potential temperature gradient.</p>
 <details>
   <summary>Answer</summary>
+<p>As the stability (<span class="math notranslate nohighlight">\(\gemafg{\theta_v}{z}\)</span>) changes over height the initial displacement affects the oscillation. If the parcel is displaced 500 meters:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 N &amp;= \sqrt{\frac{g}{\theta_v}\gemafg{\theta_v}{z}}\\
 g&amp;= 9.81\rm\,m\,s^{-2}\\
 \theta_v &amp;\approx 300\rm\,K\\
-\gemafg{\theta_v}{z} &amp;= \frac{20\rm\,K}{1600\rm\,m}=12.5\rm\,K\,km^{-1}
+\gemafg{\theta_v}{z} &amp;= \frac{5\rm\,K}{500\rm\,m}=0.01\rm\,K\,m^{-1} ( = 10\rm\,K\,km^{-1})
 \end{split}\]</div>
-<p>This results in <span class="math notranslate nohighlight">\(N=2.02 \cdot 10^{-2}\rm\,s^{-1}\)</span></p>
-<p>This frequency corresponds to a period of 49.5 s.</p>
+<p>This results in <span class="math notranslate nohighlight">\(N=1.81 \cdot 10^{-2}\rm\,s^{-1}\)</span></p>
+<p>This frequency corresponds to a period of 45.3 s.</p>
 <p>The oscillation of an air parcel in a statically stable environment is like a mass that is attached to a spring.
 In this case, an air parcel that is displaced from its original position experiences a force to return to this position,
 proportional to the potential temperature gradient.
 Therefore, in situations characterized by a stronger gradient, the restoring force is larger.
 This leads to higher accelerations and, consequently, higher frequencies.
 Therefore, more stable environments should result in faster oscillations, which are quantified by the Brunt-Väisälä frequencies.</p>
+<p>(If the parcel is initially displaced over a height of 100 meters: <span class="math notranslate nohighlight">\(\gemafg{\theta_v}{z} &amp;= \frac{1.8\rm\,K}{100\rm\,m}=0.018\rm\,K\,m^{-1}\)</span>, the frequency becomes <span class="math notranslate nohighlight">\(N=2.43 \cdot 10^{-2}\rm\,s^{-1}\)</span> and the period 41.2 s. The gradient is stronger and thus the restoring force is stronger and therefore the oscillations are faster)</p>
 </details>
 <p>d) During the night, the friction velocity and the sensible heat flux were almost constant on time with
 the values 0.6 <span class="math notranslate nohighlight">\(ms^{-1}\)</span> and -50 <span class="math notranslate nohighlight">\(Wm^{-2}\)</span>, respectively. Calculate the flux Richardson number.
@@ -645,20 +698,20 @@ g&amp;= 9.81\rm\,m\,s^{-2}\\
 </details>
 </section>
 <section id="id4">
-<h2><span class="section-number">21.4. </span><a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">21.4. </span><a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
 <p>These vertical profiles for potential temperature were measured in USA
 at 00.07 and 04.02 local time during the field experiment CASES-99.
 Focusing mainly on the sounding observations:</p>
 <figure class="align-default" id="fig-71">
 <img alt="../_images/figset71.png" src="../_images/figset71.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 21.4 </span><span class="caption-text">Potential temperature profile at 00.07 LT.</span><a class="headerlink" href="#fig-71" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 21.4 </span><span class="caption-text">Potential temperature profile at 00.07 LT.</span><a class="headerlink" href="#fig-71" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="fig-72">
 <img alt="../_images/figset72.png" src="../_images/figset72.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 21.5 </span><span class="caption-text">Potential temperature profile at 04.02 LT.</span><a class="headerlink" href="#fig-72" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 21.5 </span><span class="caption-text">Potential temperature profile at 04.02 LT.</span><a class="headerlink" href="#fig-72" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Describe both profiles of the potential temperature. Estimate the
@@ -674,7 +727,7 @@ temperature from the surface to the top of the boundary layer.</p>
 </details>
 </section>
 <section id="id5">
-<h2><span class="section-number">21.5. </span><a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">21.5. </span><a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
 <p>The one-dimensional equation that governs the heat budget during stable
 conditions reads</p>
 <div class="math notranslate nohighlight">
@@ -739,6 +792,10 @@ the interfaces are approximately at 2.55 and 7.5 meters.</p>
 <p class="admonition-title">Hint</p>
 <p>Use <span class="math notranslate nohighlight">\(\rho\,c_p=1231\rm\, J\,m^{-3}\ K{-1}\)</span>.</p>
 <p>Assume (since we are close to the surface) that <span class="math notranslate nohighlight">\( T = \theta \)</span>.</p>
+<p>The heights that are described are:</p>
+<figure class="align-default" id="fig-ans-73-z">
+<img alt="../_images/exercise7_3_z.png" src="../_images/exercise7_3_z.png" />
+</figure>
 </div>
 <details>
   <summary>Answer</summary>
@@ -746,7 +803,7 @@ the interfaces are approximately at 2.55 and 7.5 meters.</p>
 <img alt="../_images/exercise7_3b.png" src="../_images/exercise7_3b.png" />
 <figcaption>
 <p><span class="caption-number">Fig. 21.6 </span><span class="caption-text">Vertical profiles of <span class="math notranslate nohighlight">\(\theta\)</span> in red for exercise b (linear profile)
-and in blue for exercise c (logarithmic profile).</span><a class="headerlink" href="#fig-ans-73b" title="Permalink to this image">#</a></p>
+and in blue for exercise c (logarithmic profile).</span><a class="headerlink" href="#fig-ans-73b" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Under these conditions,</p>
@@ -758,15 +815,15 @@ and in blue for exercise c (logarithmic profile).</span><a class="headerlink" hr
 <p>The interfaces are located at 2.55 m and 7.5 m, so <span class="math notranslate nohighlight">\(\Delta z = 4.95\ \rm{m}\)</span>.</p>
 <p>With the linear temperature profile, we find the following temperatures:</p>
 <div class="math notranslate nohighlight" id="equation-for-73temp1">
-<span class="eqno">(21.2)<a class="headerlink" href="#equation-for-73temp1" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(21.2)<a class="headerlink" href="#equation-for-73temp1" title="Link to this equation">#</a></span>\[
 T_{\rm Surface} = \theta_{\rm Surface} = 292 \rm\,K 
 \]</div>
 <div class="math notranslate nohighlight" id="equation-for-73temp2">
-<span class="eqno">(21.3)<a class="headerlink" href="#equation-for-73temp2" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(21.3)<a class="headerlink" href="#equation-for-73temp2" title="Link to this equation">#</a></span>\[
 T_{\rm Middle} = \theta_{\rm Middle} = 292.98\rm\,K
 \]</div>
 <div class="math notranslate nohighlight" id="equation-for-73temp3">
-<span class="eqno">(21.4)<a class="headerlink" href="#equation-for-73temp3" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(21.4)<a class="headerlink" href="#equation-for-73temp3" title="Link to this equation">#</a></span>\[
 T_{\rm Top} = \theta_{\rm Top} = 293.98\rm\,K
 \]</div>
 <p><span class="math notranslate nohighlight">\(\rho\,c_p=1231\rm\,\frac{W\,m^{-2}}{K\,m\,s^{-1}}\)</span>,
@@ -819,7 +876,7 @@ This is in contradiction with the knowledge that at night radiative cooling take
 </details>
 </section>
 <section id="id6">
-<h2><span class="section-number">21.6. </span><a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">21.6. </span><a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
 <p>The momentum equation for the <span class="math notranslate nohighlight">\(\overline{u}\)</span> and <span class="math notranslate nohighlight">\(\overline{v}\)</span>-component
 during diurnal and nocturnal conditions reads:</p>
 <div class="math notranslate nohighlight">
@@ -862,16 +919,20 @@ In consequence, the wind accelerates.
 Therefore, finally the shear decreases in total a little, but the momentum flux decreases to a very low value.
 Therefore, it can be neglected with respect to the Coriolis and horizontal pressure gradient terms.</p>
 <div class="math notranslate nohighlight" id="equation-for-74b1">
-<span class="eqno">(21.5)<a class="headerlink" href="#equation-for-74b1" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(21.5)<a class="headerlink" href="#equation-for-74b1" title="Link to this equation">#</a></span>\[
     \gemafg{u}{t} =f\,\overline{v}
     \]</div>
 <div class="math notranslate nohighlight" id="equation-for-74b2">
-<span class="eqno">(21.6)<a class="headerlink" href="#equation-for-74b2" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(21.6)<a class="headerlink" href="#equation-for-74b2" title="Link to this equation">#</a></span>\[
     \gemafg{v}{t} =f\,\left(u_g-\overline{u}\right)
     \]</div>
  </details>
 </li>
 <li><p>Derive a second-order differential equation for the <span class="math notranslate nohighlight">\(\overline{u}-u_g\)</span> component</p>
+<div class="tip dropdown admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Start from equation <a class="reference internal" href="#equation-for-74b1">(21.5)</a></p>
+</div>
 <details>
  <summary>Answer</summary>
 <p>Considering that <span class="math notranslate nohighlight">\(u_g\)</span> is a constant,</p>
@@ -968,7 +1029,7 @@ T=2<span class="math notranslate nohighlight">\(\pi\)</span>/f, using the follow
 <figure class="align-default" id="fig-ans-74">
 <img alt="../_images/exercise7_4.png" src="../_images/exercise7_4.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 21.7 </span><span class="caption-text">Evolution of wind velocities.</span><a class="headerlink" href="#fig-ans-74" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 21.7 </span><span class="caption-text">Evolution of wind velocities.</span><a class="headerlink" href="#fig-ans-74" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </details>
@@ -1001,7 +1062,7 @@ at a distance of <span class="math notranslate nohighlight">\(\sqrt{F_u^2(0) + F
 </details>
 </section>
 <section id="id7">
-<h2><span class="section-number">21.7. </span><a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">21.7. </span><a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
 <p>The conservation equation for the potential temperature in a Stable Boundary Layer reads (neglecting phase changes)</p>
 <div class="math notranslate nohighlight">
 \[
@@ -1067,7 +1128,7 @@ the surface and <span class="math notranslate nohighlight">\(h=25~m\)</span> is 
 <figure class="align-default" id="fig-ans-75">
 <img alt="../_images/exercise7_5.png" src="../_images/exercise7_5.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 21.8 </span><span class="caption-text">Sensible heat flux.</span><a class="headerlink" href="#fig-ans-75" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 21.8 </span><span class="caption-text">Sensible heat flux.</span><a class="headerlink" href="#fig-ans-75" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>The profile is shown in <a class="reference internal" href="#fig-ans-75"><span class="std std-numref">Fig. 21.8</span></a>.
@@ -1139,8 +1200,8 @@ This results in <span class="math notranslate nohighlight">\(\gemafg{\theta}{x}=
               
               
               
-                <footer class="prev-next-footer">
-                  <!-- Previous / next buttons -->
+                <footer class="prev-next-footer d-print-none">
+                  
 <div class="prev-next-area">
     <a class="left-prev"
        href="week4.html"
@@ -1167,14 +1228,17 @@ This results in <span class="math notranslate nohighlight">\(\gemafg{\theta}{x}=
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
   </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">21.1. </a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">21.2. </a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">21.3. </a></li>
@@ -1203,9 +1267,10 @@ By Chiel van Heerwaarden and Mirjam Tijhuis
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>
@@ -1229,8 +1294,8 @@ By Chiel van Heerwaarden and Mirjam Tijhuis
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>
 
   <footer class="bd-footer">
   </footer>

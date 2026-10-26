@@ -64,3 +64,10 @@ $$
 ```
 
 The result that the spectral energy $E$ for a certain wave number is proportional to wave number $k$ to the power $-5/3$ is one of the most fundamental properties of high-Reynolds number turbulent flows.
+
+Above, the spectral energy is plotted. That is the red line in Figure 13.1. The spectral function can also be calculated for other properties, such as the vertical velocity. As plotted below. $S_\chi(f)$ is the density of the $\chi$ spectrum, in this case $\chi = w$. The integral gives the variance of $\chi$, in this case: $\int S_w df = \sigma^2_w = \overline{w'^2}$. However, the x-labels is logaritmic and $\int S_w d(ln(f)) = \int \frac{1}{f} S_w df$. Therefore the y-axis is multiplied by f to get $\int f S_w d(ln(f)) = \int S_w df = \sigma^2_w$, such that the area under the curve is equal to the variance of w.
+
+```{figure} ../exercises/figures/exercise4_1_1.png
+:name: fig411
+Spectrum of the wind velocity as a function of time.
+```
