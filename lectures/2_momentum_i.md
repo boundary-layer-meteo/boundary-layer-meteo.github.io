@@ -29,7 +29,7 @@ $$
 \pd{v}{t} + u_j \pd{v}{x_j} &= - \dfrac{1}{\rhobar} \pd{\overline{p}}{y} - \dfrac{1}{\rhobar} \pd{p^\prime}{y} - f u + \nu \pdd{v}{x_j}
 $$
 
-We can now substitute the mean pressure gradient by the geostrophic wind definitions $fv_g \equiv \dfrac{1}{\rhobar}\pd{p}{x}$ and $fu_g \equiv - \dfrac{1}{\rhobar}\pd{p}{y}$ to get:
+We can now substitute the mean pressure gradient by the geostrophic wind definitions $fv_g \equiv \dfrac{1}{\rhobar}\pd{\overline{p}}{x}$ and $fu_g \equiv - \dfrac{1}{\rhobar}\pd{\overline{p}}{y}$ to get:
 
 $$
 \pd{u}{t} + u_j \pd{u}{x_j} &= - \dfrac{1}{\rhobar} \pd{p^\prime}{x} + f \left( v - v_g \right) + \nu \pdd{u}{x_j} \\
