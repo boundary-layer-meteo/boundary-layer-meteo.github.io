@@ -59,6 +59,15 @@ $$
 
 ---
 
+### A note on the index notation
+The index notation represents a sum if it is used for a variable in combination with it's derivative, i.e.: $$\dfrac{\partial u_j}{\partial x_j} = \dfrac{\partial u}{\partial x} + \dfrac{\partial v}{\partial y} + \dfrac{\partial w}{\partial z}$$. This is used above.
+
+The index notation represents a vector if it is used solely on a variable: $u_j = (u, v, w)$ with u the velocity in the first direction, v the velocity in the second direction and w the velocity in the third direction. This is used in Lecture 2.1. 
+
+Note 1: The letter itself does not matter, i.e., j can be replaced with i or k or ... .
+
+Note 2: Combinations of these notations are used as well. You'll encounter these in lecture 2 and the exercises of week 1.
+
 ## The Boussinesq approximation
 We split the density into a slow moving part and a part that contains the fluctuations due to turbulence $\rho = \overline{\rho} + \rho^\prime$.
 We can rewrite the conservation of mass as
