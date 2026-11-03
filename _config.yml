@@ -5,6 +5,7 @@ title: Boundary-Layer Meteorology
 author: Chiel van Heerwaarden and Mirjam Tijhuis
 logo: logo.png
 only_build_toc_files: true
+exclude_patterns: [.venv, _build]
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html

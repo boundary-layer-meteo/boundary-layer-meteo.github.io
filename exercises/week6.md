@@ -123,7 +123,7 @@ Please focus on matching the plumes (1 to 5) with the profiles (A to E). The nam
 <details>
     <summary>Answer</summary>
 
-```{figure} figures/exercise8_1.png
+```{figure} figures/Exercise8_1.png
 :name: fig:ans81
 Relation between atmospheric stability and plume dispersion
 ```

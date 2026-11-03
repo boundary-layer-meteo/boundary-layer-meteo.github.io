@@ -27,10 +27,10 @@ In this exercise, not the angular frequencies, $\left(\omega=\frac{2\pi}{T}\righ
 In these equations $T$ and $\lambda$ denote the corresponding period and length scale.
 The periods that seem most important are 1 minute and 0.1 minute (6 s).
 The signal with a time scale of 1 minute contains most energy.
-The corresponding sketch is shown in {numref}`fig411`.
+The corresponding sketch is shown in {numref}`fig:ex411`.
 
 ```{figure} figures/exercise4_1_1.png
-:name: fig411
+:name: fig:ex411
 Spectrum of the wind velocity as a function of time.
 ```
 
