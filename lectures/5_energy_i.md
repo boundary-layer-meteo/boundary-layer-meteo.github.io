@@ -90,6 +90,14 @@ The last question to answer is what to chose for the value of $p_0$. Generally, 
 
 > _Potential temperature $\theta$ is the temperature of an air parcel if it is adiabatically (thus no heat added or removed) transported back to sea level._
 
+The potential temperature can change in time due to advection and turbulence, viscosity or heat sources (i.e. radiative heating or latent heating):
+
+$$
+\underbrace{\pafg{\theta}{t}}_{\rm Tendency} + \underbrace{u_j \pafg{\theta}{x_j}}_{\rm Advection\ and\ turbulence} = \underbrace{\nu_{\theta}\pafg{^2\theta}{{x_j}^2}}_{\rm Viscosity} - \underbrace{\frac{1}{\overline{\rho} c_p} \pafg{Q_j}{x_j}}_{\rm Radiation} - \underbrace{\frac{L_v E}{\overline{\rho} c_p}}_{\rm Phase\,changes} \\
+$$
+
+This can be rewritten to a form containing $\overline{w'\theta'}$, as is done in Exercise 18.4. Similar to the momentum flux, this flux can also be parametrized using K-theory, as is done in Exercise 18.5.
+
 ### Atmospheric stability
 The atmospheric static stability defines whether the temperature stratification support or suppresses the generation of turbulent motions. If $\dfrac{\partial \theta}{\partial z} \gt 0$, the atmosphere is statically stable, if $\dfrac{\partial \theta}{\partial z} \approx 0$, the atmosphere is neutral, and if $\dfrac{\partial \theta}{\partial z} \lt 0$ the atmosphere is unstable.
 
