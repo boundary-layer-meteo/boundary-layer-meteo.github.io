@@ -11,7 +11,7 @@ Remember that $H\ =\ \rho\ c_p\ \overline{w'\theta'}$. If no values are given, u
 ## 
 Given a surface specific humidity of 15 g/kg, a surface pressure of 1003 hPa and a temperature described by $ T = 4x + zy ~(C) $
 calculate the potential temperature and the virtual potential temperature at the point
-(5, 1, 2) and at the pressure 850 hPa ($R_d=287\ J\ Kg^{-1}\ K^{-1}, c_p=1004\ J\ Kg^{-1}\ K^{-1}$).
+(5, 1, 2) and at the pressure 850 hPa ($R_d=287\ J\ kg^{-1}\ K^{-1}, c_p=1004\ J\ Kg^{-1}\ K^{-1}$).
 
 ```{hint}
 :class: tip, dropdown
