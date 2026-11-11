@@ -42,7 +42,7 @@ $$
 $$
 
 Turbulence generation is done by shear and, depending on its sign, buoyancy, while dissipation destroys turbulence at the smallest scales.
-The Richardson numbers relates the magnitude of buoyancy and shear production to each other.
+The Richardson numbers relates the magnitude of buoyancy and shear production to each other, via $Ri = \dfrac{B}{-S}$.
 
 The flux-Richardson number is defined as
 
@@ -78,7 +78,7 @@ Ri_\mathrm{g} \equiv
 $$
 ```
 
-Field observations have shown that laminar flow can become turbulent if $Ri_\mathrm{g}$ is below 0.25.
+Field observations have shown that laminar flow can become turbulent if $Ri_\mathrm{g}$ is below 0.25, which is called the critical Richardson number
 
 We can also define a finite difference approximation of the gradient Richardson number called the Bulk Richardson number
 
