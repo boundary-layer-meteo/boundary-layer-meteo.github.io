@@ -65,14 +65,18 @@ $$
 If we now assume horizontal homogeneity and no subsidence, and define the dissipation as $\epsilon \equiv \nu \overline{ \left( \pd{\uiprime}{x_j} \right)^2}$, we can write
 
 ```{admonition} Conservation of turbulence kinetic energy (TKE) under horizontal homogeneity
+
 $$
-  \pd{\ebar}{t}
+
+  \underbrace{\pd{\ebar}{t}}_\textrm{storage}
 =
-- \pd{\overline{e  w^\prime}}{z}
-- \overline{u^\prime w^\prime} \pd{\ubar}{z}
-- \overline{v^\prime w^\prime} \pd{\vbar}{z}
-- \dfrac{1}{\rhobar} \pd{\overline{w^\prime p^\prime}}{z}
-+ \dfrac{g}{\overline{\theta}_\mathrm{v}} \overline{ w^\prime \theta_\mathrm{v}^\prime}
-- \epsilon
+\underbrace{ - \pd{\overline{e  w^\prime}}{z} }_\textrm{turbulent transport}
+\underbrace{ - \overline{u^\prime w^\prime} \pd{\ubar}{z}
+             - \overline{v^\prime w^\prime} \pd{\vbar}{z} }_\textrm{shear}
+\underbrace{ - \dfrac{1}{\rhobar} \pd{\overline{w^\prime p^\prime}}{z}}_\textrm{pressure transport}
+\underbrace{ + \dfrac{g}{\overline{\theta}_\mathrm{v}} \overline{ w^\prime \theta_\mathrm{v}^\prime} }_\textrm{buoyancy}
+\underbrace{ - \epsilon }_\textrm{dissipation}
+
 $$
+
 ```
