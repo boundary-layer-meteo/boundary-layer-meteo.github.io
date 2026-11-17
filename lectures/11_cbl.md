@@ -137,7 +137,7 @@ $$
   \gamma_{\theta} \dfrac{\mathrm{d} h}{\mathrm{d} t}
 - \dfrac{\mathrm{d} \thetabulk}{\mathrm{d} t}
 \\
-w_e &= \beta \dfrac{\overline{w^\prime \theta_v^\prime} \left( 0 \right)}{\Delta \theta_v}
+w_e &= \beta \dfrac{\overline{w^\prime \theta^\prime} \left( 0 \right)}{\Delta \theta}
 $$
 ```
 
