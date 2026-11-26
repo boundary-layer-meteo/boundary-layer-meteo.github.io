@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -55,7 +55,7 @@
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js?v=b8b12719"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
@@ -502,7 +502,7 @@
 \end{split}\]</div>
 <section id="potential-temperature">
 <h3><span class="section-number">5.1.1. </span>Potential temperature<a class="headerlink" href="#potential-temperature" title="Link to this heading">#</a></h3>
-<p>One of the disadvantages of temperature is that it is influenced by expansion and compression, as well as heat transfer. This means that an air parcel that is vertically displaced by turbulence experiences a temperature change even if no heat is added or removed. In the analysis of turbulent boundary layer flows it is convenient to have a quantity that is conserved under adiabatic dispacement. Before deriving this quantity, we rewrite Equation <a class="reference internal" href="#equation-first-law">(5.1)</a> in units of temperature, and we remove the density from the pressure term with the help of the ideal gas law (<span class="math notranslate nohighlight">\(p = \rho \Rd T\)</span>)</p>
+<p>One of the disadvantages of temperature is that it is influenced by expansion and compression, as well as heat transfer. This means that an air parcel that is vertically displaced by turbulence experiences a temperature change even if no heat is added or removed. In the analysis of turbulent boundary layer flows it is convenient to have a quantity that is conserved under adiabatic dispacement (i.e., no heat is added). Before deriving this quantity, we rewrite Equation <a class="reference internal" href="#equation-first-law">(5.1)</a> in units of temperature, and we remove the density from the pressure term with the help of the ideal gas law (<span class="math notranslate nohighlight">\(p = \rho \Rd T\)</span>)</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \cp \mathrm{d}T - \dfrac{1}{\rho} \mathrm{d}p &amp;= \dfrac{\delta Q}{\rho} \\
@@ -542,11 +542,17 @@
 <blockquote>
 <div><p><em>Potential temperature <span class="math notranslate nohighlight">\(\theta\)</span> is the temperature of an air parcel if it is adiabatically (thus no heat added or removed) transported back to sea level.</em></p>
 </div></blockquote>
+<p>The potential temperature can change in time due to advection and turbulence, viscosity or heat sources (i.e. radiative heating or latent heating):</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\underbrace{\pafg{\theta}{t}}_{\rm Tendency} + \underbrace{u_j \pafg{\theta}{x_j}}_{\rm Advection\ and\ turbulence} = \underbrace{\nu_{\theta}\pafg{^2\theta}{{x_j}^2}}_{\rm Viscosity} - \underbrace{\frac{1}{\overline{\rho} c_p} \pafg{Q_j}{x_j}}_{\rm Radiation} - \underbrace{\frac{L_v E}{\overline{\rho} c_p}}_{\rm Phase\,changes} \\
+\end{split}\]</div>
+<p>This can be rewritten to a form containing <span class="math notranslate nohighlight">\(\overline{w'\theta'}\)</span>, as is done in Exercise 18.4. Similar to the momentum flux, this flux can also be parametrized using K-theory, as is done in Exercise 18.5.</p>
 </section>
 <section id="atmospheric-stability">
 <h3><span class="section-number">5.1.2. </span>Atmospheric stability<a class="headerlink" href="#atmospheric-stability" title="Link to this heading">#</a></h3>
 <p>The atmospheric static stability defines whether the temperature stratification support or suppresses the generation of turbulent motions. If <span class="math notranslate nohighlight">\(\dfrac{\partial \theta}{\partial z} \gt 0\)</span>, the atmosphere is statically stable, if <span class="math notranslate nohighlight">\(\dfrac{\partial \theta}{\partial z} \approx 0\)</span>, the atmosphere is neutral, and if <span class="math notranslate nohighlight">\(\dfrac{\partial \theta}{\partial z} \lt 0\)</span> the atmosphere is unstable.</p>
-<p>If a layer of air is vertically well-mixed, then the stratification is neutral and the actual temperature <span class="math notranslate nohighlight">\(T\)</span> follows the <strong>dry adiabatic lapse rate</strong>. This is for instance the case in the daytime convective boundary layer, in which surface driven plumes constantly mix the layer vertically through.</p>
+<p>If a layer of air is vertically well-mixed, then the stratification is neutral and the actual temperature <span class="math notranslate nohighlight">\(T\)</span> follows the <strong>dry adiabatic lapse rate</strong> (i.e., the temperature gradient of a dry parcel to which no heat is added). This is for instance the case in the daytime convective boundary layer, in which surface driven plumes constantly mix the layer vertically through.</p>
 </section>
 </section>
 </section>

@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -55,7 +55,7 @@
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js?v=b8b12719"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
@@ -470,12 +470,12 @@
 \[
 \hat{f}(k) = \int_{-\infty}^\infty f(x) \exp \left( - i 2 \pi k x \right)\,\mathrm{d} x
 \]</div>
-<p>although since we generally work with time series of spatial series with equal sampling interval we use the discrete Fourier transform</p>
+<p>although since we generally work with time series or spatial series with equal sampling interval we use the discrete Fourier transform</p>
 <div class="math notranslate nohighlight">
 \[
 \hat{f}(k) = \sum_{n = 0}^{N - 1} f(x) \exp \left(-i 2 \pi k \frac{n}{N} \right)\ \ \ \ k = 0, \dots, N-1
 \]</div>
-<p>By doing so, we can write a time or spatial series as a sum of waves with varying phase and amplitude.</p>
+<p>By doing so, we can write a time or spatial series as a sum of waves with varying phase and amplitude. This Equation describes a signal of any variable (e.g., velocity, temperature, humidity) and an example for the potential temperature is given below. The red line in the second plot shows the signal described by 5 waves: that are the waves with wavenumbers 0, 1, 2, 3 and 4; the red line in the third plot shows the result of 10 waves, which have wavenumbers 0 to 9; and so on. The wavelength (<span class="math notranslate nohighlight">\(\lambda\)</span> [m]) is related to the wavenumber via: <span class="math notranslate nohighlight">\(k = \frac{2\pi}{\lambda}\)</span>. <span class="math notranslate nohighlight">\(k\)</span> is the angular wave number and <span class="math notranslate nohighlight">\(\nu\)</span> the linear, with <span class="math notranslate nohighlight">\(k = 2 \pi \nu\)</span>. This will become more clear in exercise 21.1. These spatial quantities can be converted to temporal quantities using Taylor’s hypothesis of frozen turbulence: <span class="math notranslate nohighlight">\(U = \lambda f\)</span>, with <span class="math notranslate nohighlight">\(U\)</span> the velocity [m/s] and <span class="math notranslate nohighlight">\(f\)</span> the frequency [1/s].</p>
 <figure class="align-default" id="spectra-waves">
 <a class="reference internal image-reference" href="../_images/spectra_waves.png"><img alt="../_images/spectra_waves.png" src="../_images/spectra_waves.png" style="width: 500px;" />
 </a>
@@ -483,15 +483,16 @@
 <p><span class="caption-number">Fig. 13.1 </span><span class="caption-text">Potential temperature near the surface of the convective boundary layer captures in waves.</span><a class="headerlink" href="#spectra-waves" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Based on the waves we can calculate its contribution to the variance by taking the square of its absolute value.</p>
+<p>Based on the waves we can calculate the contribution of each wave to the variance by taking the square of its absolute value.</p>
 <div class="math notranslate nohighlight">
 \[
 E \left( k \right) = \left| \hat{f} \right|^2 =  \mathrm{Re} \left( \hat{f} \right)^2 + \mathrm{Im} \left( \hat{f} \right)^2
 \]</div>
+<p>This spectral energy (<span class="math notranslate nohighlight">\(E(k)\)</span>) is shown in the second Figure of Fig. 13.2. It shows that most variance arises from small k, i.e. big waves.</p>
 </section>
 <section id="the-spectral-structure-of-the-inertial-subrange-of-turbulence">
 <h2><span class="section-number">13.2. </span>The spectral structure of the inertial subrange of turbulence<a class="headerlink" href="#the-spectral-structure-of-the-inertial-subrange-of-turbulence" title="Link to this heading">#</a></h2>
-<p>The turbulence kinetic energy <span class="math notranslate nohighlight">\(e\)</span> can be constructed from its spectral energy <span class="math notranslate nohighlight">\(E(k)\)</span> (energy per wave number <span class="math notranslate nohighlight">\(k\)</span>) following</p>
+<p>The turbulence kinetic energy <span class="math notranslate nohighlight">\(e\)</span> can be constructed from the spectral energy <span class="math notranslate nohighlight">\(E(k)\)</span> (energy per wave number <span class="math notranslate nohighlight">\(k\)</span>) of the velocity fluctuations following</p>
 <div class="math notranslate nohighlight">
 \[
 e = \int_0^\infty E\,\mathrm{d}k.
@@ -500,7 +501,7 @@ e = \int_0^\infty E\,\mathrm{d}k.
 <a class="reference internal image-reference" href="../_images/spectra_energy.png"><img alt="../_images/spectra_energy.png" src="../_images/spectra_energy.png" style="width: 500px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 13.2 </span><span class="caption-text">Spectral energy of the potential temperature near the surface of the convective boundary layer.</span><a class="headerlink" href="#spectra-energy" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 13.2 </span><span class="caption-text">Spectral energy of the potential temperature near the surface of the convective boundary layer. Note: the y-axis is confusing and the units are wrong. The y-axis above should be k E(k) [<span class="math notranslate nohighlight">\(m^2/s^2\)</span>] and below E(k) [<span class="math notranslate nohighlight">\(m^3/s^2\)</span>].</span><a class="headerlink" href="#spectra-energy" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>If we assume a strict separation between production and dissipation in terms of length and time scales, there must exist a region that only transfers energy from the largest to the smallest scales.

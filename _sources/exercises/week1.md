@@ -164,7 +164,7 @@ $$
  &= \overline{\left(\overline{D}+D'\right)\left(\overline{C}+C'\right)}\\
  &=\overline{\left(\overline{D}\,\overline{C}+\overline{D}C'+D'\overline{C}+D'C'\right)}\\
  &=\left(\overline{\overline{D}\,\overline{C}}+\overline{\overline{D}C'}+\overline{D'\overline{C}}+\overline{D'C'}\right)\\
- &=\left(\overline{D}\,\overline{\overline{C}}+\overline{D}\,\overline{C'}+\overline{C}\,\overline{D'}+\overline{D'C'}\right)\\
+ &=\left(\overline{D}\,\overline{C}+\overline{D}\,\overline{C'}+\overline{C}\,\overline{D'}+\overline{D'C'}\right)\\
  &= \overline{D}\,\overline{C}+\overline{D'C'}\\
  &= \pafg{\overline{A}}{t}\pafg{\overline{B}}{t}+\overline{\pafg{A'}{t}\pafg{B'}{t}}
 $$
@@ -485,9 +485,9 @@ this results in
 
 $$
 \begin{cases}
-    \pafg{\overline{u}}{t} + \pafg{\overline{u_j'u'}}{x_j} = 
+    \pafg{\overline{u}}{t} + \pafg{\overline{w'u'}}{z} = 
         f \overline{v} - \dfrac{1}{\overline{\rho}}\pafg{\overline{p}}{x}+ \nu \pafg{^2\overline{u}}{{x_j}^2} \\
-    \pafg{\overline{v}}{t} + \pafg{\overline{u_j'v'}}{x_j} = 
+    \pafg{\overline{v}}{t} + \pafg{\overline{w'v'}}{z} = 
         - f \overline{u} - \dfrac{1}{\overline{\rho}}\pafg{\overline{p}}{y}+ \nu \pafg{^2\overline{v}}{{x_j}^2}
 \end{cases}
 $$

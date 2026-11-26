@@ -66,6 +66,27 @@ $$
 \pd{u_i}{t} + \pd{u_i u_j}{x_j} = - \dfrac{1}{\rhobar} \pd{p^\prime}{x_i} + f \epsilon_{ij3} \left( u_j - u_{g,j} \right) - \delta_{i3} \dfrac{\rho^\prime}{\rhobar} g + \nu \pdd{u_i}{x_j}
 $$
 
+with
+
+$$
+\epsilon_{ij3} \equiv
+\begin{cases}
+1 & \text{if } ij3 = 123 \\
+-1 & \text{if } ij3 = 213 \\
+0 & \text{otherwise}
+\end{cases}
+$$
+
+and
+
+$$
+\delta_{i3} \equiv
+\begin{cases}
+1 & \text{if } i = 3 \\
+0 & \text{otherwise}
+\end{cases}
+$$
+
 ## Reynolds averaging the velocity components
 We will now introduce the Reynolds averaging of the velocity components, thus we split all velocity instances in a mean and a perturbation.
 

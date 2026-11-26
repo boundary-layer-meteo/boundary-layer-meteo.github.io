@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -55,7 +55,7 @@
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js?v=b8b12719"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
@@ -518,6 +518,7 @@ The solution is</p>
 \vbar &amp;= u_g \left(     \exp \left( - \gamma z \right) \sin \left( \gamma z \right) \right) \\
 \gamma &amp;= \left( \dfrac{f}{2 K_m} \right)^\frac{1}{2}
 \end{split}\]</div>
+<p>This results into a wind ‘spiral’, the magnitude and direction of the wind depend on the height (see the Figure in the lecture slides). We can understand this if we think about the three forces acting on the wind: the pressure force ( <span class="math notranslate nohighlight">\(\dfrac{1}{\overline{\rho}} \dfrac{\delta \overline{P}}{\delta x_i}\)</span>, with <span class="math notranslate nohighlight">\(x_i\)</span> being the horizontal coordinates), the Coriolis force (<span class="math notranslate nohighlight">\(fu_g\)</span>) and the friction force. In the upper air, the pressure and Coriolis force balance each other and there is no friction force, the velocity is perpendicular to the pressure gradient. In the lower air, the friction force becomes important; it points in the opposite direction as the velocity, this reduces the velocity magnitude. As the Coriolis force acts perpendicular to the velocity, it also decreases and thus the pressure force is stronger, leading to a deflection of the wind in the direction of the pressure gradient.</p>
 </section>
 <section id="the-logarithmic-wind-profile">
 <h2><span class="section-number">3.3. </span>The logarithmic wind profile<a class="headerlink" href="#the-logarithmic-wind-profile" title="Link to this heading">#</a></h2>
@@ -545,7 +546,7 @@ u(z_2) - u(z_1) &amp;= \dfrac{u_*}{\kappa} \ln \left( \dfrac{z_2}{z_1} \right)
 u(z) = \dfrac{u_*}{\kappa} \ln \left( \dfrac{z}{\zom} \right)
 \]</div>
 <p>This the famous expression for the logarithmic wind profile, also known in fluid dynamics as the <em>law of the wall</em>.</p>
-<p>The dimensionless wind gradient <span class="math notranslate nohighlight">\(\phi_m\)</span> is unity under neutral conditions:</p>
+<p>The dimensionless wind gradient <span class="math notranslate nohighlight">\(\phi_m\)</span> is unity under neutral conditions (neutral conditions are defined in Lecture 5):</p>
 <div class="math notranslate nohighlight">
 \[
 \phi_m(z) = \dfrac{\kappa z}{u_*} \pd{\ubar}{z}

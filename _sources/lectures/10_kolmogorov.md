@@ -35,6 +35,7 @@ The Kolmogorov velocity scale $U_\epsilon$ is
 $$
 U_\epsilon \equiv \left( \nu \epsilon \right)^\frac{1}{4}
 = \left( \dfrac{\nu U^3}{L} \right)^\frac{1}{4}.
+$$
 ```
 
 ```{admonition} Question

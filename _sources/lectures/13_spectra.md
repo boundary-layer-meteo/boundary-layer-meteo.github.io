@@ -13,13 +13,13 @@ $$
 \hat{f}(k) = \int_{-\infty}^\infty f(x) \exp \left( - i 2 \pi k x \right)\,\mathrm{d} x
 $$
 
-although since we generally work with time series of spatial series with equal sampling interval we use the discrete Fourier transform
+although since we generally work with time series or spatial series with equal sampling interval we use the discrete Fourier transform
 
 $$
 \hat{f}(k) = \sum_{n = 0}^{N - 1} f(x) \exp \left(-i 2 \pi k \frac{n}{N} \right)\ \ \ \ k = 0, \dots, N-1
 $$
 
-By doing so, we can write a time or spatial series as a sum of waves with varying phase and amplitude.
+By doing so, we can write a time or spatial series as a sum of waves with varying phase and amplitude. This Equation describes a signal of any variable (e.g., velocity, temperature, humidity) and an example for the potential temperature is given below. The red line in the second plot shows the signal described by 5 waves: that are the waves with wavenumbers 0, 1, 2, 3 and 4; the red line in the third plot shows the result of 10 waves, which have wavenumbers 0 to 9; and so on. The wavelength ($\lambda$ [m]) is related to the wavenumber via: $k = \frac{2\pi}{\lambda}$. $k$ is the angular wave number and $\nu$ the linear, with $k = 2 \pi \nu$. This will become more clear in exercise 21.1. These spatial quantities can be converted to temporal quantities using Taylor's hypothesis of frozen turbulence: $U = \lambda f$, with $U$ the velocity [m/s] and $f$ the frequency [1/s].
 
 ```{figure} figs/spectra_waves.png
 ---
@@ -29,15 +29,16 @@ name: spectra_waves
 Potential temperature near the surface of the convective boundary layer captures in waves.
 ```
 
-Based on the waves we can calculate its contribution to the variance by taking the square of its absolute value.
+Based on the waves we can calculate the contribution of each wave to the variance by taking the square of its absolute value. 
 
 $$
 E \left( k \right) = \left| \hat{f} \right|^2 =  \mathrm{Re} \left( \hat{f} \right)^2 + \mathrm{Im} \left( \hat{f} \right)^2
 $$
 
+This spectral energy ($E(k)$) is shown in the second Figure of Fig. 13.2. It shows that most variance arises from small k, i.e. big waves.
 
 ## The spectral structure of the inertial subrange of turbulence
-The turbulence kinetic energy $e$ can be constructed from its spectral energy $E(k)$ (energy per wave number $k$) following
+The turbulence kinetic energy $e$ can be constructed from the spectral energy $E(k)$ (energy per wave number $k$) of the velocity fluctuations following
 
 $$
 e = \int_0^\infty E\,\mathrm{d}k.
@@ -48,7 +49,7 @@ $$
 width: 500px
 name: spectra_energy
 ---
-Spectral energy of the potential temperature near the surface of the convective boundary layer.
+Spectral energy of the potential temperature near the surface of the convective boundary layer. Note: the y-axis is confusing and the units are wrong. The y-axis above should be k E(k) [$m^2/s^2$] and below E(k) [$m^3/s^2$].
 ```
 
 If we assume a strict separation between production and dissipation in terms of length and time scales, there must exist a region that only transfers energy from the largest to the smallest scales.

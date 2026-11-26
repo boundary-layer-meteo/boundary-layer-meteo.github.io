@@ -44,7 +44,7 @@ $$
 $$
 
 ### Potential temperature
-One of the disadvantages of temperature is that it is influenced by expansion and compression, as well as heat transfer. This means that an air parcel that is vertically displaced by turbulence experiences a temperature change even if no heat is added or removed. In the analysis of turbulent boundary layer flows it is convenient to have a quantity that is conserved under adiabatic dispacement. Before deriving this quantity, we rewrite Equation {eq}`first_law` in units of temperature, and we remove the density from the pressure term with the help of the ideal gas law ($p = \rho \Rd T$)
+One of the disadvantages of temperature is that it is influenced by expansion and compression, as well as heat transfer. This means that an air parcel that is vertically displaced by turbulence experiences a temperature change even if no heat is added or removed. In the analysis of turbulent boundary layer flows it is convenient to have a quantity that is conserved under adiabatic dispacement (i.e., no heat is added). Before deriving this quantity, we rewrite Equation {eq}`first_law` in units of temperature, and we remove the density from the pressure term with the help of the ideal gas law ($p = \rho \Rd T$)
 
 $$
 \cp \mathrm{d}T - \dfrac{1}{\rho} \mathrm{d}p &= \dfrac{\delta Q}{\rho} \\
@@ -90,9 +90,17 @@ The last question to answer is what to chose for the value of $p_0$. Generally, 
 
 > _Potential temperature $\theta$ is the temperature of an air parcel if it is adiabatically (thus no heat added or removed) transported back to sea level._
 
+The potential temperature can change in time due to advection and turbulence, viscosity or heat sources (i.e. radiative heating or latent heating):
+
+$$
+\underbrace{\pafg{\theta}{t}}_{\rm Tendency} + \underbrace{u_j \pafg{\theta}{x_j}}_{\rm Advection\ and\ turbulence} = \underbrace{\nu_{\theta}\pafg{^2\theta}{{x_j}^2}}_{\rm Viscosity} - \underbrace{\frac{1}{\overline{\rho} c_p} \pafg{Q_j}{x_j}}_{\rm Radiation} - \underbrace{\frac{L_v E}{\overline{\rho} c_p}}_{\rm Phase\,changes} \\
+$$
+
+This can be rewritten to a form containing $\overline{w'\theta'}$, as is done in Exercise 18.4. Similar to the momentum flux, this flux can also be parametrized using K-theory, as is done in Exercise 18.5.
+
 ### Atmospheric stability
 The atmospheric static stability defines whether the temperature stratification support or suppresses the generation of turbulent motions. If $\dfrac{\partial \theta}{\partial z} \gt 0$, the atmosphere is statically stable, if $\dfrac{\partial \theta}{\partial z} \approx 0$, the atmosphere is neutral, and if $\dfrac{\partial \theta}{\partial z} \lt 0$ the atmosphere is unstable.
 
-If a layer of air is vertically well-mixed, then the stratification is neutral and the actual temperature $T$ follows the **dry adiabatic lapse rate**. This is for instance the case in the daytime convective boundary layer, in which surface driven plumes constantly mix the layer vertically through.
+If a layer of air is vertically well-mixed, then the stratification is neutral and the actual temperature $T$ follows the **dry adiabatic lapse rate** (i.e., the temperature gradient of a dry parcel to which no heat is added). This is for instance the case in the daytime convective boundary layer, in which surface driven plumes constantly mix the layer vertically through.
 
 

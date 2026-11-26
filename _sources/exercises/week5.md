@@ -27,10 +27,10 @@ In this exercise, not the angular frequencies, $\left(\omega=\frac{2\pi}{T}\righ
 In these equations $T$ and $\lambda$ denote the corresponding period and length scale.
 The periods that seem most important are 1 minute and 0.1 minute (6 s).
 The signal with a time scale of 1 minute contains most energy.
-The corresponding sketch is shown in {numref}`fig411`.
+The corresponding sketch is shown in {numref}`fig:ex411`.
 
 ```{figure} figures/exercise4_1_1.png
-:name: fig411
+:name: fig:ex411
 Spectrum of the wind velocity as a function of time.
 ```
 
@@ -256,7 +256,7 @@ $$
 
 This results in $N=1.81 \cdot 10^{-2}\rm\,s^{-1}$
 
-This frequency corresponds to a period of 45.3 s.
+This frequency corresponds to a period of 55.2 s.
 
 The oscillation of an air parcel in a statically stable environment is like a mass that is attached to a spring.
 In this case, an air parcel that is displaced from its original position experiences a force to return to this position,
@@ -294,6 +294,8 @@ $$
 Substituting these values results in ${\rm Ri}_f = 0.074$
 
 ${\rm Ri}_f$ is larger than 0, but smaller than 1, thus shear production is sufficiently high to counter buoyancy destruction related to statically stable conditions.
+
+Alternatively, one could also use the local velocity gradient (i.e. upon moving from 0 m height to 300 m the velocity increases from 10 m/s to 15 m/s). This leads to a Richardson number 0.22, which has the same physical interpretation.
 
 </details>
 
@@ -365,7 +367,7 @@ and there is downward longwave radiation from the top layer to the middle layer 
 
 ````
 
-a) Derive a bulk expression of the longwave radiative divergence ($\pafg{Q^*}{z}$) for these three layers.
+a) Derive a bulk expression of the longwave radiative divergence ($\pafg{Q^*}{z}$) using these three layers.
 
 <details>
   <summary>Answer</summary>

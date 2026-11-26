@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -55,7 +55,7 @@
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js?v=b8b12719"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
@@ -483,11 +483,11 @@ In this exercise, not the angular frequencies, <span class="math notranslate noh
 In these equations <span class="math notranslate nohighlight">\(T\)</span> and <span class="math notranslate nohighlight">\(\lambda\)</span> denote the corresponding period and length scale.
 The periods that seem most important are 1 minute and 0.1 minute (6 s).
 The signal with a time scale of 1 minute contains most energy.
-The corresponding sketch is shown in <a class="reference internal" href="../lectures/13_spectra.html#fig411"><span class="std std-numref">Fig. 13.3</span></a>.</p>
-<figure class="align-default" id="fig411">
+The corresponding sketch is shown in <a class="reference internal" href="#fig-ex411"><span class="std std-numref">Fig. 21.1</span></a>.</p>
+<figure class="align-default" id="fig-ex411">
 <img alt="../_images/exercise4_1_1.png" src="../_images/exercise4_1_1.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 21.1 </span><span class="caption-text">Spectrum of the wind velocity as a function of time.</span><a class="headerlink" href="#fig411" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 21.1 </span><span class="caption-text">Spectrum of the wind velocity as a function of time.</span><a class="headerlink" href="#fig-ex411" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>The conversion from time period to frequency is straight forward.
@@ -665,7 +665,7 @@ g&amp;= 9.81\rm\,m\,s^{-2}\\
 \gemafg{\theta_v}{z} &amp;= \frac{5\rm\,K}{500\rm\,m}=0.01\rm\,K\,m^{-1} ( = 10\rm\,K\,km^{-1})
 \end{split}\]</div>
 <p>This results in <span class="math notranslate nohighlight">\(N=1.81 \cdot 10^{-2}\rm\,s^{-1}\)</span></p>
-<p>This frequency corresponds to a period of 45.3 s.</p>
+<p>This frequency corresponds to a period of 55.2 s.</p>
 <p>The oscillation of an air parcel in a statically stable environment is like a mass that is attached to a spring.
 In this case, an air parcel that is displaced from its original position experiences a force to return to this position,
 proportional to the potential temperature gradient.
@@ -695,6 +695,7 @@ g&amp;= 9.81\rm\,m\,s^{-2}\\
 \end{split}\]</div>
 <p>Substituting these values results in <span class="math notranslate nohighlight">\({\rm Ri}_f = 0.074\)</span></p>
 <p><span class="math notranslate nohighlight">\({\rm Ri}_f\)</span> is larger than 0, but smaller than 1, thus shear production is sufficiently high to counter buoyancy destruction related to statically stable conditions.</p>
+<p>Alternatively, one could also use the local velocity gradient (i.e. upon moving from 0 m height to 300 m the velocity increases from 10 m/s to 15 m/s). This leads to a Richardson number 0.22, which has the same physical interpretation.</p>
 </details>
 </section>
 <section id="id4">
@@ -753,7 +754,7 @@ L &amp;= \epsilon_{IR}\sigma_{SB} T^4 \\
 <p>There is upward longwave radiation from the surface to the middle layer and from the middle layer to the top layer
 and there is downward longwave radiation from the top layer to the middle layer and from the middle layer to the surface.</p>
 </div>
-<p>a) Derive a bulk expression of the longwave radiative divergence (<span class="math notranslate nohighlight">\(\pafg{Q^*}{z}\)</span>) for these three layers.</p>
+<p>a) Derive a bulk expression of the longwave radiative divergence (<span class="math notranslate nohighlight">\(\pafg{Q^*}{z}\)</span>) using these three layers.</p>
 <details>
   <summary>Answer</summary>
 <p>The radiative divergence is <span class="math notranslate nohighlight">\(\afg{Q^*_{\rm tot}}{z}\)</span>, where <span class="math notranslate nohighlight">\(Q^*_{\rm tot}\)</span> is the net upward longwave radiation.

@@ -63,6 +63,7 @@ $$
 \gamma &= \left( \dfrac{f}{2 K_m} \right)^\frac{1}{2}
 $$
 
+This results into a wind 'spiral', the magnitude and direction of the wind depend on the height (see the Figure in the lecture slides). We can understand this if we think about the three forces acting on the wind: the pressure force ( $\dfrac{1}{\overline{\rho}} \dfrac{\delta \overline{P}}{\delta x_i}$, with $x_i$ being the horizontal coordinates), the Coriolis force ($fu_g$) and the friction force. In the upper air, the pressure and Coriolis force balance each other and there is no friction force, the velocity is perpendicular to the pressure gradient. In the lower air, the friction force becomes important; it points in the opposite direction as the velocity, this reduces the velocity magnitude. As the Coriolis force acts perpendicular to the velocity, it also decreases and thus the pressure force is stronger, leading to a deflection of the wind in the direction of the pressure gradient.
 
 ## The logarithmic wind profile
 The lab experiments of Prandtl showed that K-theory with constant values of $K_m$ does not reproduce the logarithmic profiles that were observed in the lab or in the atmosphere.
@@ -95,7 +96,7 @@ $$
 
 This the famous expression for the logarithmic wind profile, also known in fluid dynamics as the *law of the wall*.
 
-The dimensionless wind gradient $\phi_m$ is unity under neutral conditions:
+The dimensionless wind gradient $\phi_m$ is unity under neutral conditions (neutral conditions are defined in Lecture 5):
 
 $$
 \phi_m(z) = \dfrac{\kappa z}{u_*} \pd{\ubar}{z}
